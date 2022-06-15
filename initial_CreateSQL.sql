@@ -56,7 +56,7 @@ COMMENT ON COLUMN "MAKER".maker_report_cnt IS '신고누적횟수';
 
 CREATE TABLE "CATEGORY" (
 	category_id	CHAR(2)		NOT NULL,
-	category_name	VARCHAR2(10)		NOT NULL
+	category_name	VARCHAR2(15)		NOT NULL
 );
 
 COMMENT ON COLUMN "CATEGORY".category_id IS 'C1, C2, ...';
