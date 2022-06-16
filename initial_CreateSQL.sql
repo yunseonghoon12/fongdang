@@ -35,6 +35,7 @@ CREATE TABLE "MAKER" (
 	maker_category	CHAR(1)		NOT NULL,
 	maker_phone	VARCHAR2(20)		NOT NULL,
 	maker_account	VARCHAR2(20)		NOT NULL,
+	maker_email	VARCHAR2(100)		NOT NULL,
 	maker_logo	VARCHAR2(200)		NULL,
 	maker_kakao_channel	VARCHAR2(200)		NULL,
 	maker_homepage	VARCHAR2(200)		NULL,
@@ -45,6 +46,8 @@ CREATE TABLE "MAKER" (
 	maker_report_cnt	NUMBER	DEFAULT 0	NULL
 );
 COMMENT ON COLUMN "MAKER".maker_category IS '개인: I, 사업자: B';
+
+COMMENT ON COLUMN "MAKER".maker_email IS '정산 받을 이메일';
 
 COMMENT ON COLUMN "MAKER".maker_register_num IS '주민번호 또는 사업자등록번호';
 
