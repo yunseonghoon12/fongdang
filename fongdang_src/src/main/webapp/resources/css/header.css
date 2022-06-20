@@ -1,0 +1,281 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  vertical-align: top;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+}
+
+#searchText {
+  margin-right: 10px;
+  width: 120px;
+  height: 20px;
+}
+
+#Logo {
+  width: 100px;
+  height: 62px;
+  position: relative;
+  top: 1.5px;
+  margin-right: 10px;
+}
+
+.site__header {
+  background-color: rgb(255, 255, 255);
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
+  box-shadow: 0px 2px 4px -1px #0000000f, 0px 4px 6px -1px #0000001a;
+}
+
+.menu {
+  list-style: none;
+  display: inline-flex;
+  height: 66px;
+}
+
+.menu2 {
+  list-style: none;
+  display: inline-flex;
+  height: 66px;
+}
+
+.menu>li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu2>li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu>li a {
+  text-decoration: none;
+  color: #444c57;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
+  padding: 0 1rem;
+  z-index: 1;
+  user-select: none;
+}
+
+.menu2>li a {
+  text-decoration: none;
+  color: #444c57;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
+  padding: 0 1rem;
+  z-index: 1;
+  user-select: none;
+}
+
+.menu>li>a.active {
+  color: white;
+}
+
+.menu2>li>a.active {
+  color: white;
+}
+
+.menu>li>a.active:hover {
+  color: white;
+}
+
+.menu2>li>a.active:hover {
+  color: white;
+}
+
+.menu>li>a.active::before {
+  background-color: #9bbfd9;
+  z-index: -1;
+  transform: translateY(0%);
+}
+
+.menu2>li>a.active::before {
+  background-color: #9bbfd9;
+  z-index: -1;
+  transform: translateY(0%);
+}
+
+
+.menu>li>a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transform: translateY(100%);
+  transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
+}
+
+.menu2>li>a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transform: translateY(100%);
+  transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
+}
+
+.menu>li>a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0px;
+  background-color: #9bbfd9;
+  transition: all 0.1s ease-in-out;
+}
+
+.menu2>li>a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0px;
+  background-color: #9bbfd9;
+  transition: all 0.1s ease-in-out;
+}
+
+.dep2>li>a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transform: translateY(100%);
+}
+
+.dep2>li>a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0px;
+  background-color: #9bbfd9;
+}
+
+.menu a:hover {
+  color: #9bbfd9
+}
+
+.menu2 a:hover {
+  color: #9bbfd9
+}
+
+.menu>li>a:hover::after {
+  width: 100%;
+  height: 4px;
+}
+
+.menu2>li>a:hover::after {
+  width: 100%;
+  height: 4px;
+}
+
+.dep2 li>a:hover::after {
+  width: 100%;
+  height: 3px;
+  top: 45px;
+}
+
+.dep2>li>a.active {
+  color: #9bbfd9;
+}
+
+.dep2 {
+  list-style: none;
+  position: absolute;
+  top: 80px;
+  height: 60px;
+  display: none;
+}
+
+
+.menu>li:hover>.dep2 {
+  display: flex;
+}
+
+.dep3>li>a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transform: translateY(100%);
+}
+
+.dep3>li>a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 0px;
+  background-color: #9bbfd9;
+}
+
+.dep3 li>a:hover::after {
+  width: 100%;
+  height: 3px;
+  top: 45px;
+}
+
+.dep3>li>a.active {
+  color: #9bbfd9;
+}
+
+.dep3 {
+  list-style: none;
+  position: absolute;
+  top: 80px;
+  height: 60px;
+  display: none;
+}
+
+.menu2>li:hover>.dep3 {
+  display: flex;
+}
+

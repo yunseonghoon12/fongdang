@@ -6,7 +6,7 @@ MemberVo ssMV = (MemberVo) session.getAttribute("ssMV");
 %> --%>
 <!DOCTYPE html>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<script src="${path}/resources/css/style.css"></script>
+<script src="${path}/resources/css/header.css"></script>
 
 <header class="site__header">
 
