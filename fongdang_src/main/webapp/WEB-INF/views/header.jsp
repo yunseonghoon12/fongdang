@@ -10,10 +10,6 @@ MemberVo ssMV = (MemberVo) session.getAttribute("ssMV");
 
 <header class="site__header">
 
-	<%-- <c:if test="${ssMV.mNickname == '관리자'}">
-		<a href="admain" id="admin_modal_btn">관리자 페이지로 가기</a>
-	</c:if> --%>
-
 	<a href="#"><img src="./image/logo.png" id="Logo" /></a>
 	<nav>
 		<ul class="menu">
