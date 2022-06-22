@@ -3,6 +3,8 @@ delete from member;
 select * from member;
 
 -- member insert문
+set define off;
+
 insert into member(email, name, password, nickname, member_type) values('admin', '관리자', 'admin', '관리자', 'A');
 insert into member(email, name, password, nickname) values('aaa@aaa.com', '홍길동', 'aaa001', '홍길동');
 insert into member(email, name, password, nickname) values('zya@zya.com', '안지영', 'zya002', '볼빨간사춘기');

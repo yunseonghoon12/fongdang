@@ -1,4 +1,4 @@
-SET DEFINE OFF
+SET DEFINE ON
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_PRICE, OPTION_NAME, OPTION_INFO, OPTION_LIMIT) 
 VALUES (1, 1, 65800.0, '[슈퍼얼리버드 화이트 ]
@@ -5310,4 +5310,4 @@ VALUES (6.0, 107, 120000.0, '캣츠 아이스 네크리스', '· 캣츠 아이�
 · MYAMMI 프리미엄 패키지
 · 주얼리 품질 보증서
 · 무료 배송', 99);
-
+commit;

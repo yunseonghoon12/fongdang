@@ -1,4 +1,4 @@
-SET DEFINE ON;
+SET DEFINE OFF;
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('배스터굿즈글로버(bestgoodsglobal)', 'aaa@aaa.com', 'I', '	01046096880', 'wenjing0330@naver.com', '/resources/images/dummyLogo.png', NULL, NULL, '대구 동구 효동로 1 12 1층 166호', '	4151902653', '/resources/images/license_copy.png', NULL);
@@ -324,3 +324,4 @@ VALUES ('부라더스', 'sdm@sdm.com', 'I', '15221843', '	burathers-eyewear@nave
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('MYAMMI', 'hsk@hsk.com', 'I', '1056069803', 'gomyammi2020@naver.com', '/resources/images/dummyLogo.png', NULL, '	https://smartstore.naver.com/gomyammi', '	서울 도봉구 쌍문4동 159번지 402호', '4443200759', '/resources/images/license_copy.png', NULL);
 
+commit;
