@@ -1,4 +1,4 @@
-SET DEFINE OFF
+SET DEFINE ON;
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('배스터굿즈글로버(bestgoodsglobal)', 'aaa@aaa.com', 'I', '	01046096880', 'wenjing0330@naver.com', '/resources/images/dummyLogo.png', NULL, NULL, '대구 동구 효동로 1 12 1층 166호', '	4151902653', '/resources/images/license_copy.png', NULL);
@@ -144,8 +144,9 @@ VALUES ('명쿡', 'sdm@sdm.com', 'I', '222493392', 'kgh15251@naver.com', '/resou
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('굿패스 바이탈', 'hsk@hsk.com', 'I', '7080647828', '	goodpasscontact@gmail.com', '/resources/images/dummyLogo.png', NULL, NULL, '경기 파주시 경의로 1046 이더펠리체 오피스텔 318호', '2112667197', '/resources/images/license_copy.png', NULL);
 
-INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
-VALUES ('스위트파티', 'imj@imj.com', 'I', '1048730208', 'supakorea@gmail.com', '/resources/images/dummyLogo.png', NULL, NULL, '광주 북구 용봉로 77 농업전문창업보육센터 311호', '3673300895', '/resources/images/license_copy.png', NULL);
+-- PK : MAKER_NAME='스위트파티' 중복
+--INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
+--VALUES ('스위트파티', 'imj@imj.com', 'I', '1048730208', 'supakorea@gmail.com', '/resources/images/dummyLogo.png', NULL, NULL, '광주 북구 용봉로 77 농업전문창업보육센터 311호', '3673300895', '/resources/images/license_copy.png', NULL);
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('농업법인회사 (주)케이푸드바이오', 'ebp@ebp.com', 'B', '1052229093', 'khdfood@daum.net', '/resources/images/dummyLogo.png', NULL, '	www.parsniphouse.com', '경북 예천군 예천읍 청복리 927번지 경북도립대학 교 산학협력관 102호', '7898700856', '/resources/images/license_copy.png', NULL);

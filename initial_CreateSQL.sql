@@ -30,7 +30,7 @@ COMMENT ON COLUMN "MEMBER".member_type IS '개인: I, 관리자: A';
 COMMENT ON COLUMN "MEMBER".withdraw IS '탈퇴 시 Y, 아니면  N';
 
 CREATE TABLE "MAKER" (
-	maker_name	VARCHAR2(50)		NOT NULL,
+	maker_name	VARCHAR2(100)		NOT NULL,
 	email	VARCHAR2(100)		NOT NULL,
 	maker_category	CHAR(1)		NOT NULL,
 	maker_phone	VARCHAR2(20)		NOT NULL,
