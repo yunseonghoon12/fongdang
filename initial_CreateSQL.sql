@@ -72,10 +72,10 @@ CREATE TABLE "PRODUCT" (
 	p_summary	VARCHAR2(300)		NOT NULL,
 	p_story	VARCHAR2(4000)		NOT NULL,
 	p_certification	VARCHAR2(200)		NULL,
-	start_day	TIMESTAMP	DEFAULT SYSTIMESTAMP	NOT NULL,
-	end_day	TIMESTAMP	DEFAULT SYSTIMESTAMP	NOT NULL,
-	payment_plan	TIMESTAMP		NOT NULL,
-	delivery_date	TIMESTAMP		NOT NULL,
+	start_day	TIMESTAMP	NOT NULL,
+	end_day	DATE	NOT NULL,
+	payment_plan	DATE		NOT NULL,
+	delivery_date	DATE		NOT NULL,
 	p_approval	CHAR(1)	DEFAULT 'N'	NOT NULL,
 	p_report_cnt	NUMBER	DEFAULT 0	NOT NULL
 );
@@ -110,7 +110,7 @@ CREATE TABLE "ORDER" (
 	order_phone	VARCHAR2(20)		NOT NULL,
 	order_address	VARCHAR2(1000)		NOT NULL,
 	total_price	NUMBER		NOT NULL,
-	payment_plan	TIMESTAMP		NOT NULL,
+	payment_plan	DATE		NOT NULL,
 	pay_method	VARCHAR2(50)		NOT NULL
 );
 COMMENT ON COLUMN "ORDER".p_no IS 'PRODUCT(p_no)';
