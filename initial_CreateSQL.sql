@@ -70,7 +70,7 @@ CREATE TABLE "PRODUCT" (
 	p_goal	NUMBER		NOT NULL,
 	p_thumbnail	VARCHAR2(200)		NOT NULL,
 	p_summary	VARCHAR2(300)		NOT NULL,
-	p_story	VARCHAR2(4000)		NOT NULL,
+	p_story	CLOB		NOT NULL,
 	p_certification	VARCHAR2(200)		NULL,
 	start_day	TIMESTAMP	NOT NULL,
 	end_day	DATE	NOT NULL,
