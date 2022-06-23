@@ -1,6 +1,4 @@
-desc member;
-delete from member;
-select * from member;
+
 
 -- member insert문
 set define off;

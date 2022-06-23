@@ -94,8 +94,8 @@ COMMENT ON COLUMN "PRODUCT".p_approval IS '승인: Y, 비승인: N';
 CREATE TABLE "OPTION" (
 	option_no	NUMBER		NOT NULL,
 	p_no	NUMBER		NOT NULL,
-	option_name	VARCHAR2(200)		NOT NULL,
-	option_info	VARCHAR2(300)		NOT NULL,
+	option_name	VARCHAR2(600)		NOT NULL,
+	option_info	VARCHAR2(1000)		NOT NULL,
 	option_price	NUMBER		NOT NULL,
 	option_limit	NUMBER		NOT NULL
 );

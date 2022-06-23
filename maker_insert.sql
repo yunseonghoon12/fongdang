@@ -1,7 +1,7 @@
-SET DEFINE OFF;
+SET DEFINE OFF
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
-VALUES ('배스터굿즈글로버(bestgoodsglobal)', 'aaa@aaa.com', 'I', '	01046096880', 'wenjing0330@naver.com', '/resources/images/dummyLogo.png', NULL, NULL, '대구 동구 효동로 1 12 1층 166호', '	4151902653', '/resources/images/license_copy.png', NULL);
+VALUES ('Best goods global', 'aaa@aaa.com', 'I', '	01046096880', 'wenjing0330@naver.com', '/resources/images/dummyLogo.png', NULL, NULL, '대구 동구 효동로 1 12 1층 166호', '	4151902653', '/resources/images/license_copy.png', NULL);
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('주식회사 다르텍', 'zya@zya.com', 'B', '01032962945', '	mhanla@hepafan.com', '/resources/images/dummyLogo.png', NULL, '	http://hepafan.com', '	경기 화성시 금곡동 488-8번지 비동', '	1088700760', '/resources/images/license_copy.png', NULL);
@@ -58,7 +58,7 @@ INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, 
 VALUES ('(주)유아이비', 'jks@jks.com', 'B', '0215220619', 'sales@uibhub.com', '/resources/images/dummyLogo.png', '	@원모어코리아', '	www.1morekorea.com', '서울 영등포구 문래동6가 19번지 문래에스케이브이원센터 13층 1309호', '5278600232', '/resources/images/license_copy.png', NULL);
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
-VALUES ('	주식회사 디플로우(D.FLOW)', 'dsn@dsn.com', 'B', '03180695222', 'shelpurcorp@gmail.com', '/resources/images/dummyLogo.png', NULL, 'shelpurcorp@gmail.com', '	경기 안양시 동안구 흥안대로 519 6층', '	1208828576', '/resources/images/license_copy.png', NULL);
+VALUES ('주식회사 디플로우', 'dsn@dsn.com', 'B', '03180695222', 'shelpurcorp@gmail.com', '/resources/images/dummyLogo.png', NULL, 'shelpurcorp@gmail.com', '	경기 안양시 동안구 흥안대로 519 6층', '	1208828576', '/resources/images/license_copy.png', NULL);
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('아이티에스글로벌(RJ컨셉스토어)', 'dms@dms.com', 'I', '07075190680', '	louis@itsglobalkr.com', '/resources/images/dummyLogo.png', '@RJ컨셉스토어', 'https://smartstore.naver.com/rjconceptstore', '	충북 청주시 흥덕구 송절동 70-73번지 외 2필지 직지스마트타워 2층 201호', '6950900572', '/resources/images/license_copy.png', NULL);
@@ -143,10 +143,6 @@ VALUES ('명쿡', 'sdm@sdm.com', 'I', '222493392', 'kgh15251@naver.com', '/resou
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('굿패스 바이탈', 'hsk@hsk.com', 'I', '7080647828', '	goodpasscontact@gmail.com', '/resources/images/dummyLogo.png', NULL, NULL, '경기 파주시 경의로 1046 이더펠리체 오피스텔 318호', '2112667197', '/resources/images/license_copy.png', NULL);
-
--- PK : MAKER_NAME='스위트파티' 중복
---INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
---VALUES ('스위트파티', 'imj@imj.com', 'I', '1048730208', 'supakorea@gmail.com', '/resources/images/dummyLogo.png', NULL, NULL, '광주 북구 용봉로 77 농업전문창업보육센터 311호', '3673300895', '/resources/images/license_copy.png', NULL);
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('농업법인회사 (주)케이푸드바이오', 'ebp@ebp.com', 'B', '1052229093', 'khdfood@daum.net', '/resources/images/dummyLogo.png', NULL, '	www.parsniphouse.com', '경북 예천군 예천읍 청복리 927번지 경북도립대학 교 산학협력관 102호', '7898700856', '/resources/images/license_copy.png', NULL);
@@ -323,5 +319,4 @@ VALUES ('부라더스', 'sdm@sdm.com', 'I', '15221843', '	burathers-eyewear@nave
 
 INSERT INTO MAKER (MAKER_NAME, EMAIL, MAKER_CATEGORY, MAKER_PHONE, MAKER_EMAIL, MAKER_LOGO, MAKER_KAKAO_CHANNEL, MAKER_HOMEPAGE, MAKER_ADDRESS, MAKER_REGISTER_NUM, MAKER_LICENSE_COPY, MAKER_REPORT_CNT) 
 VALUES ('MYAMMI', 'hsk@hsk.com', 'I', '1056069803', 'gomyammi2020@naver.com', '/resources/images/dummyLogo.png', NULL, '	https://smartstore.naver.com/gomyammi', '	서울 도봉구 쌍문4동 159번지 402호', '4443200759', '/resources/images/license_copy.png', NULL);
-
 commit;
