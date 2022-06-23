@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Maker">
+	<insert id="insertMaker" parameterType="Maker">
+		insert into maker(maker_name
+		,email
+		,maker_category
+		,maker_phone
+		,maker_email
+		,maker_logo
+		,maker_kakao_channel
+		,maker_homepage
+		,maker_address
+		,maker_register_num
+		,maker_license_copy
+		,maker_report_cnt
+		)values(#{maker_name}
+		,#{email}
+		,#{maker_category}
+		,#{maker_phone}
+		,#{maker_logo}
+		,#{maker_kakao_channel}
+		,#{maker_homepage}
+		,#{maker_address}
+		,#{maker_register_num}
+		,#{maker_license_copy}
+		,default
+		)
+	</insert>
+	
+	
+</mapper>

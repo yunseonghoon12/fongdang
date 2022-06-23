@@ -8,9 +8,11 @@
 	</settings>
 	<typeAliases>
 		<typeAlias type="kh.spring.fongdang.member.domain.Member" alias="Member"/>
+		<typeAlias type="kh.spring.fongdang.maker.domain.Maker" alias="Maker"/>
 	</typeAliases>
 		
 	<mappers>
 		<mapper resource="mappers/member-mapper.xml"/>
+		<mapper resource="mappers/maker-mapper.xml"/>
 	</mappers>
 </configuration>
