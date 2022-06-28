@@ -11,7 +11,7 @@ MemberVo ssMV = (MemberVo) session.getAttribute("ssMV");
 <header class="site__header">
 	<a href="#"><img src="./image/logo.png" id="Logo" /></a>
 	<nav>
-		<ul class="menu">
+		<ul class="menu" style="position: relative; left:1%;">
 			<li><a href="#">메인</a></li>
 			<li><a href="#">펀딩예정</a></li>
 			<li><a href="#">펀딩상품</a></li>
@@ -31,8 +31,8 @@ MemberVo ssMV = (MemberVo) session.getAttribute("ssMV");
 			<li><a href="#">회원가입</a></li>
 			<li><a href="#" id="fdapply">펀딩 프로젝트 신청</a>
 				<ul class="dep3">
-					<li><a href="#">메이커 신청하기</a></li>
-					<li><a href="#">펀딩 오픈프로젝트 신청하기</a></li>
+					<li><a href="#" style="margin-top: 5px;">메이커 신청하기</a></li>
+					<li><a href="#" style="margin-top: 5px;">펀딩 오픈프로젝트 신청하기</a></li>
 				</ul></li>
 			<%-- <c:if test="${empty ssMV}">
 		        <a href="#" id="login">로그인</a>

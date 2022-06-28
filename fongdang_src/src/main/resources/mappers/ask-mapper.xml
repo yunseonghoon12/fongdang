@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Ask">
+
+	<insert id="insertAsk" parameterType="Ask">
+		insert into ask(ask_cnt
+		,email
+		,ask_title
+		,ask_category
+		,ask_content
+		,ask_date
+		,ask_yn
+		)values(#{ask_cnt}
+		,#{email}
+		,#{ask_title}
+		,#{ask_category}
+		,#{ask_content}
+		,default
+		,default
+		)
+	</insert>
+
+	<select id="selectAsk" parameterType="Ask"
+		resultType="Ask">
+		select * from member where email=#{email} and
+		password=#{password}
+	</select>
+
+</mapper>

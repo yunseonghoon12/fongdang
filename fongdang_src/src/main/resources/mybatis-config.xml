@@ -8,6 +8,7 @@
 	</settings>
 	<typeAliases>
 		<typeAlias type="kh.spring.fongdang.member.domain.Member" alias="Member"/>
+		<typeAlias type="kh.spring.fongdang.ask.domain.Ask" alias="Ask"/>
 		<typeAlias type="kh.spring.fongdang.maker.domain.Maker" alias="Maker"/>
 	</typeAliases>
 		
