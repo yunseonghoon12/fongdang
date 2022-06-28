@@ -192,17 +192,24 @@
   </style>
 </head>
 <body>
+<script>
+	var msg = "${msg}";
+	if(msg != '') {
+		alert(msg);
+	}
+</script>
+
 	<header>
     <div id="header_container">
       <div id="logo_inclusion">
         <a href="#">
-          <img src="resources/images/logo.png" alt="logo" id="logo">
+          <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
         </a>
       </div>
       <div id="right_content">
         <ul id="right_bar">
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
+          <li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          <li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
         </ul>
       </div>
     </div>
@@ -213,76 +220,120 @@
       <p id="sub_title" style="font-size: 14px; color:#444c57;">
         최소한의 정보를 받고 있습니다.
       </p>   
-      <form action="#" method="post" id="joinFrm">
+      <form action="register.do" method="post" id="joinFrm">
         <div id="name_field">
           <label>이름</label>
           <div>
-            <input type="text" placeholder="이름 입력">
+            <input type="text" name="name" placeholder="이름 입력" required>
           </div>
           <p><!-- TODO: error message --></p>
         </div>        
         <div id="nickname_field">
           <label>닉네임</label>
           <div>
-            <input type="text" placeholder="닉네임 입력">
+            <input type="text" name="nickname" placeholder="닉네임 입력" required>
           </div>
           <p><!-- TODO: error message --></p>
         </div>
         <div id="email_field">
           <label>이메일</label>
           <div>
-            <input type="email" placeholder="이메일 계정">
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정" required>
           </div>
-          <p><!-- TODO: error message --></p>
+          <!-- TODO: error message -->
+          <p id="email_error" style="color: red; font-size: 13px;">
+          	
+          </p>
         </div>
         <div id="pwd_field">
           <label>비밀번호</label>
           <div>
-            <input type="password" name="password" autocomplete="off"  placeholder="비밀번호">
+            <input type="password" name="password" id="password" autocomplete="off" placeholder="비밀번호" required>
           </div>
           <div>
-            <input type="password" name="confirm_password" autocomplete="off" placeholder="비밀번호 확인">
+            <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="비밀번호 확인">
           </div>
-          <p><!-- TODO: error message --></p>
+          <!-- TODO: error message -->
+          <p id="pwd_error" style="color: red; font-size: 13px;">
+          	
+          </p>
         </div>  
         <div id="fongdang_checkbox">         
-          <input type="checkbox" name=""><span id="chk_agree">전체동의</span>                  
+          <input type="checkbox" name="chk_agree" id="agree" value="true"><span id="chk_agree">전체동의</span>                  
           <span id="requirement_service">
-            펀딩·회원 서비스(필수)                        
+            펀딩·회원 서비스(필수)                                    
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 10">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </button>
+              </svg>            
           </span> 
           <p id="sub_caption">            
             개인정보보호법에 따라 퐁당에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 서비스 이용이 불가능함을 알려 드리오니 자세히 읽은 후 동의해주세요.
           </p>
         </div> 
         <div>
-          <button type="button" id="enroll_btn">완료</button>
+          <!-- <input type="submit" id="enroll_btn" value="완료"> -->
+          <button type="button" id="enroll_btn" onclick="registerHandler()">완료</button>
         </div>
       </form>
     </div>  
   </div>
 
-  <script>
+  <script>  
+  	var cnt = 1; 
+  	
+  	/* ${subcationShowHandler}; */
     $("#requirement_service").click(function() {
-      subcationShow();     
+    	subcationShowHandler();     
     });
+  	
+    function subcationShowHandler() {
+     	if(cnt % 2 == 0) {
+        	console.log("cnt: " + cnt);
+        	$("#sub_caption").hide(); 
+        	++cnt;
+      	} else {
+	        console.log("cnt: " + cnt);
+        	$("#sub_caption").show(); 
+        	++cnt;
+      	}
+    }  
     
-    var cnt = 1;
-    function subcationShow() {      
-      
-      if(cnt % 2 == 0) {
-        console.log("cnt: " + cnt);
-        $("#sub_caption").hide(); 
-        ++cnt;
-      } else {
-        console.log("cnt: " + cnt);
-        $("#sub_caption").show(); 
-        ++cnt;
-      }
-    }    
+    function registerHandler(){
+    	var cnf= confirm("회원가입을 진행하시겠습니까?");   		   		
+   		
+   		var email = $("#email").val();
+   		var pwd = $("#password").val();
+   		var cnf_pwd = $("#confirm_password").val();
+   		var chk = $("#agree").is(":checked");
+   		
+   		// 약관 체크 여부
+		console.log("email: " + $("#email").val());   		    		
+   		console.log("password: " + $("#password").val());
+   		console.log("confirm_password: " + $("#confirm_password").val());
+   		console.log("약관동의: " + chk);
+   		
+    	if(cnf) {
+    		if(chk == false) {
+    			alert("회원가입은 이용약관에 동의할 경우 가능합니다.");
+    			return; 
+    		} else if(pwd != cnf_pwd) {    			
+    			$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
+    			return;
+    		} else {
+    			// 모든 유효성 검사를 끝낸 경우 회원가입 정보를 전달 
+    			console.log("회원가입을 진행합니다.");
+    			joinFrm.submit();
+    		}   		
+    		
+    	} else {
+    		
+    	}
+    }
+    
+    function emailValidate(email) {
+    	
+    }
+    
   </script>
 
 

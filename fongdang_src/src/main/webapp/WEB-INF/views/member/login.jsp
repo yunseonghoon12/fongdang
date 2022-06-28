@@ -157,8 +157,8 @@
       		</div>
       		<div id="right_content">
 	        	<ul id="right_bar">
-          			<li><a href="#">로그인</a></li>
-          			<li><a href="#">회원가입</a></li>
+          			<li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          			<li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
         		</ul>
       		</div>
     	</div>
@@ -177,21 +177,22 @@
         <p id="main_title">로그인</p>
           <form action="<%= request.getContextPath()%>/member/login" method="post">
             <div>  
-              <input type="text" name="email" class="input_text" placeholder="이메일"> 
+              <input type="text" name="email" class="input_text" required placeholder="이메일"> 
             </div>
             <div>
-              <input type="password" name="password" class="input_text" autocomplete="off" placeholder="비밀번호">
+              <input type="password" name="password" class="input_text" required autocomplete="off" placeholder="비밀번호">
             </div>
             <div id="login_action_container">
-              <div id="id_save">
-                <label style="font-size: 13px;">
-                <input type="checkbox" name="" id="chk_id">아이디 저장
-                </label>
-            </div>
-            <div id="find_info">
-              <a href="#" style="font-size: 13px;">아이디·비밀번호 찾기</a>
-            </div>            
-            <div id="login_content"">
+            	<div id="id_save">
+                	<label style="font-size: 13px;">
+                		<input type="checkbox" name="" id="chk_id">아이디 저장
+                	</label>
+            	</div>
+            	<div id="find_info">
+              		<a href="<%=request.getContextPath()%>/member/findInfo" style="font-size: 13px;">아이디·비밀번호 찾기</a>
+            	</div> 
+            </div>           
+            <div id="login_content">
               <input type="submit" id="login_btn" value="로그인">            
             </div>
           </form>
@@ -206,7 +207,7 @@
           </div>
           <div id="login_foot">
             <span style="font-size: 13px;">아직 퐁당 계정이 없나요?</span>
-            <a href="#" style="font-size: 13px; color: rgb(182, 224, 214);">회원가입</a>
+            <a href="<%= request.getContextPath()%>/member/register" style="font-size: 13px; color: rgb(182, 224, 214);">회원가입</a>
           </div>
       </div>
     </div>

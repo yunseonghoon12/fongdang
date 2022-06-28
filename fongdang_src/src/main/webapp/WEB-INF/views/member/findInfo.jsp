@@ -138,13 +138,13 @@
     <div id="header_container">
       <div id="logo_inclusion">
         <a href="#">
-          <img src="resources/images/logo.png" alt="logo" id="logo">
+          <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
         </a>
       </div>
       <div id="right_content">
         <ul id="right_bar">
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
+          <li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          <li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
         </ul>
       </div>
     </div>

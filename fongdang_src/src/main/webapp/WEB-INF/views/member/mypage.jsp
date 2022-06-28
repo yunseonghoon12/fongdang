@@ -113,7 +113,8 @@
     }
     #chevron-right {
       position: absolute;
-      right: 20px;
+      top: 5px;
+      right: 5px;
     }
     #funding_record {      
       width: 300px;
@@ -292,22 +293,22 @@
         <div id="profile_wrap">
           <div style="border-right: 1px solid #ccc; height:100%">
             <div id="profile_image_wrap">
-              <img src="resources/images/user.png" style="width:78px; height:78px;">
+              <img src="<%=request.getContextPath()%>/resources/images/user.png" style="width:78px; height:78px;">
             </div>
-            <p id="member_name">퐁당 회원님</p>
+            <p id="member_name">${loginInfo.name}님</p>
             <p id="member_state">서포터·개인 회원</p>          
             <div id="profile_setting">
-              <button type="button" id="logout_btn" onclick="location.href='';">로그아웃</button>
-              <div id="profile_btn_wrap">
-                <a href="myProfile.html">
+              <button type="button" id="logout_btn" onclick="location.href='<%=request.getContextPath()%>/member/logout';">로그아웃</button>
+               <a href="<%=request.getContextPath()%>/member/myprofile">
+              	<div id="profile_btn_wrap">
                   프로필 설정
                   <span id="chevron-right">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 13">
                       <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
                   </span>
-                </a>
-              </div>
+              	</div>
+               </a>
             </div>
           </div>
         </div>
@@ -410,7 +411,7 @@
             <p id="my_activity_title">나의 활동</p>
               <ul id="my_activity_content">
                 <li>
-                  <a href="messgebox.html">
+                  <a href="<%=request.getContextPath()%>/member/messagebox">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 17 12">
                       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                     </svg>
@@ -423,7 +424,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="favorite.html">
+                  <a href="<%=request.getContextPath()%>/member/likelist">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 15">
                       <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                     </svg>

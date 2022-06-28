@@ -6,8 +6,11 @@
 	<select id="selectLogin" parameterType="Member" resultType="Member">
 		select * from member where email=#{email} and password=#{password}		
 	</select>
-
-
+	
+	<insert id="insertMember" parameterType="Member">
+	insert into member(email, name, password, nickname)
+		values(#{email}, #{name}, #{password}, #{nickname})		
+	</insert>
 
 
 </mapper>

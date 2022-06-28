@@ -33,7 +33,7 @@
   #withdraw {
     position: absolute;
     font-size: 13px;
-    top: 25px;
+    top: 15px;
     right: 0;
   }
   #proflie_field {
@@ -188,7 +188,7 @@
     <div id="main_content">
       <div id="main_wrap">
         <p id="main_title">프로필 설정</p>  
-        <a href="#" id="withdraw">회원탈퇴</a>
+        <a href="<%=request.getContextPath()%>/member/withdraw" id="withdraw">회원탈퇴</a>
       </div>
       <form action="" method="post">
         <div id="proflie_field">
@@ -204,7 +204,7 @@
         <div id="id_field">
           <label>아이디</label>
           <div>
-            <input type="text" placeholder="읽기 전용" readonly>
+            <input type="text" placeholder="읽기 전용" value="${loginInfo.email}" readonly>
           </div>
         </div>
         <div id="pwd_field">

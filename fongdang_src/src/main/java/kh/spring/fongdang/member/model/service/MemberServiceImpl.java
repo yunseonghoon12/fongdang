@@ -14,4 +14,8 @@ public class MemberServiceImpl implements MemberService{
 	public Member selectLogin(Member member) {		
 		return dao.selectLogin(member);
 	}
+
+	public int insertMember(Member member) {		
+		return dao.insertMember(member);
+	}
 }
