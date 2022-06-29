@@ -9,7 +9,6 @@ public class Member {
 	private String email;
 	private String name;
 	private String password;
-	private String confirm_password;
 	private String nickname;
 	private String member_type;
 	private String withdraw;
@@ -19,9 +18,9 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return "Member [email=" + email + ", name=" + name + ", password=" + password 
-				+  ", nickname=" + nickname + ", member_type=" + member_type + ", withdraw="
-				+ withdraw + ", profile=" + profile + ", intro=" + intro + ", enroll_date=" + enroll_date + "]";
+		return "Member [email=" + email + ", name=" + name + ", password=" + password + ", nickname=" + nickname
+				+ ", member_type=" + member_type + ", withdraw=" + withdraw + ", profile=" + profile + ", intro="
+				+ intro + ", enroll_date=" + enroll_date + "]";
 	}
 
 	public String getEmail() {
@@ -46,14 +45,6 @@ public class Member {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getConfirm_password() {
-		return confirm_password;
-	}
-
-	public void setConfirm_password(String confirm_password) {
-		this.confirm_password = confirm_password;
 	}
 
 	public String getNickname() {
@@ -103,8 +94,5 @@ public class Member {
 	public void setEnroll_date(Timestamp enroll_date) {
 		this.enroll_date = enroll_date;
 	}
-	
-		
-	
 	
 }

@@ -108,13 +108,13 @@ public class MemberController {
 			, Member member
 			, RedirectAttributes rttr) {				
 		
-//		int result = 0;
-//		result = service.insertMember(member);
-//		if(result == 0) {			
-//			rttr.addFlashAttribute("msg", "회원가입에 실패했습니다.");
-//			mv.setViewName("redirect:/");
-//			return mv;
-//		}
+		int result = 0;
+		result = service.insertMember(member);
+		if(result == 0) {			
+			rttr.addFlashAttribute("msg", "회원가입에 실패했습니다.");
+			mv.setViewName("redirect:/");
+			return mv;
+		}
 		
 		System.out.println("\n---------- insertMember() ----------");
 		System.out.println("chk_agree:\t" + agree);
@@ -124,6 +124,7 @@ public class MemberController {
 		System.out.println("password:\t" + member.getPassword());
 		System.out.println("------------------------------------");
 		rttr.addFlashAttribute("msg", "회원 가입이 완료되었습니다.");
+//		TODO: 메인화면으로 url 지정하기 6.28_yjk
 		mv.setViewName("redirect:/");
 		return mv;		
 	}

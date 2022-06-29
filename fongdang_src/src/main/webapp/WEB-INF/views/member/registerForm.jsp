@@ -224,21 +224,27 @@
         <div id="name_field">
           <label>이름</label>
           <div>
-            <input type="text" name="name" placeholder="이름 입력" required>
+            <input type="text" name="name" id="name" placeholder="이름 입력">
           </div>
-          <p><!-- TODO: error message --></p>
+          <!-- TODO: error message -->
+          <p id="name_error" style="color: red; font-size: 13px;">
+          	
+          </p>
         </div>        
         <div id="nickname_field">
           <label>닉네임</label>
           <div>
-            <input type="text" name="nickname" placeholder="닉네임 입력" required>
+            <input type="text" name="nickname" id="nickname" placeholder="닉네임 입력">
           </div>
-          <p><!-- TODO: error message --></p>
+          <!-- TODO: error message -->
+          <p id="nickname_error" style="color: red; font-size: 13px;">
+          	
+          </p>
         </div>
         <div id="email_field">
           <label>이메일</label>
           <div>
-            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정" required>
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정">
           </div>
           <!-- TODO: error message -->
           <p id="email_error" style="color: red; font-size: 13px;">
@@ -248,7 +254,7 @@
         <div id="pwd_field">
           <label>비밀번호</label>
           <div>
-            <input type="password" name="password" id="password" autocomplete="off" placeholder="비밀번호" required>
+            <input type="password" name="password" id="password" autocomplete="off" placeholder="비밀번호">
           </div>
           <div>
             <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="비밀번호 확인">
@@ -301,37 +307,109 @@
     function registerHandler(){
     	var cnf= confirm("회원가입을 진행하시겠습니까?");   		   		
    		
+    	var name = $("#name").val();
+    	var nickname = $("#nickname").val();
    		var email = $("#email").val();
    		var pwd = $("#password").val();
    		var cnf_pwd = $("#confirm_password").val();
    		var chk = $("#agree").is(":checked");
    		
-   		// 약관 체크 여부
-		console.log("email: " + $("#email").val());   		    		
-   		console.log("password: " + $("#password").val());
-   		console.log("confirm_password: " + $("#confirm_password").val());
+   		// 회원가입 정보 유효성 검사
+   		var nameValidity = nameValidate(name);
+   		var nicknameValidity = nicknameValidate(nickname);
+   		var passwordValidity = passwordValidate(pwd, cnf_pwd);
+   		var emailValidity = emailValidate(email);
+	
+   		console.log("name: " + name);
+   		console.log("nickname: " + nickname);
+		console.log("email: " + email);   		    		
+   		console.log("password: " + pwd);
+   		console.log("confirm_password: " + cnf_pwd);
    		console.log("약관동의: " + chk);
+   		console.log("name.length: " + name.length);
+   		console.log("nickname.length: " + nickname.length);
    		
     	if(cnf) {
     		if(chk == false) {
     			alert("회원가입은 이용약관에 동의할 경우 가능합니다.");
     			return; 
-    		} else if(pwd != cnf_pwd) {    			
-    			$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
+    		} else if(passwordValidity == false) {
     			return;
+    		} else if(emailValidity == false) {    			
+    			return;
+    		} else if(nameValidity == false) {
+    			return;
+    		} else if(nicknameValidity == false) {
+    			return; 
     		} else {
     			// 모든 유효성 검사를 끝낸 경우 회원가입 정보를 전달 
-    			console.log("회원가입을 진행합니다.");
+    			console.log("회원가입을 진행합니다.");	
     			joinFrm.submit();
-    		}   		
-    		
+    		}   	    		
     	} else {
-    		
+    		console.log("회원가입을 취소합니다.");
+    	}
+    }
+    
+    function nameValidate(name) {
+    	var size= name.length;
+    	
+    	if(name == '') {
+    		$("#name_error").html("이름을 입력해주세요.");
+    		return false;	
+    	} else if(size < 0 || size>13) {
+    		$("#name_error").html("이름을 0~13자로 입력해주세요.");
+    		return false;    		
+    	} else {
+    		$("#name_error").html(" ");
+    		return true;
+    	}
+    	
+    }
+    
+    function nicknameValidate(nickname) {
+		var size= nickname.length;
+    	
+    	if(nickname == '') {
+    		$("#nickname_error").html("닉네임을 입력해주세요.");
+    		return false;	
+    	} else if(size < 2 || size>13) {
+    		$("#nickname_error").html("닉네임을 2~10자로 입력해주세요.");
+    		return false;    		
+    	} else {
+    		$("#nickname_error").html(" ");
+    		return true;
+    	}
+    }
+    
+    function passwordValidate(pwd, cnf_pwd) {
+    	if(pwd != cnf_pwd) {    
+    		$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
+    		return false;
+    	} else if(pwd == '' || cnf_pwd =='') {
+    		$("#pwd_error").html("비밀번호를 입력해주세요.");
+    		return false;
+    	}else {
+    		$("#pwd_error").html(" ");
+    		return true;
     	}
     }
     
     function emailValidate(email) {
+    	// 이메일 유효성 정규식검사 
+    	var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     	
+    	if(email == '') {    		
+    		$("#email_error").html("이메일 주소를 다시 입력해주세요.");
+    		return false;
+    	} else if(!filter.test(email)) {
+    		// test() : 주어진 문자열이 정규 표현식을 만족하는지 판별, return값 [true | false]
+    		$("#email_error").html("이메일 형식에 맞게 다시 입력해주세요.");
+    		return false;
+    	} else {    		
+    		$("#email_error").html(" ");
+    		return true;
+    	} 
     }
     
   </script>
