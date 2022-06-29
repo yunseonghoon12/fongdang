@@ -1,0 +1,12 @@
+@font-face {
+    font-family: SUIT-SemiBold;
+    src: url("../fonts/SUIT-SemiBold.woff2");
+}
+@font-face {
+    font-family: SUIT-Regular;
+    src: url("../fonts/SUIT-Regular.woff2");
+}
+@font-face {
+    font-family: SUIT-Light;
+    src: url("../fonts/SUIT-Light.woff2");
+}

@@ -1,0 +1,86 @@
+textarea {
+    resize: none;
+    font-family: SUIT-Regular;
+}
+textarea::placeholder {
+    font-family: SUIT-Regular;
+    color: #cccccc;
+}
+select {
+    font-family: SUIT-Regular;
+    border: 1px #cccccc solid;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal > .message_content {
+    position: relative;
+    top: 150px;
+    margin: auto;
+    width: 350px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal > .report_content {
+    position: relative;
+    top: 60px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal > .review_content {
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal_title {
+    font-family: SUIT-SemiBold;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+.report_content .report_sel {
+    text-align: center;
+    margin-top: 30px;
+}
+.message_content .message_notice{
+    color: red;
+    font-size: 10px;
+    font-family: SUIT-Light;
+    margin-top: 10px;
+    text-align: center;
+}
+.message_content .message_input {
+    margin-top: 20px;
+}
+.message_content .message_send {
+    margin-top: 10px;
+}
+.message_content .message_send button {
+    background-color: transparent;
+    font-family: SUIT-Regular;
+    font-size: 15px;
+}
+.message_content #btn_message_cancel {
+    color: #b8b6b6;
+}
+.message_content #btn_message_send {
+    float: right;
+    color: #9BBFD9;
+}
