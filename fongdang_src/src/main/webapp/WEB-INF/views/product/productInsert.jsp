@@ -1,14 +1,15 @@
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">  
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>PRODCUT</title>
 </head>
 <body>
     
-<form action="<%=request.getContextPath()%>/" method="post">
+<form action="<%=request.getContextPath()%>/product/productInsert" method="post">
 <div>
   <h2 id="_title"> 펀딩상품등록 </h2>
 </div>
@@ -47,25 +48,6 @@
 <div>목표금액<a id="essential">*</a>
     <input type="text" name="p_goal" id="">
 </div>
-<div>상품옵션 설정<a id="essential">*</a>
-    <br>최대 5개까지 설정가능합니다.
-</div>
-<div>
-  옵션가격 <input type="text" name="option_price"> 옵션이름 <input type="text" name="option_name"> 옵션정보 <input type="text" name="option_info"> 제한수량 <input type="text" name="option_limit">
-</div>
-<div>
-    옵션가격 <input type="text" name="option_price"> 옵션이름 <input type="text" name="option_name"> 옵션정보 <input type="text" name="option_info"> 제한수량 <input type="text" name="option_limit">
-</div>
-<div>
-    옵션가격 <input type="text" name="option_price"> 옵션이름 <input type="text" name="option_name"> 옵션정보 <input type="text" name="option_info"> 제한수량 <input type="text" name="option_limit">
-</div>
-<div>
-    옵션가격 <input type="text" name="option_price"> 옵션이름 <input type="text" name="option_name"> 옵션정보 <input type="text" name="option_info"> 제한수량 <input type="text" name="option_limit">
-</div>
-<div>
-    옵션가격 <input type="text" name="option_price"> 옵션이름 <input type="text" name="option_name"> 옵션정보 <input type="text" name="option_info"> 제한수량 <input type="text" name="option_limit">
-</div>
-<br>
 
 <div>상품 요약<a id="essential">*</a>
     <input type="text" name="p_summary">

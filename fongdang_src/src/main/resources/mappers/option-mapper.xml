@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="Option">
+
+<insert id="insertOption" parameterType="Option">
+ insert into option(option_no
+ ,p_no
+ ,option_name,option_info
+ ,option_price,option_limit
+ )values(#{option_no}
+ ,#{p_no}
+ ,#{option_name},#{option_info}
+ ,#{option_price},#{option_limit})
+</insert>
+
+<update id="updateOption">
+update option set option_name=#{option_name}
+,option_info=#{option_info}
+,option_price=#{option_price}
+,option_limit=#{option_limit}
+where option_no=#{option_no}
+</update>
+<select id="selectOption">
+	select * from option
+	where option_no=#{option_no}
+
+</select>
+
+</mapper>

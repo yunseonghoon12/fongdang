@@ -6,14 +6,18 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.maker.model.service.MakerServiceImpl;
+import kh.spring.fongdang.member.domain.Member;
 
 
 @Controller
@@ -24,28 +28,39 @@ public class MakerController {
  @Autowired
  private MakerServiceImpl service;
  
- @RequestMapping(value="maker", method=RequestMethod.GET)
+ @GetMapping("/Register")
  public ModelAndView insertPageMaker(ModelAndView mv) {
-	 mv.setViewName("maker/maker");
+	 mv.setViewName("maker/makerInsert");
 	 return mv;
  }
 	
- @PostMapping("/insert")
+ @PostMapping("/Register")
 	public ModelAndView inserMaker(ModelAndView mv
 			,Maker mamker
 			,HttpServletRequest req
 			,HttpSession session
 			,RedirectAttributes rttr
-			) throws Throwable {
-
-//     mamker.setMaker_logo(commonfile.saveFile(mamker.getMaker_logo_file(), req));
-//     mamker.setMaker_bankbook_copy(commonfile.saveFile(mamker.getMaker_bankbook_copy_file(), req));
-//     mamker.setMaker_license_copy(commonfile.saveFile(mamker.getMaker_license_copy_file(), req));
-		int result = service.insertMaker(mamker);
+//			, @RequestParam(name = "maker_logo_file", required = false) MultipartFile file1
+			) {
+	 
+	 Member member = (Member) session.getAttribute("loginSSInfo");
+		if (member == null) {
+			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
+			mv.setViewName("redirect:/login"); //
+			return mv;
+		}
      
+//     mamker.setMaker_logo(commonfile.saveFile(mamker.getMaker_logo_file(), req));
+//     mamker.setMaker_license_copy(commonfile.saveFile(mamker.getMaker_license_copy_file(), req));
+//	 Member member = (Member)session.getAttribute("loginInfo");
+	 if(member != null) {
+		 mamker.setEmail(member.getEmail());
+		 int result = service.insertMaker(mamker);
+	 }
 		mv.setViewName("redirect:/");
 		return mv;
 	}
+ 
  
 	
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Product">
+
+<insert id="insertProduct">
+	insert into product(p_no
+	,maker_name,category_id,p_name,p_goal
+	,p_thumbnail
+	,p_summary
+	,p_story
+	,p_certification
+	,start_day,end_day,payment_plan,delivery_date
+	,p_approval,p_report_cnt
+	)values(#{p_no}
+	,#{maker_name},#{category_id},#{p_name},#{p_goal}
+	,#{p_thumbnail}
+	,#{p_summary}
+	,#{p_story}
+	,#{p_certification}
+	,#{start_day},#{end_day},#{payment_plan},#{delivery_date}
+	,default,default)
+</insert>
+
+
+
+</mapper>

@@ -18,15 +18,37 @@
 		,#{email}
 		,#{maker_category}
 		,#{maker_phone}
+		,#{maker_email}
 		,#{maker_logo}
 		,#{maker_kakao_channel}
 		,#{maker_homepage}
 		,#{maker_address}
 		,#{maker_register_num}
 		,#{maker_license_copy}
-		,default
-		)
+		,default)
 	</insert>
 	
+	<select id="selectMaker">
+		select * from maker
+		where maker_name=#{maker_name}
+	</select>
+	
+	 <update id="updateMaker">
+	  update maker set maker_name=#{maker_name}
+	  ,maker_category=#{maker_category}
+	  ,maker_phone=#{maker_phone}
+	  ,maker_email=#{maker_email}
+	  ,maker_logo=#{maker_logo}
+	  ,maker_kakao_channel=#{maker_kakao_channel}
+	  ,maker_homepage=#{maker_homepage}
+	  ,maker_address=#{maker_address}
+	  ,maker_register_num=#{maker_register_num}
+	  ,maker_license_copy=#{maker_license_copy}
+	  where email=#{email}
+	 </update>
+	 
+	<delete id="deleteMaker">
+	 delete from maker where maker_name =#{maker_name}
+	</delete>
 	
 </mapper>

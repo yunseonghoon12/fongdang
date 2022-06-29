@@ -15,7 +15,7 @@ public class MakerServiceImpl implements MakerService {
 	
 	public int insertMaker(Maker maker) {
 		return dao.insertMaker(maker);
-		}
+	}
 		
 	
 }
