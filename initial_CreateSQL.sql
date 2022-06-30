@@ -21,7 +21,8 @@ CREATE TABLE "MEMBER" (
 	nickname	VARCHAR2(50)		NOT NULL,
 	member_type	CHAR(1)	DEFAULT 'I'	NOT NULL,
 	withdraw	CHAR(1)	DEFAULT 'N'	NOT NULL,
-	profile	VARCHAR2(200)		NULL,
+    	original_profile VARCHAR2(4000)     NULL,
+	rename_profile	VARCHAR2(4000)		NULL,
 	intro	VARCHAR2(300)		NULL,
 	enroll_date	TIMESTAMP	DEFAULT SYSTIMESTAMP	NOT NULL
 );
