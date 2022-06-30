@@ -9,8 +9,8 @@ MemberVo ssMV = (MemberVo) session.getAttribute("ssMV");
 <script src="${path}/resources/css/header.css"></script>
 
 <header class="site__header">
-	<a href="#"><img src="./image/logo.png" id="Logo" /></a>
 	<nav>
+	<a href="#"><img src="./image/logo.png" id="Logo" /></a>
 		<ul class="menu" style="position: relative; left:1%;">
 			<li><a href="#">메인</a></li>
 			<li><a href="#">펀딩예정</a></li>

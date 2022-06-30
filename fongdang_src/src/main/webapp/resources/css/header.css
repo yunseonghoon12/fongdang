@@ -24,12 +24,13 @@ main {
 }
 
 #Logo {
-  width: 100px;
-  height: 62px;
+  width: 90px;
+  height: 52px;
   position: relative;
-  top: 1.5px;
+  top: 12px;
   margin-right: 10px;
 }
+
 
 .site__header {
   background-color: rgb(255, 255, 255);

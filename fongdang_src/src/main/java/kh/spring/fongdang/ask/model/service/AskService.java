@@ -6,6 +6,6 @@ import kh.spring.fongdang.ask.domain.Ask;
 public interface AskService {
 	
 	public int insertAsk(Ask ask); 
-	public List<Ask> selectAsk(String id) throws Exception;
+	public List<Ask> selectAsk(Ask ask) throws Exception;
 	
 }
