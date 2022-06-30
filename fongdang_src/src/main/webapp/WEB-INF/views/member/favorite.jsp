@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,9 +15,7 @@
   }
   /* favorite */
   #title_wrap {     
-    border-bottom: 1px solid #ccc; 
-    font-size: 36px;
-    font-weight: 700;
+    border-bottom: 1px solid #ccc;         
     height: 140px;      
   }
   #title {         
@@ -26,6 +26,8 @@
     margin-left: 18%;   
     /* margin-left: 350px; */
     padding-top: 40px; 
+    font-family: SUIT-SemiBold;
+    font-size: 36px;
   }          
   #page_body {            
     height: 900px;
@@ -58,12 +60,14 @@
   .prod_name {        
     width: 100%;
     height: 60px;
+    font-family: SUIT-Regular;
     font-size: 17px;
     font-weight: bold;
     color: black;
   }
   .prod_maker_wrap {    
     height: 50px;
+    font-family: SUIT-Light;
     font-size: 13px;
     color: #444c57;
   }
@@ -71,6 +75,7 @@
     position: relative;
   }
   .achievement_rate {
+  	font-family: SUIT-Regular;
     font-size: 15px;
     color: #9bbfd9;
   }
@@ -78,6 +83,7 @@
     position: absolute;
     right: 0;
     color: #444c57;
+    font-family: SUIT-Light;
     font-size: 13px;
     font-weight: normal;
   }

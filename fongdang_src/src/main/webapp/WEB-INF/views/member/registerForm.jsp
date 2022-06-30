@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,6 +32,7 @@
     #right_content {
       position: absolute;
       left: 80%;
+      font-family: SUIT-Regular;
     }
     #right_bar {            
       width: 200px;      
@@ -56,6 +59,7 @@
       padding-top: 2%;
     }
     #main_title{      
+      font-family: SUIT-SemiBold;
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 20px;
@@ -71,6 +75,7 @@
     #name_field > label {          
       display: block;
       color: #444c57;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 700;
       line-height: 24px;
@@ -83,6 +88,7 @@
       width: 368px;
       height: 48px;
       padding-left: 0.65em;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 300;     
     }
@@ -94,6 +100,7 @@
     #nickname_field > label {          
       display: block;
       color: #444c57;
+       font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 700;
       line-height: 24px;
@@ -106,10 +113,11 @@
       width: 368px;
       height: 48px;
       padding-left: 0.65em;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 300;     
     }
-    #email_field {      
+    #email_field {
       width: 100%;
       height: 90px;
       margin: 25px 0;
@@ -117,6 +125,7 @@
     #email_field > label {          
       display: block;
       color: #444c57;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 700;
       line-height: 24px;
@@ -129,6 +138,7 @@
       width: 368px;
       height: 48px;
       padding-left: 0.65em;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 300;     
     }
@@ -140,6 +150,8 @@
     #pwd_field > label {          
       display: block;
       color: #444c57;
+      font-family: SUIT-Regular;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 700;
       line-height: 24px;
@@ -153,15 +165,18 @@
       height: 48px;
       margin-bottom: 7px;
       padding-left: 0.65em;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 300;     
     }    
     #chk_agree {
+      font-family: SUIT-Regular;
       font-size: 14px;
       font-weight: 700;     
       padding-left: 5px;
     }
     #requirement_service {      
+      font-family: SUIT-Regular;
       font-size: 14px;
       padding-left: 110px;
     }
@@ -173,7 +188,8 @@
       height: 70px;
       margin: 10px auto;
       padding: 10px;      
-      font-size: 11px;  
+      font-family: SUIT-Light;
+      font-size: 13px;  
       line-height: 1rem;    
     }
     #enroll_btn {
@@ -181,13 +197,19 @@
       width: 368px;
       height: 48px;
       margin-top: 15px;
-
+	  font-family: SUIT-Regular;
       font-size: 16px;
       font-weight: bold;
       background-color: #b6e0d6;
       color: white;
       border: 1px solid #b6e0d6;
       border-radius: 5px;
+    }
+    #name_error, #nickname_error, #email_error, #pwd_error {
+    	padding-top: 5px;
+    	color: red; 
+    	font-family: SUIT-Light;
+    	font-size: 13px;
     }
   </style>
 </head>
@@ -217,7 +239,7 @@
   <div id="container">
     <div id="main_content">
       <p id="main_title">회원가입</p>  
-      <p id="sub_title" style="font-size: 14px; color:#444c57;">
+      <p id="sub_title" style="font-family: SUIT-Regular; font-size: 14px; color:#444c57;">
         최소한의 정보를 받고 있습니다.
       </p>   
       <form action="register.do" method="post" id="joinFrm">
@@ -227,29 +249,23 @@
             <input type="text" name="name" id="name" placeholder="이름 입력">
           </div>
           <!-- TODO: error message -->
-          <p id="name_error" style="color: red; font-size: 13px;">
-          	
-          </p>
+          <p id="name_error"></p>
         </div>        
         <div id="nickname_field">
           <label>닉네임</label>
           <div>
-            <input type="text" name="nickname" id="nickname" placeholder="닉네임 입력">
+            <input type="text" name="nickname" id="nickname" placeholder="닉네임 입력">            
           </div>
           <!-- TODO: error message -->
-          <p id="nickname_error" style="color: red; font-size: 13px;">
-          	
-          </p>
+          <p id="nickname_error"></p>
         </div>
         <div id="email_field">
           <label>이메일</label>
           <div>
-            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정">
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정">            
           </div>
           <!-- TODO: error message -->
-          <p id="email_error" style="color: red; font-size: 13px;">
-          	
-          </p>
+          <p id="email_error"></p>
         </div>
         <div id="pwd_field">
           <label>비밀번호</label>
@@ -260,9 +276,7 @@
             <input type="password" name="confirm_password" id="confirm_password" autocomplete="off" placeholder="비밀번호 확인">
           </div>
           <!-- TODO: error message -->
-          <p id="pwd_error" style="color: red; font-size: 13px;">
-          	
-          </p>
+          <p id="pwd_error"></p>
         </div>  
         <div id="fongdang_checkbox">         
           <input type="checkbox" name="chk_agree" id="agree" value="true"><span id="chk_agree">전체동의</span>                  

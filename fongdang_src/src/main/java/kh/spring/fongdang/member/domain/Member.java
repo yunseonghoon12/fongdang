@@ -15,12 +15,13 @@ public class Member {
 	private String profile;
 	private String intro;
 	private Timestamp enroll_date;
+	private boolean remember_email;	
 	
 	@Override
 	public String toString() {
 		return "Member [email=" + email + ", name=" + name + ", password=" + password + ", nickname=" + nickname
 				+ ", member_type=" + member_type + ", withdraw=" + withdraw + ", profile=" + profile + ", intro="
-				+ intro + ", enroll_date=" + enroll_date + "]";
+				+ intro + ", enroll_date=" + enroll_date + ", remember_email=" + remember_email + "]";
 	}
 
 	public String getEmail() {
@@ -94,5 +95,14 @@ public class Member {
 	public void setEnroll_date(Timestamp enroll_date) {
 		this.enroll_date = enroll_date;
 	}
+
+	public boolean isRemember_email() {
+		return remember_email;
+	}
+
+	public void setRemember_email(boolean remember_email) {
+		this.remember_email = remember_email;
+	}
+	
 	
 }

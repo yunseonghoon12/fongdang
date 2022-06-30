@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,6 +27,7 @@
    }
    #main_title{      
     position: absolute;
+    font-family: SUIT-Regular;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 15px;
@@ -32,13 +35,15 @@
   }
   #withdraw {
     position: absolute;
+    text-decoration:none;
+    font-family: SUIT-Light;
     font-size: 13px;
     top: 15px;
     right: 0;
   }
   #proflie_field {
     margin: 10px 0;
-    
+    font-family: SUIT-Regular;
     padding-top: 10px;
     font-size: 15px;
     line-height: 20px;
@@ -62,6 +67,7 @@
   #id_field > label {          
     display: block;
     color: #444c57;
+    font-family: SUIT-Regular;
     font-size: 15px;      
     line-height: 24px;
     margin-bottom: 10px;
@@ -74,6 +80,7 @@
     height: 46px;
     margin-bottom: 7px;
     padding-left: 0.65em;
+    font-family: SUIT-Light;
     font-size: 13px;
     font-weight: 300;     
   }    
@@ -85,6 +92,7 @@
   #pwd_field > label {          
     display: block;
     color: #444c57;
+    font-family: SUIT-Regular;
     font-size: 15px;      
     line-height: 24px;
     margin-bottom: 10px;
@@ -97,17 +105,19 @@
     height: 46px;
     margin-bottom: 7px;
     padding-left: 0.65em;
+    font-family: SUIT-Light;
     font-size: 13px;
     font-weight: 300;     
   }
   #nickname_field {
-      width: 100%;
-      height: 90px;
-      margin-top: 5px;
-    }
+    width: 100%;
+    height: 90px;
+    margin-top: 5px;
+  }
   #nickname_field > label {          
     display: block;
     color: #444c57;
+    font-family: SUIT-Regular;
     font-size: 15px;      
     line-height: 24px;
     margin-bottom: 10px;
@@ -120,6 +130,7 @@
     height: 46px;
     margin-bottom: 7px;
     padding-left: 0.65em;
+    font-family: SUIT-Light;
     font-size: 13px;
     font-weight: 300;     
   }
@@ -131,6 +142,7 @@
   #intro_field > label {          
     display: block;
     color: #444c57;
+    font-family: SUIT-Regular;
     font-size: 15px;      
     line-height: 24px;
     margin-bottom: 10px;
@@ -144,14 +156,14 @@
     margin-bottom: 7px;
     /* padding-left: 0.65em; */
     padding: 10px;
-    font-size: 14px;
-    font-weight: 300;     
+    font-family: SUIT-Light;
+    font-size: 13px;  
   }   
   #btn_wrap {
     position: relative;
     margin-top: 50px;
     width: 100%;
-    height: 60px;
+    height: 60px;    
   }
   #revoke_btn {    
     box-sizing: border-box;
@@ -165,6 +177,8 @@
     border: 1px solid #444c57;
     border-radius: 5px;
     color: white;
+    font-family: SUIT-Regular;
+    font-size: 15px;
   }
   #submit_btn {
     box-sizing: border-box;    
@@ -178,6 +192,8 @@
     border: 1px solid #b6e0d6;
     border-radius: 5px;
     color: white;  
+    font-family: SUIT-Regular;
+    font-size: 17px;
   }
 </style>
 </head>

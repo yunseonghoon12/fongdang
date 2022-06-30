@@ -1,9 +1,13 @@
 package kh.spring.fongdang.member.controller;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +27,14 @@ public class MemberController {
 	
 //	페이지 이동 메서드
 	@RequestMapping(value="/login", method= RequestMethod.GET)
-	public ModelAndView pageLogin(ModelAndView mv) {
+	public ModelAndView pageLogin(ModelAndView mv
+			, Member member
+			, @CookieValue(value="REMEMBER", required= false) Cookie rCookie) {
+		if(rCookie != null) {
+			member.setEmail(rCookie.getValue());
+			member.setRemember_email(true);
+		}		
+		mv.addObject("member", member);
 		mv.setViewName("member/login");
 		return mv;
 	}
@@ -81,8 +92,17 @@ public class MemberController {
 	public ModelAndView selectLogin(ModelAndView mv
 			, Member member
 			, RedirectAttributes rttr
-			, HttpSession session
-			) {	
+			, HttpSession session	
+			, HttpServletResponse response
+			) {		
+		// 쿠키 설정
+		Cookie rCookie = new Cookie("REMEMBER", member.getEmail());
+		rCookie.setPath("/");
+		if(member.isRemember_email()) {
+			rCookie.setMaxAge(60 * 60 * 24 * 30);
+		} else {
+			rCookie.setMaxAge(0);
+		}
 		
 		Member result = service.selectLogin(member);
 		if(result == null) {
@@ -90,15 +110,18 @@ public class MemberController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
-		session.setAttribute("loginInfo", result);
+		session.setAttribute("loginInfo", result);		
+		
 		rttr.addFlashAttribute("msg", result.getName()+"님이 로그인 하였습니다.");
 		mv.setViewName("redirect:/");
+		response.addCookie(rCookie);
 		return mv;		
 	}
 	
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
+//		TODO: 메인화면으로 url 지정하기 6.28_yjk
 		return "redirect:/";
 	}
 	

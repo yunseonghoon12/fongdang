@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,10 +15,9 @@
   <style>    
     /* messageBox */
     table,  td, th{
-	    border-top: 1px solid black;            
-      font-family: 'IBM Plex Sans KR', sans-serif;
-      /* font-family: 'Nanum Pen Script', cursive; */
-	  }
+	  border-top: 1px solid black;            
+      font-family: SUIT-Regular;
+	}
     #container {
       position: relative;
       width: 100%;      
@@ -32,11 +33,13 @@
       margin-top: 70px;
     }
     #title_wrap > #title {
+      font-family: SUIT-SemiBold;
       font-size: 36px;
       font-weight: bold;      
       color: #444c57;
     }
-    #title_wrap > #caption {      
+    #title_wrap > #caption { 
+      font-family: SUIT-Regular;     
       font-size: 15px;  
       font-weight: 2.0em;
       color: #444c57;

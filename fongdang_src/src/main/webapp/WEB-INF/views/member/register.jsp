@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,6 +41,7 @@
       margin: 10px;
     }
     #right_bar li a {
+      font-family:  SUIT-Regular;
       font-size: 15px;
       line-height: 55px;
     }      
@@ -63,8 +66,12 @@
     #main_title {      
       width: 300px;
       height: 50px;
+      font-family: SUIT-SemiBold;
       font-size: 35px;
       font-weight: 700;
+    }
+    #sub_title {
+      font-family: SUIT-Regular;
     }
     #social_login_content {      
       margin-top: 50px;            
@@ -80,6 +87,7 @@
     #separate {            
       padding-top: 10px;
       text-align: center;
+      font-family: SUIT-Light;
       font-size: 12px;
       color: #444c57;
       width: 368px;
@@ -88,7 +96,7 @@
       box-sizing: border-box;      
       width: 380px;
       height: 48px;      
-
+	  font-family: SUIT-Regular;
       font-size: 15px;
       line-height: normal;
 
@@ -98,7 +106,7 @@
       border-radius: 3px;            
     }
     #enroll_wrap {
-      margin: 15px 0;
+      margin: 15px 0;      
     }
     #enroll_foot {            
       width: 250px;
@@ -150,8 +158,8 @@
           </button>
         </div>
         <div id="enroll_foot">
-          <span style="font-size: 13px;">이미 퐁당 계정이 있나요?</span>
-          <a href="<%=request.getContextPath()%>/member/login" style="font-size: 13px; color: rgb(182, 224, 214);">로그인</a>
+          <span style="font-size: 13px; font-family: SUIT-Light;">이미 퐁당 계정이 있나요?</span>
+          <a href="<%=request.getContextPath()%>/member/login" style="font-size: 13px; font-family: SUIT-Light; color: rgb(182, 224, 214);">로그인</a>
         </div>
 
       </div>

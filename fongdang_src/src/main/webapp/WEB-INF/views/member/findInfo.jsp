@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,15 +41,14 @@
       margin: 10px;
     }
     #right_bar li a {
+      font-family: SUIT-Regular;
       font-size: 15px;
       line-height: 55px;
     }      
   </style>
   <style>    
     #find_title_wrap {     
-      border-bottom: 1px solid #ccc; 
-      font-size: 32px;
-      font-weight: 700;
+      border-bottom: 1px solid #ccc;       
       height: 140px;      
     }
     #find_title {     
@@ -55,8 +56,11 @@
       width: 350px;
       margin-left: 20%;
       margin-top: 3%;
+      font-family: SUIT-SemiBold;
+      font-size: 32px;
     }    
-    #find_info_wrap {      
+    #find_info_wrap {     
+      font-size: 32px;
       position: relative;
       height: 108px;
     }
@@ -77,10 +81,12 @@
     }
     #find_info > li > a {            
       text-align: center;
+      font-family: SUIT-Regular;
       font-size: 15px;
       height: 70px;      
     }
     #guide {      
+      font-family: SUIT-Regular;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -109,6 +115,7 @@
       width: 365px;
       height: 48px;
       line-height: 48px;
+      font-family: SUIT-Regular;
       font-size: 15px;
       font-weight: 300;
       padding-left: 0.95em;
@@ -119,6 +126,7 @@
       width: 365px;
       height: 48px;
       
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 400;
       margin-top: 20px;      

@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link href="<%=request.getContextPath()%>/resources/css/reset.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,6 +23,7 @@
     #myfongdang_page_background {            
       height: 220px;
       background-color: #9bbfd9;
+      /* background-color: #ccc; */
     }
     #myfongdang_page_main_wrap{      
       position: absolute;
@@ -39,6 +42,7 @@
     #myfongdang_member_path > button {
       width: 80px;
       height: 60px;
+      font-family: SUIT-Regular;
       font-size: 14px;
       font-weight: 600;
       background-color: white;
@@ -49,10 +53,11 @@
     }
     #supporter_btn {
       position: absolute;
+      font-family: SUIT-Regular;
       z-index: 9;
     }
     #maker_btn {
-      position: absolute;
+      position: absolute;      
       right: 50px;
     }
     #support_content_wrap {      
@@ -79,11 +84,13 @@
     #member_name {      
       margin: 10px 0;     
       text-align: center;
+      font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 700;
     }
     #member_state {      
       text-align: center;
+      font-family: SUIT-Light;
       font-size: 13px;
       margin-bottom: 70px;
       color: #ccc;
@@ -98,7 +105,7 @@
       height: 100%;
       border: 1px solid #ccc;
       border-radius: 10px;
-
+	  font-family: SUIT-Regular;
       font-size: 14px;
       font-weight: bold;
       background-color: white;
@@ -106,6 +113,7 @@
     #profile_btn_wrap {
       position: relative;      
       margin-top: 30px;
+      font-family: SUIT-Regular;
       font-size: 16px;
       font-weight: bold;
       height: 35px;
@@ -121,6 +129,7 @@
       margin-top: 80px;
       margin-left: 80px;
       margin-bottom: 30px;
+      font-family: SUIT-Regular;
       font-size: 18px;
       font-weight: normal;      
       color: #444c57;
@@ -153,6 +162,7 @@
     .prod_name {        
       width: 100%;
       height: 60px;
+      font-family: SUIT-Regular;
       font-size: 15px;
       font-weight: bold;
       color: black;      
@@ -161,6 +171,7 @@
       padding-top: 10px;
       height: 50px;
       color: #444c57;
+      font-family: SUIT-Regular;
       font-size: 13px;
     }
     #maker_section {
@@ -179,8 +190,10 @@
     #enrolled_funding_title {
       border-bottom: 1px solid #ccc;
       height: 30px;
+      font-family: SUIT-Regular;
     }
     #title_subcation {
+      font-family: SUIT-Regular;
       font-size: 15px;
       font-weight: bold;
       padding-top: 20px;
@@ -201,7 +214,7 @@
       padding-right: 10px;
       
       height: 70px;
-      font-weight: bold;
+      font-family: SUIT-Regular;
       line-height: 1.8em;
       text-align: center;
     }
@@ -214,9 +227,8 @@
       background-color: #9bbfd9;
       border: 1px solid #9bbfd9;
       border-radius: 6px;
-
+	  font-family: SUIT-Regular;
       font-size: 16px;
-      font-weight: bold;
       color: white;
     }
     #my_activity_wrap {            
@@ -225,7 +237,8 @@
       height: 150px;            
     }
     #my_activity_title {      
-      font-size: 18px;
+      font-family: SUIT-Regular;
+      font-size: 20px;
       font-weight: bold;
       color: #444c57;
     }
@@ -240,8 +253,9 @@
       position: relative;      
     }   
     #my_activity_content > li > a {
-      display: inline-block;          
-      font-size: 16px;
+      display: inline-block;   
+      font-family: SUIT-Regular;       
+      font-size: 18px;
       font-weight: 400;
       color: #444c57;      
       width: 370px;
@@ -256,7 +270,8 @@
       height: 80px;         
     }
     #support_tip_title {
-      font-size: 18px;
+      font-family: SUIT-Regular;
+      font-size: 20px;
       font-weight: bold;
       color: #444c57;
     }
@@ -272,7 +287,8 @@
     }
     #support_tip_content > li > a {
       display: inline-block;
-      font-size: 16px;
+      font-family: SUIT-Regular;
+      font-size: 18px;
       font-weight: 400;
       color: #444c57;      
       width: 370px;
@@ -281,7 +297,8 @@
     }
   </style>
 <body>
-  <header style="height:100px; background-color:#ccc">헤더 영역</header>
+  <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header>
+  <%-- <jsp:include page="../header.jsp"/> --%>
   <div id="container">
     <div id="myfongdang_page_background"></div>
     <div id="myfongdang_page_main_wrap">
@@ -360,12 +377,11 @@
           <!-- 메이커를 눌렀을 경우 -->
           <div id="maker_section">
             <div id="enrolled_funding">
-              <p id="enrolled_funding_title">펀딩    
+              <p id="enrolled_funding_title">펀딩 </p>   
               <p id="title_subcation">
                 만든 펀딩 
-                <span style="color:#9bbfd9;">3</span>  
-              </p>
-                   
+                <span style="color:#9bbfd9; padding-left:20px;">3</span>  
+              </p>                   
             </div>
               
             <div id="enroll_product_wrap">
@@ -468,10 +484,9 @@
     </div>
   </div>
 
-
+  <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer>
+  <%-- <jsp:include page="../footer.jsp"/> --%>
   
-
-  <footer style="height:100px; background-color:#ccc">푸터 영역</footer>
   <script>
     memberPath();
     

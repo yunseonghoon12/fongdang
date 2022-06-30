@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,6 +22,7 @@
       padding-top: 50px;
     }
     #main_content > h1 {
+      font-family: SUIT-SemiBold;
       font-size: 36px;
       line-height: 44px;
       font-weight: 700;
@@ -29,11 +32,13 @@
       margin-top: 50px;
     }
     #main_title {      
+      font-family: SUIT-SemiBold;
       font-size: 28px; 
       line-height: 36px;     
     }
     #sub_caption {
       margin-top: 20px;
+      font-family: SUIT-Regular;
       font-size: 15px;
       color: #444c57;      
     }
@@ -55,16 +60,20 @@
     }    
     .list_title {
       font-weight: bold;
+      font-family: SUIT-Regular;
       font-size: 15px;
       line-height: 2em;
     }
     .list_caption {
+      font-family: SUIT-Light;
       font-size: 13px;
     }
     #chk_agree {
+      font-family: SUIT-Regular;
       font-size: 14px;
     }
     #withdraw_btn {
+      font-family: SUIT-Regular;
       font-size: 15px;
       width: 116px;
       height: 53px;
