@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="kh.spring.fongdang.member.domain.Member"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <script src="${path}/resources/css/header.css"></script>
 
@@ -22,7 +22,7 @@
 					<li><a href="#">이용가이드</a></li>
 				</ul></li>
 			<li>
-				<form action="" method="GET" style="margin-left: 30px;">
+				<form action="" method="GET" style="margin-left: 180px;">
 					<div class="mx-auto mt-5 search-bar input-group mb-3">
 						<input name="a" type="text" class="form-control rounded-pill"
 							placeholder="category 검색">
@@ -51,28 +51,27 @@
 			<c:if test="${empty loginInfo}">
 				<li><a href="<%=request.getContextPath()%>/member/login"
 					id="login">로그인</a></li>
+				<li><a href="#" id="">회원가입</a></li>
 			</c:if>
-			<c:if test="${not empty loginInfo}">
-				<li><a href="#" id="logout">로그아웃</a></li>
-			</c:if>
-			<c:if test="${empty loginInfo}">
-				<li><a href="#" id=""><img src="<%=request.getContextPath()%>/resources/images/bell.png" class="loginImg"></a></li>
-				<c:if test="${!loginInfo.name == '관리자'}">
-					<a href="#" id=""><a href="#" id=""><img src="<%=request.getContextPath()%>/resources/images/mypage.png" class="loginImg"></a>
-				</c:if>
-				<c:if test="${loginInfo.name == '관리자'}">
-					<a href="#" id="">내정보</a>
-				</c:if>
-				<c:if test="${not empty loginInfo}">
-					<a href="#" id="">회원가입</a>
-				</c:if>
 
+			<c:if test="${!empty loginInfo}">
+				<li style="top: 10px;"><a href="#" id="">알림<%-- <img
+						src="<%=request.getContextPath()%>/resources/images/bell.png"
+						class="loginImg"> --%></a></li>
+				<c:if test="${!empty loginInfo}">
+					<li style="top: 10px;"><a href="#" id="">내정보<%-- <img
+							src="<%=request.getContextPath()%>/resources/images/mypage.png"
+							class="loginImg"> --%></a></li>
+				</c:if>
 			</c:if>
+
 			<li><a href="#" id="fdapply">펀딩 프로젝트 신청</a>
-				<ul class="dep3">
-					<li><a href="#" style="margin-top: 5px;">메이커 신청하기</a></li>
-					<li><a href="#" style="margin-top: 5px;">펀딩 오픈프로젝트 신청하기</a></li>
-				</ul></li>
+				<div class="dep3">
+					<ul>
+						<li><a href="#">메이커 신청하기</a></li>
+						<li><a href="#">펀딩 오픈프로젝트 신청하기</a></li>
+					</ul>
+				</div></li>
 		</ul>
 	</nav>
 	<script>
@@ -84,6 +83,12 @@
             let target = e.target;
             menuItem.forEach((item) => item.classList.remove('active'));
             target.classList.add('active');
+        });
+        $(".form-control").on("click", function () {
+            $(".searchR").show();
+        });
+        $(".x").on("click", function () {
+            $(".searchR").hide();
         });
     </script>
 </header>
