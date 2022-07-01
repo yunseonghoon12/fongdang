@@ -2,16 +2,18 @@
 	pageEncoding="UTF-8"%>
 <%@page import="kh.spring.fongdang.member.domain.Member"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<c:set var="path" value="${pageContext.request.contextPath}" />
-<script src="${path}/resources/css/header.css"></script>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/font.css">
+
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/header.css">
 
 <header class="site__header">
 	<nav>
 		<a href="#"> <img
 			src="<%=request.getContextPath()%>/resources/images/logo.png"
-			alt="logo" id="logo"></a>
-		<ul class="menu" style="position: relative; left: 1%;">
+			id="logo"></a>
+		<ul class="menu" style="position: relative;">
 			<li><a href="#">메인</a></li>
 			<li><a href="#">펀딩예정</a></li>
 			<li><a href="#">펀딩상품</a></li>

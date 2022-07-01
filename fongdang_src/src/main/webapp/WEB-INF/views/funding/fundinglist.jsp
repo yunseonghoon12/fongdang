@@ -1,12 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
 <title>제목</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
+* {
+	font-family: SUIT-Regular;
+	font-size: 14px;
+}
 /* TOP 카테고리 */
 .productList {
 	width: 100%;
@@ -257,7 +265,8 @@ a {
 					<div class="screen">
 						<div class="top">테크·가전</div>
 						<div class="bottom">Appliances</div>
-						<img src="<%=request.getContextPath()%>/resources/images/appliances.jpg">
+						<img
+							src="<%=request.getContextPath()%>/resources/images/appliances.jpg">
 					</div>
 					<div>
 						<h3>가전</h3>
@@ -267,7 +276,8 @@ a {
 					<div class="screen">
 						<div class="top">캠핑 용품</div>
 						<div class="bottom">Camping</div>
-						<img src="<%=request.getContextPath()%>/resources/images/camping.jpg">
+						<img
+							src="<%=request.getContextPath()%>/resources/images/camping.jpg">
 					</div>
 					<div>
 						<h3>캠핑</h3>
@@ -277,7 +287,8 @@ a {
 					<div class="screen">
 						<div class="top">화장품</div>
 						<div class="bottom">Beauty</div>
-						<img src="<%=request.getContextPath()%>/resources/images/beauty.jpg">
+						<img
+							src="<%=request.getContextPath()%>/resources/images/beauty.jpg">
 					</div>
 					<div>
 						<h3>뷰티</h3>
@@ -287,7 +298,8 @@ a {
 					<div class="screen">
 						<div class="top">식료퓸</div>
 						<div class="bottom">Groceries</div>
-						<img src="<%=request.getContextPath()%>/resources/images/Groceries.jpg">
+						<img
+							src="<%=request.getContextPath()%>/resources/images/Groceries.jpg">
 					</div>
 					<div>
 						<h3>식품</h3>
@@ -329,16 +341,35 @@ a {
 		<ul class="imglist_ul">
 			<li><a href="#">
 					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
+						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>Nike SB는 스케이트보드 보딩을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 			<li><a href="#">
 					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
+						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+					</div>
+					<h3>카메라</h3>
+					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+			</a></li>
+			<li><a href="#">
+					<div class="screen">
+						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+					</div>
+					<h3>카메라</h3>
+					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+			</a></li>
+			<li><a href="#">
+					<div class="screen">
+						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+					</div>
+					<h3>카메라</h3>
+					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+			</a></li>
+			<li><a href="#">
+					<div class="screen">
+						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
@@ -346,31 +377,7 @@ a {
 			<li><a href="#">
 					<div class="screen">
 						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="./image/nike.jpg">
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <style>
-* {
+.background {
 	font-family: SUIT-Regular;
 	font-size: 13px;
 	font-weight: bold;
@@ -24,7 +24,6 @@
 	float: left;
 	width: 44%;
 	padding: 3%;
-	margin-left: 70px;
 }
 
 .right {
@@ -44,6 +43,7 @@
 			<p>
 				&emsp;02-1234-5678&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>02-5678-1234</span>
 			</p>
+			<br>
 
 			<p>상담 가능시간: 평일 오전 9시~오후 6시 (주말, 공휴일 제외)</p>
 			<br>

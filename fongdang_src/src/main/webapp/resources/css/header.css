@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: SUIT-Regular;
 }
 
 main {
@@ -15,7 +16,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	max-width: 1500px;
-	margin: 0 10%;
+	margin: 0 5%;
 }
 
 /* #searchText {
@@ -40,8 +41,9 @@ main {
 	background-color: rgb(255, 255, 255, 0.5);
 	box-shadow: 0px 2px 4px -1px #0000000f, 0px 4px 6px -1px #0000001a;
 	border-radius: 0.8rem;
-	padding: 20px;
+	z-index: 999; padding : 20px;
 	display: none;
+	padding: 20px;
 }
 
 .searchR>p:hover {
@@ -300,6 +302,7 @@ main {
 	list-style: square;
 	margin-left: 15px;
 }
+
 .dep3 ul>li:last-child {
 	margin-top: 10px;
 }
