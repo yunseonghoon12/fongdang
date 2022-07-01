@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">  
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerinsert.css">
-
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <div id="header_funding">
         <div id="logo_inclusion">
             <a href="#">
-             <img src="images/logo.png" alt="logo" id="logo">
+             <img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
             </a>
         </div>
         <div id="funding_center_title">
