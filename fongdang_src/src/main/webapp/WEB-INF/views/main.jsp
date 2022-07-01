@@ -9,11 +9,10 @@
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <script src="${path}/resources/css/header.css"></script>
 <script src="${path}/resources/css/button.css"></script>
-<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
-
 
     <style>
         .container_content {

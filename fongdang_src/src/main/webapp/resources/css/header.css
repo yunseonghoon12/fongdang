@@ -17,11 +17,11 @@ main {
   margin:0 10%;
 }
 
-#searchText {
+/* #searchText {
   margin-right: 10px;
   width: 120px;
   height: 20px;
-}
+} */
 
 #Logo {
   width: 90px;
@@ -34,9 +34,9 @@ main {
 
 .site__header {
   background-color: rgb(255, 255, 255);
-  padding: 0 4rem;
+  padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
@@ -319,4 +319,8 @@ main {
 
 .form-control-color::-moz-color-swatch {
   border-radius: .50rem
+}
+
+.loginImg {
+  width: 40px;
 }
