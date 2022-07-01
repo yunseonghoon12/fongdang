@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* 공 통 */
+ * {margin: 0; padding: 0;}
+/* semantic 구조 맞추기 */
+ body{
+    overflow: hidden;
+ }
+header{
+ /* 방법 1 - float */
+overflow: hidden;
+ /* 방법 2 - position */
+position: relative;
+}
+ nav {
+ width: 20%;
+ float: left;  
+}
+section{
+ width: 80%;
+ background:rgb(243, 240, 231);
+float: left;
+}
+footer {
+clear: both;
+ background: #9bbfd9;  
+}
+
+ /* 펀딩 신청하기_해더 부분 */
+    #header_funding {
+      border-bottom: 1px solid #ccc;
+      height: 80px;
+      position: relative; 
+    }
+    /* 로고 위치 */
+    #logo_inclusion {
+      position: absolute;
+      width: 100px;      
+      left: 8%; 
+    }  
+     /* 로고 크기설정 */
+    #logo {
+      width: 85px; 
+      height: 60px;     
+    }
+     /* 해더 오른쪽 "나가기" */
+    #header_right_txt {
+      position: absolute;
+      right: 5%;
+      top:0px;
+    }
+   
+    #right_bar li {      
+      display: inline-block;
+      margin: 10px;
+    }
+    #right_bar li a {
+      font-size: 15px;
+      line-height: 55px;
+    }  
+   /* 해더 나가기 css */
+    #header_right_txt a {
+      text-decoration: none;
+      color: #444c57;
+      border-radius: 25px;
+      margin: 15px 0 0;
+      padding: 10px 30px;
+      border: 1px solid #444c57;
+      line-height: 1em;
+    } 
+
+    #header_right_txt a:hover{
+    background: #444c57;
+    color: white;
+    }
+    /* 해더 중간 부분 글자 */
+    #funding_center_title{
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    text-align: center  ;  
+    }
+  
+
+
+/* 테이블  감싸는 div */
+section #maker_all {
+	margin: 20px 0px 50px 0px;
+}
+/* 메이커 정보 */
+section #maker_title {
+    text-align: left;
+    font-size: 32px;
+    padding: 20px; 
+    color: #444c57;     
+}
+/* 표 제목 */
+section #title{
+	width: 200px;
+}
+/* 표 input 박스 */
+section .in_box {
+  width: 300px;
+  height:30px;
+  font-size:12px;
+  /* border-radius: 5px; */
+  border: 1px solid #ced4da;
+  color: #495057;
+
+}
+/* 표 input 박스 효과*/
+section .in_box:focus{
+    color: #495057;
+        background-color: #fff;
+        border-color: #b6e0d6;
+        outline: 0;
+}
+
+/* 테이블 전체 */
+section table#maker_Table {
+	border-spacing: 20px 20px;
+	margin: 0 auto;
+	border-collapse: separate;
+	/* width: 850px;
+	table-layout: fixed; */
+    padding: 30px;
+}
+/* 버튼 효과 */
+button:hover{
+  opacity: 0.5;
+ }
+ /* 버튼 1번 css*/
+.btn1{
+    border: none;
+    border-radius: 5px;
+    background:#b6e0d6;
+    color:white;
+    font-weight: 500;
+    font-size:13px;
+    width:100px;
+    height:30px;
+    cursor: pointer;
+}
+/*  등록_ 버튼 div 위치설정 */
+section #maker_in_bnt {
+	text-align: center;
+	padding: 20px;
+}
+/* 버튼 2 css */
+.btn2{
+    border: none;
+    border-radius: 5px;
+    background:#9bbfd9;
+    color:white;
+    font-weight: 500;
+    font-size:17px;
+    width:200px;
+    height:40px;
+    cursor: pointer;
+}
+/* nav 목록글자 설정 */
+nav a{
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        color: rgb(23, 24, 23);
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-size: 15px;
+    }
+    
+#nav_funding li{
+    text-align: center;
+    margin: 20px 0 0;
+}
+/* nav 목록글자 호버 */
+#nav_funding a:hover{
+    background: #444c57;
+    color: white;
+}
+/* nav 목록글자 css */
+#nav_funding a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1em;
+    color: #444c57;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0 0;
+    border: 1px solid #444c57;
+    border-radius: 25px;
+    width: 130px;
+    height:20px;
+}
+/*  윗첨자* css */
+sup{
+    color:red;  
+}
+
+/* nav 왼쪽 배경 설정 */
+#nav_fundingname{
+    background:#9bbfd9;
+    height:150px; 
+    }
+    /* nav 글자 설정 */
+#nav_fundingname p{
+   padding: 10px;
+   text-align: center;
+}  
+ 
