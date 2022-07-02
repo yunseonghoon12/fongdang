@@ -1,15 +1,9 @@
 package kh.spring.fongdang.common;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -17,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -42,18 +35,21 @@ import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * 외부 API 요청 Util
  * 
  * @since 2020.12.18.
  */
-@Slf4j
+
 @Component
 public class ApiRequestUtil {
+	
+	private static final Logger logger = LoggerFactory.getLogger(ApiRequestUtil.class);
 	
 	/**
 	 * HTTP timeout 설정
@@ -100,8 +96,8 @@ public class ApiRequestUtil {
 			}
 			urlWithParam = builder.toString();
 		} catch (URISyntaxException uriSyntaxException) {
-			log.warn("외부 API GET - param 요청 중 URISyntexException 발생");
-			log.warn(uriSyntaxException.getMessage());			
+			logger.warn("외부 API GET - param 요청 중 URISyntexException 발생");
+			logger.warn(uriSyntaxException.getMessage());			
 		}
 		return urlWithParam;
 	}	
@@ -130,18 +126,18 @@ public class ApiRequestUtil {
 			HttpResponse response = client.execute(request);
 			HttpEntity entity = response.getEntity();
 			result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-			log.debug(result);
+			logger.debug(result);
 		} catch (IOException ioException) {
-			log.warn("외부 API GET - param 요청 중 IOException 발생");
-			log.warn(ioException.getMessage());
+			logger.warn("외부 API GET - param 요청 중 IOException 발생");
+			logger.warn(ioException.getMessage());
 		} catch (ParseException parseException) {
-			log.warn("외부 API GET - param 요청 중 ParseException 발생");
-			log.warn(parseException.getMessage());
+			logger.warn("외부 API GET - param 요청 중 ParseException 발생");
+			logger.warn(parseException.getMessage());
 		} catch (Exception e) {
-			log.warn("외부 API GET - param 요청 중 Exception 발생");
-			log.warn(e.getMessage());
+			logger.warn("외부 API GET - param 요청 중 Exception 발생");
+			logger.warn(e.getMessage());
 		}
-		log.debug("APIREQUESTUTILL test: {}", result);
+		logger.debug("APIREQUESTUTILL test: {}", result);
 		return result;
 	}
 
@@ -178,19 +174,19 @@ public class ApiRequestUtil {
 				result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
 			}
 			
-			log.debug(result);
+			logger.debug(result);
 		} catch (UnsupportedEncodingException unsupportedEncodingException) {
-			log.warn("외부 API POST - param 요청 중 UnsupportedEncodingException 발생");
-			log.warn(unsupportedEncodingException.getMessage());
+			logger.warn("외부 API POST - param 요청 중 UnsupportedEncodingException 발생");
+			logger.warn(unsupportedEncodingException.getMessage());
 		} catch (IOException ioException) {
-			log.warn("외부 API POST - param 요청 중 IOException 발생");
-			log.warn(ioException.getMessage());
+			logger.warn("외부 API POST - param 요청 중 IOException 발생");
+			logger.warn(ioException.getMessage());
 		} catch (ParseException parseException) {
-			log.warn("외부 API POST - param 요청 중 ParseException 발생");
-			log.warn(parseException.getMessage());
+			logger.warn("외부 API POST - param 요청 중 ParseException 발생");
+			logger.warn(parseException.getMessage());
 		} catch (Exception e) {
-			log.warn("외부 API POST - param 요청 중 Exception 발생");
-			log.warn(e.getMessage());
+			logger.warn("외부 API POST - param 요청 중 Exception 발생");
+			logger.warn(e.getMessage());
 		}
 		return result;
 	}
@@ -254,20 +250,20 @@ public class ApiRequestUtil {
 			if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
 				result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
 			}
-			log.debug("requestPost: " + result);
+			logger.debug("requestPost: " + result);
 
 		} catch (UnsupportedEncodingException unsupportedEncodingException) {
-			log.warn("외부 API POST - body 요청 중 UnsupportedEncodingException 발생");
-			log.warn(unsupportedEncodingException.getMessage());
+			logger.warn("외부 API POST - body 요청 중 UnsupportedEncodingException 발생");
+			logger.warn(unsupportedEncodingException.getMessage());
 		} catch (IOException ioException) {
-			log.warn("외부 API POST - body 요청 중 IOException 발생");
-			log.warn(ioException.getMessage());
+			logger.warn("외부 API POST - body 요청 중 IOException 발생");
+			logger.warn(ioException.getMessage());
 		} catch (ParseException parseException) {
-			log.warn("외부 API POST - body 요청 중 ParseException 발생");
-			log.warn(parseException.getMessage());
+			logger.warn("외부 API POST - body 요청 중 ParseException 발생");
+			logger.warn(parseException.getMessage());
 		} catch (Exception e) {
-			log.warn("외부 API POST - body 요청 중 Exception 발생");
-			log.warn(e.getMessage());
+			logger.warn("외부 API POST - body 요청 중 Exception 발생");
+			logger.warn(e.getMessage());
 		}
 		return result;
 	}
