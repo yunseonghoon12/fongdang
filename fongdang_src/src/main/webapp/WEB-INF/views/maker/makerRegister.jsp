@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">  
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerinsert.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
 <header>
     <div id="header_funding">
         <div id="logo_inclusion">
-            <a href="#">
+            <a href="">
              <img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
             </a>
         </div>
@@ -47,7 +47,7 @@
 <section>    
     <div id="maker_all">
       
-        <form action="<%=request.getContextPath()%>/maker/insert" method="post" enctype="multipart/form-data">
+        <form action="<%=request.getContextPath()%>/maker/makerRegister" method="post" enctype="multipart/form-data">
             <!-- <div>
                 <p id="maker_title"> 메이커 정보 </p>
             </div> -->

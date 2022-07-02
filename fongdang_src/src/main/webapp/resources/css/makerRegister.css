@@ -123,7 +123,6 @@ section .in_box:focus {
 /* 테이블 전체 */
 section table#maker_Table {
 	border-spacing: 20px 20px;
-	margin: 0 auto;
 	border-collapse: separate;
 	/* width: 850px;
 	table-layout: fixed; */

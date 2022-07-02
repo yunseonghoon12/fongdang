@@ -70,8 +70,8 @@
 			<li><a href="#" id="fdapply">펀딩 프로젝트 신청</a>
 				<div class="dep3">
 					<ul>
-						<li><a href="#">메이커 신청하기</a></li>
-						<li><a href="#">펀딩 오픈프로젝트 신청하기</a></li>
+						<li><a href="<%=request.getContextPath()%>/maker/Register">펀딩 오픈프로젝트 신청하기</a></li>
+						<!--<li><a href="#">펀딩 오픈프로젝트 신청하기</a></li>  sunae: 버튼 하나로 수정하였습니다. -->
 					</ul>
 				</div></li>
 		</ul>

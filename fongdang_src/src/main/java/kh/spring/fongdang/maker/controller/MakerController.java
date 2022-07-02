@@ -28,12 +28,14 @@ public class MakerController {
  @Autowired
  private MakerServiceImpl service;
  
+//maker page 이동 
  @GetMapping("/Register")
  public ModelAndView insertPageMaker(ModelAndView mv) {
-	 mv.setViewName("maker/makerInsert");
+	 mv.setViewName("maker/makerRegister");
 	 return mv;
  }
 	
+// maker insert 
  @PostMapping("/Register")
 	public ModelAndView inserMaker(ModelAndView mv
 			,Maker mamker

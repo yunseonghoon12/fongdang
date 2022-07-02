@@ -42,6 +42,12 @@
 		
 		<!-- Logging -->
 		<dependency>
+		    <groupId>net.rakugakibox.spring.boot</groupId>
+		    <artifactId>logback-access-spring-boot-starter</artifactId>
+		    <version>2.7.1</version>
+		    <scope>runtime</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${org.slf4j-version}</version>
