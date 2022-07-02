@@ -5,14 +5,11 @@ import kh.spring.fongdang.member.domain.Member;
 public interface MemberService {
 	
 	/* 로그인 */
-	public Member selectLogin(Member member);
-	
+	public Member selectLogin(Member member);	
 	/* 회원가입 */
 	public int insertMember(Member member) ;
-	
-	
-	
-	
+	/* 회원 정보 수정 */
+	public int updateMember(Member member);
 	
 	
 	

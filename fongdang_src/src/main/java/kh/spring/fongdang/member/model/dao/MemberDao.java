@@ -18,4 +18,13 @@ public class MemberDao {
 	public int insertMember(Member member) {
 		return sqlSession.insert("Member.insertMember", member);
 	}
+
+	public int withdrawMember(String email) {
+		return sqlSession.update("Member.withdrawMember", email);
+	}
+
+	public int updateMember(Member member) {		
+		return sqlSession.update("Member.updateMember", member);
+	}	
+	
 }

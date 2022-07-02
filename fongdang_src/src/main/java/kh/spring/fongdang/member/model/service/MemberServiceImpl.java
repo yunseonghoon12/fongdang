@@ -18,4 +18,12 @@ public class MemberServiceImpl implements MemberService{
 	public int insertMember(Member member) {		
 		return dao.insertMember(member);
 	}
+
+	public int withdrawMember(String email) {
+		return dao.withdrawMember(email);
+	}
+
+	public int updateMember(Member member) {
+		return dao.updateMember(member);
+	}
 }
