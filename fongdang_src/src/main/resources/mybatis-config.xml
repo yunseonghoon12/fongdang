@@ -19,7 +19,9 @@
 		<mapper resource="mappers/member-mapper.xml"/>
 		<mapper resource="mappers/ask-mapper.xml"/>
 		<mapper resource="mappers/maker-mapper.xml"/>
-		
+		<mapper resource="mappers/product-mapper.xml"/>
+		<mapper resource="mappers/option-mapper.xml"/>
+		<mapper resource="mappers/pick-mapper.xml"/>
 		<mapper resource="mappers/admin-mapper.xml"/>
 	</mappers>
 </configuration>
