@@ -34,7 +34,7 @@ public class ProductController {
 	//펀딩상품 page 이동 	
 	@GetMapping("/product.pag")
 	public ModelAndView insertPageProduct(ModelAndView mv) {
-		 mv.setViewName("product/product");
+		 mv.setViewName("product/product");// jsp 화면 
 		return mv;
 	}
 	//펀딩상품 insert 

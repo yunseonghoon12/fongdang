@@ -72,7 +72,7 @@
     <ul>
          <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
         <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
-        <li><a href="#"> 펀딩 옵션</a></li>
+        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
         <li><a href="#"> 오픈예정 현황</a></li>
         <li><a href="#"> 펀딩 현황</a></li>
         <!-- <li><a href="#"> 결제 현황</a></li> -->

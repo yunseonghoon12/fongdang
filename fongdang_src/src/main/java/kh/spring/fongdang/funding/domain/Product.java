@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Product {
 	
-//	P_NO            NOT NULL NUMBER        
+/*	P_NO            NOT NULL NUMBER        
 //	MAKER_NAME      NOT NULL VARCHAR2(200) 
 //	CATEGORY_ID     NOT NULL CHAR(2)       
 //	P_NAME          NOT NULL VARCHAR2(200) 
@@ -23,11 +23,7 @@ public class Product {
 //	DELIVERY_DATE   NOT NULL DATE          
 //	P_APPROVAL      NOT NULL CHAR(1)       
 //	P_REPORT_CNT    NOT NULL NUMBER  
-	
-	
-	
-	
-	
+*/	
 	private int p_no;            //상품번호
 	private String  maker_name;  //메이커명
 	private String  category_id; //카테고리ID
