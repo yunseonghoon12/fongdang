@@ -372,7 +372,7 @@
     		$("#name_error").html("이름을 입력해주세요.");
     		return false;	
     	} else if(size < 0 || size>13) {
-    		$("#name_error").html("이름을 0~13자로 입력해주세요.");
+    		$("#name_error").html("이름을 1~13자로 입력해주세요.");
     		return false;    		
     	} else {
     		$("#name_error").html(" ");

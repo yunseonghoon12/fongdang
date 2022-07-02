@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -198,58 +199,73 @@
 </style>
 </head>
 <body>
-	<header style="height: 100px; background: #ccc">헤더 영역</header>
+	<header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header>
 
-  <div id="container">
-    <div id="main_content">
-      <div id="main_wrap">
-        <p id="main_title">프로필 설정</p>  
-        <a href="<%=request.getContextPath()%>/member/withdraw" id="withdraw">회원탈퇴</a>
-      </div>
-      <form action="" method="post">
-        <div id="proflie_field">
-          <p>프로필 사진</p>          
-            <img src="<%=request.getContextPath()%>/resources/images/user.png" id="personal_img" alt="회원사진">
-            <div>
-              <!-- <button type="button" id="profile">프로필 사진 등록</button> -->
-              <div id="profile">
-                <input type="file">
-              </div>
-            </div>          
-        </div>
-        <div id="id_field">
-          <label>아이디</label>
-          <div>
-            <input type="text" placeholder="읽기 전용" value="${loginInfo.email}" readonly>
-          </div>
-        </div>
-        <div id="pwd_field">
-          <label>새 비밀번호</label>
-          <div>
-            <input type="password" autocomplete="off" placeholder="새 비밀번호">
-          </div>
-        </div>
-        <div id="nickname_field">
-          <label>닉네임</label>
-          <div>
-            <input type="text" placeholder="닉네임">
-          </div>
-        </div>
-        <div id="intro_field">
-          <label>간단한 한 마디로 나를 소개해주세요</label>
-          <div>
-            <textarea cols="49" rows="4"></textarea>
-          </div>
-        </div>
-        <div id="btn_wrap">
-          <input type="reset" id="revoke_btn" value="취소">
-          <input type="submit" id="submit_btn" value="확인">
-        </div>
-      </form>
+  	<div id="container">
+    	<div id="main_content">
+      		<div id="main_wrap">
+        		<p id="main_title">프로필 설정</p>  
+        		<a href="<%=request.getContextPath()%>/member/withdraw" id="withdraw">회원탈퇴</a>
+      		</div>
+      		<form action="<%=request.getContextPath()%>/member/update" method="post" enctype="multipart/form-data">
+        		<div id="proflie_field">
+          			<p>프로필 사진</p>
+<c:if test="${not empty loginInfo.original_profile}">
+          			<input type="hidden" name="rename_profile" value="${loginInfo.rename_profile}">
+          			<img src="<%=request.getContextPath()%>${loginInfo.rename_profile}" id="personal_img">          
 
+</c:if>          	
+<c:if test="${empty  loginInfo.original_profile}">
+            		<img src="<%=request.getContextPath()%>/resources/images/user.png" id="personal_img">
+</c:if>		
+            		<div>
+              			<!-- <button type="button" id="profile">프로필 사진 등록</button> -->
+              			<div id="profile"><input type="file" name="uploadfile"></div>
+            		</div>          
+        		</div>
+        	<div id="id_field">
+          		<label>아이디</label>
+          		<div>
+	            	<input type="text" name="email" id="email" placeholder="읽기 전용" value="${loginInfo.email}" readonly>
+          		</div>
+        	</div>
+        	<div id="pwd_field">
+          		<label>새 비밀번호</label>
+          		<div>
+            		<input type="password" name="password" id="password" autocomplete="off" placeholder="새 비밀번호">
+          		</div>
+        	</div>
+        	<div id="nickname_field">
+          		<label>닉네임</label>
+          		<div>
+            		<input type="text" name="nickname" id="nickname" placeholder="닉네임">
+          		</div>
+        	</div>
+        	<div id="intro_field">
+          		<label>간단한 한 마디로 나를 소개해주세요</label>
+          		<div>
+	            	<textarea cols="49" rows="4" name="intro" id="intro"></textarea>
+          		</div>
+        	</div>
+        	<div id="btn_wrap">
+          		<button type="reset" id="revoke_btn">취소</button>
+          		<button type="submit" id="submit_btn">확인</button>          		
+        	</div>
+      	</form>
     </div>
   </div>
 
-  <footer style="height:100px; background: #ccc">푸터 영역</footer>
+  <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer>
+  
+  <script>
+  	$("#submit_btn").click(function () {
+  		console.log("email: " + $("#email").val());
+  		console.log("password: " + $("#password").val());
+  		console.log("passwordTypeof: " + typeof($("#password").val()));
+  		console.log("nickname: " + $("#nickname").val());
+  		console.log("intro: " + $("#intro").val());
+  	});
+  	
+  </script>
 </body>
 </html>
