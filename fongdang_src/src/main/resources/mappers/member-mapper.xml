@@ -8,9 +8,34 @@
 	</select>
 	
 	<insert id="insertMember" parameterType="Member">
-	insert into member(email, name, password, nickname)
-		values(#{email}, #{name}, #{password}, #{nickname})		
+		insert into member(email, name, password, nickname)
+			values(#{email}, #{name}, #{password}, #{nickname})		
 	</insert>
 
+	<update id="withdrawMember" parameterType="string">
+		update member set withdraw = 'Y' where email = #{email}
+	</update>
+	
+	<update id="updateMember" parameterType="Member">
+		update member 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="original_profile != ''">
+				original_profile = #{original_profile},			
+			</if>		
+			<if test="rename_profile != ''">
+				rename_profile = #{rename_profile},			
+			</if>
+			<if test="password != ''">
+				password = #{password},			
+			</if> 
+			<if test="nickname != ''">
+			 	nickname = #{nickname},			
+			</if>			
+			<if test="intro != ''">
+				intro = #{intro}			
+			</if>
+		</trim>
+		 	where email= #{email}
+	</update>
 
 </mapper>
