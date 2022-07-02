@@ -61,7 +61,7 @@
 						src="<%=request.getContextPath()%>/resources/images/bell.png"
 						class="loginImg"> --%></a></li>
 				<c:if test="${!empty loginInfo}">
-					<li style="top: 10px;"><a href="#" id="">내정보<%-- <img
+					<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보<%-- <img
 							src="<%=request.getContextPath()%>/resources/images/mypage.png"
 							class="loginImg"> --%></a></li>
 				</c:if>

@@ -16,4 +16,7 @@ public class PickDao {
 		return sqlSession.insert("Pick.insertPick", pick);
 	}
 	
+	  public int deletePick(String p_no) {
+		  return sqlSession.delete("Pick.deletePick",p_no);
+	  }
 }

@@ -31,13 +31,14 @@ public class ProductController {
 	@Autowired
 	public ProductService service;
 	
-	@GetMapping("/productInsert")
+	//펀딩상품 page 이동 	
+	@GetMapping("/product.pag")
 	public ModelAndView insertPageProduct(ModelAndView mv) {
-		 mv.setViewName("product/productInsert");
+		 mv.setViewName("product/product");
 		return mv;
 	}
-	
-	@PostMapping("/productInsert")
+	//펀딩상품 insert 
+	@PostMapping("/product.do")
 	public ModelAndView insertProduct(ModelAndView mv
 			,HttpServletRequest request
 			) {

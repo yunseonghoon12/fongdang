@@ -47,6 +47,8 @@
 	  where email=#{email}
 	 </update>
 	 
+	 
+	 
 	<delete id="deleteMaker">
 	 delete from maker where maker_name =#{maker_name}
 	</delete>

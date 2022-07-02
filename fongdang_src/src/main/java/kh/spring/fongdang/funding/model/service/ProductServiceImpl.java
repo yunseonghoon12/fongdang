@@ -13,13 +13,8 @@ public class ProductServiceImpl implements ProductService{
 	@Autowired
 	private ProductDao productDao;
 	
-	@Autowired
-	private OptionDao optionDao;
-	
-	
 	
 	public void insertProduct(Product product ) {
-		 // optionDao.insertOption(option);  // 옵션Dao  호출  ToDo 
 		productDao.insertProduct(product);
 		
 		

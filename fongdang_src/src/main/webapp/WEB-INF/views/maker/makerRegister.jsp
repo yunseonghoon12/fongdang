@@ -8,6 +8,42 @@
 <head>
 <meta charset="UTF-8">
 <title>메이커 정보</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+<!-- 다음 카카오주소 검색 Postcode  -->
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+<script>
+    //다음 카카오 주소찾기 (src="http://dmaps.daum.net/map_js_init/postcode.v2.js) 같이 추가
+    function open_Postcode() { 
+        new daum.Postcode({
+            oncomplete : function(data) {
+                console.log(data);
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.  
+                document.getElementById("maker_address1").value = data.roadAddress;
+            }
+        }).open();
+    }
+    
+    
+    function open_Licensecode(){
+    	$.ajax({
+			url : "<%=request.getContextPath()%>/maker/licenseCheck",
+			type : "post",
+			date : {
+				b_no : $("#b_no").val();
+			},
+			success : function(result) {
+				console.log(result);
+				
+			},
+			error : function() {
+				console.log(result);
+			}
+		});
+    }
+    
+    </script>  
 </head>
 <body>
 <header>
@@ -34,8 +70,8 @@
          <p id="member_name">${loginInfo.name} 님</p> 
     </div>
     <ul>
-         <li><a href="#"> 메이커 정보 </a></li>
-        <li><a href="#"> 펀딩 상품</a></li>
+         <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
+        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
         <li><a href="#"> 펀딩 옵션</a></li>
         <li><a href="#"> 오픈예정 현황</a></li>
         <li><a href="#"> 펀딩 현황</a></li>
@@ -47,7 +83,7 @@
 <section>    
     <div id="maker_all">
       
-        <form action="<%=request.getContextPath()%>/maker/makerRegister" method="post" enctype="multipart/form-data">
+        <form action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
             <!-- <div>
                 <p id="maker_title"> 메이커 정보 </p>
             </div> -->
@@ -92,8 +128,8 @@
                 </tr>
                 <tr>
                     <td id="title">사업자등록번호<sup>*</sup></td>
-                    <td ><input type="text" name="maker_register_num"  class="in_box"></td>
-                    <td></td>
+                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box"></td>
+                    <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" onclick="open_Licensecode()"></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록증 사본<sup>*</sup></td>
@@ -123,9 +159,7 @@
         </form>
     </div>  
 </section>  
-<footer>
-    <P>푸터   아직 모르겠음 </P>
-</footer> 
+ 
 
 </body>
 </html>

@@ -432,7 +432,7 @@
               퐁당 펀딩으로 처음을 만들어보세요
             </p>
             <div id="enroll_wrap">
-              <button type="button" onclick="location.href='';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
+              <button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
             </div>
 
 

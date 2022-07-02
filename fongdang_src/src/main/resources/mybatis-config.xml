@@ -10,10 +10,17 @@
 		<typeAlias type="kh.spring.fongdang.member.domain.Member" alias="Member"/>
 		<typeAlias type="kh.spring.fongdang.ask.domain.Ask" alias="Ask"/>
 		<typeAlias type="kh.spring.fongdang.maker.domain.Maker" alias="Maker"/>
+		<typeAlias type="kh.spring.fongdang.funding.domain.Product" alias="Product"/>
+		<typeAlias type="kh.spring.fongdang.option.domain.Option" alias="Option"/>
+		<typeAlias type="kh.spring.fongdang.pick.domain.Pick" alias="Pick"/>
 	</typeAliases>
 		
 	<mappers>
 		<mapper resource="mappers/member-mapper.xml"/>
+		<mapper resource="mappers/ask-mapper.xml"/>
 		<mapper resource="mappers/maker-mapper.xml"/>
+		<mapper resource="mappers/product-mapper.xml"/>
+		<mapper resource="mappers/option-mapper.xml"/>
+		<mapper resource="mappers/pick-mapper.xml"/>
 	</mappers>
 </configuration>

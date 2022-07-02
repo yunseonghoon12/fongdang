@@ -21,6 +21,10 @@
 	,default,default)
 </insert>
 
+<select id="selectProduct">
+elect * from product
+	where p_no=#{p_no}
+</select>
 
 
 </mapper>
