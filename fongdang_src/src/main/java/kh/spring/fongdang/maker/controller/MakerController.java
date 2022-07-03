@@ -1,23 +1,26 @@
 package kh.spring.fongdang.maker.controller;
 
+import java.util.Enumeration;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 
-//import org.graalvm.compiler.core.GraalCompiler.Request;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
+import org.springframework.http.HttpStatus;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import kh.spring.fongdang.common.ApiRequestUtil;
 import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.maker.model.service.MakerServiceImpl;
 import kh.spring.fongdang.member.domain.Member;
@@ -26,8 +29,13 @@ import kh.spring.fongdang.member.domain.Member;
 @RequestMapping("/maker")
 public class MakerController {
 
-	@Autowired
-	private MakerServiceImpl service;
+	private static final Logger logger = LoggerFactory.getLogger(MakerController.class);
+	
+	@Resource(name="makerServiceImpl")
+	private MakerServiceImpl makerServiceImpl;
+	
+	@Resource(name="apiRequestUtil")
+	private ApiRequestUtil apiRequestUtil;   
 
 //maker page 이동 
 	@GetMapping("/Register") // "maker/Register" 이렇게 이동
@@ -55,19 +63,29 @@ public class MakerController {
 //	 Member member = (Member)session.getAttribute("loginInfo");
 		if (member != null) {
 			mamker.setEmail(member.getEmail());
-			int result = service.insertMaker(mamker);
+			int result = makerServiceImpl.insertMaker(mamker);
 		}
 		mv.setViewName("redirect:/");
 		return mv;
 	}
-	
-	
-	
-//	public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-//	@PostMapping("/Register")
-//	public String inserMaker(ModelAndView mv, Maker mamker, HttpServletRequest req) {
-//
-//		return "";
-//	}
+
+	@PostMapping("/licenseCheck")
+	public ResponseEntity<String> inserMaker(ModelAndView mv, HttpServletRequest req) {
+		
+		String url = "https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey=yokAkHtjTw0vyvU9zRTnifTovmWD2Zl8cR57jk85VMqARcRRe%2Fdbu%2B1Agt%2BN%2FU7SXynB4NukTFd4qE4k5%2FMGRQ%3D%3D";
+		JSONObject jo = new JSONObject();
+		JSONArray jarr = new JSONArray();
+		
+		jarr.put(req.getParameter("bNo"));
+		jo.put("b_no", jarr);
+		
+		String result = apiRequestUtil.requestPost(url, jo.toString());
+		
+		try {
+	        return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
+	}
 
 }

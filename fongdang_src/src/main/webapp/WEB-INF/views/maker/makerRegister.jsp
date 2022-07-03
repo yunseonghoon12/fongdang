@@ -1,21 +1,20 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">  
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>메이커 정보</title>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<!-- 다음 카카오주소 검색 Postcode  -->
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-
-<script>
+<script type="text/javascript">
     //다음 카카오 주소찾기 (src="http://dmaps.daum.net/map_js_init/postcode.v2.js) 같이 추가
-    function open_Postcode() { 
+$(document).ready(function() {    
+    $("#postcode_button").click(function () {
         new daum.Postcode({
             oncomplete : function(data) {
                 console.log(data);
@@ -23,27 +22,39 @@
                 document.getElementById("maker_address1").value = data.roadAddress;
             }
         }).open();
-    }
+	});
     
-    
-    function open_Licensecode(){
+   	$("#license_button").click(function () {
+	   	var form = {
+	   		bNo: $("#b_no").val()
+	    }
     	$.ajax({
-			url : "<%=request.getContextPath()%>/maker/licenseCheck",
-			type : "post",
-			date : {
-				b_no : $("#b_no").val();
-			},
-			success : function(result) {
-				console.log(result);
-				
-			},
-			error : function() {
-				console.log(result);
-			}
-		});
-    }
-    
-    </script>  
+            type: "POST"
+            ,url: "<%=request.getContextPath()%>/maker/licenseCheck"
+            ,data : form
+			,dataType:"JSON"
+           	,success: function (result) {
+               console.log("result : ", result);
+               let str = result;
+               let strArr = str.data;
+               alert(strArr[0].tax_type);
+               if (strArr[0].b_stt_cd != '' ) {
+            	   $("maker_register_num_yn").val("Y");
+				}else{
+					$("maker_register_num_yn").val("N");	
+				}
+            }
+  			,error : function (result) {
+  				console.log(result);
+   			}
+    	});
+    	
+   	});
+   	$("#license_button").onchange(function () {
+   		$("maker_register_num_yn").val("N");
+   	});
+});  
+</script> 
 </head>
 <body>
 <header>
@@ -83,7 +94,7 @@
 <section>    
     <div id="maker_all">
       
-        <form action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
+        <form name="makerform" action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
             <!-- <div>
                 <p id="maker_title"> 메이커 정보 </p>
             </div> -->
@@ -124,12 +135,14 @@
                         <input type="text" name="maker_address1" id="maker_address1"  class="in_box" ><br>
                         <input type="text"  name="maker_address2" id="maker_address2" placeholder="상세주소 입력해 주세요"  class="in_box">
                     </td>
-                    <td><input type="button" class="btn1" value="주소검색" class="in_box" id="postcode_button" onclick="open_Postcode()"></td>
+                    <td><input type="button" class="btn1" value="주소검색" class="in_box" id="postcode_button" ></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록번호<sup>*</sup></td>
-                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box"></td>
-                    <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" onclick="open_Licensecode()"></td>
+                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box">
+                    	<input type="hidden" name="maker_register_num_yn" id="maker_register_num_yn">
+                    </td>
+                    <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" ></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록증 사본<sup>*</sup></td>
@@ -156,6 +169,7 @@
             <div id="maker_in_bnt">
                 <button type="submit" class="btn2" value="저장하기" >저장하기</button>
             </div>
+            
         </form>
     </div>  
 </section>  

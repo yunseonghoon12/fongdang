@@ -59,174 +59,9 @@ public class ApiRequestUtil {
 		return RequestConfig.custom().setSocketTimeout(30000).setConnectTimeout(30000)
 				.setConnectionRequestTimeout(30000).build();
 	}
-	
-	/**
-	 * 사설 인증서 검증 우회 HttpClient 반환
-	 * 사설 인증서인 경우 HttpClient client = HttpClients.createDefault();를 HttpClient client = getHttpClient();로 변경
-	 */
-	public CloseableHttpClient getHttpClient() throws Exception {
-		return HttpClients.custom().setSSLHostnameVerifier(NoopHostnameVerifier.INSTANCE)
-				.setSSLContext(new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
-					public boolean isTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
-						return true;
-					}
-				}).build()).build();
-	}
 
 	/**
-	 * GET방식의 url 및 파라미터 가공
-	 * 
-	 * @param String             url 요청 주소
-	 * @param Map<String,String> param 파라메터
-	 * @return String
-	 */	
-	public String buildGetUrl(String url, Map<String, String> param) {
-		String urlWithParam = StringUtils.EMPTY;
-		try {
-			// 요청 객체 생성
-			URIBuilder builder = new URIBuilder(new URI(url));
-			// 요청 파라메터 처리
-			if (param != null) {
-				List<NameValuePair> params = new ArrayList<NameValuePair>();
-				for (String key : param.keySet()) {
-					params.add(new BasicNameValuePair(key, param.get(key)));
-				}
-				// 요청 파라메터 추가
-				builder.addParameters(params);
-			}
-			urlWithParam = builder.toString();
-		} catch (URISyntaxException uriSyntaxException) {
-			logger.warn("외부 API GET - param 요청 중 URISyntexException 발생");
-			logger.warn(uriSyntaxException.getMessage());			
-		}
-		return urlWithParam;
-	}	
-	
-	/**
-	 * 외부 API 요청 - GET
-	 * 
-	 * @param String             url 요청 주소
-	 * @param Map<String,String> param 파라메터
-	 * @return String
-	 */
-	public String requestGet(String url, Map<String, String> param) {
-		String result = StringUtils.EMPTY;
-		
-		try {
-			//url 생성
-			String urlWithParam = buildGetUrl(url, param);
-
-			// 요청 객체 생성
-			HttpClient client = HttpClients.createDefault();
-			HttpGet request = new HttpGet(urlWithParam);
-			// request config
-			request.setConfig(getRequestConfig());
-
-			// 요청 후 응답 변환
-			HttpResponse response = client.execute(request);
-			HttpEntity entity = response.getEntity();
-			result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-			logger.debug(result);
-		} catch (IOException ioException) {
-			logger.warn("외부 API GET - param 요청 중 IOException 발생");
-			logger.warn(ioException.getMessage());
-		} catch (ParseException parseException) {
-			logger.warn("외부 API GET - param 요청 중 ParseException 발생");
-			logger.warn(parseException.getMessage());
-		} catch (Exception e) {
-			logger.warn("외부 API GET - param 요청 중 Exception 발생");
-			logger.warn(e.getMessage());
-		}
-		logger.debug("APIREQUESTUTILL test: {}", result);
-		return result;
-	}
-
-	/**
-	 * 외부 API 요청 - POST with Parameter
-	 * 
-	 * @param String             url 요청 주소
-	 * @param Map<String,String> param 파라메터
-	 * @return String
-	 */
-	public String requestPost(String url, Map<String, String> param) {
-		String result = null;
-
-		try {
-			// 요청 객체 생성
-			HttpClient client = HttpClients.createDefault();
-			HttpPost request = new HttpPost(url);
-			// request config
-			request.setConfig(getRequestConfig());
-
-			// 요청 파라메터 처리
-			if (param != null) {
-				List<NameValuePair> params = new ArrayList<NameValuePair>();
-				for (String key : param.keySet()) {
-					params.add(new BasicNameValuePair(key, param.get(key)));
-				}
-				request.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
-			}
-
-			// 요청 후 응답 처리
-			HttpResponse response = client.execute(request);
-			HttpEntity entity = response.getEntity();
-			if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-				result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-			}
-			
-			logger.debug(result);
-		} catch (UnsupportedEncodingException unsupportedEncodingException) {
-			logger.warn("외부 API POST - param 요청 중 UnsupportedEncodingException 발생");
-			logger.warn(unsupportedEncodingException.getMessage());
-		} catch (IOException ioException) {
-			logger.warn("외부 API POST - param 요청 중 IOException 발생");
-			logger.warn(ioException.getMessage());
-		} catch (ParseException parseException) {
-			logger.warn("외부 API POST - param 요청 중 ParseException 발생");
-			logger.warn(parseException.getMessage());
-		} catch (Exception e) {
-			logger.warn("외부 API POST - param 요청 중 Exception 발생");
-			logger.warn(e.getMessage());
-		}
-		return result;
-	}
-
-	/**
-	 * 외부 API 요청 - POST with body from JSONObject
-	 * 
-	 * @param String     url 요청 주소
-	 * @param JSONObject body
-	 * @return
-	 */
-	public String requestPost(String url, JSONObject body) {
-		String result = null;
-		if (body != null) {
-			result = requestPost(url, body.toString());
-		} else {
-			result = requestPost(url, StringUtils.EMPTY);
-		}
-		return result;
-	}
-
-	/**
-	 * 외부 API 요청 - POST with body from JSONArray
-	 * 
-	 * @param String    url 요청 주소
-	 * @param JSONArray body
-	 * @return
-	 */
-	public String requestPost(String url, JSONArray body) {
-		String result = null;
-		if (body != null) {
-			result = requestPost(url, body.toString());
-		} else {
-			result = requestPost(url, StringUtils.EMPTY);
-		}
-		return result;
-	}
-
-	/**
-	 * 외부 API 요청 - POST with body from String
+	 * 사업자 API 요청 - POST with body from String
 	 * 
 	 * @param String url 요청 주소
 	 * @param String body
@@ -242,14 +77,15 @@ public class ApiRequestUtil {
 
 			// body String 처리
 			request.setHeader(HttpHeaders.CONTENT_TYPE, "application/json; charset=utf-8");
+			request.setHeader(HttpHeaders.ACCEPT, "application/json");
+			request.setHeader(HttpHeaders.AUTHORIZATION, "yokAkHtjTw0vyvU9zRTnifTovmWD2Zl8cR57jk85VMqARcRRe/dbu+1Agt+N/U7SXynB4NukTFd4qE4k5/MGRQ==");
+			request.setConfig(getRequestConfig());
 			request.setEntity(new StringEntity(body, StandardCharsets.UTF_8));
-
+			
 			// 요청 후 응답 처리
 			HttpResponse response = client.execute(request);
 			HttpEntity entity = response.getEntity();
-			if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-				result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-			}
+			result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
 			logger.debug("requestPost: " + result);
 
 		} catch (UnsupportedEncodingException unsupportedEncodingException) {
