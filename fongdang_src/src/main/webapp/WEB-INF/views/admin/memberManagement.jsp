@@ -17,25 +17,25 @@
       color: #444c57;           
       padding-top: 20px;      
     }
-    #admin_navigationbar {
-      position: relative;      
+    #admin_navigationbar {      
+      position: relative;
+      width: 1280px;      
       height: 100px;
       margin: 0 auto;
     }
     #logo_wrap {
       position: absolute;
-      top: 0;
-      margin-left: 5%;
+      top: 0;      
       width: 100px;      
     }
     #logo {   
-      width: 90px;
-      height: 80px;
+      width: 95px;
+      height: 65px;
     }
     #admin_header_title {
       position: absolute;
       top: 30%;
-      margin-left: 12%;
+      left: 150px;
       font-family: SUIT-SemiBold;
       font-size: 28px;
     }
@@ -45,33 +45,31 @@
     a {
       text-decoration: none;
     }
-    #container {      
+    #container {
       display: flex;
       flex-flow: row wrap;
       margin: 0 auto;
+      width: 1200px;
       height: 800px;
     }    
     #admin_nav {
-      /* float: left; */ 
+      /* float: left; */
       width: 20%;
       height: 100%;
     }
-    #admin_nav ul {      
-      border-right: 1px solid #ccc; 
-      width: 400px;     
-      height: 600px;
-      padding: 40px 0;      
+    #admin_nav ul { 
+      border-right: 1px solid #ccc;
+      width: 180px;     
+      height: 600px; 
+      padding-top: 50px;          
     }
-    #admin_nav li {  	
-    	margin: 20px 0;    	
-    	padding-left: 200px;
+    #admin_nav li { 	
+    	 margin: 25px;
     }
     #admin_nav li a {
-      display: inline-block;   
       color: #444c57;
     }   
-    .main_menu {
-      margin-top: 20px;
+    .main_menu {      
       font-family: SUIT-SemiBold;
       font-size: 20px;
       font-weight: bold;      
@@ -93,7 +91,7 @@
     <div id="admin_navigationbar">
       <div id="logo_wrap">
       	<!-- TODO: 퐁당 메인 페이지 URL 작성하기 -->
-      	<a href="#">
+      	<a href="<%=request.getContextPath()%>/">
         	<img src="<%=request.getContextPath()%>/resources/images/logo.png" id="logo">
       	</a>
       </div>
@@ -107,7 +105,7 @@
       <!-- 관리자 메뉴 -->
       <!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
       <ul>
-        <li><a href="<%=request.getContextPath()%>/admin/memberManagement" class="main_menu">회원 관리</a></li>
+        <li><a href="<%=request.getContextPath()%>/admin/" class="main_menu">회원 관리</a></li>
         <li><a href="#" class="sub_menu">회원 목록</a></li>
         <li><a href="#" class="main_menu">펀딩 관리</a></li>
         <li><a href="#" class="sub_menu">승인 요청목록</a></li>
