@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Order">
-
+<insert id="insertOrder" parameterType="Order">
+	insert into order(order_no
+	,p_no
+	,option_no
+	,email
+	,order_name
+	,order_phone
+	,order_address
+	,total_price
+	,payment_plan
+	,pay_method
+	)values(order_no_seq
+	,#{p_no}
+	,#{option_no}
+	,#{email}
+	,#{order_name}
+	,#{order_phone}
+	,#{order_address}
+	,#{total_price}
+	,#{payment_plan}
+	,#{pay_method}
+	)	
+</insert>
 	
+	<select id="selectOrder">
+		select * from order where order_no=#{order_no}
+	</select>
+	
+	<update id="updateOrder">
+		update order set option_no=#{option_no}
+		,order_name=#{order_name}
+		,order_phone=#{order_phone}
+		,order_address=#{order_adrress}
+		,payment_plan=#{payment_plan}
+		,pay_method=#{pay_method}
+	</update>
 </mapper>
