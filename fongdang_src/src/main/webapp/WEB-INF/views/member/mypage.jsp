@@ -14,6 +14,9 @@
 </head>
 <style>
     /* 마이페이지 */
+	body{
+		font-family: SUIT-Regular;		
+	}
     a {
      	text-decoration: none;
       	color: #444c57;

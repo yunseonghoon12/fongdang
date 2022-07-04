@@ -20,13 +20,13 @@
 	align-items: center;
 }
 
-.left {
+.leftFooter {
 	float: left;
 	width: 44%;
 	padding: 3%;
 }
 
-.right {
+.rightFooter {
 	width: auto;
 
 }
@@ -34,7 +34,7 @@
 
 <div class="background">
 	<div class="footerWrap">
-		<div class="left">
+		<div class="leftFooter">
 			<p>
 			<h5>
 				펀딩 /제휴 고객센터&emsp;&emsp;&emsp;&emsp;<span>퐁당 고객센터</span>
@@ -55,7 +55,7 @@
 			<p>일부 상품의 경우 퐁당은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 해당되는 상품의 경우 상품, 상품정보,
 				거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</p>
 		</div>
-		<div class="right">
+		<div class="rightFooter">
 			<p>퐁당 (주)대표이사 포옹당사업자 등록번호 123-45-67890</p>
 			<p>통신판매업신고번호 1234-퐁당퐁당C-1234</p>
 			<br>
