@@ -10,9 +10,9 @@
 	text-decoration: none;
 }
 
-main {
+.headerWrap {
   vertical-align: top;
-  height: 130px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
