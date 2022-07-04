@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/header.css">
 
-<header class="site__header" style="width: 1280px; margin: 0 auto;">
+<header class="site__header" style="margin: 0 auto;">
 	<nav>
 		<a href="<%=request.getContextPath()%>"> <img
 			src="<%=request.getContextPath()%>/resources/images/logo.png"
@@ -43,7 +43,7 @@
 						<li>기타</li>
 					</ul>
 					<hr style="margin-top: 10px;">
-					<p class="header_x" style="text-align: right;cursor: pointer;">닫기</p>
+					<p class="header_x" style="    justify-content:end;; cursor: pointer;">닫기</p>
 				</div>
 			</li>
 		</ul>

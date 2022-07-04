@@ -134,18 +134,15 @@ il, ul {
 					</ul>
 					<div id="rankingWrap">
 						<ul class="rankingWrap">
-							<li class="ranking02">
-
-
-								<h5 class=" productName" style="width: 180px;">
-									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><div class="rankgImgWrap">
+							<li class="ranking02"><a href="#"><h5
+										class=" productName" style="width: 180px;">
+										[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
+											class="productPer">102%<span class="productCate">화장품</span></span>
+									</h5></a> <a href="#"><div class="rankgImgWrap">
 										<img
 											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
 											class="rankgImg">
-									</div> </a>
-							</li>
+									</div> </a></li>
 							<li class="ranking02">
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
@@ -200,13 +197,19 @@ il, ul {
 		</div>
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">
 		<div class="section03">
+
 			<div class="apply01">
 				<p>퐁당에서 프로젝트 오픈하기</p>
 				<p>당신의 이야기를 소개하고 투자자와 서포터를 만나보세요.</p>
+				<p style="position: relative; top: 80px;color: white;">당신을 응원합니다.</p>
 			</div>
 			<div class="apply02">
 				<button class="btn btn-fill-fcolor">신청하기</button>
 			</div>
+			<img src="<%=request.getContextPath()%>/resources/images/main02.gif"
+				class="section03_img">
+
+
 		</div>
 	</div>
 	<jsp:include page="./footer.jsp" />
