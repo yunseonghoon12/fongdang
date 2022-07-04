@@ -4,7 +4,9 @@ import java.net.http.HttpRequest;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,22 +16,32 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.HomeController;
+import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.funding.model.service.ProductService;
 import kh.spring.fongdang.funding.model.service.ProductServiceImpl;
-import kh.spring.fongdang.option.domain.Option;
+
+
 
 @Controller
 @RequestMapping("/product")
 public class ProductController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
-	
 	@Autowired
-	public ProductService service;
+	private ProductServiceImpl productServiceImpl;
+	
+	//@Resource(name="ProductServiceImpl")
+	//private ProductServiceImpl productServiceImpl1;
+	
+	@Resource(name="fileUpload")
+	private FileUpload fileUpload;
 	
 	//펀딩상품 page 이동 	
 	@GetMapping("/product.pag")
@@ -40,13 +52,26 @@ public class ProductController {
 	//펀딩상품 insert 
 	@PostMapping("/product.do")
 	public ModelAndView insertProduct(ModelAndView mv
-			,HttpServletRequest request
+			, Product product			
+			, HttpServletRequest req
+			, HttpSession session
+			, RedirectAttributes rttr
+			, MultipartHttpServletRequest multipart
+
 			) {
-		Product product	 = new Product();
-		Option option=new Option();
-		try {
-			
-			
+		
+		MultipartFile pThumbnailFile = multipart.getFile("thumbnail_file");
+		MultipartFile pCcertificationFile = multipart.getFile("certification_file");
+		
+		String thumbnailFile = fileUpload.saveFile(pThumbnailFile, req);
+		String certificationFile = fileUpload.saveFile(pCcertificationFile, req);
+		
+		
+		
+		//Product product	 = new Product();
+		//Option option=new Option();
+		/*try {
+		
 			for (String key: request.getParameterMap().keySet()) {
 				logger.debug(" key : "+key + ", pram : "+request.getParameter(key));
 			}
@@ -77,10 +102,15 @@ public class ProductController {
 			
 			//product.
 		
-			service.insertProduct(product);
+			
 		}catch (Exception e) {
 			// TODO: handle exception
-		}
+		}*/
+		
+		/*product.setP_certification_file(certificationFile);
+		product.setP_certification_file(pThumbnailFile);
+		int result = productServiceImpl.insertProduct(product);*/
+		
 		mv.setViewName("redirect:/"); //
 		return mv;
 	}

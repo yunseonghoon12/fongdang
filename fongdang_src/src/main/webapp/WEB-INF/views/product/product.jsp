@@ -8,6 +8,30 @@
 <head>
 <meta charset="UTF-8">
 <title>PRODCUT</title>
+
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+ <!-- 제이쿼리 style css -->
+ <link rel="stylesheet" href="/resources/demos/style.css">
+ <!-- 제이쿼리 js -->
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <!-- 제이쿼리 ui js -->
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+  $( function() {
+    $( "#start_day" ).datepicker();
+  } );
+  
+  $( function() {
+	    $( "#end_day" ).datepicker();
+	  } );
+  $( function() {
+	    $( "#payment_plan" ).datepicker();
+	  } );
+  $( function() {
+	    $( "#delivery_date" ).datepicker();
+	  } );
+  </script>
 </head>
 <body>
 <header>
@@ -29,8 +53,8 @@
 </header>   
 <nav id="nav_funding" >
     <div id="nav_fundingname">
-         <p >펀딩 준비 작성 중</p>
-         <p >펀딩 완료 </p>
+           <!-- <p >펀딩 준비 작성 중</p>
+         <p >펀딩 완료 </p>-->
          <p id="member_name">${loginInfo.name} 님</p> 
     </div>
     <ul>
@@ -63,7 +87,7 @@
                 </tr>
                 <tr>
                     <td id="title">목표금액<sup>*</sup></td>
-                    <td ><input type="text" name="p_goal" id="p_goal"  class="in_box"  placeholder="전화번호 입력"></td>
+                    <td ><input type="text" name="p_goal" id="p_goal"  class="in_box"  placeholder=""></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -81,27 +105,27 @@
                 </tr>
                   <tr>
                     <td id="title">기간설정<sup>*</sup></td>
-                    <td></td>
+                    <td></p></td>
                     <td></td> 
                 </tr>
                  <tr>
                     <td id="title">펀딩시작일<sup>*</sup></td>
-                    <td><input type="text" name="start_day" class="in_box" ></td>
+                    <td><input type="text"name="start_day" id="start_day" ></td>
                     <td></td> 
                 </tr>
                 <tr>
                     <td id="title">펀딩종료일<sup>*</sup></td>
-                    <td><input type="text" name="end_day" class="in_box" ></td>
+                    <td><input type="text" name="end_day" id="end_day" ></td>
                     <td></td> 
                 </tr>
                  <tr>
                     <td id="title">결제예정일<sup>*</sup></td>
-                    <td><input type="text" name="payment_plan" class="in_box" ></td>
+                    <td><input type="text" name="payment_plan" id="payment_plan" ></td>
                     <td></td> 
                 </tr>
                    <tr>
                     <td id="title">발송예정일<sup>*</sup></td>
-                    <td><input type="text" name="delivery_date" class="in_box" ></td>
+                    <td><input type="text" name="delivery_date" id="delivery_date" ></td>
                     <td></td> 
                 </tr>
                 <tr>
@@ -116,13 +140,13 @@
                 </tr>
                 <tr>
                     <td id="title">상품 대표이미지<sup>*</sup></td>
-                    <td ><input type="file" name="p_thumbnail"  ></td>
+                    <td ><input type="file" name="thumbnail_file"  ></td>
                     <td></td>
                 </tr>
               
                 <tr>
                     <td id="title">상품관련 인증증명서</td>
-                    <td><input type="file" name="p_certification"></td>
+                    <td><input type="file" name="certification_file"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -130,11 +154,14 @@
                     <td>설명 설명 - 모달창으로 진행 ? 여부 </td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn2" value="저장하기" >저장하기</button></td>
+                    <td></td>
+                </tr>
             </table>
-            <hr>
-            <div id="maker_in_bnt">
-                <button type="submit" class="btn2" value="저장하기" >저장하기</button>
-            </div>
+        
+  
         </form>
      </div>
  </section>
