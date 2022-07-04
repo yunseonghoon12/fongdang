@@ -20,8 +20,11 @@ public class Maker {
 	private int maker_report_cnt;       //신고횟수
 	
 	
-	private MultipartFile maker_logo_file;
-	private MultipartFile maker_license_copy_file;
+	private String maker_logo_file;
+	private String maker_license_copy_file;
+	private MultipartFile license_copy_file;
+	private MultipartFile logo_file;
+	
 	public String getMaker_name() {
 		return maker_name;
 	}
@@ -94,17 +97,29 @@ public class Maker {
 	public void setMaker_report_cnt(int maker_report_cnt) {
 		this.maker_report_cnt = maker_report_cnt;
 	}
-	public MultipartFile getMaker_logo_file() {
+	public String getMaker_logo_file() {
 		return maker_logo_file;
 	}
-	public void setMaker_logo_file(MultipartFile maker_logo_file) {
+	public void setMaker_logo_file(String maker_logo_file) {
 		this.maker_logo_file = maker_logo_file;
 	}
-	public MultipartFile getMaker_license_copy_file() {
+	public String getMaker_license_copy_file() {
 		return maker_license_copy_file;
 	}
-	public void setMaker_license_copy_file(MultipartFile maker_license_copy_file) {
+	public void setMaker_license_copy_file(String maker_license_copy_file) {
 		this.maker_license_copy_file = maker_license_copy_file;
+	}
+	public MultipartFile getLicense_copy_file() {
+		return license_copy_file;
+	}
+	public void setLicense_copy_file(MultipartFile license_copy_file) {
+		this.license_copy_file = license_copy_file;
+	}
+	public MultipartFile getLogo_file() {
+		return logo_file;
+	}
+	public void setLogo_file(MultipartFile logo_file) {
+		this.logo_file = logo_file;
 	}
 	@Override
 	public String toString() {
@@ -113,9 +128,8 @@ public class Maker {
 				+ ", maker_kakao_channel=" + maker_kakao_channel + ", maker_homepage=" + maker_homepage
 				+ ", maker_address=" + maker_address + ", maker_register_num=" + maker_register_num
 				+ ", maker_license_copy=" + maker_license_copy + ", maker_report_cnt=" + maker_report_cnt
-				+ ", maker_logo_file=" + maker_logo_file + ", maker_license_copy_file=" + maker_license_copy_file + "]";
+				+ ", maker_logo_file=" + maker_logo_file + ", maker_license_copy_file=" + maker_license_copy_file
+				+ ", license_copy_file=" + license_copy_file + ", logo_file=" + logo_file + "]";
 	}
-
-	
 	
 }

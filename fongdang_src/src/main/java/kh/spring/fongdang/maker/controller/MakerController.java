@@ -1,5 +1,6 @@
 package kh.spring.fongdang.maker.controller;
 
+import java.io.File;
 import java.util.Enumeration;
 
 import javax.annotation.Resource;
@@ -17,10 +18,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.common.ApiRequestUtil;
+import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.maker.model.service.MakerServiceImpl;
 import kh.spring.fongdang.member.domain.Member;
@@ -37,6 +41,9 @@ public class MakerController {
 	@Resource(name="apiRequestUtil")
 	private ApiRequestUtil apiRequestUtil;   
 
+	@Resource(name="fileUpload")
+	private FileUpload fileUpload;
+	
 //maker page 이동 
 	@GetMapping("/Register") // "maker/Register" 이렇게 이동
 	public ModelAndView insertPageMaker(ModelAndView mv) {
@@ -46,29 +53,43 @@ public class MakerController {
 
 // maker insert 
 	@PostMapping("/Register")
-	public ModelAndView inserMaker(ModelAndView mv, Maker mamker, HttpServletRequest req, HttpSession session,
-			RedirectAttributes rttr
-//			, @RequestParam(name = "maker_logo_file", required = false) MultipartFile file1
-	) {
+	public ModelAndView inserMaker(ModelAndView mv
+			, Maker mamker
+			, HttpServletRequest req
+			, HttpSession session
+			, RedirectAttributes rttr
+			, MultipartHttpServletRequest multipart
 
-		Member member = (Member) session.getAttribute("loginSSInfo");
+	      ) {
+		MultipartFile makerLogoFile = multipart.getFile("logo_file");
+		MultipartFile makerLicenseCopyFile = multipart.getFile("license_copy_file");
+		
+		
+		String logoFile = fileUpload.saveFile(makerLogoFile, req);
+		String licenseFile = fileUpload.saveFile(makerLicenseCopyFile, req);
+		logger.debug("=============================s===="+session.getAttribute("loginInfo").toString());
+		
+		Member member = (Member) session.getAttribute("loginInfo");
+		
+		logger.debug("================================="+ member.toString());
+		
 		if (member == null) {
 			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
-			mv.setViewName("redirect:/login"); //
+			mv.setViewName("redirect:/member/login"); //
 			return mv;
 		}
-
-//     mamker.setMaker_logo(commonfile.saveFile(mamker.getMaker_logo_file(), req));
-//     mamker.setMaker_license_copy(commonfile.saveFile(mamker.getMaker_license_copy_file(), req));
-//	 Member member = (Member)session.getAttribute("loginInfo");
 		if (member != null) {
 			mamker.setEmail(member.getEmail());
+			mamker.setMaker_license_copy_file(logoFile);
+			mamker.setMaker_license_copy_file(licenseFile);
 			int result = makerServiceImpl.insertMaker(mamker);
 		}
-		mv.setViewName("redirect:/");
+		rttr.addFlashAttribute("msg", "메이커 정보 저장되었습니다.");
+		mv.setViewName("product/product");// 상품등록 페이지 이동 
 		return mv;
 	}
 
+	// 사업자등록번호 API 
 	@PostMapping("/licenseCheck")
 	public ResponseEntity<String> inserMaker(ModelAndView mv, HttpServletRequest req) {
 		

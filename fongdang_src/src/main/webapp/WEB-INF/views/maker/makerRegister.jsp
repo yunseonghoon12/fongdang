@@ -48,11 +48,59 @@ $(document).ready(function() {
   				console.log(result);
    			}
     	});
-    	
    	});
-   	$("#license_button").onchange(function () {
+   	$("#b_no").onchange(function () {
    		$("maker_register_num_yn").val("N");
    	});
+   	
+  //이메일 형식 확인
+	$("#maker_email").on("input",function() {
+						//
+		var EmailRegEx = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;// 이메일 정규식 
+		var EmailVal = $("#maker_email").val();
+		if (!EmailRegEx.test(EmailVal)) { // mEmail 이메일 정규식 맞는지 체크
+			console.log("이메일 형식을 바르게 입력해주세요. console");
+			emailChk = true;
+			$("#checkmEmail_info").html("이메일 형식이 맞지 않습니다.");
+			$("#checkmEmail_info").attr('color', 'red');
+
+		} else {
+			emailChk = false;
+			$("#checkmEmail_info").html("");
+		}
+	});
+	//전화번호 형식확인 
+	$("#maker_phone").on("input", function() {
+		var phoneRegEx = /^[0][0-9]{3}-[0-9]{3,4}-[0-9]{4}$/;
+		var phoneVal = $("#maker_phone").val();
+
+		if (!phoneRegEx.test(phoneVal)) {
+			console.log("phone 형식을 바르게 입력해주세요.console");
+			phoneChk = true;
+			$("#phone_info").html("phone 형식을 바르게 입력해주세요.");
+			$("#phone_info").attr('color', 'red');
+		} else {
+			$("#phone_info").html("");
+			console.log("phone 형식 OK");
+			phoneChk = false;
+		}
+	});
+	//사업자등록번호 형식확인  ex) 사업자번호: 123-45-67891 사업자 번호는 10자리
+	$("#b_no").on("input", function() {
+		var phoneRegEx = /^[0-9]{3,3}-[0-9]{2,2}-[0-9]{5}$/;
+		var phoneVal = $("#b_no").val();
+
+		if (!phoneRegEx.test(phoneVal)) {
+			console.log("사업자등록번호 바르게 입력해주세요.console");
+			phoneChk = true;
+			$("#b_no_info").html("사업자등록번호  형식을 바르게 입력해주세요.");
+			$("#b_no_info").attr('color', 'red');
+		} else {
+			$("#b_no_info").html("");
+			console.log("사업자등록번호 형식 OK");
+			phoneChk = false;
+		}
+	});
 });  
 </script> 
 </head>
@@ -76,8 +124,8 @@ $(document).ready(function() {
 </header>   
 <nav id="nav_funding" >
     <div id="nav_fundingname">
-         <p >펀딩 준비 작성 중</p>
-         <p >펀딩 완료 </p>
+           <!--<p >펀딩 준비 작성 중</p>
+        <p >펀딩 완료 </p> -->
          <p id="member_name">${loginInfo.name} 님</p> 
     </div>
     <ul>
@@ -106,13 +154,13 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td id="title">메이커(기업)명<sup>*</sup></td>
-                    <td><input type="text" name="maker_name" class="in_box" placeholder="법인사업자: 법인명 / 개인사업자: 상호" ></td>
+                    <td><input type="text" name="maker_name" class="in_box" placeholder="법인사업자: 법인명 / 개인사업자: 상호" required></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">사업자구분<sup>*</sup></td>
                     <td >
-                        <select name="maker_category"  class="in_box" >
+                        <select name="maker_category"  class="in_box" required>
                         <option value="I">개인사업자</option>
                         <option value="B">법인사업자</option>
                         </select></td>
@@ -120,43 +168,44 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td id="title">문의전화번호<sup>*</sup></td>
-                    <td ><input type="text" name="maker_phone" id="maker_phone"  class="in_box"  placeholder="전화번호 입력"></td>
-                    <td></td>
+                    <td ><input type="text" name="maker_phone" id="maker_phone"  class="in_box"  placeholder="전화번호 입력" required></td>
+                    <td><font id="phone_info" size="2"></font></td>
                 </tr>
                 <tr>
                     <td id="title">문의 이메일<sup>*</sup></td>
-                    <td><input type="email" name="maker_email" id="maker_email" placeholder=" 이메일 입력"  class="in_box" >
+                    <td><input type="email" name="maker_email" id="maker_email" placeholder=" 이메일 입력"  class="in_box"  required>
                         <font id="checkmEmail_info" size="2"></font></td>
                     <td></td> 
                 </tr>
                 <tr>
                     <td id="title">주소(사업장 주소)<sup>*</sup></td>
                     <td>
-                        <input type="text" name="maker_address1" id="maker_address1"  class="in_box" ><br>
-                        <input type="text"  name="maker_address2" id="maker_address2" placeholder="상세주소 입력해 주세요"  class="in_box">
+                        <input type="text" name="maker_address1" id="maker_address1"  class="in_box" required ><br>
+                        <input type="text"  name="maker_address2" id="maker_address2" placeholder="상세주소 입력해 주세요"  class="in_box" required >
                     </td>
                     <td><input type="button" class="btn1" value="주소검색" class="in_box" id="postcode_button" ></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록번호<sup>*</sup></td>
-                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box">
+                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box"  required>
                     	<input type="hidden" name="maker_register_num_yn" id="maker_register_num_yn">
                     </td>
                     <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" ></td>
+                         <font id="phone_info" size="2">
                 </tr>
                 <tr>
                     <td id="title">사업자등록증 사본<sup>*</sup></td>
-                    <td ><input type="file" name="maker_license_copy_file"  ></td>
+                    <td ><input type="file" name="license_copy_file" ></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">메이커 프로필 이미지<sup>*</sup></td>
-                    <td ><input type="file" name="maker_logo_file"  ></td>
+                    <td ><input type="file" name="logo_file" ></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">홈페이지 (선택사항)</td>
-                    <td><input type="text" name="maker_homepage" class="in_box" placeholder=" 홈페이지URL 입력"></td>
+                    <td><input type="text" name="maker_homepage" class="in_box" placeholder=" 홈페이지 URL 입력"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -164,16 +213,18 @@ $(document).ready(function() {
                     <td><input type="text" name="maker_kakao_channel"  class="in_box"  placeholder="검색용 아이디 입력"></td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn2" value="저장하기" >저장하기</button></td>
+                    <td></td>
+                </tr>
             </table>
-            <hr>
-            <div id="maker_in_bnt">
-                <button type="submit" class="btn2" value="저장하기" >저장하기</button>
-            </div>
-            
+         
         </form>
     </div>  
 </section>  
- 
+
+
 
 </body>
 </html>

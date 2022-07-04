@@ -73,10 +73,9 @@ section {
 #header_right_txt a {
 	text-decoration: none;
 	color: #444c57;
-	border-radius: 25px;
+	border-radius: 3px;
 	margin: 15px 0 0;
 	padding: 10px 30px;
-	border: 1px solid #444c57;
 	line-height: 1em;
 	font-family: SUIT-SemiBold;
 }
@@ -135,7 +134,7 @@ button:hover {
 /* 버튼 1번 css*/
 .btn1 {
 	border: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	background: #b6e0d6;
 	color: white;
 	font-weight: 500;
@@ -149,21 +148,21 @@ button:hover {
 .btn1:hover {
 	opacity: 0.5;
 }
-/*  등록_ 버튼 div 위치설정 */
+/*  등록_ 버튼 div 위치설정*/
 section #maker_in_bnt {
 	text-align: center;
-	padding: 20px;
+	padding: 20px; 
 }
 /* 버튼 2 css */
 .btn2 {
 	border: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	background: #9bbfd9;
 	color: white;
 	font-weight: 500;
 	font-size: 17px;
-	width: 200px;
-	height: 40px;
+	width: 300px;
+	height: 30px;
 	cursor: pointer;
 	font-family: SUIT-Regular;
 }
@@ -176,6 +175,7 @@ nav a {
 	font-weight: bold;
 	font-size: 1.2rem;
 	font-size: 13px;
+	font-family: SUIT-Regular;
 }
 
 #nav_funding li {
@@ -195,10 +195,11 @@ nav a {
 	display: inline-block;
 	padding: 10px 20px;
 	margin: 10px 0 0;
-	border: 1px solid #444c57;
-	border-radius: 25px;
+	/*border: 1px solid #444c57; */
+	border-radius: 3px;
 	width: 130px;
 	height: 20px;
+	font-family: SUIT-Regular;
 }
 /*  윗첨자* css */
 sup {
