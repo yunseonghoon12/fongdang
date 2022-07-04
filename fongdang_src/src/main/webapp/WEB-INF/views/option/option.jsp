@@ -29,8 +29,8 @@
 </header>   
 <nav id="nav_funding" >
     <div id="nav_fundingname">
-         <p >펀딩 준비 작성 중</p>
-         <p >펀딩 완료 </p>
+             <!--<p >펀딩 준비 작성 중</p>
+         <p >펀딩 완료 </p> -->
          <p id="member_name">${loginInfo.name} 님</p> 
     </div>
     <ul>
@@ -77,12 +77,12 @@
                     <td><input type="text" name="option_limit" class="in_box" ></td>
                     <td></td> 
                 </tr>
-                
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn2" value="저장하기" >저장하기</button></td>
+                    <td></td>
+                </tr>
             </table>
-            <hr>
-            <div id="maker_in_bnt">
-                <button type="submit" class="btn2" value="저장하기" >저장하기</button>
-            </div>
         </form>
      </div>
  </section>
