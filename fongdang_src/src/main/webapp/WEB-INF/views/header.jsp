@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="kh.spring.fongdang.member.domain.Member"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/font.css">
 
@@ -30,7 +31,7 @@
 						<div class="input-group-append"></div>
 					</div>
 				</form>
-				<div class="searchR">
+				<div class="searchR" style="right: 63px;">
 					<p style="text-align: center;">카테고리</p>
 					<hr style="margin-top: 10px;">
 					<ul>
@@ -42,7 +43,7 @@
 						<li>기타</li>
 					</ul>
 					<hr style="margin-top: 10px;">
-					<p class="header_x" style="margin-bottom: 1px;">닫기</p>
+					<p class="header_x" style="text-align: right;cursor: pointer;">닫기</p>
 				</div>
 			</li>
 		</ul>

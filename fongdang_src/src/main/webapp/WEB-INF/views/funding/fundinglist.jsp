@@ -15,6 +15,10 @@ body {
 	font-family: SUIT-Regular;
 	text-decoration: none;
 }
+.AllWarp{
+	width: 1200px;
+	margin: 0 auto;
+}
 /* TOP 카테고리 */
 .productList {
 	width: 100%;
@@ -259,140 +263,142 @@ a {
 </head>
 
 <body>
-	<jsp:include page="../header.jsp"/>
-	<div class="productList">
-		<ul>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">테크·가전</div>
-						<div class="bottom">Appliances</div>
-						<img
-							src="<%=request.getContextPath()%>/resources/images/appliances.jpg">
-					</div>
-					<div>
-						<h3>가전</h3>
-					</div>
-			</a></li>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">캠핑 용품</div>
-						<div class="bottom">Camping</div>
-						<img
-							src="<%=request.getContextPath()%>/resources/images/camping.jpg">
-					</div>
-					<div>
-						<h3>캠핑</h3>
-					</div>
-			</a></li>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">화장품</div>
-						<div class="bottom">Beauty</div>
-						<img
-							src="<%=request.getContextPath()%>/resources/images/beauty.jpg">
-					</div>
-					<div>
-						<h3>뷰티</h3>
-					</div>
-			</a></li>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">식료퓸</div>
-						<div class="bottom">Groceries</div>
-						<img
-							src="<%=request.getContextPath()%>/resources/images/Groceries.jpg">
-					</div>
-					<div>
-						<h3>식품</h3>
-					</div>
-			</a></li>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">반려동물</div>
-						<div class="bottom">Pets</div>
-						<img src="<%=request.getContextPath()%>/resources/images/pets.jpg">
-					</div>
-					<div>
-						<h3>반려동물</h3>
-					</div>
-			</a></li>
-			<li><a href="">
-					<div class="screen">
-						<div class="top">기타 등등</div>
-						<div class="bottom">Etc</div>
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<div>
-						<h3>기타</h3>
-					</div>
-			</a></li>
-		</ul>
-	</div>
-	<hr style="border-style: outset; margin-top: 10px;">
-	<div class="category02">
-		<select id="cateSelect">
-			<option value="v1" selected>전체</option>
-			<option value="v2">좋아요순</option>
-			<option value="v3">조회수순</option>
-			<option value="v4">리뷰순</option>
-		</select>
-	</div>
+	<jsp:include page="../header.jsp" />
+	<div class="AllWarp">
+		<div class="productList">
+			<ul>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">테크·가전</div>
+							<div class="bottom">Appliances</div>
+							<img
+								src="<%=request.getContextPath()%>/resources/images/appliances.jpg">
+						</div>
+						<div>
+							<h3>가전</h3>
+						</div>
+				</a></li>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">캠핑 용품</div>
+							<div class="bottom">Camping</div>
+							<img
+								src="<%=request.getContextPath()%>/resources/images/camping.jpg">
+						</div>
+						<div>
+							<h3>캠핑</h3>
+						</div>
+				</a></li>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">화장품</div>
+							<div class="bottom">Beauty</div>
+							<img
+								src="<%=request.getContextPath()%>/resources/images/beauty.jpg">
+						</div>
+						<div>
+							<h3>뷰티</h3>
+						</div>
+				</a></li>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">식료퓸</div>
+							<div class="bottom">Groceries</div>
+							<img
+								src="<%=request.getContextPath()%>/resources/images/Groceries.jpg">
+						</div>
+						<div>
+							<h3>식품</h3>
+						</div>
+				</a></li>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">반려동물</div>
+							<div class="bottom">Pets</div>
+							<img
+								src="<%=request.getContextPath()%>/resources/images/pets.jpg">
+						</div>
+						<div>
+							<h3>반려동물</h3>
+						</div>
+				</a></li>
+				<li><a href="">
+						<div class="screen">
+							<div class="top">기타 등등</div>
+							<div class="bottom">Etc</div>
+							<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<div>
+							<h3>기타</h3>
+						</div>
+				</a></li>
+			</ul>
+		</div>
+		<hr style="border-style: outset; margin-top: 10px;">
+		<div class="category02">
+			<select id="cateSelect">
+				<option value="v1" selected>전체</option>
+				<option value="v2">좋아요순</option>
+				<option value="v3">조회수순</option>
+				<option value="v4">리뷰순</option>
+			</select>
+		</div>
 
-	<div class="productWrap">
-		<ul class="imglist_ul">
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>Nike SB는 스케이트보드 보딩을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-			<li><a href="#">
-					<div class="screen">
-						<span></span><span></span><span></span><span></span> <img
-							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-					</div>
-					<h3>카메라</h3>
-					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-			</a></li>
-		</ul>
-		<hr style="border-style: outset; margin-bottom: 10px;">
+		<div class="productWrap">
+			<ul class="imglist_ul">
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>Nike SB는 스케이트보드 보딩을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+				<li><a href="#">
+						<div class="screen">
+							<span></span><span></span><span></span><span></span> <img
+								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						</div>
+						<h3>카메라</h3>
+						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
+				</a></li>
+			</ul>
+			<hr style="border-style: outset; margin-bottom: 10px;">
+		</div>
 	</div>
-
-	<jsp:include page="../footer.jsp"/>
+	<jsp:include page="../footer.jsp" />
 </body>
 
 </html>

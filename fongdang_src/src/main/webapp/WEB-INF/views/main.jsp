@@ -21,6 +21,10 @@
 body {
 	font-family: SUIT-Regular;
 }
+
+il, ul {
+	list-style: none;
+}
 </style>
 </head>
 <body>
@@ -76,7 +80,8 @@ body {
 								<div class="product_image">
 									<div class="wrap_product_thumbnail">
 										<a class="product_link" href=""> <img
-											class="product_thumbnail" src="<%=request.getContextPath()%>/resources/images/pets.jpg">
+											class="product_thumbnail"
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg">
 										</a>
 									</div>
 								</div>
@@ -135,36 +140,51 @@ body {
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
 										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><img src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-									class="rankgImg"> </a>
+								</h5> <a href="#"><div class="rankgImgWrap">
+										<img
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
+											class="rankgImg">
+									</div> </a>
 							</li>
 							<li class="ranking02">
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
 										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><img src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-									class="rankgImg"> </a>
+								</h5> <a href="#"><div class="rankgImgWrap">
+										<img
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
+											class="rankgImg">
+									</div> </a>
 							</li>
 							<li class="ranking02">
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
 										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><img src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-									class="rankgImg"> </a>
+								</h5> <a href="#"><div class="rankgImgWrap">
+										<img
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
+											class="rankgImg">
+									</div> </a>
 							</li>
 							<li class="ranking02">
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
 										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><img src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-									class="rankgImg"></a>
+								</h5> <a href="#"><div class="rankgImgWrap">
+										<img
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
+											class="rankgImg">
+									</div> </a>
 							</li>
 							<li class="ranking02">
 								<h5 class=" productName" style="width: 180px;">
 									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
 										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><img src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-									class="rankgImg"> </a>
+								</h5> <a href="#"><div class="rankgImgWrap">
+										<img
+											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
+											class="rankgImg">
+									</div> </a>
 							</li>
 						</ul>
 					</div>
