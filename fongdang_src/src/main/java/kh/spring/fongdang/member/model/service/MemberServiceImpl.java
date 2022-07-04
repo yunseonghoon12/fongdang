@@ -15,6 +15,10 @@ public class MemberServiceImpl implements MemberService{
 		return dao.selectLogin(member);
 	}
 
+	public Member selectMember(String email) {
+		return dao.selectMember(email);
+	}
+	
 	public int insertMember(Member member) {		
 		return dao.insertMember(member);
 	}
@@ -26,4 +30,5 @@ public class MemberServiceImpl implements MemberService{
 	public int updateMember(Member member) {
 		return dao.updateMember(member);
 	}
+
 }

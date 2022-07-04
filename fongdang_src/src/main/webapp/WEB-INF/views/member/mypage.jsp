@@ -14,16 +14,13 @@
 </head>
 <style>
     /* 마이페이지 */
-	body{
-		font-family: SUIT-Regular;		
-	}
     a {
      	text-decoration: none;
       	color: #444c57;
     } 
-    #container {      	
+    #container {
       	width:100%;
-      	height: 1400px;      
+      	height: 1400px;
     }
     #myfongdang_page {
     	position:relative;
@@ -35,15 +32,16 @@
     	left: 0;
     	z-index: -1;
     	width: 100%;    	
-      	height:220px;
-      	background-color: #9bbfd9;
-      	/* background-color: #ccc; */      	
+      	height:350px;
+      	/* background-color: #9bbfd9; */      	
+      	background-color: #ccc; 
     }
     #myfongdang_page_main_wrap{      
       	width: 1200px;
       	height: 1100px;
       	margin: 0 auto;
-      	z-index: 100;       	
+      	padding-top: 40px;
+      	z-index: 100;   	
     }    
     #myfongdang_member_path {
     	/* border: 1px solid red; */      	
@@ -316,38 +314,51 @@
     }
   </style>
 <body>
-  <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header>
-  <%-- <jsp:include page="../header.jsp"/> --%>
-  <div id="container">
-    <div id="myfongdang_page_background"></div>
-    <div id="myfongdang_page_main_wrap">
-      <div id="myfongdang_member_path">
-        <button type="button" id="supporter_btn">서포터</button>
-        <button type="button" id="maker_btn">메이커</button>
-      </div>
-      <div id="main_body">
-        <div id="profile_wrap">
-          <div style="border-right: 1px solid #ccc; height:100%">
-            <div id="profile_image_wrap">
-              <img src="<%=request.getContextPath()%>/resources/images/user.png" style="width:78px; height:78px;">
-            </div>
-            <p id="member_name">${loginInfo.name}님</p>
-            <p id="member_state">서포터·개인 회원</p>          
-            <div id="profile_setting">
-              <button type="button" id="logout_btn" onclick="location.href='<%=request.getContextPath()%>/member/logout';">로그아웃</button>
-               <a href="<%=request.getContextPath()%>/member/myprofile">
-              	<div id="profile_btn_wrap">
-                  프로필 설정
-                  <span id="chevron-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 13">
-                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                    </svg>
-                  </span>
-              	</div>
-               </a>
-            </div>
-          </div>
-        </div>
+<script>
+	var msg = "${msg}";
+	if(msg != '') {
+		alert(msg);
+	}
+</script>
+  
+  <jsp:include page="../header.jsp"/>
+  <div id="container">    
+    <div id="myfongdang_page">
+    	<div id="myfongdang_page_background"></div>       
+    	<div id="myfongdang_page_main_wrap">
+      		<div id="myfongdang_member_path">
+        	<button type="button" id="supporter_btn">서포터</button>
+        	<button type="button" id="maker_btn">메이커</button>
+      	</div>
+      	<div id="main_body">
+	        <div id="profile_wrap">
+          		<div style="border-right: 1px solid #ccc; height:100%">
+		            <div id="profile_image_wrap">
+<c:if test="${!empty member.original_profile}">
+			  			<img src="<%=request.getContextPath()%>${member.rename_profile}" id="profile_img">	
+</c:if>         
+<c:if test="${empty member.original_profile}">
+              			<img src="<%=request.getContextPath()%>/resources/images/user.png" id="profile_img">
+</c:if>
+            		</div>
+            		<p id="member_name">${member.name}님</p>
+            		<p id="member_state">서포터·개인 회원</p>          
+            		<div id="profile_setting">
+	              		<button type="button" id="logout_btn" onclick="location.href='<%=request.getContextPath()%>/member/logout';">로그아웃</button>
+               			<a href="<%=request.getContextPath()%>/member/myProfile">
+			              	<div id="profile_btn_wrap">
+        	          			프로필 설정
+                  				<span id="chevron-right">
+				                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 13">
+                      					<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    				</svg>
+                  				</span>
+              				</div>
+               			</a>
+            		</div>
+          		</div>
+        	</div>
+		       
         <div id="section_content">
           <!-- 서포터를 눌렀을 경우 -->
           <div id="supportor_section">
@@ -437,10 +448,7 @@
             <div id="enroll_wrap">
               <button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
             </div>
-
-
           </div>
-
 
           <div id="my_activity_wrap">
             <p id="my_activity_title">나의 활동</p>
@@ -498,13 +506,14 @@
                 </li>
               </ul> 
           </div>
-        </div>        
+        </div>
       </div>
-    </div>
-  </div>
-
-  <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer>
-  <%-- <jsp:include page="../footer.jsp"/> --%>
+    </div>           
+  </div>  
+  </div> 
+	<p style="clear: both"></p>     
+  	
+  	<jsp:include page="../footer.jsp"/>
   
   <script>
     memberPath();
@@ -512,11 +521,11 @@
     function memberPath() {
       $("#supporter_btn").click(function() {
         $("#supporter_btn").css({
-          "z-index" : "9",
+          "z-index" : "10",
           "color" : "#9bbfd9"
         });
         $("#maker_btn").css({
-          "z-index" : "0",
+          "z-index" : "9",
           "color" : "#444c57"
         });
         $("#supportor_section").show();
@@ -524,11 +533,11 @@
       });
       $("#maker_btn").click(function() {
         $("#supporter_btn").css({
-          "z-index" : "0",
+          "z-index" : "9",
           "color" : "#444c57"
         });
         $("#maker_btn").css({
-          "z-index" : "9",
+          "z-index" : "10",
           "color" : "#9bbfd9"
         });                
         $("#supportor_section").hide();

@@ -15,6 +15,10 @@ public class MemberDao {
 		return sqlSession.selectOne("Member.selectLogin", member);
 	}
 
+	public Member selectMember(String email) {		
+		return sqlSession.selectOne("Member.selectMember", email);
+	}
+	
 	public int insertMember(Member member) {
 		return sqlSession.insert("Member.insertMember", member);
 	}
@@ -25,6 +29,7 @@ public class MemberDao {
 
 	public int updateMember(Member member) {		
 		return sqlSession.update("Member.updateMember", member);
-	}	
+	}
+
 	
 }

@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -14,13 +15,13 @@
   /* profile */
   #container {      
     width: 100%;
-    height: 900px;      
+    height: 1000px;      
   }
   #main_content{     
     width: 370px;
     height: 850px;
-    margin: 0 auto;
-    padding-top: 2%;
+    margin: 80px auto;
+    /* padding: 8% 0; */
    }
    #main_wrap{
     position: relative;
@@ -42,18 +43,20 @@
     top: 15px;
     right: 0;
   }
-  #proflie_field {
+  #proflie_field {  
     margin: 10px 0;
     font-family: SUIT-Regular;
     padding-top: 10px;
     font-size: 15px;
     line-height: 20px;
-    height: 250px;
+    height: 350px;
   }
-  #personal_img {
+  .personal_img {
     display: block;
-    width: 130px;
-    margin: 0 auto;
+    border-radius: 210px;
+    width: 210px;
+    height: 200px;
+    margin: 30px auto;
   }
   #profile{    
     width: 80px;
@@ -162,7 +165,7 @@
   }   
   #btn_wrap {
     position: relative;
-    margin-top: 50px;
+    margin-top: 90px;
     width: 100%;
     height: 60px;    
   }
@@ -199,8 +202,8 @@
 </style>
 </head>
 <body>
-	<header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header>
-
+	<!-- <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header> -->
+	<jsp:include page="../header.jsp"/>
   	<div id="container">
     	<div id="main_content">
       		<div id="main_wrap">
@@ -210,13 +213,13 @@
       		<form action="<%=request.getContextPath()%>/member/update" method="post" enctype="multipart/form-data">
         		<div id="proflie_field">
           			<p>프로필 사진</p>
-<c:if test="${not empty loginInfo.original_profile}">
-          			<input type="hidden" name="rename_profile" value="${loginInfo.rename_profile}">
-          			<img src="<%=request.getContextPath()%>${loginInfo.rename_profile}" id="personal_img">          
+<c:if test="${ not empty member.original_profile}">
+          			<input type="hidden" name="rename_profile" value="${member.rename_profile}">
+          			<img src="<%=request.getContextPath()%>${member.rename_profile}" class="personal_img">          
 
 </c:if>          	
-<c:if test="${empty  loginInfo.original_profile}">
-            		<img src="<%=request.getContextPath()%>/resources/images/user.png" id="personal_img">
+<c:if test="${ empty member.original_profile}">
+            		<img src="<%=request.getContextPath()%>/resources/images/user.png" class="personal_img">
 </c:if>		
             		<div>
               			<!-- <button type="button" id="profile">프로필 사진 등록</button> -->
@@ -226,7 +229,7 @@
         	<div id="id_field">
           		<label>아이디</label>
           		<div>
-	            	<input type="text" name="email" id="email" placeholder="읽기 전용" value="${loginInfo.email}" readonly>
+	            	<input type="text" name="email" id="email" placeholder="읽기 전용" value="${member.email}" readonly>
           		</div>
         	</div>
         	<div id="pwd_field">
@@ -255,8 +258,8 @@
     </div>
   </div>
 
-  <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer>
-  
+  <!-- <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer> -->
+  <jsp:include page="../footer.jsp"/>
   <script>
   	$("#submit_btn").click(function () {
   		console.log("email: " + $("#email").val());

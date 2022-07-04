@@ -107,8 +107,8 @@
   </style>
 </head>
 <body>
-  <header style="height: 100px; background: #ccc">헤더 영역</header>
-  <div id="container">
+  <jsp:include page="../header.jsp"/>
+  <div id="container">  	
     <div id="main_content">
       <div id="title_wrap">
         <p id="title">메시지</p>
@@ -153,7 +153,7 @@
       <button type="button" id="model_cancel">닫기</button>
     </div>    
   </div>
-  <footer style="height: 100px; background: #ccc">푸터 영역</footer>
+  <jsp:include page="../footer.jsp"/>
 
 
   <script>

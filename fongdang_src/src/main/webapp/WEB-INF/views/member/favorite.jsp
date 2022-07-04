@@ -89,9 +89,9 @@
   }
 </style>
 </head>
-<body>
-  <header style="height:140px; background-color: #ccc;">헤더 영역</header>
-
+<body>  
+	<jsp:include page="../header.jsp"/>
+	
   <div id="title_wrap">
     <p id="title">좋아요</p>        
   </div>
@@ -165,6 +165,6 @@
     </div>
   </div>
 
-  <footer style="height:140px; background-color: #ccc;">푸터 영역</footer>
+  <jsp:include page="../footer.jsp"/>
 </body>
 </html>

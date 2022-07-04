@@ -67,27 +67,37 @@ public class MemberController {
 			, HttpSession session) {
 		// 로그인 상태 확인
 		Member authInfo = (Member)session.getAttribute("loginInfo");
-		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
-			mv.setViewName("redirect:/member/login");
-			return mv;
-		}		
-		
-		mv.setViewName("member/mypage");
-		return mv;
-	}
-	
-	@RequestMapping(value="/myprofile", method= RequestMethod.GET)
-	public ModelAndView pageSettupInfo(ModelAndView mv
-			, HttpSession session) {
-		// 로그인 상태 확인
-		Member authInfo = (Member)session.getAttribute("loginInfo");
+		System.out.println("[session_authInfo]\n\t" + authInfo);
 		if(authInfo == null) {
 			System.out.println("\n로그아웃상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
+		String email = authInfo.getEmail();		
+		Member member = service.selectMember(email);		
 		
+		mv.addObject("member", member);
+		mv.setViewName("member/mypage");
+		return mv;
+	}
+	
+	@RequestMapping(value="/myProfile", method= RequestMethod.GET)
+	public ModelAndView pageSettupInfo(ModelAndView mv			
+			, HttpSession session) {
+		// 로그인 상태 확인
+		Member authInfo = (Member)session.getAttribute("loginInfo");		
+		
+		if(authInfo == null) {
+			System.out.println("\n로그아웃상태입니다.");
+			mv.setViewName("redirect:/member/login");
+			return mv;
+		}		
+		String email = authInfo.getEmail();		
+		Member member = service.selectMember(email);		
+		/*
+			세션값으로 페이지에 멤버 정보를 나타내면 회원 정보 수정 후 세션종료될때까지 바로 업데이트 되지 않음
+		 */
+		mv.addObject("member", member);
 		mv.setViewName("member/myProfile");
 		return mv;
 	}
@@ -221,7 +231,7 @@ public class MemberController {
 			return mv;
 		}
 		
-		rttr.addFlashAttribute("msg", "회원탈퇴가 성공적으로 요청되었습니다.");
+		/* rttr.addFlashAttribute("msg", "회원탈퇴가 성공적으로 요청되었습니다."); */
 		mv.setViewName("redirect:/");
 		return mv;
 	}
@@ -268,7 +278,7 @@ public class MemberController {
 			return mv;
 		}		
 		
-		rttr.addFlashAttribute("msg", "프로필 수정에 성공했습니다.");
+		/* rttr.addFlashAttribute("msg", "프로필 수정에 성공했습니다."); */
 		/* 꼭 url 주소 입력하기 */
 		mv.setViewName("redirect:/member/myfongdang");
 		return mv;
