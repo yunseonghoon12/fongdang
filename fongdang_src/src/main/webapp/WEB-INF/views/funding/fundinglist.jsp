@@ -11,9 +11,9 @@
 <title>제목</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
-* {
+body {
 	font-family: SUIT-Regular;
-	font-size: 14px;
+	text-decoration: none;
 }
 /* TOP 카테고리 */
 .productList {
@@ -77,7 +77,7 @@
 	font-size: 14px;
 	text-align: center;
 	color: #666;
-	top: -10px;
+	top: 5px;
 	position: relative;
 }
 
@@ -113,7 +113,7 @@
 
 /* 드랍다운 카테고리 */
 .category02 {
-	margin: 0 15%;
+	margin: 15px 15%;
 	display: flex;
 	justify-content: end;
 }
@@ -259,6 +259,7 @@ a {
 </head>
 
 <body>
+	<jsp:include page="../header.jsp"/>
 	<div class="productList">
 		<ul>
 			<li><a href="">
@@ -327,7 +328,7 @@ a {
 			</a></li>
 		</ul>
 	</div>
-	<hr style="border-style: outset;">
+	<hr style="border-style: outset; margin-top: 10px;">
 	<div class="category02">
 		<select id="cateSelect">
 			<option value="v1" selected>전체</option>
@@ -341,35 +342,40 @@ a {
 		<ul class="imglist_ul">
 			<li><a href="#">
 					<div class="screen">
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						<span></span><span></span><span></span><span></span> <img
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>Nike SB는 스케이트보드 보딩을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 			<li><a href="#">
 					<div class="screen">
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						<span></span><span></span><span></span><span></span> <img
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 			<li><a href="#">
 					<div class="screen">
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						<span></span><span></span><span></span><span></span> <img
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 			<li><a href="#">
 					<div class="screen">
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						<span></span><span></span><span></span><span></span> <img
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 			<li><a href="#">
 					<div class="screen">
-						<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
+						<span></span><span></span><span></span><span></span> <img
+							src="<%=request.getContextPath()%>/resources/images/etc.jpg">
 					</div>
 					<h3>카메라</h3>
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
@@ -383,8 +389,10 @@ a {
 					<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
 			</a></li>
 		</ul>
+		<hr style="border-style: outset; margin-bottom: 10px;">
 	</div>
-	<hr style="border-style: outset;">
+
+	<jsp:include page="../footer.jsp"/>
 </body>
 
 </html>

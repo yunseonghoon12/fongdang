@@ -2,37 +2,36 @@
 	pageEncoding="UTF-8"%>
 
 <style>
-.background {
-	font-family: SUIT-Regular;
-	font-size: 13px;
-	font-weight: bold;
-	color: black;
+footer {
+	background-color: rgba(178, 176, 176, 0.427);
 }
 
 .footerWrap {
-	position: absolute;
 	display: flex;
 	height: 300px;
-	background-color: rgba(178, 176, 176, 0.427);
-	width: 100%;
-	position: absolute;
-	justify-content: center;
-	align-items: center;
+	width: 1280px;
+	margin: 0 auto;
+	font-family: SUIT-Regular;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 .leftFooter {
 	float: left;
-	width: 44%;
+	width: 60%;
 	padding: 3%;
+	margin-left: 20px;
 }
 
 .rightFooter {
-	width: auto;
-
+	float: right;
+	width: 30%;
+	padding: 3%;
+	margin-left: 100px;
 }
 </style>
 
-<div class="background">
+<footer>
 	<div class="footerWrap">
 		<div class="leftFooter">
 			<p>
@@ -67,7 +66,7 @@
 		</div>
 
 	</div>
-</div>
+</footer>
 
 
 

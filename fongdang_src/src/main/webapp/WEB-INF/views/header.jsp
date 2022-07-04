@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/header.css">
 
-<header class="site__header">
+<header class="site__header" style="width: 1280px; margin: 0 auto;">
 	<nav>
 		<a href="<%=request.getContextPath()%>"> <img
 			src="<%=request.getContextPath()%>/resources/images/logo.png"
@@ -23,7 +23,7 @@
 					<li><a href="#">이용가이드</a></li>
 				</ul></li>
 			<li>
-				<form action="" method="GET" style="margin-left: 370px;">
+				<form action="" method="GET" style="margin-left: 240px; width: 300px;">
 					<div class="mx-auto mt-5 search-bar input-group mb-3">
 						<input name="a" type="text" class="form-control rounded-pill"
 							placeholder="category 검색">
@@ -42,7 +42,7 @@
 						<li>기타</li>
 					</ul>
 					<hr style="margin-top: 10px;">
-					<p class="x">닫기</p>
+					<p class="header_x" style="margin-bottom: 1px;">닫기</p>
 				</div>
 			</li>
 		</ul>
@@ -58,12 +58,12 @@
 			<c:if test="${!empty loginInfo}">
 				<li style="top: 10px;"><a href="#" id="">알림<%-- <img
 						src="<%=request.getContextPath()%>/resources/images/bell.png"
-						class="loginImg"> --%></a></li>
+						class="header_loginImg"> --%></a></li>
 				<c:if test="${!empty loginInfo}">
 					<c:if test="${loginInfo.name ne '관리자'}">
 						<li style="top: 10px;"><a href="#" id="">내정보<%-- <img
 							src="<%=request.getContextPath()%>/resources/images/mypage.png"
-							class="loginImg"> --%></a></li>
+							class="header_loginImg"> --%></a></li>
 					</c:if>
 					<c:if test="${loginInfo.name eq '관리자'}">
 						<li style="top: 10px;"><a href="<%= request.getContextPath()%>/member/logout" id="">로그아웃</a></li>
@@ -71,12 +71,12 @@
 				</c:if>
 			</c:if>
 			<c:if test="${loginInfo.name ne '관리자'}">
-				<li><a href="#" id="fdapply">펀딩 프로젝트 신청</a>
-					<div class="dep3">
+				<li><a href="<%=request.getContextPath()%>/maker/Register" id="fdapply">펀딩 프로젝트 신청</a>
+					<%-- <div class="dep3">
 						<ul>
-							<li><a href="<%=request.getContextPath()%>/maker/Register">">펀딩 오픈프로젝트 신청하기</a></li>
+							<li><a href="<%=request.getContextPath()%>/maker/Register">펀딩 오픈프로젝트 신청하기</a></li>
 						</ul>
-					</div></li>
+					</div> --%></li>
 			</c:if>
 			<c:if test="${loginInfo.name eq '관리자'}">
 				<li><a href="#">관리자 페이지로 이동</a></li>
@@ -96,7 +96,7 @@
         $(".form-control").on("click", function () {
             $(".searchR").show();
         });
-        $(".x").on("click", function () {
+        $(".header_x").on("click", function () {
             $(".searchR").hide();
         });
     </script>
