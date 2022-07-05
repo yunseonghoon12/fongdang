@@ -1,88 +1,33 @@
 @charset "UTF-8";
 
-/* 공 통 */ * {
+/* 공 통 */ 
+* {
 	margin: 0;
 	padding: 0;
 }
-/* semantic 구조 맞추기 */
+/* semantic 구조 맞추기 
 body {
 	overflow: hidden;
-}
-
+} */
 header {
-	/* 방법 1 - float */
 	overflow: hidden;
-	/* 방법 2 - position */
 	position: relative;
+	width: 1280px;
 }
-
-nav {
+#section_page{
+ width: 1200px;
+ display: flex;
+ justify-content: center;
+ 
+}
+#nav_funding {
 	width: 20%;
-	float: left;
+
 }
 
-section {
+#maker{
 	width: 80%;
-	float: left;
-}
-
-/* 펀딩 신청하기_해더 부분 */
-#header_funding {
-	border-bottom: 1px solid #ccc;
-	height: 80px;
-	position: relative;
-}
-/* 로고 위치 */
-#logo_inclusion {
-	position: absolute;
-	width: 100px;
-	left: 8%;
-}
-/* 로고 크기설정 */
-#logo {
-	width: 85px;
-	height: 60px;
-}
-/* 해더 오른쪽 "나가기" */
-#header_right_txt {
-	position: absolute;
-	right: 5%;
-	top: 0px;
-	font-family: SUIT-Regular;
-}
-
-#right_bar li {
-	display: inline-block;
-	margin: 10px;
-}
-
-#right_bar li a {
-	font-size: 15px;
-	line-height: 55px;
-}
-/* 해더 중간 부분 글자 */
-#funding_center_title {
-	position: relative;
-	height: 80px;
-	line-height: 80px;
-	font-size: 15px;
-	text-align: center;
-	font-family: SUIT-Regular;
-}
-/* 해더 나가기 css */
-#header_right_txt a {
-	text-decoration: none;
-	color: #444c57;
-	border-radius: 3px;
-	margin: 15px 0 0;
-	padding: 10px 30px;
-	line-height: 1em;
-	font-family: SUIT-SemiBold;
-}
-
-#header_right_txt a:hover {
-	background: #444c57;
-	color: white;
+	
 }
 
 /* 테이블  감싸는 div */
@@ -123,8 +68,6 @@ section .in_box:focus {
 section table#maker_Table {
 	border-spacing: 20px 20px;
 	border-collapse: separate;
-	/* width: 850px;
-	table-layout: fixed; */
 	padding: 30px;
 }
 /* 버튼 효과 */
@@ -144,7 +87,6 @@ button:hover {
 	cursor: pointer;
 	font-family: SUIT-Regular;
 }
-
 .btn1:hover {
 	opacity: 0.5;
 }
@@ -166,17 +108,6 @@ section #maker_in_bnt {
 	cursor: pointer;
 	font-family: SUIT-Regular;
 }
-/* nav 목록글자 설정 */
-nav a {
-	text-decoration: none;
-	padding: 10px 20px;
-	display: block;
-	color: rgb(23, 24, 23);
-	font-weight: bold;
-	font-size: 1.2rem;
-	font-size: 13px;
-	font-family: SUIT-Regular;
-}
 
 #nav_funding li {
 	text-align: center;
@@ -195,25 +126,61 @@ nav a {
 	display: inline-block;
 	padding: 10px 20px;
 	margin: 10px 0 0;
-	/*border: 1px solid #444c57; */
 	border-radius: 3px;
 	width: 130px;
 	height: 20px;
 	font-family: SUIT-Regular;
 }
+
 /*  윗첨자* css */
 sup {
 	color: red;
 }
-
-/* nav 왼쪽 배경 설정 */
-#nav_fundingname {
-	/* background:rgb(243, 240, 231); */
-	height: 10%;
 }
 /* nav 글자 설정 */
-#nav_fundingname p {
+#nav_fundingmeber{
 	padding: 10px;
 	text-align: center;
 	font-size: 16px;
+	
+}
+/* 첨부설명 */
+#small_txt{
+	color: #495057;
+	font-size: 10px;
+	font-family: SUIT-Light;
+}
+
+/* 상품 요약 */
+#p_summary{
+	width: 400px;
+	height: 100px;
+	border-radius: 3px;
+	border: 1px solid #ced4da;
+	color: #495057;
+	font-family: SUIT-Light;
+}
+
+#p_summary:focus{
+	color: #495057;
+	background-color: #fff;
+	border-color: #b6e0d6;
+	outline: 0;
+}
+
+/* 상품 스토리 */
+#p_story{
+	width: 400px;
+	height: 300px;
+	border-radius: 3px;
+	border: 1px solid #ced4da;
+	color: #495057;
+	font-family: SUIT-Light;
+
+}
+#p_story:focus{
+	color: #495057;
+	background-color: #fff;
+	border-color: #b6e0d6;
+	outline: 0;
 }

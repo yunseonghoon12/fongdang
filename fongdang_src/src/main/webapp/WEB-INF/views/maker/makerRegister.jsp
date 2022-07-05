@@ -1,13 +1,15 @@
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">  
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>메이커 정보</title>
+<title>maker</title>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
@@ -39,9 +41,9 @@ $(document).ready(function() {
                let strArr = str.data;
                alert(strArr[0].tax_type);
                if (strArr[0].b_stt_cd != '' ) {
-            	   $("maker_register_num_yn").val("Y");
+            	   $("#maker_register_num_yn").val("Y");
 				}else{
-					$("maker_register_num_yn").val("N");	
+					$("#maker_register_num_yn").val("N");	
 				}
             }
   			,error : function (result) {
@@ -49,8 +51,8 @@ $(document).ready(function() {
    			}
     	});
    	});
-   	$("#b_no").onchange(function () {
-   		$("maker_register_num_yn").val("N");
+   	$("#b_no").on("onchange", function() {
+   		$("#maker_register_num_yn").val("N");
    	});
    	
   //이메일 형식 확인
@@ -105,48 +107,32 @@ $(document).ready(function() {
 </script> 
 </head>
 <body>
-<header>
-    <div id="header_funding">
-        <div id="logo_inclusion">
-            <a href="">
-             <img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
-            </a>
-        </div>
-        <div id="funding_center_title">
-           <p>펀딩 프로젝트</p>
-        </div>
-        <div id="header_right_txt">
-            <ul id="right_bar">
-                <li><a  href="#">나가기</a></li>
-            </ul>
-        </div>
-    </div>
-</header>   
-<nav id="nav_funding" >
-    <div id="nav_fundingname">
-           <!--<p >펀딩 준비 작성 중</p>
-        <p >펀딩 완료 </p> -->
-         <p id="member_name">${loginInfo.name} 님</p> 
-    </div>
-    <ul>
-         <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
-        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
-        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
-        <li><a href="#"> 오픈예정 현황</a></li>
-        <li><a href="#"> 펀딩 현황</a></li>
-        <!-- <li><a href="#"> 결제 현황</a></li> -->
-        <li><a href="#"> 정산관리</a></li>
-
-    </ul>
-</nav>
-<section>    
+<jsp:include page="../header.jsp"/>
+<div id="section_page"> 
+  <nav id="nav_funding"  >
+    <div style="border-right: 1px solid #ccc; height:100%">
+	    <div id="nav_fundingmeber">
+	         <p id="member_name">${loginInfo.name} 님</p> 
+	     </div>
+	     <ul>
+	        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
+	        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
+	        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
+	        <li><a href="#"> 오픈예정 현황</a></li>
+	        <li><a href="#"> 펀딩 현황</a></li>
+	        <!-- <li><a href="#"> 결제 현황</a></li> -->
+	        <li><a href="#"> 정산관리</a></li>
+	      </ul>
+      </div>
+   </nav>
+<section id="maker">    
     <div id="maker_all">
-      
         <form name="makerform" action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
             <!-- <div>
                 <p id="maker_title"> 메이커 정보 </p>
             </div> -->
             <table id="maker_Table">
+            
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
                     <td ></td>
@@ -223,7 +209,7 @@ $(document).ready(function() {
         </form>
     </div>  
 </section>  
-
+</div> 
 
 
 </body>
