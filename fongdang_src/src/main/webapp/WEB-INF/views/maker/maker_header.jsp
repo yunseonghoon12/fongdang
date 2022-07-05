@@ -3,14 +3,15 @@
 <%@page import="kh.spring.fongdang.member.domain.Member"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/font.css">
 
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/header.css">
-<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/maker_header.css">
+	<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/button.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <div class="headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
@@ -24,25 +25,21 @@
 				<li><a href="#">고객센터</a>
 					<ul class="dep2">
 						<li><a href="#">공지사항</a></li>
-						<li><a
-							href="<%=request.getContextPath()%>/customerCenter/ask">1:1
-								문의</a></li>
+						<li><a href="<%=request.getContextPath()%>/customerCenter/ask">1:1 문의</a></li>
 						<li><a href="#">이용가이드</a></li>
 					</ul></li>
-
+				
 				<li>
-
+				
 					<form action="" method="GET"
 						style="margin-left: 344px; width: 300px;">
-
+						
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="a" type="text" class="form-control rounded-pill"
-								id="textbox" placeholder="category 검색">
+							<input name="a" type="text" class="form-control rounded-pill" id="textbox"
+								placeholder="category 검색">
 							<div class="input-group-append"></div>
 						</div>
-						<label for="textbox"><img
-							src="<%=request.getContextPath()%>/resources/images/magnifying.png"
-							class="question_header"></label>
+							<label for="textbox"><img src="<%=request.getContextPath()%>/resources/images/magnifying.png" class="question_header"></label>
 					</form>
 					<div class="searchR" style="right: 63px;">
 						<p style="text-align: center;">카테고리</p>
@@ -88,12 +85,8 @@
 					</c:if>
 				</c:if>
 				<c:if test="${loginInfo.name ne '관리자'}">
-					<li><a href="<%=request.getContextPath()%>/maker/Register"
-						id="fdapply">펀딩 프로젝트 신청</a> <%-- <div class="dep3">
-						<ul>
-							<li><a href="<%=request.getContextPath()%>/maker/Register">펀딩 오픈프로젝트 신청하기</a></li>
-						</ul>
-					</div> --%></li>
+					<li><a href="<%=request.getContextPath()%>"
+						>메인으로 나가기</a></li>
 				</c:if>
 				<c:if test="${loginInfo.name eq '관리자'}">
 					<li><a href="#">관리자 페이지로 이동</a></li>

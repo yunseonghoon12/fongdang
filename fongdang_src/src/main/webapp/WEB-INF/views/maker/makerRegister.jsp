@@ -1,8 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/maker_header.css">
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -13,6 +12,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
     //다음 카카오 주소찾기 (src="http://dmaps.daum.net/map_js_init/postcode.v2.js) 같이 추가
 $(document).ready(function() {    
@@ -107,10 +107,10 @@ $(document).ready(function() {
 </script> 
 </head>
 <body>
-<jsp:include page="../header.jsp"/>
+<jsp:include page="./maker_header.jsp"/>
 <div id="section_page"> 
   <nav id="nav_funding"  >
-    <div style="border-right: 1px solid #ccc; height:100%">
+    <div style="border-right: 1px solid #ccc; height:100%" class="ulWrap">
 	    <div id="nav_fundingmeber">
 	         <p id="member_name">${loginInfo.name} 님</p> 
 	     </div>
