@@ -1,5 +1,7 @@
 package kh.spring.fongdang.funding.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +18,19 @@ public class ProductServiceImpl implements ProductService{
 	
 	public void insertProduct(Product product ) {
 		productDao.insertProduct(product);
-		
-		
 	}
+
+
+	@Override
+	public List<Product> selectPreProducts(int n) {
+		return productDao.selectPreProducts(n);
+	}
+
+
+	@Override
+	public List<Product> selectAllProducts() {
+		return productDao.selectAllProducts();
+	}
+
 
 }

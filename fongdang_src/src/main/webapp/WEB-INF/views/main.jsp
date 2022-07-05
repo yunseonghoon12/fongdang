@@ -75,45 +75,43 @@ il, ul {
 				<div class="wrap_content">
 					<section>
 						<div class="container_content">
-							<%--    <c:forEach items="${}" var="vo"> --%>
-							<div>
-								<div class="product_image">
-									<div class="wrap_product_thumbnail">
-										<a class="product_link" href=""> <img
-											class="product_thumbnail"
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg">
-										</a>
+<c:forEach items="${preProducts}" var="product">
+								<div style="margin-right: 35px;">
+									<div class="product_image">
+										<div class="wrap_product_thumbnail">
+											<a class="product_link" href=""> <img
+												class="product_thumbnail" src="${product.p_thumbnail}">
+											</a>
+										</div>
+									</div>
+									<div class="product_name">
+										<!-- ${vo.product } -->
+										<p class="product_name_color">${product.p_name}</p>
+									</div>
+									<div class="product_name_intro">
+										<!-- ${vo.product } -->
+										<p style="color: black;">
+											<span>00일 오픈예정! </span>
+										</p>
+									</div>
+									<div class="product_title">
+										<!-- ${vo.product } -->
+										<h4 style="color: #9bbfd9;">
+											54,000<span style="color: black;"> 원</span><span
+												style="color: black; margin-left: 3px;"> 잡화 </span>
+										</h4>
 									</div>
 								</div>
-								<div class="product_name">
-									<!-- ${vo.product } -->
-									<p class="product_name_color">[평점5.0]줄서서 먹는 남대문 맛집,금성관
-										나주곰탕!</p>
-								</div>
-								<div class="product_name_intro">
-									<!-- ${vo.product } -->
-									<p style="color: black;">
-										<span>00일 오픈예정! </span>
-									</p>
-								</div>
-								<div class="product_title">
-									<!-- ${vo.product } -->
-									<h4 style="color: #9bbfd9;">
-										54,000<span style="color: black;"> 원</span><span
-											style="color: black; margin-left: 3px;"> 잡화 </span>
-									</h4>
-								</div>
-							</div>
-							<%--       </c:forEach> --%>
-						</div>
+</c:forEach>
 
+						</div>
 					</section>
 				</div>
 			</div>
 			<div id="ranking01">
 				<h2>실시간 랭킹!</h2>
 				<div style="display: flex;">
-					<ul>
+					<ul style="top: 20px; position: relative;">
 						<li>
 							<h3 class="rankNum fistNum">1</h3>
 						</li>
@@ -201,7 +199,8 @@ il, ul {
 			<div class="apply01">
 				<p>퐁당에서 프로젝트 오픈하기</p>
 				<p>당신의 이야기를 소개하고 투자자와 서포터를 만나보세요.</p>
-				<p style="position: relative; top: 80px;color: white;">당신을 응원합니다.</p>
+				<p style="position: relative; top: 80px; color: white;">당신을
+					응원합니다.</p>
 			</div>
 			<div class="apply02">
 				<button class="btn btn-fill-fcolor">신청하기</button>

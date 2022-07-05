@@ -15,7 +15,8 @@ body {
 	font-family: SUIT-Regular;
 	text-decoration: none;
 }
-.AllWarp{
+
+.AllWarp {
 	width: 1200px;
 	margin: 0 auto;
 }
@@ -123,12 +124,14 @@ body {
 }
 
 #cateSelect {
-	border-radius: 5px;
+	position: relative;
+	left: 150px; border-radius : 5px;
 	width: 100px;
 	height: 30px;
 	border-color: #b7b6b6cc;
 	background-color: #e7e7e7cc;
 	box-shadow: 4px 6px 6px 2px #0000000f, 0px 4px 6px -1px #0000001a;
+	border-radius: 5px;
 }
 
 #cateSelect:hover {
@@ -145,15 +148,16 @@ a {
 }
 
 .imglist_ul {
-	font-size: 0;
-	width: 800px;
+	width: 1200px;
 	margin: 0 auto;
 	padding: 10px;
+	position: relative;
+    left: 70;
 }
 
 .imglist_ul>li {
 	display: inline-block;
-	width: 33.3%;
+	width: 22%;
 	vertical-align: top;
 	font-size: 12px;
 }
@@ -245,8 +249,8 @@ a {
 }
 
 .productWrap a h3 {
-	margin: 20px 10px;
-	font-size: 25px;
+	margin: 5px 10px;
+	font-size: 19px;
 }
 
 .productWrap a h3:hover, .productWrap a p:hover {
@@ -254,9 +258,8 @@ a {
 }
 
 .productWrap a p {
-	font-family: 'NanumSquare';
 	margin: 0 10px;
-	font-size: 12px;
+	font-size: 19px;
 	line-height: 18px;
 }
 </style>
@@ -346,54 +349,16 @@ a {
 
 		<div class="productWrap">
 			<ul class="imglist_ul">
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>Nike SB는 스케이트보드 보딩을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
-				<li><a href="#">
-						<div class="screen">
-							<span></span><span></span><span></span><span></span> <img
-								src="<%=request.getContextPath()%>/resources/images/etc.jpg">
-						</div>
-						<h3>카메라</h3>
-						<p>세련된 디자인을 통해 표현되는 젊음의 창조적 구현과 혁신을 추구합니다.</p>
-				</a></li>
+				<c:forEach items="${allProducts}" var="product">
+					<li><a href="#">
+							<div class="screen">
+								<span></span><span></span><span></span><span></span> <img
+									src="${product.p_thumbnail}">
+							</div>
+							<h3>${product.maker_name}</h3>
+							<p>${product.p_name}</p>
+					</a></li>
+				</c:forEach>
 			</ul>
 			<hr style="border-style: outset; margin-bottom: 10px;">
 		</div>

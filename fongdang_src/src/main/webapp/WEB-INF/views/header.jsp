@@ -8,6 +8,8 @@
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/header.css">
+	<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/button.css">
 
 <div class="headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
@@ -21,14 +23,14 @@
 				<li><a href="#">고객센터</a>
 					<ul class="dep2">
 						<li><a href="#">공지사항</a></li>
-						<li><a href="#">1:1 문의</a></li>
+						<li><a href="<%=request.getContextPath()%>/customerCenter/ask">1:1 문의</a></li>
 						<li><a href="#">이용가이드</a></li>
 					</ul></li>
 				
 				<li>
 				
 					<form action="" method="GET"
-						style="margin-left: 240px; width: 300px;">
+						style="margin-left: 344px; width: 300px;">
 						
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
 							<input name="a" type="text" class="form-control rounded-pill" id="textbox"
