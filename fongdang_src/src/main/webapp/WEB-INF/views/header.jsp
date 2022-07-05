@@ -24,14 +24,18 @@
 						<li><a href="#">1:1 문의</a></li>
 						<li><a href="#">이용가이드</a></li>
 					</ul></li>
+				
 				<li>
+				
 					<form action="" method="GET"
 						style="margin-left: 240px; width: 300px;">
+						
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="a" type="text" class="form-control rounded-pill"
+							<input name="a" type="text" class="form-control rounded-pill" id="textbox"
 								placeholder="category 검색">
 							<div class="input-group-append"></div>
 						</div>
+							<label for="textbox"><img src="<%=request.getContextPath()%>/resources/images/magnifying.png" class="question_header"></label>
 					</form>
 					<div class="searchR" style="right: 63px;">
 						<p style="text-align: center;">카테고리</p>

@@ -33,7 +33,7 @@ a {
 	width: 100%;
 	max-height: 250px;
 	min-height: 250px;
-	transition: all .90s;
+	transition: all 1s;
 }
 
 .slidebox .slideitem label {
@@ -66,7 +66,7 @@ label.right {
 	background-size: 50%;
 	background-repeat: no-repeat;
 }
-/* 페이징 스타일 */
+
 .paginglist {
 	text-align: center;
 	padding: 30px 0;
@@ -92,22 +92,22 @@ label.right {
 
 [id="slide01"]:checked ~.slidelist .slideitem {
 	transform: translateX(0);
-	animation: slide01 15s infinite;
+	animation: slide01 20s infinite;
 }
 
 [id="slide02"]:checked ~.slidelist .slideitem {
 	transform: translateX(-100%);
-	animation: slide02 15s infinite;
+	animation: slide02 20s infinite;
 }
 
 [id="slide03"]:checked ~.slidelist .slideitem {
 	transform: translateX(-200%);
-	animation: slide03 15s infinite;
+	animation: slide03 20s infinite;
 }
 
 [id="slide04"]:checked ~.slidelist .slideitem {
 	transform: translateX(-300%);
-	animation: slide04 15s infinite;
+	animation: slide04 20s infinite;
 }
 
 @keyframes slide01 {
