@@ -67,6 +67,7 @@ public class MakerController {
 		
 		String logoFile = fileUpload.saveFile(makerLogoFile, req);
 		String licenseFile = fileUpload.saveFile(makerLicenseCopyFile, req);
+		 
 		logger.debug("=============================s===="+session.getAttribute("loginInfo").toString());
 		
 		Member member = (Member) session.getAttribute("loginInfo");
@@ -75,7 +76,7 @@ public class MakerController {
 		
 		if (member == null) {
 			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
-			mv.setViewName("redirect:/member/login"); //
+			mv.setViewName("redirect:/member/login"); 
 			return mv;
 		}
 		if (member != null) {
@@ -84,6 +85,7 @@ public class MakerController {
 			mamker.setMaker_license_copy_file(licenseFile);
 			int result = makerServiceImpl.insertMaker(mamker);
 		}
+		
 		rttr.addFlashAttribute("msg", "메이커 정보 저장되었습니다.");
 		mv.setViewName("product/product");// 상품등록 페이지 이동 
 		return mv;

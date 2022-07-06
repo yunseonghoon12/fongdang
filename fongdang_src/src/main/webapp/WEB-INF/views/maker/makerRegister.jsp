@@ -76,7 +76,7 @@ $(document).ready(function() {
 	});
 	//전화번호 형식확인 
 	$("#maker_phone").on("input", function() {
-		var phoneRegEx = /^[0][0-9]{3}-[0-9]{3,4}-[0-9]{4}$/;
+		var phoneRegEx = /^[0][0-9]{2,3}-[0-9]{3,4}-[0-9]{4}$/;
 		var phoneVal = $("#maker_phone").val();
 
 		if (!phoneRegEx.test(phoneVal)) {
@@ -92,7 +92,7 @@ $(document).ready(function() {
 	});
 	//사업자등록번호 형식확인  ex) 사업자번호: 123-45-67891 사업자 번호는 10자리
 	$("#b_no").on("input", function() {
-		var phoneRegEx = /^[0-9]{3,3}-[0-9]{2,2}-[0-9]{5}$/;
+		var phoneRegEx = /^[0-9]{3}-[0-9]{2}-[0-9]{5}$/;
 		var phoneVal = $("#b_no").val();
 
 		if (!phoneRegEx.test(phoneVal)) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
 	     <ul> 
 	        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
 	        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
-	        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
+	        <li><a href="<%= request.getContextPath()%>/option/view"> 펀딩 옵션</a></li>
 	        <li><a href="#"> 오픈예정 현황</a></li>
 	        <li><a href="#"> 펀딩 현황</a></li>
 	        <!-- <li><a href="#"> 결제 현황</a></li> -->

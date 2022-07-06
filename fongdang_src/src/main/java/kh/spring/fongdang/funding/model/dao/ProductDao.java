@@ -14,7 +14,7 @@ public class ProductDao {
 
 	@Autowired
 	private SqlSession sqlSession;
-	
+// 상품 등록 (insert)	
 	public int insertProduct(Product product) {
 		return sqlSession.insert("Product.insertProduct",product);
 	}

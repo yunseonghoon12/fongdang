@@ -3,29 +3,44 @@
 
 <mapper namespace="Option">
 
-<insert id="insertOption" parameterType="Option">
- insert into option(option_no
-	 ,p_no
-	 ,option_name,option_info
-	 ,option_price,option_limit
-	 )values(#{option_no}
-	 ,#{p_no}
-	 ,#{option_name},#{option_info}
-	 ,#{option_price},#{option_limit})
-</insert>
+	<insert id="insertOption" parameterType="Option">
+		INSERT
+			INTO
+			FONGDANG."OPTION"
+				(OPTION_NO,
+				P_NO,
+				OPTION_NAME,
+				OPTION_INFO,
+				OPTION_PRICE,
+				OPTION_LIMIT)
+		values(
+				 #{option_no}
+				,#{p_no}
+				,#{option_name}
+				,#{option_info}
+				,#{option_price}
+				,#{option_limit}
+		)
+	</insert>
 
-<update id="updateOption">
-update option set option_name=#{option_name}
-	,option_info=#{option_info}
-	,option_price=#{option_price}
-	,option_limit=#{option_limit}
-	where option_no=#{option_no}
-</update>
+	<update id="updateOption">
+		update option set option_name=#{option_name}
+		,option_info=#{option_info}
+		,option_price=#{option_price}
+		,option_limit=#{option_limit}
+		where option_no=#{option_no}
+	</update>
 
-<select id="selectOption">
-	select * from option
-	where option_no=#{option_no}
-</select>
+	<select id="selectOption">
+		select * from option
+		where option_no=#{option_no}
+	</select>
 
+	<select id="selectOneGetPNo" parameterType="String" resultType="String">
+		SELECT p.P_NO 
+		FROM MAKER m , PRODUCT p
+		WHERE m.MAKER_NAME = p.MAKER_NAME 
+		AND m.EMAIL = #{email}
+	</select>
 
 </mapper>

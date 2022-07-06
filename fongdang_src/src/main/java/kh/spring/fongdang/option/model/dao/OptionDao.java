@@ -15,5 +15,7 @@ public class OptionDao {
 	public int insertOption(Option option) {
 		return sqlSession.insert("Option.insertOption", option);
 	}
-
+	public String selectOneGetPNo(String email) {
+		return sqlSession.selectOne("Option.selectOneGetPNo", email);
+	}
 }

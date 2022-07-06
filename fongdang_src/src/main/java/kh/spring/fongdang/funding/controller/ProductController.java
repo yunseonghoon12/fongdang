@@ -26,6 +26,8 @@ import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.funding.model.service.ProductService;
 import kh.spring.fongdang.funding.model.service.ProductServiceImpl;
+import kh.spring.fongdang.maker.domain.Maker;
+import kh.spring.fongdang.member.domain.Member;
 
 
 
@@ -59,59 +61,29 @@ public class ProductController {
 			, MultipartHttpServletRequest multipart
 
 			) {
-		
 		MultipartFile pThumbnailFile = multipart.getFile("thumbnail_file");
 		MultipartFile pCcertificationFile = multipart.getFile("certification_file");
 		
 		String thumbnailFile = fileUpload.saveFile(pThumbnailFile, req);
 		String certificationFile = fileUpload.saveFile(pCcertificationFile, req);
 		
+	   // 메이커명이 같이 들어간다.  maker_name 
+		Member member = (Member) session.getAttribute("loginInfo");
 		
-		
-		//Product product	 = new Product();
-		//Option option=new Option();
-		/*try {
-		
-			for (String key: request.getParameterMap().keySet()) {
-				logger.debug(" key : "+key + ", pram : "+request.getParameter(key));
-			}
+		if (member == null) {
+			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
+			mv.setViewName("redirect:/member/login"); 
+			return mv;
+		}
+		if (member != null) {
+		//	product.setMaker_name(maker.getMaker_name());
+			product.setP_certification_file(certificationFile);
+			product.setP_thumbnail_file(certificationFile);
+	//	int result = productServiceImpl.insertProduct(product);
+		}
 	
-			String  maker_name= request.getParameter("maker_name");
-			String  category_id= request.getParameter("category_id");
-			String  p_name= request.getParameter("p_name");
-			String  p_thumbnail= request.getParameter("p_thumbnail");
-			String  p_summary= request.getParameter("p_summary");
-			String  p_story= request.getParameter("p_story");
-			String  p_certification= request.getParameter("p_certification");
-			String  start_day= request.getParameter("start_day");
-			String  end_day= request.getParameter("end_day");
-			String  payment_plan= request.getParameter("payment_plan");
-			String  delivery_date= request.getParameter("delivery_date");
-			
-			String  option_name= request.getParameter("option_name");
-			//String  option_name= request.getParameter("option_name");
-	//		private int option_no;       //상품상세번호
-	//		private int p_no;            //상품번호
-	//		private String option_name;  //옵셥이름
-	//		private String option_info;  //옵션정보 
-	//		private int option_price;    //옵션가격
-	//		private int option_limit;    //제한수량
-			
-			
-			product.setMaker_name(maker_name);
-			
-			//product.
-		
-			
-		}catch (Exception e) {
-			// TODO: handle exception
-		}*/
-		
-		/*product.setP_certification_file(certificationFile);
-		product.setP_certification_file(pThumbnailFile);
-		int result = productServiceImpl.insertProduct(product);*/
-		
-		mv.setViewName("redirect:/"); //
+		rttr.addFlashAttribute("msg", "펀딩상품이 저장되었습니다.");
+		mv.setViewName("redirect:/"); //옵션페이지 이동 
 		return mv;
 	}
 	

@@ -111,7 +111,7 @@ $( document ).ready(function() {
 					<li><a
 						href="<%=request.getContextPath()%>/product/product.pag"> 펀딩
 							상품</a></li>
-					<li><a href="<%=request.getContextPath()%>/option/option.pag">
+					<li><a href="<%=request.getContextPath()%>/option/view">
 							펀딩 옵션</a></li>
 					<li><a href="#"> 오픈예정 현황</a></li>
 					<li><a href="#"> 펀딩 현황</a></li>

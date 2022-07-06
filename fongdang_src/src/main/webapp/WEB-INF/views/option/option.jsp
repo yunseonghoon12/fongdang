@@ -10,7 +10,9 @@
 <head>
 <meta charset="UTF-8">
 <title>option</title>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+
 </head>
 <body>
 <jsp:include page="../maker_header.jsp"/>
@@ -24,7 +26,7 @@
 		     <ul>
 		        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
 		        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
-		        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
+		        <li><a href="<%= request.getContextPath()%>/option/view"> 펀딩 옵션</a></li>
 		        <li><a href="#"> 오픈예정 현황</a></li>
 		        <li><a href="#"> 펀딩 현황</a></li>
 		        <!-- <li><a href="#"> 결제 현황</a></li> -->
@@ -34,7 +36,7 @@
 	  </nav>
 <section id="maker"> 
   <div id="maker_all">
-        <form action="<%=request.getContextPath()%>/option/option.pag" method="post" enctype="multipart/form-data">
+        <form method="post" name="optionForm" enctype="multipart/form-data">
             <!-- <div>
                 <p id="maker_title"> 펀딩상품등록 </p>
             </div> -->
@@ -69,7 +71,9 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit" class="btn2" value="저장하기" >저장하기</button></td>
+                    <td>
+                    <input type="text" name="p_no"  value="${p_no}"/>
+                    <input type="button" class="btn2" value="저장하기" id="save" /></td>
                     <td></td>
                 </tr>
             </table>
@@ -79,4 +83,31 @@
 </div>
 
 </body>
+
+<script>
+$(document).ready(function() {    
+    $("#save").click(function () {
+    	const formData = $("form[name=optionForm]").serialize();
+    	$.ajax({
+            type: "post",
+            url: "<%=request.getContextPath()%>/option/insert",
+            dataType: "text",
+            data: formData,
+            success: function (result) {
+                console.log("result : ", result);
+                if(result == "success"){
+                	alert("저장 성공");
+                	//TODO 이동하는 페이지 쓰기 
+                }else{
+                	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	
+                }
+            },
+   			error : function (result) {
+   				alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");
+   				console.log("result : ", result);
+    		}
+    	});
+    });
+});
+</script>
 </html>
