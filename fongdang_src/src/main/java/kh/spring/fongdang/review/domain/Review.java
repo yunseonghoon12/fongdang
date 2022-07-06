@@ -1,4 +1,4 @@
-package ks.spring.fongdang.review.domain;
+package kh.spring.fongdang.review.domain;
 
 import org.springframework.stereotype.Component;
 

@@ -1,10 +1,10 @@
-package ks.spring.fongdang.review.model.service;
+package kh.spring.fongdang.review.model.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ks.spring.fongdang.review.domain.Review;
-import ks.spring.fongdang.review.model.dao.ReviewDao;
+import kh.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.review.model.dao.ReviewDao;
 
 
 @Service

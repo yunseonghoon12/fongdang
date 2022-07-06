@@ -1,4 +1,4 @@
-package ks.spring.fongdang.review.controller;
+package kh.spring.fongdang.review.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ks.spring.fongdang.review.domain.Review;
-import ks.spring.fongdang.review.model.service.ReviewServiceImpl;
+import kh.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.review.model.service.ReviewServiceImpl;
 
 
 @Controller

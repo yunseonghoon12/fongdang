@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import ks.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.review.domain.Review;
 
 
 @Component

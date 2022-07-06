@@ -1,6 +1,6 @@
-package ks.spring.fongdang.review.model.service;
+package kh.spring.fongdang.review.model.service;
 
-import ks.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.review.domain.Review;
 
 public interface ReviewService {
 	public int insertReview(Review review);

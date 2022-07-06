@@ -1,4 +1,4 @@
-package ks.spring.fongdang.review.model.dao;
+package kh.spring.fongdang.review.model.dao;
 
 import java.util.HashMap;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import ks.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.review.domain.Review;
 
 
 @Repository
