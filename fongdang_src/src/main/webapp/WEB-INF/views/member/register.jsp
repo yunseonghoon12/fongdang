@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,27 +17,33 @@
       color: #444c57;
     }
     #header_container {
-      border-bottom: 1px solid #ccc;
-      height: 80px;
       position: relative;      
+      border-bottom: 1px solid #ccc;
     }
+    #header_content {    
+    	position: relative;
+    	margin: 0 auto;
+    	width: 1280px;
+    	height: 80px;    	
+    }    
     #logo_inclusion {
       position: absolute;
       width: 100px;      
-      left: 13%;
+      left: 0; 
     }     
-    #logo {
-      width: 85px; 
-      height: 60px;      
+    #logo {      
+      width: 90px; 
+      height: 65px;            
     }
     #right_content {
       position: absolute;
-      left: 80%;
+      width: 140px;
+      right: 0;      
     }
     #right_bar {            
       width: 200px;      
     }
-    #right_bar li {      
+    #right_bar li {            
       display: inline-block;
       margin: 10px;
     }
@@ -117,20 +124,22 @@
 </head>
 <body>
 	<header>
-    <div id="header_container">
-      <div id="logo_inclusion">
-        <a href="<%=request.getContextPath()%>/">
-          <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
-        </a>
-      </div>
-      <div id="right_content">
-        <ul id="right_bar">
-          <li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
-          <li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+    	<div id="header_container">
+    		<div id="header_content">
+      			<div id="logo_inclusion">
+		        	<a href="<%=request.getContextPath()%>/">
+    		      	<img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
+        			</a>
+      			</div>
+      			<div id="right_content">
+			    	<ul id="right_bar">
+          				<li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          				<li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
+        			</ul>
+      			</div>
+    		</div>
+    	</div>
+ 	</header>
 
   <div id="container">
     <div id="main_content">
@@ -165,13 +174,8 @@
       </div>
     </div>
   </div>
-  <footer style="text-align: center; font-size: 13px; font-weight: 300; margin: 30px 0;" >
-    <p>KH정보교육원 ｜ 사업자등록번호 : 851-87-00622 ｜ 서울 강남 제2014-01호 ｜ 대표자 : 양진선 ｜ 책임자 : 최홍석 ｜  개인정보관리책임자 : 양진선</p>
-    <br>
-    <p>종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F</p>
-    <p>Copyright &copy; 1998-2022 KH Information Educational Institute All Right Reserved</p>
-  </footer>
-	
+  
+	<jsp:include page="../footer.jsp" />	
 	
 	
 	

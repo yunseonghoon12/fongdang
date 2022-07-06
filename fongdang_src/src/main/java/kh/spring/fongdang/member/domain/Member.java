@@ -15,7 +15,7 @@ public class Member {
 	private String original_profile;
 	private String rename_profile;
 	private String intro;
-	private Timestamp enroll_date;
+	private String enroll_date;
 	private boolean remember_email;
 	
 	@Override
@@ -98,11 +98,11 @@ public class Member {
 		this.intro = intro;
 	}
 
-	public Timestamp getEnroll_date() {
+	public String getEnroll_date() {
 		return enroll_date;
 	}
 
-	public void setEnroll_date(Timestamp enroll_date) {
+	public void setEnroll_date(String enroll_date) {
 		this.enroll_date = enroll_date;
 	}
 

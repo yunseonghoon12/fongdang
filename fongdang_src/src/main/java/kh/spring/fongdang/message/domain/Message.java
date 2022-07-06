@@ -10,7 +10,7 @@ public class Message {
 	private String m_content;
 	private String sender;
 	private String receiver;
-	private Timestamp m_date;
+	private String m_date;
 	private String response_chk;
 	
 	@Override
@@ -51,11 +51,11 @@ public class Message {
 		this.receiver = receiver;
 	}
 
-	public Timestamp getM_date() {
+	public String getM_date() {
 		return m_date;
 	}
 
-	public void setM_date(Timestamp m_date) {
+	public void setM_date(String m_date) {
 		this.m_date = m_date;
 	}
 

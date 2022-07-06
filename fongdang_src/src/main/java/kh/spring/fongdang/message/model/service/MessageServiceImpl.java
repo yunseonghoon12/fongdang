@@ -21,4 +21,13 @@ public class MessageServiceImpl implements MessageService {
 	public List<Message> selectMessageList(int currentPage, int messageLimit, String receiver) {
 		return dao.selectMessageList(currentPage, messageLimit, receiver);
 	}
+
+	public Message selectMessage(String m_no) {
+		return dao.selectMessage(m_no);
+	}
+	
+	public int countMyMessage(String receiver) {
+		return dao.countMyMessage(receiver);
+	}
+
 }

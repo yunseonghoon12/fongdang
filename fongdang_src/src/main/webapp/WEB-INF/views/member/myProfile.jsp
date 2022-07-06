@@ -179,7 +179,7 @@
     
     background-color: #444c57;
     border: 1px solid #444c57;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
     font-family: SUIT-Regular;
     font-size: 15px;

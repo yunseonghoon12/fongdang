@@ -12,160 +12,184 @@
 <style>  
     /* header */
     a {
-      text-decoration: none;
-      color: #444c57;
+      	text-decoration: none;
+      	color: #444c57;
     }
     #header_container {
-      border-bottom: 1px solid #ccc;
-      height: 80px;
-      position: relative;      
+      	position: relative;      
+      	border-bottom: 1px solid #ccc;
     }
+    #header_content {    
+    	position: relative;
+    	margin: 0 auto;
+    	width: 1280px;
+    	height: 80px;    	
+    }    
     #logo_inclusion {
-      position: absolute;
-      width: 100px;      
-      left: 13%;
+      	position: absolute;
+      	width: 100px;      
+      	left: 0; 
     }     
-    #logo {
-      width: 85px; 
-      height: 60px;      
+    #logo {      
+      	width: 90px; 
+      	height: 65px;            
     }
     #right_content {
-      position: absolute;
-      left: 80%;
+      	position: absolute;
+      	width: 140px;
+      	right: 0;      
     }
     #right_bar {            
-      width: 200px;      
+      	width: 200px;      
     }
-    #right_bar li {      
-      display: inline-block;
-      margin: 10px;
+    #right_bar li {            
+      	display: inline-block;
+      	margin: 10px;
     }
     #right_bar li a {
-      font-family: SUIT-Regular;
-      font-size: 15px;
-      line-height: 55px;
+      	font-family:  SUIT-Regular;
+      	font-size: 15px;
+      	line-height: 55px;
     }      
-  </style>
-  <style>    
-    #find_title_wrap {     
-      border-bottom: 1px solid #ccc;       
-      height: 140px;      
+  </style>  
+  <style>
+ 	#find_wrap {
+ 	 	border-bottom: 1px solid #ccc; 	 	
+ 		height: 140px; 		
+ 	}
+    #find_title_wrap {
+      	width: 1200px;     
+      	height: 100%;  
+      	margin: 0 auto;    
     }
     #find_title {     
-      box-sizing: border-box;
-      width: 350px;
-      margin-left: 20%;
-      margin-top: 3%;
-      font-family: SUIT-SemiBold;
-      font-size: 32px;
+      	box-sizing: border-box;
+      	width: 350px;      
+      	margin-top: 3%;
+      	font-family: SUIT-SemiBold;
+      	font-size: 32px;
     }    
-    #find_info_wrap {     
-      font-size: 32px;
-      position: relative;
-      height: 108px;
+    #find_info_wrap {  
+      	font-size: 32px;
+      	position: relative;
+      	height: 108px;
     }
     #find_info {      
-      position: absolute;
-      bottom: 0;
-      margin-left: 20%;
+      	position: absolute;
+      	bottom: 0;
     }
     #find_info li {      
-      display: inline-block;            
-      
+      	display: inline-block; 
     }
     #find_info li:nth-of-type(1) {
-      border-bottom: 2px solid #b6e0d6;         
+      	border-bottom: 2px solid #b6e0d6;         
     }
     #find_info li:nth-of-type(1) a{
-      color: #b6e0d6;
+      	color: #b6e0d6;
     }
     #find_info > li > a {            
-      text-align: center;
-      font-family: SUIT-Regular;
-      font-size: 15px;
-      height: 70px;      
+      	text-align: center;
+      	font-family: SUIT-Regular;
+      	font-size: 15px;
+      	height: 70px;      
     }
     #guide {      
-      font-family: SUIT-Regular;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-
-      width: 380px;
-      height: 60px;
-      margin: 0 auto; 
-      padding-top: 50px;      
+      	font-family: SUIT-Regular;
+      	font-size: 14px;
+      	font-weight: 400;
+      	line-height: 20px;
+	
+      	width: 380px;
+      	height: 60px;
+      	margin: 0 auto; 
+      	padding-top: 50px;      
     }        
     #page_body {            
-      height: 650px;
-      background-color: #f5f7fa;
+      	height: 500px;
+      	background-color: #f5f7fa;
     }
-    #email_form {      
-      width: 370px;
-      height: 200px;
-      margin: 30px auto;
+    #id_vision {
+      	width: 1200px;
+      	height: 100%;
+      	margin: 0 auto;
+      	padding: 30px 0;
+    }
+    #pwd_vision {
+      	width: 1200px;
+      	height: 100%;
+      	margin: 0 auto;
+      	padding: 30px 0;
+    }
+    #email_form {          
+      	width: 370px;
+      	height: 200px;
+      	margin: 30px auto;
     }
     #pwd_form {
-      width: 370px;
-      height: 200px;
-      margin: 30px auto;
+      	width: 370px;
+      	height: 200px;
+      	margin: 30px auto;
     }
     #input_email {
-      box-sizing: border-box;
-      width: 365px;
-      height: 48px;
-      line-height: 48px;
-      font-family: SUIT-Regular;
-      font-size: 15px;
-      font-weight: 300;
-      padding-left: 0.95em;
+      	box-sizing: border-box;
+      	width: 365px;
+      	height: 48px;
+      	line-height: 48px;
+      	font-family: SUIT-Regular;
+      	font-size: 15px;
+      	font-weight: 300;
+	    padding-left: 0.95em;
     }
 
     #submit_btn {      
-      box-sizing: border-box;
-      width: 365px;
-      height: 48px;
-      
-      font-family: SUIT-Regular;
-      font-size: 17px;
-      font-weight: 400;
-      margin-top: 20px;      
-    
-      border: 1px solid #b6e0d6;     
-      border-radius: 5px;
-      background-color: #b6e0d6;      
-      color: white;
+      	box-sizing: border-box;
+      	width: 365px;
+      	height: 48px;
+	      
+      	font-family: SUIT-Regular;
+      	font-size: 17px;
+      	font-weight: 400;
+      	margin-top: 20px;      
+	    
+      	border: 1px solid #b6e0d6;     
+      	border-radius: 5px;
+      	background-color: #b6e0d6;      
+      	color: white;
     }
     #pwd_vision {
-      display: none;
+      	display: none;
     }
   </style>
 </head>
 <body>
 	<header>
-    <div id="header_container">
-      <div id="logo_inclusion">
-        <a href="#">
-          <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
-        </a>
-      </div>
-      <div id="right_content">
-        <ul id="right_bar">
-          <li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
-          <li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <div id="find_title_wrap">
-    <p id="find_title">아이디·비밀번호 찾기</p>    
-    <div id="find_info_wrap">
-      <ul id="find_info">
-        <li id="find_id"><a href="#">아이디 찾기</a></li>
-        <li id="find_pwd"><a href="#">비밀번호 찾기</a></li>
-      </ul>
-    </div>
-  </div>
+    	<div id="header_container">
+    		<div id="header_content">
+      			<div id="logo_inclusion">
+		        	<a href="<%=request.getContextPath()%>/">
+    		      	<img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
+        			</a>
+      			</div>
+      			<div id="right_content">
+			    	<ul id="right_bar">
+          				<li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          				<li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
+        			</ul>
+      			</div>
+    		</div>
+    	</div>
+ 	</header>
+ 	<div id="find_wrap">
+  		<div id="find_title_wrap">
+		    <p id="find_title">아이디·비밀번호 찾기</p>    
+		    <div id="find_info_wrap">
+      			<ul id="find_info">
+        			<li id="find_id"><a href="#">아이디 찾기</a></li>
+        			<li id="find_pwd"><a href="#">비밀번호 찾기</a></li>
+      			</ul>
+    		</div>
+  		</div> 	
+ 	</div>
   <div id="page_body">  
     <!-- 아이디 찾기 -->
     <div id="id_vision">
@@ -195,13 +219,7 @@
     </div>
   </div>
 
-  
-  <footer style="text-align: center; font-size: 13px; font-weight: 300; margin: 30px 0;" >
-    <p>KH정보교육원 ｜ 사업자등록번호 : 851-87-00622 ｜ 서울 강남 제2014-01호 ｜ 대표자 : 양진선 ｜ 책임자 : 최홍석 ｜  개인정보관리책임자 : 양진선</p>
-    <br>
-    <p>종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F</p>
-    <p>Copyright &copy; 1998-2022 KH Information Educational Institute All Right Reserved</p>
-  </footer>
+  <jsp:include page="../footer.jsp"/>
 
   <script>
     $("#find_id").click(function() {

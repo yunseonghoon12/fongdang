@@ -36,7 +36,7 @@
       	/* background-color: #9bbfd9; */      	
       	background-color: #ccc; 
     }
-    #myfongdang_page_main_wrap{      
+    #myfongdang_page_main_wrap{  
       	width: 1200px;
       	height: 1100px;
       	margin: 0 auto;
@@ -121,7 +121,7 @@
       	width: 186px;
       	height: 100%;
       	border: 1px solid #ccc;
-      	border-radius: 10px;
+      	border-radius: 3px;
 	  	font-family: SUIT-Regular;
       	font-size: 14px;
       	font-weight: bold;
@@ -242,11 +242,15 @@
       	width: 730px;
       	height: 48px;
       	background-color: #9bbfd9;
-      	border: 1px solid #9bbfd9;
-      	border-radius: 6px;
+      	border: 1px solid #9bbfd9;      	
+      	border-radius: 3px;
 	  	font-family: SUIT-Regular;
       	font-size: 16px;
       	color: white;
+    }
+    #fundingEnroll_btn:hover {
+    	font-weight: bold;
+    	color: black;
     }
     #my_activity_wrap {            
       	margin: 80px;      
@@ -511,8 +515,7 @@
     </div>           
   </div>  
   </div> 
-	<p style="clear: both"></p>     
-  	
+	<p style="clear: both"></p>       	
   	<jsp:include page="../footer.jsp"/>
   
   <script>
@@ -543,7 +546,7 @@
         $("#supportor_section").hide();
         $("#maker_section").show();
       });
-    }
+    }    
   </script>
 </body>
 </html>

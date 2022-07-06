@@ -23,4 +23,12 @@ public class MessageDao {
 	public int insertMessage(Message message) {
 		return sqlSession.insert("Message.insertMessage", message);
 	}
+	
+	public Message selectMessage(String m_no) {		
+		return sqlSession.selectOne("Message.selectMessage", m_no);
+	}
+	
+	public int countMyMessage(String receiver) {
+		return sqlSession.selectOne("Message.countMyMessage", receiver);
+	}
 }

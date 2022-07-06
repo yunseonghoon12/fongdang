@@ -21,16 +21,15 @@
   }
   #title {         
     box-sizing: border-box;
-    width: 970px;
+    width: 1200px;
     height: 100%;
        
-    margin: 0 auto;
-    padding-top: 40px; 
+    margin: 50px auto 0 auto;     
     font-family: SUIT-SemiBold;
     font-size: 36px;
   }          
   #page_body {            
-    height: 900px;
+    height: 1100px;
     background-color: #f5f7fa;
   }  
   #favorite_product_wrap {
@@ -38,15 +37,16 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 970px;
-    height: 850px;
+    padding: 70px 0;
+    width: 1200px;
+    height: 100%;
   }
   .prod_flex {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 300px;
     height: 380px;   
-    margin: 10px; 
+    margin: 50px;
   }
   .prod_img {        
     width: 100%;

@@ -17,27 +17,33 @@
       color: #444c57;
     }
     #header_container {
-      border-bottom: 1px solid #ccc;
-      height: 80px;
       position: relative;      
+      border-bottom: 1px solid #ccc;
     }
+    #header_content {    
+    	position: relative;
+    	margin: 0 auto;
+    	width: 1280px;
+    	height: 80px;    	
+    }    
     #logo_inclusion {
       position: absolute;
       width: 100px;      
-      left: 13%;
+      left: 0; 
     }     
-    #logo {
-      width: 85px; 
-      height: 60px;      
+    #logo {      
+      width: 90px; 
+      height: 65px;            
     }
     #right_content {
       position: absolute;
-      left: 80%;
+      width: 140px;
+      right: 0;      
     }
     #right_bar {            
       width: 200px;      
     }
-    #right_bar li {      
+    #right_bar li {            
       display: inline-block;
       margin: 10px;
     }
@@ -53,11 +59,10 @@
       height: 880px;      
     }
     #main_content{      
+      position: relative;
       margin: 0 auto;
       width: 380px;
       height: 700px;
-
-      position: relative;
     }
     #main {      
       height: 600px;
@@ -159,17 +164,19 @@
 </script>
 	<header>
     	<div id="header_container">
-      		<div id="logo_inclusion">
-		        <a href="<%=request.getContextPath()%>/">
-    		      <img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
-        		</a>
-      		</div>
-      		<div id="right_content">
-	        	<ul id="right_bar">
-          			<li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
-          			<li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
-        		</ul>
-      		</div>
+    		<div id="header_content">
+      			<div id="logo_inclusion">
+		        	<a href="<%=request.getContextPath()%>/">
+    		      	<img src="<%= request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
+        			</a>
+      			</div>
+      			<div id="right_content">
+			    	<ul id="right_bar">
+          				<li><a href="<%=request.getContextPath()%>/member/login">로그인</a></li>
+          				<li><a href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
+        			</ul>
+      			</div>
+    		</div>
     	</div>
  	</header>
   
