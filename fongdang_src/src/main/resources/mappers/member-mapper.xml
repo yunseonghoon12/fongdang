@@ -27,11 +27,8 @@
 	<update id="updateMember" parameterType="Member">
 		update member 
 		<trim prefix="set" suffixOverrides=",">
-			<if test="original_profile != ''">
-				original_profile = #{original_profile},			
-			</if>		
-			<if test="rename_profile != ''">
-				rename_profile = #{rename_profile},			
+			<if test="profile != ''">
+				profile = #{profile},			
 			</if>
 			<if test="password != ''">
 				password = #{password},			

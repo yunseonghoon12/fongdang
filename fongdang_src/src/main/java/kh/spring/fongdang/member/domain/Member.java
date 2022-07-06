@@ -12,8 +12,7 @@ public class Member {
 	private String nickname;
 	private String member_type;
 	private String withdraw;
-	private String original_profile;
-	private String rename_profile;
+	private String profile;
 	private String intro;
 	private String enroll_date;
 	private boolean remember_email;
@@ -21,9 +20,8 @@ public class Member {
 	@Override
 	public String toString() {
 		return "Member [email=" + email + ", name=" + name + ", password=" + password + ", nickname=" + nickname
-				+ ", member_type=" + member_type + ", withdraw=" + withdraw + ", original_profile=" + original_profile
-				+ ", rename_profile=" + rename_profile + ", intro=" + intro + ", enroll_date=" + enroll_date
-				+ ", remember_email=" + remember_email + "]";
+				+ ", member_type=" + member_type + ", withdraw=" + withdraw + ", profile=" + profile + ", intro="
+				+ intro + ", enroll_date=" + enroll_date + ", remember_email=" + remember_email + "]";
 	}
 
 	public String getEmail() {
@@ -74,20 +72,12 @@ public class Member {
 		this.withdraw = withdraw;
 	}
 
-	public String getOriginal_profile() {
-		return original_profile;
+	public String getProfile() {
+		return profile;
 	}
 
-	public void setOriginal_profile(String original_profile) {
-		this.original_profile = original_profile;
-	}
-
-	public String getRename_profile() {
-		return rename_profile;
-	}
-
-	public void setRename_profile(String rename_profile) {
-		this.rename_profile = rename_profile;
+	public void setProfile(String profile) {
+		this.profile = profile;
 	}
 
 	public String getIntro() {
@@ -112,7 +102,6 @@ public class Member {
 
 	public void setRemember_email(boolean remember_email) {
 		this.remember_email = remember_email;
-	}		
-	
+	}
 	
 }

@@ -66,7 +66,7 @@ public class FileUpload {
 	}
 	
 	/* 파일 서버에서 파일 삭제 */
-	public void removeFile(String file) {
+	public void removeFile(String file, HttpServletRequest request) {
 		Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
 				"cloud_name", cloud_name,
 				"api_key", api_key,
@@ -76,9 +76,21 @@ public class FileUpload {
 		String[] file_split = file.split("/");
 		String public_id = file_split[file_split.length - 1].substring(0, file_split[file_split.length - 1].lastIndexOf("."));
 		
+//		String root = request.getSession().getServletContext().getRealPath("resources");
+//		String savePath = root + "\\uploadFiles";
+//		
+//		// 로컬 컴퓨터에서 파일삭제
+//		System.out.println("file before:"+ file);
+//		file = file.substring(file.lastIndexOf("/")+1);
+//		System.out.println("file after :"+ file);
+//		
+//		String filePath = savePath + "\\" + file;
+		
 		try {
-			cloudinary.uploader().destroy(public_id, ObjectUtils.emptyMap());
+			cloudinary.uploader().destroy(public_id, ObjectUtils.emptyMap()); // file delete from cloudinary  
 			
+//			File delFile = new File(filePath);
+//			delFile.delete(); 	// 파일 삭제
 			System.out.println("파일 삭제 성공");
 		} catch (IOException e) {
 			e.printStackTrace();

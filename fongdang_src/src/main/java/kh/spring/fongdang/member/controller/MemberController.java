@@ -124,7 +124,9 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/messagebox", method= RequestMethod.GET)
-	public ModelAndView pageMyMessage(ModelAndView mv
+	public ModelAndView pageMyMessageBox(ModelAndView mv
+//			, HttpServletRequest request
+			, @RequestParam(value="page", defaultValue="nothing") String currentPageStr
 			, HttpSession session) {
 		// 로그인 상태 확인
 		Member authInfo = (Member)session.getAttribute("loginInfo");
@@ -136,13 +138,77 @@ public class MemberController {
 //		TODO: selectMyMessage(), 메이커와 문의한 내역 조회
 		String receiver = authInfo.getEmail();
 		List<Message> result = null;		
-		result = msgService.selectMessage(receiver);				
 		
-		mv.addObject("message", result);
+		
+		int currentPage = 1;		
+		// spring 
+		int messageLimit = 5;
+		
+		
+		try {
+			if(currentPageStr !=null && !currentPageStr.equals("nothing"))
+				currentPage = Integer.parseInt(currentPageStr);
+		}catch (NumberFormatException e) {
+			e.printStackTrace();
+		}		 
+		
+		final int pageSize = 6;  // 한페이지에 보여줄 행
+		final int pageBlock = 3;  // 페이징에 나타날 페이지수
+		int startPage=0;
+		int endPage=0;
+		int startNum=0;
+		int endNum=0;
+		
+		int totalCnt = 0; // 총 글 수
+		totalCnt = msgService.countMyMessage(receiver);
+		System.out.println("\n메시지 총 수 :\t" + totalCnt); 
+		
+		/* Paging 처리 */
+		int totalPageCnt = (totalCnt/pageSize) + (totalCnt%pageSize==0 ? 0 : 1);
+		if(currentPage%pageBlock == 0) {
+			startPage = ((currentPage/pageBlock)-1)*pageBlock + 1;
+		} else {
+			startPage = (currentPage/pageBlock)*pageBlock + 1;
+		}
+		endPage = startPage + pageBlock - 1;
+		if(endPage>totalPageCnt) {
+			endPage = totalPageCnt;
+		}
+		System.out.println("page:"+ startPage +"~"+endPage);
+		
+		/* rownum 처리 */
+		startNum = (currentPage-1)*pageSize + 1;
+		endNum = startNum + pageSize -1;
+		if(endNum>totalCnt) {
+			endNum = totalCnt;
+		}
+		System.out.println("rnum:"+ startNum +"~"+endNum);	
+		
+		
+		result = msgService.selectMessageList(currentPage, messageLimit, receiver);
+		mv.addObject("messageList", result);
+		mv.addObject("startPage", startPage);
+		mv.addObject("endPage", endPage);
+		mv.addObject("currentPage", currentPage);
+		mv.addObject("totalPageCnt", totalPageCnt);
 		mv.setViewName("member/messagebox");
 		return mv;
 	}
 	
+	@RequestMapping(value="/messagebox/msg", method= RequestMethod.GET)
+	public ModelAndView pageMessage(ModelAndView mv
+			, @RequestParam(value="m_no", required=false) String m_no) {
+		Message message = null;		
+		
+		System.out.println("\t\tm_no:\t" + m_no + "\n");
+		
+		
+		message = msgService.selectMessage(m_no);
+		
+		mv.addObject("message", message);
+		mv.setViewName("member/message");
+		return mv;
+	}
 	@RequestMapping(value="/likelist", method= RequestMethod.GET)
 	public ModelAndView pageMyFavorite(ModelAndView mv,
 			HttpSession session) {
@@ -197,8 +263,8 @@ public class MemberController {
 	
 	@RequestMapping(value="/find/email", method=RequestMethod.POST)
 	public ModelAndView selectFindEmail(ModelAndView mv
-			,@RequestParam(value="email", required = false) String email
-			,RedirectAttributes rttr) {
+			, @RequestParam(value="email", required = false) String email
+			, RedirectAttributes rttr) {
 		
 		Member result = null;
 		result = service.selectFindEmail(email);
@@ -276,36 +342,52 @@ public class MemberController {
 	@RequestMapping(value="/update", method= RequestMethod.POST)
 	public ModelAndView updateMember(ModelAndView mv
 			, Member member
-			, @RequestParam(name="uploadfile", required=false) MultipartFile multiFile
+			, @RequestParam(name="profile", required=false) String existProfile
+			, @RequestParam(name="uploadfile", required=false) MultipartFile file
 			, HttpServletRequest req
 			, RedirectAttributes rttr) {
 		int result = 0;
 		
 		System.out.println("\n---------- updateMember() ----------");
-		System.out.println("original_profile:\t" + member.getOriginal_profile());
-		System.out.println("rename_profile:\t" + member.getRename_profile());
+		System.out.println("profile:\t" + member.getProfile());		
 		System.out.println("email:\t\t\t" + member.getEmail());
 		System.out.println("password:\t\t" + member.getPassword());
 		System.out.println("nickname:\t\t" + member.getNickname());
 		System.out.println("intro:\t\t\t" + member.getIntro());
 		System.out.println("------------------------------------");		
 				
-		if(member.getOriginal_profile() == null || member.getOriginal_profile().equals("") ) {
-			if(member.getRename_profile() !=null && !member.getRename_profile().equals("")) {
-				commonfile.removeFile(member.getRename_profile(), req);
-			}
-			member.setOriginal_profile(null);
-			member.setRename_profile(null);			
+//		if(member.getOriginal_profile() == null || member.getOriginal_profile().equals("") ) {
+//			if(member.getRename_profile() !=null && !member.getRename_profile().equals("")) {
+//				commonfile.removeFile(member.getRename_profile(), req);
+//			}
+//			member.setOriginal_profile(null);
+//			member.setRename_profile(null);			
+//		}
+//		if(multiFile != null && multiFile.getOriginalFilename() != null && !multiFile.getOriginalFilename().equals("") ) {
+//			String rename_filename = commonfile.saveFile(multiFile, req);
+//			if(rename_filename != null) {  // 저장 성공하면
+//				if(member.getRename_profile() !=null && !member.getRename_profile().equals("")) {
+//					commonfile.removeFile(member.getRename_profile(), req);
+//				}
+//				member.setOriginal_profile(multiFile.getOriginalFilename());
+//				member.setRename_profile(rename_filename);				
+//			}
+//		}				
+				
+		if(member.getProfile() == null || member.getProfile().equals("")) {			
+			commonfile.removeFile(member.getProfile(), req);			
+			member.setProfile(null);
 		}
-		if(multiFile != null && multiFile.getOriginalFilename() != null && !multiFile.getOriginalFilename().equals("") ) {
-			String rename_filename = commonfile.saveFile(multiFile, req);
-			if(rename_filename != null) {  // 저장 성공하면
-				if(member.getRename_profile() !=null && !member.getRename_profile().equals("")) {
-					commonfile.removeFile(member.getRename_profile(), req);
+		
+		if(file != null && file.getOriginalFilename() != null && !file.getOriginalFilename().equals("")) {
+			String profile = commonfile.saveFile(file, req);
+			if(profile != null) {
+				if(member.getProfile() != null && !member.getProfile().equals("")) {
+					commonfile.removeFile(member.getProfile(), req);
 				}
-				member.setOriginal_profile(multiFile.getOriginalFilename());
-				member.setRename_profile(rename_filename);				
 			}
+			System.out.println("파일 저장 완료!");				
+			member.setProfile(profile);
 		}
 		
 		result = service.updateMember(member);

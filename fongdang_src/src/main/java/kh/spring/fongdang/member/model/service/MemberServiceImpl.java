@@ -33,6 +33,6 @@ public class MemberServiceImpl implements MemberService{
 
 	public Member selectFindEmail(String email) {	
 		return dao.selectFindEmail(email);
-	}
+	}	
 
 }
