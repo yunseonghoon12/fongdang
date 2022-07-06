@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,11 +22,11 @@
     #container {
       position: relative;
       width: 100%;      
-      height: 600px;      
+      height: 800px;      
     }
     #main_content {            
       /* width: 900px; */
-      height: 550px;
+      height: 700px;
       margin: 0 auto;
     }
     #title_content{
@@ -49,11 +50,9 @@
       padding-top: 40px;
     }
 
-    #message_list {                              
-      /* padding-top: 110px; */
+    #message_list {
       margin: 150px auto;
-      width: 900px;          
-      height: 80px;
+      width: 900px;
       font-size: 13px;
       line-height: 40px;
       text-align: center;
@@ -128,25 +127,18 @@
           <th width="150">작성일</th>                   
         </tr>  
         </thead>
-        <tbody>        
-        <tr>
-          <td>홍길동</td>
-          <td>
-            <div class="message_content">
-              상품 재입고는 언제쯤 하나요?
-            </div>
-          </td>
-          <td>2022-07-23</td>          
-        </tr>
-        <tr>
-          <td>홍길동</td>
-          <td>
-            <div class="message_content">
-              상품 교환 문의
-            </div>
-          </td>
-          <td>2022-07-15</td>          
-        </tr>
+        <tbody>
+<c:forEach items="${message}" var="message">
+			<tr>
+          		<td>${message.sender}</td>
+          		<td>
+            		<div class="message_content">
+              			${message.m_content}
+            		</div>
+          		</td>
+          		<td>${message.m_date}</td>          
+        	</tr>
+</c:forEach>          
       </tbody>         
       </table>
     </div>

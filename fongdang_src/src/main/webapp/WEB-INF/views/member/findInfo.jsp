@@ -174,7 +174,7 @@
         소유하고 계신 계정을 입력해보세요.<br>
         가입여부를 확인해드립니다.        </p>
       <form action="#" id="email_form">
-        <div><input type="text" name="" id="input_email" placeholder="이메일 계정"></div>
+        <div><input type="text" name="email" id="input_email" placeholder="이메일 계정"></div>
         <div id="submit_btn_wrap">
           <button type="button" id="submit_btn">확인</button>          
         </div>
@@ -187,7 +187,7 @@
         비밀번호를 이메일로 발송해드립니다.
       </p>
       <form action="#" id="pwd_form">
-        <div><input type="text" name="" id="input_email" placeholder="이메일 계정"></div>
+        <div><input type="text" name="email" id="input_email" placeholder="이메일 계정"></div>
         <div id="submit_btn_wrap">
           <button type="button" id="submit_btn">링크 발송</button>          
         </div>

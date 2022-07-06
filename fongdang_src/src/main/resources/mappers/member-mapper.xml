@@ -11,6 +11,10 @@
 		select * from member where email=#{email}
 	</select>
 	
+	<select id="selectFindEmail" parameterType="string" resultType="Member">
+		select * from member where email = #{email}
+	</select>
+	
 	<insert id="insertMember" parameterType="Member">
 		insert into member(email, name, password, nickname)
 			values(#{email}, #{name}, #{password}, #{nickname})		
