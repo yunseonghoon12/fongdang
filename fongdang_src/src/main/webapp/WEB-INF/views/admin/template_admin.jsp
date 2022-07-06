@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">  
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -105,8 +106,8 @@
       <!-- 관리자 메뉴 -->
       <!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
       <ul>
-        <li><a href="<%=request.getContextPath()%>/admin/" class="main_menu">회원 관리</a></li>
-        <li><a href="#" class="sub_menu">회원 목록</a></li>
+        <li><a href="#" class="main_menu">회원 관리</a></li>
+        <li><a href="#" class="sub_menu">회원 조회</a></li>
         <li><a href="#" class="main_menu">펀딩 관리</a></li>
         <li><a href="#" class="sub_menu">승인 요청목록</a></li>
         <li><a href="#" class="sub_menu">펀딩 일정 관리</a></li>
