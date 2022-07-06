@@ -1,7 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/maker_header.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -13,10 +13,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 </head>
 <body>
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../maker_header.jsp"/>
 <div id="section_page">  
 	<nav id="nav_funding"  >
-	    <div style="border-right: 1px solid #ccc; height:100%">
+	    <div style="border-right: 1px solid #ccc; height:100%" class="ulWrap">
 		    <div id="nav_fundingmeber">
 		
 		         <p id="member_name">${loginInfo.name} 님</p> 

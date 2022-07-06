@@ -1,7 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/maker_header.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -13,18 +13,18 @@
 <title>PRODCUT</title>
 <!-- 제이쿼리 js -->
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
 <script>
 
-$( function() {
+$( document ).ready(function() {
 	
-	$("#start_day").datetimepicker({
+	$("#start_day").datepicker({
 		dateFormat:'yy-mm-dd',
 		monthNamesShort:[ '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월' ],
 		dayNamesMin:[ '일', '월', '화', '수', '목', '금', '토' ],
@@ -72,7 +72,6 @@ $( function() {
 
 	});   
 	
-	
 	function readImage(input) {
 	    // 인풋 태그에 파일이 있는 경우
 	    if(input.files && input.files[0]) {
@@ -93,14 +92,15 @@ $( function() {
 	inputImage.addEventListener("change", e => {
 	    readImage(e.target)
 	})
-});  
+});
+
 </script>
 </head>
 <body>
-<jsp:include page="../header.jsp"/>	
+<jsp:include page="../maker_header.jsp"/>
 	<div id="section_page">
 		<nav id="nav_funding">
-			<div style="border-right: 1px solid #ccc; height: 100%">
+			<div style="border-right: 1px solid #ccc; height: 100%" class="ulWrap">
 				<div id="nav_fundingmeber">
 
 					<p id="member_name">${loginInfo.name}님</p>

@@ -1,4 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/maker_header.css">
@@ -9,11 +10,12 @@
 <html>
 <head>
 <title>maker</title>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
+    
     //다음 카카오 주소찾기 (src="http://dmaps.daum.net/map_js_init/postcode.v2.js) 같이 추가
 $(document).ready(function() {    
     $("#postcode_button").click(function () {
@@ -26,6 +28,7 @@ $(document).ready(function() {
         }).open();
 	});
     
+    //API 사업자등록 번호 확인
    	$("#license_button").click(function () {
 	   	var form = {
 	   		bNo: $("#b_no").val()
@@ -77,13 +80,13 @@ $(document).ready(function() {
 		var phoneVal = $("#maker_phone").val();
 
 		if (!phoneRegEx.test(phoneVal)) {
-			console.log("phone 형식을 바르게 입력해주세요.console");
+			console.log("전화번호 형식을 바르게 입력해주세요.console");
 			phoneChk = true;
-			$("#phone_info").html("phone 형식을 바르게 입력해주세요.");
+			$("#phone_info").html("전화번호 형식을 바르게 입력해주세요.");
 			$("#phone_info").attr('color', 'red');
 		} else {
 			$("#phone_info").html("");
-			console.log("phone 형식 OK");
+			console.log("전화번호 형식 OK");
 			phoneChk = false;
 		}
 	});
@@ -107,14 +110,14 @@ $(document).ready(function() {
 </script> 
 </head>
 <body>
-<jsp:include page="./maker_header.jsp"/>
+<jsp:include page="../maker_header.jsp"/>
 <div id="section_page"> 
   <nav id="nav_funding"  >
     <div style="border-right: 1px solid #ccc; height:100%" class="ulWrap">
 	    <div id="nav_fundingmeber">
 	         <p id="member_name">${loginInfo.name} 님</p> 
 	     </div>
-	     <ul>
+	     <ul> 
 	        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
 	        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
 	        <li><a href="<%= request.getContextPath()%>/option/option.pag"> 펀딩 옵션</a></li>
@@ -123,16 +126,14 @@ $(document).ready(function() {
 	        <!-- <li><a href="#"> 결제 현황</a></li> -->
 	        <li><a href="#"> 정산관리</a></li>
 	      </ul>
+	      
       </div>
    </nav>
 <section id="maker">    
     <div id="maker_all">
         <form name="makerform" action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
-            <!-- <div>
-                <p id="maker_title"> 메이커 정보 </p>
-            </div> -->
-            <table id="maker_Table">
             
+            <table id="maker_Table">
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
                     <td ></td>
@@ -160,8 +161,8 @@ $(document).ready(function() {
                 <tr>
                     <td id="title">문의 이메일<sup>*</sup></td>
                     <td><input type="email" name="maker_email" id="maker_email" placeholder=" 이메일 입력"  class="in_box"  required>
-                        <font id="checkmEmail_info" size="2"></font></td>
-                    <td></td> 
+                        </td>
+                    <td><font id="checkmEmail_info" size="2"></font></td> 
                 </tr>
                 <tr>
                     <td id="title">주소(사업장 주소)<sup>*</sup></td>
@@ -176,8 +177,8 @@ $(document).ready(function() {
                     <td><input type="text" name="maker_register_num" id="b_no"  class="in_box"  required>
                     	<input type="hidden" name="maker_register_num_yn" id="maker_register_num_yn">
                     </td>
-                    <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" ></td>
-                         <font id="phone_info" size="2">
+                    <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" >
+                         <font id="phone_info" size="2"></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록증 사본<sup>*</sup></td>

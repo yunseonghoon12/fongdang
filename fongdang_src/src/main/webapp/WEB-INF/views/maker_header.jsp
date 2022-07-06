@@ -12,7 +12,10 @@
 	<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/button.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+	<script> 
+     $.noConflict(); //이때부터 jQuery는 $ 식별자를 포기하고 jQuery() 를 사용함    
+	var _$ = jQuery 
+    </script> 
 <div class="headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
 		<nav>
@@ -103,11 +106,11 @@
             menuItem.forEach((item) => item.classList.remove('active'));
             target.classList.add('active');
         });
-        $(".form-control").on("click", function () {
-            $(".searchR").show();
+        _$(".form-control").on("click", function () {
+            _$(".searchR").show();
         });
-        $(".header_x").on("click", function () {
-            $(".searchR").hide();
+        _$(".header_x").on("click", function () {
+            _$(".searchR").hide();
         });
     </script>
 	</header>

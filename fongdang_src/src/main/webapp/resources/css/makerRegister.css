@@ -1,42 +1,27 @@
 @charset "UTF-8";
 
-/* 공 통 */
-* {
-	margin: 0 auto;
-	padding: 0;
-}
-
-ul, li {
-	list-style: none;
-}
-/* semantic 구조 맞추기 
+/* semantic 구조 맞추기 */
 body {
 	overflow: hidden;
-} */
-#section_page {
-	z-index: 1;
-}
-
-header {
-	overflow: hidden;
-	position: relative;
-	width: 1280px;
-}
-
+} 
+/* body 부분  */
 #section_page {
 	width: 1200px;
 	display: flex;
 	justify-content: center;
+	margin:0 auto;
 }
-
+#section_page {
+	z-index: 1;
+}
+/* body  목록리스트  */
 #nav_funding {
 	width: 20%;
 }
-
+/* body  본문 */
 #maker {
 	width: 80%;
 }
-
 /* 테이블  감싸는 div */
 section #maker_all {
 	margin: 20px 0px 50px 0px;
@@ -76,6 +61,7 @@ section table#maker_Table {
 	border-spacing: 20px 20px;
 	border-collapse: separate;
 	padding: 30px;
+/*	table-layout: fixed;*/
 }
 /* 버튼 효과 */
 button:hover {
@@ -193,11 +179,12 @@ sup {
 	outline: 0;
 }
 
+/*   */
 .ulWrap {
 	position: relative;
 	top: 71px;
 }
-
+/* 로그인 회원 글자 */
 #member_name {
 	position: relative;
 	left: 150px;
