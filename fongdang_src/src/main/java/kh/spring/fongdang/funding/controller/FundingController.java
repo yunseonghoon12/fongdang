@@ -5,8 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.funding.model.service.FundingService;
 import kh.spring.fongdang.funding.model.service.ProductService;
 
 @Controller
@@ -14,15 +16,23 @@ import kh.spring.fongdang.funding.model.service.ProductService;
 public class FundingController {
 	@Autowired
 	private ProductService service;
+	@Autowired
+	private FundingService fundingService;
 	
 	@GetMapping("/info")
-	public String pageFunding() {
-		return "funding/fundingInfo";
+	public ModelAndView selectFunding(ModelAndView mv, @RequestParam("p_no") int p_no) {
+		mv.addObject("funding", fundingService.selectFunding(p_no));
+		mv.setViewName("funding/fundingInfo");
+		
+		return mv;
 	}
 	
-	@GetMapping("/before/info")
-	public String pageBeforeFunding() {
-		return "funding/beforeFundingInfo";
+	@GetMapping("/info/before")
+	public ModelAndView selectBeforeFunding(ModelAndView mv,  @RequestParam("p_no") int p_no) {
+		mv.addObject("funding", fundingService.selectBeforeFunding(p_no));
+		mv.setViewName("funding/beforeFundingInfo");
+		
+		return mv;
 	}
 	
 	@GetMapping("/list")

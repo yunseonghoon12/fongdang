@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Message">
+	<insert id="insertMessage" parameterType="Message">
+		INSERT INTO message VALUES((SELECT NVL((SELECT MAX(m_no) FROM message), 0) + 1 FROM dual), #{m_content}, #{sender}, #{receiver}, default, default)
+	</insert>
 	
 	<select id="selectMessage" parameterType="string" resultType="Message">
 		SELECT 
 			M_NO, SENDER, M_CONTENT, RECEIVER, M_DATE  
 		FROM MESSAGE where receiver= #{receiver}
 	</select>
-	
-	
-	
-	
 </mapper>

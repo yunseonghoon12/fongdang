@@ -20,9 +20,7 @@ public class MessageDao {
 		return sqlSession.selectList("Message.selectMessageList", receiver, rowBounds);		
 	}
 
-	
-
-	
-	
-	
+	public int insertMessage(Message message) {
+		return sqlSession.insert("Message.insertMessage", message);
+	}
 }

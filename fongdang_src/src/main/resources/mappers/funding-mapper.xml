@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Funding">
+	<resultMap type="Funding" id="FundingResultMap">
+		<result property="p_no" column="p_no"/>
+		<result property="p_name" column="p_name"/>
+		<result property="p_goal" column="p_goal"/>
+		<result property="p_thumbnail" column="p_thumbnail"/>
+		<result property="p_summary" column="p_summary"/>
+		<result property="p_story" column="p_story" jdbcType="CLOB" javaType="java.lang.String"/>
+		<result property="p_certification" column="p_certification"/>
+		<result property="start_day" column="start_day"/>
+		<result property="end_day" column="end_day"/>
+		<result property="payment_plan" column="payment_plan"/>
+		<result property="delivery_date" column="delivery_date"/>
+		<result property="p_approval" column="p_approval"/>
+		<result property="p_report_cnt" column="p_report_cnt"/>
+		<result property="supporter" column="supporter"/>
+		<result property="total_funding_money" column="total_funding_money"/>
+		<result property="p_goal_str" column="p_goal_str"/>
+		<result property="p_goal_percent" column="p_goal_percent"/>
+		<result property="d_day" column="d_day"/>
+		<result property="category_name" column="category_name"/>
+		<result property="maker_logo" column="maker_logo"/>
+		<result property="maker_name" column="maker_name"/>
+		<result property="maker_email" column="maker_email"/>
+		<result property="maker_phone" column="maker_phone"/>
+		<result property="maker_kakao_channel" column="maker_kakao_channel"/>
+		<result property="maker_homepage" column="maker_homepage"/>
+	</resultMap>
+	
+	<select id="selectFunding" parameterType="_int" resultMap="FundingResultMap">
+		SELECT p_no, supporter, TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str, p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day, TO_CHAR(p.end_day, 'YYYY.MM.DD') end_day, TO_CHAR(p.payment_plan, 'YYYY.MM.DD') payment_plan, TO_CHAR(p.delivery_date, 'YYYY.MM.DD') delivery_date, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
+		FROM view_funding_supporter_money JOIN product p USING(p_no)
+        		                          JOIN category c USING(category_id)
+                		                  JOIN maker m USING(maker_name)
+        WHERE p_no = #{p_no}
+	</select>
+	
+	<select id="selectFundingReviewList" parameterType="_int" resultType="Review">
+		SELECT r.r_no, r.p_no, m.profile, r.r_writer, TO_CHAR(r_date, 'YYYY-MM-DD HH24:MI:SS') r_date, r.r_content
+		FROM review r JOIN member m 
+		              ON r.r_writer = m.nickname
+		WHERE p_no = #{p_no}
+		ORDER BY r.r_no DESC
+	</select>
+	
+	<select id="selectBeforeFunding" parameterType="_int" resultMap="FundingResultMap">
+		SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
+		FROM product p JOIN category c USING(category_id)
+		               JOIN maker m USING(maker_name)
+		WHERE p_no = #{p_no}
+	</select>
+</mapper>

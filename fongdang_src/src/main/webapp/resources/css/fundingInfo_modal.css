@@ -12,6 +12,16 @@ select {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
 }
+.modal > .share_content {
+    position: relative;
+    top: 230px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
 .modal > .message_content {
     position: relative;
     top: 150px;
@@ -22,9 +32,9 @@ select {
     padding: 10px;
     font-family: SUIT-Regular;
 }
-.modal > .report_content {
+.modal .report_content {
     position: relative;
-    top: 60px;
+    top: 30px;
     margin: auto;
     width: 300px;
     background-color: #fffaf5;
@@ -46,6 +56,25 @@ select {
     font-family: SUIT-SemiBold;
     color: #5e5e5e;
     font-size: 20px;
+}
+.share_content button {
+    background-color: transparent;
+}
+.share_content .share_way {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.share_content .share_way img {
+    width: 50px;
+}
+.share_content .share_confirm {
+    text-align: center;
+}
+.share_content #btn_share_confirm {
+    font-family: SUIT-Regular;
+    font-size: 15px;
+    color: #9BBFD9;
 }
 .report_content .report_sel {
     text-align: center;
@@ -87,11 +116,27 @@ select {
     margin-left: 10px;
     margin-top: 10px;
 }
+.report_content .report_proof .upload-name {
+	height: 25px;
+	font-family: SUIT-Regular;
+}
+.report_content .report_proof #uploadfile {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
 .report_content .report_proof #btn_proof {
-    height: 25px;
-    width: 70px;
-    margin-left: 10px;
+    padding: 2.5px 6px;
     background-color: #B6E0D6;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: SUIT-Regular;
 }
 .report_content .report_notice {
     margin-top: 20px;

@@ -6,9 +6,8 @@ button {
 }
 
 .funding_header {
-    background-color: aquamarine;
+    background-color: #9bbfd9;
     padding: 60px 0;
-    /* margin-bottom: 30px; */
     text-align: center;
 }
 .funding_header p {
@@ -23,15 +22,13 @@ button {
 }
 
 .funding_content {
-    background-color: blueviolet;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 .funding_info {
     overflow: hidden;
 }
 .left_funding_info {
-    background-color: yellow;
     width: 68%;
     float: left;
     margin-right: 2%;
@@ -43,7 +40,6 @@ button {
 }
 
 .right_funding_info {
-    background-color: yellowgreen;
     width: 30%;
     float: left;
 }
@@ -63,7 +59,7 @@ button {
     margin-bottom: 5px;
     height: 30px;
 }
-#btn_funding_alarm {
+#btn_funding_alarm, #btn_funding_alarm_cancel {
     width: 100%;
     height: 40px;
     background-color: #B6E0D6;
@@ -71,9 +67,9 @@ button {
     color: white;
     margin-bottom: 5px;
 }
-#btn_funding_alarm img {
+#btn_funding_alarm img, #btn_funding_alarm_cancel img {
     width: 30px;
-} 
+}
 #btn_like {
     flex: 1;
     margin-right: 5px;
@@ -89,6 +85,7 @@ button {
     margin-bottom: 30px;
 }
 .funding_open_info {
+	font-family: SUIT-SemiBold;
     font-size: 14px;
     margin: 10px 0;
 }
@@ -129,7 +126,6 @@ button {
 }
 
 .funding_menu {
-    background-color: antiquewhite;
     font-family: SUIT-SemiBold;
     font-size: 24px;
     color: #444C57;

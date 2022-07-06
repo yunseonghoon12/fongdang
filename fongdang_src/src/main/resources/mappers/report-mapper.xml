@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Report">
+	<insert id="insertReport" parameterType="Report">
+		INSERT INTO report VALUES((SELECT NVL((SELECT MAX(report_no) FROM report), 0) + 1 FROM dual), #{email}, #{p_no}, #{report_category}, #{report_content}, #{report_file}, default)
+	</insert>
+	
+	<select id="checkReport" parameterType="Report" resultType="_int">
+		SELECT COUNT(*) FROM report WHERE p_no = #{p_no} AND email = #{email}
+	</select>
+</mapper>

@@ -13,10 +13,12 @@ public class MessageServiceImpl implements MessageService {
 	@Autowired
 	private MessageDao dao;
 	
+	@Override
+	public int insertMessage(Message message) {
+		return dao.insertMessage(message);
+	}
+	
 	public List<Message> selectMessageList(int currentPage, int messageLimit, String receiver) {
 		return dao.selectMessageList(currentPage, messageLimit, receiver);
 	}
-
-	
-
 }

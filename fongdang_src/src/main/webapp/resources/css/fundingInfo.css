@@ -14,7 +14,7 @@ textarea::placeholder {
 }
 
 .funding_header {
-    background-color: aquamarine;
+	background-color: #9bbfd9;
     padding: 60px 0;
     /* margin-bottom: 30px; */
     text-align: center;
@@ -31,15 +31,13 @@ textarea::placeholder {
 }
 
 .funding_content {
-    background-color: blueviolet;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 .funding_info {
     overflow: hidden;
 }
 .left_funding_info {
-    background-color: yellow;
     width: 68%;
     float: left;
     margin-right: 2%;
@@ -90,7 +88,6 @@ textarea::placeholder {
 }
 
 .right_funding_info {
-    background-color: yellowgreen;
     width: 30%;
     float: left;
 }
@@ -181,7 +178,6 @@ textarea::placeholder {
 }
 
 .funding_menu {
-    background-color: antiquewhite;
     font-family: SUIT-SemiBold;
     font-size: 24px;
     color: #444C57;
@@ -230,7 +226,6 @@ textarea::placeholder {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-image: url('../images/user.png');
     background-size: cover;
     background-position: center;
     margin-right: 15px;
