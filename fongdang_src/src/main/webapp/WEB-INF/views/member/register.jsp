@@ -119,7 +119,7 @@
 	<header>
     <div id="header_container">
       <div id="logo_inclusion">
-        <a href="<%=request.getContextPath()%>">
+        <a href="<%=request.getContextPath()%>/">
           <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="logo" id="logo">
         </a>
       </div>

@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link href="<%=request.getContextPath()%>/resources/css/reset.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,12 +20,11 @@
     height: 140px;      
   }
   #title {         
-    /* border: 1px solid red; */
     box-sizing: border-box;
-    width: 350px;
-    height: 100px;
-    margin-left: 18%;   
-    /* margin-left: 350px; */
+    width: 970px;
+    height: 100%;
+       
+    margin: 0 auto;
     padding-top: 40px; 
     font-family: SUIT-SemiBold;
     font-size: 36px;
@@ -34,19 +34,19 @@
     background-color: #f5f7fa;
   }  
   #favorite_product_wrap {
-    /* border: 1px solid red; */
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 1220px;
+    width: 970px;
     height: 850px;
   }
   .prod_flex {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 300px;
-    height: 380px;
-    margin: 20px;
+    height: 380px;   
+    margin: 10px; 
   }
   .prod_img {        
     width: 100%;

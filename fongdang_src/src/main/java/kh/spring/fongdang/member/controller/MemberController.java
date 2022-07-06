@@ -127,6 +127,7 @@ public class MemberController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
+//		TODO: selectMyMessage(), 메이커와 문의한 내역 조회
 		
 		mv.setViewName("member/messagebox");
 		return mv;

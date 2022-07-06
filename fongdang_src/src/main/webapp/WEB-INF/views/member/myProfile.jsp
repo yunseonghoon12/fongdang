@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link href="<%=request.getContextPath()%>/resources/css/reset.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">

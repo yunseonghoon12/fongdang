@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메시지 내역</title>
+<title>퐁당- 메시지</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 <style>
     /* header */
@@ -21,16 +21,20 @@
     #container {
       position: relative;
       width: 100%;      
-      height: 700px;      
+      height: 600px;      
     }
     #main_content {            
-      width: 900px;
-      height: 650px;
+      /* width: 900px; */
+      height: 550px;
       margin: 0 auto;
     }
+    #title_content{
+      border-bottom: 1px solid #ccc;
+    }
     #title_wrap {
-      height: 90px;
-      margin-top: 70px;
+      width: 900px;
+      height: 120px;
+      margin: 40px auto 0 auto;
     }
     #title_wrap > #title {
       font-family: SUIT-SemiBold;
@@ -41,14 +45,14 @@
     #title_wrap > #caption { 
       font-family: SUIT-Regular;     
       font-size: 15px;  
-      font-weight: 2.0em;
       color: #444c57;
       padding-top: 40px;
     }
 
     #message_list {                              
-      margin-top: 110px;
-      width: 850px;          
+      /* padding-top: 110px; */
+      margin: 150px auto;
+      width: 900px;          
       height: 80px;
       font-size: 13px;
       line-height: 40px;
@@ -110,9 +114,11 @@
   <jsp:include page="../header.jsp"/>
   <div id="container">  	
     <div id="main_content">
-      <div id="title_wrap">
-        <p id="title">메시지</p>
-        <p id="caption">메시지는 실시간 채팅이 아닙니다. 주기적으로 페이지를 새로고침하세요.</p>
+      <div id=title_content>
+      	<div id="title_wrap">
+        	<p id="title">메시지</p>
+        	<p id="caption">메시지는 실시간 채팅이 아닙니다. 주기적으로 페이지를 새로고침하세요.</p>
+      	</div>
       </div>
       <table id="message_list">
         <thead>

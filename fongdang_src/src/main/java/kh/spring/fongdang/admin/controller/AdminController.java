@@ -14,7 +14,7 @@ public class AdminController {
 	@Autowired
 	private AdminServiceImpl service;
 	
-	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
+	@RequestMapping(value="/", method= RequestMethod.GET)
 	ModelAndView pageMemberManagement(ModelAndView mv) {
 		mv.setViewName("admin/memberManagement");
 		return mv;

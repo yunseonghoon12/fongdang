@@ -13,13 +13,14 @@
       /* DropOutUser */
     #container {      
      width: 100%;
-     height: 1000px;      
+     height: 850px;     
+     margin-top: 100px; 
     }
     #main_content {
       width: 700px;
       height: 800px;
       margin: 0 auto;
-      padding-top: 50px;
+      
     }
     #main_content > h1 {
       font-family: SUIT-SemiBold;
@@ -44,11 +45,12 @@
     }
     #attention_list {      
       /* border: 1px solid red;       */
-      margin-top: 20px;
-      height: 450px;
+      margin: 20px 0;
+      height: 400px;
     }
     #attention_list li {
       border-top: 1px solid #ccc;
+      margin: 10px 0;
     }
     #attention_list li:last-child {
       border-bottom: 1px solid #ccc;
@@ -86,7 +88,9 @@
    </style>
 </head>
 <body>
-	<header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header>
+	<!-- <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header> -->
+	<jsp:include page="../header.jsp"/>
+	
   	<div id="container">
 	    <div id="main_content">
       		<h1>회원 탈퇴</h1>
@@ -126,7 +130,7 @@
           			</li>
         		</ul>
         		<form action="<%=request.getContextPath()%>/member/withdraw" method="POST" id="withdrawFrm">
-	          		<div>
+	          		<div style="margin-top: 20px;">
             			<input type="checkbox" name="agree" id="agree" value="true"><span id="chk_agree">상기 퐁당 탈퇴 시 유의 사항을 확인하였습니다.</span>                  
           			</div>    
           			<input type="hidden" name="email" value="${loginInfo.email}">      
@@ -136,7 +140,8 @@
       		</div>
     	</div>
   	</div>
-  	<footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer>
+  	<!-- <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer> -->
+  	<jsp:include page="../footer.jsp"/>
 
 	
 	<script>
