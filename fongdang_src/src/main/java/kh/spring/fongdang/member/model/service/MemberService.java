@@ -14,6 +14,8 @@ public interface MemberService {
 	public int updateMember(Member member);
 	/* 회원 탈퇴 여부 수정 */
 	public int withdrawMember(String email);
+	/* 이메일 조회 */
+	public Member selectFindEmail(String email);
 	
 	
 }

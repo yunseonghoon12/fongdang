@@ -1,5 +1,8 @@
 package kh.spring.fongdang.member.controller;
 
+
+import java.util.List;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,10 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.member.model.service.MemberServiceImpl;
+import kh.spring.fongdang.message.domain.Message;
+import kh.spring.fongdang.message.model.service.MessageServiceImpl;
 import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.member.domain.Member;
 
@@ -27,6 +29,8 @@ import kh.spring.fongdang.member.domain.Member;
 public class MemberController {
 	@Autowired
 	private MemberServiceImpl service;
+	@Autowired
+	private MessageServiceImpl msgService;
 	@Autowired 
 	private FileUpload commonfile; 
 	
@@ -69,10 +73,11 @@ public class MemberController {
 		Member authInfo = (Member)session.getAttribute("loginInfo");
 		System.out.println("[session_authInfo]\n\t" + authInfo);
 		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
+			System.out.println("\n현재 로그아웃 상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
+		
 		String email = authInfo.getEmail();		
 		Member member = service.selectMember(email);		
 		
@@ -88,10 +93,11 @@ public class MemberController {
 		Member authInfo = (Member)session.getAttribute("loginInfo");		
 		
 		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
+			System.out.println("\n현재 로그아웃 상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}		
+		
 		String email = authInfo.getEmail();		
 		Member member = service.selectMember(email);		
 		/*
@@ -108,7 +114,7 @@ public class MemberController {
 		// 로그인 상태 확인
 		Member authInfo = (Member)session.getAttribute("loginInfo");
 		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
+			System.out.println("\n현재 로그아웃 상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
@@ -123,12 +129,16 @@ public class MemberController {
 		// 로그인 상태 확인
 		Member authInfo = (Member)session.getAttribute("loginInfo");
 		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
+			System.out.println("\n현재 로그아웃 상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
 //		TODO: selectMyMessage(), 메이커와 문의한 내역 조회
+		String receiver = authInfo.getEmail();
+		List<Message> result = null;		
+		result = msgService.selectMessage(receiver);				
 		
+		mv.addObject("message", result);
 		mv.setViewName("member/messagebox");
 		return mv;
 	}
@@ -139,7 +149,7 @@ public class MemberController {
 		// 로그인 상태 확인
 		Member authInfo = (Member)session.getAttribute("loginInfo");
 		if(authInfo == null) {
-			System.out.println("\n로그아웃상태입니다.");
+			System.out.println("\n현재 로그아웃 상태입니다.");
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
@@ -183,6 +193,32 @@ public class MemberController {
 		session.invalidate();
 //		TODO: 메인화면으로 url 지정하기 6.28_yjk
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value="/find/email", method=RequestMethod.POST)
+	public ModelAndView selectFindEmail(ModelAndView mv
+			,@RequestParam(value="email", required = false) String email
+			,RedirectAttributes rttr) {
+		
+		Member result = null;
+		result = service.selectFindEmail(email);
+		
+		if(result == null) {
+			System.out.println("이메일 찾기에 실패하였습니다.");
+			rttr.addFlashAttribute("msg", "이메일 찾기에 실패하였습니다.");
+			mv.setViewName("redirect:/member/findInfo");
+			return mv;
+		}
+//		mv.addObject("findInfo", result);
+//		mv.setViewName("redirect:/");
+		return mv;
+	}
+	
+	@RequestMapping(value="/find/password", method=RequestMethod.POST)
+	public ModelAndView selectFindPwd(ModelAndView mv) {
+		
+		mv.setViewName("");
+		return mv;
 	}
 	
 	@RequestMapping(value="/register.do", method= RequestMethod.POST)

@@ -31,4 +31,8 @@ public class MemberServiceImpl implements MemberService{
 		return dao.updateMember(member);
 	}
 
+	public Member selectFindEmail(String email) {	
+		return dao.selectFindEmail(email);
+	}
+
 }

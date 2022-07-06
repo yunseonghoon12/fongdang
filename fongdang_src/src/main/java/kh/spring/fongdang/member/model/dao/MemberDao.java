@@ -31,5 +31,9 @@ public class MemberDao {
 		return sqlSession.update("Member.updateMember", member);
 	}
 
+	public Member selectFindEmail(String email) {
+		return sqlSession.selectOne("Member.selectFindEmail", email);
+	}
+
 	
 }
