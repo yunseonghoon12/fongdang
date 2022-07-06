@@ -384,3 +384,12 @@ ALTER TABLE "PAY" ADD CONSTRAINT FK_MEMBER_TO_PAY_1 FOREIGN KEY (
 REFERENCES "MEMBER" (
 	email
 ) ON DELETE CASCADE;
+
+-- 서포터 수와, 누적 펀딩액을 알기 위한 view 생성
+CREATE OR REPLACE VIEW view_funding_supporter_money 
+AS
+    SELECT p_no, COUNT(DISTINCT email) supporter, NVL(SUM(total_price), 0) total_funding_money
+    FROM product
+        LEFT OUTER JOIN "ORDER" USING(p_no)
+        LEFT OUTER JOIN member USING(email)
+    GROUP BY p_no;
