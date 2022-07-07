@@ -485,9 +485,9 @@ label.right {
 }
 
 .section03_img {
-	position: relative;
+	position: absolute;
 	border-radius: 10px;
-	top: -354px;
+	top: 1538px;
 	z-index: -1;
 	cursor: pointer;
 	opacity: 0;

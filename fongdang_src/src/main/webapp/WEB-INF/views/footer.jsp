@@ -4,6 +4,7 @@
 <style>
 footer {
 	background-color: rgba(178, 176, 176, 0.427);
+	vertical-align: bottom;
 }
 
 .footerWrap {

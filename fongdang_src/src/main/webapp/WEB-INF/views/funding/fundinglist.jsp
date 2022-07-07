@@ -8,8 +8,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>제목</title>
+<title>펀딩 리스트</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
 <style>
 body {
 	font-family: SUIT-Regular;
@@ -125,7 +127,8 @@ body {
 
 #cateSelect {
 	position: relative;
-	left: 150px; border-radius : 5px;
+	left: 150px;
+	border-radius: 5px;
 	width: 100px;
 	height: 30px;
 	border-color: #b7b6b6cc;
@@ -152,7 +155,7 @@ a {
 	margin: 0 auto;
 	padding: 10px;
 	position: relative;
-    left: 70;
+	left: 70px;
 }
 
 .imglist_ul>li {
@@ -262,6 +265,27 @@ a {
 	font-size: 19px;
 	line-height: 18px;
 }
+
+a#topBtn {
+	position: fixed;
+	right: 4%;
+	bottom: 14%;
+	display: none;
+	z-index: 9999;
+}
+
+.topImg {
+	width: 100px;
+}
+
+.moreView {
+	justify-content: center;
+	align-items: center;
+	margin: 30px auto;
+	width: 500px;
+	text-align: center;
+	height: 50px;
+}
 </style>
 </head>
 
@@ -350,7 +374,7 @@ a {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${allProducts}" var="product">
-					<li><a href="#">
+					<li class="itemsWrap"><a href="#">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">
@@ -362,7 +386,49 @@ a {
 			</ul>
 			<hr style="border-style: outset; margin-bottom: 10px;">
 		</div>
+		<a id="topBtn" href="#"> <img
+			src="<%=request.getContextPath()%>/resources/images/up.png"
+			class="topImg">
+		</a>
 	</div>
+	<button class="moreView btn btn-fill-fcolor"
+		style="display: flex; font-size: 20px;">상품 더보기</button>
+
+
+
+	<script>
+		$(function() {
+
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 250) {
+					$('#topBtn').fadeIn();
+				} else {
+					$('#topBtn').fadeOut();
+				}
+			});
+			$("#topBtn").click(function() {
+				$('html, body').animate({
+					scrollTop : 0
+				}, 400);
+				return false;
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$(".itemsWrap").hide();
+			$(".itemsWrap").slice(0, 12).show();
+
+			$(".moreView").click(function() {
+				$(".itemsWrap:hidden").slice(0, 12).show();
+				if ($(".itemsWrap:hidden").length == 0) {
+					alert("더 이상 항목이 없습니다");
+
+				}
+				;
+			});
+		});
+	</script>
 	<jsp:include page="../footer.jsp" />
 </body>
 

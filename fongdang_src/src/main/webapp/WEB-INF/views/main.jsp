@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Document</title>
+
 <style>
 body {
 	font-family: SUIT-Regular;
@@ -40,7 +41,7 @@ il, ul {
 					<li class="slideitem">
 						<div>
 							<label for="slide04" class="left"></label> <label for="slide02"
-								class="right"></label> <a href="#"><img
+								class="right"></label> <a href="#section03" class="goBbottom"><img
 								src="<%=request.getContextPath()%>/resources/images/main01.gif" /></a>
 						</div>
 					</li>
@@ -194,7 +195,7 @@ il, ul {
 			<div class="top3 margin"></div>
 		</div>
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">
-		<div class="section03">
+		<div class="section03" id="section03">
 
 			<div class="apply01">
 				<p>퐁당에서 프로젝트 오픈하기</p>
@@ -203,12 +204,10 @@ il, ul {
 					응원합니다.</p>
 			</div>
 			<div class="apply02">
-				<button class="btn btn-fill-fcolor">신청하기</button>
+				<a href="<%=request.getContextPath()%>/maker/Register"><button class="btn btn-fill-fcolor">신청하기</button></a>
 			</div>
-			<img src="<%=request.getContextPath()%>/resources/images/main02.gif"
-				class="section03_img">
-
-
+			<img src="<%=request.getContextPath()%>/resources/images/main03.gif"
+				class="section03_img" style="filter:blur(0.5px);">
 		</div>
 	</div>
 	<jsp:include page="./footer.jsp" />

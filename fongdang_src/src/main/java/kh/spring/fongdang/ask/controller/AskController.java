@@ -16,5 +16,9 @@ public class AskController {
 	public String pageAsk() {
 		return "customerCenter/ask";
 	}
+	@GetMapping("/doAsk")
+	public String pagedoAsk() {
+		return "customerCenter/doAsk";
+	}
 
 }

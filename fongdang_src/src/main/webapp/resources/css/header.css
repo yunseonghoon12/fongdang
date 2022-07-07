@@ -114,7 +114,6 @@ header.site__header {
 	transition: all 0.25s cubic-bezier(0.42, 0, 0, 1);
 	padding: 0 1rem;
 	z-index: 1;
-	user-select: none;
 }
 
 .site__header .menu2>li>a {

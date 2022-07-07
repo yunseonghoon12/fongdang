@@ -43,8 +43,10 @@ public class FundingController {
 	
 	}
 	@GetMapping("/beforelist")
-	public String pageBeforeFundinglist() {
-		return "funding/beforeFundinglist";
+	public ModelAndView main(ModelAndView mv) {
+		mv.addObject("preProducts",service.selectPreProducts());
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
 	}
 	
 }

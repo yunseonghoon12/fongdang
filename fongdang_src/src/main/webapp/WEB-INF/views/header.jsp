@@ -19,7 +19,7 @@
 				src="<%=request.getContextPath()%>/resources/images/logo.png"
 				id="logo"></a>
 			<ul class="menu" style="position: relative;">
-				<li><a href="#">펀딩예정</a></li>
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist">펀딩예정</a></li>
 				<li><a href="<%=request.getContextPath()%>/funding/list">펀딩상품</a></li>
 				<li><a href="#">고객센터</a>
 					<ul class="dep2">
@@ -77,7 +77,7 @@
 						class="header_loginImg"> --%></a></li>
 					<c:if test="${!empty loginInfo}">
 						<c:if test="${loginInfo.name ne '관리자'}">
-							<li style="top: 10px;"><a href="#" id="">내정보<%-- <img
+							<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보<%-- <img
 							src="<%=request.getContextPath()%>/resources/images/mypage.png"
 							class="header_loginImg"> --%></a></li>
 						</c:if>
