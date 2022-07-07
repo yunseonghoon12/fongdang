@@ -58,6 +58,7 @@ public class FileUpload {
 			System.out.println("이미지 이름 : " + uploadResult.get("public_id"));
 			
 			rename_filename = (String) uploadResult.get("url"); // 파일이 업로드 된 주소
+			new File(filePath).delete();
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
 		}
