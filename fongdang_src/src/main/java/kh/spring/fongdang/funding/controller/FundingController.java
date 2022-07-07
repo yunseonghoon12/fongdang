@@ -37,16 +37,16 @@ public class FundingController {
 	
 	@GetMapping("/list")
 	public ModelAndView fundinglist(ModelAndView mv) {
-		mv.addObject("allProducts",service.selectAllProducts());
+		mv.addObject("allProducts",fundingService.selectAllProducts());
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	
 	}
 	@GetMapping("/beforelist")
 	public ModelAndView main(ModelAndView mv) {
-		mv.addObject("preProducts",service.selectPreProducts());
+		mv.addObject("preProducts",fundingService.selectPreProducts());
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
-	
+	 
 }

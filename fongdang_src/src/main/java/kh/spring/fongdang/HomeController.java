@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import kh.spring.fongdang.funding.model.service.ProductService;
+import kh.spring.fongdang.funding.model.service.FundingService;
 
 /**
  * Handles requests for the application home page.
@@ -15,7 +15,7 @@ import kh.spring.fongdang.funding.model.service.ProductService;
 @Controller
 public class HomeController {
 	@Autowired
-	private ProductService service;
+	private FundingService service;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView main(ModelAndView mv) {

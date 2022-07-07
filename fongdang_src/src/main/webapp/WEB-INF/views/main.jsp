@@ -207,7 +207,7 @@ il, ul {
 				<a href="<%=request.getContextPath()%>/maker/Register"><button class="btn btn-fill-fcolor">신청하기</button></a>
 			</div>
 			<img src="<%=request.getContextPath()%>/resources/images/main03.gif"
-				class="section03_img" style="filter:blur(0.5px);">
+				class="section03_img">
 		</div>
 	</div>
 	<jsp:include page="./footer.jsp" />

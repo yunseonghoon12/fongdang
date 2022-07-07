@@ -17,22 +17,5 @@ public class ProductDao {
 // 상품 등록 (insert)	
 	public int insertProduct(Product product) {
 		return sqlSession.insert("Product.insertProduct",product);
-	}
-	
-	
-//	오픈 전 상품 N개 불러오기
-	public List<Product> selectPreProducts(int n) {
-		return sqlSession.selectList("Product.selectPreProducts",null,new RowBounds(0,n));
-	}
-//	오픈 전 상품 전부 불러오기
-	public List<Product> selectPreProducts() {
-		return sqlSession.selectList("Product.selectPreProducts");
-	}
-
-// 상품 리스트 전부 불러오기
-	public List<Product> selectAllProducts() {
-		return sqlSession.selectList("Product.selectAllProducts");
-	}
-	 
-	
+	}	
 }
