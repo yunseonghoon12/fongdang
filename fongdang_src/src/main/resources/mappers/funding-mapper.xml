@@ -51,4 +51,22 @@
 		               JOIN maker m USING(maker_name)
 		WHERE p_no = #{p_no}
 	</select>
+
+	<select id="selectPreProducts" parameterType="_int"
+		resultType="Funding">
+<![CDATA[
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	where start_day > sysdate
+	order by start_day asc
+]]>
+	</select>
+
+	<select id="selectAllProducts" resultType="Funding">
+<![CDATA[
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	where start_day < sysdate
+	order by start_day asc
+]]>
+	</select>
+
 </mapper>

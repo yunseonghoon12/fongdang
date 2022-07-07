@@ -27,17 +27,17 @@ public class FundingDao {
 	}
 	
 //	오픈 전 상품 N개 불러오기
-	public List<Product> selectPreProducts(int n) {
-		return session.selectList("Product.selectPreProducts",null,new RowBounds(0,n));
+	public List<Funding> selectPreProducts(int n) {
+		return session.selectList("Funding.selectPreProducts",null,new RowBounds(0,n));
 	}
 //	오픈 전 상품 전부 불러오기
-	public List<Product> selectPreProducts() {
-		return session.selectList("Product.selectPreProducts");
+	public List<Funding> selectPreProducts() {
+		return session.selectList("Funding.selectPreProducts");
 	}
 
 // 상품 리스트 전부 불러오기
-	public List<Product> selectAllProducts() {
-		return session.selectList("Product.selectAllProducts");
+	public List<Funding> selectAllProducts() {
+		return session.selectList("Funding.selectAllProducts");
 	}
 	
 }

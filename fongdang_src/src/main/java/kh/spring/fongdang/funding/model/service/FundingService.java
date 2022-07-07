@@ -13,10 +13,10 @@ public interface FundingService {
 	public Funding selectBeforeFunding(int p_no);
 	
 	/* 펀딩 예정 상품 N개 불러오기*/
-	public List<Product> selectPreProducts(int n);
+	public List<Funding> selectPreProducts(int n);
 	/* 펀딩 예정 상품 불러오기*/
-	public List<Product> selectPreProducts();
+	public List<Funding> selectPreProducts();
 	
 	/* 펀딩 상품 불러오기*/
-	public List<Product> selectAllProducts();
+	public List<Funding> selectAllProducts();
 }

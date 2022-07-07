@@ -25,17 +25,17 @@ public class FundingServiceImpl implements FundingService {
 	}
 
 	@Override
-	public List<Product> selectPreProducts(int n) {
+	public List<Funding> selectPreProducts(int n) {
 		return dao.selectPreProducts(n);
 	}
 
 	@Override
-	public List<Product> selectAllProducts() {
+	public List<Funding> selectAllProducts() {
 		return dao.selectAllProducts();
 	}
 
 	@Override
-	public List<Product> selectPreProducts() {
+	public List<Funding> selectPreProducts() {
 		return dao.selectPreProducts();
 	}
 
