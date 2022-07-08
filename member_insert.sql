@@ -1,76 +1,354 @@
+SET DEFINE OFF
 
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('admin', '관리자', 'admin', '관리자', 'A', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.802000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
--- member insert문
-set define off;
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('aaa@aaa.com', '홍길동', 'aaa001', '홍길동', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.817000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname, member_type) values('admin', '관리자', 'admin', '관리자', 'A');
-insert into member(email, name, password, nickname) values('aaa@aaa.com', '홍길동', 'aaa001', '홍길동');
-insert into member(email, name, password, nickname) values('zya@zya.com', '안지영', 'zya002', '볼빨간사춘기');
-insert into member(email, name, password, nickname) values('sjp@sjp.com', '박서준', 'sjp003', '쏜절친');
-insert into member(email, name, password, nickname) values('wsc@wsc.com', '최우식', 'wsc004', '최우서');
-insert into member(email, name, password, nickname) values('dmk@dmk.com', '김다미', 'dmk005', '마녀여주');
-insert into member(email, name, password, nickname) values('gek@bbb.com', '김고은', 'gek006', '치인트여주');
-insert into member(email, name, password, nickname) values('mjk@mjk.com', '김민준', 'mjk007', '민둥민둥');
-insert into member(email, name, password, nickname) values('shl@shl.com', '이서연', 'shl008', '잇어연');
-insert into member(email, name, password, nickname) values('syl@syl.com', '이수영', 'syl009', '수영국대');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('zya@zya.com', '안지영', 'zya002', '볼빨간사춘기', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.833000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname) values('tlk@tlk.com', '김태리', 'tlk010', '태리태리');
-insert into member(email, name, password, nickname) values('jhn@jhn.com', '남주혁', 'jhn011', '스타트업남주');
-insert into member(email, name, password, nickname) values('myp@myp.com', '박민영', 'myp012', '존예민영');
-insert into member(email, name, password, nickname) values('hdn@hdn.com', '나희도', 'hdn013', '펜싱부에이스');
-insert into member(email, name, password, nickname) values('ejb@ejb.com', '백이진', 'ejb014', '만화방알바생');
-insert into member(email, name, password, nickname) values('yrk@yrk.com', '고유림', 'yrk015', '우주소녀연기자');
-insert into member(email, name, password, nickname) values('jwm@jwm.com', '문지웅', 'jwm016', '문지방찧기');
-insert into member(email, name, password, nickname) values('swj@swj.com', '지승완', 'swj017', 'DJ완승');
-insert into member(email, name, password, nickname) values('jml@jml.com', '이주명', 'jml018', 'YG존예배우');
-insert into member(email, name, password, nickname) values('jks@jks.com', '신재경', 'jks019', '보도국장');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('sjp@sjp.com', '박서준', 'sjp003', '쏜절친', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.849000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname) values('dsn@dsn.com', '남도산', 'dsn020', 'SW엔지니어');
-insert into member(email, name, password, nickname) values('dms@dms.com', '서달미', 'dms021', '경력직신입');
-insert into member(email, name, password, nickname) values('jph@jph.com', '한지평', 'jph022', 'SH캐피탈팀장');
-insert into member(email, name, password, nickname) values('hnk@hnk.com', '강한나', 'hnk023', '한나강');
-insert into member(email, name, password, nickname) values('csl@csl.com', '이철산', 'csl024', '매생이집둘째');
-insert into member(email, name, password, nickname) values('dwk@dwk.com', '김도완', 'dwk025', '완도산김');
-insert into member(email, name, password, nickname) values('ysk@ysk.com', '김용산', 'ysk026', '도철산듀오리더');
-insert into member(email, name, password, nickname) values('kws@kws.com', '송강우', 'kws027', '강우주의보');
-insert into member(email, name, password, nickname) values('dongwonkang@dwk.com', '강동원', 'dwk028', '동원훈련엔참치');
-insert into member(email, name, password, nickname) values('jel@jel.com', '이지은', 'jel029', '이렇게좋은날');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wsc@wsc.com', '최우식', 'wsc004', '최우서', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.865000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname) values('jyl@jyl.com', '이주영', 'jyl030', '라이징스타');
-insert into member(email, name, password, nickname) values('dsl@dsl.com', '이동석', 'dsl031', '트럭만물상');
-insert into member(email, name, password, nickname) values('sam@sam.com', '민선아', 'sam032', '서울태생주부');
-insert into member(email, name, password, nickname) values('hsc@hsc.com', '최한수', 'hsc033', '푸를은행지점장');
-insert into member(email, name, password, nickname) values('ehj@ehj.com', '정은희', 'ehj034', '흥많은장사꾼');
-insert into member(email, name, password, nickname) values('jmh@jmh.com', '한지민', 'jmh035', '한지민');
-insert into member(email, name, password, nickname) values('yol@yol.com', '이영옥', 'yol036', '애기해녀');
-insert into member(email, name, password, nickname) values('wbk@wbk.com', '김우빈', 'wbk037', '김우박');
-insert into member(email, name, password, nickname) values('jjp@jjp.com', '박정준', 'jjp038', '청년선장');
-insert into member(email, name, password, nickname) values('mrk@mrk.com', '고미란', 'mrk039', '미란다');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dmk@dmk.com', '김다미', 'dmk005', '마녀여주', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.881000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname) values('jhp@jhp.com', '박지환', 'jhp040', '매력있는배우');
-insert into member(email, name, password, nickname) values('yjc@yjc.com', '최영준', 'yjc041', '발넒은배우');
-insert into member(email, name, password, nickname) values('hsb@hsb.com', '배현성', 'hsb042', '전교2등학생');
-insert into member(email, name, password, nickname) values('ysb@ysb.com', '배윤서', 'ysb043', '전교3등학생');
-insert into member(email, name, password, nickname) values('sgs@sgs.com', '손석구', 'sgs044', '차도남구씨');
-insert into member(email, name, password, nickname) values('mjy@mjy.com', '염미정', 'mjy045', '아직미정');
-insert into member(email, name, password, nickname) values('jwk@jwk.com', '김지원', 'jwk046', '배우지원');
-insert into member(email, name, password, nickname) values('sdm@sdm.com', '마석도', 'sdm047', '도마위의석도');
-insert into member(email, name, password, nickname) values('hsk@hsk.com', '강해상', 'hsk048', '과거의구씨');
-insert into member(email, name, password, nickname) values('imj@imj.com', '전일만', 'imj049', '10분만더자요');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('gek@bbb.com', '김고은', 'gek006', '치인트여주', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.896000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
 
-insert into member(email, name, password, nickname) values('ebp@ebp.com', '박은빈', 'ebp050', '상냥한은빈쌤');
-insert into member(email, name, password, nickname) values('sas@sas.com', '신시아', 'sas051', '마녀시즌2여주');
-insert into member(email, name, password, nickname) values('eunsus@ess.com', '서은수', 'eunsus052', '22년라이징스타');
-insert into member(email, name, password, nickname) values('zingu@zingu.com', '진구', 'zingu053', '진또배기연기란');
-insert into member(email, name, password, nickname) values('jsl@naver.com', '이종석', 'jsl054', '주먹만한얼굴');
-insert into member(email, name, password, nickname) values('yeonsu1125@ysk.com', '구연수', 'yeonsu055', '국수달인');
-insert into member(email, name, password, nickname) values('choe123@choe.com', '최웅', 'choe056', '일러스트레이터');
-insert into member(email, name, password, nickname) values('jieung@gmail.com', '김지웅', 'jieung057', '방송국PD');
-insert into member(email, name, password, nickname) values('hwj5095@naver.com', '전혜원', 'hwj058', '작가만10년');
-insert into member(email, name, password, nickname) values('jinzu5959@naver.com', '박진주', 'jinzu059', '술집사장님');
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('mjk@mjk.com', '김민준', 'mjk007', '민둥민둥', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.912000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('shl@shl.com', '이서연', 'shl008', '잇어연', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.927000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('syl@syl.com', '이수영', 'syl009', '수영국대', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.942000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tlk@tlk.com', '김태리', 'tlk010', '태리태리', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.958000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jhn@jhn.com', '남주혁', 'jhn011', '스타트업남주', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.973000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('myp@myp.com', '박민영', 'myp012', '존예민영', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:43.988000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hdn@hdn.com', '나희도', 'hdn013', '펜싱부에이스', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.004000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ejb@ejb.com', '백이진', 'ejb014', '만화방알바생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.020000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('yrk@yrk.com', '고유림', 'yrk015', '우주소녀연기자', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.036000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jwm@jwm.com', '문지웅', 'jwm016', '문지방찧기', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.051000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('swj@swj.com', '지승완', 'swj017', 'DJ완승', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.067000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jml@jml.com', '이주명', 'jml018', 'YG존예배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.083000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jks@jks.com', '신재경', 'jks019', '보도국장', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.100000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dsn@dsn.com', '남도산', 'dsn020', 'SW엔지니어', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.115000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dms@dms.com', '서달미', 'dms021', '경력직신입', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.131000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jph@jph.com', '한지평', 'jph022', 'SH캐피탈팀장', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.147000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hnk@hnk.com', '강한나', 'hnk023', '한나강', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.163000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('csl@csl.com', '이철산', 'csl024', '매생이집둘째', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.178000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dwk@dwk.com', '김도완', 'dwk025', '완도산김', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.193000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ysk@ysk.com', '김용산', 'ysk026', '도철산듀오리더', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.209000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('kws@kws.com', '송강우', 'kws027', '강우주의보', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.224000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dongwonkang@dwk.com', '강동원', 'dwk028', '동원훈련엔참치', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.239000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jel@jel.com', '이지은', 'jel029', '이렇게좋은날', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.255000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jyl@jyl.com', '이주영', 'jyl030', '라이징스타', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.270000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dsl@dsl.com', '이동석', 'dsl031', '트럭만물상', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.286000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('sam@sam.com', '민선아', 'sam032', '서울태생주부', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.302000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hsc@hsc.com', '최한수', 'hsc033', '푸를은행지점장', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.317000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ehj@ehj.com', '정은희', 'ehj034', '흥많은장사꾼', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.334000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jmh@jmh.com', '한지민', 'jmh035', '한지민', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.349000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('yol@yol.com', '이영옥', 'yol036', '애기해녀', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.363000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wbk@wbk.com', '김우빈', 'wbk037', '김우박', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.379000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jjp@jjp.com', '박정준', 'jjp038', '청년선장', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.395000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('mrk@mrk.com', '고미란', 'mrk039', '미란다', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.411000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jhp@jhp.com', '박지환', 'jhp040', '매력있는배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.427000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('yjc@yjc.com', '최영준', 'yjc041', '발넒은배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.442000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hsb@hsb.com', '배현성', 'hsb042', '전교2등학생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.458000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ysb@ysb.com', '배윤서', 'ysb043', '전교3등학생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.473000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('sgs@sgs.com', '손석구', 'sgs044', '차도남구씨', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.490000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('mjy@mjy.com', '염미정', 'mjy045', '아직미정', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.505000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jwk@jwk.com', '김지원', 'jwk046', '배우지원', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.521000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('sdm@sdm.com', '마석도', 'sdm047', '도마위의석도', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.536000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hsk@hsk.com', '강해상', 'hsk048', '과거의구씨', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.552000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('imj@imj.com', '전일만', 'imj049', '10분만더자요', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.567000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ebp@ebp.com', '박은빈', 'ebp050', '상냥한은빈쌤', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.584000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('sas@sas.com', '신시아', 'sas051', '마녀시즌2여주', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.599000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('eunsus@ess.com', '서은수', 'eunsus052', '22년라이징스타', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.613000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('zingu@zingu.com', '진구', 'zingu053', '진또배기연기란', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.629000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jsl@naver.com', '이종석', 'jsl054', '주먹만한얼굴', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.645000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('yeonsu1125@ysk.com', '구연수', 'yeonsu055', '국수달인', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.662000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('choe123@choe.com', '최웅', 'choe056', '일러스트레이터', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.677000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jieung@gmail.com', '김지웅', 'jieung057', '방송국PD', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.693000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('hwj5095@naver.com', '전혜원', 'hwj058', '작가만10년', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.709000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('jinzu5959@naver.com', '박진주', 'jinzu059', '술집사장님', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dltjswn@naver.com', '이선주 ', 'dltjswn060', '이작가', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dlalfk@naver.com', '이미라', 'dlalfk061', '미작사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dlwjdgml@naver.com', '이정희', 'dlwjd062', '초코파이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('gkwjdgk@dkfnm.com', '하정하', 'gkwjd063', '하수도', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('gkalsdn@nad.com', '하민우', 'gkals064', '하작가', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('rlawlsdn@nav.com', '김진우', 'rlawls065', '핑크우유', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('rlaruddo@nad.com', '김경애', 'rlarud066', '애주가 ', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('altnr@altnr.com', '김미숙', 'altnr067', '숙자야', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('thdud@thdud.com', '박소영', 'thdud068', '또영이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wldud@wldud.com', '박지영', 'wldud069', '띠영이 ', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tnsdo@tnsdo.com', '박순애', 'tnsdo070', '애국가', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wlsk@wlsk.com', '이지나', 'wlsk071', '허박사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('thgml@thgml.com ', '이소희', 'thgml072 ', '배우소정', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('thwls@thwls.com', '박소진', 'thwls073', '주월이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('quddms@quddms.com', '박병은', 'quddms074', '고성제자', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dngus@dngus.com', '우현', 'dngus075', '호연법사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('cchlwlgh@wlgh.com', '최지호 ', 'cchlwlgh076', '길주제자', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tjdgus@tjdgus.com', '문성현', 'tjdgud078', '리틀서율', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tjrxo@tjrxo.com', '주석태', 'tjreo079', '진우탁배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('rhkddlf@rhkddlf.com', '최광일', 'rhkddlf080', '고순배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('gkdbf@gkdbf.com', '이하율', 'gkdbf081', '상호배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('godnjs@godnjs.com', '서해원', 'godnjs082', '소이가수', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('cjftn@cjftn.com', '임철수 ', 'cjftn083', '마의이선생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wldks@wldks.com', '정지안', 'wldks084', '순이동자', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wlsrn@wlsrn.com', '여진구', 'wlsrn085', '은계훈선생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('rkdud@rkdud.com', '문가영', 'rkdud086', '노다현작가', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tpfus@tpfus.com', '나세련', 'tpfus087', '나춘옥선생', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('qhrgml@qhrgml.com', '홍복희', 'qhrgml088', '김지영가수', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ejrghEejrgh.com', '송덕호 ', 'ejrgh089', '지원탁배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('alswh@alswh.com', '황민조', 'wlswh090', '이봄소리', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wjdgmldud@wjdgml.com', '정희영', 'gmldud091', '이봄작사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dlwodnr@dlwo.com', '이재욱', 'wodnr092', '장욱피디', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tmddnjs@tmddnjs.com', '차승원', 'tmddnjs093', '우마왕', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wlstjdal@wlstjs.com', '진선미', 'tjsal094', '진박사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wkdrhks@wkdrhkd.com', '장광', 'wkdrhks095', '장수바람', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('ghdrl@ghdrl.com', '이홍기', 'ghdrl096', '분수대', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wmstjr@rmstjr.com', '장근석', 'rmstjr097', '조조배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('thdnjs@thdnjs.com', '갈소원', 'thdnjs098', '하늘이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('skeks@skeks.com', '조나단', 'whskeks099', '청춘나비 ', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('eotjd@eotjd.com', '강대성', 'eotjd100', '대장놀이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('whdgh@whdgh.com', '송종호', 'whdgh101', '사오정', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tjdgur@tjdgur.com', '성혁', 'tjdgur102', '동장군', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wltn@wltn.com', '김지수', 'wltn0103', '좀비소녀', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dbsqh@dbsqh.com', '윤보라', 'qhfk104', '엘리스', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dldpf@dldpf.com', '이엘', 'dldpf105', '마비서', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tmdrl@tmdrl.com', '이승기', 'tmdrl106', '손오공', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wjdth@wjdth.com', '정소민', 'thals107', '무덕이', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('alsgus@alsgus.com', '황민현', 'alsgus108', '서율', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dbwns@dbwns.com', '유준상', 'wnstkd109', '박진배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('tlstmd@tlstmd.com', '신승호', 'tmdgh110', '고원임금', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dhskfk@dhskfk.com', '오나라', 'dhskfk111', '김도주', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wodns@wodns.com', '조재운', 'whwodns112', '진무술사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dlstn@dlstn.com', '유인수', 'dlstn113', '박당구', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dkfls@dkfls.com', '아린', 'dkfls114', '진초연배우', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('wntkddnr@wntkddnf.com', '주상욱', 'wntkddnr115', '장강', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('qkrdms@qkrdms.com', '박은혜', 'qkrdms116', '진호경강사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
+INSERT INTO MEMBER (EMAIL, NAME, PASSWORD, NICKNAME, MEMBER_TYPE, WITHDRAW, PROFILE, INTRO, ENROLL_DATE) 
+VALUES ('dleh@dleh.com', '이도경', 'ehrud117', '허염의사', 'I', 'N', NULL, NULL, to_timestamp('22/06/20 18:27:44.725000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+
 commit;
-
-
-
-
-
