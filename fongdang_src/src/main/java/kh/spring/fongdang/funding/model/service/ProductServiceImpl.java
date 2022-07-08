@@ -15,7 +15,13 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductDao productDao;
 
-	public void insertProduct(Product product) {
-		productDao.insertProduct(product);
+	@Override
+	public int insertProduct(Product product ) {
+		return productDao.insertProduct(product);
+	}
+
+	@Override
+	public String selectOneGetMakerName(String makerName) {
+		return productDao.selectOneGetMakerName(makerName);
 	}
 }

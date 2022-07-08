@@ -17,4 +17,9 @@ public class MakerDao {
 		return sqlSession.insert("Maker.insertMaker",maker);
 	}
 	
+	
+	public Maker selectMaker(Maker email) {
+		return sqlSession.selectOne("Maker.selectMaker",email);
+	
+	}
 }

@@ -7,7 +7,8 @@ import kh.spring.fongdang.funding.domain.Product;
 public interface ProductService {
 	
 	/* 상품 등록 */
-	public void insertProduct(Product product);
-
+	public int insertProduct(Product product);
+	
+	public String selectOneGetMakerName(String makerName );
 
 }

@@ -16,6 +16,15 @@ public class MakerServiceImpl implements MakerService {
 	public int insertMaker(Maker maker) {
 		return dao.insertMaker(maker);
 	}
-		
+
+	@Override
+	public Maker selectMaker(Maker email) {
+		return  dao.selectMaker(email);
+	}
+
+	
+
+	
+	
 	
 }

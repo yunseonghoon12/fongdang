@@ -29,8 +29,8 @@
 	</insert>
 	
 	<select id="selectMaker">
-		select * from maker
-		where maker_name=#{maker_name}
+		SELECT * FROM FONGDANG.MAKER m; 
+		WHERE m.EMAIL =#{email}
 	</select>
 	
 	 <update id="updateMaker">

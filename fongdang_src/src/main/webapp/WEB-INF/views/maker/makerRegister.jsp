@@ -118,8 +118,8 @@ $(document).ready(function() {
 	         <p id="member_name">${loginInfo.name} 님</p> 
 	     </div>
 	     <ul> 
-	        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
-	        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
+	        <li><a href="<%=request.getContextPath()%>/maker/view"> 메이커 정보 </a></li>
+	        <li><a href="<%= request.getContextPath()%>/product/view"> 펀딩 상품</a></li>
 	        <li><a href="<%= request.getContextPath()%>/option/view"> 펀딩 옵션</a></li>
 	        <li><a href="#"> 오픈예정 현황</a></li>
 	        <li><a href="#"> 펀딩 현황</a></li>
@@ -131,12 +131,12 @@ $(document).ready(function() {
    </nav>
 <section id="maker">    
     <div id="maker_all">
-        <form name="makerform" action="<%=request.getContextPath()%>/maker/Register" method="post" enctype="multipart/form-data">
+        <form  method="post"  name="makerForm" enctype="multipart/form-data">
             
             <table id="maker_Table">
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
-                    <td ></td>
+                    <td > <input type="hidden" name="email" id="email" value="${loginInfo.email}"/> </td>
                     <td></td>
                 </tr>
                 <tr>
@@ -160,7 +160,7 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td id="title">문의 이메일<sup>*</sup></td>
-                    <td><input type="email" name="maker_email" id="maker_email" placeholder=" 이메일 입력"  class="in_box"  required>
+                    <td><input type="email" name="maker_email" id="maker_email" placeholder=" 이메일 입력"  class="in_box"  value="${maker.maker_email}"  required >
                         </td>
                     <td><font id="checkmEmail_info" size="2"></font></td> 
                 </tr>
@@ -202,7 +202,9 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit" class="btn2" value="저장하기" >저장하기</button></td>
+                    <td>
+                    <input type="button" class="btn2" value="저장하기" id="save_maker" />
+                    </td>
                     <td></td>
                 </tr>
             </table>
@@ -211,7 +213,43 @@ $(document).ready(function() {
     </div>  
 </section>  
 </div> 
-
+<script>
+$(document).ready(function() {    
+	if($("#email").val() == ''){
+		alert('로그인 해주세요.');
+		location.href="<%=request.getContextPath()%>/member/login";
+	}
+	
+    $("#save_maker").click(function () {
+    	
+    	if($("#email").val() == ''){
+    		alert('로그인 해주세요.');
+    		location.href="<%=request.getContextPath()%>/member/login";
+    	}
+    	
+    	const formData = $("form[name=makerForm]").serialize();
+    	$.ajax({
+            type: "post",
+            url: "<%=request.getContextPath()%>/option/insert",
+            dataType: "text",
+            data: formData,
+            success: function (result) {
+                console.log("result : ", result);
+                if(result == "success"){
+                	alert("저장 성공");
+                	//TODO 이동하는 페이지 쓰기 
+                }else{
+                	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	
+                }
+            },
+   			error : function (result) {
+   				alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");
+   				console.log("result : ", result);
+    		}
+    	});
+    });
+});
+</script>
 
 </body>
 </html>

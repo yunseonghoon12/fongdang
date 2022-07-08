@@ -24,8 +24,8 @@
 		         <p id="member_name">${loginInfo.name} 님</p> 
 		     </div>
 		     <ul>
-		        <li><a href="<%=request.getContextPath()%>/maker/Register"> 메이커 정보 </a></li>
-		        <li><a href="<%= request.getContextPath()%>/product/product.pag"> 펀딩 상품</a></li>
+		        <li><a href="<%=request.getContextPath()%>/maker/view"> 메이커 정보 </a></li>
+		        <li><a href="<%= request.getContextPath()%>/product/view"> 펀딩 상품</a></li>
 		        <li><a href="<%= request.getContextPath()%>/option/view"> 펀딩 옵션</a></li>
 		        <li><a href="#"> 오픈예정 현황</a></li>
 		        <li><a href="#"> 펀딩 현황</a></li>
@@ -37,9 +37,7 @@
 <section id="maker"> 
   <div id="maker_all">
         <form method="post" name="optionForm" enctype="multipart/form-data">
-            <!-- <div>
-                <p id="maker_title"> 펀딩상품등록 </p>
-            </div> -->
+           
             <table id="maker_Table">
                 <tr>
                     <td id="title"><b>옵션등록</b>

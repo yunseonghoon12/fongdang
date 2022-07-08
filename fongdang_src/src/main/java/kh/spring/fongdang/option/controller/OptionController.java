@@ -30,7 +30,7 @@ public class OptionController {
 	public ModelAndView insertPageOption(ModelAndView mv, HttpSession session) {
 		String p_no = "";
 		Member member = (Member) session.getAttribute("loginInfo");
-		p_no = optionServiceImpl.selectOneGetPNo(member.getEmail());
+		p_no = optionServiceImpl.selectOneGetPNo(member.getEmail());// 조회문 
 		mv.addObject("p_no", p_no);
 		mv.setViewName("option/option");// jsp페이지
 		return mv;
@@ -45,7 +45,7 @@ public class OptionController {
 			, HttpServletRequest req
 			) {
 
-		// 상품번호가 같이 들어간다. p_no
+	
 		try {
 			String result = "";
 			int i = optionServiceImpl.insertOption(option);

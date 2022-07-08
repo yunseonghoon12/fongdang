@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,14 +48,19 @@ public class ProductController {
 	private FileUpload fileUpload;
 	
 	//펀딩상품 page 이동 	
-	@GetMapping("/product.pag")
-	public ModelAndView insertPageProduct(ModelAndView mv) {
-		 mv.setViewName("product/product");// jsp 화면 
+	@GetMapping("/view")
+	public ModelAndView insertPageProduct(ModelAndView mv,HttpSession session, HttpServletRequest req) {
+		String makerName = "";
+		Member member = (Member) session.getAttribute("loginInfo");
+		makerName= productServiceImpl.selectOneGetMakerName(member.getEmail()); //조회 
+		mv.addObject("makerName", makerName);
+		
+		mv.setViewName("product/product");// jsp 화면 
 		return mv;
 	}
 	//펀딩상품 insert 
-	@PostMapping("/product.do")
-	public ModelAndView insertProduct(ModelAndView mv
+	@PostMapping("/insert")
+	public ResponseEntity<String> insertProduct(ModelAndView mv
 			, Product product			
 			, HttpServletRequest req
 			, HttpSession session
@@ -73,20 +80,34 @@ public class ProductController {
 		if (member == null) {
 			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
 			mv.setViewName("redirect:/member/login"); 
-			return mv;
+			//return mv;
 		}
-		if (member != null) {
-		//	product.setMaker_name(maker.getMaker_name());
-			product.setP_certification_file(certificationFile);
-			product.setP_thumbnail_file(certificationFile);
+		
 	//	int result = productServiceImpl.insertProduct(product);
-		}
-	
-		rttr.addFlashAttribute("msg", "펀딩상품이 저장되었습니다.");
-		mv.setViewName("redirect:/"); //옵션페이지 이동 
-		return mv;
+		
+	if (member != null) { 
+		
+		product.setP_certification_file(certificationFile);
+		product.setP_thumbnail_file(certificationFile);
 	}
-	
+		try {
+			
+			String result = "";
+			int i = productServiceImpl.insertProduct(product);
+			if (i == 1) {
+				result = "success";
+			}else {
+				result = "fail";
+			}
+            return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
+	}
+		
+//		rttr.addFlashAttribute("msg", "펀딩상품이 저장되었습니다.");
+//		mv.setViewName("redirect:/"); //옵션페이지 이동 
+//		return mv;
 	
 	
 	

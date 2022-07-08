@@ -109,7 +109,7 @@ $( document ).ready(function() {
 					<li><a href="<%=request.getContextPath()%>/maker/Register">
 							메이커 정보 </a></li>
 					<li><a
-						href="<%=request.getContextPath()%>/product/product.pag"> 펀딩
+						href="<%=request.getContextPath()%>/product/view"> 펀딩
 							상품</a></li>
 					<li><a href="<%=request.getContextPath()%>/option/view">
 							펀딩 옵션</a></li>
@@ -122,11 +122,8 @@ $( document ).ready(function() {
 		</nav>
 		<section id="maker">  
 			<div id="maker_all">
-				<form action="<%=request.getContextPath()%>/product/product.pag"
-					method="post" enctype="multipart/form-data">
-					<!-- <div>
-                <p id="maker_title"> 펀딩상품등록 </p>
-            </div> -->
+				<form method="post" name="productForm"  enctype="multipart/form-data">
+			
 					<table id="maker_Table">
 						<tr>
 							<td id="title"><b>펀딩상품등록</b></td>
@@ -232,7 +229,9 @@ $( document ).ready(function() {
 						</tr>
 						<tr>
 							<td></td>
-							<td><button type="submit" class="btn2" value="저장하기">저장하기</button></td>
+							<td>
+							<input type="text" name="maker_name"  value="${maker_name}"/>
+							<input type="button" class="btn2" value="저장하기" id="saveProduct" /></td>
 							<td></td>
 						</tr>
 					</table>
@@ -240,6 +239,31 @@ $( document ).ready(function() {
 			</div>
 		</section>
 	</div>
-
+<script>
+$(document).ready(function() {    
+    $("#saveProduct").click(function () {
+    	const formData = $("form[name=productForm]").serialize();
+    	$.ajax({
+            type: "post",
+            url: "<%=request.getContextPath()%>/productForm/insert",
+            dataType: "text",
+            data: formData,
+            success: function (result) {
+                console.log("result : ", result);
+                if(result == "success"){
+                	alert("저장 성공");
+                	//TODO 이동하는 페이지 쓰기 
+                }else{
+                	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	
+                }
+            },
+   			error : function (result) {
+   				alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");
+   				console.log("result : ", result);
+    		}
+    	});
+    });
+});
+</script>
 </body>
 </html>

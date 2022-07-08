@@ -18,4 +18,7 @@ public class ProductDao {
 	public int insertProduct(Product product) {
 		return sqlSession.insert("Product.insertProduct",product);
 	}	
+	public String selectOneGetMakerName(String makerName){
+		return sqlSession.selectOne("Product.selectOneGetMakerName",makerName);
+	}
 }

@@ -45,15 +45,20 @@ public class MakerController {
 	private FileUpload fileUpload;
 	
 //maker page 이동 
-	@GetMapping("/Register") // "maker/Register" 이렇게 이동
-	public ModelAndView insertPageMaker(ModelAndView mv) {
+	@GetMapping("/view") // "maker/Register" 이렇게 이동
+	public ModelAndView insertPageMaker(ModelAndView mv, HttpSession session) {
+		
+		Maker maker = new Maker();
+		Member member = (Member) session.getAttribute("loginInfo");
+		//maker = makerServiceImpl.selectMaker(member.getEmail());
+		mv.addObject("maker", maker);
 		mv.setViewName("maker/makerRegister"); // jsp페이지
 		return mv;
 	}
 
 // maker insert 
-	@PostMapping("/Register")
-	public ModelAndView inserMaker(ModelAndView mv
+	@PostMapping("/insert")
+	public ResponseEntity<String> inserMaker(ModelAndView mv
 			, Maker mamker
 			, HttpServletRequest req
 			, HttpSession session
@@ -74,21 +79,30 @@ public class MakerController {
 		
 		logger.debug("================================="+ member.toString());
 		
-		if (member == null) {
-			rttr.addFlashAttribute("msg", "로그인 후 글쓰기 가능합니다.");
-			mv.setViewName("redirect:/member/login"); 
-			return mv;
-		}
+
 		if (member != null) {
 			mamker.setEmail(member.getEmail());
 			mamker.setMaker_license_copy_file(logoFile);
 			mamker.setMaker_license_copy_file(licenseFile);
-			int result = makerServiceImpl.insertMaker(mamker);
 		}
+		try {
+			String result = "";
+			int i = makerServiceImpl.insertMaker(mamker);
+			if (i == 1) {
+				result = "success";
+			}else {
+				result = "fail";
+			}
+	        return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
 		
-		rttr.addFlashAttribute("msg", "메이커 정보 저장되었습니다.");
-		mv.setViewName("product/product");// 상품등록 페이지 이동 
-		return mv;
+		
+		
+//		rttr.addFlashAttribute("msg", "메이커 정보 저장되었습니다.");
+//		mv.setViewName("product/product");// 상품등록 페이지 이동 
+//		return mv;
 	}
 
 	// 사업자등록번호 API 
