@@ -1,8 +1,5 @@
 package kh.spring.fongdang.maker.controller;
 
-import java.io.File;
-import java.util.Enumeration;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -50,7 +47,13 @@ public class MakerController {
 		
 		Maker maker = new Maker();
 		Member member = (Member) session.getAttribute("loginInfo");
-		//maker = makerServiceImpl.selectMaker(member.getEmail());
+		
+		if(member != null) {
+			maker = makerServiceImpl.selectMaker(member.getEmail().toString());			
+			mv.addObject("maker", maker);
+			mv.addObject("updateYn", "Y");
+		}
+		
 		mv.addObject("maker", maker);
 		mv.setViewName("maker/makerRegister"); // jsp페이지
 		return mv;
@@ -64,27 +67,25 @@ public class MakerController {
 			, HttpSession session
 			, RedirectAttributes rttr
 			, MultipartHttpServletRequest multipart
-
 	      ) {
-		MultipartFile makerLogoFile = multipart.getFile("logo_file");
-		MultipartFile makerLicenseCopyFile = multipart.getFile("license_copy_file");
 		
-		
-		String logoFile = fileUpload.saveFile(makerLogoFile, req);
-		String licenseFile = fileUpload.saveFile(makerLicenseCopyFile, req);
-		 
-		logger.debug("=============================s===="+session.getAttribute("loginInfo").toString());
-		
+		if (multipart.getFile("logo_file").getSize() > 0) {
+			MultipartFile makerLogoFile = multipart.getFile("logo_file");
+			String logoFile = fileUpload.saveFile(makerLogoFile, req);
+			mamker.setMaker_license_copy(logoFile);
+		}
+		if (multipart.getFile("license_copy_file").getSize() > 0) {
+			MultipartFile makerLicenseCopyFile = multipart.getFile("license_copy_file");
+			String licenseFile = fileUpload.saveFile(makerLicenseCopyFile, req);
+			mamker.setMaker_license_copy(licenseFile);			
+		}
+				
 		Member member = (Member) session.getAttribute("loginInfo");
 		
-		logger.debug("================================="+ member.toString());
-		
-
 		if (member != null) {
 			mamker.setEmail(member.getEmail());
-			mamker.setMaker_license_copy_file(logoFile);
-			mamker.setMaker_license_copy_file(licenseFile);
 		}
+		
 		try {
 			String result = "";
 			int i = makerServiceImpl.insertMaker(mamker);
@@ -97,12 +98,6 @@ public class MakerController {
 	    } catch (Exception e) {
 	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
 	    }
-		
-		
-		
-//		rttr.addFlashAttribute("msg", "메이커 정보 저장되었습니다.");
-//		mv.setViewName("product/product");// 상품등록 페이지 이동 
-//		return mv;
 	}
 
 	// 사업자등록번호 API 
@@ -125,4 +120,43 @@ public class MakerController {
 	    }
 	}
 
+	@PostMapping("/update")
+	public ResponseEntity<String> updateMaker(ModelAndView mv
+			, Maker mamker
+			, HttpServletRequest req
+			, HttpSession session
+			, RedirectAttributes rttr
+			, MultipartHttpServletRequest multipart
+	      ) {
+		
+		if (multipart.getFile("logo_file").getSize() > 0) {
+			MultipartFile makerLogoFile = multipart.getFile("logo_file");
+			String logoFile = fileUpload.saveFile(makerLogoFile, req);
+			mamker.setMaker_license_copy(logoFile);
+		}
+		if (multipart.getFile("license_copy_file").getSize() > 0) {
+			MultipartFile makerLicenseCopyFile = multipart.getFile("license_copy_file");
+			String licenseFile = fileUpload.saveFile(makerLicenseCopyFile, req);
+			mamker.setMaker_license_copy(licenseFile);			
+		}
+		
+		Member member = (Member) session.getAttribute("loginInfo");
+		
+		if (member != null) {
+			mamker.setEmail(member.getEmail());	
+		}
+		try {
+			String result = "";
+			int i = makerServiceImpl.updateMaker(mamker);
+			if (i == 1) {
+				result = "success";
+			}else {
+				result = "fail";
+			}
+	        return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
+		
+	}
 }

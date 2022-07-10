@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Maker">
 	<insert id="insertMaker" parameterType="Maker">
-		insert into maker(maker_name
+		insert into maker (maker_name
 		,email
 		,maker_category
 		,maker_phone
@@ -28,22 +28,27 @@
 		,default)
 	</insert>
 	
-	<select id="selectMaker">
-		SELECT * FROM FONGDANG.MAKER m; 
-		WHERE m.EMAIL =#{email}
+	<select id="selectMaker" parameterType="String" resultType="Maker">
+		SELECT * FROM FONGDANG.MAKER m 
+		WHERE m.EMAIL = #{email}
 	</select>
 	
-	 <update id="updateMaker">
+	 <update id="updateMaker" parameterType="Maker">
 	  update maker set maker_name=#{maker_name}
 	  ,maker_category=#{maker_category}
 	  ,maker_phone=#{maker_phone}
 	  ,maker_email=#{maker_email}
-	  ,maker_logo=#{maker_logo}
+	  <if test="maker_logo != null ">
+	  ,maker_logo=#{maker_logo}	  
+	  </if>
 	  ,maker_kakao_channel=#{maker_kakao_channel}
 	  ,maker_homepage=#{maker_homepage}
-	  ,maker_address=#{maker_address}
+	  ,maker_address1=#{maker_address1}
+	  ,maker_address2=#{maker_address2}
 	  ,maker_register_num=#{maker_register_num}
+	  <if test="maker_license_copy != null">
 	  ,maker_license_copy=#{maker_license_copy}
+	  </if>
 	  where email=#{email}
 	 </update>
 	 

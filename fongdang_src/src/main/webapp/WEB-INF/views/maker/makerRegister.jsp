@@ -1,4 +1,3 @@
-<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
@@ -106,6 +105,16 @@ $(document).ready(function() {
 			phoneChk = false;
 		}
 	});
+	
+	$('#maker_category option').each(function(){
+
+	    if($(this).val()=="${maker.maker_category}"){
+	    	$(this).attr("selected","selected"); // attr적용안될경우 prop으로 
+	    }
+	});
+	
+
+	
 });  
 </script> 
 </head>
@@ -131,23 +140,24 @@ $(document).ready(function() {
    </nav>
 <section id="maker">    
     <div id="maker_all">
-        <form  method="post"  name="makerForm" enctype="multipart/form-data">
-            
+        <form  method="post"  name="makerForm" id="makerForm" enctype="multipart/form-data">
             <table id="maker_Table">
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
-                    <td > <input type="hidden" name="email" id="email" value="${loginInfo.email}"/> </td>
+                    <td > <input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
+                    <input type="hidden" name="updateYn" id="updateYn" value="${updateYn}"/>
+                    </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">메이커(기업)명<sup>*</sup></td>
-                    <td><input type="text" name="maker_name" class="in_box" placeholder="법인사업자: 법인명 / 개인사업자: 상호" required></td>
+                    <td><input type="text" name="maker_name" class="in_box" placeholder="법인사업자: 법인명 / 개인사업자: 상호" value="${maker.maker_name}" id="maker_name" required></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">사업자구분<sup>*</sup></td>
                     <td >
-                        <select name="maker_category"  class="in_box" required>
+                        <select name="maker_category"  class="in_box" id="maker_category" required >
                         <option value="I">개인사업자</option>
                         <option value="B">법인사업자</option>
                         </select></td>
@@ -155,7 +165,7 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td id="title">문의전화번호<sup>*</sup></td>
-                    <td ><input type="text" name="maker_phone" id="maker_phone"  class="in_box"  placeholder="전화번호 입력" required></td>
+                    <td ><input type="text" name="maker_phone" id="maker_phone"  class="in_box"  placeholder="전화번호 입력" value="${maker.maker_phone}" required></td>
                     <td><font id="phone_info" size="2"></font></td>
                 </tr>
                 <tr>
@@ -167,14 +177,14 @@ $(document).ready(function() {
                 <tr>
                     <td id="title">주소(사업장 주소)<sup>*</sup></td>
                     <td>
-                        <input type="text" name="maker_address1" id="maker_address1"  class="in_box" required ><br>
-                        <input type="text"  name="maker_address2" id="maker_address2" placeholder="상세주소 입력해 주세요"  class="in_box" required >
+                        <input type="text" name="maker_address1" id="maker_address1"  class="in_box" value="${maker.maker_address1}" required ><br>
+                        <input type="text"  name="maker_address2" id="maker_address2" placeholder="상세주소 입력해 주세요"  class="in_box" value="${maker.maker_address2}"  required >
                     </td>
                     <td><input type="button" class="btn1" value="주소검색" class="in_box" id="postcode_button" ></td>
                 </tr>
                 <tr>
                     <td id="title">사업자등록번호<sup>*</sup></td>
-                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box"  required>
+                    <td><input type="text" name="maker_register_num" id="b_no"  class="in_box" value="${maker.maker_register_num}" required>
                     	<input type="hidden" name="maker_register_num_yn" id="maker_register_num_yn">
                     </td>
                     <td><input type="button" class="btn1" value="확인" class="in_box" id="license_button" >
@@ -182,22 +192,31 @@ $(document).ready(function() {
                 </tr>
                 <tr>
                     <td id="title">사업자등록증 사본<sup>*</sup></td>
-                    <td ><input type="file" name="license_copy_file" ></td>
+                    <td ><input type="file" name="license_copy_file" >
+                    <c:if test ="${maker.maker_license_copy ne null}">
+                    <br/><input type="text" name="maker_license_copy" value="${maker.maker_license_copy}" class="in_box" readonly> 
+                    </c:if>
+                    
+                    </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">메이커 프로필 이미지<sup>*</sup></td>
-                    <td ><input type="file" name="logo_file" ></td>
+                    <td ><input type="file" name="logo_file" >
+                    <c:if test ="${maker.maker_logo ne null}">
+                    <br/><input type="text" name="maker_license_copy" value="${maker.maker_logo}" class="in_box" readonly> 
+                    </c:if>
+                    </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">홈페이지 (선택사항)</td>
-                    <td><input type="text" name="maker_homepage" class="in_box" placeholder=" 홈페이지 URL 입력"></td>
+                    <td><input type="text" name="maker_homepage" class="in_box" value="${maker.maker_homepage}"  placeholder=" 홈페이지 URL 입력"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">카카오채널 (선택사항)</td>
-                    <td><input type="text" name="maker_kakao_channel"  class="in_box"  placeholder="검색용 아이디 입력"></td>
+                    <td><input type="text" name="maker_kakao_channel"  class="in_box" value="${maker.maker_kakao_channel}"  placeholder="검색용 아이디 입력"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -227,10 +246,24 @@ $(document).ready(function() {
     		location.href="<%=request.getContextPath()%>/member/login";
     	}
     	
-    	const formData = $("form[name=makerForm]").serialize();
+    	
+    	var urlStr;
+    	
+    	if ($("#updateYn").val() == 'Y') {
+			urlStr ="<%=request.getContextPath()%>/maker/update"; 
+		}else{
+			urlStr ="<%=request.getContextPath()%>/maker/insert";
+		}
+    	
+    	var form = $('#makerForm')[0];
+    	var formData = new FormData(form);
+
     	$.ajax({
-            type: "post",
-            url: "<%=request.getContextPath()%>/option/insert",
+    		type : 'POST',
+    		enctype: 'multipart/form-data',
+    		processData: false,
+    		contentType: false,
+            url: urlStr,
             dataType: "text",
             data: formData,
             success: function (result) {

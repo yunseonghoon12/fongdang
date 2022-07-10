@@ -20,6 +20,9 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script>
+
 <script>
 
 $( document ).ready(function() {
@@ -95,6 +98,8 @@ $( document ).ready(function() {
 });
 
 </script>
+   
+
 </head>
 <body>
 <jsp:include page="../maker_header.jsp"/>
@@ -122,7 +127,7 @@ $( document ).ready(function() {
 		</nav>
 		<section id="maker">  
 			<div id="maker_all">
-				<form method="post" name="productForm"  enctype="multipart/form-data">
+				<form method="post" name="productForm" id="productForm" enctype="multipart/form-data">
 			
 					<table id="maker_Table">
 						<tr>
@@ -133,13 +138,15 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">프로젝트 제목<sup>*</sup></td>
 							<td><input type="text" name="p_name" class="in_box"
-								placeholder="프로젝트 제목입력"></td>
+								placeholder="프로젝트 제목입력" value="${product.p_name}">
+								<input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
+							</td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">목표금액<sup>*</sup></td>
 							<td><input type="text" name="p_goal" id="p_goal"
-								class="in_box" placeholder=""></td>
+								class="in_box" placeholder="" value="${product.p_goal}"></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -162,25 +169,25 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">펀딩시작일<sup>*</sup></td>
 							<td><input type="text" name="start_day" id="start_day"
-								class="in_box"></td>
+								class="in_box"  value="${product.start_day}"></td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">펀딩종료일<sup>*</sup></td>
 							<td><input type="text" name="end_day" id="end_day"
-								class="in_box"></td>
+								class="in_box" value="${product.end_day}"></td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">결제예정일<sup>*</sup></td>
 							<td><input type="text" name="payment_plan" id="payment_plan"
-								class="in_box"></td>
+								class="in_box" value="${product.payment_plan}"></td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">발송예정일<sup>*</sup></td>
 							<td><input type="text" name="delivery_date"
-								id="delivery_date" class="in_box"></td>
+								id="delivery_date" class="in_box" value="${product.delivery_date}"></td>
 							<td></td>
 						</tr>
 						
@@ -202,7 +209,7 @@ $( document ).ready(function() {
 							<td id="title">상품요약<sup>*</sup> <br>
 
 							</td>
-							<td> <input type="text" name="p_summary" id="p_summary">
+							<td> <input type="text" name="p_summary" id="p_summary" value="${product.p_summary}">
 							<br><small id="small_txt">소개 영상이나 사진과 함께 보이는 글이에요.
 									프로젝트를 쉽고 간결하게 소개해 주세요.</small> 
 							</td>
@@ -211,12 +218,29 @@ $( document ).ready(function() {
 
 						<tr>
 							<td id="title">상품 상세정보<sup>*</sup></td>
-							<td><input type="text" name="p_story" id="p_story">
-								<br> <small id="small_txt">스토리 작성방법 가이드</small></td>
+							<td>
+							<input type="hidden" name="p_story" class="editor" value=""/>
+							<textarea name="p_story" id="editor" ></textarea>
+						    
+							<!-- <script>
+                            var content = $(".editor").val();
+                            console.log("content : "+ content);
+                            var tmpStr = content;
+                            tmpStr = tmpStr.replaceAll("&lt;","<");
+                            tmpStr = tmpStr.replaceAll("&lt;",">");
+                            tmpStr = tmpStr.replaceAll("&amp;lt;","<");
+                            tmpStr = tmpStr.replaceAll("&amp;gt;",">");
+                            tmpStr = tmpStr.replaceAll("&amp;nbsp;"," ");
+                            tmpStr = tmpStr.replaceAll("&amp;amp;","&");
+                            document.getElementById('editor').innerHTML=tmpStr;
+                          </script>  
+                          
+                           -->
+							<br> <small id="small_txt">스토리 작성방법 가이드</small></td>
+							
+							
 							<td></td>
 						</tr>
-
-
 						<tr>
 							<td id="title">상품관련 인증증명서</td>
 							<td><input type="file" name="certification_file"></td>
@@ -224,13 +248,14 @@ $( document ).ready(function() {
 						</tr>
 						<tr>
 							<td id="title">정책사항</td>
-							<td>설명 설명 - 모달창으로 진행 ? 여부</td>
+							<td>모달창</td>
 							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>
 							<input type="text" name="maker_name"  value="${maker_name}"/>
+							<input type="hidden" name="update" id="update" value=""/>
 							<input type="button" class="btn2" value="저장하기" id="saveProduct" /></td>
 							<td></td>
 						</tr>
@@ -240,9 +265,24 @@ $( document ).ready(function() {
 		</section>
 	</div>
 <script>
-$(document).ready(function() {    
+      ClassicEditor.create( document.querySelector( '#editor' ), {
+          removePlugins: [ 'Heading' ],
+          language: { ui: 'ko' , content: 'ko' }
+      });
+ </script> 
+<script>
+$(document).ready(function() {  
+	
+	if($("#email").val() == ''){
+		alert('로그인 해주세요.');
+		location.href="<%=request.getContextPath()%>/member/login";
+	}
+	
     $("#saveProduct").click(function () {
-    	const formData = $("form[name=productForm]").serialize();
+    	
+    	var form = $('#productForm')[0];
+    	var formData = new FormData(form);
+    	
     	$.ajax({
             type: "post",
             url: "<%=request.getContextPath()%>/productForm/insert",
@@ -265,5 +305,6 @@ $(document).ready(function() {
     });
 });
 </script>
+
 </body>
 </html>

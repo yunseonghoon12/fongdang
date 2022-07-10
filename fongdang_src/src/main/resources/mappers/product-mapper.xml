@@ -2,31 +2,54 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Product">
 
-<insert id="insertProduct" parameterType="Product" >
-	insert into product(p_no
-	,maker_name,category_id,p_name,p_goal
-	,p_thumbnail
-	,p_summary
-	,p_story
-	,p_certification
-	,start_day,end_day,payment_plan,delivery_date
-	,p_approval,p_report_cnt
-	)values(#{p_no}
-	,#{maker_name},#{category_id},#{p_name},#{p_goal}
-	,#{p_thumbnail}
-	,#{p_summary}
-	,#{p_story}
-	,#{p_certification}
-	,#{start_day},#{end_day},#{payment_plan},#{delivery_date}
-	,default,default)
-</insert>
-<select id="selectOneGetMakerName" parameterType="String" resultType="String">
-		SELECT  m.maker_name
-		FROM MAKER m , PRODUCT p, 
-		WHERE m.MAKER_NAME = p.MAKER_NAME 
+	<insert id="insertProduct" parameterType="Product">
+		insert into
+		product(p_no
+		,maker_name,category_id,p_name,p_goal
+		,p_thumbnail
+		,p_summary
+		,p_story
+		,p_certification
+		,start_day,end_day,payment_plan,delivery_date
+		,p_approval,p_report_cnt
+		)values(#{p_no}
+		,#{maker_name},#{category_id},#{p_name},#{p_goal}
+		,#{p_thumbnail}
+		,#{p_summary}
+		,#{p_story}
+		,#{p_certification}
+		,#{start_day},#{end_day},#{payment_plan},#{delivery_date}
+		,default,default)
+	</insert>
+	<select id="selectOneGetMakerName" parameterType="String"
+		resultType="Product">
+		SELECT p.*
+		FROM MAKER m , PRODUCT p
+		WHERE
+		m.MAKER_NAME = p.MAKER_NAME
 		AND m.EMAIL = #{email}
 	</select>
-
-
-
+	<update id="updateProduct" parameterType="Product">
+		UPDATE
+		PRODUCT
+		SET
+		MAKER_NAME = #{maker_name},
+		CATEGORY_ID = #{category_id},
+		P_NAME = #{p_name},
+		P_GOAL = #{p_goal},
+		<if test="p_thumbnail != null">
+		P_THUMBNAIL = #{p_thumbnail},
+		</if>
+		P_SUMMARY = #{p_summary},
+		P_STORY = #{p_story},
+		<if test="p_certification != null">
+		P_CERTIFICATION = #{p_certification},
+		</if>
+		START_DAY = #{start_day},
+		END_DAY = #{end_day},
+		PAYMENT_PLAN = #{payment_plan},
+		DELIVERY_DATE = #{delivery_date},
+		WHERE
+		P_NO = #{p_no};
+	</update>
 </mapper>

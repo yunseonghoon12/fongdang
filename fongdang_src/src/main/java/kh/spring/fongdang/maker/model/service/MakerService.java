@@ -8,6 +8,8 @@ public interface MakerService {
 	public int insertMaker(Maker maker);
 	
 	/* 메이커등록 된 부분 조회  */
-	public Maker selectMaker(Maker email);
+	public Maker selectMaker(String email);
 	
+	/* 메이커수정 */
+	public int updateMaker(Maker maker);
 }

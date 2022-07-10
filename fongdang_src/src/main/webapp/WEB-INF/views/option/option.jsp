@@ -48,30 +48,31 @@
                 </tr>
                    <tr>
                     <td id="title">옵션이름<sup>*</sup></td>
-                    <td ><input type="text" name="option_name"  class="in_box"  placeholder=""></td>
+                    <td ><input type="text" name="option_name"  class="in_box"  placeholder="" value="${option.option_name}"  ></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">옵션가격<sup>*</sup></td>
-                    <td><input type="text" name="option_price" class="in_box" placeholder="" ></td>
+                    <td><input type="text" name="option_price" class="in_box" placeholder=""  value="${option.option_price}"  >원</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="title">옵션 정보<sup>*</sup></td>
-                    <td><input type="text" name="option_info" class="in_box" placeholder="" ></td>
+                    <td><input type="text" name="option_info" class="in_box" placeholder="" value="${option.option_info}" ></td>
                     <td></td>
                 </tr>
  
                  <tr>
                     <td id="title">제한수량<sup>*</sup></td>
-                    <td><input type="text" name="option_limit" class="in_box" ></td>
+                    <td><input type="text" name="option_limit" class="in_box" value="${option.option_limit}" ></td>
                     <td></td> 
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                    <input type="text" name="p_no"  value="${p_no}"/>
-                    <input type="button" class="btn2" value="저장하기" id="save" /></td>
+                    <input type="hidden" name="p_no"  value="${p_no}"/>
+                    <input type="hidden" name="update" id="update" value=""/>
+                    <input type="button" class="btn2" value="저장하기" id="save"  /></td>
                     <td></td>
                 </tr>
             </table>

@@ -14,14 +14,12 @@ public class Maker {
 	private String maker_logo;      //메이커로고
 	private String maker_kakao_channel; //카카오채널
 	private String maker_homepage;      //홈페이지 주소
-	private String maker_address;       //회사주소
+	private String maker_address1;       //회사주소
+	private String maker_address2;       //회사주소
 	private String maker_register_num;  //사업자등록번호
 	private String maker_license_copy;  //사업자등록증사본
 	private int maker_report_cnt;       //신고횟수
 	
-	
-	private String maker_logo_file;
-	private String maker_license_copy_file;
 	private MultipartFile license_copy_file;
 	private MultipartFile logo_file;
 	
@@ -73,12 +71,7 @@ public class Maker {
 	public void setMaker_homepage(String maker_homepage) {
 		this.maker_homepage = maker_homepage;
 	}
-	public String getMaker_address() {
-		return maker_address;
-	}
-	public void setMaker_address(String maker_address) {
-		this.maker_address = maker_address;
-	}
+	
 	public String getMaker_register_num() {
 		return maker_register_num;
 	}
@@ -97,18 +90,7 @@ public class Maker {
 	public void setMaker_report_cnt(int maker_report_cnt) {
 		this.maker_report_cnt = maker_report_cnt;
 	}
-	public String getMaker_logo_file() {
-		return maker_logo_file;
-	}
-	public void setMaker_logo_file(String maker_logo_file) {
-		this.maker_logo_file = maker_logo_file;
-	}
-	public String getMaker_license_copy_file() {
-		return maker_license_copy_file;
-	}
-	public void setMaker_license_copy_file(String maker_license_copy_file) {
-		this.maker_license_copy_file = maker_license_copy_file;
-	}
+	
 	public MultipartFile getLicense_copy_file() {
 		return license_copy_file;
 	}
@@ -121,15 +103,26 @@ public class Maker {
 	public void setLogo_file(MultipartFile logo_file) {
 		this.logo_file = logo_file;
 	}
+	public String getMaker_address1() {
+		return maker_address1;
+	}
+	public void setMaker_address1(String maker_address1) {
+		this.maker_address1 = maker_address1;
+	}
+	public String getMaker_address2() {
+		return maker_address2;
+	}
+	public void setMaker_address2(String maker_address2) {
+		this.maker_address2 = maker_address2;
+	}
 	@Override
 	public String toString() {
 		return "Maker [maker_name=" + maker_name + ", email=" + email + ", maker_category=" + maker_category
 				+ ", maker_phone=" + maker_phone + ", maker_email=" + maker_email + ", maker_logo=" + maker_logo
 				+ ", maker_kakao_channel=" + maker_kakao_channel + ", maker_homepage=" + maker_homepage
-				+ ", maker_address=" + maker_address + ", maker_register_num=" + maker_register_num
-				+ ", maker_license_copy=" + maker_license_copy + ", maker_report_cnt=" + maker_report_cnt
-				+ ", maker_logo_file=" + maker_logo_file + ", maker_license_copy_file=" + maker_license_copy_file
-				+ ", license_copy_file=" + license_copy_file + ", logo_file=" + logo_file + "]";
+				+ ", maker_address1=" + maker_address1 + ", maker_address2=" + maker_address2 + ", maker_register_num="
+				+ maker_register_num + ", maker_license_copy=" + maker_license_copy + ", maker_report_cnt="
+				+ maker_report_cnt + ", license_copy_file=" + license_copy_file + ", logo_file=" + logo_file + "]";
 	}
 	
 }

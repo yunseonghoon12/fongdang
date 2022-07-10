@@ -21,7 +21,12 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public String selectOneGetMakerName(String makerName) {
+	public Product selectOneGetMakerName(String makerName) {
 		return productDao.selectOneGetMakerName(makerName);
+	}
+	
+	@Override
+	public int updateProduct(Product product ) {
+		return productDao.updateProduct(product);
 	}
 }

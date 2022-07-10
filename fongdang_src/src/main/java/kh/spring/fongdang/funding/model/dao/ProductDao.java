@@ -1,8 +1,5 @@
 package kh.spring.fongdang.funding.model.dao;
 
-import java.util.List;
-
-import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -18,7 +15,10 @@ public class ProductDao {
 	public int insertProduct(Product product) {
 		return sqlSession.insert("Product.insertProduct",product);
 	}	
-	public String selectOneGetMakerName(String makerName){
+	public Product selectOneGetMakerName(String makerName){
 		return sqlSession.selectOne("Product.selectOneGetMakerName",makerName);
+	}
+	public int updateProduct(Product product) {
+		return sqlSession.insert("Product.updateProduct",product);
 	}
 }

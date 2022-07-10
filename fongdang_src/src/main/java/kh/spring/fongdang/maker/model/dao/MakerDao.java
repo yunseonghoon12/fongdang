@@ -18,8 +18,11 @@ public class MakerDao {
 	}
 	
 	
-	public Maker selectMaker(Maker email) {
+	public Maker selectMaker(String email) {
 		return sqlSession.selectOne("Maker.selectMaker",email);
 	
+	}
+	public int updateMaker(Maker maker) {
+		return sqlSession.update("Maker.updateMaker",maker);
 	}
 }
