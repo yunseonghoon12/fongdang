@@ -1799,13 +1799,10 @@ VALUES (48, '굿패스 바이탈', 'C3', '하루 한 포 캴륨 충전! 유산�
 || TO_CLOB('0523184534902_44.jpeg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 54.8826%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.09.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (49, '스위트파티', 'C3', '[무농약인증] 새콤달콤 과즙 팡팡!! 나무에서 끝까지 키운 노지 블루베리', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0523/20220523170859350_149773.jpg/wadiz/format/jpg/quality/80/optimize', '상큼달달한 블루베리가 돌아왔습니다~ 무농약으로 자라 더욱 더 좋은 노지 생블루베리를 즐겨보세요!!!', '<p><img class="fr-fic fr-dib lazyloaded" data-width="588" data-height="562" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523180602081_56.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523180602081_56.png/wadiz/format/jpg/quality/80/optimize"></p><p>안녕하세요~!! 서포터님들~</p><p>봄이 가고 여름이 다가오는 이때에 상큼 달달 블루베리를 가지고 스위트파티가 찾아왔습니다. &nbsp;<strong><u>"신이 주신 보랏빛 선물"</u></strong>이라는 별명을 가진 블루베리!!<br>세계 10대 건강식품으로 선정될 정도로 건강에 좋고 맛도 아주 좋은 과일!<br><strong>지금부터 무농약 생블루베리를 소개합니다!!</strong><br><br><img data-fr-image-pasted="true" data-height="581" data-width="495" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522211434148_24.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 117.374%;"></p><p><strong>따스한 햇살을 받으며 자란 나무에 보랏빛의 열매가 맺혀져 만들어진 블루베리는 맛과 건강에도 좋은 과일이랍니다.</strong><br><strong>블루베리</strong>는 달고 신맛을 함께 가지고 있는데요. 이 덕분에 입맛이 없을때 먹으면 입안 가득 상큼함과 달달함으로 채워지면서 입맛을 돋구어주는 과일이기도 한답니다.</p><p><img class="fr-fic fr-dib lazyload" data-width="588" data-height="392" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523180908399_6.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.6667%;"></p><blockquote class="type-default"><p><strong>상큼 달달한 블루베리는 지금~!</strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="588" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523194406944_19.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 69.5578%;"></p><p>보랏빛의 색감과 겉면에 흰색 가루가 묻어있어 보이는 영롱한 보랏빛이 아주 예쁘답니다. 여기서 겉면의 흰색 가루는 당도가 높고 영양 함량이 높아 발생하는 것이기 때문에 농약인가? 라는 의문이 들수도 있어요.<br>오해하지마세요~ <strong>당도가 높을수록 흰색가루가 묻은 것처럼 더 보인답니다!!</strong></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="540" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524085121174_94.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7491%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (49, '농업법인회사 (주)케이푸드바이오', 'C3', '[파스닙 차] 죽기 전에 먹어봐야할 파스닙 한잔으로 쉽게 건강 관리해요!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519143347976_149663.jpg/wadiz/format/jpg/quality/80/optimize', '유럽 보양식 채소 파스닙, 로마에서 찾은 보물, 파스닙 티로 생생한 세상을 만듭니다! 하루 한잔으로 우리의 몸 건강을 챙겨봐요!', '<p><img data-fr-image-pasted="true" data-width="808" data-height="539" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180514179_88.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180514179_88.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img data-fr-image-pasted="true" data-width="800" data-height="533" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531130456916_69.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531130456916_69.gif"></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="1396" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175252316_11.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 172.772%;"></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="539" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180710537_38.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2021" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175313213_27.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 250.124%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1737" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175422040_73.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 214.975%;"></p><p><img data-width="645" data-height="349" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175405550_2.gif" style="padding-bottom: 54.1085%;"></p><h5>손질 중인 파스닙</h5><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1834" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175444621_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 226.98%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519173616586_87.gif" style="padding-bottom: 56.25%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2478" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607171911511_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 306.683%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519174905215_81.gif" style="padding-bottom: 56.25%;"></p><h5><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2452" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175559056_59.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 303.465%;"></h5><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1335" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175633535_80.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 165.223%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (50, '농업법인회사 (주)케이푸드바이오', 'C3', '[파스닙 차] 죽기 전에 먹어봐야할 파스닙 한잔으로 쉽게 건강 관리해요!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519143347976_149663.jpg/wadiz/format/jpg/quality/80/optimize', '유럽 보양식 채소 파스닙, 로마에서 찾은 보물, 파스닙 티로 생생한 세상을 만듭니다! 하루 한잔으로 우리의 몸 건강을 챙겨봐요!', '<p><img data-fr-image-pasted="true" data-width="808" data-height="539" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180514179_88.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180514179_88.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img data-fr-image-pasted="true" data-width="800" data-height="533" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531130456916_69.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531130456916_69.gif"></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="1396" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175252316_11.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 172.772%;"></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="539" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603180710537_38.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2021" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175313213_27.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 250.124%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1737" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175422040_73.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 214.975%;"></p><p><img data-width="645" data-height="349" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175405550_2.gif" style="padding-bottom: 54.1085%;"></p><h5>손질 중인 파스닙</h5><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1834" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175444621_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 226.98%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519173616586_87.gif" style="padding-bottom: 56.25%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2478" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607171911511_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 306.683%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519174905215_81.gif" style="padding-bottom: 56.25%;"></p><h5><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2452" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175559056_59.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 303.465%;"></h5><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1335" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603175633535_80.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 165.223%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
-
-INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (51, '패킷스토리', 'C3', '[4차/인생스테이크] 궁극의 풍미 비프 웰링턴', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530112912954_150779.jpg/wadiz/format/jpg/quality/80/optimize', '프라임 등급의 소고기에서 나오는 고기의 풍미와 버섯을 오래볶아 감칠맛이 폭발하는 뒥셀소스의 미친풍미 그리고 바삭한 페스츄리에서 흘러넘치는 버터향이 궁극의 스테이크를 만들었습니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="809" data-height="873" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113241172_84.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113241172_84.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib fr-fil lazyloaded" data-width="645" data-height="468" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220')
+VALUES (50, '패킷스토리', 'C3', '[4차/인생스테이크] 궁극의 풍미 비프 웰링턴', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530112912954_150779.jpg/wadiz/format/jpg/quality/80/optimize', '프라임 등급의 소고기에서 나오는 고기의 풍미와 버섯을 오래볶아 감칠맛이 폭발하는 뒥셀소스의 미친풍미 그리고 바삭한 페스츄리에서 흘러넘치는 버터향이 궁극의 스테이크를 만들었습니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="809" data-height="873" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113241172_84.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113241172_84.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib fr-fil lazyloaded" data-width="645" data-height="468" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220')
 || TO_CLOB('530113247128_97.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113247128_97.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><br></p><blockquote class="type-default"><p>비프 웰링턴 왜 이렇게 맛있는지 이제부터<br><strong>"풍미"&nbsp;</strong>라는 키워드를 핵심에 두고<br>그 비밀을 하나씩 알려드리겠습니다.</p></blockquote><p><br></p><p><img data-height="876" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113342570_')
 || TO_CLOB('61.png/wadiz/format/jpg/quality/80/optimize"></p><h2>그 첫 번째 비밀은 Prime 등급의 <u>좋은 소고기</u>를 쓰는 것입니다.</h2><p>비프웰링턴은 처음 본 생소한 요리 같겠지만 그 본질은 페스츄리, 뒥셀소스 그리고 고기가 합쳐져 좋은 풍미를 내는 스테이크라고 생각합니다. <strong>스테이크가 맛있으려면 가장 기본적으로 고기가 좋아야한다고 생각합니다.&nbsp;</strong>그래서 페스츄리 뒥셀소스의 강력한 풍미를 치고나갈 수 있는 <strong>마블링이 많은 고기였으면 좋겠다</strong> 싶어서 미국산 프라임등급의 척아이롤 혹은 부채살을 원육으로 사용했습니다.</p><p><img data-height="876" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113352666_0.png/wadi')
 || TO_CLOB('z/format/jpg/quality/80/optimize"></p><p><br></p><h2>소고기 전면에 입히는 <u>마이야르 반응 (풍미전쟁의 시작)</u></h2><p>좋은 소고기를 그냥 넣는다구요? 아닙니다.처음에 말했던 비프웰링턴의 핵심키워드는 바로 풍미 ! 입니다. 풍미를 최대로 끌어올리기 위해서 소고기 전면을 뜨거운팬에 겉면을 지지는 듯이 마이야르 반응을 전면에 일으켜줍니다. 고기가 갈색으로 변하면서 그냥 생소고기를 넣었을때와 차원이 다른 풍미가 완성됩니다.</p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="460" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530113401411_20.gif" style="padding-bottom: 78.2609%;"></p><p><br></p')
@@ -1817,7 +1814,7 @@ VALUES (51, '패킷스토리', 'C3', '[4차/인생스테이크] 궁극의 풍미
 || TO_CLOB('reen001/2022/0530/20220530113522815_92.png/wadiz/format/jpg/quality/80/optimize"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (52, '참살이도시락', 'C3', '스콘같이 바삭한 도우, 밀가루 1도 없는 제로피자', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530154451565_147662.jpg/wadiz/format/jpg/quality/80/optimize', '입 터진 당신에게 꼭 필요한 밀가루 0g, ZERO PIZZA 건강식단 전문 ''참살이''와 피자 전문 ''피자마루''가 함께 했어요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1377" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162457756_42.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 170.421%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162517700_85.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"></p><p><img class="fr-fic fr-dib laz')
+VALUES (51, '참살이도시락', 'C3', '스콘같이 바삭한 도우, 밀가루 1도 없는 제로피자', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530154451565_147662.jpg/wadiz/format/jpg/quality/80/optimize', '입 터진 당신에게 꼭 필요한 밀가루 0g, ZERO PIZZA 건강식단 전문 ''참살이''와 피자 전문 ''피자마루''가 함께 했어요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1377" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162457756_42.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 170.421%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162517700_85.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"></p><p><img class="fr-fic fr-dib laz')
 || TO_CLOB('yload" data-width="808" data-height="1243" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162526744_1.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 153.837%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="373" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162538231_33.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 46.1634%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-h')
 || TO_CLOB('eight="752" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162559881_75.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 93.0693%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="536" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162605929_72.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.3366%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://')
 || TO_CLOB('cdn.wadiz.kr/ft/images/green001/2022/0512/20220512162616047_51.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p><h3>20여 년간 피자를 연구해 온 피자마루와 함께</h3><p>늘 집 앞에 친숙하게 우리를 기다리는 피자집, 피자마루</p><p>다들 양손에 피자 들고 위풍당당 집에 들어가신 적 있으시죠?</p><p>1996년부터 27년간 피자를 연구하고, 전국 600여 개, 세계 10여 개의 가맹점을 보유한 피자 프랜차이즈 ''피자마루''가 새롭게 건강 피자에 도전했습니다. 맛있는 피자만을 연구하던 전문가들이 모여 이번엔 밀가루가 들어가지 않는 피자를 만들기 위해 모였답니다. 1년 가까이 테스트를 거듭한 끝에 드디어 탄생!</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-hei')
@@ -1831,22 +1828,22 @@ VALUES (52, '참살이도시락', 'C3', '스콘같이 바삭한 도우, 밀가�
 || TO_CLOB('287%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (53, '베리베리 싱글 [by 비플]', 'C3', '[퍼플퀸] 탱글한 자두 한입에 찐한 자두향 꿀과즙 팡팡! 신품종 꿀자두', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0609/20220609110802617_148050.png/wadiz/format/jpg/quality/80/optimize', '세~상 달달한 자두, 한입 베어물면 놀랍도록 달콤한 꿀과즙이 팡! 뽀얀 과분 속 진한 자주빛이 신비로운 퍼플퀸의 달달한 자두맛을 만나보세요. 쉽게 만나기 힘든 귀한 희귀 품종이에요', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="564" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523152148346_39.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523152148346_39.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1316" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523153256972_49.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523153256972_49.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1316" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525170551634_89.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 162.871%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="804" data-height="411" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519102019395_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 51.1194%;"></p><blockquote class="type-default"><p>츄르릅! 흘러넘치는 과즙<br>한입 가득 진한 자두 맛</p></blockquote><p><br></p><h3>오묘한 색깔에 호기심 가득,<br>입안 가득 터지는 과즙에 깜짝!</h3><p>놀라운 맛의 자두가 나타났다!<strong><u>&nbsp;작년 핫-한 입소문 아이템 퍼플퀸은 소개합니다.</u></strong> 아직 인생 자두를 만나보지 못했나요?&nbsp;</p><p><strong>큼직하고 실한 크기, 꽉~찬 과즙에 금방이라도 팡! 터질 것 같은 탱글탱글한 외형!</strong> 퍼플퀸의 진한 달달함을 꼭 경험해 보세요.&nbsp;</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155842031_18.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><img data-fr-image-pasted="true" data-width="640" data-height="360" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523160655314_46.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.25%;"></p><p><br></p><p><br></p><blockquote class="type-default"><p>퍼플퀸 자두 빨리 주세요<br>아이들이 싸우고 있단 말이에요</p></blockquote><p><br></p><h3>한번 맛본 사람들이 두 박스씩 더 샀던 자두,<br>회사에 소문나서 한 팀이 전체 구매 한 자두.</h3><p>아무도 예상하지 못했던 퍼플퀸 소문의 시작. 이 자두는 키우기가 어려워 올해가 마지막이라는 생각으로 사람들에게 선보였죠.</p><p>그런데 이런 반전이!</p><p><strong><u>퍼플퀸을 먹어보고 그 맛에 놀란 사람들의 리뷰가 이어지며 온라인으로, 오프라인으로 순식간에 소문이 나서 자두가 품절되어 버렸어요.&nbsp;</u></strong>심지어 자두를 못 받으신 한 분은 집에서 아이들이 서로 자두를 먹겠다고 싸움이 났다는 하소연까지 하셨답니다.</p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523164114327_38.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523164613496_40.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523165207488_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.25%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (52, '베리베리 싱글 [by 비플]', 'C3', '[퍼플퀸] 탱글한 자두 한입에 찐한 자두향 꿀과즙 팡팡! 신품종 꿀자두', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0609/20220609110802617_148050.png/wadiz/format/jpg/quality/80/optimize', '세~상 달달한 자두, 한입 베어물면 놀랍도록 달콤한 꿀과즙이 팡! 뽀얀 과분 속 진한 자주빛이 신비로운 퍼플퀸의 달달한 자두맛을 만나보세요. 쉽게 만나기 힘든 귀한 희귀 품종이에요', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="564" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523152148346_39.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523152148346_39.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1316" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523153256972_49.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523153256972_49.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1316" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525170551634_89.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 162.871%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="804" data-height="411" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519102019395_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 51.1194%;"></p><blockquote class="type-default"><p>츄르릅! 흘러넘치는 과즙<br>한입 가득 진한 자두 맛</p></blockquote><p><br></p><h3>오묘한 색깔에 호기심 가득,<br>입안 가득 터지는 과즙에 깜짝!</h3><p>놀라운 맛의 자두가 나타났다!<strong><u>&nbsp;작년 핫-한 입소문 아이템 퍼플퀸은 소개합니다.</u></strong> 아직 인생 자두를 만나보지 못했나요?&nbsp;</p><p><strong>큼직하고 실한 크기, 꽉~찬 과즙에 금방이라도 팡! 터질 것 같은 탱글탱글한 외형!</strong> 퍼플퀸의 진한 달달함을 꼭 경험해 보세요.&nbsp;</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155842031_18.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><img data-fr-image-pasted="true" data-width="640" data-height="360" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523160655314_46.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.25%;"></p><p><br></p><p><br></p><blockquote class="type-default"><p>퍼플퀸 자두 빨리 주세요<br>아이들이 싸우고 있단 말이에요</p></blockquote><p><br></p><h3>한번 맛본 사람들이 두 박스씩 더 샀던 자두,<br>회사에 소문나서 한 팀이 전체 구매 한 자두.</h3><p>아무도 예상하지 못했던 퍼플퀸 소문의 시작. 이 자두는 키우기가 어려워 올해가 마지막이라는 생각으로 사람들에게 선보였죠.</p><p>그런데 이런 반전이!</p><p><strong><u>퍼플퀸을 먹어보고 그 맛에 놀란 사람들의 리뷰가 이어지며 온라인으로, 오프라인으로 순식간에 소문이 나서 자두가 품절되어 버렸어요.&nbsp;</u></strong>심지어 자두를 못 받으신 한 분은 집에서 아이들이 서로 자두를 먹겠다고 싸움이 났다는 하소연까지 하셨답니다.</p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523164114327_38.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="940" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523164613496_40.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 116.337%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523165207488_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.25%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (54, '올데이온(alldayON)', 'C3', '[한정판 과일] 체리와 자두의 달-콤새-콤한 만남, 신품종 체리자두 !', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0506/20220506172255445_147699.jpg/wadiz/format/jpg/quality/80/optimize', '작년 여름 많은 서포터 여러분들께 사랑받았던 나디아 체리자두가 다시 돌아왔어요! 체리와 자두의 만남,18brix의 높은 당도와 체리의 상큼함이 만난 새콤달콤 신품종 체리자두입니다.', '<p><img data-height="348" class="fr-fil fr-dib lazyloaded" data-width="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506163505891_84.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506163505891_84.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="222" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506155858715_69.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 27.4752%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="635" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506160148134_51.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 78.5891%;"><img class="fr-fic fr-dib lazyload" data-width="720" data-height="656" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510155342017_56.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 91.1111%;"></p><p>체리자두는 호주에서 처음 개발된 신품종 과일입니다.</p><p><strong>과육은 노랗고 과피는 검은 <u>자두(Black amber)</u></strong>와 <strong>암적색에 가까운 과피와 붉은 과육을 가진 <u>체리(Supreme)</u></strong> 품종이 교잡 되어 만들어진 신품종 과일입니다.&nbsp;</p><p>체리자두는 한국에서 최근 2014년에 유통되기 시작하여 잘 알려지지 않은 희귀과일인데요, <strong><u>검붉은 과피와 체리처럼 하트모양을 가져 많은 분들께 궁금을 자아내는 과일이죠 !</u></strong></p><p><strong>수확시기도 7월 중순에서 말까지 아주 짧은 기간 수확되는 보기 힘든 과일이니 꼭 놓치지 마세요 !</strong></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (53, '올데이온(alldayON)', 'C3', '[한정판 과일] 체리와 자두의 달-콤새-콤한 만남, 신품종 체리자두 !', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0506/20220506172255445_147699.jpg/wadiz/format/jpg/quality/80/optimize', '작년 여름 많은 서포터 여러분들께 사랑받았던 나디아 체리자두가 다시 돌아왔어요! 체리와 자두의 만남,18brix의 높은 당도와 체리의 상큼함이 만난 새콤달콤 신품종 체리자두입니다.', '<p><img data-height="348" class="fr-fil fr-dib lazyloaded" data-width="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506163505891_84.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506163505891_84.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="222" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506155858715_69.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 27.4752%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="635" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506160148134_51.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 78.5891%;"><img class="fr-fic fr-dib lazyload" data-width="720" data-height="656" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510155342017_56.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 91.1111%;"></p><p>체리자두는 호주에서 처음 개발된 신품종 과일입니다.</p><p><strong>과육은 노랗고 과피는 검은 <u>자두(Black amber)</u></strong>와 <strong>암적색에 가까운 과피와 붉은 과육을 가진 <u>체리(Supreme)</u></strong> 품종이 교잡 되어 만들어진 신품종 과일입니다.&nbsp;</p><p>체리자두는 한국에서 최근 2014년에 유통되기 시작하여 잘 알려지지 않은 희귀과일인데요, <strong><u>검붉은 과피와 체리처럼 하트모양을 가져 많은 분들께 궁금을 자아내는 과일이죠 !</u></strong></p><p><strong>수확시기도 7월 중순에서 말까지 아주 짧은 기간 수확되는 보기 힘든 과일이니 꼭 놓치지 마세요 !</strong></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (55, '셀트리온스킨큐어', 'C3', '[셀트리온] 셀트리온이 만든 다이어트 + 쾌변!  체지방감소 3중기능성', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0531/20220531092306842_148164.jpg/wadiz/format/jpg/quality/80/optimize', '셀트리온이 만든 다이어트 + 쾌변!!!! 체지방감소, 식약처 3중 기능성', '<p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="800" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165144217_74.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165144217_74.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="1873" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165200184_61.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165200184_61.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1833" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165219445_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 229.125%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1884" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165257996_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 235.5%;"><img class="fr-fic fr-dib lazyload" data-width="800" data-height="954" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165307194_53.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 119.25%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="572" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165328806_48.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 71.5%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="433" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165352668_48.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 54.125%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="684" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603104220219_2.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 125.505%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1960" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165414570_85.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 245%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (54, '셀트리온스킨큐어', 'C3', '[셀트리온] 셀트리온이 만든 다이어트 + 쾌변!  체지방감소 3중기능성', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0531/20220531092306842_148164.jpg/wadiz/format/jpg/quality/80/optimize', '셀트리온이 만든 다이어트 + 쾌변!!!! 체지방감소, 식약처 3중 기능성', '<p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="800" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165144217_74.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165144217_74.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="1873" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165200184_61.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165200184_61.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1833" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165219445_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 229.125%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1884" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165257996_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 235.5%;"><img class="fr-fic fr-dib lazyload" data-width="800" data-height="954" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165307194_53.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 119.25%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="572" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165328806_48.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 71.5%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="433" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165352668_48.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 54.125%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="684" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603104220219_2.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 125.505%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="1960" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530165414570_85.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 245%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (56, '주식회사 식탁이 있는 삶', 'C3', '[초당 진짜원조] 달콤하고 아삭한 노지재배 ''더단 초당옥수수''', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0603/20220603005937757_145924.jpg/wadiz/format/jpg/quality/80/optimize', '유전자 변형 없는 Non-GMO, 국내 초당옥수수의 선구자 파종부터 수확까지, ALL-IN_ONE! 안심하고 먹을 수 있는 더단 초당옥수수로 건강하게 즐겨보세요.', '<p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="450" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603113947235_64.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603113947235_64.gif"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1332" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161608652_25.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 164.851%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1090" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161615427_30.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 134.901%;"></p><hr><blockquote class="type-default"><p><u><strong>''김재훈 농부의 초당옥수수''</strong></u> 들어보신 적 있으신가요?<br>특별한 이유 3가지</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2152" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161725904_83.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 266.337%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1004" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161737425_41.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 124.257%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (55, '주식회사 식탁이 있는 삶', 'C3', '[초당 진짜원조] 달콤하고 아삭한 노지재배 ''더단 초당옥수수''', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0603/20220603005937757_145924.jpg/wadiz/format/jpg/quality/80/optimize', '유전자 변형 없는 Non-GMO, 국내 초당옥수수의 선구자 파종부터 수확까지, ALL-IN_ONE! 안심하고 먹을 수 있는 더단 초당옥수수로 건강하게 즐겨보세요.', '<p><img class="fr-fic fr-dib lazyloaded" data-width="800" data-height="450" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603113947235_64.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0603/20220603113947235_64.gif"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1332" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161608652_25.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 164.851%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1090" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161615427_30.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 134.901%;"></p><hr><blockquote class="type-default"><p><u><strong>''김재훈 농부의 초당옥수수''</strong></u> 들어보신 적 있으신가요?<br>특별한 이유 3가지</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2152" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161725904_83.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 266.337%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1004" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526161737425_41.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 124.257%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (57, '대성에프앤지', 'C3', '딸기과육 82% 국산 프리미엄 수제딸기청', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0508/20220508144643051_146052.jpg/wadiz/format/jpg/quality/80/optimize', '듬뿍 딸기청 딸기함량82% 수제프리미엄딸기청', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1005" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094635935_21.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094635935_21.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1062" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092520749_56.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092520749_56.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092539761_71.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"></p><p><br></p><p>욕심내어서 국내산 딸기를 넣었습니다.</p><p>듬뿍딸기는 국내산 딸기를 아낌없이 꾹꾹 담아서</p><p><strong><u>82%라는 압도적인 딸기 함량</u></strong>을 자랑합니다.</p><p>당류는 <strong><u>스테비아와 자일로스로 당함량을 줄이면서</u></strong></p><p>달콤함도 놓치지 않고 챙겼습니다.</p><p>꼭 비교해보세요. <strong><u>딸기함량과 당함량 !!</u></strong></p><p>자부할수 있습니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="752" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517115649862_36.gif" style="padding-bottom: 93.0693%;"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1354" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523093936484_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 167.574%;"></p><p><strong><u>듬뿍딸기는 당함량을 80%이상 줄였습니다.</u></strong></p><p>높은 당으로 항상 부담스러워서 멀리하셨다면</p><p>이제 안심하시고 맛있게 즐겨주세요.</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="827" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094605105_16.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 102.351%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="705" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516164944759_25.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 87.2525%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1454" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517093405835_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 179.95%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1059" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0504/20220504133829219_29.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.064%;"></p><p><br></p><h3><img class="fr-fic fr-dib lazyload" data-width="808" data-height="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517093559905_14.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094713212_68.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2020" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516165356673_78.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 250%;"></p></h3>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (56, '대성에프앤지', 'C3', '딸기과육 82% 국산 프리미엄 수제딸기청', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0508/20220508144643051_146052.jpg/wadiz/format/jpg/quality/80/optimize', '듬뿍 딸기청 딸기함량82% 수제프리미엄딸기청', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1005" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094635935_21.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094635935_21.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1062" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092520749_56.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092520749_56.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523092539761_71.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"></p><p><br></p><p>욕심내어서 국내산 딸기를 넣었습니다.</p><p>듬뿍딸기는 국내산 딸기를 아낌없이 꾹꾹 담아서</p><p><strong><u>82%라는 압도적인 딸기 함량</u></strong>을 자랑합니다.</p><p>당류는 <strong><u>스테비아와 자일로스로 당함량을 줄이면서</u></strong></p><p>달콤함도 놓치지 않고 챙겼습니다.</p><p>꼭 비교해보세요. <strong><u>딸기함량과 당함량 !!</u></strong></p><p>자부할수 있습니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="752" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517115649862_36.gif" style="padding-bottom: 93.0693%;"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1354" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523093936484_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 167.574%;"></p><p><strong><u>듬뿍딸기는 당함량을 80%이상 줄였습니다.</u></strong></p><p>높은 당으로 항상 부담스러워서 멀리하셨다면</p><p>이제 안심하시고 맛있게 즐겨주세요.</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="827" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094605105_16.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 102.351%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="705" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516164944759_25.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 87.2525%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1454" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517093405835_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 179.95%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1059" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0504/20220504133829219_29.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.064%;"></p><p><br></p><h3><img class="fr-fic fr-dib lazyload" data-width="808" data-height="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517093559905_14.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1212" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523094713212_68.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2020" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516165356673_78.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 250%;"></p></h3>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (58, '무등산식당', 'C3', '[감칠맛폭발]돼지갈비만 500g? 묵은지로 제대로 맛낸 돼지갈비 김치찜', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0508/20220508184419497_148461.jpg/wadiz/format/jpg/quality/80/optimize', '돼지갈비만 무려 500g!! 김치보다 돼지갈비가 더 많이 들어간 김치찜!!! 묵은지와 돼지갈비 모두 국내산으로 만든 김치찜의 진정성을 와디즈에서 최초로 만나보세요!', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="808" data-height="537" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508162755461_8.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.4604%;"></p><p><br></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="333" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508162851834_61.jpg/wadiz/format/jpg/quality/80/o')
+VALUES (57, '무등산식당', 'C3', '[감칠맛폭발]돼지갈비만 500g? 묵은지로 제대로 맛낸 돼지갈비 김치찜', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0508/20220508184419497_148461.jpg/wadiz/format/jpg/quality/80/optimize', '돼지갈비만 무려 500g!! 김치보다 돼지갈비가 더 많이 들어간 김치찜!!! 묵은지와 돼지갈비 모두 국내산으로 만든 김치찜의 진정성을 와디즈에서 최초로 만나보세요!', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="808" data-height="537" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508162755461_8.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.4604%;"></p><p><br></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="333" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508162851834_61.jpg/wadiz/format/jpg/quality/80/o')
 || TO_CLOB('ptimize" style="padding-bottom: 41.2129%;"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="537" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508162914559_43.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.4604%;"></p><p><br></p><p><br></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="975" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/')
 || TO_CLOB('0508/20220508162943183_30.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 120.668%;"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="961" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508163015732_0.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 118.936%;"></p><p><br></p><p><br></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="201" class="fr-fil fr-dib lazyloa')
 || TO_CLOB('d" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508163047045_61.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 24.8762%;"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="821" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508163102222_91.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 101.609%;"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="193" cl')
@@ -1863,7 +1860,7 @@ VALUES (58, '무등산식당', 'C3', '[감칠맛폭발]돼지갈비만 500g? 묵
 || TO_CLOB('iz.kr/ft/images/green001/2022/0508/20220508164923992_75.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 34.5297%;"></p><p><br></p><p><img data-fr-image-pasted="true" data-width="808" data-height="531" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0508/20220508165052686_69.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 65.7178%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (59, '주식회사 푸드솔루션', 'C3', '[앵콜] 아시아 최다 메달수상! 부드러운 무항생제 닭가슴살 소시지 3종', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0511/20220511103904391_148849.jpg/wadiz/format/jpg/quality/80/optimize', '★앵콜★ 독일 식육가공 박람회 아시아 최다 메달 수상자(17개 수상)레시피의 맛과 서울대학교 X 자연과 한의원 공동 연구 개발로 탄생한 부드럽고 미친 맛의 무항생제 소시지 3종', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="501" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112254125_12.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112254125_12.gif"></p><h2>소시지의 본고장 독일에서 인정받고 돌아왔습니다.</h2><p>독일 식육가공 박람회 <u>아시아 최다 17개 메달(금메달7,은메달7,동메달4,특별상)수상자</u> 레시피의 맛과&nbsp;</p><p>서울대학교 X 자연과한의원 공동 연구개발로 탄생한 무항생제 닭가슴살 소시지 <strong>"꼭이닭"</strong></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="')
+VALUES (58, '주식회사 푸드솔루션', 'C3', '[앵콜] 아시아 최다 메달수상! 부드러운 무항생제 닭가슴살 소시지 3종', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0511/20220511103904391_148849.jpg/wadiz/format/jpg/quality/80/optimize', '★앵콜★ 독일 식육가공 박람회 아시아 최다 메달 수상자(17개 수상)레시피의 맛과 서울대학교 X 자연과 한의원 공동 연구 개발로 탄생한 부드럽고 미친 맛의 무항생제 소시지 3종', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="501" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112254125_12.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112254125_12.gif"></p><h2>소시지의 본고장 독일에서 인정받고 돌아왔습니다.</h2><p>독일 식육가공 박람회 <u>아시아 최다 17개 메달(금메달7,은메달7,동메달4,특별상)수상자</u> 레시피의 맛과&nbsp;</p><p>서울대학교 X 자연과한의원 공동 연구개발로 탄생한 무항생제 닭가슴살 소시지 <strong>"꼭이닭"</strong></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="')
 || TO_CLOB('808" data-height="1126" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516114759838_38.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 139.356%;"></p><h2><u>항생제를 쏙! 빼고</u> <u>미친맛</u>을 더한 닭가슴살 소시지</h2><p>식단 관리하는데 꼭 필요한 닭가슴살 소시지... 그동안 선택의 기준은 무엇이셨나요?&nbsp;</p><p>꾸준히 먹어야 하는데 맛이 없고 퍽퍽해 질린다면 아무리 식단 관리가 중요해도 &nbsp;물려서 먹을 수가 없어요!</p><p><br></p><p>하지만 <u><strong>꼭이닭은 맛과 식감을 모두 잡아</strong></u><strong>&nbsp;식단 유지의 즐거움과 만족을 드립니다!</strong></p><p><br></p><p><img class="fr-')
 || TO_CLOB('fic fr-dib lazyload" data-width="808" data-height="449" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516144801715_94.gif" style="padding-bottom: 55.5693%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="957" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516144836301_33.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 118.441%;"></p><blockquote class="type-default"><p>전문가들이 만들면 달라도 <u><strong>확실히 다릅니다</strong></u>.</p></blo')
 || TO_CLOB('ckquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="584" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516144927124_42.gif" style="padding-bottom: 72.2772%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="158" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516153351516_17.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 19.5545%;"></p><h3><img class="fr-fic fr-dib lazyload" data-width="808" da')
@@ -1882,10 +1879,10 @@ VALUES (59, '주식회사 푸드솔루션', 'C3', '[앵콜] 아시아 최다 메
 || TO_CLOB(' 17.203%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517135603573_49.jpg/wadiz/format/jpg/quality/80/optimize"></h3><h3><img class="fr-fic fr-dib lazyload" data-width="808" data-height="994" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517135625353_42.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 123.02%;"></h3>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (60, '롯데홈쇼핑', 'C3', '[평점4.8] 통아몬드에 쫀~득 꾸덕 단백질 21g <인절미 우주담백바>', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0529/20220529224945981_149304.jpg/wadiz/format/jpg/quality/80/optimize', '[평점 4.8] 와디즈 서포터가 인정한 진짜 맛있는 단백질바, 달달꼬소한 인절미로 돌아왔습니다. 기존 식감보다 훨씬 말랑 말랑해지고 더 맛있어졌습니다. 닭가슴살 대신 이제 우주담백', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2456" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529223512017_45.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529223512017_45.png/wadiz/format/jpg/quality/80/optimize"><img data-fr-image-pasted="true" data-width="700" data-height="700" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529224312976_29.webp/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"><img class="fr-fic fr-dib lazyload" data-width="809" data-height="1067" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529185609562_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.891%;"><img class="fr-fic fr-dib lazyload" data-width="650" data-height="1003" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529190821918_25.webp/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 154.308%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="333" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518220035280_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 41.2129%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="984" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518221849289_41.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 121.782%;"></p><p><br></p><blockquote class="type-default"><p><strong><u>단백질 함량 비교해 보세요&nbsp;</u></strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518223514584_10.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 74.3812%;"></p><blockquote class="type-default"><p><strong><u>동일 무게, 닭가슴살보다<br>더 많은 단백질이 들어있다는 사실</u></strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="707" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529215435514_40.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 87.5%;"><strong><u>우주담백은 100g 기준 닭가슴살 100g이 가지고 있는 단백질 함량보다 많습니다.</u></strong> 단백질바가 가질 수 있는 단백질 함량을 최대한으로 끌어낸 우주담백입니다.</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1389" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518224255618_66.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 171.906%;">우주담백바 하나로 성인 남성/여성의 평균 단백질 권장량의 35%를 채울 수 있어요! <u><strong>우주담백바를 맛있게 즐겼을 뿐인데, 채워진 단백질&nbsp;</strong></u></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (59, '롯데홈쇼핑', 'C3', '[평점4.8] 통아몬드에 쫀~득 꾸덕 단백질 21g <인절미 우주담백바>', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0529/20220529224945981_149304.jpg/wadiz/format/jpg/quality/80/optimize', '[평점 4.8] 와디즈 서포터가 인정한 진짜 맛있는 단백질바, 달달꼬소한 인절미로 돌아왔습니다. 기존 식감보다 훨씬 말랑 말랑해지고 더 맛있어졌습니다. 닭가슴살 대신 이제 우주담백', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2456" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529223512017_45.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529223512017_45.png/wadiz/format/jpg/quality/80/optimize"><img data-fr-image-pasted="true" data-width="700" data-height="700" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529224312976_29.webp/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"><img class="fr-fic fr-dib lazyload" data-width="809" data-height="1067" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529185609562_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.891%;"><img class="fr-fic fr-dib lazyload" data-width="650" data-height="1003" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529190821918_25.webp/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 154.308%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="333" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518220035280_71.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 41.2129%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="984" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518221849289_41.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 121.782%;"></p><p><br></p><blockquote class="type-default"><p><strong><u>단백질 함량 비교해 보세요&nbsp;</u></strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518223514584_10.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 74.3812%;"></p><blockquote class="type-default"><p><strong><u>동일 무게, 닭가슴살보다<br>더 많은 단백질이 들어있다는 사실</u></strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="707" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529215435514_40.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 87.5%;"><strong><u>우주담백은 100g 기준 닭가슴살 100g이 가지고 있는 단백질 함량보다 많습니다.</u></strong> 단백질바가 가질 수 있는 단백질 함량을 최대한으로 끌어낸 우주담백입니다.</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1389" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518224255618_66.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 171.906%;">우주담백바 하나로 성인 남성/여성의 평균 단백질 권장량의 35%를 채울 수 있어요! <u><strong>우주담백바를 맛있게 즐겼을 뿐인데, 채워진 단백질&nbsp;</strong></u></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (61, '(주)나무엔', 'C3', '[대만 수제과자]현지인은 누가크래커 안먹어요. 쫀득쫀득 설화병 먹어요!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0425/20220425134256421_145133.jpg/wadiz/format/jpg/quality/80/optimize', '대만 여행 쇼핑 리스트 1순위 국민과자 설화병, 대만 현지에서도 가장 맛있다고 소문난 장인의 수제 설화병! 대만의 맛을 이제 집에서 편하게 맛보세요. :)', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="381" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135324746_29.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135324746_29.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="538" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135333091_35.jpg/wadiz/for')
+VALUES (60, '(주)나무엔', 'C3', '[대만 수제과자]현지인은 누가크래커 안먹어요. 쫀득쫀득 설화병 먹어요!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0425/20220425134256421_145133.jpg/wadiz/format/jpg/quality/80/optimize', '대만 여행 쇼핑 리스트 1순위 국민과자 설화병, 대만 현지에서도 가장 맛있다고 소문난 장인의 수제 설화병! 대만의 맛을 이제 집에서 편하게 맛보세요. :)', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="381" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135324746_29.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135324746_29.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="538" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135333091_35.jpg/wadiz/for')
 || TO_CLOB('mat/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419135333091_35.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105122500_48.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105122500_48.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img cl')
 || TO_CLOB('ass="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105127871_89.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="700" data-height="394" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0418/20220418141207770_74.gif" style="padding-bottom: 56.2857%;"><br></p><blockquote class="type-default"><p>코로나로 인해 답답한 일상,<br>이제는 국내 여행도 아쉬운<br>')
 || TO_CLOB('마음을 채워주지 못합니다.</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-height="454" data-width="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0425/20220425164550547_12.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.1881%;"></p><p><u>장인이 만든 수제 설화병</u>으로 대만을 여행하는 것 같은 기분을 느껴보시는건 어떨까요?</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105958685_89.jpg/wadiz/format/jp')
@@ -1905,10 +1902,10 @@ VALUES (61, '(주)나무엔', 'C3', '[대만 수제과자]현지인은 누가크
 || TO_CLOB('iz/format/jpg/quality/80/optimize" style="padding-bottom: 181.436%;"></p><p><br></p><h3>개별 포장으로 간편하게</h3><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="509" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419155359444_8.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 62.995%;"></p><ul><li>매일 아침을 거르는 바쁜 직장인</li><li>학교, 학원으로 바쁜 자녀들의 가방 안에 쏙! 간편히 먹을 수 있어요</li><li>치아에 붙지 않아서 아이들 간식으로 더욱 좋아요<br><br></li></ul>'), '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (62, '주식회사 케이에프', 'C3', '[전남 무안] 호박을 삶으면 국수가 된다고?! 작년에 없어서 못팔았습니다', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530152129742_149924.jpg/wadiz/format/jpg/quality/80/optimize', '[무안 특산품]호박을 삶으면 국수가 된다고?! 작년에 없어서 못팔았습니다 처음 보셨죠? 푹~삶으면 호박 살이 면처럼 술술 풀어지는 국수호박', '<h2><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171048076_41.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171048076_41.png/wadiz/format/jpg/quality/80/optimize"><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="876" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0608/20220608114244308_29.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.883%;"></p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531100707192_75.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="204" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181150154_91.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 25.2475%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" style="width: 810px; padding-bottom: 56.3333%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181336419_86.gif"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="247" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181205245_90.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 30.5693%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171318090_36.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></h2><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607174606693_66.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607174630282_76.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="876" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0608/20220608114321404_49.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.883%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531100750326_82.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
+VALUES (61, '주식회사 케이에프', 'C3', '[전남 무안] 호박을 삶으면 국수가 된다고?! 작년에 없어서 못팔았습니다', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0530/20220530152129742_149924.jpg/wadiz/format/jpg/quality/80/optimize', '[무안 특산품]호박을 삶으면 국수가 된다고?! 작년에 없어서 못팔았습니다 처음 보셨죠? 푹~삶으면 호박 살이 면처럼 술술 풀어지는 국수호박', '<h2><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171048076_41.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171048076_41.png/wadiz/format/jpg/quality/80/optimize"><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="876" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0608/20220608114244308_29.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.883%;"></p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531100707192_75.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="204" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181150154_91.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 25.2475%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" style="width: 810px; padding-bottom: 56.3333%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181336419_86.gif"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="247" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181205245_90.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 30.5693%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526171318090_36.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></h2><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607174606693_66.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607174630282_76.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="876" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0608/20220608114321404_49.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.883%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1033" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531100750326_82.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.847%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (63, '쭈롱베이커리', 'C3', '[리뷰만 1.1만개!?] 크럼블케이크의 바삭함과 꾸덕함을 액기스로!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0510/20220510104714650_140752.jpg/wadiz/format/jpg/quality/80/optimize', '리뷰만 1.1만개 쭈롱베이커리의 크럼블의 필링을 따로 만날 수 있는 기회 필링 맛집 쭈롱베이커리의 쭈프레드와 바삭 고소한 쭈크럼블을 함께 만나보세요.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="588" data-height="784" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511122118716_82.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511122118716_82.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="468" data-height="264" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105603266_11.gif" style="padding-bo')
+VALUES (62, '쭈롱베이커리', 'C3', '[리뷰만 1.1만개!?] 크럼블케이크의 바삭함과 꾸덕함을 액기스로!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0510/20220510104714650_140752.jpg/wadiz/format/jpg/quality/80/optimize', '리뷰만 1.1만개 쭈롱베이커리의 크럼블의 필링을 따로 만날 수 있는 기회 필링 맛집 쭈롱베이커리의 쭈프레드와 바삭 고소한 쭈크럼블을 함께 만나보세요.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="588" data-height="784" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511122118716_82.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511122118716_82.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="468" data-height="264" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105603266_11.gif" style="padding-bo')
 || TO_CLOB('ttom: 56.4103%;"></p><h5>꾸우우덕 황치즈<img class="fr-fic fr-dib lazyload" data-width="500" data-height="500" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517185753094_24.gif" style="padding-bottom: 100%;">꾸우우우덕 피스타치오</h5><p><img class="fr-fic fr-dib lazyload" data-width="428" data-height="232" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105343559_61.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 54.2056%;"><img class="fr-fic fr-dib lazyloa')
 || TO_CLOB('d" data-width="468" data-height="349" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105356557_75.gif" style="padding-bottom: 74.5726%;"></p><h5>출처 : giphy</h5><p><img class="fr-fic fr-dib lazyload" data-width="468" data-height="121" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105432549_28.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 25.8547%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="468" data-height="264" data-src="')
 || TO_CLOB('https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105445411_95.gif" style="padding-bottom: 56.4103%;"><img class="fr-fic fr-dib lazyload" data-width="468" data-height="264" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105456296_78.gif" style="padding-bottom: 56.4103%;"><img class="fr-fic fr-dib lazyload" data-width="468" data-height="66" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510105658735_12.png/wadiz/format/jpg/quality/80/optimize" style=')
@@ -1937,7 +1934,7 @@ VALUES (63, '쭈롱베이커리', 'C3', '[리뷰만 1.1만개!?] 크럼블케이
 || TO_CLOB('s="fr-fic fr-dib lazyload" data-width="588" data-height="752" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517173235727_81.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.891%;"><img class="fr-fic fr-dib lazyload" data-width="588" data-height="752" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517173246977_54.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.891%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (64, '로핑', 'C4', '캠핑의 만능 살림꾼ㅣ수납부터 조리까지 5in1 스텐 캠핑 컨테이너', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0526/20220526192045152_150169.jpg/wadiz/format/jpg/quality/80/optimize', '이동 시에는 캐리어로, 요리할 땐 냄비로, 마무리엔 설거지통으로! 아카시아 나무로 만든 도마를 커팅보드로 함께 사용해 보세요. 로핑 스텐 만능 직화 컨테이너 하나면 캠핑 준비 끝!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="632" data-height="356" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525223131771_82.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525223131771_82.gif"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-height="882" data-width="519" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526105322863_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cd')
+VALUES (63, '로핑', 'C4', '캠핑의 만능 살림꾼ㅣ수납부터 조리까지 5in1 스텐 캠핑 컨테이너', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0526/20220526192045152_150169.jpg/wadiz/format/jpg/quality/80/optimize', '이동 시에는 캐리어로, 요리할 땐 냄비로, 마무리엔 설거지통으로! 아카시아 나무로 만든 도마를 커팅보드로 함께 사용해 보세요. 로핑 스텐 만능 직화 컨테이너 하나면 캠핑 준비 끝!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="632" data-height="356" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525223131771_82.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525223131771_82.gif"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-height="882" data-width="519" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526105322863_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cd')
 || TO_CLOB('n.wadiz.kr/ft/images/green001/2022/0526/20220526105322863_3.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="427" data-height="459" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525222526485_22.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 107.494%;"></p><h5><img class="fr-fic fr-dib lazyload" data-height="147" data-width="519" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526181743963_5.jpg/')
 || TO_CLOB('wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 28.3237%;"><img class="fr-fic fr-dib lazyload" data-width="427" data-height="241" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525222606172_22.gif" style="padding-bottom: 56.4403%;">부착된 손잡이로 어디든 손쉽게 이동할 수 있어요.</h5><p><img class="fr-fic fr-dib lazyload" data-width="427" data-height="230" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525223454806_46.jpg/wadiz/format/jpg/quality/80/optimize" style="p')
 || TO_CLOB('adding-bottom: 53.8642%;"><img class="fr-fic fr-dib lazyload" data-width="427" data-height="241" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525222617953_81.gif" style="padding-bottom: 56.4403%;"></p><h5>보글보글~ 캠핑장에서 즐기는 다양한 요리~♪</h5><p><img class="fr-fic fr-dib lazyload" data-width="427" data-height="219" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525222621265_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 51.2881%;"><img class="fr-')
@@ -1971,7 +1968,7 @@ VALUES (64, '로핑', 'C4', '캠핑의 만능 살림꾼ㅣ수납부터 조리까
 || TO_CLOB('9%;"><img class="fr-fic fr-dib lazyload" data-height="363" data-width="519" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526131929647_88.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 69.9422%;">제품을 사용하기 전, 마른 천이나 키친타올 등에 식용유를 묻혀 연마제를 닦아내 주세요.</p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), to_date('2022.07.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (65, '(주)드림스페이스', 'C4', '캠핑과 홈쿡을 한 번에! 골든웨일 스테인레스 코펠 세트', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0607/20220607113055286_148362.jpg/wadiz/format/jpg/quality/80/optimize', '[ 캠핑과 홈쿡을 한번에! ] 캠핑고래의 프리미엄 브랜드 골든웨일 스테인레스 코펠로 맛있는 여행을 떠나보세요!', TO_CLOB('<h3><br></h3><blockquote class="type-default"><p><img class="fr-fic fr-dib lazyloaded" data-width="478" data-height="129" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111632171_91.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111632171_91.gif"></p></blockquote><p><img class="fr-fic fr-dib lazyloaded" data-width="644" data-height="193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124511683_2.png/wadiz/format/jpg/quality/')
+VALUES (64, '(주)드림스페이스', 'C4', '캠핑과 홈쿡을 한 번에! 골든웨일 스테인레스 코펠 세트', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0607/20220607113055286_148362.jpg/wadiz/format/jpg/quality/80/optimize', '[ 캠핑과 홈쿡을 한번에! ] 캠핑고래의 프리미엄 브랜드 골든웨일 스테인레스 코펠로 맛있는 여행을 떠나보세요!', TO_CLOB('<h3><br></h3><blockquote class="type-default"><p><img class="fr-fic fr-dib lazyloaded" data-width="478" data-height="129" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111632171_91.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111632171_91.gif"></p></blockquote><p><img class="fr-fic fr-dib lazyloaded" data-width="644" data-height="193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124511683_2.png/wadiz/format/jpg/quality/')
 || TO_CLOB('80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124511683_2.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="644" data-height="193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506125723507_45.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506125723507_45.png/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyl')
 || TO_CLOB('oaded" data-width="644" data-height="193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124311388_88.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124311388_88.png/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="644" data-height="193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506124448387_81.png/wadiz/format/jpg/quality/80/optimize" style="padding')
 || TO_CLOB('-bottom: 29.9689%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-height="87" data-width="583" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509123522057_57.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 14.9228%;"><img class="fr-fic fr-dib lazyload" data-height="97" data-width="644" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506140423273_65.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 15.0621%;"><img cla')
@@ -2026,7 +2023,7 @@ VALUES (65, '(주)드림스페이스', 'C4', '캠핑과 홈쿡을 한 번에! �
 || TO_CLOB('바로! 도마로 사용 할 수 있습니다</h5><p><img class="fr-fic fr-dib lazyload" data-height="966" data-width="644" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509114305860_75.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 150%;"><img class="fr-fic fr-dib lazyload" data-width="644" data-height="362" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509114355704_92.webp/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 56.2112%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), to_date('2022.07.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (66, '컨스파라', 'C4', '[컨스파라] 완벽한 웨이스트백 2022로 여행준비 끝-!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524175744386_148442.jpg/wadiz/format/jpg/quality/80/optimize', '20,000개 누적판매 / 12억 펀딩! 컨스파라 퍼펙트가드 웨이스트백이 다시 돌아왔습니다! 미친 수납력, 초경량, 4가지 도난방지 기능, 강한 내구성, 시크한 올블랙 컬러까지!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-height="1646" data-width="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124220793_59.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124220793_59.gif"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124256399_29.gif" style="padding-bottom: 56.2152%;"><img class="fr-fic fr-dib lazyload" data-width="539" dat')
+VALUES (65, '컨스파라', 'C4', '[컨스파라] 완벽한 웨이스트백 2022로 여행준비 끝-!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524175744386_148442.jpg/wadiz/format/jpg/quality/80/optimize', '20,000개 누적판매 / 12억 펀딩! 컨스파라 퍼펙트가드 웨이스트백이 다시 돌아왔습니다! 미친 수납력, 초경량, 4가지 도난방지 기능, 강한 내구성, 시크한 올블랙 컬러까지!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-height="1646" data-width="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124220793_59.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124220793_59.gif"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124256399_29.gif" style="padding-bottom: 56.2152%;"><img class="fr-fic fr-dib lazyload" data-width="539" dat')
 || TO_CLOB('a-height="888" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124214906_61.gif" style="padding-bottom: 164.75%;"></p><img class="fr-fic fr-dib lazyload" data-width="513" data-height="1773" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516145052924_7.gif" style="padding-bottom: 345.614%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124201441_42.gif" style="padding')
 || TO_CLOB('-bottom: 56.2152%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="1458" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124156275_52.gif" style="padding-bottom: 270.501%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124151221_60.gif" style="padding-bottom: 56.2152%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="93" data-src="https://cdn.wadiz')
 || TO_CLOB('.kr/ft/images/green001/2022/0511/20220511124147721_35.gif" style="padding-bottom: 17.2542%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124145483_16.gif" style="padding-bottom: 56.2152%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="93" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511124008509_2.gif" style="padding-bottom: 17.2542%;"><img class="fr-fic fr-dib l')
@@ -2047,7 +2044,7 @@ VALUES (66, '컨스파라', 'C4', '[컨스파라] 완벽한 웨이스트백 2022
 || TO_CLOB('tyle="padding-bottom: 27.3723%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="372" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511112652962_93.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 69.0167%;">'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), to_date('2022.07.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (67, '(주)써니', 'C4', '[SUV 차박 트렁크 매트] 벨크로 없는 탈부착 논슬립 트렁크 매트', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519220852744_142657.png/wadiz/format/jpg/quality/80/optimize', '[SUV 트렁크매트] 떨어지고 늘어지는 벨크로 트렁크매트는 Bye~! 이젠 탈부착이 자유로운 논슬립 트렁크 매트로 속까지 깔끔하게!!', TO_CLOB('<h3>" 변화의 시작은 불편함이다. "</h3><p>시중 가죽 트렁크 매트의 작은 불편함이 새로운 형태의 리워드를 제작하는 동기가 되었습니다. L.prime 트렁크 매트를 제작하기까지 시중 가죽 트렁크 매트를 모두 분석하였고, 개발을 진행하며 불편사항을 개선하다 보니 <strong>타제품의 단점이 저희만의 특별</strong><strong>함으로 변화</strong>되었습니다. 작은 불편함이 가져온 큰 변화~노이즈락 &nbsp;L.prime 트렁크 매트를 소개합니다.</p><blockquote class="type-default"><p><strong>L.prime 트렁크매트를 만나면 즐거운 날의 연속</strong></p></blockquote><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="530" data-height="392" data-src="https://cdn.wadiz.kr/ft/images/green001')
+VALUES (66, '(주)써니', 'C4', '[SUV 차박 트렁크 매트] 벨크로 없는 탈부착 논슬립 트렁크 매트', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519220852744_142657.png/wadiz/format/jpg/quality/80/optimize', '[SUV 트렁크매트] 떨어지고 늘어지는 벨크로 트렁크매트는 Bye~! 이젠 탈부착이 자유로운 논슬립 트렁크 매트로 속까지 깔끔하게!!', TO_CLOB('<h3>" 변화의 시작은 불편함이다. "</h3><p>시중 가죽 트렁크 매트의 작은 불편함이 새로운 형태의 리워드를 제작하는 동기가 되었습니다. L.prime 트렁크 매트를 제작하기까지 시중 가죽 트렁크 매트를 모두 분석하였고, 개발을 진행하며 불편사항을 개선하다 보니 <strong>타제품의 단점이 저희만의 특별</strong><strong>함으로 변화</strong>되었습니다. 작은 불편함이 가져온 큰 변화~노이즈락 &nbsp;L.prime 트렁크 매트를 소개합니다.</p><blockquote class="type-default"><p><strong>L.prime 트렁크매트를 만나면 즐거운 날의 연속</strong></p></blockquote><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="530" data-height="392" data-src="https://cdn.wadiz.kr/ft/images/green001')
 || TO_CLOB('/2022/0519/20220519205847049_39.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 73.9623%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="699" data-height="172" style="width: 701px; padding-bottom: 24.6066%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509155448708_40.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="809" data-src="https://cdn.wadiz.kr/ft/images/green001/2022')
 || TO_CLOB('/0509/20220509155532954_11.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="1035" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509155625405_93.gif" style="padding-bottom: 127.936%;"></p><blockquote class="type-default"><p><br><strong>찍찍이형 벨크로 부착이 필수인 시중 트렁크매트!!</strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="606" style="width: 538px; pa')
 || TO_CLOB('dding-bottom: 74.9073%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509125456767_37.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3>스포티지 차량 한 대에 들어가는 엄청난 벨크로의 양!! 깔끔한 트렁크와 편안한 차박을 위해 소중한 차량을 벨크로와 맞바꾸시겠습니까? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h3><p>여름철 녹아내리고, 차량에 늘어붙는 끈적한 벨크로 찍찍이.. 시중 가죽 트렁크매트는 모두 벨크로 부착형으로 불편하지만 대체 상품이 없어 사용할 수 밖에 없었습니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="721" data-height="424" ')
@@ -2069,7 +2066,7 @@ VALUES (67, '(주)써니', 'C4', '[SUV 차박 트렁크 매트] 벨크로 없는
 || TO_CLOB('cdn.wadiz.kr/ft/images/green001/2022/0519/20220519212031352_51.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="790" data-height="790" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520085328369_21.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.09.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (68, '주식회사 레마', 'C4', '미니멀 감성 캠핑의 시작 l 버너&테이블 세트하나면 정말정말 충분해!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0428/20220428192115663_143376.jpg/wadiz/format/jpg/quality/80/optimize', '우리는 항상 휴식이 필요하고, 멍하니 나를 충전 하고싶어서 캠핑을 준비합니다. 그런데 캠핑은 항상 준비 할게 너무 많아요. 캠퍼필드가 준비한 미니멀 캠핑을 위한 첫번째 제안!', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="808" data-height="6933" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105918486_79.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105918486_79.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3><br></h3><h3>진정한 힐링을 위한 캠핑</h3><h3>최대한 준비시간을 줄여 조금이라도</h3><h3><u>여러분이 힐링할 수 있는 시간</u>을 더 드리고 싶었어요.</h3><h3>불필요한 캠핑용품 우선 다 가져가보자 하기에는 너무 많')
+VALUES (67, '주식회사 레마', 'C4', '미니멀 감성 캠핑의 시작 l 버너&테이블 세트하나면 정말정말 충분해!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0428/20220428192115663_143376.jpg/wadiz/format/jpg/quality/80/optimize', '우리는 항상 휴식이 필요하고, 멍하니 나를 충전 하고싶어서 캠핑을 준비합니다. 그런데 캠핑은 항상 준비 할게 너무 많아요. 캠퍼필드가 준비한 미니멀 캠핑을 위한 첫번째 제안!', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="808" data-height="6933" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105918486_79.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105918486_79.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3><br></h3><h3>진정한 힐링을 위한 캠핑</h3><h3>최대한 준비시간을 줄여 조금이라도</h3><h3><u>여러분이 힐링할 수 있는 시간</u>을 더 드리고 싶었어요.</h3><h3>불필요한 캠핑용품 우선 다 가져가보자 하기에는 너무 많')
 || TO_CLOB('잖아요.&nbsp;</h3><h3>이러한 것들을 해결하기위해 생각했어요.</h3><p><br></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="377" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510145040106_45.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 46.6584%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="500" data-height="396" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510143858837_67.gif" style="padding-bottom: 79.2')
 || TO_CLOB('%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="397" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510145059638_40.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 49.1337%;"></p><h3><img class="fr-fic fr-dib lazyload" data-width="500" data-height="500" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510143303814_42.gif" style="padding-bottom: 100%;"></h3><p><br></p><p><br></p><p><img class="fr-fic fr-dib')
 || TO_CLOB(' lazyload" data-width="808" data-height="429" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510145119319_47.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 53.0941%;"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="531" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428155404900_87.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 65.7178%;"></p><p><br></p><p><br></p><p><br><')
@@ -2120,7 +2117,7 @@ VALUES (68, '주식회사 레마', 'C4', '미니멀 감성 캠핑의 시작 l �
 || TO_CLOB('너테이블세트</u>와 함께하세요!</h2><p><img data-fr-image-pasted="true" data-width="808" data-height="455" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0427/20220427213018507_62.gif" style="padding-bottom: 56.3119%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.09.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (69, '네오스텍', 'C4', '[이노룩스 캠핑랜턴] 동글동글 보름달이 밤하늘을 밝혀 캠핑의 무드를 켜다', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0518/20220518222952489_136149.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑장에 “보름달”을 켰다! 기능 / 감성 / 갓성비까지 다 갖춘 <풀문(Full-moon)랜턴>', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1063" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514185623675_65.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514185623675_65.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="97" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513')
+VALUES (68, '네오스텍', 'C4', '[이노룩스 캠핑랜턴] 동글동글 보름달이 밤하늘을 밝혀 캠핑의 무드를 켜다', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0518/20220518222952489_136149.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑장에 “보름달”을 켰다! 기능 / 감성 / 갓성비까지 다 갖춘 <풀문(Full-moon)랜턴>', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1063" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514185623675_65.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514185623675_65.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img data-fr-image-pasted="true" data-width="808" data-height="97" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513')
 || TO_CLOB('114813181_47.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 12.005%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="350" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513144404797_31.gif" style="padding-bottom: 56.4516%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="350" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513144411448_74.gif" style="padding-bottom: 56.4516%;"></p><p><br></p><')
 || TO_CLOB('p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="97" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513114813181_47.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 12.005%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1060" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513143738208_35.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.188%;"></p><p><br></p><p><img cl')
 || TO_CLOB('ass="fr-fic fr-dib lazyload" data-width="808" data-height="1060" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513143749034_79.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 131.188%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="97" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513114823376_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 12.005%;"></p><p><br></p><p><img class="fr-f')
@@ -2162,7 +2159,7 @@ VALUES (69, '네오스텍', 'C4', '[이노룩스 캠핑랜턴] 동글동글 보�
 || TO_CLOB('22/0518/20220518221637638_43.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 164.728%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.09.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (70, '주식회사 디엠지홀딩스', 'C4', '이 개방감 무엇?! 감성까지 담은 블랙야크 필드 돔쉘터 & 필드 터널텐트', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524140110727_149272.jpg/wadiz/format/jpg/quality/80/optimize', '캠퍼들의 TPO를 반영한 필드 시리즈 2종! 원정대 베이스 캠프에서 착안된 지오데식 필드 돔쉘터! & 사용자 환경에 따라 다양한 연출이 가능한 개방감의 끝판왕 필드 터널텐트!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="4929" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524135944019_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524135944019_3.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1270" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523213953826_97.png/')
+VALUES (69, '주식회사 디엠지홀딩스', 'C4', '이 개방감 무엇?! 감성까지 담은 블랙야크 필드 돔쉘터 & 필드 터널텐트', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524140110727_149272.jpg/wadiz/format/jpg/quality/80/optimize', '캠퍼들의 TPO를 반영한 필드 시리즈 2종! 원정대 베이스 캠프에서 착안된 지오데식 필드 돔쉘터! & 사용자 환경에 따라 다양한 연출이 가능한 개방감의 끝판왕 필드 터널텐트!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="4929" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524135944019_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524135944019_3.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1270" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523213953826_97.png/')
 || TO_CLOB('wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 157.178%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="450" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520073039818_50.gif" style="padding-bottom: 56.25%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523214146110_11.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p>')
 || TO_CLOB('<h5><br></h5><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="269" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522201429763_51.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 33.2921%;"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="715" data-height="402" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0515/20220515092505581_10.gif" style="padding-bottom: 56.2238%;"><img class="fr-fic fr-dib lazyload" ')
 || TO_CLOB('data-width="808" data-height="158" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522112441461_32.gif" style="padding-bottom: 19.5545%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523145342473_66.gif" style="padding-bottom: 66.7079%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="158" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/2022052211245196')
@@ -2225,7 +2222,7 @@ VALUES (70, '주식회사 디엠지홀딩스', 'C4', '이 개방감 무엇?! 감
 || TO_CLOB('ottom: 231.911%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (71, '비바브네', 'C4', 'N년차 캠퍼 I 따뜻함을 가볍게 슥- 휴대하세요! 시즌프리 캠핑 이불', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0527/20220527034624981_148851.jpg/wadiz/format/jpg/quality/80/optimize', '일교차 걱정, 겨울 추위 걱정.. 캠핑에 한계는 없어야죠! N년차 캠퍼 ''캠핑맨''이 소개합니다. 피부와 닿을수록 따뜻하고 가볍게 슥- 휴대까지! 사계절 리얼 히터블 캠핑 이불!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="3102" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172453158_71.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172453158_71.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3163" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172447138_63.jpg/wadiz/format/jpg')
+VALUES (70, '비바브네', 'C4', 'N년차 캠퍼 I 따뜻함을 가볍게 슥- 휴대하세요! 시즌프리 캠핑 이불', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0527/20220527034624981_148851.jpg/wadiz/format/jpg/quality/80/optimize', '일교차 걱정, 겨울 추위 걱정.. 캠핑에 한계는 없어야죠! N년차 캠퍼 ''캠핑맨''이 소개합니다. 피부와 닿을수록 따뜻하고 가볍게 슥- 휴대까지! 사계절 리얼 히터블 캠핑 이불!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="3102" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172453158_71.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172453158_71.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3163" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172447138_63.jpg/wadiz/format/jpg')
 || TO_CLOB('/quality/80/optimize" style="padding-bottom: 391.46%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5897" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172442396_83.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 729.827%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5490" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172437608_36.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom')
 || TO_CLOB(': 679.455%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="501" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172432693_73.gif" style="padding-bottom: 62.005%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1415" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172427389_14.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 175.124%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="24')
 || TO_CLOB('39" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172422634_54.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 301.856%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3495" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172417181_78.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 432.55%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3765" data-src="https://cdn.wadiz.kr/ft/image')
@@ -2236,7 +2233,7 @@ VALUES (71, '비바브네', 'C4', 'N년차 캠퍼 I 따뜻함을 가볍게 슥- 
 || TO_CLOB('ib lazyload" data-width="808" data-height="1888" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527172330541_65.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (72, '와이에스글로벌로지텍', 'C4', '곰이 때려도 끄떡없는 미국 명품 아이스쿨러 | 냉기 최대 10일 유지!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0516/20220516165828661_146436.jpg/wadiz/format/jpg/quality/80/optimize', '미국 캠핑족 접수하고 국내 상륙한 [오르카쿨러]는 글로벌 소비자가 인정한 극강의 내구성/보냉력/수납력으로 평생 제품 보증을 약속하는 명품 아이스 쿨러입니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="640" data-height="2817" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525113456122_98.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525113456122_98.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525112941706_22.gif" style="pa')
+VALUES (71, '와이에스글로벌로지텍', 'C4', '곰이 때려도 끄떡없는 미국 명품 아이스쿨러 | 냉기 최대 10일 유지!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0516/20220516165828661_146436.jpg/wadiz/format/jpg/quality/80/optimize', '미국 캠핑족 접수하고 국내 상륙한 [오르카쿨러]는 글로벌 소비자가 인정한 극강의 내구성/보냉력/수납력으로 평생 제품 보증을 약속하는 명품 아이스 쿨러입니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="640" data-height="2817" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525113456122_98.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525113456122_98.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525112941706_22.gif" style="pa')
 || TO_CLOB('dding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="641" data-height="468" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155702272_35.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 73.0109%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155723669_0.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-wi')
 || TO_CLOB('dth="641" data-height="326" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155744002_65.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 50.858%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523171746334_1.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"><img class="fr-fic fr-dib lazyload" data-width="641" data-height="324" data-src="https')
 || TO_CLOB('://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155822836_2.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 50.546%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155757554_61.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523155831576_21.jpg/wadiz/')
@@ -2254,7 +2251,7 @@ VALUES (72, '와이에스글로벌로지텍', 'C4', '곰이 때려도 끄떡없�
 || TO_CLOB('="fr-fic fr-dib lazyload" data-width="640" data-height="5558" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523160717616_37.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 868.438%;"></p><p><img class="fr-fic fr-dib lazyload" data-height="3851" data-width="640" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525114625381_2.png/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (73, '주식회사 더블유엠', 'C4', '[구스침낭 속옷을 입다] 이너라이너 구스침낭', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525112012805_147871.jpg/wadiz/format/jpg/quality/80/optimize', '우즈맨의 세상에 없던 침낭. 와디즈에서만 단독으로 보여드리는 선물 같은 인생 침낭. 가벼운 무게와 최대 압축 시 음료 2캔 높이를 자랑하는 라이너 일체형 침낭을 소개합니다.', TO_CLOB('<p><strong><img class="fr-fic fr-dib lazyloaded" data-width="539" data-height="1123" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520135617494_21.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520135617494_21.jpg/wadiz/format/jpg/quality/80/optimize"><br><img class="fr-fic fr-dib lazyload" data-width="539" data-height="782" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525160048610_33.jpg/wadiz')
+VALUES (72, '주식회사 더블유엠', 'C4', '[구스침낭 속옷을 입다] 이너라이너 구스침낭', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525112012805_147871.jpg/wadiz/format/jpg/quality/80/optimize', '우즈맨의 세상에 없던 침낭. 와디즈에서만 단독으로 보여드리는 선물 같은 인생 침낭. 가벼운 무게와 최대 압축 시 음료 2캔 높이를 자랑하는 라이너 일체형 침낭을 소개합니다.', TO_CLOB('<p><strong><img class="fr-fic fr-dib lazyloaded" data-width="539" data-height="1123" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520135617494_21.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520135617494_21.jpg/wadiz/format/jpg/quality/80/optimize"><br><img class="fr-fic fr-dib lazyload" data-width="539" data-height="782" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525160048610_33.jpg/wadiz')
 || TO_CLOB('/format/jpg/quality/80/optimize" style="padding-bottom: 145.083%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="217" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145248365_43.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 40.2597%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="303" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145246583_35.webp/wadiz/format/jpg/quality/80/optimize" style="pad')
 || TO_CLOB('ding-bottom: 56.2152%;"><br><img class="fr-fic fr-dib lazyload" data-width="539" data-height="851" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145239657_6.gif" style="padding-bottom: 157.885%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="852" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145236825_90.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 158.071%;"><br><br><img class="fr-fic fr-dib lazyload" data-width')
 || TO_CLOB('="539" data-height="647" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145233687_92.gif" style="padding-bottom: 120.037%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="459" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519145231320_23.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 85.1577%;"><br><img class="fr-fic fr-dib lazyload" data-width="539" data-height="851" data-src="https://cdn.wadiz.kr/ft/images/green001/20')
@@ -2282,7 +2279,7 @@ VALUES (73, '주식회사 더블유엠', 'C4', '[구스침낭 속옷을 입다] 
 || TO_CLOB('s="fr-fic fr-dib lazyload" data-width="539" data-height="124" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519143323767_48.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 23.0056%;"><img class="fr-fic fr-dib lazyload" data-width="539" data-height="224" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525133350106_23.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 41.5584%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (74, '(주)일렉파워전자', 'C4', '[호주캠퍼국룰] 캠핑 냉장고가, 75L에 듀얼 온도조절까지 된다고?', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602154409990_109357.png/wadiz/format/jpg/quality/80/optimize', '대충 사면 후회할 냉장고, 고민끝, 후회 없으실 냉장고로 준비했습니다. 75L 괴물용량에 듀얼 온도조절까지. 호주에서온 프리미엄 캠핑용 냉장고를 만나보세요', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1315" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150014778_18.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150014778_18.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="733" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150037339_58.png/wadiz/form')
+VALUES (73, '(주)일렉파워전자', 'C4', '[호주캠퍼국룰] 캠핑 냉장고가, 75L에 듀얼 온도조절까지 된다고?', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602154409990_109357.png/wadiz/format/jpg/quality/80/optimize', '대충 사면 후회할 냉장고, 고민끝, 후회 없으실 냉장고로 준비했습니다. 75L 괴물용량에 듀얼 온도조절까지. 호주에서온 프리미엄 캠핑용 냉장고를 만나보세요', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="1315" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150014778_18.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150014778_18.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="733" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150037339_58.png/wadiz/form')
 || TO_CLOB('at/jpg/quality/80/optimize" style="padding-bottom: 90.7178%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="539" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150045039_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.7079%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="423" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150057242_36.png/wadiz/format/jpg/quality/80/optimize" style="pa')
 || TO_CLOB('dding-bottom: 52.3515%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150110302_34.gif" style="padding-bottom: 56.25%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="99" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150134986_14.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 12.2525%;"><img class="fr-fic fr-dib lazyload')
 || TO_CLOB('" data-width="808" data-height="364" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520110211091_76.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 45.0495%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502150155943_96.gif" style="padding-bottom: 56.25%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="640" data-height="360" data-src="https://cdn.wadiz.kr/f')
@@ -2348,7 +2345,7 @@ VALUES (74, '(주)일렉파워전자', 'C4', '[호주캠퍼국룰] 캠핑 냉장
 || TO_CLOB('bottom: 29.2079%;"></p><p><img data-width="808" data-height="556" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502155854776_26.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 68.8119%;"></p><p><img data-width="808" data-height="489" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0502/20220502155901812_55.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 60.5198%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (75, '월계수가구점', 'C4', '월계수가구점의 우드감성 캠핑가구', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519015423991_149715.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑라이프에 꼭 필요한 쉘프, 쿨러스탠드, 워터저그 받침대 슈페리어 등급의 월넛과 자작나무, 스테인레스의 조화로 오직 와디즈에서만 만날 수 있는 캠핑용품세트입니다.', TO_CLOB('<p><img data-width="808" data-height="395" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519170519199_64.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519170519199_64.jpg/wadiz/format/jpg/quality/80/optimize"></p><p>캠핑의 여러가지 매력중 하나는<strong>&nbsp;''나만의 작은 공간''</strong>을 꾸미는것이죠. 저렴한 가격대의 캠핑용품들을 구비하더라도 수십만원은 금방 넘기죠.</p><p><br></p><p><img data-width="808" data-height="345" class="fr-f')
+VALUES (74, '월계수가구점', 'C4', '월계수가구점의 우드감성 캠핑가구', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519015423991_149715.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑라이프에 꼭 필요한 쉘프, 쿨러스탠드, 워터저그 받침대 슈페리어 등급의 월넛과 자작나무, 스테인레스의 조화로 오직 와디즈에서만 만날 수 있는 캠핑용품세트입니다.', TO_CLOB('<p><img data-width="808" data-height="395" class="fr-fil fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519170519199_64.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519170519199_64.jpg/wadiz/format/jpg/quality/80/optimize"></p><p>캠핑의 여러가지 매력중 하나는<strong>&nbsp;''나만의 작은 공간''</strong>을 꾸미는것이죠. 저렴한 가격대의 캠핑용품들을 구비하더라도 수십만원은 금방 넘기죠.</p><p><br></p><p><img data-width="808" data-height="345" class="fr-f')
 || TO_CLOB('il fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519233843931_58.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519233843931_58.jpg/wadiz/format/jpg/quality/80/optimize"></p><p>저렴하게 잘 샀다고 생각했지만, 두세번만 다녀오더라도 금방 헤지거나 망가져버린다면 이보다 <strong>아까운 소비</strong>는 없을거라 생각합니다.&nbsp;</p><p><br></p><p><img data-width="808" data-height="342" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images')
 || TO_CLOB('/green001/2022/0519/20220519234119871_50.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 42.3267%;"></p><p>그리고 기왕에 갖춰야 할 캠핑가구,<strong>&nbsp;''오랫동안 사용할 수 있는 캠핑가구''</strong>를 만드는데 집중했습니다.</p><p><br></p><blockquote class="type-default"><p><strong>''월계수가구점''의 캠핑용품을<br>접해본 분들의 후기</strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="384" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523125634138_39.jpg/wadiz/format/jpg/qualit')
 || TO_CLOB('y/80/optimize" style="padding-bottom: 47.5248%;"></p><p>아직은 작은 브랜드이지만, 여태껏 <strong>본적없던 구조와 디자인의 아이템</strong>을 개발하고 제작하는데 힘쓰고있습니다.</p><p><br></p><blockquote class="type-default"><p><strong>월계수가구점은<br>''직접생산'' 하는 브랜드입니다.</strong></p></blockquote><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="800" data-height="450" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523132801159_48.gif" style="padding-bottom: 56.25%;"></p><p>목재의 선별, 제작, 마감, 포장까지 전 과정을 월계수가구점에서 진행하고 있습니다')
@@ -2362,13 +2359,13 @@ VALUES (75, '월계수가구점', 'C4', '월계수가구점의 우드감성 캠�
 '), '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (76, '아우틴라이프', 'C4', '150리터 대용량 내하중 80kg  아우틴스 블루 웨건 우드 상판 포함', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0518/20220518180711440_148429.jpg/wadiz/format/jpg/quality/80/optimize', '보여주는 캠핑보다 실속 있는 캠핑을! 150리터 대용량, 80~100kg 내하중, 노펑크 통고무 바퀴 사용, 좌우 흔들림 없는 내구성, 4점 폴딩 방식, 우드롤 상판 포함', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="799" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516141127467_56.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516141127467_56.jpg/wadiz/format/jpg/quality/80/optimize"></p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="6163" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516114904113_32.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;">', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
+VALUES (75, '아우틴라이프', 'C4', '150리터 대용량 내하중 80kg  아우틴스 블루 웨건 우드 상판 포함', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0518/20220518180711440_148429.jpg/wadiz/format/jpg/quality/80/optimize', '보여주는 캠핑보다 실속 있는 캠핑을! 150리터 대용량, 80~100kg 내하중, 노펑크 통고무 바퀴 사용, 좌우 흔들림 없는 내구성, 4점 폴딩 방식, 우드롤 상판 포함', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="799" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516141127467_56.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516141127467_56.jpg/wadiz/format/jpg/quality/80/optimize"></p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="6163" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516114904113_32.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;">', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (77, '바이페어', 'C4', '[Oregon Creek] 오레곤 크릭 카모 캠핑체어', 15000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0502/20220502122813204_147867.jpg/wadiz/format/jpg/quality/80/optimize', '오레곤 크릭 캠핑 피크닉 체어', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="5088" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111510875_97.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111510875_97.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2373" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111522542_47.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111522542_47.jpg/wadiz/format/jpg/quality/80/optimize"><br></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (76, '바이페어', 'C4', '[Oregon Creek] 오레곤 크릭 카모 캠핑체어', 15000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0502/20220502122813204_147867.jpg/wadiz/format/jpg/quality/80/optimize', '오레곤 크릭 캠핑 피크닉 체어', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="5088" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111510875_97.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111510875_97.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2373" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111522542_47.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0503/20220503111522542_47.jpg/wadiz/format/jpg/quality/80/optimize"><br></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.12', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (78, '쿠드베러', 'C5', '에어팟보다 가벼운 산책가방으로 댕댕이는 신나개! 보호자는 가볍개!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0613/20220613110507947_109093.png/wadiz/format/jpg/quality/80/optimize', '에어팟보다 가벼운 45g 산책가방으로 강아지 간식과 똥츄, 휴대폰 등 담을 수 있는 3개 공간과 물병과 리드줄을 걸 수 있는 수납고리까지! 가볍고 실속있고 힙한 업사이클링 산책가방', TO_CLOB('<h2><img class="fr-fic fr-dib lazyloaded" data-width="797" data-height="2601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613091750811_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613091750811_3.jpg/wadiz/format/jpg/quality/80/optimize"></h2><p><img class="fr-fic fr-dib lazyload" data-width="480" data-height="360" style="width: 798px; padding-bottom: 75%;" data-src="https://cdn.wadiz.kr/ft/images/green001/20')
+VALUES (77, '쿠드베러', 'C5', '에어팟보다 가벼운 산책가방으로 댕댕이는 신나개! 보호자는 가볍개!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0613/20220613110507947_109093.png/wadiz/format/jpg/quality/80/optimize', '에어팟보다 가벼운 45g 산책가방으로 강아지 간식과 똥츄, 휴대폰 등 담을 수 있는 3개 공간과 물병과 리드줄을 걸 수 있는 수납고리까지! 가볍고 실속있고 힙한 업사이클링 산책가방', TO_CLOB('<h2><img class="fr-fic fr-dib lazyloaded" data-width="797" data-height="2601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613091750811_3.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613091750811_3.jpg/wadiz/format/jpg/quality/80/optimize"></h2><p><img class="fr-fic fr-dib lazyload" data-width="480" data-height="360" style="width: 798px; padding-bottom: 75%;" data-src="https://cdn.wadiz.kr/ft/images/green001/20')
 || TO_CLOB('22/0613/20220613092146100_67.gif"><br></p><blockquote class="type-default"><p>산책! 산책가자! 어야가자!</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="797" data-height="5193" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613091819478_27.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 651.568%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="797" data-height="2824" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613092504518_4')
 || TO_CLOB('1.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 354.329%;"></p><p><br></p><h3>아메리칸 어패럴 전 디자이너,<br>업사이클링 가방 제작 전문 팀<br>의식있는 반려견 보호자 20명과 함께</h3><h2>에어팟보다 가벼운<br>산책 가방을 만들었어요!</h2><h3><img class="fr-fic fr-dib lazyload" data-width="412" data-height="216" style="width: 798px; padding-bottom: 52.4272%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0608/20220608221514417_43.gif"></h3><p>강아지 키우는 깐깐한 전문가 어벤져스 모두 다 모였다쿧!!</p><h3><img class="fr-fic fr-dib lazyload" data-width')
 || TO_CLOB('="532" data-height="3347" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0616/20220616111200318_59.jpeg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 629.135%;"></h3><h3><img class="fr-fic fr-dib lazyload" data-width="797" data-height="4045" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0613/20220613092641711_15.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 507.528%;"></h3><p><img class="fr-fic fr-dib lazyload" data-width="532" data-height="2235')
@@ -2386,7 +2383,7 @@ VALUES (78, '쿠드베러', 'C5', '에어팟보다 가벼운 산책가방으로 
 || TO_CLOB('d" data-width="532" data-height="294" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0616/20220616111008802_41.gif" style="padding-bottom: 55.2632%;"></p><p><br><img class="fr-fic fr-dib lazyload" data-width="532" data-height="351" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0616/20220616110851188_94.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 65.9774%;"></p><hr><h2><br>Social Impact,<br>소나무 100그루 심기!</h2>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), to_date('2022.07.15', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (79, '마인드독(minddog)', 'C5', '<반려견 산책가방 유목민 주목> 산책에 진심인 보호자의 산책 가방', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0603/20220603155250317_146347.jpg/wadiz/format/jpg/quality/80/optimize', '하루종일 산책만 기다리는 나의 반려가족과의 산책시간 !! 때우지 말고 "힐링" 하세요. 산책에 집중 할 수 있는 반려가족들을 위한 맞춤형 산책가방', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="535" data-height="100" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602215936233_76.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602215936233_76.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="535" data-height="460" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602221143396_83.gif" style=""')
+VALUES (78, '마인드독(minddog)', 'C5', '<반려견 산책가방 유목민 주목> 산책에 진심인 보호자의 산책 가방', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0603/20220603155250317_146347.jpg/wadiz/format/jpg/quality/80/optimize', '하루종일 산책만 기다리는 나의 반려가족과의 산책시간 !! 때우지 말고 "힐링" 하세요. 산책에 집중 할 수 있는 반려가족들을 위한 맞춤형 산책가방', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="535" data-height="100" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602215936233_76.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602215936233_76.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="535" data-height="460" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602221143396_83.gif" style=""')
 || TO_CLOB(' src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602221143396_83.gif"></p><h5><strong><u>배변뒷처리는 눈치 볼 필요 없이 빠르게 처리하고</u></strong></h5><h5><img class="fr-fic fr-dib lazyloaded" data-width="535" data-height="301" style="" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602221448013_61.gif" src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602221448013_61.gif"><strong><u>칭찬간식은 바로바로 나오는 산책가방</u></strong></h5><h5><img class="fr-fic fr-dib lazyload" data-width="53')
 || TO_CLOB('5" data-height="531" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602220749224_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 99.2523%;"><strong><u>무엇보다 시선을 사로 잡는 예쁜 산책가방</u></strong></h5><h5><strong><u><img class="fr-fic fr-dib lazyload" data-width="443" data-height="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607225956529_84.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"></u></strong></h5><blockquote cl')
 || TO_CLOB('ass="type-line"><h3><u>새롭게 변경된 사항을 확인 해보세요</u></h3></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="443" data-height="363" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607230619748_43.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 81.9413%;"></p><h5>"텐마일 워크백"의 사이즈가 2cm 확장<img class="fr-fic fr-dib lazyload" data-width="443" data-height="293" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607230712584_19.jpg/wadiz/format/jpg/qu')
@@ -2415,7 +2412,7 @@ VALUES (79, '마인드독(minddog)', 'C5', '<반려견 산책가방 유목민 �
 || TO_CLOB('ze" style="padding-bottom: 88.9785%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (80, '엔와이컴퍼니', 'C5', '[우리집고양이] 특허받은 반려동물 정수기  "투인원 정수기"', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0513/20220513133824424_144403.jpg/wadiz/format/jpg/quality/80/optimize', '안녕하세요 우리집고양이 입니다. 반려동물정수기 끝판왕!! 타워 , 커버 교체로 늘 새로운 정수기로 변신!! 주인님 취향저격! 정수기 유목민을 위한 반려동물 정수기', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="482" data-height="414" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133936501_14.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133936501_14.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="477" data-height="1975" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133946127_94.jpg/wadiz/format/jp')
+VALUES (79, '엔와이컴퍼니', 'C5', '[우리집고양이] 특허받은 반려동물 정수기  "투인원 정수기"', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0513/20220513133824424_144403.jpg/wadiz/format/jpg/quality/80/optimize', '안녕하세요 우리집고양이 입니다. 반려동물정수기 끝판왕!! 타워 , 커버 교체로 늘 새로운 정수기로 변신!! 주인님 취향저격! 정수기 유목민을 위한 반려동물 정수기', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="482" data-height="414" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133936501_14.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133936501_14.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="477" data-height="1975" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133946127_94.jpg/wadiz/format/jp')
 || TO_CLOB('g/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133946127_94.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="1099" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513133952744_73.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 230.398%;"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="1591" data-src="https://cdn.wadiz.kr/ft/images/green001')
 || TO_CLOB('/2022/0513/20220513134006502_17.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 333.543%;"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="604" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513134020412_60.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 126.625%;"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="558" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513134116230_77.jpg/wadiz/fo')
 || TO_CLOB('rmat/jpg/quality/80/optimize" style="padding-bottom: 116.981%;"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="506" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513134122293_23.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 106.08%;"><img class="fr-fic fr-dib lazyload" data-width="477" data-height="2499" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513134723525_82.jpg/wadiz/format/jpg/quality/80/optimize" style="padding')
@@ -2429,7 +2426,7 @@ VALUES (80, '엔와이컴퍼니', 'C5', '[우리집고양이] 특허받은 반�
 || TO_CLOB('523/20220523130134133_32.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 130.161%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (81, '까마소', 'C5', '[맞춤조절 리드줄] 1.6m~4m 멀티 핸즈프리로 일상에서 캠핑까지!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0613/20220613154818843_148075.jpg/wadiz/format/jpg/quality/80/optimize', '하나로 이게 다 가능해? 놀라운 디테일과 다양한 활용법의 진짜 멀티 리드줄입니다! 무엇보다 튼튼하죠. "반려견과 내가 행복하고 안전하게!"', TO_CLOB('<h2><img class="fr-fic fr-dib lazyloaded" data-width="748" data-height="512" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527122145669_44.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527122145669_44.jpg/wadiz/format/jpg/quality/80/optimize"></h2><p><img class="fr-fic fr-dib lazyloaded" data-width="428" data-height="428" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524221940739_45.gif" style=')
+VALUES (80, '까마소', 'C5', '[맞춤조절 리드줄] 1.6m~4m 멀티 핸즈프리로 일상에서 캠핑까지!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0613/20220613154818843_148075.jpg/wadiz/format/jpg/quality/80/optimize', '하나로 이게 다 가능해? 놀라운 디테일과 다양한 활용법의 진짜 멀티 리드줄입니다! 무엇보다 튼튼하죠. "반려견과 내가 행복하고 안전하게!"', TO_CLOB('<h2><img class="fr-fic fr-dib lazyloaded" data-width="748" data-height="512" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527122145669_44.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527122145669_44.jpg/wadiz/format/jpg/quality/80/optimize"></h2><p><img class="fr-fic fr-dib lazyloaded" data-width="428" data-height="428" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524221940739_45.gif" style=')
 || TO_CLOB('"" src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524221940739_45.gif"></p><p><img class="fr-fic fr-dib lazyload" data-width="428" data-height="209" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525004427420_16.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 48.8318%;"></p><p><br></p><p><br></p><h3>* 혹시 이런 산책을 하고 계시나요?</h3><ul><li><strong>한 손으로 리드한다.</strong></li><li><strong>핸드폰을 보며 리드한다.</strong></li><li><strong>많은 물건과 함께 리드줄을 잡는다.</strong></li><')
 || TO_CLOB('li><strong>자동 리드줄을 사용한다.</strong></li></ul><p><img class="fr-fic fr-dib lazyload" data-width="428" data-height="209" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525010731246_50.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 48.8318%;"></p><p>긴 길이와 쉬운 길이 조절로 많이 쓰이는 자동리드줄</p><p>편리함 뒤에는 무시무시한 위험성들로 가득한데요.</p><p>그래서 <u><strong>자동리드줄 사용을 절대 반대</strong>하는 전문가들이 많습니다.</u></p><p><br></p><h3>사랑한다면, 그 자동리드줄 당장 멈추세요!</h3><ul><li><strong>강아지 줄 엉킴 사고</strong></li><li><s')
 || TO_CLOB('trong>작동 고장&nbsp;</strong>(줄이 끝없이 풀려나가요.)</li><li><strong>놓치기 쉬운 손잡이&nbsp;</strong>(쿵!소리에 놀라 도망갈 수 있어요.)</li><li><strong>위급 상황 시 순간적으로 당기기 어려움</strong></li><li><strong>얇은 줄에 쓸려 찰과상</strong></li><li><strong>잘 보이지 않는 얇은 줄&nbsp;</strong>(보행자, 자전거가 걸려 넘어질 수 있어요.)</li></ul><p><img class="fr-fic fr-dib lazyload" data-width="428" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0529/20220529133707107_66.gif" style="padding-bottom: 78.972%;"></p><h5>아파서 나도 모르게 놓쳐버린 손잡이! 자동리드줄 촬영하')
@@ -2443,7 +2440,7 @@ VALUES (81, '까마소', 'C5', '[맞춤조절 리드줄] 1.6m~4m 멀티 핸즈�
 || TO_CLOB('<p><u><strong>* 까마소 1640 리드줄 특허 출원, 무단 카피를 절대 금합니다.</strong></u></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.14', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (82, '오월의 고양이', 'C5', '[앵콜] 촘촘한 휠판, 매끄러운 바퀴레일 오월냥 원목 캣휠', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0609/20220609172859400_151376.jpg/wadiz/format/jpg/quality/80/optimize', '사냥놀이 20분 이상해줘도 지치지 않는 에너자이저 냥이 집사님들! 여기, 냥이 스스로 체력을 소진할 수 있는 캣휠이 있습니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="593" data-height="690" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0609/20220609175748526_93.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0609/20220609175748526_93.jpg/wadiz/format/jpg/quality/80/optimize"></p><p>열심히 놀아줘도 힘이 넘쳐서 우다다하는 냥이들!<br>힘이 넘치는 아이들은 어디로 튈지 몰라 집사들을 조마조마하게 만들죠ㅠ<br>집사의 체력은 한정적인데 아이들이 스스로 에너지를 소모했으면 좋겠다..!<br>하시는 집사분들 손~!</p><p>그런 분들께 제안합니다!<br><br></p><hr><p>')
+VALUES (81, '오월의 고양이', 'C5', '[앵콜] 촘촘한 휠판, 매끄러운 바퀴레일 오월냥 원목 캣휠', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0609/20220609172859400_151376.jpg/wadiz/format/jpg/quality/80/optimize', '사냥놀이 20분 이상해줘도 지치지 않는 에너자이저 냥이 집사님들! 여기, 냥이 스스로 체력을 소진할 수 있는 캣휠이 있습니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="593" data-height="690" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0609/20220609175748526_93.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0609/20220609175748526_93.jpg/wadiz/format/jpg/quality/80/optimize"></p><p>열심히 놀아줘도 힘이 넘쳐서 우다다하는 냥이들!<br>힘이 넘치는 아이들은 어디로 튈지 몰라 집사들을 조마조마하게 만들죠ㅠ<br>집사의 체력은 한정적인데 아이들이 스스로 에너지를 소모했으면 좋겠다..!<br>하시는 집사분들 손~!</p><p>그런 분들께 제안합니다!<br><br></p><hr><p>')
 || TO_CLOB('<img class="fr-fic fr-dib lazyload" data-width="551" data-height="1187" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610171748631_13.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 215.426%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="368" data-height="491" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610171912992_86.gif" style="padding-bottom: 133.424%;"></p><h5>아이가 스스로 힘을 소진할 수 있다면?!</h5><p><img class="fr-fic fr-dib lazyload"')
 || TO_CLOB(' data-width="551" data-height="298" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610174325090_49.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 54.0835%;"></p><h5>우리도 밤에 잠을 잘 수 있습니다.</h5><p><br></p><hr><h2><br></h2><h2>아이들이 쉽게 돌릴 수 있는 오월냥 캣휠,<br>장점을 한번 살펴볼까요?</h2><p><img class="fr-fic fr-dib lazyload" data-width="551" data-height="837" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610174546939_55.jpg/wadiz/format/jpg/quality/80/optimize" s')
 || TO_CLOB('tyle="padding-bottom: 151.906%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="368" data-height="654" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610174607821_8.gif" style="padding-bottom: 177.717%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="368" data-height="302" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610174615580_46.gif" style="padding-bottom: 82.0652%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="551" data-height=')
@@ -2454,11 +2451,11 @@ VALUES (82, '오월의 고양이', 'C5', '[앵콜] 촘촘한 휠판, 매끄러�
 || TO_CLOB('"></p><p><img class="fr-fic fr-dib lazyload" data-width="368" data-height="470" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610175327291_35.gif" style="padding-bottom: 127.717%;"></p><h5>오른쪽으로 돌리고~</h5><p><img class="fr-fic fr-dib lazyload" data-width="367" data-height="489" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0610/20220610175349755_11.gif" style="padding-bottom: 133.243%;"></p><h5>왼쪽으로 돌리고~</h5>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.08', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (83, '토드', 'C5', '"강아지도 보는 눈이 있다" | 이동가방과 패션의 경계를 허물다', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0515/20220515173105697_132664.jpg/wadiz/format/jpg/quality/80/optimize', '[TODD Bag] 세상에 없는 디자인으로 여러분의 반려생활을 토드와 함께하세요', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="7470" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174412337_71.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174412337_71.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="11627" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174400715_75.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1438.99%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="10628" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174356251_83.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1315.35%;"></p>
+VALUES (82, '토드', 'C5', '"강아지도 보는 눈이 있다" | 이동가방과 패션의 경계를 허물다', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0515/20220515173105697_132664.jpg/wadiz/format/jpg/quality/80/optimize', '[TODD Bag] 세상에 없는 디자인으로 여러분의 반려생활을 토드와 함께하세요', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="7470" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174412337_71.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174412337_71.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="11627" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174400715_75.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1438.99%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="10628" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531174356251_83.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1315.35%;"></p>
 ', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.14', 'RRRR-MM-DD'), to_date('2022.08.20', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (84, '주식회사 맥손', 'C5', '이제 모래 전쟁은 끝났다. 모래 꽉 잡는 모래 경찰ㅣ올바른 묘래매트', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0429/20220429232806394_143241.jpg/wadiz/format/jpg/quality/80/optimize', '[모래전쟁끝] FDA 등록 TPE 신소재를 사용해 만들어진 모래 잡는 묘래매트. 묘래박스로 잘 알려진 캣츠태그에서 집사가 직접 만들어 국내 생산합니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429222214663_36.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429222214663_36.gif"><img class="fr-fic fr-dib lazyloaded" data-width="609" data-height="198" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213152480_69.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green00')
+VALUES (83, '주식회사 맥손', 'C5', '이제 모래 전쟁은 끝났다. 모래 꽉 잡는 모래 경찰ㅣ올바른 묘래매트', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0429/20220429232806394_143241.jpg/wadiz/format/jpg/quality/80/optimize', '[모래전쟁끝] FDA 등록 TPE 신소재를 사용해 만들어진 모래 잡는 묘래매트. 묘래박스로 잘 알려진 캣츠태그에서 집사가 직접 만들어 국내 생산합니다.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429222214663_36.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429222214663_36.gif"><img class="fr-fic fr-dib lazyloaded" data-width="609" data-height="198" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213152480_69.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green00')
 || TO_CLOB('1/2022/0429/20220429213152480_69.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="495" data-height="438" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112959449_20.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516112959449_20.gif"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1322" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525134942660_77.gif" style="padding-bot')
 || TO_CLOB('tom: 163.614%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213314371_41.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213405465_33.gif" style="padding-bottom: 56.3333%;"><img data-fr-image-pasted="true" data-width="609" data-height="198" class="fr-fil fr-dib lazylo')
 || TO_CLOB('ad" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213348435_49.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 32.5123%;"><img data-fr-image-pasted="true" data-width="600" data-height="338" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429213212676_74.gif" style="padding-bottom: 56.3333%;"><img data-fr-image-pasted="true" data-width="609" data-height="198" class="fr-fic fr-dib lazyload" data-src="https://cdn')
@@ -2491,7 +2488,7 @@ VALUES (84, '주식회사 맥손', 'C5', '이제 모래 전쟁은 끝났다. 모
 || TO_CLOB(' 신경쓰지 않을 수가 없었습니다.</u></h3><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0429/20220429215545284_81.gif" style="padding-bottom: 56.3333%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.22', 'RRRR-MM-DD'), to_date('2022.08.30', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (85, '미우타임즈', 'C5', '[MEOWTIMES] 최초공개! 올리브오일로 정제한 친환경 그리스 모래', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0526/20220526141848236_146530.jpg/wadiz/format/jpg/quality/80/optimize', '📢미우타임즈 친환경 100% 그리스 벤토나이트 와디즈 첫 출시📢 먹는 것만큼 닿는 것도 중요하니까! 아이들에게 가장 중요한 화장실 모래를 친환경 모래로 바꿔보세요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-height="4266" data-width="640" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525144109382_9.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525144109382_9.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="462" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518133936162_63.gif" style="padding-bot')
+VALUES (84, '미우타임즈', 'C5', '[MEOWTIMES] 최초공개! 올리브오일로 정제한 친환경 그리스 모래', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0526/20220526141848236_146530.jpg/wadiz/format/jpg/quality/80/optimize', '📢미우타임즈 친환경 100% 그리스 벤토나이트 와디즈 첫 출시📢 먹는 것만큼 닿는 것도 중요하니까! 아이들에게 가장 중요한 화장실 모래를 친환경 모래로 바꿔보세요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-height="4266" data-width="640" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525144109382_9.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525144109382_9.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="462" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518133936162_63.gif" style="padding-bot')
 || TO_CLOB('tom: 72.1875%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="427" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518173341364_30.gif" style="padding-bottom: 66.7188%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="1813" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518133940440_32.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 283.281%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height')
 || TO_CLOB('="3454" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518133946069_70.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 539.688%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="298" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518134011935_35.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 46.5625%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="1058" data-src="https://cdn.wadiz.kr/ft/i')
 || TO_CLOB('mages/green001/2022/0518/20220518134016575_39.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 165.312%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="356" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518134020202_19.gif" style="padding-bottom: 55.625%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="1372" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0518/20220518134026087_9.jpg/wadiz/format/jpg/quality/80/opti')
@@ -2505,7 +2502,7 @@ VALUES (85, '미우타임즈', 'C5', '[MEOWTIMES] 최초공개! 올리브오일�
 || TO_CLOB('e" style="padding-bottom: 331.875%;"></p><hr><p><img class="fr-fic fr-dib fr-fil lazyload" data-height="178" data-width="640" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506162411880_12.gif" style="padding-bottom: 27.8125%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (86, '페르메스', 'C5', '츄르 남김없이 쭈-욱 ! [2세대 고정형 츄르급여템] 편하고 맛있게!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0425/20220425173421294_141122.jpg/wadiz/format/jpg/quality/80/optimize', '아직도 맨손으로 츄르 짜세요? <고정형 츄르급여템>으로 남김없이 쭈-욱 ! 😋 먹기 좋은 스푼 각도로 편하고 깔끔하게 츄르를 급여해보세요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="424" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428113941140_48.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428113941140_48.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="400" style="" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114057001_36.gif"')
+VALUES (85, '페르메스', 'C5', '츄르 남김없이 쭈-욱 ! [2세대 고정형 츄르급여템] 편하고 맛있게!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0425/20220425173421294_141122.jpg/wadiz/format/jpg/quality/80/optimize', '아직도 맨손으로 츄르 짜세요? <고정형 츄르급여템>으로 남김없이 쭈-욱 ! 😋 먹기 좋은 스푼 각도로 편하고 깔끔하게 츄르를 급여해보세요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="424" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428113941140_48.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428113941140_48.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="400" style="" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114057001_36.gif"')
 || TO_CLOB(' src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114057001_36.gif"></p><blockquote class="type-default"><p>남김없이 <strong>쭈-욱 !</strong></p></blockquote><p><img data-fr-image-pasted="true" data-width="808" data-height="467" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428125434591_75.gif" style="padding-bottom: 57.797%;"></p><blockquote class="type-default"><p><strong><u>이중 고정 장치</u></strong>로<br>아래서부터 끌어올려주는<u>&nbsp;2세대 츄르 급여템 :)</')
 || TO_CLOB('u></p></blockquote><p></p><p><img data-fr-image-pasted="true" data-width="808" data-height="516" class="fr-fil fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428125247487_87.gif" style="padding-bottom: 63.8614%;"></p><p></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="341" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114135953_18.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 42.203%;"></p><p><img')
 || TO_CLOB(' class="fr-fic fr-dib lazyload" data-width="808" data-height="516" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114147126_6.gif" style="padding-bottom: 63.8614%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3753" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0428/20220428114209732_25.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 464.48%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="538" d')
@@ -2537,7 +2534,7 @@ VALUES (86, '페르메스', 'C5', '츄르 남김없이 쭈-욱 ! [2세대 고정
 || TO_CLOB('80/optimize" style="padding-bottom: 58.1683%;"></h3>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.20', 'RRRR-MM-DD'), to_date('2022.07.30', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (87, '무기앤', 'C5', '[-10도 마법] 아이스팩 쿨링 애견 텐트. 댕댕이 여름 더위 걱정마세요', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525172642693_148391.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑, 피크닉, 실내 어디서나 사용할 수 있는 반려동물 쿨링 텐트. 그늘막과 하단부 아이스팩이 위 아래로 열을 차단해서 댕댕이들이 시원하게! 이제 에어컨은 끄고 나가주세요.', TO_CLOB('<h5><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="379" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133341996_63.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133341996_63.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="350" data-height="350" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514233407484_63.gif" style="" src="')
+VALUES (86, '무기앤', 'C5', '[-10도 마법] 아이스팩 쿨링 애견 텐트. 댕댕이 여름 더위 걱정마세요', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525172642693_148391.jpg/wadiz/format/jpg/quality/80/optimize', '캠핑, 피크닉, 실내 어디서나 사용할 수 있는 반려동물 쿨링 텐트. 그늘막과 하단부 아이스팩이 위 아래로 열을 차단해서 댕댕이들이 시원하게! 이제 에어컨은 끄고 나가주세요.', TO_CLOB('<h5><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="379" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133341996_63.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133341996_63.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="350" data-height="350" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514233407484_63.gif" style="" src="')
 || TO_CLOB('https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514233407484_63.gif"><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="339" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133535837_8.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520133535837_8.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="400" data-height="225" data-src="https://cdn.wadiz.kr')
 || TO_CLOB('/ft/images/green001/2022/0514/20220514234700061_41.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514234700061_41.gif"></h5><p><img class="fr-fic fr-dib lazyloaded" data-width="480" data-height="270" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514234820898_33.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0514/20220514234820898_33.gif"></p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="568" data-s')
 || TO_CLOB('rc="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520134100323_29.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520134100323_29.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-height="1034" data-width="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516170625041_95.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.97%;"></p><h5>이미 잘 아셨겠지만, 우리 댕댕이들은')
@@ -2570,7 +2567,7 @@ VALUES (87, '무기앤', 'C5', '[-10도 마법] 아이스팩 쿨링 애견 텐�
 || TO_CLOB('구성을 보여드리기 위해 직접 올라갔어요. 키돌이가 올라가도 거뜬한 튼튼함이죠? 자꾸만 올라가서 쉬려고 하는데 아주 약간 작은게 귀여워요ㅎㅎㅎ 그래도 키돌이 같은 대형견은 텐트 높이까지 고려해 추천드리는 사이즈는 아닙니다. 사이즈가 궁금하신 보호자님은 꼭 고객센터에 문의해주세요.(촬영제품은 M사이즈 입니다.)</h5>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (88, '(주)울림인터렉티브', 'C5', '[LED 5가지모드] 야간 산책을 안전하고 즐겁게! "화이트LED하네스"', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0506/20220506181319679_148205.jpg/wadiz/format/jpg/quality/80/optimize', '우리 아이의 야간 산책에 없어서는 안 될 필수품! 화이트 LED 하네스를 소개합니다!!!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="1271" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161127838_52.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161127838_52.gif"></p><p><br></p><h3><strong><u>비 오는 날</u></strong> 혹은 <strong><u>야간</u></strong>에도</h3><h3>안전하고 즐거운 산책을 하고 싶은 서포터분들을 위해 준비한 리워드입니다.</h3><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="1658" data-src="https://cdn.wa')
+VALUES (87, '(주)울림인터렉티브', 'C5', '[LED 5가지모드] 야간 산책을 안전하고 즐겁게! "화이트LED하네스"', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0506/20220506181319679_148205.jpg/wadiz/format/jpg/quality/80/optimize', '우리 아이의 야간 산책에 없어서는 안 될 필수품! 화이트 LED 하네스를 소개합니다!!!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="1271" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161127838_52.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161127838_52.gif"></p><p><br></p><h3><strong><u>비 오는 날</u></strong> 혹은 <strong><u>야간</u></strong>에도</h3><h3>안전하고 즐거운 산책을 하고 싶은 서포터분들을 위해 준비한 리워드입니다.</h3><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="630" data-height="1658" data-src="https://cdn.wa')
 || TO_CLOB('diz.kr/ft/images/green001/2022/0510/20220510161149817_34.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161149817_34.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="2542" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161159079_12.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 403.492%;"></p><p><img class="fr-fic fr-dib lazyl')
 || TO_CLOB('oad" data-width="630" data-height="1299" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161226283_38.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 206.19%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="1658" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510161235450_34.gif" style="padding-bottom: 263.175%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="359" data-src="https://cdn.wadi')
 || TO_CLOB('z.kr/ft/images/green001/2022/0510/20220510161246391_12.gif" style="padding-bottom: 56.9841%;"></p><blockquote class="type-default"><p>하네스 가슴에 달린<strong>&nbsp;</strong><strong>LED조명</strong></p></blockquote><p><br></p><p><strong>불빛</strong>으로 강아지의 <strong>위치</strong>를 알려주기 때문에 충돌을 피할 수 있습니다.</p><p><u>야간 산책 시 위험한 상황에서 우리 아이를 지켜주는</u> 역할을 합니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="1066" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0510/20220510')
@@ -2588,7 +2585,7 @@ VALUES (88, '(주)울림인터렉티브', 'C5', '[LED 5가지모드] 야간 산�
 || TO_CLOB('ht="450" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526162613845_17.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.07', 'RRRR-MM-DD'), to_date('2022.07.18', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (89, '멍멍하누', 'C5', '[기호성최강자]450마리 강아지가 선택한 수제한우간식', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602134613422_145263.png/wadiz/format/jpg/quality/80/optimize', '간, 허파, 우신, 우족, 발톱까지 맛있는간식만 싹! 모아서 세트로 준비했다! 지금 와디즈에서 만나보세요!', TO_CLOB('<blockquote class="type-default"><p><u>!!멍멍하누 첫 펀딩 <strong>935%&nbsp;</strong>달성!!</u><br>서포터님들의 많은 사랑 덕에<br>돌아올 수 있게 되었습니다.</p></blockquote><h3><img class="fr-fic fr-dib lazyloaded" data-width="447" data-height="626" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516153533051_39.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516153533051_39.jpg/wadiz/format/jpg/quality/80/optimize"> <img class="fr-fic fr-dib lazyl')
+VALUES (88, '멍멍하누', 'C5', '[기호성최강자]450마리 강아지가 선택한 수제한우간식', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602134613422_145263.png/wadiz/format/jpg/quality/80/optimize', '간, 허파, 우신, 우족, 발톱까지 맛있는간식만 싹! 모아서 세트로 준비했다! 지금 와디즈에서 만나보세요!', TO_CLOB('<blockquote class="type-default"><p><u>!!멍멍하누 첫 펀딩 <strong>935%&nbsp;</strong>달성!!</u><br>서포터님들의 많은 사랑 덕에<br>돌아올 수 있게 되었습니다.</p></blockquote><h3><img class="fr-fic fr-dib lazyloaded" data-width="447" data-height="626" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516153533051_39.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0516/20220516153533051_39.jpg/wadiz/format/jpg/quality/80/optimize"> <img class="fr-fic fr-dib lazyl')
 || TO_CLOB('oad" data-width="500" data-height="700" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511131549703_57.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 140%;"></h3><p><img class="fr-fic fr-dib lazyload" data-width="713" data-height="192" style="width: 713px; padding-bottom: 26.9285%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105530600_1.png/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="600" data-')
 || TO_CLOB('height="338" style="width: 602px; padding-bottom: 56.3333%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419105655301_82.gif"><img class="fr-fic fr-dib lazyload" data-width="711" data-height="191" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419111027075_54.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 26.8636%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" style="width: 602px; padding-bottom:')
 || TO_CLOB(' 56.3333%;" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419111154168_34.gif"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="217" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419111218423_52.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 26.8564%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0419/20220419111243997_54.gif" style="pad')
@@ -2607,7 +2604,7 @@ VALUES (89, '멍멍하누', 'C5', '[기호성최강자]450마리 강아지가 �
 || TO_CLOB('dn.wadiz.kr/ft/images/green001/2022/0419/20220419113908305_79.gif" style="padding-bottom: 56.3333%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.26', 'RRRR-MM-DD'), to_date('2022.08.29', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (90, '아로필(워터스)', 'C5', '물 싫어하는 댕댕이도 릴렉스 시켜주는! 샤워독 반려견전용 비타민C샤워필터', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0422/20220422124538118_140685.jpg/wadiz/format/jpg/quality/80/optimize', '샤워독!댕댕 비타민C샤워필터! 우리댕댕이가 좋아하는 청국장 지린내향으로 목욕/샤워가 좋아지게 되는 신기술 릴렉스필터. 프랑스천연 장미오일과 아로필 스페셜 캄(calm)오일의 만남', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="575" data-height="224" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509104605160_11.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509104605160_11.gif"><img class="fr-fic fr-dib lazyloaded" data-width="646" data-height="179" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422114030654_32.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green00')
+VALUES (89, '아로필(워터스)', 'C5', '물 싫어하는 댕댕이도 릴렉스 시켜주는! 샤워독 반려견전용 비타민C샤워필터', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0422/20220422124538118_140685.jpg/wadiz/format/jpg/quality/80/optimize', '샤워독!댕댕 비타민C샤워필터! 우리댕댕이가 좋아하는 청국장 지린내향으로 목욕/샤워가 좋아지게 되는 신기술 릴렉스필터. 프랑스천연 장미오일과 아로필 스페셜 캄(calm)오일의 만남', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="575" data-height="224" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509104605160_11.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509104605160_11.gif"><img class="fr-fic fr-dib lazyloaded" data-width="646" data-height="179" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422114030654_32.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green00')
 || TO_CLOB('1/2022/0422/20220422114030654_32.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422133553872_38.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422133553872_38.gif"></p><h5><img class="fr-fic fr-dib lazyloaded" data-width="750" data-height="127" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0425/20220425100851801_5.png/wadiz/forma')
 || TO_CLOB('t/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0425/20220425100851801_5.png/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyloaded" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422133821907_92.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422133821907_92.gif"><img class="fr-fic fr-dib lazyload" data-width="750" data-height="128" data-src="https://cdn.wadiz')
 || TO_CLOB('.kr/ft/images/green001/2022/0425/20220425100911047_80.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 17.0667%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422134002206_18.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="750" data-height="128" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0425/20220425100945801_64.png/wadiz/format/jpg/qualit')
@@ -2627,16 +2624,16 @@ VALUES (90, '아로필(워터스)', 'C5', '물 싫어하는 댕댕이도 릴렉�
 || TO_CLOB('le="padding-bottom: 66.7183%;"><img class="fr-fic fr-dib lazyload" data-width="638" data-height="425" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0422/20220422122617741_31.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.6144%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="558" data-height="480" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0509/20220509164216942_19.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 86.0215%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.29', 'RRRR-MM-DD'), to_date('2022.09.05', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (91, '프리원', 'C5', '간단조립 가성비짱 양이해먹', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524105147914_149213.jpg/wadiz/format/jpg/quality/80/optimize', '프리원 가구 는 한 가족 이 된 반려동물을 위해 편리함 과 안정성 가성비 까지 생각하며 합리적으로 접근하여 개발 제작하는 회사입니다.', '<p><img class="fr-fic fr-dib lazyloaded" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101033449_1.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101033449_1.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3><strong><br></strong></h3><p>직접 고양이를 키워보니 자기만의 공간이 필요 하다는 걸 느꼈어요</p><p>영역동물 이라 자신만의 공간을 즐기면서 은근슬쩍 집사에게 다가와</p><p>사랑을 표현하는 매력적인 모습에 반하지 않을 수가 없죠&nbsp;</p><p>그래서 휴식에 필요한 해먹 을 저렴하게 부담 없이 드리기 위해 준비했어요~^^</p><h3><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101232397_1.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></h3><p>고급스러운 모양으로 만들어진 고양이 해먹 침대 포근함을 우리 냥이에게 선물해주세요.&nbsp;<img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101427106_94.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>부드럽게 라운딩 처리를 해서 안전하게 사용 하 실수 있습니다.</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101551710_74.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>깔끔하고 튼튼한 냥이 해먹</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101708087_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101715416_88.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>고양이 해먹, 휴식공간 &nbsp;가볍고 공기가 잘 통하는 원단으로 손쉬운 세척으로도 &nbsp;위생적이며 누구나 손쉽게 조립/설치 하실 수 있습니다.</p><p><strong><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101505258_44.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></strong></p><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 사이즈 : 가로 -590 세로-405 높이-200 &nbsp;</h3><p>‘측정하는 방법에 따라 1-2cm 정도의 오차가 있을 수 있습니다.’&nbsp;</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="307" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524102340745_73.gif" style="padding-bottom: 50.0816%;"></p><p>자작나무가 아무리 뛰어나다 해도 조금은 불안 하실까봐,</p><p>집사님 들 안심하시라고 UV발수 코팅 을 했어요!</p><p>견고한 상태 그대로 오래오래 사용할 수 있답니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="1066" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524102946914_0.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 173.899%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="435" data-height="578" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524105601240_81.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 132.874%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'N', 0);
+VALUES (90, '프리원', 'C5', '간단조립 가성비짱 양이해먹', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0524/20220524105147914_149213.jpg/wadiz/format/jpg/quality/80/optimize', '프리원 가구 는 한 가족 이 된 반려동물을 위해 편리함 과 안정성 가성비 까지 생각하며 합리적으로 접근하여 개발 제작하는 회사입니다.', '<p><img class="fr-fic fr-dib lazyloaded" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101033449_1.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101033449_1.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3><strong><br></strong></h3><p>직접 고양이를 키워보니 자기만의 공간이 필요 하다는 걸 느꼈어요</p><p>영역동물 이라 자신만의 공간을 즐기면서 은근슬쩍 집사에게 다가와</p><p>사랑을 표현하는 매력적인 모습에 반하지 않을 수가 없죠&nbsp;</p><p>그래서 휴식에 필요한 해먹 을 저렴하게 부담 없이 드리기 위해 준비했어요~^^</p><h3><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101232397_1.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></h3><p>고급스러운 모양으로 만들어진 고양이 해먹 침대 포근함을 우리 냥이에게 선물해주세요.&nbsp;<img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101427106_94.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>부드럽게 라운딩 처리를 해서 안전하게 사용 하 실수 있습니다.</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101551710_74.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>깔끔하고 튼튼한 냥이 해먹</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101708087_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101715416_88.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></p><p>고양이 해먹, 휴식공간 &nbsp;가볍고 공기가 잘 통하는 원단으로 손쉬운 세척으로도 &nbsp;위생적이며 누구나 손쉽게 조립/설치 하실 수 있습니다.</p><p><strong><img class="fr-fic fr-dib lazyload" data-width="613" data-height="409" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524101505258_44.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 66.721%;"></strong></p><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 사이즈 : 가로 -590 세로-405 높이-200 &nbsp;</h3><p>‘측정하는 방법에 따라 1-2cm 정도의 오차가 있을 수 있습니다.’&nbsp;</p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="307" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524102340745_73.gif" style="padding-bottom: 50.0816%;"></p><p>자작나무가 아무리 뛰어나다 해도 조금은 불안 하실까봐,</p><p>집사님 들 안심하시라고 UV발수 코팅 을 했어요!</p><p>견고한 상태 그대로 오래오래 사용할 수 있답니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="613" data-height="1066" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524102946914_0.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 173.899%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="435" data-height="578" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524105601240_81.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 132.874%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (92, '(주)대형디앤씨', 'C5', '[멍냥이 더위해결] 쿨링과 브러싱을 동시에, 두 배 더 시원한 ''애니쿨''', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0520/20220520144114567_149476.jpg/wadiz/format/jpg/quality/80/optimize', '[울애기들 땀구멍도 없는데 여름은 너무 더워요] #축 쳐져있는 우리냥이 아픈 건 아닌지 #멍이는 또 왜 신발장 타일 위에서 헥헥대고 있는지, 애니쿨 하나로 쿨링과 브러싱 해결!', '<p><img class="fr-fic fr-dib lazyloaded" data-width="434" data-height="1601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101048551_25.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101048551_25.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="2025" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101114079_18.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 466.59%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="172" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134853167_5.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 21.2608%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="480" data-height="480" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134902412_80.gif" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="512" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134927324_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 63.288%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="349" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134947896_98.gif" style="padding-bottom: 56.2903%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="349" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134954986_47.gif" style="padding-bottom: 56.2903%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="918" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101138031_77.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 211.521%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="4217" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517135024275_55.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 521.261%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="1351" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101216421_17.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 311.29%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="227" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101438847_45.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 52.3041%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="347" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101445304_95.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'N', 0);
+VALUES (91, '(주)대형디앤씨', 'C5', '[멍냥이 더위해결] 쿨링과 브러싱을 동시에, 두 배 더 시원한 ''애니쿨''', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0520/20220520144114567_149476.jpg/wadiz/format/jpg/quality/80/optimize', '[울애기들 땀구멍도 없는데 여름은 너무 더워요] #축 쳐져있는 우리냥이 아픈 건 아닌지 #멍이는 또 왜 신발장 타일 위에서 헥헥대고 있는지, 애니쿨 하나로 쿨링과 브러싱 해결!', '<p><img class="fr-fic fr-dib lazyloaded" data-width="434" data-height="1601" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101048551_25.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101048551_25.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="2025" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101114079_18.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 466.59%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="172" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134853167_5.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 21.2608%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="480" data-height="480" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134902412_80.gif" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="512" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134927324_21.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 63.288%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="349" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134947896_98.gif" style="padding-bottom: 56.2903%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="620" data-height="349" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517134954986_47.gif" style="padding-bottom: 56.2903%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="918" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101138031_77.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 211.521%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="4217" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517135024275_55.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 521.261%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="1351" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101216421_17.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 311.29%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="227" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101438847_45.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 52.3041%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="434" data-height="347" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0525/20220525101445304_95.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (93, '드로잉베이비', 'C5', '냉감패드 강냥이 Cool  패드 방석', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0512/20220512151526649_147608.jpg/wadiz/format/jpg/quality/80/optimize', '냉감패드 강냥이 Cool 패드 방석', '<p><strong><img class="fr-fic fr-dib lazyloaded" data-width="384" data-height="216" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522105705105_34.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522105705105_34.gif"></strong></p><p><br><br></p><h3>Q. 안녕하세요, 메이커님. 리워드를 준비하시게 된 배경을 들려주세요.</h3><p><img class="fr-fic fr-dib lazyloaded" data-width="446" data-height="1858" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203653966_68.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203653966_68.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3>Q. 리워드가 어떻게 생겼는지 궁금합니다. 이번에 소개하시는 리워드들의 사진을 각각 보여 주세요.</h3><p><img class="fr-fic fr-dib lazyload" data-width="547" data-height="5967" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519002500949_84.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1090.86%;"></p><h3>Q. 메이커님의 리워드를 의미 있게 만들어 주는 특징은 무엇인가요? 적어도 세 가지를 설명해 주시면 좋겠어요.</h3><p><img class="fr-fic fr-dib lazyload" data-width="446" data-height="5705" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522154414132_60.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1279.15%;"></p><h3>Q. 혹시 더 소개하고 싶은 리워드 특징이 있나요? 자유롭게 이야기해 주세요.</h3><ul><li>각 특징을 잘 보여 줄 수 있는 사진도 보고 싶습니다.</li></ul><p><img class="fr-fic fr-dib lazyload" data-width="446" data-height="6109" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203746519_12.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1369.73%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (92, '드로잉베이비', 'C5', '냉감패드 강냥이 Cool  패드 방석', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0512/20220512151526649_147608.jpg/wadiz/format/jpg/quality/80/optimize', '냉감패드 강냥이 Cool 패드 방석', '<p><strong><img class="fr-fic fr-dib lazyloaded" data-width="384" data-height="216" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522105705105_34.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522105705105_34.gif"></strong></p><p><br><br></p><h3>Q. 안녕하세요, 메이커님. 리워드를 준비하시게 된 배경을 들려주세요.</h3><p><img class="fr-fic fr-dib lazyloaded" data-width="446" data-height="1858" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203653966_68.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203653966_68.jpg/wadiz/format/jpg/quality/80/optimize"></p><h3>Q. 리워드가 어떻게 생겼는지 궁금합니다. 이번에 소개하시는 리워드들의 사진을 각각 보여 주세요.</h3><p><img class="fr-fic fr-dib lazyload" data-width="547" data-height="5967" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0519/20220519002500949_84.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1090.86%;"></p><h3>Q. 메이커님의 리워드를 의미 있게 만들어 주는 특징은 무엇인가요? 적어도 세 가지를 설명해 주시면 좋겠어요.</h3><p><img class="fr-fic fr-dib lazyload" data-width="446" data-height="5705" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0522/20220522154414132_60.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1279.15%;"></p><h3>Q. 혹시 더 소개하고 싶은 리워드 특징이 있나요? 자유롭게 이야기해 주세요.</h3><ul><li>각 특징을 잘 보여 줄 수 있는 사진도 보고 싶습니다.</li></ul><p><img class="fr-fic fr-dib lazyload" data-width="446" data-height="6109" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0523/20220523203746519_12.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1369.73%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.06.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (94, '봄날의 강아지', 'C5', '[댕댕이 언니들 필수템] 장난감과 노즈워크를 하나로! 언니의 파우치', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0612/20220612112800781_151588.jpg/wadiz/format/jpg/quality/80/optimize', '귀여운 디자인의 노즈워크 장난감에 노즈워크 매트를 담았습니다. 댕댕이 언니들 필수템! "언니의 파우치" 하나만 있으면 심심하지 않아요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150421648_20.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150421648_20.png/wadiz/format/jpg/quality/80/optimize"></p><h5>* 사용자의 모니터 사양 및 밝기에 따라 실제 제품 색상과 차이가 있을 수 있습니다.&nbsp;</h5><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/')
+VALUES (93, '봄날의 강아지', 'C5', '[댕댕이 언니들 필수템] 장난감과 노즈워크를 하나로! 언니의 파우치', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0612/20220612112800781_151588.jpg/wadiz/format/jpg/quality/80/optimize', '귀여운 디자인의 노즈워크 장난감에 노즈워크 매트를 담았습니다. 댕댕이 언니들 필수템! "언니의 파우치" 하나만 있으면 심심하지 않아요!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150421648_20.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150421648_20.png/wadiz/format/jpg/quality/80/optimize"></p><h5>* 사용자의 모니터 사양 및 밝기에 따라 실제 제품 색상과 차이가 있을 수 있습니다.&nbsp;</h5><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/')
 || TO_CLOB('images/green001/2022/0612/20220612150435686_78.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150446416_80.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"></p><h3><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/202206121504')
 || TO_CLOB('54046_33.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"></h3><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150500909_72.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"></p><h3><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150511218_5.png/wadiz/format/jpg/q')
 || TO_CLOB('uality/80/optimize" style="padding-bottom: 127.89%;"></h3><p><img class="fr-fic fr-dib lazyload" data-width="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612150521511_44.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="516" data-height="387" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612165607401_24.gif" style="padding-bottom: 75%;"></p><p><br></p><p><')
@@ -2647,7 +2644,7 @@ VALUES (94, '봄날의 강아지', 'C5', '[댕댕이 언니들 필수템] 장난
 || TO_CLOB('dth="545" data-height="697" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0612/20220612175830583_9.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 127.89%;"></h3>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:13', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.16', 'RRRR-MM-DD'), to_date('2022.07.19', 'RRRR-MM-DD'), 'N', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (95, '주식회사 디자인앤라이프스토리', 'C6', '더 커졌다ㅣ무쇠 미니냄비와 절구 세트를 하나로, 3만원대로 알차게!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519180106801_149645.jpg/wadiz/format/jpg/quality/80/optimize', '더 넓어지고 커진 1인용 무쇠 냄비 절구세트 ! 밥도 되고 빵도 되고 국물도 되고 튀김도 되고 구이도 되고 절구까지 만능으로', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="814" data-height="398" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140137947_10.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140137947_10.jpg/wadiz/format/jpg/quality/80/optimize"><img data-fr-image-pasted="true" data-width="808" data-height="404" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/gree')
+VALUES (94, '주식회사 디자인앤라이프스토리', 'C6', '더 커졌다ㅣ무쇠 미니냄비와 절구 세트를 하나로, 3만원대로 알차게!', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519180106801_149645.jpg/wadiz/format/jpg/quality/80/optimize', '더 넓어지고 커진 1인용 무쇠 냄비 절구세트 ! 밥도 되고 빵도 되고 국물도 되고 튀김도 되고 구이도 되고 절구까지 만능으로', TO_CLOB('<p><img data-fr-image-pasted="true" data-width="814" data-height="398" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140137947_10.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140137947_10.jpg/wadiz/format/jpg/quality/80/optimize"><img data-fr-image-pasted="true" data-width="808" data-height="404" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/gree')
 || TO_CLOB('n001/2022/0307/20220307140204434_93.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140204434_93.gif"><img data-fr-image-pasted="true" data-width="808" data-height="284" class="fr-fic fr-dib lazyloaded" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140221415_38.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307140221415_38.jpg/wadiz/format/jpg/quality/80/optimize"><img data-fr-image')
 || TO_CLOB('-pasted="true" data-width="445" data-height="223" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307143333121_24.gif" style="padding-bottom: 50.1124%;"><img data-fr-image-pasted="true" data-width="445" data-height="218" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307143341028_18.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 48.9888%;"><img data-fr-image-pasted="true" data-width')
 || TO_CLOB('="445" data-height="223" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307143347552_53.gif" style="padding-bottom: 50.1124%;"><img data-fr-image-pasted="true" data-width="445" data-height="218" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0307/20220307143357589_28.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 48.9888%;"><img data-fr-image-pasted="true" data-width="445" data-height="223" ')
@@ -2679,7 +2676,7 @@ VALUES (95, '주식회사 디자인앤라이프스토리', 'C6', '더 커졌다�
 || TO_CLOB('pg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 207.178%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.07.16 00:00:12', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.28', 'RRRR-MM-DD'), to_date('2022.07.30', 'RRRR-MM-DD'), to_date('2022.08.05', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (96, '주식회사 아이소라이프', 'C6', '[글로벌 2억] 바른자세 헬스케어 기업이 작심하고 만든 첫 개념베개', 2000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0504/20220504021950001_143885.png/wadiz/format/jpg/quality/80/optimize', '바른자세 헬스케어 기업이 만든 첫번째 개념베개', TO_CLOB('<h2><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="455" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531132723808_67.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531132723808_67.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p></h2><p><br></p><p><br><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="542" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520')
+VALUES (95, '주식회사 아이소라이프', 'C6', '[글로벌 2억] 바른자세 헬스케어 기업이 작심하고 만든 첫 개념베개', 2000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0504/20220504021950001_143885.png/wadiz/format/jpg/quality/80/optimize', '바른자세 헬스케어 기업이 만든 첫번째 개념베개', TO_CLOB('<h2><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="455" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531132723808_67.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531132723808_67.png/wadiz/format/jpg/quality/80/optimize"></p><p><br></p></h2><p><br></p><p><br><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="542" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520')
 || TO_CLOB('/20220520162822567_11.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520162822567_11.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="148" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520163154061_98.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 18.3168%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="268" dat')
 || TO_CLOB('a-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526155748261_41.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 33.1683%;"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="284" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520163224039_86.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 35.1485%;"></p><p><br></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="8')
 || TO_CLOB('08" data-height="327" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526155820887_17.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 40.4703%;"></p><p><br></p><h3><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520172806122_15.gif" style="padding-bottom: 56.3333%;"></h3><h3><p><br></p><p><br></p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="336" data-src=')
@@ -2699,7 +2696,7 @@ VALUES (96, '주식회사 아이소라이프', 'C6', '[글로벌 2억] 바른자
 || TO_CLOB('ze" style="padding-bottom: 86.7574%;"></h3><h3><br></h3><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="162" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520174350892_70.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 20.0495%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:11', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.07.10', 'RRRR-MM-DD'), to_date('2022.07.12', 'RRRR-MM-DD'), to_date('2022.07.15', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (97, '락앤락', 'C6', '[락앤락] 플레이팅 자동 완성? 꽃처럼 아름다운 통 3중 스텐 쿡웨어', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0531/20220531122951550_148355.jpg/wadiz/format/jpg/quality/80/optimize', '스텐이 예쁘지 않다는 편견을 없앴다. 우리집 식탁에 핀 락앤락 가드니아', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="640" data-height="2029" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144207174_60.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144207174_60.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="3730" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144332747_38.jpg/wadiz/format/jpg')
+VALUES (96, '락앤락', 'C6', '[락앤락] 플레이팅 자동 완성? 꽃처럼 아름다운 통 3중 스텐 쿡웨어', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0531/20220531122951550_148355.jpg/wadiz/format/jpg/quality/80/optimize', '스텐이 예쁘지 않다는 편견을 없앴다. 우리집 식탁에 핀 락앤락 가드니아', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="640" data-height="2029" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144207174_60.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144207174_60.jpg/wadiz/format/jpg/quality/80/optimize"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="3730" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0531/20220531144332747_38.jpg/wadiz/format/jpg')
 || TO_CLOB('/quality/80/optimize" style="padding-bottom: 582.812%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530180041569_94.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="640" data-height="157" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530184235474_42.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 24.5312%;"><img data-fr-image-pasted')
 || TO_CLOB('="true" data-width="642" data-height="252" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530180119278_84.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 39.2523%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530183006459_47.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="642" data-height')
 || TO_CLOB('="240" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530180232577_8.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 37.3832%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530180303684_6.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="642" data-height="265" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/2022053018032593')
@@ -2720,10 +2717,10 @@ VALUES (97, '락앤락', 'C6', '[락앤락] 플레이팅 자동 완성? 꽃처�
 || TO_CLOB('a-height="1442" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530185404823_2.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></u></strong></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:10', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (98, '내집의정석', 'C6', '알래스카를 내품에 쏘옥~!! So~Cool 냉감 바디 쿠션 & 베개커버', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0608/20220608122517953_150458.png/wadiz/format/jpg/quality/80/optimize', '냉기를 머금은 쏘옥 냉감 바디필로우를 내품에 쏘옥 !! 만지는 순간 시원함을 넘어 느껴지는 차가움에 올 여름 무더위 걱정이 싹 사라져요 ~!!', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152558870_56.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152558870_56.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3100" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152610211_16.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 383.663%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="4416" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152624792_5.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 546.535%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="7234" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152636051_13.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 895.297%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152646665_65.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 639.48%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152655084_52.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 639.48%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="9301" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152702615_16.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1151.11%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2259" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152714427_69.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 279.579%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3288" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152730265_32.png/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:09', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (97, '내집의정석', 'C6', '알래스카를 내품에 쏘옥~!! So~Cool 냉감 바디 쿠션 & 베개커버', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0608/20220608122517953_150458.png/wadiz/format/jpg/quality/80/optimize', '냉기를 머금은 쏘옥 냉감 바디필로우를 내품에 쏘옥 !! 만지는 순간 시원함을 넘어 느껴지는 차가움에 올 여름 무더위 걱정이 싹 사라져요 ~!!', '<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152558870_56.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152558870_56.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3100" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152610211_16.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 383.663%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="4416" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152624792_5.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 546.535%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="7234" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152636051_13.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 895.297%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152646665_65.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 639.48%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5167" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152655084_52.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 639.48%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="9301" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152702615_16.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 1151.11%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="2259" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152714427_69.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 279.579%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3288" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0614/20220614152730265_32.png/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:09', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (99, '코젠트(cogent)', 'C6', '올 여름휴가 술자리를 책임 질! 목숨을 건 느와르 술게임 ''만취룰렛''', 2000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0523/20220523163956411_148347.jpg/wadiz/format/jpg/quality/80/optimize', '스타토왕국 최고의 포도 생산지인 스칠라의 포도밭 경영권을 두고 4대 마피아 보스들의 위험 천만한 소주룰렛 게임이 시작된다. 목숨을 건 술게임에서 최후의 생존자는 누가 될것인가.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2675" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527113940032_35.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527113940032_35.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114324684_98.gif" style="pa')
+VALUES (98, '코젠트(cogent)', 'C6', '올 여름휴가 술자리를 책임 질! 목숨을 건 느와르 술게임 ''만취룰렛''', 2000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0523/20220523163956411_148347.jpg/wadiz/format/jpg/quality/80/optimize', '스타토왕국 최고의 포도 생산지인 스칠라의 포도밭 경영권을 두고 4대 마피아 보스들의 위험 천만한 소주룰렛 게임이 시작된다. 목숨을 건 술게임에서 최후의 생존자는 누가 될것인가.', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2675" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527113940032_35.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527113940032_35.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114324684_98.gif" style="pa')
 || TO_CLOB('dding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114008485_81.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114416114_48.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src')
 || TO_CLOB('="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114420016_66.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527135257624_53.gif" style="padding-bottom: 56.3333%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="4681" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527114612352_88.jpg/wadiz/format/jpg/quality/8')
 || TO_CLOB('0/optimize" style="padding-bottom: 579.332%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="6698" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0513/20220513192117841_18.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 828.96%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="5400" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517182820309_29.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 668.317%')
@@ -2742,7 +2739,7 @@ VALUES (99, '코젠트(cogent)', 'C6', '올 여름휴가 술자리를 책임 질
 || TO_CLOB('style="padding-bottom: 315.223%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="4301" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527141054710_43.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 532.302%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:08', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.09.10', 'RRRR-MM-DD'), to_date('2022.09.12', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (100, '미우크굿즈', 'C6', '[라탄 DIY가방]여름에 흔한 라탄은 싫죠? 내가 만드는 스페셜 라탄백!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0614/20220614172459661_148530.jpg/wadiz/format/jpg/quality/80/optimize', '세상에서 하나뿐인 내가 만든 라탄가방!가벼우면서도 고급스러운 디자인과 구성품으로 만들 수 있는 타탄(Tartan) 라탄 가방만들기 DIY키트', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="685" data-height="571" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084728658_43.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084728658_43.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="685" data-height="827" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084946437_23.jpg/wadiz/for')
+VALUES (99, '미우크굿즈', 'C6', '[라탄 DIY가방]여름에 흔한 라탄은 싫죠? 내가 만드는 스페셜 라탄백!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0614/20220614172459661_148530.jpg/wadiz/format/jpg/quality/80/optimize', '세상에서 하나뿐인 내가 만든 라탄가방!가벼우면서도 고급스러운 디자인과 구성품으로 만들 수 있는 타탄(Tartan) 라탄 가방만들기 DIY키트', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="685" data-height="571" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084728658_43.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084728658_43.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyloaded" data-width="685" data-height="827" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084946437_23.jpg/wadiz/for')
 || TO_CLOB('mat/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084946437_23.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="400" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0528/20220528084750231_14.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 58.3942%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src=')
 || TO_CLOB('"https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520083018984_55.gif" style="padding-bottom: 56.3333%;"><img class="fr-fic fr-dib lazyload" data-width="685" data-height="1656" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524142401183_74.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 241.752%;"><img class="fr-fic fr-dib lazyload" data-width="600" data-height="338" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524142707534_24.gif" sty')
 || TO_CLOB('le="padding-bottom: 56.3333%;"></p><blockquote class="type-default"><p>펀딩하시면 <strong>튜토리얼 영상</strong>을 보실 수 있는 <strong>큐알코드 종이</strong>를 동봉해서 보내드립니다.</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="685" data-height="813" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0524/20220524143330040_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 118.686%;"><img class="fr-fic fr-dib lazyload" data-width="685" data-height="375" data-src="https://cdn.wadiz.kr/ft')
@@ -2755,7 +2752,7 @@ VALUES (100, '미우크굿즈', 'C6', '[라탄 DIY가방]여름에 흔한 라탄
 || TO_CLOB('>이러한 제작 기간을 거쳐 <strong>미우크굿즈의 라탄실에서 자연스러운 광택감</strong>을 느낄 수 있습니다.</p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:07', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (101, '올린스튜디오', 'C6', '카드를 펼치면 내 방이 바로 롯데월드! [로티&로리 플레잉카드]', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0511/20220511025552775_147371.jpg/wadiz/format/jpg/quality/80/optimize', '특별한 날에 어울리는 트럼프 카드를 소개합니다. 손에 착착 감기는 귀여운 <로티&로리 플레잉카드> 카드를 펼치는 순간, 내 방이 바로 롯데월드가 됩니다!', TO_CLOB('<blockquote class="type-default"><p><strong>따분한 주말</strong>, 이제 볼 영화도 없고..<br>뭔가 <strong>재밌는 일</strong> 없을까?</p></blockquote><p><img class="fr-fic fr-dib lazyloaded" data-width="590" data-height="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511025358350_76.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511025358350_76.jpg/wadiz/format/jpg/quality/80/optimize"></p><blockquote class="type-default"><p>마침, 로티에게 ')
+VALUES (100, '올린스튜디오', 'C6', '카드를 펼치면 내 방이 바로 롯데월드! [로티&로리 플레잉카드]', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0511/20220511025552775_147371.jpg/wadiz/format/jpg/quality/80/optimize', '특별한 날에 어울리는 트럼프 카드를 소개합니다. 손에 착착 감기는 귀여운 <로티&로리 플레잉카드> 카드를 펼치는 순간, 내 방이 바로 롯데월드가 됩니다!', TO_CLOB('<blockquote class="type-default"><p><strong>따분한 주말</strong>, 이제 볼 영화도 없고..<br>뭔가 <strong>재밌는 일</strong> 없을까?</p></blockquote><p><img class="fr-fic fr-dib lazyloaded" data-width="590" data-height="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511025358350_76.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511025358350_76.jpg/wadiz/format/jpg/quality/80/optimize"></p><blockquote class="type-default"><p>마침, 로티에게 ')
 || TO_CLOB('연락이 왔어요.<br>“이따 저녁에 <strong>카드게임</strong> 어때?”</p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="590" data-height="443" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511025411202_4.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 75.0847%;"></p><blockquote class="type-default"><p>자, 귀여운 <strong><u>로티 트럼프</u></strong>로<br><strong>최고의 게이머</strong>를 가려볼까요?!</p></blockquote><h5><img class="fr-fic fr-dib lazyload" data-width="590" data-height="443" ')
 || TO_CLOB('data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511001153781_26.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 75.0847%;">로티 &amp; 로리 플레잉카드(Playing cards) 실물사진</h5><p><br></p><hr><p><br></p><h2>♠ 로티 &amp; 로리를 아시나요?</h2><p>혹시 <strong>로티(Lotty)</strong>와<strong>&nbsp;로리(Lorry)</strong>를 아시나요? 어딘가 친숙한 라쿤 캐릭터, 로티와 로리는 바로 한국 최고의 놀이공원 <strong><u>''롯데월드 어드벤처의 마스코트''</u></strong>랍니다! 장난스러운 표정과 귀여운 몸짓으로 <strong>많은 사람들에게 즐거움을 주는 캐릭터</strong>입니다. :)</p><blockquote class="')
 || TO_CLOB('type-default"><p><strong>롯데월드</strong>의 마스코트!<br><strong>로티(Lotty)</strong>와 <strong>로리(Lorry)</strong></p></blockquote><p><img class="fr-fic fr-dib lazyload" data-width="590" data-height="176" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0511/20220511002513731_81.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 29.8305%;"></p><p>그런 로티와 로리, 그리고 초록이(Twuddle)가 <strong>보드게임 전문 레이블,</strong> <strong><u>올린스튜디오</u></strong>와 만나 <strong>플레잉카드</strong>로 새롭게 태어났습니다.</p><blockquo')
@@ -2776,7 +2773,7 @@ VALUES (101, '올린스튜디오', 'C6', '카드를 펼치면 내 방이 바로 
 || TO_CLOB('ng-bottom: 75.0847%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:06', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.06', 'RRRR-MM-DD'), to_date('2022.07.17', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (102, '(주)브로컬리컴퍼니', 'C6', '[누적1억] 천연 아로마 스프레이로 꽃밭 순간이동', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519171945613_143482.png/wadiz/format/jpg/quality/80/optimize', '어서오세요! owndo°가 서포터님을 한국의 알프스라 불리는 전라남도 화순의 구절초 꽃밭으로 초대합니다! [나의온도 데일리 아로마 스프레이 3종]', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="513" data-height="743" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111131026_17.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111131026_17.gif"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="289" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111129303_80.gif" style="padding-bottom: 56.3353%;"><img class="fr-fic fr-dib lazyload" data-width="513" data')
+VALUES (101, '(주)브로컬리컴퍼니', 'C6', '[누적1억] 천연 아로마 스프레이로 꽃밭 순간이동', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0519/20220519171945613_143482.png/wadiz/format/jpg/quality/80/optimize', '어서오세요! owndo°가 서포터님을 한국의 알프스라 불리는 전라남도 화순의 구절초 꽃밭으로 초대합니다! [나의온도 데일리 아로마 스프레이 3종]', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="513" data-height="743" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111131026_17.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111131026_17.gif"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="289" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111129303_80.gif" style="padding-bottom: 56.3353%;"><img class="fr-fic fr-dib lazyload" data-width="513" data')
 || TO_CLOB('-height="1750" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111126187_37.gif" style="padding-bottom: 341.131%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="538" data-height="2595" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0530/20220530134442713_3.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 482.342%;"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="513" data-height="770" data-src="https://cdn.wadiz.kr/ft/images/')
 || TO_CLOB('green001/2022/0520/20220520111120638_37.gif" style="padding-bottom: 150.097%;"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="158" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111118269_57.gif" style="padding-bottom: 30.7992%;"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="289" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111116744_26.gif" style="padding-bottom: 56.3353%;"><img class="fr-fic fr-dib lazyload" dat')
 || TO_CLOB('a-width="513" data-height="289" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111114184_3.gif" style="padding-bottom: 56.3353%;"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="1990" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111104272_2.gif" style="padding-bottom: 387.914%;"><img class="fr-fic fr-dib lazyload" data-width="513" data-height="289" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520111100198_79.gif" s')
@@ -2789,7 +2786,7 @@ VALUES (102, '(주)브로컬리컴퍼니', 'C6', '[누적1억] 천연 아로마 
 || TO_CLOB('538" data-height="725" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520132105206_86.gif" style="padding-bottom: 134.758%;"></p><p><br></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="513" data-height="1614" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520110849530_30.gif" style="padding-bottom: 314.62%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:05', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (103, '쓰리독나잇', 'C6', '무겁고 비싸기만한 골프백은 이제 그만! 젠더리스 골프 스탠드&흴 백', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525181221256_146494.jpg/wadiz/format/jpg/quality/80/optimize', 'TDN의 가볍고 튼튼하며 합리적인 가격의 스탠드 & 휠 골프백, 그리고 외출복과 골프웨어를 잘 보관할 수 있는 기능성 좋고 예쁜 보스턴 백으로 즐겁고 슬기로운 골프생활을 즐겨보세요', TO_CLOB('<h2>골프의 발상지 스코틀랜드에서 온 TDN 23 Golf Wheel &amp; Stand bag</h2><p>스코틀랜드에서 탄생한 쓰리독나잇의 TDN 23 Golf S 시리즈, 필드에서 더욱 주목받는 나의 TDN 23 Golf S 시리즈 &amp; 골프와 함께하며 실생활에서 변신 사용가능한 보스턴 백</p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2989" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506222129429_21.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506222129429_21.gif"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-wid')
+VALUES (102, '쓰리독나잇', 'C6', '무겁고 비싸기만한 골프백은 이제 그만! 젠더리스 골프 스탠드&흴 백', 1000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0525/20220525181221256_146494.jpg/wadiz/format/jpg/quality/80/optimize', 'TDN의 가볍고 튼튼하며 합리적인 가격의 스탠드 & 휠 골프백, 그리고 외출복과 골프웨어를 잘 보관할 수 있는 기능성 좋고 예쁜 보스턴 백으로 즐겁고 슬기로운 골프생활을 즐겨보세요', TO_CLOB('<h2>골프의 발상지 스코틀랜드에서 온 TDN 23 Golf Wheel &amp; Stand bag</h2><p>스코틀랜드에서 탄생한 쓰리독나잇의 TDN 23 Golf S 시리즈, 필드에서 더욱 주목받는 나의 TDN 23 Golf S 시리즈 &amp; 골프와 함께하며 실생활에서 변신 사용가능한 보스턴 백</p><p><br></p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="2989" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506222129429_21.gif" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0506/20220506222129429_21.gif"></p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-wid')
 || TO_CLOB('th="740" data-height="3519" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526150949560_34.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 475.541%;"></p><hr><h2>THREE DOG NIGHT GOLF S Series</h2><p>스타일 of 스타일, 쓰리독나잇 골프의 독특한 컨셉 S (Unisex) Series ''를 소개합니다! 성별에 경계를 두지 않는 독특한 컨셉으로 골프라는 영역에서 Unisex의 직접적인 표현보다는 쓰리독나잇의 장점인 독특하고 창의적인 디자인을 컨셉으로 두번째 TDN 23 GOLF S Series를 선보이게 되었습니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="584"')
 || TO_CLOB(' data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0507/20220507141426384_95.gif" style="padding-bottom: 72.2772%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="4205" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520024956305_73.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 520.421%;"></p><h2>나를위한 골프백<br>필드위에 완벽한 퍼포먼스<br>TDN 23 Golf Wheel &amp; Stand bag</h2><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-hei')
 || TO_CLOB('ght="978" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0507/20220507141522613_35.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 121.04%;"></p><p><br></p><p><br></p><p><img data-fr-image-pasted="true" data-width="460" data-height="259" class="fr-fic fr-dib lazyload" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0507/20220507141620100_29.gif" style="padding-bottom: 56.3043%;"><img data-fr-image-pasted="true" data-width="460" data-height="259" class="fr-fic fr-d')
@@ -2811,7 +2808,7 @@ VALUES (103, '쓰리독나잇', 'C6', '무겁고 비싸기만한 골프백은 �
 || TO_CLOB('.kr/ft/images/green001/2022/0510/20220510011928532_72.gif" style="padding-bottom: 35.1667%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:04', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.07.24', 'RRRR-MM-DD'), to_date('2022.08.01', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (104, '(주)골프존데카', 'C6', '초소형 골프거리측정기 aim QUANTUM', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0502/20220502153647726_145686.jpg/wadiz/format/jpg/quality/80/optimize', '[GOLFBUDDY] 초소형 골프거리측정기 aim QUANTUM', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="809" data-height="4921" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520112315457_63.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520112315457_63.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="615" data-height="410" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0504/20220504141113442_33.gif" style="pa')
+VALUES (103, '(주)골프존데카', 'C6', '초소형 골프거리측정기 aim QUANTUM', 5000000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0502/20220502153647726_145686.jpg/wadiz/format/jpg/quality/80/optimize', '[GOLFBUDDY] 초소형 골프거리측정기 aim QUANTUM', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="809" data-height="4921" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520112315457_63.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520112315457_63.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="615" data-height="410" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0504/20220504141113442_33.gif" style="pa')
 || TO_CLOB('dding-bottom: 66.6667%;"><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3553" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526090651529_42.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 439.728%;"><img class="fr-fic fr-dib lazyload" data-width="809" data-height="809" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517235433750_42.gif" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808"')
 || TO_CLOB(' data-height="5529" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526090908817_50.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 684.282%;"><img class="fr-fic fr-dib lazyload" data-width="809" data-height="4351" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520110153940_34.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 537.824%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="3887" data-src="https')
 || TO_CLOB('://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517163710018_35.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 481.064%;"><img class="fr-fic fr-dib lazyload" data-width="620" data-height="414" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517163900203_29.gif" style="padding-bottom: 66.7742%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="4208" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0520/20220520110227447_60.jpg/wad')
@@ -2841,7 +2838,7 @@ VALUES (104, '(주)골프존데카', 'C6', '초소형 골프거리측정기 aim 
 || TO_CLOB('/ft/images/green001/2022/0526/20220526093724712_94.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 273.02%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="809" data-height="837" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0517/20220517235728890_10.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:03', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.25', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (105, '브랜드사이언', 'C6', '[앵콜] 가방을 펼친다고? 한 눈에 짐 확인 가능한 1박2일 여행용백!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0607/20220607203700978_151737.jpg/wadiz/format/jpg/quality/80/optimize', '물건을 기억하기 쉽게 가방을 펼쳐서 한 눈에 찾을 수 있는 여행가방, 여행짐을 빠뜨림 없이 가져갈 수 있는 멀티트래블백 입니다.', TO_CLOB('<p><img data-height="2275" class="fr-fic fr-dib lazyloaded" data-width="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607203905156_71.jpeg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607203905156_71.jpeg/wadiz/format/jpg/quality/80/optimize"><strong><u>여행을 가면서 실수로 빠뜨린 중요한 물건</u></strong> 때문에 여행이 다소 실망스러웠습니다. &nbsp;빠트린 게 없는지 여러 번 가방을 찾아봅니다. 이런 경험들이 다소 불편한 여행으로 남을 수 가 있습니다. 이런 여행들이 제품 개발에 도움이 되었으며 편안하고 즐거운 여행을 위')
+VALUES (104, '브랜드사이언', 'C6', '[앵콜] 가방을 펼친다고? 한 눈에 짐 확인 가능한 1박2일 여행용백!', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0607/20220607203700978_151737.jpg/wadiz/format/jpg/quality/80/optimize', '물건을 기억하기 쉽게 가방을 펼쳐서 한 눈에 찾을 수 있는 여행가방, 여행짐을 빠뜨림 없이 가져갈 수 있는 멀티트래블백 입니다.', TO_CLOB('<p><img data-height="2275" class="fr-fic fr-dib lazyloaded" data-width="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607203905156_71.jpeg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607203905156_71.jpeg/wadiz/format/jpg/quality/80/optimize"><strong><u>여행을 가면서 실수로 빠뜨린 중요한 물건</u></strong> 때문에 여행이 다소 실망스러웠습니다. &nbsp;빠트린 게 없는지 여러 번 가방을 찾아봅니다. 이런 경험들이 다소 불편한 여행으로 남을 수 가 있습니다. 이런 여행들이 제품 개발에 도움이 되었으며 편안하고 즐거운 여행을 위')
 || TO_CLOB('한 가방이 필요하다고 생각하여 제작하게 되었습니다</p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="630" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607204009764_97.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 100%;"></p><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="500" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607204028700_56.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 79.3651%;"></p><p>')
 || TO_CLOB('<img class="fr-fic fr-dib lazyload" data-width="630" data-height="400" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607204138381_36.gif" style="padding-bottom: 63.4921%;"></p><p><br></p><blockquote class="type-default"><p><strong>1박2일 여행을</strong> 떠납니다.</p></blockquote><p><br></p><blockquote class="type-default"><p><strong>간편하게 챙겨가고 싶지만</strong><br>수납은 충분했으면 합니다.</p></blockquote><p><br></p><blockquote class="type-default"><p><u><strong>빠진게 없는지</strong></u><br>여러번 확인합니다.</p></')
 || TO_CLOB('blockquote><p><img class="fr-fic fr-dib lazyload" data-width="630" data-height="261" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607204405703_65.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 41.4286%;"></p><p>안녕하세요 서포터님 만나뵙게 되어 반갑습니다. &nbsp;저희는 가치있는 브랜드가 되어가자는 의미를 가지고 제품을 만들어가는 브랜드사이언 입니다. 우리는 불필요한것들에 집중하고 개선해 나가길 희망합니다. &nbsp;</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1809" data-src="https://cdn.wadiz.kr/ft/images/')
@@ -2865,7 +2862,7 @@ VALUES (105, '브랜드사이언', 'C6', '[앵콜] 가방을 펼친다고? 한 �
 || TO_CLOB('r-fic fr-dib lazyload" data-width="808" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607205050665_69.jpeg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 456.188%;"></p><p><br></p><p><br></p><p>&nbsp;</p><p><img class="fr-fic fr-dib lazyload" data-width="808" data-height="1200" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0607/20220607205128354_0.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 148.515%;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:02', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (106, '부라더스', 'C6', '5만원대 | 올여름 완벽하게 더위를 막아줄 프리미엄 선글라스', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602131420820_151237.jpg/wadiz/format/jpg/quality/80/optimize', '일상에서 편하게 데일리로 착용할 수 있는 선글라스입니다. 무게, 자외선 차단렌즈, 착용감!! 종이 3장의 무게를 갖춘 편안한 선글라스를 착용해 보세요!!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="601" data-height="699" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602131811225_57.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602131811225_57.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><strong>안녕하세요. 저는 이번 프로젝트에서 디렉터를 맡은 s. park 입니다.</strong></p><p>지난번 서포터분들의 성원과 관심으로 프로젝트를 성공적으로 마치게 되었습니다. 이번프로젝트는 같은 시리즈에 공장과 협력하여 새로운 칼라인 라운드 선글라스를 준비하게 되')
+VALUES (105, '부라더스', 'C6', '5만원대 | 올여름 완벽하게 더위를 막아줄 프리미엄 선글라스', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0602/20220602131420820_151237.jpg/wadiz/format/jpg/quality/80/optimize', '일상에서 편하게 데일리로 착용할 수 있는 선글라스입니다. 무게, 자외선 차단렌즈, 착용감!! 종이 3장의 무게를 갖춘 편안한 선글라스를 착용해 보세요!!', TO_CLOB('<p><img class="fr-fic fr-dib lazyloaded" data-width="601" data-height="699" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602131811225_57.jpg/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602131811225_57.jpg/wadiz/format/jpg/quality/80/optimize"></p><p><br></p><p><strong>안녕하세요. 저는 이번 프로젝트에서 디렉터를 맡은 s. park 입니다.</strong></p><p>지난번 서포터분들의 성원과 관심으로 프로젝트를 성공적으로 마치게 되었습니다. 이번프로젝트는 같은 시리즈에 공장과 협력하여 새로운 칼라인 라운드 선글라스를 준비하게 되')
 || TO_CLOB('었습니다.</p><p>&nbsp;새로운 부라더스 프로젝트 명은 :&nbsp;</p><p>( R ) B U R A T H E R s _ P R E M I U M / MATT SILVER</p><p>입니다. 그러면 지금부터 " ( R) 부라더스 프리미엄 매트실버" 선글라스를 소개해 드리겠습니다.</p><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="601" data-height="613" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602131938169_33.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 101.997%;"></p><h5>에어팟 무게 47g</h5><p><br></p><blockquote class="type-default"><p>에어팟보다&nbsp;가벼운<br>1 4')
 || TO_CLOB(' . 5 g<br>프리미엄 선글라스</p></blockquote><p><br></p><p><img class="fr-fic fr-dib lazyload" data-width="601" data-height="934" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602132320473_6.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 155.408%;"><img class="fr-fic fr-dib lazyload" data-width="601" data-height="936" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602132326014_36.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 155.74')
 || TO_CLOB('%;"></p><h5>( R ) B U R A T H E R s _ P R E M I U M / MATT SILVER</h5><p><img class="fr-fic fr-dib lazyload" data-width="601" data-height="822" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602132350297_16.jpg/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 136.772%;"><img class="fr-fic fr-dib lazyload" data-width="601" data-height="822" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0602/20220602132355297_85.jpg/wadiz/format/jpg/quality/80/optimize" style')
@@ -2895,7 +2892,7 @@ VALUES (106, '부라더스', 'C6', '5만원대 | 올여름 완벽하게 더위�
 || TO_CLOB('s/green001/2022/0602/20220602140959317_98.jpg/wadiz/format/jpg/quality/80/optimize" data-expand="-40" style="height: 350px !important; width: 100% !important;"></p>'), '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:01', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.28', 'RRRR-MM-DD'), to_date('2022.08.27', 'RRRR-MM-DD'), 'Y', 0);
 
 INSERT INTO PRODUCT (P_NO, MAKER_NAME, CATEGORY_ID, P_NAME, P_GOAL, P_THUMBNAIL, P_SUMMARY, P_STORY, P_CERTIFICATION, START_DAY, END_DAY, PAYMENT_PLAN, DELIVERY_DATE, P_APPROVAL, P_REPORT_CNT) 
-VALUES (107, 'MYAMMI', 'C6', '14개의 눈부신 시그니티 스톤, 고급스러운 캣츠 아이스 주얼리 컬렉션', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0430/20220430011220785_147885.png/wadiz/format/jpg/quality/80/optimize', '14개의 눈부신 시그니티 스톤, 고급스러운 캣츠 아이스 주얼리 컬렉션', '<h2><strong><u>귀여운 고양이에게 기부</u></strong>도하고,<br><u>예쁜 주얼리도 펀딩</u>할 수 있는<br>착한 펀딩이 궁금하신가요??<br>↓<br>↓<br>↓</h2><h2><br></h2><h2>믿고 펀딩할 수 있어요!</h2><p>안녕하세요. <strong>MYAMMI</strong>입니다.<br>저번 <strong><u>꾹꾹이반지 펀딩에 2108%</u>&nbsp;</strong>성공적으로 끝마치고<br><strong>캣츠 아이스 컬렉션</strong>으로 돌아왔습니다.<br><br>믿고 펀딩해주신 모든 서포터님들 감사합니다.<br>이번에도 열심히 제작할 예정입니다!!</p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="619" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526010454457_24.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526010454457_24.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="746" data-height="631" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527163129023_92.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 84.5845%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.07', 'RRRR-MM-DD'), to_date('2022.08.17', 'RRRR-MM-DD'), 'Y', 0);
+VALUES (106, 'MYAMMI', 'C6', '14개의 눈부신 시그니티 스톤, 고급스러운 캣츠 아이스 주얼리 컬렉션', 500000, 'https://cdn.wadiz.kr/wwwwadiz/green001/2022/0430/20220430011220785_147885.png/wadiz/format/jpg/quality/80/optimize', '14개의 눈부신 시그니티 스톤, 고급스러운 캣츠 아이스 주얼리 컬렉션', '<h2><strong><u>귀여운 고양이에게 기부</u></strong>도하고,<br><u>예쁜 주얼리도 펀딩</u>할 수 있는<br>착한 펀딩이 궁금하신가요??<br>↓<br>↓<br>↓</h2><h2><br></h2><h2>믿고 펀딩할 수 있어요!</h2><p>안녕하세요. <strong>MYAMMI</strong>입니다.<br>저번 <strong><u>꾹꾹이반지 펀딩에 2108%</u>&nbsp;</strong>성공적으로 끝마치고<br><strong>캣츠 아이스 컬렉션</strong>으로 돌아왔습니다.<br><br>믿고 펀딩해주신 모든 서포터님들 감사합니다.<br>이번에도 열심히 제작할 예정입니다!!</p><p><img class="fr-fic fr-dib lazyloaded" data-width="808" data-height="619" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526010454457_24.png/wadiz/format/jpg/quality/80/optimize" style="" src="https://cdn.wadiz.kr/ft/images/green001/2022/0526/20220526010454457_24.png/wadiz/format/jpg/quality/80/optimize"></p><p><img class="fr-fic fr-dib lazyload" data-width="746" data-height="631" data-src="https://cdn.wadiz.kr/ft/images/green001/2022/0527/20220527163129023_92.png/wadiz/format/jpg/quality/80/optimize" style="padding-bottom: 84.5845%;"></p>', '/resources/images/p_certification.png', to_timestamp('2022.08.16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), to_date('2022.08.10', 'RRRR-MM-DD'), to_date('2022.08.07', 'RRRR-MM-DD'), to_date('2022.08.17', 'RRRR-MM-DD'), 'Y', 0);
 
 -- 옵션 삽입
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
@@ -4096,363 +4093,327 @@ INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, O
 VALUES (7, 48, '특별 한정펀딩', '10박스(-45%) :  180,000 → 99,000', 99000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 49, '[슈퍼얼리버드] 여름이 키운 노지 블루베리 왕특18mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg왕특 사이즈 18mm와디즈에서만 특별 혜택가!!정상가_______56,940원슈퍼얼리혜택_43,800원____________(-13,140원 가격혜택. 약 30%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 43800, 300);
+VALUES (1, 49, '기다면골 파스닙 티 1병 ', '1,000ml 대용량으로, 1병으로 한잔 씩 즐겨보세요', 14800, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 49, '[슈퍼얼리버드] 여름이 키운 노지 블루베리 특 16mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg특 사이즈 16mm와디즈에서만 특별 혜택가!!정상가_______50,440원슈퍼얼리혜택_38,800원____________(-11,600원 가격혜택. 약 29%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 38800, 300);
+VALUES (2, 49, '기다면골 파스닙 티 2병 ', '1,000ml 용량 X2', 27000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 49, '[슈퍼얼리버드] 여름이 키운 노지 블루베리 대사이즈 14mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg대 사이즈 14mm와디즈에서만 특별 혜택가!!정상가_______43,940원슈퍼얼리혜택_33,800원____________(-10,140원 가격혜택. 약 28%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 33800, 300);
+VALUES (3, 49, '기다면골 파스닙 티 3병', '1,000ml 용량 X3 꾸준하게 즐겨요', 36000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 49, '[슈퍼얼리버드] 여름이 키운 노지 블루베리 왕특사이즈 18mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg왕특 사이즈 18mm와디즈에서만 특별 혜택가!!정상가_______107,640원슈퍼얼리혜택_82,800원____________(-24,840원 가격혜택. 약 30%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 82800, 300);
+VALUES (4, 49, '[얼리버드] 기다면골 파스닙 티 1병 ', '*얼리버드 1천원 할인! 1,000ml 대용량으로, 1병으로 하루 한잔 씩 즐겨보세요', 13800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 49, '[슈퍼얼리버드] 여름이 키운 노지 블루베리 특사이즈 16mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg특 사이즈 16mm와디즈에서만 특별 혜택가!!정상가_______93,912원슈퍼얼리혜택_72,800원____________(-21,112원 가격혜택. 약 29%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 72800, 300);
+VALUES (5, 49, '[얼리버드] 기다면골 파스닙 티 2병 ', '*얼리버드 1천원 할인! 1,000ml 용량 X2', 26000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 49, '[슈퍼얼리버드] 여름이 키운 노지블루베리 대사이즈 14mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg대 사이즈 14mm와디즈에서만 특별 혜택가!!정상가_______77,824원슈퍼얼리혜택_60,800원____________(-17,024원 가격혜택. 약 28%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 60800, 300);
+VALUES (6, 49, '[얼리버드] 기다면골 파스닙 티 3병', '*얼리버드 1천원 할인! 1,000ml 용량 X3 꾸준하게 즐겨요!', 35000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 49, '[얼리버드] 여름이 키운 노지 블루베리 왕특사이즈 18mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg왕특 사이즈 18mm와디즈에서만 특별 혜택가!!정상가_______56,940원얼리혜택_____45,800원____________(-11,140원 가격혜택. 약 20%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 45800, 300);
+VALUES (1, 50, '[72시간한정 디저트 증정이벤트] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 + 페스츄리파이2개 + 딸기잼 1개 / *지정일 발송 불가* / (6월 20일 오후 5시 30분 마감)', 62900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 49, '[얼리버드] 여름이 키운 노지 블루베리 특사이즈 16mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg특 사이즈 16mm와디즈에서만 특별 혜택가!!정상가_______56,940원얼리혜택_____45,800원____________(-11,140원 가격혜택. 약 24%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 40800, 300);
+VALUES (2, 50, '[72시간한정 디저트 증정이벤트] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 + 페스츄리파이4개 + 딸기잼 2개 / *지정일 발송 불가* / (6월 20일 오후 5시 30분 마감)', 121800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 49, '[얼리버드] 여름이 키운 노지 블루베리 대사이즈 14mm 1kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (2팩) 1kg대 사이즈 14mm와디즈에서만 특별 혜택가!!정상가_______43,940원얼리혜택_____35,800원____________(-8,140원 가격혜택. 약 22%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 35800, 300);
+VALUES (3, 50, '[슈퍼얼리버드] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 / *지정일 발송 불가*', 62900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 49, '[얼리버드] 여름이 키운 노지 블루베리 왕특사이즈 18mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg왕특 사이즈 18mm와디즈에서만 특별 혜택가!!정상가_______107,640원얼리혜택_____84,800원____________(-22,840원 가격혜택. 약 26%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 84800, 300);
+VALUES (4, 50, '[슈퍼얼리버드] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 / *지정일 발송 불가*', 121800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 49, '[얼리버드] 여름이 키운 노지 블루베리 특사이즈 16mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg특 사이즈 16mm와디즈에서만 특별 혜택가!!정상가_______93,912원얼리혜택_____43,800원____________(-19,840원 가격혜택. 약 26%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 74800, 300);
+VALUES (5, 50, '[얼리버드] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 / *지정일 발송 불가*', 63900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 49, '[얼리버드] 여름이 키운 노지블루베리 대사이즈 14mm 2kg', '우리 농부님께서 건강한 농법으로 청주에서 키워낸블루베리 평균 12brix세계 10대푸드에 선정될 정도로 몸에 좋고 맛도 좋은 블루베리블루베리를 한번 경험해보세요500g (4팩) 2kg대 사이즈 14mm와디즈에서만 특별 혜택가!!정상가_______77,824원슈퍼얼리혜택_62,800원____________(-15,024원 가격혜택. 약 23%!!)제일 맛있을때 나무에서 수확하여곧바로 집으로 보내드립니다.', 62800, 300);
+VALUES (6, 50, '[얼리버드] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 / *지정일 발송 불가*', 123800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 50, '기다면골 파스닙 티 1병 ', '1,000ml 대용량으로, 1병으로 한잔 씩 즐겨보세요', 14800, 500);
+VALUES (1, 51, '[72시간한정] 1세트(3개) + 무료배송', '1세트(3개) 41,700원 ▶ 32,000원 (-23%)[6월 18일 오후 2시 마감]', 32000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 50, '기다면골 파스닙 티 2병 ', '1,000ml 용량 X2', 27000, 500);
+VALUES (2, 51, '[72시간한정] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 91,000원 (-27%)[6월 18일 오후 2시 마감]', 91000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 50, '기다면골 파스닙 티 3병', '1,000ml 용량 X3 꾸준하게 즐겨요', 36000, 500);
+VALUES (3, 51, '[슈퍼얼리버드] 1세트(3개)', '1세트(3개) 41,700원 ▶ 32,000원 (-23%)', 32000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 50, '[얼리버드] 기다면골 파스닙 티 1병 ', '*얼리버드 1천원 할인! 1,000ml 대용량으로, 1병으로 하루 한잔 씩 즐겨보세요', 13800, 100);
+VALUES (4, 51, '[슈퍼얼리버드] 2세트(6개) + 무료배송', '2세트(6개) 83,400원 ▶ 64,000원 (-23%)', 64000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 50, '[얼리버드] 기다면골 파스닙 티 2병 ', '*얼리버드 1천원 할인! 1,000ml 용량 X2', 26000, 100);
+VALUES (5, 51, '[슈퍼얼리버드] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 91,000원 (-27%)', 91000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 50, '[얼리버드] 기다면골 파스닙 티 3병', '*얼리버드 1천원 할인! 1,000ml 용량 X3 꾸준하게 즐겨요!', 35000, 100);
+VALUES (6, 51, '[얼리버드] 1세트(3개)', '1세트(3개) 41,700원 ▶ 33,700원 (-19%)', 33700, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 51, '[72시간한정 디저트 증정이벤트] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 + 페스츄리파이2개 + 딸기잼 1개 / *지정일 발송 불가* / (6월 20일 오후 5시 30분 마감)', 62900, 100);
+VALUES (7, 51, '[얼리버드] 2세트(6개) + 무료배송', '2세트(6개) 83,400원 ▶ 65,800원 (-21%)', 65800, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 51, '[72시간한정 디저트 증정이벤트] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 + 페스츄리파이4개 + 딸기잼 2개 / *지정일 발송 불가* / (6월 20일 오후 5시 30분 마감)', 121800, 100);
+VALUES (8, 51, '[얼리버드] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 96,300원 (-23%)', 96300, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 51, '[슈퍼얼리버드] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 / *지정일 발송 불가*', 62900, 100);
+VALUES (1, 52, '[슈퍼얼리버드] 퍼플퀸 꿀자두 1.7kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.1팩 1.7kg1과당 100g이상(16~18과)[소량한정]와디즈에서만 특별 혜택가정상가________34,900원슈퍼얼리혜택__23,900원_____________(-11,000원 가격혜택. 약 32%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 23900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 51, '[슈퍼얼리버드] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 / *지정일 발송 불가*', 121800, 100);
+VALUES (2, 52, '[슈퍼얼리버드] 퍼플퀸 꿀자두 3.4kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.2팩 3.4kg1과당 100g이상(32~36과)[소량한정]와디즈에서만 특별 혜택가정상가________66,900원슈퍼얼리혜택__45,900원_____________(-21,000원 가격혜택. 약 31%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 45900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 51, '[얼리버드] 비프웰링턴 커플세트', '비프웰링턴 1개(600g내외) + 감자튀김(450g내외) + 잭다니엘소스 / *지정일 발송 불가*', 63900, 100);
+VALUES (3, 52, '[얼리버드] 퍼플퀸 꿀자두 1.7kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.1팩 1.7kg1과당 100g이상(16~18과)[소량한정]와디즈에서만 특별 혜택가정상가________34,900원얼리혜택______24,900원_____________(-10,000원 가격혜택. 약 29%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 24900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 51, '[얼리버드] 비프웰링턴 패밀리 세트', '비프웰링턴 2개( 600g 내외 2개) + 감자튀김 2세트(450g내외 2개) + 잭다니엘소스 2개 / *지정일 발송 불가*', 123800, 100);
+VALUES (4, 52, '[얼리버드] 퍼플퀸 꿀자두 3.4kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.2팩 3.4kg1과당 100g이상(32~36과)[소량한정]와디즈에서만 특별 혜택가정상가________66,900원얼리혜택______47,900원_____________(-19,000원 가격혜택. 약 28%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 47900, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 52, '[72시간한정] 1세트(3개) + 무료배송', '1세트(3개) 41,700원 ▶ 32,000원 (-23%)[6월 18일 오후 2시 마감]', 32000, 200);
+VALUES (5, 52, '복수펀딩 서포터님을위한 추가 배송비!', '2개까지 한번의 배송비로 가능합니다.더 많이 펀딩하시려는 서포터님과각각 다른배송지로 보내려고 하시는 서포터님께서는추가배송비 부탁드립니다.+이곳저곳 다양한 배송지로 보내고 싶으신 서포터님께서는 각각 따로 펀딩에 참여해주시거나(제일 깔끔하고 확실!)한번에 여러개를 펀딩하신 후 추가배송비 결제와 함께 와디즈 메이커에게 문의하기(쪽지)로 주소목록 전달주시면 개별배송 도와드리겠습니다.', 4000, 77771);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 52, '[72시간한정] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 91,000원 (-27%)[6월 18일 오후 2시 마감]', 91000, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 52, '[슈퍼얼리버드] 1세트(3개)', '1세트(3개) 41,700원 ▶ 32,000원 (-23%)', 32000, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 52, '[슈퍼얼리버드] 2세트(6개) + 무료배송', '2세트(6개) 83,400원 ▶ 64,000원 (-23%)', 64000, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 52, '[슈퍼얼리버드] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 91,000원 (-27%)', 91000, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 52, '[얼리버드] 1세트(3개)', '1세트(3개) 41,700원 ▶ 33,700원 (-19%)', 33700, 300);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 52, '[얼리버드] 2세트(6개) + 무료배송', '2세트(6개) 83,400원 ▶ 65,800원 (-21%)', 65800, 300);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 52, '[얼리버드] 3세트(9개) + 무료배송', '3세트(9개) 125,100원 ▶ 96,300원 (-23%)', 96300, 300);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 53, '[슈퍼얼리버드] 퍼플퀸 꿀자두 1.7kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.1팩 1.7kg1과당 100g이상(16~18과)[소량한정]와디즈에서만 특별 혜택가정상가________34,900원슈퍼얼리혜택__23,900원_____________(-11,000원 가격혜택. 약 32%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 23900, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 53, '[슈퍼얼리버드] 퍼플퀸 꿀자두 3.4kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.2팩 3.4kg1과당 100g이상(32~36과)[소량한정]와디즈에서만 특별 혜택가정상가________66,900원슈퍼얼리혜택__45,900원_____________(-21,000원 가격혜택. 약 31%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 45900, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 53, '[얼리버드] 퍼플퀸 꿀자두 1.7kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.1팩 1.7kg1과당 100g이상(16~18과)[소량한정]와디즈에서만 특별 혜택가정상가________34,900원얼리혜택______24,900원_____________(-10,000원 가격혜택. 약 29%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 24900, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 53, '[얼리버드] 퍼플퀸 꿀자두 3.4kg', '항상 연구하고 또 연구하시는열정농부님이 길러낸달콤과즙 폭발자두의 여왕꿀자두 퍼플퀸!1년에 단 10일!이번에 꼭 경험해보세요.2팩 3.4kg1과당 100g이상(32~36과)[소량한정]와디즈에서만 특별 혜택가정상가________66,900원얼리혜택______47,900원_____________(-19,000원 가격혜택. 약 28%!!)농장에서 딱 맞는 시기에곧바로 집으로 보내드립니다!!', 47900, 100);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 53, '복수펀딩 서포터님을위한 추가 배송비!', '2개까지 한번의 배송비로 가능합니다.더 많이 펀딩하시려는 서포터님과각각 다른배송지로 보내려고 하시는 서포터님께서는추가배송비 부탁드립니다.+이곳저곳 다양한 배송지로 보내고 싶으신 서포터님께서는 각각 따로 펀딩에 참여해주시거나(제일 깔끔하고 확실!)한번에 여러개를 펀딩하신 후 추가배송비 결제와 함께 와디즈 메이커에게 문의하기(쪽지)로 주소목록 전달주시면 개별배송 도와드리겠습니다.', 4000, 77771);
-
-INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 54, '[슈퍼얼리버드] 나디아 체리자두 2kg', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
+VALUES (1, 53, '[슈퍼얼리버드] 나디아 체리자두 2kg', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
 * 한과 당 70~80g 내외
 * 26 - 29과 내외로 배송됩니다.', 36000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 54, '[얼리버드] 나디아 체리자두 2kg ', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
+VALUES (2, 53, '[얼리버드] 나디아 체리자두 2kg ', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
 * 한과 당 70 - 80g 내외
 * 26 - 29과 내외로 배송됩니다.', 38000, 398);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 55, '(다이어트 집중) 차전자피 3BOX + 레몬효소 3BOX ', '[56% 할인] 소비자가 144,000원, 효소까지 풀구성 차전자피 3 BOX + 이너랩 레몬효소 3 BOX 구성 다이어트 집중세트', 62900, 471);
+VALUES (1, 54, '(다이어트 집중) 차전자피 3BOX + 레몬효소 3BOX ', '[56% 할인] 소비자가 144,000원, 효소까지 풀구성 차전자피 3 BOX + 이너랩 레몬효소 3 BOX 구성 다이어트 집중세트', 62900, 471);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 55, '(장건강) 차전자피3BOX + 50억유산균 3BOX ', '[53%할인] 소비자가 129,000원, best유산균까지! 차전자피 3 BOX + 면역엔N50억 유산균 3 BOX 구성', 59900, 493);
+VALUES (2, 54, '(장건강) 차전자피3BOX + 50억유산균 3BOX ', '[53%할인] 소비자가 129,000원, best유산균까지! 차전자피 3 BOX + 면역엔N50억 유산균 3 BOX 구성', 59900, 493);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 55, '(100원에 쏜다) 차전자피 4+2', '[46%할인] 4개 펀딩하면 2개는 100원에 펀딩! 차전자피 가르시니아 총 6개 단독 세트', 51400, 959);
+VALUES (3, 54, '(100원에 쏜다) 차전자피 4+2', '[46%할인] 4개 펀딩하면 2개는 100원에 펀딩! 차전자피 가르시니아 총 6개 단독 세트', 51400, 959);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 55, '(100원에 쏜다) 차전자피 3+1 ', '[32%할인] 3개 펀딩하면 1개는 100원! 차전자피 가르시니아 총 4개 단독세트', 43300, 990);
+VALUES (4, 54, '(100원에 쏜다) 차전자피 3+1 ', '[32%할인] 3개 펀딩하면 1개는 100원! 차전자피 가르시니아 총 4개 단독세트', 43300, 990);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 55, '(기본형) 차전자피 2BOX ', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
+VALUES (5, 54, '(기본형) 차전자피 2BOX ', '체리와 자두의 만남, 새콤 달콤 18brix 고당도 체리자두를 지금 만나보세요 - ! 새콤달콤 신품종 체리자두
 * 한과 당 70 - 80g 내외
 * 26 - 32과 내외로 배송됩니다.', 25600, 997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 55, '(얼리버드) 차전자피 2BOX', '[수량한정] 차전자피 가르시니아 2BOX', 14400, 89);
+VALUES (6, 54, '(얼리버드) 차전자피 2BOX', '[수량한정] 차전자피 가르시니아 2BOX', 14400, 89);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 56, '[슈퍼얼리버드] 프리미엄(14cm이상) 10개입 ', '더단 초당옥수수 10개입', 17900, 961);
+VALUES (1, 55, '[슈퍼얼리버드] 프리미엄(14cm이상) 10개입 ', '더단 초당옥수수 10개입', 17900, 961);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 56, '[슈퍼얼리버드] 프리미엄(14cm이상) 20개입 ', '더단 초당옥수수 20개입', 29900, 933);
+VALUES (2, 55, '[슈퍼얼리버드] 프리미엄(14cm이상) 20개입 ', '더단 초당옥수수 20개입', 29900, 933);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 56, '[얼리버드] 프리미엄(14cm이상) 10개입 ', '더단 초당옥수수 10개입', 19900, 999);
+VALUES (3, 55, '[얼리버드] 프리미엄(14cm이상) 10개입 ', '더단 초당옥수수 10개입', 19900, 999);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 56, '[얼리버드] 프리미엄(14cm 이상) 20개입', '더단 초당옥수수 20개입', 33900, 1000);
+VALUES (4, 55, '[얼리버드] 프리미엄(14cm 이상) 20개입', '더단 초당옥수수 20개입', 33900, 1000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 57, '듬뿍딸기560g+딸기라떼250ml', '듬뿍딸기560g+와디즈사은품(딸기라떼250ml)', 13900, 172);
+VALUES (1, 56, '듬뿍딸기560g+딸기라떼250ml', '듬뿍딸기560g+와디즈사은품(딸기라떼250ml)', 13900, 172);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 57, '듬뿍딸기2+1', '듬뿍딸기560g+듬뿍딸기560g+와디즈사은품(듬뿍딸기250g)', 27900, 51);
+VALUES (2, 56, '듬뿍딸기2+1', '듬뿍딸기560g+듬뿍딸기560g+와디즈사은품(듬뿍딸기250g)', 27900, 51);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 57, '듬뿍딸기 한달패키지 ', '듬뿍딸기560g+듬뿍딸기560g+와디즈사은품(듬뿍딸기250g+딸기라떼250ml) 2주간격 2회배송', 54900, 83);
+VALUES (3, 56, '듬뿍딸기 한달패키지 ', '듬뿍딸기560g+듬뿍딸기560g+와디즈사은품(듬뿍딸기250g+딸기라떼250ml) 2주간격 2회배송', 54900, 83);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 57, '듬뿍딸기 지인패키지', '듬뿍딸기560g x 10병 + 와디즈사은품(듬뿍딸기250g x5병+딸기라떼250ml x 5병) 5개의 주소로 택배비 한번만 결제하고 지인들에게 선물 듬뿍딸기560g x 2병 와디즈사은품(듬뿍딸기250g+딸기라떼250ml )', 137900, 29);
+VALUES (4, 56, '듬뿍딸기 지인패키지', '듬뿍딸기560g x 10병 + 와디즈사은품(듬뿍딸기250g x5병+딸기라떼250ml x 5병) 5개의 주소로 택배비 한번만 결제하고 지인들에게 선물 듬뿍딸기560g x 2병 와디즈사은품(듬뿍딸기250g+딸기라떼250ml )', 137900, 29);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 58, 'VVIP패밀리팩', '김치찜2팩+양념돼지갈비구이2팩+떡갈비10팩(김치찜1팩-2인분, 양념돼지갈비구이1팩-2인분, 떡갈비1팩-1인분)', 73600, 185);
+VALUES (1, 57, 'VVIP패밀리팩', '김치찜2팩+양념돼지갈비구이2팩+떡갈비10팩(김치찜1팩-2인분, 양념돼지갈비구이1팩-2인분, 떡갈비1팩-1인분)', 73600, 185);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 58, 'VIP패밀리팩', '김치찜1팩+양념돼지갈비구이1팩+떡갈비5팩(김치찜1팩-2인분, 양념돼지갈비구이1팩-2인분, 떡갈비1팩-1인분)', 39100, 187);
+VALUES (2, 57, 'VIP패밀리팩', '김치찜1팩+양념돼지갈비구이1팩+떡갈비5팩(김치찜1팩-2인분, 양념돼지갈비구이1팩-2인분, 떡갈비1팩-1인분)', 39100, 187);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 58, '[슈퍼얼리버드] 4인 김치찜 SET', '김치찜 2팩(김치찜 1팩-2인분)', 32300, 35);
+VALUES (3, 57, '[슈퍼얼리버드] 4인 김치찜 SET', '김치찜 2팩(김치찜 1팩-2인분)', 32300, 35);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 58, '[슈퍼얼리버드] 2인 김치찜 SET ', '김치찜 1팩(김치찜 1팩-2인분)', 17100, 78);
+VALUES (4, 57, '[슈퍼얼리버드] 2인 김치찜 SET ', '김치찜 1팩(김치찜 1팩-2인분)', 17100, 78);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 58, '[얼리버드] 4인 김치찜 SET ', '김치찜 2팩(김치찜 1팩-2인분)', 34200, 47);
+VALUES (5, 57, '[얼리버드] 4인 김치찜 SET ', '김치찜 2팩(김치찜 1팩-2인분)', 34200, 47);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 58, '[얼리버드] 2인 김치찜 SET', '김치찜 1팩(김치찜 1팩-2인분)', 18050, 50);
+VALUES (6, 57, '[얼리버드] 2인 김치찜 SET', '김치찜 1팩(김치찜 1팩-2인분)', 18050, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 59, '[앵콜 스타터팩] A.혼합구성 3개입 10팩', '오리지널맛 7팩+청양고추맛 2팩+임실치즈맛 1팩', 29900, 70);
+VALUES (1, 58, '[앵콜 스타터팩] A.혼합구성 3개입 10팩', '오리지널맛 7팩+청양고추맛 2팩+임실치즈맛 1팩', 29900, 70);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 59, '[앵콜 얼리버드팩] B.단독구성 3개입 12팩', '오리지널맛 12팩', 33900, 48);
+VALUES (2, 58, '[앵콜 얼리버드팩] B.단독구성 3개입 12팩', '오리지널맛 12팩', 33900, 48);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 59, '[앵콜 얼리버드팩] C.혼합구성 3개입 12팩', '오리지널맛 7팩+청양고추맛 3팩+임실치즈맛 2팩', 34900, 43);
+VALUES (3, 58, '[앵콜 얼리버드팩] C.혼합구성 3개입 12팩', '오리지널맛 7팩+청양고추맛 3팩+임실치즈맛 2팩', 34900, 43);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 59, '[앵콜 프리미엄팩] D.혼합구성 3개입 18팩', '오리지널맛 11팩+청양고추맛 5팩+임실치즈맛 2팩', 49900, 74);
+VALUES (4, 58, '[앵콜 프리미엄팩] D.혼합구성 3개입 18팩', '오리지널맛 11팩+청양고추맛 5팩+임실치즈맛 2팩', 49900, 74);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 59, '도서/산간 추가 배송비 ', '도서/산간지역에 해당하시는 서포터님들은 리워드 본품과 함께 꼭 펀딩해 주세요', 5500, 9998);
+VALUES (5, 58, '도서/산간 추가 배송비 ', '도서/산간지역에 해당하시는 서포터님들은 리워드 본품과 함께 꼭 펀딩해 주세요', 5500, 9998);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 60, '[체험팩] 우주담백 1box (12개)', '- 맛 : 인절미- 1박스 (12개) / 1개당 57g ( 카카오 58g )', 29900, 200);
+VALUES (1, 59, '[체험팩] 우주담백 1box (12개)', '- 맛 : 인절미- 1박스 (12개) / 1개당 57g ( 카카오 58g )', 29900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 60, '[더블팩] 우주담백 2box (24개) 인절미2', '- 맛 : 인절미 [ 추가구성 카카오 ]- 2박스 (24개) /  1개당 57g ( 카카오 58g )', 57900, 200);
+VALUES (2, 59, '[더블팩] 우주담백 2box (24개) 인절미2', '- 맛 : 인절미 [ 추가구성 카카오 ]- 2박스 (24개) /  1개당 57g ( 카카오 58g )', 57900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 60, '[더블팩] 우주담백 2box (24개) 인절미1/카카오1', '- 맛 : 인절미 [ 추가구성 카카오 ]- 2박스 (24개) /  1개당 57g ( 카카오 58g )', 57900, 200);
+VALUES (3, 59, '[더블팩] 우주담백 2box (24개) 인절미1/카카오1', '- 맛 : 인절미 [ 추가구성 카카오 ]- 2박스 (24개) /  1개당 57g ( 카카오 58g )', 57900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 60, '[트리플팩] 우주담백 3box (36개) 인절미 3', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
+VALUES (4, 59, '[트리플팩] 우주담백 3box (36개) 인절미 3', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 60, '[트리플팩] 우주담백 3box (36개) 인절미1/카카오2', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
+VALUES (5, 59, '[트리플팩] 우주담백 3box (36개) 인절미1/카카오2', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 60, '[트리플팩] 우주담백 3box (36개) 인절미2/카카오1', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
+VALUES (6, 59, '[트리플팩] 우주담백 3box (36개) 인절미2/카카오1', '- 맛 : 인절미  [ 추가구성 카카오 ]- 3박스 (36개) / 1개당 57g ( 카카오 58g )', 84900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 60, '[매니아팩] 우주담백5box (60개) 인절미5', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
+VALUES (7, 59, '[매니아팩] 우주담백5box (60개) 인절미5', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 60, '[매니아팩] 우주담백5box (60개) 인절미4/카카오1', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
+VALUES (8, 59, '[매니아팩] 우주담백5box (60개) 인절미4/카카오1', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 60, '[매니아팩] 우주담백5box (60개) 인절미3/카카오2', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
+VALUES (9, 59, '[매니아팩] 우주담백5box (60개) 인절미3/카카오2', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 60, '[매니아팩] 우주담백5box (60개) 인절미2/카카오3', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
+VALUES (10, 59, '[매니아팩] 우주담백5box (60개) 인절미2/카카오3', '- 맛 : 카카오   [ 추가구성 카카오 ]- 5박스 (60개) /  1개당 57g ( 카카오 58g )', 137900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 61, '[슈퍼 얼리버드]설화병 올인원 9pc', '9%할인 혜택오리지널 3pc, 녹차 3pc, 초코 3pc', 20000, 64);
+VALUES (1, 60, '[슈퍼 얼리버드]설화병 올인원 9pc', '9%할인 혜택오리지널 3pc, 녹차 3pc, 초코 3pc', 20000, 64);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 61, '[슈퍼 얼리버드]설화병 오리지널 9pc', '9%할인 혜택오리지널 9pc', 20000, 89);
+VALUES (2, 60, '[슈퍼 얼리버드]설화병 오리지널 9pc', '9%할인 혜택오리지널 9pc', 20000, 89);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 61, '[슈퍼 얼리버드]설화병 올인원 18pc', '13%할인 혜택오리지널 6pc, 녹차 6pc, 초코 6pc', 38000, 61);
+VALUES (3, 60, '[슈퍼 얼리버드]설화병 올인원 18pc', '13%할인 혜택오리지널 6pc, 녹차 6pc, 초코 6pc', 38000, 61);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 61, '[슈퍼 얼리버드]설화병 오리지널 18pc', '13% 할인 혜택오리지널 18pc', 38000, 90);
+VALUES (4, 60, '[슈퍼 얼리버드]설화병 오리지널 18pc', '13% 할인 혜택오리지널 18pc', 38000, 90);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 61, '[슈퍼 얼리버드]설화병 올인원 9pc + 설화병 오리지널 9pc', '13%할인 혜택오리지널 12pc, 녹차 3pc, 초코 3pc', 38000, 86);
+VALUES (5, 60, '[슈퍼 얼리버드]설화병 올인원 9pc + 설화병 오리지널 9pc', '13%할인 혜택오리지널 12pc, 녹차 3pc, 초코 3pc', 38000, 86);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 61, '[얼리버드]설화병 올인원 9pc', '오리지널 3pc, 녹차 3pc, 초코 3pc', 22000, 300);
+VALUES (6, 60, '[얼리버드]설화병 올인원 9pc', '오리지널 3pc, 녹차 3pc, 초코 3pc', 22000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 61, '[얼리버드]설화병 오리지널 9pc', '오리지널 9pc', 22000, 300);
+VALUES (7, 60, '[얼리버드]설화병 오리지널 9pc', '오리지널 9pc', 22000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 61, '[얼리버드]설화병 올인원 18pc', '4%할인 혜택오리지널 6pc, 녹차 6pc, 초코 6pc', 42000, 300);
+VALUES (8, 60, '[얼리버드]설화병 올인원 18pc', '4%할인 혜택오리지널 6pc, 녹차 6pc, 초코 6pc', 42000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 61, '[ 얼리버드]설화병 오리지널 18pc', '4% 할인 혜택오리지널 18pc', 42000, 300);
+VALUES (9, 60, '[ 얼리버드]설화병 오리지널 18pc', '4% 할인 혜택오리지널 18pc', 42000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 61, '[얼리버드]설화병 올인원 9pc + 설화병 오리지널 9pc', '4%할인 혜택오리지널 12pc, 녹차 3pc, 초코 3pc', 42000, 292);
+VALUES (10, 60, '[얼리버드]설화병 올인원 9pc + 설화병 오리지널 9pc', '4%할인 혜택오리지널 12pc, 녹차 3pc, 초코 3pc', 42000, 292);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 62, '[슈퍼얼리버드] 국수호박 4kg ', '최저가로 제공하는 리워드!', 30900, 32);
+VALUES (1, 61, '[슈퍼얼리버드] 국수호박 4kg ', '최저가로 제공하는 리워드!', 30900, 32);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 62, '[얼리버드] 국수호박 4kg', '35,900->31,900원 으로 펀딩하실 수 있는 얼리버드', 31900, 200);
+VALUES (2, 61, '[얼리버드] 국수호박 4kg', '35,900->31,900원 으로 펀딩하실 수 있는 얼리버드', 31900, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 62, '[기본얼리버드] 국수호박 4kg ', '35,900->32,900원에 펀딩하실 수 있는 기본 얼리버드', 32900, 300);
+VALUES (3, 61, '[기본얼리버드] 국수호박 4kg ', '35,900->32,900원에 펀딩하실 수 있는 기본 얼리버드', 32900, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 63, '지금이 기회 쟁여 쟁여! 세트', '피스타치오 쭈프레드 3개, 황치즈 쭈프레드 3개, 기본 쭈크럼블 3팩, 치즈 쭈크럼블 3팩, 피스타치오 쭈크럼블 3팩, 황치즈 크럼블 3개', 116800, 26);
+VALUES (1, 62, '지금이 기회 쟁여 쟁여! 세트', '피스타치오 쭈프레드 3개, 황치즈 쭈프레드 3개, 기본 쭈크럼블 3팩, 치즈 쭈크럼블 3팩, 피스타치오 쭈크럼블 3팩, 황치즈 크럼블 3개', 116800, 26);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 63, '쭈프레드 크럼블 세트', '황치즈 쭈프레드1개, 피스타치오 쭈프레드 1개, 황치즈 쭈크럼블 1팩, 기본 쭈크럼블 1개', 32100, 156);
+VALUES (2, 62, '쭈프레드 크럼블 세트', '황치즈 쭈프레드1개, 피스타치오 쭈프레드 1개, 황치즈 쭈크럼블 1팩, 기본 쭈크럼블 1개', 32100, 156);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 63, '치즈 러버 세트', '황치즈 쭈프레드1개, 황치즈 쭈크럼블 1팩, 허니 황치즈 크럼블 1개', 20750, 197);
+VALUES (3, 62, '치즈 러버 세트', '황치즈 쭈프레드1개, 황치즈 쭈크럼블 1팩, 허니 황치즈 크럼블 1개', 20750, 197);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 63, '꾸덕 쭈프레드 세트 ', '황치즈 쭈프레드 2개, 피스타치오 쭈프레드 2개', 42840, 64);
+VALUES (4, 62, '꾸덕 쭈프레드 세트 ', '황치즈 쭈프레드 2개, 피스타치오 쭈프레드 2개', 42840, 64);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 63, '바삭 쭈크럼블 세트', '기본 쭈크럼블 2팩, 황치즈 쭈크럼블 2팩, 피스타치오 쭈크럼블 2팩', 29400, 159);
+VALUES (5, 62, '바삭 쭈크럼블 세트', '기본 쭈크럼블 2팩, 황치즈 쭈크럼블 2팩, 피스타치오 쭈크럼블 2팩', 29400, 159);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 63, '바삭 치즈 러버 세트', '황치즈 쭈프레드 2개, 치즈 쭈크럼블 2팩, 기본 쭈크럼블 2팩, 허니 황치즈 크럼블 2개', 46600, 123);
+VALUES (6, 62, '바삭 치즈 러버 세트', '황치즈 쭈프레드 2개, 치즈 쭈크럼블 2팩, 기본 쭈크럼블 2팩, 허니 황치즈 크럼블 2개', 46600, 123);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 63, '담백 고소 피스타치오 세트', '피스타치오 쭈프레드 2개, 기본 쭈크럼블 2팩, 피스타치오 쭈크럼블 2팩', 43900, 123);
+VALUES (7, 62, '담백 고소 피스타치오 세트', '피스타치오 쭈프레드 2개, 기본 쭈크럼블 2팩, 피스타치오 쭈크럼블 2팩', 43900, 123);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 64, '캠핑팟 7.8L 와디즈 한정혜택', '캠핑팟 7.8L', 76000, 291);
+VALUES (1, 63, '캠핑팟 7.8L 와디즈 한정혜택', '캠핑팟 7.8L', 76000, 291);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 64, '캠핑팟 10L 와디즈 한정혜택 ', '캠핑팟 10L', 84500, 256);
+VALUES (2, 63, '캠핑팟 10L 와디즈 한정혜택 ', '캠핑팟 10L', 84500, 256);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 64, '캠핑팟7.8L+2인 스텐 식기 세트 와디즈 한정혜택 ', '캠핑팟 7.8L + 2인 스텐 식기 세트', 109500, 285);
+VALUES (3, 63, '캠핑팟7.8L+2인 스텐 식기 세트 와디즈 한정혜택 ', '캠핑팟 7.8L + 2인 스텐 식기 세트', 109500, 285);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 64, '캠핑팟 10L + 2인 스텐 식기 세트 와디즈 한정혜택', '캠핑팟 10L + 2인 스텐 식기 세트', 118000, 253);
+VALUES (4, 63, '캠핑팟 10L + 2인 스텐 식기 세트 와디즈 한정혜택', '캠핑팟 10L + 2인 스텐 식기 세트', 118000, 253);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 65, '[슈퍼얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
+VALUES (1, 64, '[슈퍼얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 20프라이팬, 밥 그릇2개, 국 그릇2개, 멀티 핸들, 전용 가방', 119000, 88);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 65, '[슈퍼얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
+VALUES (2, 64, '[슈퍼얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 24더치 오븐 냄비, 24 프라이팬, 메쉬바스켓, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 256000, 72);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 65, '[슈퍼얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
+VALUES (3, 64, '[슈퍼얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 20프라이팬, 밥 그릇2개, 국 그릇2개, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 196000, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 65, '[얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
+VALUES (4, 64, '[얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 24더치 오븐 냄비, 24 프라이팬, 메쉬바스켓, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 189000, 390);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 65, '[얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
+VALUES (5, 64, '[얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 20프라이팬, 밥 그릇2개, 국 그릇2개, 멀티 핸들, 전용 가방', 129000, 400);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 65, '[얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트 ', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
+VALUES (6, 64, '[얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트 ', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 24더치 오븐 냄비, 24 프라이팬, 메쉬바스켓, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 266000, 400);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 65, '[얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
+VALUES (7, 64, '[얼리버드] 골든웨일 스테인레스 바닥 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 바닥 3중 코펠 세트는 3중 코펠 세트에 비해 가볍고 컴팩트합니다. 바닥이 5T로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 20프라이팬, 밥 그릇2개, 국 그릇2개, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 206000, 399);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 65, '[슈퍼얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
+VALUES (8, 64, '[슈퍼얼리버드] 골든웨일 스테인레스 통 3중 코펠 세트 + 오델로 캠핑 칼&도마 세트', '골든웨일 스테인레스 통 3중 코펠 세트는 바닥부터 바디까지 스테인레스 2.5T두께로 제작되었습니다.
 ●구성 : 16냄비, 20냄비, 24더치 오븐 냄비, 24 프라이팬, 메쉬바스켓, 멀티 핸들, 전용 가방 + 오델로 캠핑 칼 & 도마 세트(중식도, 과도, 가위, 도마, 전용 가방)', 179000, 9);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 66, '[슈퍼 얼리버드] 퍼펙드가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 69,000원 (-42%) [구성] 퍼펙트가드 웨이스트백  : 폴리 코듀라 x 1', 69000, 67);
+VALUES (1, 65, '[슈퍼 얼리버드] 퍼펙드가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 69,000원 (-42%) [구성] 퍼펙트가드 웨이스트백  : 폴리 코듀라 x 1', 69000, 67);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 66, '[슈퍼 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 69,000원 (-42%) [구성] 퍼펙트가드 웨이스트백  : 블랙원 x 1', 69000, 183);
+VALUES (2, 65, '[슈퍼 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 69,000원 (-42%) [구성] 퍼펙트가드 웨이스트백  : 블랙원 x 1', 69000, 183);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 66, '[슈퍼 커플 얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라 X 2', '정상가 236,000원 슈퍼 얼리버드 혜택 132,000원 (-44%) [구성] 퍼펙트가드 웨이스트백  : 폴리 코듀라 x 2', 132000, 21);
+VALUES (3, 65, '[슈퍼 커플 얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라 X 2', '정상가 236,000원 슈퍼 얼리버드 혜택 132,000원 (-44%) [구성] 퍼펙트가드 웨이스트백  : 폴리 코듀라 x 2', 132000, 21);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 66, '[슈퍼 커플 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 236,000원 슈퍼 얼리버드 혜택 132,000원 (-44%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 2', 132000, 18);
+VALUES (4, 65, '[슈퍼 커플 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 236,000원 슈퍼 얼리버드 혜택 132,000원 (-44%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 2', 132000, 18);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 66, '[얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 폴리 코듀라 x 1', 75000, 199);
+VALUES (5, 65, '[얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 폴리 코듀라 x 1', 75000, 199);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 66, '[얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 1', 75000, 200);
+VALUES (6, 65, '[얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 1', 75000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 66, '[레이트 얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 폴리 코듀라 x 1 [7월 말 배송]', 75000, 500);
+VALUES (7, 65, '[레이트 얼리버드] 퍼펙트가드 웨이스트백 2022 : 폴리 코듀라', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 폴리 코듀라 x 1 [7월 말 배송]', 75000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 66, '[레이트 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 1', 75000, 500);
+VALUES (8, 65, '[레이트 얼리버드] 퍼펙트가드 웨이스트백 2022 : 블랙원', '정상가 118,000원 슈퍼 얼리버드 혜택 75,000원 (-36%) [구성] 퍼펙트가드 웨이스트백 : 블랙원 x 1', 75000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 67, '[슈퍼얼리버드] L.prime 트렁크매트(60,000원) ', '※ 구성품은 상세페이지 하단 참조
+VALUES (1, 66, '[슈퍼얼리버드] L.prime 트렁크매트(60,000원) ', '※ 구성품은 상세페이지 하단 참조
 3세대 올뉴 카니발 9인
 4세대 KA4 카니발 9인
 캐스퍼 (러기지박스 없는 차량)
@@ -4460,20 +4421,20 @@ VALUES (1, 67, '[슈퍼얼리버드] L.prime 트렁크매트(60,000원) ', '※ 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 60000, 142);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 67, '[슈퍼얼리버드] L.prime 트렁크매트(72,000원)', '※ 구성품은 상세페이지 하단 참조
+VALUES (2, 66, '[슈퍼얼리버드] L.prime 트렁크매트(72,000원)', '※ 구성품은 상세페이지 하단 참조
 3세대 올뉴 카니발 7인
 4세대 KA4 카니발 7인
 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 72000, 92);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 67, '[슈퍼얼리버드] L.prime 트렁크매트(82,000원) ', '※ 구성품은 상세페이지 하단 참조
+VALUES (3, 66, '[슈퍼얼리버드] L.prime 트렁크매트(82,000원) ', '※ 구성품은 상세페이지 하단 참조
 아이오닉 5
 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 82000, 49);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 67, '[슈퍼얼리버드] L.prime 트렁크매트(93,000원)', '※ 구성품은 상세페이지 하단 참조
+VALUES (4, 66, '[슈퍼얼리버드] L.prime 트렁크매트(93,000원)', '※ 구성품은 상세페이지 하단 참조
 EV - 6
 NQ5 스포티지 (2022) - KRELL 사운드 무
 NQ5 스포티지 (2022) - KRELL 사운드 유
@@ -4492,14 +4453,14 @@ NQ5 스포티지 (2022) - KRELL 사운드 유
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 93000, 263);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 67, '[슈퍼얼리버드] L.prime 트렁크매트(143,000원) ', '※ 구성품은 상세페이지 하단 참조
+VALUES (5, 66, '[슈퍼얼리버드] L.prime 트렁크매트(143,000원) ', '※ 구성품은 상세페이지 하단 참조
 GV 80 - 5인승(사이드포함)
 GV 80 - 7인승(사이드포함)
 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 143000, 199);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 67, '[얼리버드] L.prime 트렁크매트(65,000원)', '※ 구성품은 상세페이지 하단 참조
+VALUES (6, 66, '[얼리버드] L.prime 트렁크매트(65,000원)', '※ 구성품은 상세페이지 하단 참조
 3세대 올뉴 카니발 9인
 4세대 KA4 카니발 9인
 캐스퍼 (러기지박스 없는 차량)
@@ -4507,14 +4468,14 @@ VALUES (6, 67, '[얼리버드] L.prime 트렁크매트(65,000원)', '※ 구성�
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 65000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 67, '[얼리버드] L.prime 트렁크매트(77,000원)', '※ 구성품은 상세페이지 하단 참조
+VALUES (7, 66, '[얼리버드] L.prime 트렁크매트(77,000원)', '※ 구성품은 상세페이지 하단 참조
 3세대 올뉴 카니발 7인
 4세대 KA4 카니발 7인
 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 77000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 67, '[얼리버드] L.prime 트렁크매트(98,000원) ', '※ 구성품은 상세페이지 하단 참조
+VALUES (8, 66, '[얼리버드] L.prime 트렁크매트(98,000원) ', '※ 구성품은 상세페이지 하단 참조
 EV - 6
 NQ5 스포티지 (2022) - KRELL 사운드 무
 NQ5 스포티지 (2022) - KRELL 사운드 유
@@ -4533,978 +4494,978 @@ NQ5 스포티지 (2022) - KRELL 사운드 유
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 98000, 399);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 67, '[얼리버드] L.prime 트렁크매트(148,000원) ', '※ 구성품은 상세페이지 하단 참조
+VALUES (9, 66, '[얼리버드] L.prime 트렁크매트(148,000원) ', '※ 구성품은 상세페이지 하단 참조
 GV 80 - 5인승(사이드포함)
 GV 80 - 7인승(사이드포함)
 
 ★★ 유아시트 고리 홀 추가 시 배송 메모에 반드시 남겨주세요!! ★★', 148000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 67, '제주, 도서산간 추가 배송비 ', '단독으로 펀딩 불가능하며, 제주 및 도서산간으로 배송을 희망하시면 해당 리워드를 추가해주세요', 5000, 99999);
+VALUES (10, 66, '제주, 도서산간 추가 배송비 ', '단독으로 펀딩 불가능하며, 제주 및 도서산간으로 배송을 희망하시면 해당 리워드를 추가해주세요', 5000, 99999);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 68, '[슈퍼얼리버드] A-2 원형플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트 구성!
+VALUES (1, 67, '[슈퍼얼리버드] A-2 원형플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트 구성!
 ★ 시중가의 46% 할인혜택!
 ★ 슈퍼얼리버드 추가 10%할인!
 ★ 한정수량 100개!', 80100, 562);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 68, '[얼리버드] A-1 사각플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트구성!
+VALUES (2, 67, '[얼리버드] A-1 사각플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트구성!
 ★ 시중가의 46% 할인혜택!', 89000, 958);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 68, '[얼리버드] A-2 원형플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트 구성!
+VALUES (3, 67, '[얼리버드] A-2 원형플레이트 사각버너테이블 세트', '★ 사각버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 세트 구성!
 ★ 시중가의 46% 할인혜택!
 ★ 슈퍼얼리버드 추가 10%할인!
 ★ 한정수량 100개!', 89000, 970);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 68, '[얼리버드] B SET 싱글 브릿지 버너테이블 세트', '★ 캠핑박스 + 다용도 선반 + 우드 상판 + 원목다리 + 브릿지 버너테이블
+VALUES (4, 67, '[얼리버드] B SET 싱글 브릿지 버너테이블 세트', '★ 캠핑박스 + 다용도 선반 + 우드 상판 + 원목다리 + 브릿지 버너테이블
 + 제라버너 + 캠핑의자 2EA + 전용파우치 + 전용가방 세트구성!
 ★ 시중가의 47% 할인혜택!', 149000, 966);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 68, '[얼리버드] C SET 더블 브릿지 버너테이블 세트', '★ 캠핑박스 2EA + 다용도 선반 2EA + 우드 상판 2EA + 원목다리 2EA
+VALUES (5, 67, '[얼리버드] C SET 더블 브릿지 버너테이블 세트', '★ 캠핑박스 2EA + 다용도 선반 2EA + 우드 상판 2EA + 원목다리 2EA
 + 브릿지 버너테이블 + 제라버너 + 캠핑의자 2EA + 전용파우치 2EA
 + 전용가방 세트구성!
 ★ 시중가의 48% 할인혜택!', 189000, 977);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 69, '슈퍼 얼리버드 - ET-200 1 SET ', '슈퍼 얼리버드 - ET-200 1 SET 26,500 -> 18,500 (30%)', 18500, 206);
+VALUES (1, 68, '슈퍼 얼리버드 - ET-200 1 SET ', '슈퍼 얼리버드 - ET-200 1 SET 26,500 -> 18,500 (30%)', 18500, 206);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 69, '슈퍼 얼리버드 - ET-200 2 SET ', '슈퍼 얼리버드 - ET-200 2 SET 53,000 -> 36,500 (31%)', 36500, 150);
+VALUES (2, 68, '슈퍼 얼리버드 - ET-200 2 SET ', '슈퍼 얼리버드 - ET-200 2 SET 53,000 -> 36,500 (31%)', 36500, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 69, '얼리버드 - ET-200 1 SET ', '얼리버드 - ET-200 1 SET 26,500 -> 19,500 (27%)', 19500, 2000);
+VALUES (3, 68, '얼리버드 - ET-200 1 SET ', '얼리버드 - ET-200 1 SET 26,500 -> 19,500 (27%)', 19500, 2000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 69, '얼리버드 - ET-200 2 SET ', '슈퍼 얼리버드 - ET-200 1 SET 53,000 -> 38,500 (27%)', 38500, 240);
+VALUES (4, 68, '얼리버드 - ET-200 2 SET ', '슈퍼 얼리버드 - ET-200 1 SET 53,000 -> 38,500 (27%)', 38500, 240);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 70, '01-1. 필드_돔쉘터 ', '필드_돔쉘터 - 25% 가격혜택', 1875000, 142);
+VALUES (1, 69, '01-1. 필드_돔쉘터 ', '필드_돔쉘터 - 25% 가격혜택', 1875000, 142);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 70, '01-2. 필드_터널텐트', '필드_터널텐트 - 25% 가격혜택', 1200000, 265);
+VALUES (2, 69, '01-2. 필드_터널텐트', '필드_터널텐트 - 25% 가격혜택', 1200000, 265);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 70, '02-1. 필드_돔쉘터 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_돔쉘터 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 2223000, 15);
+VALUES (3, 69, '02-1. 필드_돔쉘터 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_돔쉘터 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 2223000, 15);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 70, '02-2. 필드_터널텐트 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_터널텐트 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 1548000, 27);
+VALUES (4, 69, '02-2. 필드_터널텐트 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_터널텐트 + 릴렉스x2 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 1548000, 27);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 70, '03-.1 필드_돔쉘터 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_돔쉘터 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 2163000, 17);
+VALUES (5, 69, '03-.1 필드_돔쉘터 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_돔쉘터 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 2163000, 17);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 70, '03-2. 필드_터널텐트 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_터널텐트 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 1488000, 25);
+VALUES (6, 69, '03-2. 필드_터널텐트 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴', '필드_터널텐트 + 벤치체어 + 롤테이블 + 키친툴케이스 + 갓랜턴 - 25% 가격혜택', 1488000, 25);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 70, '04-1. 필드_돔쉘터', '필드_돔쉘터 - 20% 가격혜택', 2000000, 10);
+VALUES (7, 69, '04-1. 필드_돔쉘터', '필드_돔쉘터 - 20% 가격혜택', 2000000, 10);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 70, '04-2. 필드_터널텐트 ', '필드_터널텐트 - 20% 가격혜택', 1280000, 40);
+VALUES (8, 69, '04-2. 필드_터널텐트 ', '필드_터널텐트 - 20% 가격혜택', 1280000, 40);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 71, '[스페셜버드] 리얼 히터블 캠핑 이불 단품 40% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 119000, 287);
+VALUES (1, 70, '[스페셜버드] 리얼 히터블 캠핑 이불 단품 40% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 119000, 287);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 71, '[스페셜버드] 리얼 히터블 캠핑 이불+패드 세트 43% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 165000, 192);
+VALUES (2, 70, '[스페셜버드] 리얼 히터블 캠핑 이불+패드 세트 43% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 165000, 192);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 71, '[스페셜버드] 리얼 히터블 캠핑 이불 단품 X2 45% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 218000, 92);
+VALUES (3, 70, '[스페셜버드] 리얼 히터블 캠핑 이불 단품 X2 45% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 218000, 92);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 71, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불 단품 35% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 129000, 500);
+VALUES (4, 70, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불 단품 35% OFF', '- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)', 129000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 71, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불+패드 세트 38% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 179000, 500);
+VALUES (5, 70, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불+패드 세트 38% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 179000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 71, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불 단품 X2 40% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 238000, 500);
+VALUES (6, 70, '[슈퍼얼리버드] 리얼 히터블 캠핑 이불 단품 X2 40% OFF', '[히터블 캠핑 이불]- 양면컬러(그레이/베이지)- 150cm(가로폭) * 200cm(세로폭)[히터블 패드]- 단일컬러(베이지)- 150cm(가로폭) * 200cm(세로폭)', 238000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 72, '[슈퍼얼리버드] 20쿼터 사이즈 - 라임', '본품 1개', 299000, 100);
+VALUES (1, 71, '[슈퍼얼리버드] 20쿼터 사이즈 - 라임', '본품 1개', 299000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 72, '[슈퍼얼리버드] 20쿼터 사이즈 - 라이트블루', '본품 1개', 299000, 100);
+VALUES (2, 71, '[슈퍼얼리버드] 20쿼터 사이즈 - 라이트블루', '본품 1개', 299000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 72, '[슈퍼얼리버드] 20쿼터 사이즈 - 탄', '본품 1개', 299000, 100);
+VALUES (3, 71, '[슈퍼얼리버드] 20쿼터 사이즈 - 탄', '본품 1개', 299000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 72, '[슈퍼얼리버드] 26쿼터 사이즈 - 라임', '본품 1개', 399000, 100);
+VALUES (4, 71, '[슈퍼얼리버드] 26쿼터 사이즈 - 라임', '본품 1개', 399000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 72, '[슈퍼얼리버드] 26쿼터 사이즈 - 라이트블루', '본품 1개', 399000, 100);
+VALUES (5, 71, '[슈퍼얼리버드] 26쿼터 사이즈 - 라이트블루', '본품 1개', 399000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 72, '[슈퍼얼리버드] 26쿼터 사이즈 - 탄', '본품 1개', 399000, 100);
+VALUES (6, 71, '[슈퍼얼리버드] 26쿼터 사이즈 - 탄', '본품 1개', 399000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 72, '[슈퍼얼리버드] 40쿼터 사이즈 - 라임', '본품 1개', 499000, 100);
+VALUES (7, 71, '[슈퍼얼리버드] 40쿼터 사이즈 - 라임', '본품 1개', 499000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 72, '[슈퍼얼리버드] 40쿼터 사이즈 - 라이트블루', '본품 1개', 499000, 100);
+VALUES (8, 71, '[슈퍼얼리버드] 40쿼터 사이즈 - 라이트블루', '본품 1개', 499000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 72, '[슈퍼얼리버드] 40쿼터 사이즈 - 탄', '본품 1개', 499000, 100);
+VALUES (9, 71, '[슈퍼얼리버드] 40쿼터 사이즈 - 탄', '본품 1개', 499000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 72, '[얼리버드] 20쿼터 사이즈 - 라임', '본품 1개', 319000, 100);
+VALUES (10, 71, '[얼리버드] 20쿼터 사이즈 - 라임', '본품 1개', 319000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 72, '[얼리버드] 20쿼터 사이즈 - 라이트블루', '본품 1개', 319000, 100);
+VALUES (11, 71, '[얼리버드] 20쿼터 사이즈 - 라이트블루', '본품 1개', 319000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 72, '[얼리버드] 20쿼터 사이즈 - 탄', '본품 1개', 319000, 100);
+VALUES (12, 71, '[얼리버드] 20쿼터 사이즈 - 탄', '본품 1개', 319000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (13, 72, '[얼리버드] 26쿼터사이즈 - 라임', '본품 1개', 429000, 100);
+VALUES (13, 71, '[얼리버드] 26쿼터사이즈 - 라임', '본품 1개', 429000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (14, 72, '[얼리버드] 26쿼터사이즈 - 라이트블루', '본품 1개', 429000, 100);
+VALUES (14, 71, '[얼리버드] 26쿼터사이즈 - 라이트블루', '본품 1개', 429000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (15, 72, '[얼리버드] 26쿼터사이즈 - 탄', '본품 1개', 429000, 100);
+VALUES (15, 71, '[얼리버드] 26쿼터사이즈 - 탄', '본품 1개', 429000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (16, 72, '[얼리버드] 40쿼터 사이즈 - 라임', '본품 1개', 529000, 100);
+VALUES (16, 71, '[얼리버드] 40쿼터 사이즈 - 라임', '본품 1개', 529000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (17, 72, '[얼리버드] 40쿼터 사이즈 - 라이트블루', '본품 1개', 529000, 100);
+VALUES (17, 71, '[얼리버드] 40쿼터 사이즈 - 라이트블루', '본품 1개', 529000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (18, 72, '[얼리버드] 40쿼터 사이즈 - 탄', '본품 1개', 529000, 100);
+VALUES (18, 71, '[얼리버드] 40쿼터 사이즈 - 탄', '본품 1개', 529000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (19, 72, '도서/산간지역 발송', '도서 산간 지역(제주도) 추가 배송비', 5000, 100);
+VALUES (19, 71, '도서/산간지역 발송', '도서 산간 지역(제주도) 추가 배송비', 5000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 73, '*빠른배송* [슈퍼얼리버드] 우즈맨이너라이너 구스침낭 대형', '[펀딩 종료 후 4 영업일간 결제 완료된 시점 이후 익일로 배송이 시작됩니다]1. 368,000->287,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 펀딩 종료후 익일배송 (선착순 50명)6. 무료배송', 287000, 41);
+VALUES (1, 72, '*빠른배송* [슈퍼얼리버드] 우즈맨이너라이너 구스침낭 대형', '[펀딩 종료 후 4 영업일간 결제 완료된 시점 이후 익일로 배송이 시작됩니다]1. 368,000->287,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 펀딩 종료후 익일배송 (선착순 50명)6. 무료배송', 287000, 41);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 73, '*빠른배송* [슈퍼얼리버드] 우즈맨이너라이너 구스침낭 중형', '[펀딩 종료 후 4 영업일간 결제 완료된 시점 이후 익일로 배송이 시작됩니다]﻿1. 338,000->263,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 펀딩 종료후 익일배송 (선착순 50명)6. 무료배송', 263000, 49);
+VALUES (2, 72, '*빠른배송* [슈퍼얼리버드] 우즈맨이너라이너 구스침낭 중형', '[펀딩 종료 후 4 영업일간 결제 완료된 시점 이후 익일로 배송이 시작됩니다]﻿1. 338,000->263,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 펀딩 종료후 익일배송 (선착순 50명)6. 무료배송', 263000, 49);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 73, '[슈퍼얼리버드] 우즈맨이너라이너 구스침낭 대형', '﻿1. 368,000->287,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 무료배송', 287000, 150);
+VALUES (3, 72, '[슈퍼얼리버드] 우즈맨이너라이너 구스침낭 대형', '﻿1. 368,000->287,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 무료배송', 287000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 73, '[슈퍼얼리버드]우즈맨이너라이너 구스침낭 중형', '﻿1. 338,000->263,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 무료배송', 263000, 100);
+VALUES (4, 72, '[슈퍼얼리버드]우즈맨이너라이너 구스침낭 중형', '﻿1. 338,000->263,000 (22%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 알림신청시 미니손전등 (색상랜덤발송)5. 무료배송', 263000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 73, '[얼리버드]우즈맨 구스침낭이너라이너 대형', '﻿1. 368,000->294,000 (20%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 무료배송', 294000, 200);
+VALUES (5, 72, '[얼리버드]우즈맨 구스침낭이너라이너 대형', '﻿1. 368,000->294,000 (20%혜택)2. 우즈맨이너라이너 구스침낭 대형3. 압축가방+보관용그물가방4. 무료배송', 294000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 73, '[얼리버드]우즈맨 구스침낭이너라이너 중형', '﻿1. 368,000->270,000 (20%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 무료배송', 270000, 200);
+VALUES (6, 72, '[얼리버드]우즈맨 구스침낭이너라이너 중형', '﻿1. 368,000->270,000 (20%혜택)2. 우즈맨이너라이너 구스침낭 중형3. 압축가방+보관용그물가방4. 무료배송', 270000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 74, '[슈퍼얼리버드] 가족 모두 떠나는 호주갬성 캠핑 SET', '- 판매예정가 1,990,000원 (22.1%혜택)75L 본품 + 기본구성품 + 전용커버', 1570000, 21);
+VALUES (1, 73, '[슈퍼얼리버드] 가족 모두 떠나는 호주갬성 캠핑 SET', '- 판매예정가 1,990,000원 (22.1%혜택)75L 본품 + 기본구성품 + 전용커버', 1570000, 21);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 74, '[슈퍼얼리버드] 혼자 또는 친구와 호주갬성 캠핑 SET', '판매예정가 1,590,000원 (21.4%혜택)47L 본품 + 기본 구성품 + 전용커버', 1270000, 21);
+VALUES (2, 73, '[슈퍼얼리버드] 혼자 또는 친구와 호주갬성 캠핑 SET', '판매예정가 1,590,000원 (21.4%혜택)47L 본품 + 기본 구성품 + 전용커버', 1270000, 21);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 74, '[얼리버드] 놓칠 수 없는 가족 나들이 SET', '판매예정가 1,990,000원 (19.1%혜택)75L 본품 + 기본 구성품 + 전용커버', 1630000, 17);
+VALUES (3, 73, '[얼리버드] 놓칠 수 없는 가족 나들이 SET', '판매예정가 1,990,000원 (19.1%혜택)75L 본품 + 기본 구성품 + 전용커버', 1630000, 17);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 74, '[얼리버드] 놓칠 수 없는 가족 나들이', '판매예정가 1,890,000원 (19.0%혜택)75L 본품 + 기본 구성품', 1550000, 10);
+VALUES (4, 73, '[얼리버드] 놓칠 수 없는 가족 나들이', '판매예정가 1,890,000원 (19.0%혜택)75L 본품 + 기본 구성품', 1550000, 10);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 74, '[얼리버드] 소소한 1인 감성 캠핑 SET', '판매예정가 1,590,000원 (17.6%혜택)47L 본품 + 기본 구성품 + 전용커버', 1330000, 10);
+VALUES (5, 73, '[얼리버드] 소소한 1인 감성 캠핑 SET', '판매예정가 1,590,000원 (17.6%혜택)47L 본품 + 기본 구성품 + 전용커버', 1330000, 10);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 74, '[얼리버드] 소소한 1인 감성 캠핑', '판매예정가 1,490,000원 (17.4%혜택)47L 본품 + 기본 구성품', 1250000, 10);
+VALUES (6, 73, '[얼리버드] 소소한 1인 감성 캠핑', '판매예정가 1,490,000원 (17.4%혜택)47L 본품 + 기본 구성품', 1250000, 10);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 75, '와이어바스켓 쉘프 + 2단 쉘프 + 쿨러 스탠드 + 워터저그 스탠드', '월넛 시리즈의 모든 구성이 포함된 리워드입니다.', 660000, 99);
+VALUES (1, 74, '와이어바스켓 쉘프 + 2단 쉘프 + 쿨러 스탠드 + 워터저그 스탠드', '월넛 시리즈의 모든 구성이 포함된 리워드입니다.', 660000, 99);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 75, '월넛 2단 쉘프', '와이어바스켓 쉘프에 선반이 추가된 구성입니다.', 320000, 99);
+VALUES (2, 74, '월넛 2단 쉘프', '와이어바스켓 쉘프에 선반이 추가된 구성입니다.', 320000, 99);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 75, '와이어바스켓 쉘프 + 2단 쉘프 + 쿨러 스탠드 + 워터저그 스탠드', '쉘프의 기본구성 리워드입니다. (선반을 추가하시려는경우, 위 2단 쉘프 펀딩에 참여해주세요.', 270000, 100);
+VALUES (3, 74, '와이어바스켓 쉘프 + 2단 쉘프 + 쿨러 스탠드 + 워터저그 스탠드', '쉘프의 기본구성 리워드입니다. (선반을 추가하시려는경우, 위 2단 쉘프 펀딩에 참여해주세요.', 270000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 75, '쿨러 스탠드', '아이스박스, 버너 등을 올러놓을만한 사이즈의 스탠드입니다.', 75000, 100);
+VALUES (4, 74, '쿨러 스탠드', '아이스박스, 버너 등을 올러놓을만한 사이즈의 스탠드입니다.', 75000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 75, '워터저그 스탠드', '워터저그, 랜턴, 선풍기 등을 올려놓을만한 사이즈의 스탠드입니다.', 65000, 100);
+VALUES (5, 74, '워터저그 스탠드', '워터저그, 랜턴, 선풍기 등을 올려놓을만한 사이즈의 스탠드입니다.', 65000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 76, '아우틴스 마스터 폴딩웨건 150리터(우드롤 상판 포함)', '기본에 충실하고 내구성이 매우 우수한 아우틴스 마스터 폴딩웨건입니다. 우드롤 상판 포함으로 테이블 대용으로 사용 가능합니다. 피크닉 가실때 의자만 몇개 가져가시면 됩니다. 4점 폴딩방식과 롤 타입의 상판은 수납이 매우 용이합니다.', 159000, 497);
+VALUES (1, 75, '아우틴스 마스터 폴딩웨건 150리터(우드롤 상판 포함)', '기본에 충실하고 내구성이 매우 우수한 아우틴스 마스터 폴딩웨건입니다. 우드롤 상판 포함으로 테이블 대용으로 사용 가능합니다. 피크닉 가실때 의자만 몇개 가져가시면 됩니다. 4점 폴딩방식과 롤 타입의 상판은 수납이 매우 용이합니다.', 159000, 497);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 77, 'Oregon Creek 캠핑 그린 카모 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 161);
+VALUES (1, 76, 'Oregon Creek 캠핑 그린 카모 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 161);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 77, 'Oregon Creek 블루 카모 캠핑 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 169);
+VALUES (2, 76, 'Oregon Creek 블루 카모 캠핑 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 169);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 77, 'Oregon Creek 캠핑 핑크 카모 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 167);
+VALUES (3, 76, 'Oregon Creek 캠핑 핑크 카모 체어', '[Oregon Creek] 힙한 컬러와 패턴으로 더욱 더 멋진 캠핑 및 피크닉으로 즐겨보세요 69,900 → 49,900', 49900, 167);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 78, '[공통] 종이 똥츄 8EA', '종이 배변봉투 7+1일 키트', 2000, 462);
+VALUES (1, 77, '[공통] 종이 똥츄 8EA', '종이 배변봉투 7+1일 키트', 2000, 462);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 78, '[슈퍼얼리버드] 펫피룩 세트', '스트롤백 + 리드줄 세트', 28000, 30);
+VALUES (2, 77, '[슈퍼얼리버드] 펫피룩 세트', '스트롤백 + 리드줄 세트', 28000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 78, '[슈퍼얼리버드] 스트롤백', '스트롤백 ', 24000, 41);
+VALUES (3, 77, '[슈퍼얼리버드] 스트롤백', '스트롤백 ', 24000, 41);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 78, '[얼리버드] 펫피룩 세트', '스트롤백 + 리드줄 세트', 30000, 298);
+VALUES (4, 77, '[얼리버드] 펫피룩 세트', '스트롤백 + 리드줄 세트', 30000, 298);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 78, '[얼리버드] 스트롤백 ', '스트롤백', 25200, 300);
+VALUES (5, 77, '[얼리버드] 스트롤백 ', '스트롤백', 25200, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 79, '[슈퍼얼리버드] Potty walk bag 색상: bean black', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
+VALUES (1, 78, '[슈퍼얼리버드] Potty walk bag 색상: bean black', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 79, '[슈퍼얼리버드] Potty walk bag 색상: cream white ', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
+VALUES (2, 78, '[슈퍼얼리버드] Potty walk bag 색상: cream white ', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 79, '[슈퍼얼리버드] Potty walk bag 색상: grean olive', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
+VALUES (3, 78, '[슈퍼얼리버드] Potty walk bag 색상: grean olive', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 28700, 62);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 79, '[수퍼얼리버드] Playground bag 색상: crisp white ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
+VALUES (4, 78, '[수퍼얼리버드] Playground bag 색상: crisp white ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 79, '[수퍼얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
+VALUES (5, 78, '[수퍼얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 79, '[수퍼얼리버드] Playground bag 색상: nigh black ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
+VALUES (6, 78, '[수퍼얼리버드] Playground bag 색상: nigh black ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 33600, 55);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 79, '[얼리버드] Potty walk bag 색상: bean black', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
+VALUES (7, 78, '[얼리버드] Potty walk bag 색상: bean black', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 79, '[얼리버드] Potty walk bag 색상: cream white ', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
+VALUES (8, 78, '[얼리버드] Potty walk bag 색상: cream white ', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 79, '[얼리버드] Potty walk bag 색상: grean olive', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
+VALUES (9, 78, '[얼리버드] Potty walk bag 색상: grean olive', '활동에 불편이 없게 납작한 형태로 만들어진 간편한 가방으로 배변산책시 필요한 최소한의 용품들을 보관할 수 있도록 제작했습니다.', 30700, 118);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 79, '[얼리버드] Playground bag 색상: crisp white ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 119);
+VALUES (10, 78, '[얼리버드] Playground bag 색상: crisp white ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 119);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 79, '[얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 120);
+VALUES (11, 78, '[얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 120);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 79, '[얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 121);
+VALUES (12, 78, '[얼리버드] Playground bag 색상: breezy gray ', 'play ground 가방은 반려용품을 가방하나에 보관할 수 있도록 수납 공간이 넓고 물건찾기용이하게 섹션이 잘 나누어져 있고 많은 용품을 수납할 수 있도록 제작 하였습니다.', 36000, 121);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 80, '기간한정 리워드', '투인원정수기 본품 + 정수기 받침대 + 정수필터 2셋트', 95000, 487);
+VALUES (1, 79, '기간한정 리워드', '투인원정수기 본품 + 정수기 받침대 + 정수필터 2셋트', 95000, 487);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 80, '얼리버드 1', '투인원정수기 본품 + 정수기 받침대 + 정수필터 2셋트 * 6월 20일 (월) 오전 11시 마감', 93000, 500);
+VALUES (2, 79, '얼리버드 1', '투인원정수기 본품 + 정수기 받침대 + 정수필터 2셋트 * 6월 20일 (월) 오전 11시 마감', 93000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 80, '얼리버드 2', '투인원정수기 본품 + 하부도자기추가 + 모터1개 + 아답터 1개 하부 도자기 추가로 2대 정수기 사용 가능!!', 129000, 200);
+VALUES (3, 79, '얼리버드 2', '투인원정수기 본품 + 하부도자기추가 + 모터1개 + 아답터 1개 하부 도자기 추가로 2대 정수기 사용 가능!!', 129000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (1, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(1개) 1번 [아이보리 + 베이지]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (2, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(2개) 2번 [베이지 +브라운]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (3, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(3개) 3번 [블랙 + 베이지]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (4, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 4번 [옐로우 + 아이보리]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (5, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 5번 [레드 + 옐로우]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 81, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
+VALUES (6, 80, '퐁당 단독 리워드', '1640 리드줄 본품 40% 할인(판매 정가 54,000원)
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 6번 [그린 + 진핑크]', 32400, 2991);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (7, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(1개) 1번 [아이보리 + 베이지 + 브라운]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (8, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(2개)2번 [베이지 +브라운 + 블랙]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (9, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(3개) 번 [블랙 + 베이지 +옐로우]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (10, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 4번 [옐로우 + 아이보리 + 레드]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (11, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 5번 [레드 + 옐로우 +그린]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 81, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
+VALUES (12, 80, '패밀리 리워드', '1640 리드줄 본품 3개 + 무료배송
 본품 구성 : 리드줄+보조 손잡이+메쉬파우치+카라비너+여분 벨크로(4개) 6번 [그린 + 진핑크 +연블루]', 90000, 2997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 82, '[수량한정] 오월냥 원목 캣휠+카펫 풀세트', '그레이', 279000, 11);
+VALUES (1, 81, '[수량한정] 오월냥 원목 캣휠+카펫 풀세트', '그레이', 279000, 11);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 82, '[수량한정] 오월냥 원목 캣휠+카펫 풀세트 ', '브라운', 279000, 5);
+VALUES (2, 81, '[수량한정] 오월냥 원목 캣휠+카펫 풀세트 ', '브라운', 279000, 5);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 82, '오월냥 원목 캣휠+카펫 풀세트', '휠+받침대+카펫', 299000, 20);
+VALUES (3, 81, '오월냥 원목 캣휠+카펫 풀세트', '휠+받침대+카펫', 299000, 20);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 83, '[슈퍼 얼리버드] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽어깨끈', 139000, 49);
+VALUES (1, 82, '[슈퍼 얼리버드] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽어깨끈', 139000, 49);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 83, '[슈퍼 얼리버드] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 139000, 51);
+VALUES (2, 82, '[슈퍼 얼리버드] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 139000, 51);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 83, '[슈퍼 얼리버드] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 139000, 50);
+VALUES (3, 82, '[슈퍼 얼리버드] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 139000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 83, '[얼리버드] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
+VALUES (4, 82, '[얼리버드] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 83, '[얼리버드] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
+VALUES (5, 82, '[얼리버드] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 83, '[얼리버드] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
+VALUES (6, 82, '[얼리버드] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 149000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 83, '[와디즈가] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽어깨끈', 159000, 300);
+VALUES (7, 82, '[와디즈가] 토드백 제이드 블루', '구성: 토드백+내부패드+가죽어깨끈', 159000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 83, '[와디즈가] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 159000, 300);
+VALUES (8, 82, '[와디즈가] 토드백 브라운', '구성: 토드백+내부패드+가죽 어깨끈', 159000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 83, '[와디즈가] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 159000, 300);
+VALUES (9, 82, '[와디즈가] 토드백 핑크', '구성: 토드백+내부패드+가죽 어깨끈', 159000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 84, '울트라얼리버드 (오리지널 세트+묘래매트)', '묘래박스 오리지널 베이지 + 카키 덧대 + 화이트 묘래통 + 베이지 묘래매트', 62000, 53);
+VALUES (1, 83, '울트라얼리버드 (오리지널 세트+묘래매트)', '묘래박스 오리지널 베이지 + 카키 덧대 + 화이트 묘래통 + 베이지 묘래매트', 62000, 53);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 84, '울트라얼리버드 (롱 세트 + 묘래매트)', '롱 민트 묘래박스  + 민트 덧대 + 화이트 묘래통 + 베이지 묘래매트', 64500, 58);
+VALUES (2, 83, '울트라얼리버드 (롱 세트 + 묘래매트)', '롱 민트 묘래박스  + 민트 덧대 + 화이트 묘래통 + 베이지 묘래매트', 64500, 58);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 84, '울트라얼리버드 (묘래박스 오리지널 + 묘래매트)', '묘래박스 화이트 오리지널 + 그레이 묘래매트', 56500, 471);
+VALUES (3, 83, '울트라얼리버드 (묘래박스 오리지널 + 묘래매트)', '묘래박스 화이트 오리지널 + 그레이 묘래매트', 56500, 471);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 84, '울트라얼리버드 (롱 묘래박스 + 묘래매트)', '롱 화이트 묘래박스 + 그레이 묘래매트', 59800, 478);
+VALUES (4, 83, '울트라얼리버드 (롱 묘래박스 + 묘래매트)', '롱 화이트 묘래박스 + 그레이 묘래매트', 59800, 478);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 84, '슈퍼얼리버드', '그레이 묘래매트1개', 34000, 726);
+VALUES (5, 83, '슈퍼얼리버드', '그레이 묘래매트1개', 34000, 726);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 84, '슈퍼얼리버드', '베이지 묘래매트 1개', 34000, 726);
+VALUES (6, 83, '슈퍼얼리버드', '베이지 묘래매트 1개', 34000, 726);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 84, '슈퍼얼리버드', '그레이 묘래매트 2개', 64000, 784);
+VALUES (7, 83, '슈퍼얼리버드', '그레이 묘래매트 2개', 64000, 784);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 84, '슈퍼얼리버드', '베이지 묘래매트 2개', 64000, 784);
+VALUES (8, 83, '슈퍼얼리버드', '베이지 묘래매트 2개', 64000, 784);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 84, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 1개', 64000, 784);
+VALUES (9, 83, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 1개', 64000, 784);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 84, '슈퍼얼리버드', '그레이 묘래매트 3개', 94500, 449);
+VALUES (10, 83, '슈퍼얼리버드', '그레이 묘래매트 3개', 94500, 449);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 84, '슈퍼얼리버드', '그레이 묘래매트 2개 + 베이지 묘래매트 1개', 94500, 449);
+VALUES (11, 83, '슈퍼얼리버드', '그레이 묘래매트 2개 + 베이지 묘래매트 1개', 94500, 449);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 84, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 2개', 94500, 449);
+VALUES (12, 83, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 2개', 94500, 449);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (13, 84, '슈퍼얼리버드', '그레이 묘래매트 4개', 120000, 445);
+VALUES (13, 83, '슈퍼얼리버드', '그레이 묘래매트 4개', 120000, 445);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (14, 84, '슈퍼얼리버드', '그레이 묘래매트 3개 + 베이지 묘래매트 1개', 120000, 445);
+VALUES (14, 83, '슈퍼얼리버드', '그레이 묘래매트 3개 + 베이지 묘래매트 1개', 120000, 445);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (15, 84, '슈퍼얼리버드', '그레이 묘래 매트 2개 +베이지 묘래매트 2개', 120000, 445);
+VALUES (15, 83, '슈퍼얼리버드', '그레이 묘래 매트 2개 +베이지 묘래매트 2개', 120000, 445);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (16, 84, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 3개', 120000, 445);
+VALUES (16, 83, '슈퍼얼리버드', '그레이 묘래매트 1개 + 베이지 묘래매트 3개', 120000, 445);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 85, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 15팩', '🚨37%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 15Packs 💰Kg 당 1,600원💰', 216000, 100);
+VALUES (1, 84, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 15팩', '🚨37%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 15Packs 💰Kg 당 1,600원💰', 216000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 85, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 10팩', '🚨36%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 10Packs 💰Kg 당 1,625원💰', 146250, 100);
+VALUES (2, 84, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 10팩', '🚨36%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 10Packs 💰Kg 당 1,625원💰', 146250, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 85, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 5팩', '🚨35%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 5Packs 💰Kg 당 1,650원💰', 74250, 100);
+VALUES (3, 84, '[5위 기념 슈퍼 얼리 캣 추가 구성] 미우타임즈 A 타입 9kg X 5팩', '🚨35%할인🚨 📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 5Packs 💰Kg 당 1,650원💰', 74250, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 85, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 8팩', '🚨37%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 8Packs💰Kg 당 1,600원💰', 115200, 100);
+VALUES (4, 84, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 8팩', '🚨37%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 8Packs💰Kg 당 1,600원💰', 115200, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 85, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 6팩', '🚨36%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 6Packs💰Kg 당 1,630원💰', 88020, 100);
+VALUES (5, 84, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 6팩', '🚨36%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 6Packs💰Kg 당 1,630원💰', 88020, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 85, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 4팩', '🚨35%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 4Packs💰Kg 당 1,650원💰', 59400, 100);
+VALUES (6, 84, '[슈퍼 얼리 캣] 미우타임즈 A 타입 9kg X 4팩', '🚨35%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 4Packs💰Kg 당 1,650원💰', 59400, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 85, '[얼리 캣] 미우타임즈 A 타입 9kg X 8팩', '🚨22%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 8Packs💰Kg 당 2,000원💰', 144000, 100);
+VALUES (7, 84, '[얼리 캣] 미우타임즈 A 타입 9kg X 8팩', '🚨22%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 8Packs💰Kg 당 2,000원💰', 144000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 85, '[얼리 캣] 미우타임즈 A 타입 9kg X 6팩', '🚨20%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 6Packs💰Kg 당 2,050원💰', 110700, 100);
+VALUES (8, 84, '[얼리 캣] 미우타임즈 A 타입 9kg X 6팩', '🚨20%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 6Packs💰Kg 당 2,050원💰', 110700, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 85, '[얼리 캣] 미우타임즈 A 타입 9kg X 4팩', '🚨18%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 4Pack💰Kg 당 2,100원💰', 75600, 100);
+VALUES (9, 84, '[얼리 캣] 미우타임즈 A 타입 9kg X 4팩', '🚨18%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 4Pack💰Kg 당 2,100원💰', 75600, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 85, '[얼리 캣] 미우타임즈 A 타입 9kg X 2팩', '🚨16%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 2Packs💰Kg 당 2,150원💰', 38700, 100);
+VALUES (10, 84, '[얼리 캣] 미우타임즈 A 타입 9kg X 2팩', '🚨16%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 2Packs💰Kg 당 2,150원💰', 38700, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 85, '[얼리 캣] 미우타임즈 A 타입 9kg X 1팩', '🚨14%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 1Pack💰Kg 당 2,200원💰', 19800, 100);
+VALUES (11, 84, '[얼리 캣] 미우타임즈 A 타입 9kg X 1팩', '🚨14%할인🚨📰MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 1Pack💰Kg 당 2,200원💰', 19800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 85, '[레이지 캣] 미우타임즈 A 타입 9kgX 2팩', '📢14%할인📢🗞MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 2Packs🧾Kg 당 2,200원🧾', 39600, 100);
+VALUES (12, 84, '[레이지 캣] 미우타임즈 A 타입 9kgX 2팩', '📢14%할인📢🗞MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 2Packs🧾Kg 당 2,200원🧾', 39600, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (13, 85, '[레이지 캣] 미우타임즈 A 타입 9kgX 1팩', '📢10%할인📢🗞MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 1Pack🧾Kg 당 2,300원🧾', 20700, 100);
+VALUES (13, 84, '[레이지 캣] 미우타임즈 A 타입 9kgX 1팩', '📢10%할인📢🗞MEOWTIMES_A Type : 100% 친환경 그리스 올리브 정제 모래 9kg X 1Pack🧾Kg 당 2,300원🧾', 20700, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 86, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (핑크-1개)', '원츄 슬라이딩 펫 스푼 ㅣ핑크-1개 (화이트컬러스푼 1개 추가증정!)', 16900, 481);
+VALUES (1, 85, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (핑크-1개)', '원츄 슬라이딩 펫 스푼 ㅣ핑크-1개 (화이트컬러스푼 1개 추가증정!)', 16900, 481);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 86, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (민트-1개)', '원츄 슬라이딩 펫 스푼 ㅣ민트-1개 (화이트컬러스푼 1개 추가증정!)', 16900, 465);
+VALUES (2, 85, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (민트-1개)', '원츄 슬라이딩 펫 스푼 ㅣ민트-1개 (화이트컬러스푼 1개 추가증정!)', 16900, 465);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 86, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (민트/핑크-2개 세트)', '[민트/핑크] 총 2개 1세트!  (화이트컬러스푼 2개 추가증정!)', 29900, 932);
+VALUES (3, 85, '[슈퍼얼리버드] 원츄 슬라이딩 펫 스푼 (민트/핑크-2개 세트)', '[민트/핑크] 총 2개 1세트!  (화이트컬러스푼 2개 추가증정!)', 29900, 932);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 86, '[얼리버드] 원츄 슬라이딩 펫 스푼 (핑크-1개)', '원츄 슬라이딩 펫 스푼ㅣ핑크-1개(화이트컬러스푼 1개 추가증정!)', 18400, 500);
+VALUES (4, 85, '[얼리버드] 원츄 슬라이딩 펫 스푼 (핑크-1개)', '원츄 슬라이딩 펫 스푼ㅣ핑크-1개(화이트컬러스푼 1개 추가증정!)', 18400, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 86, '[얼리버드] 원츄 슬라이딩 펫 스푼 (민트-1개)', '원츄 슬라이딩 펫 스푼ㅣ민트-1개(화이트컬러스푼 1개 추가증정!)', 18400, 500);
+VALUES (5, 85, '[얼리버드] 원츄 슬라이딩 펫 스푼 (민트-1개)', '원츄 슬라이딩 펫 스푼ㅣ민트-1개(화이트컬러스푼 1개 추가증정!)', 18400, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 86, '[얼리버드] 원츄 슬라이딩 펫 스푼 (민트/핑크-2개 세트)', '[민트/핑크] 총 2개 1세트!(화이트컬러스푼 2개 추가증정!)', 32900, 997);
+VALUES (6, 85, '[얼리버드] 원츄 슬라이딩 펫 스푼 (민트/핑크-2개 세트)', '[민트/핑크] 총 2개 1세트!(화이트컬러스푼 2개 추가증정!)', 32900, 997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 87, '[슈퍼 얼리버드] S사이즈 쿨링 바스켓  무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 무료배송* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 추가 증정( 기존2팩 + 추가2팩  ) - S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상:블랙', 89000, 38);
+VALUES (1, 86, '[슈퍼 얼리버드] S사이즈 쿨링 바스켓  무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 무료배송* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 추가 증정( 기존2팩 + 추가2팩  ) - S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상:블랙', 89000, 38);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 87, '[슈퍼 얼리버드] S사이즈 쿨링 바스켓  무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 무료배송* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 추가 증정( 기존2팩 + 추가2팩  ) - S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상:그린', 89000, 38);
+VALUES (2, 86, '[슈퍼 얼리버드] S사이즈 쿨링 바스켓  무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 무료배송* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 추가 증정( 기존2팩 + 추가2팩  ) - S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상:그린', 89000, 38);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 87, '[슈퍼 얼리버드]  M사이즈 쿨링 바스켓 무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜기프트(전용캐리어가방)*무료배송* 쿨링 바스켓*쿨링 바스켓용 물 100% 아이스팩 추가증정 (기존2팩 + 추가2팩)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 99000, 30);
+VALUES (3, 86, '[슈퍼 얼리버드]  M사이즈 쿨링 바스켓 무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜기프트(전용캐리어가방)*무료배송* 쿨링 바스켓*쿨링 바스켓용 물 100% 아이스팩 추가증정 (기존2팩 + 추가2팩)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 99000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 87, '[슈퍼 얼리버드]  M사이즈 쿨링 바스켓 무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜기프트(전용캐리어가방)*무료배송* 쿨링 바스켓*쿨링 바스켓용 물 100% 아이스팩 추가증정 (기존2팩 + 추가2팩)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 99000, 30);
+VALUES (4, 86, '[슈퍼 얼리버드]  M사이즈 쿨링 바스켓 무료배송 세트', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜기프트(전용캐리어가방)*무료배송* 쿨링 바스켓*쿨링 바스켓용 물 100% 아이스팩 추가증정 (기존2팩 + 추가2팩)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 99000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 87, '[싱글 세트] S 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 블랙', 79000, 98);
+VALUES (5, 86, '[싱글 세트] S 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 블랙', 79000, 98);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 87, '[싱글 세트] S 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 그린', 79000, 98);
+VALUES (6, 86, '[싱글 세트] S 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 그린', 79000, 98);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 87, '[싱글 세트] M 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상 : 블랙', 89000, 95);
+VALUES (7, 86, '[싱글 세트] M 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상 : 블랙', 89000, 95);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 87, '[싱글 세트] M 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 89000, 95);
+VALUES (8, 86, '[싱글 세트] M 사이즈', '본체 프레임 + 텐트 그늘 막 스킨 + 바닥면 스킨 + 기프트 (전용 캐리어 가방)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 89000, 95);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 87, '[쿨링 바스켓 세트] S 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 블랙', 89000, 150);
+VALUES (9, 86, '[쿨링 바스켓 세트] S 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 블랙', 89000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 87, '[쿨링 바스켓 세트] S 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 그린', 89000, 150);
+VALUES (10, 86, '[쿨링 바스켓 세트] S 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등) -색상: 그린', 89000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 87, '[쿨링 바스켓 세트] M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 99000, 150);
+VALUES (11, 86, '[쿨링 바스켓 세트] M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 99000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 87, '[쿨링 바스켓 세트] M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 99000, 150);
+VALUES (12, 86, '[쿨링 바스켓 세트] M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방)* 쿨링 바스켓* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 )- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 99000, 150);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (13, 87, '[더블 쿨링 바스켓 세트] S + M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방) x 2* 쿨링 바스켓 x 2* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 ) x 2- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 179000, 46);
+VALUES (13, 86, '[더블 쿨링 바스켓 세트] S + M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방) x 2* 쿨링 바스켓 x 2* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 ) x 2- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 블랙', 179000, 46);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (14, 87, '[더블 쿨링 바스켓 세트] S + M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방) x 2* 쿨링 바스켓 x 2* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 ) x 2- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 179000, 46);
+VALUES (14, 86, '[더블 쿨링 바스켓 세트] S + M 사이즈', '*본체프레임 + 텐트그늘막스킨 + 바닥면스킨 + 스페셜 기프트(전용캐리어가방) x 2* 쿨링 바스켓 x 2* 쿨링 바스켓용 물 100% 아이스팩 증정( 2팩 ) x 2- S사이즈 : 5kg 이하 소형견 추천( 말티즈, 토이푸들, 치와와, 포메라니안 등)- M사이즈 : 5kg 이상 중형견 추천( 비숑, 제페니스 스피츠, 프렌치 불도그 등) -색상: 그린', 179000, 46);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 88, '화이트LED하네스 1개 (S)', '슈퍼얼리버드 20%할인 !', 29600, 96);
+VALUES (1, 87, '화이트LED하네스 1개 (S)', '슈퍼얼리버드 20%할인 !', 29600, 96);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 88, '화이트LED하네스 1개 (M)', '슈퍼얼리버드 20%할인 !', 29600, 96);
+VALUES (2, 87, '화이트LED하네스 1개 (M)', '슈퍼얼리버드 20%할인 !', 29600, 96);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 88, '화이트LED하네스 1개(L)', '슈퍼얼리버드 20%할인 !', 31200, 97);
+VALUES (3, 87, '화이트LED하네스 1개(L)', '슈퍼얼리버드 20%할인 !', 31200, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 88, '화이트LED하네스 1개(XL)', '슈퍼얼리버드 20%할인 !', 31200, 97);
+VALUES (4, 87, '화이트LED하네스 1개(XL)', '슈퍼얼리버드 20%할인 !', 31200, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 88, '화이트LED하네스 2개(S-M)', '스페셜얼리버드 30%할인 !', 51800, 47);
+VALUES (5, 87, '화이트LED하네스 2개(S-M)', '스페셜얼리버드 30%할인 !', 51800, 47);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 88, '화이트LED하네스 2개(L-XL)', '스페셜얼리버드 30%할인 !', 51800, 47);
+VALUES (6, 87, '화이트LED하네스 2개(L-XL)', '스페셜얼리버드 30%할인 !', 51800, 47);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 89, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식세트', '*한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개', 25600, 21);
+VALUES (1, 88, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식세트', '*한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개', 25600, 21);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 89, '[슈퍼얼리버드] 멍멍하누 한우 스틱 한달 세트', '* 한우스틱 15개입', 41850, 11);
+VALUES (2, 88, '[슈퍼얼리버드] 멍멍하누 한우 스틱 한달 세트', '* 한우스틱 15개입', 41850, 11);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 89, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 세트 + 멍멍하누 한우 스틱 한달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개) + 멍멍하누 한우 스틱 15개입', 57750, 7);
+VALUES (3, 88, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 세트 + 멍멍하누 한우 스틱 한달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개) + 멍멍하누 한우 스틱 15개입', 57750, 7);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 89, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 3세트 + 멍멍하누 한우 스틱 3달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 120g + 한우 허파 져키 90g + 한우 우족 300g + 한우 발톱 6개) + 멍멍하누 한우 스틱 45개입', 157080, 7);
+VALUES (4, 88, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 3세트 + 멍멍하누 한우 스틱 3달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 120g + 한우 허파 져키 90g + 한우 우족 300g + 한우 발톱 6개) + 멍멍하누 한우 스틱 45개입', 157080, 7);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 89, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 5세트 + 멍멍하누 한우 스틱 5달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 200g + 한우 허파 져키 150g + 한우 우족 500g + 한우 발톱 10개) + 멍멍하누 한우 스틱 75개입', 223300, 7);
+VALUES (5, 88, '[슈퍼얼리버드] 멍멍하누 한우 4종 간식 5세트 + 멍멍하누 한우 스틱 5달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 200g + 한우 허파 져키 150g + 한우 우족 500g + 한우 발톱 10개) + 멍멍하누 한우 스틱 75개입', 223300, 7);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 89, '[얼리버드] 멍멍하누 한우 4종 간식 세트', '*한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개', 27200, 28);
+VALUES (6, 88, '[얼리버드] 멍멍하누 한우 4종 간식 세트', '*한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개', 27200, 28);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 89, '[얼리버드] 멍멍하누 한우 스틱 한달 세트', '* 한우스틱 15개입', 42750, 50);
+VALUES (7, 88, '[얼리버드] 멍멍하누 한우 스틱 한달 세트', '* 한우스틱 15개입', 42750, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 89, '[얼리버드] 멍멍하누 한우 4종 간식 세트 + 멍멍하누 한우 스틱 한달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개) + 멍멍하누 한우 스틱 15개입', 61600, 20);
+VALUES (8, 88, '[얼리버드] 멍멍하누 한우 4종 간식 세트 + 멍멍하누 한우 스틱 한달 세트', '*멍멍하누 4종 간식세트(한우 간 트릿 40g + 한우 허파 져키 30g + 한우 우족 100g + 한우 발톱 2개) + 멍멍하누 한우 스틱 15개입', 61600, 20);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 90, '슈퍼 얼리버드 1.', '샤워독 제품1개+캄(calm)오일 샘플앰플 5ml 1개 : 샤워독 제품가격 27.000원 30%DC = 18,900원 + 캄(calm)오일 5ml 샘플1개', 18900, 1976);
+VALUES (1, 89, '슈퍼 얼리버드 1.', '샤워독 제품1개+캄(calm)오일 샘플앰플 5ml 1개 : 샤워독 제품가격 27.000원 30%DC = 18,900원 + 캄(calm)오일 5ml 샘플1개', 18900, 1976);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 90, '슈퍼 얼리버드 2.', '샤워독 제품1개+교체용 필터1박스(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27000원+교체용 필터1박스 26,000원=총 53,000원 40%DC = 31,800원 + 캄(calm)오일 30ml 1개 가격 25,000원 상당', 31800, 1995);
+VALUES (2, 89, '슈퍼 얼리버드 2.', '샤워독 제품1개+교체용 필터1박스(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27000원+교체용 필터1박스 26,000원=총 53,000원 40%DC = 31,800원 + 캄(calm)오일 30ml 1개 가격 25,000원 상당', 31800, 1995);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 90, '슈퍼 얼리버드 3.', '샤워독 제품1개+교채용 필터박스2개(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27,000원+교체용 필터1박스가격 26,000원+교체용필터1박스가격 26,000원 = 총 79,000원 40%DC = 47,400원 + 캄(calm)오일 30ml 1개 25,000원 상당', 47400, 1999);
+VALUES (3, 89, '슈퍼 얼리버드 3.', '샤워독 제품1개+교채용 필터박스2개(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27,000원+교체용 필터1박스가격 26,000원+교체용필터1박스가격 26,000원 = 총 79,000원 40%DC = 47,400원 + 캄(calm)오일 30ml 1개 25,000원 상당', 47400, 1999);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 90, '슈퍼 얼리버드 4.', '샤워독 제품2개+교체용 필터2박스(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27,000원+27,000원+교체용 필터가격 26,000원+26,000원= 총 106,000원 45%DC = 58,300원 + 캄(calm)오일 30ml 1개 25,000원 상당', 58300, 2000);
+VALUES (4, 89, '슈퍼 얼리버드 4.', '샤워독 제품2개+교체용 필터2박스(1박스당릴렉스필터10개입)+캄(calm)오일 30ml 1개 : 샤워독 제품가격 27,000원+27,000원+교체용 필터가격 26,000원+26,000원= 총 106,000원 45%DC = 58,300원 + 캄(calm)오일 30ml 1개 25,000원 상당', 58300, 2000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 90, '얼리버드 1.', '샤워독 제품1개. 소비자 가격 27,000원 25%DC', 20250, 2000);
+VALUES (5, 89, '얼리버드 1.', '샤워독 제품1개. 소비자 가격 27,000원 25%DC', 20250, 2000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 90, '얼리버드 2.', '샤워독 제품1개+교체용 필터1박스(1박스당릴렉스필터10개입) : 샤워독 제품가격 27,000원+ 교체용 필터1박스가격 26,000원= 총 53,000원 35%DC = 34,450원', 34450, 1998);
+VALUES (6, 89, '얼리버드 2.', '샤워독 제품1개+교체용 필터1박스(1박스당릴렉스필터10개입) : 샤워독 제품가격 27,000원+ 교체용 필터1박스가격 26,000원= 총 53,000원 35%DC = 34,450원', 34450, 1998);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 90, '얼리버드 3.', '샤워독 제품1개+교체용 필터2박스(1박스당릴렉스필터10개입) : 샤워독 제품가격 27,000원+교체용 필터박스가격 26,000원+26,000원=총 79,000원 35%DC = 51,350원', 51350, 2000);
+VALUES (7, 89, '얼리버드 3.', '샤워독 제품1개+교체용 필터2박스(1박스당릴렉스필터10개입) : 샤워독 제품가격 27,000원+교체용 필터박스가격 26,000원+26,000원=총 79,000원 35%DC = 51,350원', 51350, 2000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 90, '얼리버드 4.', '샤워독제품2개+교체용 필터2박스(1박스당릴렉스필터10개입) : 샤워독 제품가격27,000원+27,000원+교체용 필터박스가격26,000원+26,000원= 총 106,000원 40%DC = 63,600원', 63600, 1997);
+VALUES (8, 89, '얼리버드 4.', '샤워독제품2개+교체용 필터2박스(1박스당릴렉스필터10개입) : 샤워독 제품가격27,000원+27,000원+교체용 필터박스가격26,000원+26,000원= 총 106,000원 40%DC = 63,600원', 63600, 1997);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 91, '슈퍼얼리버드', '양이해먹', 12000, 475);
+VALUES (1, 90, '슈퍼얼리버드', '양이해먹', 12000, 475);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 91, '얼리버드', '양이해먹', 13500, 1000);
+VALUES (2, 90, '얼리버드', '양이해먹', 13500, 1000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 91, '15.500원 리워드', '양이해먹', 15500, 1500);
+VALUES (3, 90, '15,500원 리워드', '양이해먹', 15500, 1500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 92, '[울트라 얼리버드] 애니쿨 1+1', '애니쿨 2개 35% 혜택!', 41500, 20);
+VALUES (1, 91, '[울트라 얼리버드] 애니쿨 1+1', '애니쿨 2개 35% 혜택!', 41500, 20);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 92, '[울트라 얼리버드] 애니쿨 개득템', '애니쿨 1개 30% 혜택', 22500, 35);
+VALUES (2, 91, '[울트라 얼리버드] 애니쿨 개득템', '애니쿨 1개 30% 혜택', 22500, 35);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 92, '[슈퍼얼리버드] 애니쿨 패밀리 ', '다둥이 혹은 대형견 강추 애니쿨 3개 25% 혜택', 72000, 100);
+VALUES (3, 91, '[슈퍼얼리버드] 애니쿨 패밀리 ', '다둥이 혹은 대형견 강추 애니쿨 3개 25% 혜택', 72000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 92, '[슈퍼얼리버드] 애니쿨 베이', '애니쿨 2개 20% 혜택', 50100, 100);
+VALUES (4, 91, '[슈퍼얼리버드] 애니쿨 베이', '애니쿨 2개 20% 혜택', 50100, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 92, '[얼리버드] 애니쿨 라스트 ', '애니쿨 도전기념! 10% 혜택!', 29000, 100);
+VALUES (5, 91, '[얼리버드] 애니쿨 라스트 ', '애니쿨 도전기념! 10% 혜택!', 29000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 93, '슈퍼 얼리버드', '언니의 파우치 1세트', 18500, 198);
+VALUES (1, 92, '슈퍼 얼리버드', '언니의 파우치 1세트', 18500, 198);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 93, '슈퍼 얼리버드 2세트', '언니의 파우치 2세트', 35000, 96);
+VALUES (2, 92, '슈퍼 얼리버드 2세트', '언니의 파우치 2세트', 35000, 96);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 93, '얼리버드', '언니의 파우치 1세트', 19500, 100);
+VALUES (3, 92, '얼리버드', '언니의 파우치 1세트', 19500, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 93, '퐁당 리워드', '언니의 파우치 1세트', 20000, 200);
+VALUES (4, 92, '퐁당 리워드', '언니의 파우치 1세트', 20000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 94, '퐁당 리워드', '퐁당퐁당1', 10000, 200);
+VALUES (1, 93, '퐁당 리워드', '퐁당퐁당1', 10000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 94, '퐁당 리워드', '퐁당퐁당2', 12000, 200);
+VALUES (2, 93, '퐁당 리워드', '퐁당퐁당2', 12000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 94, '퐁당 리워드', '퐁당퐁당3', 15500, 200);
+VALUES (3, 93, '퐁당 리워드', '퐁당퐁당3', 15500, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 94, '퐁당 리워드', '퐁당퐁당4', 20000, 200);
+VALUES (4, 93, '퐁당 리워드', '퐁당퐁당4', 20000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 94, '퐁당 리워드', '퐁당퐁당5', 22000, 200);
+VALUES (5, 93, '퐁당 리워드', '퐁당퐁당5', 22000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 95, '[슈퍼 얼리버드] 미니 서빙팟 (1개입)', '미니 서빙팟 1개 + 절구봉 1개 + 나무받침대 1개', 37900, 143);
+VALUES (1, 94, '[슈퍼 얼리버드] 미니 서빙팟 (1개입)', '미니 서빙팟 1개 + 절구봉 1개 + 나무받침대 1개', 37900, 143);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 95, '[슈퍼 얼리버드] 미니 서빙팟 (2개입)', '미니 서빙팟 2개 + 절구봉 2개 + 나무받침대 2개', 70900, 213);
+VALUES (2, 94, '[슈퍼 얼리버드] 미니 서빙팟 (2개입)', '미니 서빙팟 2개 + 절구봉 2개 + 나무받침대 2개', 70900, 213);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 95, '[얼리버드] 미니 서빙팟 (1개입)', '미니 서빙팟 1개 + 절구봉 1개 + 나무받침대 1개', 39900, 300);
+VALUES (3, 94, '[얼리버드] 미니 서빙팟 (1개입)', '미니 서빙팟 1개 + 절구봉 1개 + 나무받침대 1개', 39900, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 95, '[슈퍼 얼리버드] 커플 미니 서빙팟 (2개입) ', '미니 서빙팟 2개 + 절구봉 2개 + 나무받침대 2개', 72900, 299);
+VALUES (4, 94, '[슈퍼 얼리버드] 커플 미니 서빙팟 (2개입) ', '미니 서빙팟 2개 + 절구봉 2개 + 나무받침대 2개', 72900, 299);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 96, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 S 사이즈', 79500, 172);
+VALUES (1, 95, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 S 사이즈', 79500, 172);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 96, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 M 사이즈', 79500, 172);
+VALUES (2, 95, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 M 사이즈', 79500, 172);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 96, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 L 사이즈', 79500, 172);
+VALUES (3, 95, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 L 사이즈', 79500, 172);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 96, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 XL 사이즈', 79500, 172);
+VALUES (4, 95, '[슈퍼얼리버드] 개념베개 싱글', '34% 할인 혜택으로 펀딩합니다. 개념베개 XL 사이즈', 79500, 172);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 96, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 S사이즈', 89500, 168);
+VALUES (5, 95, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 S사이즈', 89500, 168);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 96, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 M사이즈', 89500, 168);
+VALUES (6, 95, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 M사이즈', 89500, 168);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 96, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 L사이즈', 89500, 168);
+VALUES (7, 95, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 L사이즈', 89500, 168);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 96, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 XL사이즈', 89500, 168);
+VALUES (8, 95, '[슈퍼얼리버드] 개념베개 싱글 +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 개념베개 XL사이즈', 89500, 168);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 96, '[슈퍼얼리버드] 어린이(XS) ', '32% 가격혜택으로 펀딩합니다. 어린이용 개념베개 XS사이즈 1개', 58000, 100);
+VALUES (9, 95, '[슈퍼얼리버드] 어린이(XS) ', '32% 가격혜택으로 펀딩합니다. 어린이용 개념베개 XS사이즈 1개', 58000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 96, '[슈퍼얼리버드] 어린이(XS) +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 어린이용 개념베개 XS사이즈 1개 + 동일사이즈 추가 베개커버 1개', 68000, 100);
+VALUES (10, 95, '[슈퍼얼리버드] 어린이(XS) +1 베개 커버', '35% 가격혜택으로 펀딩합니다. 어린이용 개념베개 XS사이즈 1개 + 동일사이즈 추가 베개커버 1개', 68000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 97, '[슈퍼 얼리버드] FULL세트_16CM+18CM+20CM+22CM 양수냄비+24CM전골냄비(51% 할인)', '정상가 596,500원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 20CM 양수냄비락앤락 가드니아 22CM 양수냄비락앤락 가드니아 24CM 전골냄비', 288700, 185);
+VALUES (1, 96, '[슈퍼 얼리버드] FULL세트_16CM+18CM+20CM+22CM 양수냄비+24CM전골냄비(51% 할인)', '정상가 596,500원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 20CM 양수냄비락앤락 가드니아 22CM 양수냄비락앤락 가드니아 24CM 전골냄비', 288700, 185);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 97, '[슈퍼 얼리버드] 4P세트_16CM+18CM+22CM 양수냄비+24CM전골냄비(51% 할인)', '정상가 473,600원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 22CM 양수냄비락앤락 가드니아 24CM 전골냄비', 229000, 148);
+VALUES (2, 96, '[슈퍼 얼리버드] 4P세트_16CM+18CM+22CM 양수냄비+24CM전골냄비(51% 할인)', '정상가 473,600원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 22CM 양수냄비락앤락 가드니아 24CM 전골냄비', 229000, 148);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 97, '[슈퍼 얼리버드] 3P세트_16CM+18CM+22CM 양수냄비(45% 할인)', '정상가 340,700원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 22CM 양수냄비', 184900, 147);
+VALUES (3, 96, '[슈퍼 얼리버드] 3P세트_16CM+18CM+22CM 양수냄비(45% 할인)', '정상가 340,700원!락앤락 가드니아 16CM 양수냄비락앤락 가드니아 18CM 양수냄비 락앤락 가드니아 22CM 양수냄비', 184900, 147);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 97, '[슈퍼 얼리버드] 2P세트_18CM+22CM 양수냄비(42% 할인)', '정상가 245,800원!락앤락 가드니아 18CM 양수냄비락앤락 가드니아 22CM 양수냄비', 141900, 146);
+VALUES (4, 96, '[슈퍼 얼리버드] 2P세트_18CM+22CM 양수냄비(42% 할인)', '정상가 245,800원!락앤락 가드니아 18CM 양수냄비락앤락 가드니아 22CM 양수냄비', 141900, 146);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 97, '[슈퍼 얼리버드] 2P세트_16CM+20CM 양수냄비(42% 할인)', '정상가 217.8000원!락앤락 가드니아 16CM 양수냄비 락앤락 가드니아 20CM 양수냄비', 125900, 147);
+VALUES (5, 96, '[슈퍼 얼리버드] 2P세트_16CM+20CM 양수냄비(42% 할인)', '정상가 217.8000원!락앤락 가드니아 16CM 양수냄비 락앤락 가드니아 20CM 양수냄비', 125900, 147);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 97, '[얼리버드] 16CM 양수냄비(30% 할인)', '정상가: 94,900원!락앤락 가드니아 16CM 양수냄비', 66400, 79);
+VALUES (6, 96, '[얼리버드] 16CM 양수냄비(30% 할인)', '정상가: 94,900원!락앤락 가드니아 16CM 양수냄비', 66400, 79);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 97, '[얼리버드] 18CM 양수냄비(30% 할인)', '정상가 102,900원!락앤락 가드니아 18CM 양수냄비', 72000, 79);
+VALUES (7, 96, '[얼리버드] 18CM 양수냄비(30% 할인)', '정상가 102,900원!락앤락 가드니아 18CM 양수냄비', 72000, 79);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 97, '[얼리버드] 20CM 양수냄비(30% 할인)', '정상가 122,900원!락앤락 가드니아 20CM 양수냄비', 86000, 80);
+VALUES (8, 96, '[얼리버드] 20CM 양수냄비(30% 할인)', '정상가 122,900원!락앤락 가드니아 20CM 양수냄비', 86000, 80);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 97, '[얼리버드] 22CM 양수냄비(30% 할인)', '락앤락 가드니아 22CM 양수냄비', 100000, 78);
+VALUES (9, 96, '[얼리버드] 22CM 양수냄비(30% 할인)', '락앤락 가드니아 22CM 양수냄비', 100000, 78);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 97, '[얼리버드] 24CM 전골냄비(30% 할인)', '정상가 132,900원!락앤락 가드니아 24CM 전골냄비', 93000, 78);
+VALUES (10, 96, '[얼리버드] 24CM 전골냄비(30% 할인)', '정상가 132,900원!락앤락 가드니아 24CM 전골냄비', 93000, 78);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 98, '[슈퍼얼리버드] 바디필로우', '쏘옥 냉감 바디 필로우 1개', 56000, 292);
+VALUES (1, 97, '[슈퍼얼리버드] 바디필로우', '쏘옥 냉감 바디 필로우 1개', 56000, 292);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 98, '[슈퍼얼리버드] 커플 바디필로우', '쏘옥 냉감 바디 필로우 2개', 111000, 298);
+VALUES (2, 97, '[슈퍼얼리버드] 커플 바디필로우', '쏘옥 냉감 바디 필로우 2개', 111000, 298);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 98, '[슈퍼얼리버드] 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 73000, 299);
+VALUES (3, 97, '[슈퍼얼리버드] 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 73000, 299);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 98, '[슈퍼얼리버드] 커플 바디필로우 세트', '쏘옥 냉감 바디필로우 2개, 쏘옥 냉감 베개 커버 2개', 145000, 300);
+VALUES (4, 97, '[슈퍼얼리버드] 커플 바디필로우 세트', '쏘옥 냉감 바디필로우 2개, 쏘옥 냉감 베개 커버 2개', 145000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 98, '[슈퍼얼리버드] 베게커버 1개', '베개커버는 바디필로우 펀딩시에 추가펀딩 가능합니다(단품펀딩 불가)', 19000, 298);
+VALUES (5, 97, '[슈퍼얼리버드] 베게커버 1개', '베개커버는 바디필로우 펀딩시에 추가펀딩 가능합니다(단품펀딩 불가)', 19000, 298);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 98, '[얼리버드] 바디필로우 ', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 66000, 300);
+VALUES (6, 97, '[얼리버드] 바디필로우 ', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 66000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 98, '[얼리버드] 커플 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 120000, 300);
+VALUES (7, 97, '[얼리버드] 커플 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 120000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 98, '[얼리버드] 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 83000, 300);
+VALUES (8, 97, '[얼리버드] 바디필로우 세트', '쏘옥 냉감 바디필로우 1개, 쏘옥 냉감 베개 커버 1개', 83000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 98, '[얼리버드] 커플 바디필로우 세트 ', '쏘옥 냉감 바디필로우 2개, 쏘옥 냉감 베개 커버 2개', 155000, 299);
+VALUES (9, 97, '[얼리버드] 커플 바디필로우 세트 ', '쏘옥 냉감 바디필로우 2개, 쏘옥 냉감 베개 커버 2개', 155000, 299);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 98, '[얼리버드] 베개커버 1개', '베개커버는 바디필로우 펀딩시에 추가펀딩만 가능합니다(단품펀딩 불가)', 20000, 300);
+VALUES (10, 97, '[얼리버드] 베개커버 1개', '베개커버는 바디필로우 펀딩시에 추가펀딩만 가능합니다(단품펀딩 불가)', 20000, 300);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 98, '도서산간 추가 배송비', '제주도 및 도서산간 지역 펀딩시 선택해 주세요', 3000, 10000);
+VALUES (11, 97, '도서산간 추가 배송비', '제주도 및 도서산간 지역 펀딩시 선택해 주세요', 3000, 10000);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 99, '(리워드 1) 술게임 끝장판! 커플부터 친구/가족 모두 가능', '만취룰렛 1개 + 주르마도르 1개+주님곁으로 주루마블 오리지널 1개+주님곁으로 주루마블 오버더드림 1개+불타는밤카드게임 1개+ 사랑의도피 1개+스타토 경마랜드.이 구성이면 술자리 분위기 흥폭팔', 88800, 81);
+VALUES (1, 98, '(리워드 1) 술게임 끝장판! 커플부터 친구/가족 모두 가능', '만취룰렛 1개 + 주르마도르 1개+주님곁으로 주루마블 오리지널 1개+주님곁으로 주루마블 오버더드림 1개+불타는밤카드게임 1개+ 사랑의도피 1개+스타토 경마랜드.이 구성이면 술자리 분위기 흥폭팔', 88800, 81);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 99, '(리워드 2) 선정성 없는 꿀잼 술게임세트! 직장동료랑도 OK!', '만취룰렛 1개+주르마도르 1개+주님곁으로 주루마블 오리지널 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 51000, 97);
+VALUES (2, 98, '(리워드 2) 선정성 없는 꿀잼 술게임세트! 직장동료랑도 OK!', '만취룰렛 1개+주르마도르 1개+주님곁으로 주루마블 오리지널 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 51000, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 99, '(리워드 3) 마시고 죽자! 주당파티 세트! (동료의 술부심 싹 청산)', '만취룰렛 1개+주르마도르 1개+주님곁으로 주루마블 오버더드림1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 51000, 96);
+VALUES (3, 98, '(리워드 3) 마시고 죽자! 주당파티 세트! (동료의 술부심 싹 청산)', '만취룰렛 1개+주르마도르 1개+주님곁으로 주루마블 오버더드림1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 51000, 96);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 99, '(리워드 4) 완전 새로운 컨셉 술게임세트! 친구끼리 술파티~', '만취룰렛 1개+주르마도르 1개+스타토 경마랜드 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 34800, 97);
+VALUES (4, 98, '(리워드 4) 완전 새로운 컨셉 술게임세트! 친구끼리 술파티~', '만취룰렛 1개+주르마도르 1개+스타토 경마랜드 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 34800, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 99, '(리워드 5) 커플/부부끼리 핫하게세트!  러브러브~', '만취룰렛 1개+불타는밤카드게임 1개+사랑의도피 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 33300, 97);
+VALUES (5, 98, '(리워드 5) 커플/부부끼리 핫하게세트!  러브러브~', '만취룰렛 1개+불타는밤카드게임 1개+사랑의도피 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 33300, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 99, '(리워드 6) 이건 못참지! 가성비 술게임 세트! (스피드/복불복 게임들)', '만취룰렛 1개+스타토 경마랜드 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 25000, 97);
+VALUES (6, 98, '(리워드 6) 이건 못참지! 가성비 술게임 세트! (스피드/복불복 게임들)', '만취룰렛 1개+스타토 경마랜드 1개.실사용자 후기를 기반으로, 스타토프렌즈가 추천하는 꿀조합!', 25000, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 99, '(리워드 7) 만취룰렛 ONLY', '목숨을 건 술게임. 만취룰렛 1개 기본 리워드입니다.', 20600, 1994);
+VALUES (7, 98, '(리워드 7) 만취룰렛 ONLY', '목숨을 건 술게임. 만취룰렛 1개 기본 리워드입니다.', 20600, 1994);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 100, '슈퍼얼리버드 타탄 라탄가방 DIY키트 싱글', '1. 타탄 라탄백 diy키트 1set 색상: 카라멜 (25% 가격 혜택)', 29800, 56);
+VALUES (1, 99, '슈퍼얼리버드 타탄 라탄가방 DIY키트 싱글', '1. 타탄 라탄백 diy키트 1set 색상: 카라멜 (25% 가격 혜택)', 29800, 56);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 100, '슈퍼얼리버드 타탄 라탄가방 DIY키트 싱글', '2. 타탄 라탄백 diy키트 1set 색상: 베이지 (25% 가격 혜택)', 29800, 56);
+VALUES (2, 99, '슈퍼얼리버드 타탄 라탄가방 DIY키트 싱글', '2. 타탄 라탄백 diy키트 1set 색상: 베이지 (25% 가격 혜택)', 29800, 56);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 100, '슈퍼얼리버드 타탄 라탄가방 DIY키트 더블', '3. 타탄 라탄백 diy키트 2set 색상: 카라멜, 베이지 + 블라썸백 DIY키트 무료증정(정가 12900원)(25% 가격 혜택)', 59600, 4);
+VALUES (3, 99, '슈퍼얼리버드 타탄 라탄가방 DIY키트 더블', '3. 타탄 라탄백 diy키트 2set 색상: 카라멜, 베이지 + 블라썸백 DIY키트 무료증정(정가 12900원)(25% 가격 혜택)', 59600, 4);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 100, '얼리버드 타탄 라탄가방 DIY키트 싱글', '4. 타탄 라탄백 diy키트 1set 색상: 카라멜 (18% 가격 혜택)', 32800, 100);
+VALUES (4, 99, '얼리버드 타탄 라탄가방 DIY키트 싱글', '4. 타탄 라탄백 diy키트 1set 색상: 카라멜 (18% 가격 혜택)', 32800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 100, '얼리버드 타탄 라탄가방 DIY키트 싱글', '5. 타탄 라탄백 diy키트 1set 색상: 베이지 (18% 가격 혜택)', 32800, 100);
+VALUES (5, 99, '얼리버드 타탄 라탄가방 DIY키트 싱글', '5. 타탄 라탄백 diy키트 1set 색상: 베이지 (18% 가격 혜택)', 32800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 100, '얼리버드 타탄 라탄가방 DIY키트 더블', '6. 타탄 라탄백 diy키트 2set 색상: 카라멜 ,베이지 + 블라썸백 DIY키트 무료증정 (정가 12900원)(18% 가격 혜택)', 65600, 50);
+VALUES (6, 99, '얼리버드 타탄 라탄가방 DIY키트 더블', '6. 타탄 라탄백 diy키트 2set 색상: 카라멜 ,베이지 + 블라썸백 DIY키트 무료증정 (정가 12900원)(18% 가격 혜택)', 65600, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 100, '일반 타탄 라탄가방 DIY키트 싱글', '7. 타탄 라탄백 diy키트 1set 색상: 카라멜', 36800, 100);
+VALUES (7, 99, '일반 타탄 라탄가방 DIY키트 싱글', '7. 타탄 라탄백 diy키트 1set 색상: 카라멜', 36800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 100, '일반 타탄 라탄가방 DIY키트 싱글', '8. 타탄 라탄백 diy키트 1set 색상: 베이지', 36800, 100);
+VALUES (8, 99, '일반 타탄 라탄가방 DIY키트 싱글', '8. 타탄 라탄백 diy키트 1set 색상: 베이지', 36800, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 100, '일반 타탄 라탄가방 DIY키트 더블', '9. 타탄 라탄백 diy키트 2set 색상: 카라멜, 베이지 + 블라썸백 DIY키트 무료증정 (정가 12900원)', 73600, 50);
+VALUES (9, 99, '일반 타탄 라탄가방 DIY키트 더블', '9. 타탄 라탄백 diy키트 2set 색상: 카라멜, 베이지 + 블라썸백 DIY키트 무료증정 (정가 12900원)', 73600, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 100, '도서산간 추가 배송비', '도서산간 지역은 추가 배송비를 결제해서 주문해주시기 바랍니다.', 3500, 689);
+VALUES (10, 99, '도서산간 추가 배송비', '도서산간 지역은 추가 배송비를 결제해서 주문해주시기 바랍니다.', 3500, 689);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 101, '[얼리버드] 로티 플레잉카드 싱글', '- 로티 플레잉카드 x1', 16000, 224);
+VALUES (1, 100, '[얼리버드] 로티 플레잉카드 싱글', '- 로티 플레잉카드 x1', 16000, 224);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 101, '[얼리버드] 로리 플레잉카드 싱글', '- 로리 플레잉카드 x1', 16000, 246);
+VALUES (2, 100, '[얼리버드] 로리 플레잉카드 싱글', '- 로리 플레잉카드 x1', 16000, 246);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 101, '[얼리버드] 로티&로리 플레잉카드 Set', '- 로티 플레잉카드 x1- 로리 플레잉카드 x1', 30000, 252);
+VALUES (3, 100, '[얼리버드] 로티&로리 플레잉카드 Set', '- 로티 플레잉카드 x1- 로리 플레잉카드 x1', 30000, 252);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 101, '[8월 배송] 로티 플레잉카드 싱글', '- 로티 플레잉카드 x1 (8월 배송)', 16000, 500);
+VALUES (4, 100, '[8월 배송] 로티 플레잉카드 싱글', '- 로티 플레잉카드 x1 (8월 배송)', 16000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 101, '[8월 배송] 로리 플레잉카드 싱글', '- 로리 플레잉카드 x1 (8월 배송)', 16000, 500);
+VALUES (5, 100, '[8월 배송] 로리 플레잉카드 싱글', '- 로리 플레잉카드 x1 (8월 배송)', 16000, 500);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 101, '[8월 배송] 로티&로리 플레잉카드 Set', '- 로티 플레잉카드 x1 (8월 배송)- 로리 플레잉카드 x1 (8월 배송)', 30000, 499);
+VALUES (6, 100, '[8월 배송] 로티&로리 플레잉카드 Set', '- 로티 플레잉카드 x1 (8월 배송)- 로리 플레잉카드 x1 (8월 배송)', 30000, 499);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 101, '도서/산간지역 추가 배송비', '도서/산간(제주)지역 후원자님은 본 리워드를 추가 후원해주세요.', 3000, 776);
+VALUES (7, 100, '도서/산간지역 추가 배송비', '도서/산간(제주)지역 후원자님은 본 리워드를 추가 후원해주세요.', 3000, 776);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 102, '[슈퍼얼리버드] Daylight Dream', '[와일드플라워]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 12);
+VALUES (1, 101, '[슈퍼얼리버드] Daylight Dream', '[와일드플라워]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 12);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 102, '[슈퍼얼리버드] Night Sky', '[문라이트]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 26);
+VALUES (2, 101, '[슈퍼얼리버드] Night Sky', '[문라이트]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 26);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 102, '[슈퍼얼리버드] Morning Dew', '[벨]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 27);
+VALUES (3, 101, '[슈퍼얼리버드] Morning Dew', '[벨]아로마 스프레이 50ml 1개 + 8ml 1개', 29000, 27);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 102, '[슈퍼얼리버드] Hello Sunshine Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개', 59000, 3);
+VALUES (4, 101, '[슈퍼얼리버드] Hello Sunshine Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개', 59000, 3);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 102, '[슈퍼얼리버드] All Day Set', '[와일드플라워+문라이트+벨]데일리 아로마 스프레이 50ml 3개 + 8ml 3개', 74000, 17);
+VALUES (5, 101, '[슈퍼얼리버드] All Day Set', '[와일드플라워+문라이트+벨]데일리 아로마 스프레이 50ml 3개 + 8ml 3개', 74000, 17);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 102, '[얼리버드] Daylight Dream', '[와일드플라워]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
+VALUES (6, 101, '[얼리버드] Daylight Dream', '[와일드플라워]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 102, '[얼리버드] Night Sky', '[문라이트]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
+VALUES (7, 101, '[얼리버드] Night Sky', '[문라이트]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 102, '[얼리버드] Morning Dew', '[벨]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
+VALUES (8, 101, '[얼리버드] Morning Dew', '[벨]아로마 스프레이 50ml 1개 + 8ml 1개', 34000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 102, '[얼리버드] Hello Sunshine Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개', 67000, 38);
+VALUES (9, 101, '[얼리버드] Hello Sunshine Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개', 67000, 38);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 102, '[얼리버드] All Day Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개 + 8ml 3개', 84000, 29);
+VALUES (10, 101, '[얼리버드] All Day Set', '[와일드플라워+문라이트+벨]아로마 스프레이 50ml 3개 + 8ml 3개', 84000, 29);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 103, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 블랙', 179000, 50);
+VALUES (1, 102, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 블랙', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 103, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 그레이', 179000, 50);
+VALUES (2, 102, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 그레이', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 103, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 카키', 179000, 50);
+VALUES (3, 102, '[울트라 얼리버드] 스탠드 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러 : 카키', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 103, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 199000, 50);
+VALUES (4, 102, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 199000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 103, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 그레이', 199000, 50);
+VALUES (5, 102, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 그레이', 199000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 103, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 카키', 199000, 50);
+VALUES (6, 102, '[울트라 얼리버드] 스탠드 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 카키', 199000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (7, 103, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 269000, 50);
+VALUES (7, 102, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (8, 103, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 그레이', 269000, 50);
+VALUES (8, 102, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 그레이', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (9, 103, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 카키', 269000, 50);
+VALUES (9, 102, '[울트라 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 카키', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (10, 103, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 블랙', 249000, 50);
+VALUES (10, 102, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 블랙', 249000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (11, 103, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 화이트', 249000, 50);
+VALUES (11, 102, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 화이트', 249000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (12, 103, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 레드', 249000, 50);
+VALUES (12, 102, '[울트라 얼리버드] 트롤리 캐디백 [50% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 레드', 249000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (13, 103, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 블랙', 269000, 50);
+VALUES (13, 102, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 블랙', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (14, 103, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 화이트', 269000, 50);
+VALUES (14, 102, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 화이트', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (15, 103, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 레드', 269000, 50);
+VALUES (15, 102, '[울트라 얼리버드] 트롤리 캐디백 + 투명후드커버 [50% 혜택] 50개 한정', '컨버터블 보스턴 백팩 1ea + 투명후드커버 1ea / 컬러: 레드', 269000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (16, 103, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 379000, 48);
+VALUES (16, 102, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 379000, 48);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (17, 103, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 화이트', 379000, 48);
+VALUES (17, 102, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 화이트', 379000, 48);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (18, 103, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 레드', 379000, 48);
+VALUES (18, 102, '[울트라 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [50% 혜택]', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 레드', 379000, 48);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (19, 103, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 블랙', 149000, 50);
+VALUES (19, 102, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 블랙', 149000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (20, 103, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 화이트', 149000, 50);
+VALUES (20, 102, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 화이트', 149000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (21, 103, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 레드', 149000, 50);
+VALUES (21, 102, '[울트라 얼리버드] 가먼트 위캔드 보스턴 백 [50% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 레드', 149000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (22, 103, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 블랙', 219000, 50);
+VALUES (22, 102, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 블랙', 219000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (23, 103, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 그레이', 219000, 50);
+VALUES (23, 102, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 그레이', 219000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (24, 103, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 카키', 219000, 50);
+VALUES (24, 102, '[슈퍼 얼리버드] 스탠드 캐디백 [39% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea / 컬러: 카키', 219000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (25, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 239000, 50);
+VALUES (25, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 239000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (26, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 그레이', 239000, 50);
+VALUES (26, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 그레이', 239000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (27, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 카키', 239000, 50);
+VALUES (27, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 투명후드커버 [40% 혜택] 50개 한정', '8.5인치, 5구 스탠드 캐디백 1ea + 투명후드커버 1ea / 컬러: 카키', 239000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (28, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙 ', 329000, 50);
+VALUES (28, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙 ', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (29, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 그레이', 329000, 50);
+VALUES (29, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 그레이', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (30, 103, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 카키', 329000, 50);
+VALUES (30, 102, '[슈퍼 얼리버드] 스탠드 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택]', '8.5인치, 5구 스탠드 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 카키', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (31, 103, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 블랙', 299000, 50);
+VALUES (31, 102, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 블랙', 299000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (32, 103, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 화이트', 299000, 50);
+VALUES (32, 102, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 화이트', 299000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (33, 103, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 레드', 299000, 50);
+VALUES (33, 102, '[슈퍼 얼리버드] 트롤리 캐디백 [40% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea / 컬러: 레드', 299000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (34, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 329000, 50);
+VALUES (34, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 블랙', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (35, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 화이트', 329000, 50);
+VALUES (35, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 화이트', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (36, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 레드', 329000, 50);
+VALUES (36, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 투명후드커버 [39% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 투명후드커버 1ea / 컬러: 레드', 329000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (37, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 459000, 50);
+VALUES (37, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 블랙', 459000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (38, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 화이트', 459000, 50);
+VALUES (38, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 화이트', 459000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (39, 103, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 레드', 459000, 50);
+VALUES (39, 102, '[슈퍼 얼리버드] 트롤리 캐디백 + 보스턴백 + 투명후드커버 [45% 혜택] 50개 한정', '8.5인치, 5구 트롤리 캐디백 1ea + 보스턴백 1ea + 투명후드커버 1ea / 컬러: 레드', 459000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (40, 103, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 블랙', 179000, 50);
+VALUES (40, 102, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 블랙', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (41, 103, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 화이트', 179000, 50);
+VALUES (41, 102, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 화이트', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (42, 103, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 레드', 179000, 50);
+VALUES (42, 102, '[슈퍼 얼리버드] 가먼트 위캔드 보스턴 백 [40% 혜택] 50개 한정', '가먼트 위캔드 보스턴 백 1ea / 컬러: 레드', 179000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 104, '[얼리버드] aim QUANTUM ', '초소형 레이저골프거리측정기 본품 1EA', 279000, 508);
+VALUES (1, 103, '[얼리버드] aim QUANTUM ', '초소형 레이저골프거리측정기 본품 1EA', 279000, 508);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 104, '[슈퍼 얼리버드] aim QUANTUM', '초소형 레이저골프거리측정기 본품 1EA', 249000, 32);
+VALUES (2, 103, '[슈퍼 얼리버드] aim QUANTUM', '초소형 레이저골프거리측정기 본품 1EA', 249000, 32);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 105, '슈퍼얼리버드 멀트트래블백 beige ', '멀티트래블백 베이지 158,000 ▶ 89,000(44%) 가격혜택)', 89000, 21);
+VALUES (1, 104, '슈퍼얼리버드 멀트트래블백 beige ', '멀티트래블백 베이지 158,000 ▶ 89,000(44%) 가격혜택)', 89000, 21);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 105, '슈퍼얼리버드 멀트트래블백 black', '멀티트래블백 블랙 158,000 ▶ 99,000(37%) 가격혜택)', 99000, 3);
+VALUES (2, 104, '슈퍼얼리버드 멀트트래블백 black', '멀티트래블백 블랙 158,000 ▶ 99,000(37%) 가격혜택)', 99000, 3);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 106, '< 01. (R) BURATHERs_PREMIUM / MATT SILVER 슈퍼얼리버드(한정수량) > ', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
+VALUES (1, 105, '< 01. (R) BURATHERs_PREMIUM / MATT SILVER 슈퍼얼리버드(한정수량) > ', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
 부라더스 사각 하드 케이스
 부라더스 품질 보증서
 부라더스 극세사 안경 클리너
 부라더스 소프트 종이 브로셔', 59000, 95);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 106, '< 02. (R)(D) BURATHERs_PREMIUM + S E T > 슈퍼얼리버드(한정수량)', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
+VALUES (2, 105, '< 02. (R)(D) BURATHERs_PREMIUM + S E T > 슈퍼얼리버드(한정수량)', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
 부라더스 선글라스 1개 ( 다른칼라 선택옵션 )
 부라더스 사각 하드 케이스
 부라더스 품질 보증서
@@ -5512,14 +5473,14 @@ VALUES (2, 106, '< 02. (R)(D) BURATHERs_PREMIUM + S E T > 슈퍼얼리버드(한
 부라더스 소프트 종이 브로셔', 89000, 97);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 106, '< 03. (R) BURATHERs_PREMIUM / MATT SILVER >', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
+VALUES (3, 105, '< 03. (R) BURATHERs_PREMIUM / MATT SILVER >', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
 부라더스 사각 하드 케이스
 부라더스 품질 보증서
 부라더스 극세사 안경 클리너
 부라더스 소프트 종이 브로셔', 69000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 106, '< 04. (R)(D) BURATHERs_PREMIUM + S E T >', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
+VALUES (4, 105, '< 04. (R)(D) BURATHERs_PREMIUM + S E T >', '부라더스 (R) Frame Silver / Lens Black 선글라스 1개
 부라더스 선글라스 1개 ( 다른칼라 선택옵션 )
 부라더스 사각 하드 케이스
 부라더스 품질 보증서
@@ -5527,21 +5488,21 @@ VALUES (4, 106, '< 04. (R)(D) BURATHERs_PREMIUM + S E T >', '부라더스 (R) Fr
 부라더스 소프트 종이 브로셔', 139000, 200);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (1, 107, '[14k][캣츠 프리미엄] 캣츠 아이스 컬렉션 Set', '· 캣츠 아이스 네크리스 · 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 689000, 30);
+VALUES (1, 106, '[14k][캣츠 프리미엄] 캣츠 아이스 컬렉션 Set', '· 캣츠 아이스 네크리스 · 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 689000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (2, 107, '[14k]캣츠 아이스 이어링', '· 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 370000, 49);
+VALUES (2, 106, '[14k]캣츠 아이스 이어링', '· 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 370000, 49);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (3, 107, '[14k] 캣츠 아이스 네크리스', '· 캣츠 아이스 네크리스 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 360000, 50);
+VALUES (3, 106, '[14k] 캣츠 아이스 네크리스', '· 캣츠 아이스 네크리스 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 360000, 50);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (4, 107, '[캣츠 프리미엄] 캣츠 아이스 컬렉션 Set', '· 캣츠 아이스 네크리스 · 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 220000, 30);
+VALUES (4, 106, '[캣츠 프리미엄] 캣츠 아이스 컬렉션 Set', '· 캣츠 아이스 네크리스 · 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 220000, 30);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (5, 107, '캣츠 아이스 이어링', '· 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 130000, 100);
+VALUES (5, 106, '캣츠 아이스 이어링', '· 캣츠 아이스 이어링 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 130000, 100);
 
 INSERT INTO "OPTION" (OPTION_NO, P_NO, OPTION_NAME, OPTION_INFO, OPTION_PRICE, OPTION_LIMIT) 
-VALUES (6, 107, '캣츠 아이스 네크리스', '· 캣츠 아이스 네크리스 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 120000, 99);
+VALUES (6, 106, '캣츠 아이스 네크리스', '· 캣츠 아이스 네크리스 · MYAMMI 프리미엄 패키지 · 주얼리 품질 보증서 · 무료 배송', 120000, 99);
 
 COMMIT;
