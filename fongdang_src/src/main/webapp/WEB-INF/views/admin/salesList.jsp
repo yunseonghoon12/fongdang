@@ -14,37 +14,33 @@
 	               	   <p class="salesList-title">펀딩매출관리</p>
 		               <div class="salesList-tableAll">
 		                    <table class="salesList-tableAll">
-		                     <thead>
-		           
-								  <tr id=title>
-								     <th>상품번호</th> 
-								     <th>메이커명</th>
-								     <th>카테고리</th> 
-								     <th>메이커유형</th>
-								     <th>목표금액</th>
-								     <th>총펀딩금액</th>
-								     <th>정산금액</th>
-								     <th>수수료</th>
-								     
-								  </tr>
-							 <thead>
-							 <!-- 리턴 받는 값 request.setAttribute("retVolist", retVolist); -->
-							    <c:forEach items="${retVolist }" var="vo">
-									<tr>
-									     <td>${vo.}</td> 
-									   	 <td>${vo.}</td>
-									     <td>${vo.}</td> 
-									     <td>${vo.}</td>
-									     <td>${vo.}</td>
-									     <td>${vo.}</td>
-									     <td>${vo.}</td>
-									     <td>${vo.}</td>
-								     </tr>
-								  </c:forEach>
-	       	                 </table>
+		                		<tr>
+									<td>상품번호</td>
+									<td>메이커명</td>
+									<td>카테고리</td>
+									<td>목표금액</td>
+									<td>총펀딩금액</td>
+									<td>정산금액</td>
+									<td>수수료</td>
+								</tr>
+								<c:forEach items="${boardlist }" var="board">
+								<tr>
+									<td><a href="<%=request.getContextPath() %>/sales/read?bno=${sales.bno }">${sales.bno }</a></td>
+									<td><a href="<%=request.getContextPath() %>/board/read?bno=${board.bno }">${board.btitle } [${board.rcnt }]</a></td>
+									<td>${sales.bno}</td>
+									<td>${sales.bno}</td>
+									<td>${sales.bno}</td>
+									<td>${sales.bno}</td>
+									<td>${sales.bno}</td>
+								</tr>
+								</c:forEach>
+							</table>
+							
 		                 </div>
 	                    </div>
 	            </section>
+	            
+	            
 
 
 </body>

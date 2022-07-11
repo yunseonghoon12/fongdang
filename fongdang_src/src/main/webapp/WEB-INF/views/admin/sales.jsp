@@ -29,7 +29,7 @@
                     <td ><input type="text" name="p_name"  class="in_box" value="${product.p_name}" ></td>
                 </tr>
                 <tr>
-                    <td id="title">펀딩시작일 : </td>
+                    <td id="title">펀딩예정일 : </td>
                     <td ><input type="text" name="start_day"  class="in_box" value="${product.start_day}" ></td>
                 </tr>
                  <tr>
@@ -44,10 +44,6 @@
                     <td id="title">달성율 : </td>
                     <td ><input type="text" name=""  class="in_box" value="" ></td>
                 </tr>
-                 <tr>
-                    <td id="title">총판매수량 : </td>
-                    <td ><input type="text" name=""  class="in_box" value="" ></td>
-                </tr>
                 <tr>
                     <td id="title">총 펀딩금액 : </td>
                     <td ><input type="text" name=""  class="in_box" value="" ></td>
@@ -58,7 +54,7 @@
                 </tr>
                 <hr>
                  <tr>
-                    <td id="title">최종 정산금액 : </td>
+                    <td id="title">정산금액 : </td>
                     <td ><input type="text" name=""  class="in_box" value="" ></td>
                 </tr>
             </table>
