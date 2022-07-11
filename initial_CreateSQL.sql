@@ -38,10 +38,12 @@ CREATE TABLE "MAKER" (
 	maker_logo	VARCHAR2(200)		NULL,
 	maker_kakao_channel	VARCHAR2(200)		NULL,
 	maker_homepage	VARCHAR2(200)		NULL,
-	maker_address	VARCHAR2(500)		NULL,
+	maker_address1	VARCHAR2(500)		NULL,
+  	maker_address2	VARCHAR2(500)		NULL,
 	maker_register_num	VARCHAR2(15)		NULL,
 	maker_license_copy	VARCHAR2(200)		NULL,
 	maker_report_cnt	NUMBER	DEFAULT 0	NULL
+
 );
 COMMENT ON COLUMN "MAKER".maker_category IS '개인: I, 법인: B';
 
@@ -392,3 +394,4 @@ AS
         LEFT OUTER JOIN "ORDER" USING(p_no)
         LEFT OUTER JOIN member USING(email)
     GROUP BY p_no;
+
