@@ -71,8 +71,8 @@ il, ul {
 		</div>
 		<div class="section">
 			<div id="beforeFunding">
-				<h2>주목하세요! 오픈 예정 프로젝트</h2>
-				<h5 style="margin-left: 150px;">-먼저 참여하는 분들께 드리는 얼리버드 혜택-</h5>
+				<p style="font-family:SUIT-SemiBold;font-size:25px;">주목하세요! 오픈 예정 프로젝트</p>
+				<p style="margin-left: 150px;font-family: SUIT-Regular">-먼저 참여하는 분들께 드리는 얼리버드 혜택-</p>
 				<div class="wrap_content">
 					<section>
 						<div class="container_content">
@@ -110,7 +110,7 @@ il, ul {
 				</div>
 			</div>
 			<div id="ranking01">
-				<h2>실시간 랭킹!</h2>
+				<p style="font-family:SUIT-SemiBold;font-size:25px;">실시간 랭킹!</p>
 				<div style="display: flex;">
 					<ul style="top: 20px; position: relative;">
 						<li>

@@ -17,7 +17,7 @@
 }
 </style>
 </head>
-
-
+<body>
+${loginInfo.name}
 </body>
 </html>

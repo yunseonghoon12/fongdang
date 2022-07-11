@@ -19,4 +19,10 @@ public class AdminController {
 		mv.setViewName("admin/memberManagement");
 		return mv;
 	}
+	@RequestMapping(value="ask", method= RequestMethod.GET)
+	ModelAndView pageAskManagement(ModelAndView mv) {
+		mv.setViewName("admin/askManagement");
+		return mv;
+	}
+	
 }

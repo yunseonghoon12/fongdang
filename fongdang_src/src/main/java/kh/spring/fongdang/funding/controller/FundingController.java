@@ -3,6 +3,7 @@ package kh.spring.fongdang.funding.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,8 +20,15 @@ public class FundingController {
 	@Autowired
 	private FundingService fundingService;
 	
-	@GetMapping("/info")
-	public ModelAndView selectFunding(ModelAndView mv, @RequestParam("p_no") int p_no) {
+	/*
+	 * @GetMapping("/info") public ModelAndView selectFunding(ModelAndView
+	 * mv, @RequestParam("p_no") int p_no) { mv.addObject("funding",
+	 * fundingService.selectFunding(p_no)); mv.setViewName("funding/fundingInfo");
+	 * 
+	 * return mv; }
+	 */
+	@GetMapping("/info/{p_no}")
+	public ModelAndView selectFunding(ModelAndView mv, @PathVariable("p_no") int p_no) {
 		mv.addObject("funding", fundingService.selectFunding(p_no));
 		mv.setViewName("funding/fundingInfo");
 		

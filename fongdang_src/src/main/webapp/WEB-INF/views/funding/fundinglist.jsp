@@ -374,7 +374,7 @@ a#topBtn {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${allProducts}" var="product">
-					<li class="itemsWrap"><a href="#">
+					<li class="itemsWrap"><a href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">

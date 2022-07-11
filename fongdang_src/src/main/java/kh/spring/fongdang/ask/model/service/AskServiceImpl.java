@@ -20,10 +20,12 @@ public class AskServiceImpl implements AskService {
 		}
 
 	@Override
-	   public List<Ask> selectAsk(Ask ask) throws Exception {
-	      // TODO Auto-generated method stub
-	      return dao.selectAsk(ask); 
+	   public List<Ask> selectAsk(String email){
+	      return dao.selectAsk(email); 
 	   }
-		
-	
+
+	@Override
+	public int deleteAsk(int ask_no) {
+		return dao.deleteAsk(ask_no); 
+	}
 }

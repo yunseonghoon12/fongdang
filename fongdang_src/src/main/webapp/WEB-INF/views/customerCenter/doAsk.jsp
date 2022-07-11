@@ -28,7 +28,7 @@ body {
 }
 
 .textWrap {
-	width: 506px;
+	width: 900px;
 	margin: 0 auto;
 }
 
@@ -40,10 +40,11 @@ body {
 
 .ask_category {
 	position: relative;
-	left: 22px;
-	height: 30px;
-	width: 95px;
-	border-radius: 5px;
+    left: 22px;
+    height: 45px;
+    width: 95px;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
 .ask_category:hover {
@@ -57,7 +58,7 @@ body {
 }
 
 .buttonWrap {
-	margin-top: 15px;
+	margin-top: 55px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,7 +70,7 @@ body {
 
 .ask_boxborder {
 	padding: .375rem .75rem;
-	font-size: 1.3rem;
+	font-size: 15px;
 	font-weight: 400;
 	color: #212529;
 	background-color: #fff;
@@ -90,27 +91,14 @@ body {
 	box-shadow: 0 0 0 .10rem #9bbfd9;
 }
 
-.ask_boxborder::-webkit-file-upload-button {
-	color: #212529;
-	background-color: #e9ecef;
-	pointer-events: none;
-	border-color: inherit;
-	border-style: solid;
-	border-width: 0;
-	border-inline-end-width: 1px;
-	border-radius: 0;
-	transition: color .15s ease-in-out, background-color .15s ease-in-out,
-		border-color .15s ease-in-out, box-shadow .15s ease-in-out
-}
-
 .ask_boxborder-color::-moz-color-swatch {
 	border-radius: 3px;
 }
 
 .askTop {
 	display: flex;
-	width: 115px;
-	font-size: 25px;
+	width: 102px;
+	font-size: 22px;
 	margin: 20px auto;
 	background: white;
 	z-index: 999;
@@ -120,7 +108,7 @@ body {
 
 <body>
 	<jsp:include page="../header.jsp" />
-	<form action="#" method="post">
+	<form action="doAsk" method="post" id="doAsk">
 		<div class="askAllWrap">
 			<div class="textWrap">
 				<div>
@@ -128,34 +116,53 @@ body {
 					<hr
 						style="position: relative; bottom: 35; z-index: -1; border: double;">
 				</div>
-
+				<input type="hidden" name="email" value="${loginInfo.email}"/>
 				<div class="titleWrap">
-					<input class="ask_boxborder" type="text"
-						style="width: 380px; height: 24px;"> <select size="1"
-						class="ask_category">
-						<option value="ask1" selected>선택</option>
-						<option value="ask2">배송</option>
-						<option value="ask3">결제</option>
-						<option value="ask4">상품</option>
-						<option value="ask5">환불</option>
-						<option value="ask6">기타</option>
+					<input class="ask_boxborder" type="text" name="ask_title" id="ask_title"
+						style="width: 784px; height: 46px;"> 	
+						<select size="1"
+						class="ask_category" name="ask_category">
+						<option selected>배송</option>
+						<option>결제</option>
+						<option>상품</option>
+						<option>환불</option>
+						<option>펀딩</option>
+						<option>기타</option>
 					</select>
 				</div>
 				<div class="contentWrap">
 					<div>
-						<textarea class="askContent ask_boxborder" name="opinion"
-							style="width: 500px; height: 300px;"></textarea>
+						<textarea class="askContent ask_boxborder" name="ask_content" id="ask_content"
+							style="width: 900px; height: 352px;"></textarea>
 						<br>
 					</div>
 				</div>
 				<div class="buttonWrap" style="margin-bottom: 100px;">
-					<button type="submit" class="btn btn-fill-fcolor" style="width: 150px">등록하기</button>
+					<button class="btn btn-fill-fcolor" type="button"
+						style="width: 206px;" onclick="ask_check();">등록하기</button>
 				</div>
 			</div>
 		</div>
 	</form>
-	
-		<jsp:include page="../footer.jsp" />
+	<jsp:include page="../footer.jsp" />
+	<script>
+		function ask_check(){
+			var title = document.getElementById("ask_title");
+			var content = document.getElementById("ask_content");
+			
+			if(title.value == ""){
+				alert("제목을 입력하세요.");
+				title.focus();
+				return false;
+			}
+			if(content.value == ""){
+				alert("내용을 입력하세요.");
+				content.focus();
+				return false;
+			}
+			doAsk.submit();
+		};
+	</script>
 </body>
 
 </html>

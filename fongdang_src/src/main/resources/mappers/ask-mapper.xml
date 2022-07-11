@@ -3,14 +3,16 @@
 <mapper namespace="Ask">
 
 	<insert id="insertAsk" parameterType="Ask">
-		insert into ask(ask_cnt
+		insert into ask(
+		ask_no
 		,email
 		,ask_title
 		,ask_category
 		,ask_content
 		,ask_date
-		,ask_yn
-		)values(#{ask_cnt}
+		,reply_yn
+		)values(
+		(SELECT NVL(MAX(ask_no), 0) + 1 FROM ask)
 		,#{email}
 		,#{ask_title}
 		,#{ask_category}
@@ -20,10 +22,13 @@
 		)
 	</insert>
 
-	<select id="selectAsk" parameterType="Ask"
-		resultType="Ask">
-		select * from member where email=#{email} and
-		password=#{password}
+	<select id="selectAsk" parameterType="Ask" resultType="Ask">
+		select *
+		from ask where email=#{email} 
+		order by ask_no desc
 	</select>
 
+	<delete id="deleteAsk"  parameterType="_int">
+		delete from ask where ask_no=#{ask_no}
+	</delete>
 </mapper>

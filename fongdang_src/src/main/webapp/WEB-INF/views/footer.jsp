@@ -9,25 +9,26 @@ footer {
 
 .footerWrap {
 	display: flex;
-	height: 300px;
+	height: 250px;
 	width: 1280px;
 	margin: 0 auto;
 	font-family: SUIT-Regular;
 	font-size: 13px;
 	font-weight: bold;
+	padding: 25px 0 0 0;
 }
 
 .leftFooter {
 	float: left;
 	width: 60%;
-	padding: 3%;
+	padding: 3% 0 0 0;
 	margin-left: 20px;
 }
 
 .rightFooter {
 	float: right;
 	width: 30%;
-	padding: 3%;
+	padding: 3% 0 0 0;
 	margin-left: 100px;
 }
 </style>
