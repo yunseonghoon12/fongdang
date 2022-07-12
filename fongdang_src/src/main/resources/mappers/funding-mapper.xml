@@ -46,10 +46,16 @@
 	</select>
 	
 	<select id="selectBeforeFunding" parameterType="_int" resultMap="FundingResultMap">
-		SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
-		FROM product p JOIN category c USING(category_id)
-		               JOIN maker m USING(maker_name)
-		WHERE p_no = #{p_no}
+		<![CDATA[
+			SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
+			FROM product p JOIN category c USING(category_id)
+		    	           JOIN maker m USING(maker_name)
+			WHERE p_no = #{p_no}
+		]]>
+	</select>
+	
+	<select id="selectSms" parameterType="hashmap" resultType="Sms">
+		SELECT * FROM sms WHERE p_no = #{p_no} AND email = #{email}
 	</select>
 
 	<select id="selectPreProducts" parameterType="_int"

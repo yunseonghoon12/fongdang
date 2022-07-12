@@ -10,10 +10,11 @@ public interface FundingService {
 	public Funding selectFunding(int p_no);
 	
 	/* 펀딩예정 상세조회 */
-	public Funding selectBeforeFunding(int p_no);
+	public Funding selectBeforeFunding(int p_no, String email);
 	
 	/* 펀딩 예정 상품 N개 불러오기*/
 	public List<Funding> selectPreProducts(int n);
+	
 	/* 펀딩 예정 상품 불러오기*/
 	public List<Funding> selectPreProducts();
 	

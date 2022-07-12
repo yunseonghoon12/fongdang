@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import kh.spring.fongdang.review.domain.Review;
+import kh.spring.fongdang.sms.domain.Sms;
 
 
 @Component
@@ -36,6 +37,7 @@ public class Funding {
 	private String maker_kakao_channel; //메이커 카카오채널
 	private String maker_homepage; //메이커 홈페이지
 	private List<Review> review_list; //리뷰 목록
+	private Sms sms;
 	
 //	@Override
 //	public String toString() {
@@ -60,7 +62,7 @@ public class Funding {
 				+ d_day + ", category_name=" + category_name + ", maker_logo=" + maker_logo + ", maker_name="
 				+ maker_name + ", maker_email=" + maker_email + ", maker_phone=" + maker_phone
 				+ ", maker_kakao_channel=" + maker_kakao_channel + ", maker_homepage=" + maker_homepage
-				+ ", review_list=" + review_list + "]";
+				+ ", review_list=" + review_list + ", sms=" + sms + "]";
 	}
 	
 	public int getP_no() {
@@ -269,5 +271,13 @@ public class Funding {
 
 	public void setReview_list(List<Review> review_list) {
 		this.review_list = review_list;
+	}
+
+	public Sms getSms() {
+		return sms;
+	}
+
+	public void setSms(Sms sms) {
+		this.sms = sms;
 	}
 }

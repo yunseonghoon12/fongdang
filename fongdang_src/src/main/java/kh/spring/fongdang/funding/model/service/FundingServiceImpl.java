@@ -20,8 +20,8 @@ public class FundingServiceImpl implements FundingService {
 	}
 
 	@Override
-	public Funding selectBeforeFunding(int p_no) {
-		return dao.selectBeforeFunding(p_no);
+	public Funding selectBeforeFunding(int p_no, String email) {
+		return dao.selectBeforeFunding(p_no, email);
 	}
 
 	@Override
