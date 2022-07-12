@@ -88,7 +88,7 @@
 					</c:if>
 				</c:if>
 				<c:if test="${loginInfo.name ne '관리자'}">
-					<li><a href="<%=request.getContextPath()%>/maker/Register"
+					<li><a href="<%=request.getContextPath()%>/maker/view"
 						id="fdapply">펀딩 프로젝트 신청</a> <%-- <div class="dep3">
 						<ul>
 							<li><a href="<%=request.getContextPath()%>/maker/Register">펀딩 오픈프로젝트 신청하기</a></li>

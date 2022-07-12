@@ -23,15 +23,15 @@
 									<td>정산금액</td>
 									<td>수수료</td>
 								</tr>
-								<c:forEach items="${boardlist }" var="board">
+								<c:forEach items="${saleslist }" var="sales">
 								<tr>
-									<td><a href="<%=request.getContextPath() %>/sales/read?bno=${sales.bno }">${sales.bno }</a></td>
-									<td><a href="<%=request.getContextPath() %>/board/read?bno=${board.bno }">${board.btitle } [${board.rcnt }]</a></td>
-									<td>${sales.bno}</td>
-									<td>${sales.bno}</td>
-									<td>${sales.bno}</td>
-									<td>${sales.bno}</td>
-									<td>${sales.bno}</td>
+									<td><a href="<%=request.getContextPath() %>/admin/sales/read?bno=${sales.pno }">${sales.pno }</a></td>
+									<td>${sales.pno}</td>
+									<td>${sales.pno}</td>
+									<td>${sales.pno}</td>
+									<td>${sales.pno}</td>
+									<td>${sales.pno}</td>
+									<td>${sales.pno}</td>
 								</tr>
 								</c:forEach>
 							</table>

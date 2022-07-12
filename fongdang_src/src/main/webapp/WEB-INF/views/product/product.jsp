@@ -21,7 +21,9 @@
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> 
+<!--<script src="//cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>-->
+
 
 <script>
 
@@ -220,7 +222,7 @@ $( document ).ready(function() {
 							<td id="title">상품 상세정보<sup>*</sup></td>
 							<td>
 							<input type="hidden" name="p_story" class="editor" value=""/>
-							<textarea name="p_story" id="editor" ></textarea>
+							<textarea  id="editor" name="p_story"></textarea>
 						    
 							<!-- <script>
                             var content = $(".editor").val();
