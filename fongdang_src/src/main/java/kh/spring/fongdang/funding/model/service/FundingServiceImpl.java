@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kh.spring.fongdang.funding.domain.Funding;
-import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.funding.model.dao.FundingDao;
 
 @Service

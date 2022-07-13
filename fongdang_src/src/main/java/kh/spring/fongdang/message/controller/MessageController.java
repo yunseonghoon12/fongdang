@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kh.spring.fongdang.message.domain.Message;
-import kh.spring.fongdang.message.model.service.MessageServiceImpl;
+import kh.spring.fongdang.message.model.service.MessageService;
 
 @Controller
 @RequestMapping("/message")
 public class MessageController {
 	@Autowired
-	private MessageServiceImpl service;	
+	private MessageService service;	
 	
 	@ResponseBody
 	@PostMapping(value = "/insert")

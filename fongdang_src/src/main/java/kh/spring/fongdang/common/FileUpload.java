@@ -50,6 +50,7 @@ public class FileUpload {
 			report.transferTo(new File(filePath)); //파일 저장
 			
 			// 파일 저장 성공!
+			@SuppressWarnings("rawtypes")
 			Map uploadResult = cloudinary.uploader().upload(new File(filePath), ObjectUtils.emptyMap());
 //			Map uploadResult = cloudinary.uploader().upload(new File(filePath), ObjectUtils.asMap(
 //					"public_id", file_name.substring(0, file_name.lastIndexOf(".")),
@@ -77,21 +78,9 @@ public class FileUpload {
 		String[] file_split = file.split("/");
 		String public_id = file_split[file_split.length - 1].substring(0, file_split[file_split.length - 1].lastIndexOf("."));
 		
-//		String root = request.getSession().getServletContext().getRealPath("resources");
-//		String savePath = root + "\\uploadFiles";
-//		
-//		// 로컬 컴퓨터에서 파일삭제
-//		System.out.println("file before:"+ file);
-//		file = file.substring(file.lastIndexOf("/")+1);
-//		System.out.println("file after :"+ file);
-//		
-//		String filePath = savePath + "\\" + file;
-		
 		try {
 			cloudinary.uploader().destroy(public_id, ObjectUtils.emptyMap()); // file delete from cloudinary  
-			
-//			File delFile = new File(filePath);
-//			delFile.delete(); 	// 파일 삭제
+
 			System.out.println("파일 삭제 성공");
 		} catch (IOException e) {
 			e.printStackTrace();

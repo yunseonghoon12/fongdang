@@ -1,7 +1,5 @@
 package kh.spring.fongdang.message.domain;
 
-import java.sql.Timestamp;
-
 import org.springframework.stereotype.Component;
 
 @Component

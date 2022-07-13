@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kh.spring.fongdang.review.domain.Review;
-import kh.spring.fongdang.review.model.service.ReviewServiceImpl;
+import kh.spring.fongdang.review.model.service.ReviewService;
 
 
 @Controller
 @RequestMapping("/review")
 public class ReviewController {
 	@Autowired
-	private ReviewServiceImpl service;
+	private ReviewService service;
 
 	@ResponseBody
 	@PostMapping("/insert")
