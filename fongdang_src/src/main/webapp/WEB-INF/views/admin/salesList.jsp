@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -82,8 +84,46 @@
       /* float: right; */
       width: 80%;
       height: 100%;
-    }     
+    }
+
   </style>
+<style type="text/css">
+ section{
+ padding: 10px;
+}
+ #salesList table.salesList-tableAll {
+    width: 100%;
+    width: 1000px;
+	border-top: 1px solid #444444;
+	border-collapse: collapse;
+	text-align: center;
+	font-family: SUIT-Regular;
+  }
+ .salesList-tableAll th,.salesList-tableAll td{
+    border-bottom: 1px solid #444444;
+    padding: 7px;
+  }
+  
+ .salesList-tableAll th {
+      background-color: #fed08b;
+  }
+  .salesList-title{
+  font-size: 20px;
+  padding: 30px 30px;
+  font-family: SUIT-Regular;
+  }
+  
+  .salesList-tableAll{
+     padding: 10px;
+  }
+  #title{
+ background-color:#b6e0d6;
+ 
+  }     
+  
+  </style>
+  
+  
 </head>
 <body>
 <div id="admin_navigator">    
@@ -122,13 +162,14 @@
 	                <div id="salesList">
 	               	   <p class="salesList-title">펀딩매출관리</p>
 		               <div class="salesList-tableAll">
-		                    <table class="salesList-tableAll">
-		                		<tr>
+		                    <table class="salesList-tableAll" >
+		                		<tr id="title">
 									<td>상품번호</td>
 									<td>메이커명</td>
 									<td>카테고리</td>
 									<td>목표금액</td>
 									<td>총펀딩금액</td>
+									<td>달성율(%)</td>
 									<td>정산금액</td>
 									<td>수수료</td>
 								</tr>
@@ -140,6 +181,7 @@
 									<td>${sales.p_goal}</td>
 									<td>${sales.total_funding_money}</td>
 									<td>${sales.p_goal_percent}</td>
+									<td>${sales.sales_funding_money}</td>
 									<td>${sales.commission}</td>
 								</tr>
 								</c:forEach>

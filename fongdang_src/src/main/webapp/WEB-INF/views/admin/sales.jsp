@@ -1,5 +1,8 @@
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,6 +86,36 @@
       height: 100%;
     }     
   </style>
+ <style type="text/css">
+ section{
+ padding: 10px;
+ font-family: SUIT-Regular;
+}
+ #sales_Table table{
+    width: 100%;
+    width: 1000px;
+	border-top: 1px solid #444444;
+	border-collapse: collapse;
+	text-align: center;
+	font-family: SUIT-Regular;
+  }
+
+  .sales-title{
+  font-size: 20px;
+  padding: 30px 30px;
+  font-family: SUIT-Regular;
+  }
+  
+ .sales_Table{
+  padding: 10px;
+  }
+  #title{
+ padding:15px;
+ font-family: SUIT-Regular;
+  }     
+  
+  </style> 
+  
 </head>
 <body>
 <div id="admin_navigator">    
@@ -118,58 +151,53 @@
     
     <div id="main_body">
             <section>
-	                <div id="salesList">
-	               	   <p class="salesList-title">펀딩매출관리 상세페이지</p>
+	                <div id="sales">
+	               	   <p class="sales-title">펀딩매출관리 상세페이지</p>
 			                 <div class="sales-tableAll">
 			                     <table id="sales_Table">
 						                <tr>
-						                    <td id="title"><b>펀딩매출 상세페이지</b></td>
-						                    <td ></td>
-						                </tr>
-						                <tr>
 						                    <td id="title">상품번호 : </td>
-						                    <td ><input type="text" name="p_no"  class="in_box" value="${sales.p_no}" ></td>
+						                    <td > ${sales.p_no}</td>
 						                </tr>
 						                 <tr>
 						                    <td id="title">메이커명 : </td>
-						                    <td ><input type="text" name="maker_name"  class="in_box" value="${sales.maker_name}" ></td>
+						                    <td >${sales.maker_name}</td>
 						                </tr>
 						                 <tr>
 						                    <td id="title">카테고리 : </td>
-						                    <td ><input type="text" name="category_id"  class="in_box" value="${sales.CATEGORY_ID}" ></td>
+						                    <td >${sales.category_id}</td>
 						                </tr>
 						                <tr>
 						                    <td id="title">상품명 : </td>
-						                    <td ><input type="text" name="p_name"  class="in_box" value="${sales.p_name}" ></td>
+						                    <td >${sales.p_name}</td>
 						                </tr>
 						                <tr>
 						                    <td id="title">펀딩예정일 : </td>
-						                    <td ><input type="text" name="start_day"  class="in_box" value="${sales.start_day}" ></td>
+						                    <td >${sales.start_day}</td>
 						                </tr>
 						                 <tr>
 						                    <td id="title">펀딩마감일 : </td>
-						                    <td ><input type="text" name="end_day"  class="in_box" value="${sales.end_day}" ></td>
+						                    <td >${sales.end_day}</td>
 						                </tr>
 						                 <tr>
 						                    <td id="title">목표금액 : </td>
-						                    <td ><input type="text" name="p_goal"  class="in_box" value="${sales.p_goal}" ></td>
+						                    <td >${sales.p_goal}</td>
 						                </tr>
 						                <tr>
 						                    <td id="title">달성율 : </td>
-						                    <td ><input type="text" name=""  class="in_box" value="${sales.p_goal_percent}" ></td>
+						                    <td >${sales.p_goal_percent}</td>
 						                </tr>
 						                <tr>
 						                    <td id="title">총 펀딩금액 : </td>
-						                    <td ><input type="text" name=""  class="in_box" value="${sales.total_funding_money}" ></td>
+						                    <td >${sales.total_funding_money}</td>
 						                </tr>
 						                 <tr>
 						                    <td id="title">수수료 : </td>
-						                    <td ><input type="text" name=""  class="in_box" value="${sales.commission}" ></td>
+						                    <td >${sales.commission}</td>
 						                </tr>
-						                <hr>
 						                 <tr>
 						                    <td id="title">정산금액 : </td>
-						                    <td ><input type="text" name=""  class="in_box" value="${sales.sales_funding_money}" ></td>
+						                    <td >${sales.sales_funding_money}</td>
 						                </tr>
 					              </table>
 								
@@ -183,16 +211,19 @@
   <!-- <footer style="background-color: #ccc; color: blue; font-size:28px; text-align:center; height: 200px;">푸터 영역</footer> --> 
   <jsp:include page="../footer.jsp"/>
   <script>
-    $("#admin_nav ul li a").click(function() {
-    	console.log("click()");
-        var before_color = '#444c57';
-        var after_color = '#9bbfd9';  
+  $( document ).ready(function() {
+	  $("#admin_nav ul li a").click(function() {
+	    	console.log("click()");
+	        var before_color = '#444c57';
+	        var after_color = '#9bbfd9';  
 
-        // 클릭한 이벤트 객체의 폰트색 변경
-        $(this).css('color', after_color);      
-        // 클릭하지 않은 다른 객체들의 폰트색 변경
-        $("#admin_nav > ul> li > a").not(this).css('color', before_color);
-    });
+	        // 클릭한 이벤트 객체의 폰트색 변경
+	        $(this).css('color', after_color);      
+	        // 클릭하지 않은 다른 객체들의 폰트색 변경
+	        $("#admin_nav > ul> li > a").not(this).css('color', before_color);
+	    });
+  });
+   
   </script>
 
 

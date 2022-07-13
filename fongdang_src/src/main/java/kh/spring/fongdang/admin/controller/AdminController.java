@@ -2,6 +2,10 @@ package kh.spring.fongdang.admin.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +23,9 @@ import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
+	
 	@Autowired
 	private AdminServiceImpl service;
 	
@@ -37,22 +44,23 @@ public class AdminController {
 	public ModelAndView selectSalesLiset(ModelAndView mv) {
 		List<Sales> salesList = service.selectSalesLiset();
 		mv.addObject("salesList", salesList);
-		mv.setViewName("admin/salesList"); // jsp페이지
+		mv.setViewName("admin/salesList"); // 
 		return mv;
 	}
 
 	@GetMapping("/sales/read")
-    public ModelAndView selectOneSales(ModelAndView mv
+    public ModelAndView selectOneSales(ModelAndView mv, HttpServletRequest req
     		, @RequestParam(name = "p_no", defaultValue = "0") String pno) {
 		if (pno == "0") {
-			
-			mv.setViewName("admin/sales");// jsp페이지
+			mv.setViewName("redirect:salesList");//
 			return mv;
 		}
+		logger.debug(pno);
+		logger.debug(req.getParameter("p_no"));
 		// DB
 		Sales result = service.selectOneSales(pno);
-		mv.addObject("seles", result);
-		mv.setViewName("admin/sales"); // jsp페이지
+		mv.addObject("sales", result);
+		mv.setViewName("admin/sales"); // 
 		return mv;
 	}
 	
