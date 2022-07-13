@@ -35,23 +35,24 @@ public class AdminController {
 
 	@GetMapping("/sales/list")
 	public ModelAndView selectSalesLiset(ModelAndView mv) {
-		List<Sales> saleslist = service.selectSalesLiset();
-		mv.addObject("salesList", saleslist);
-	 
+		List<Sales> salesList = service.selectSalesLiset();
+		mv.addObject("salesList", salesList);
+		mv.setViewName("admin/salesList"); // jsp페이지
 		return mv;
 	}
 
-	@PostMapping("/sales/read")
+	@GetMapping("/sales/read")
     public ModelAndView selectOneSales(ModelAndView mv
-    		, @RequestParam(name = "pno", defaultValue = "0") int pno) {
-		if (pno == 0) {
-			mv.setViewName("redirect:sales/list");
+    		, @RequestParam(name = "p_no", defaultValue = "0") String pno) {
+		if (pno == "0") {
+			
+			mv.setViewName("admin/sales");// jsp페이지
 			return mv;
 		}
 		// DB
-		//Sales result = service.selectOneSales(pno);
-		//mv.addObject("seles", result);
-   
+		Sales result = service.selectOneSales(pno);
+		mv.addObject("seles", result);
+		mv.setViewName("admin/sales"); // jsp페이지
 		return mv;
 	}
 	
