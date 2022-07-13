@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.admin.domain.Sales;
 import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
 
 
@@ -34,8 +35,8 @@ public class AdminController {
 
 	@GetMapping("/sales/list")
 	public ModelAndView selectSalesLiset(ModelAndView mv) {
-		//List<Sales> saleslist = service.selectSalesLiset();
-		//mv.addObject("saleslist", saleslist);
+		List<Sales> saleslist = service.selectSalesLiset();
+		mv.addObject("salesList", saleslist);
 	 
 		return mv;
 	}

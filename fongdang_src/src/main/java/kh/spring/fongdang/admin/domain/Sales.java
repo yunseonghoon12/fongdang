@@ -12,13 +12,13 @@ public class Sales {
 	private String  maker_name;  //메이커명
 	private String  p_name;      //상품이름
 	private String  category_id; //카테고리ID
-	private int p_goal;          //목표금액
+	private long p_goal;          //목표금액
 	private Timestamp start_day;   //펀딩시작일
 	private Date end_day;          //펀딩종료일
-	private String total_funding_money; //펀딩 누적 금액( 총 펀딩금액)
+	private long total_funding_money; //펀딩 누적 금액(총 펀딩금액)
 	private int p_goal_percent; //펀딩 달성률
-	private String  commission;//수수료
-	private String  sales_funding_money;// 정산금액
+	private long  commission;//수수료
+	private long  sales_funding_money;// 정산금액
 	public int getP_no() {
 		return p_no;
 	}
@@ -43,10 +43,10 @@ public class Sales {
 	public void setCategory_id(String category_id) {
 		this.category_id = category_id;
 	}
-	public int getP_goal() {
+	public long getP_goal() {
 		return p_goal;
 	}
-	public void setP_goal(int p_goal) {
+	public void setP_goal(long p_goal) {
 		this.p_goal = p_goal;
 	}
 	public Timestamp getStart_day() {
@@ -61,10 +61,10 @@ public class Sales {
 	public void setEnd_day(Date end_day) {
 		this.end_day = end_day;
 	}
-	public String getTotal_funding_money() {
+	public long getTotal_funding_money() {
 		return total_funding_money;
 	}
-	public void setTotal_funding_money(String total_funding_money) {
+	public void setTotal_funding_money(long total_funding_money) {
 		this.total_funding_money = total_funding_money;
 	}
 	public int getP_goal_percent() {
@@ -73,16 +73,16 @@ public class Sales {
 	public void setP_goal_percent(int p_goal_percent) {
 		this.p_goal_percent = p_goal_percent;
 	}
-	public String getCommission() {
+	public long getCommission() {
 		return commission;
 	}
-	public void setCommission(String commission) {
+	public void setCommission(long commission) {
 		this.commission = commission;
 	}
-	public String getSales_funding_money() {
+	public long getSales_funding_money() {
 		return sales_funding_money;
 	}
-	public void setSales_funding_money(String sales_funding_money) {
+	public void setSales_funding_money(long sales_funding_money) {
 		this.sales_funding_money = sales_funding_money;
 	}
 	@Override

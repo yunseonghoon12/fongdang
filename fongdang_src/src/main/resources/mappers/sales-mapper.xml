@@ -1,37 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Sales">
-<select id="selectSalesLiset">
-
-
-</select>
-<select id="selectOneSales">
-SELECT 
-P_NO 
-, MAKER_NAME 
-, CATEGORY_ID 
-, P_GOAL 
-, total_price
-, (total_price * 0.9) AS fee
-FROM (
-SELECT
-	p.p_no,
-	p.maker_name,
-	p.category_id,
-	p.p_goal,
-	SUM(nvl(a.total_sum, 0)) AS total_price
-FROM
-	PRODUCT p,
-	PAY a
-WHERE
-	p.P_NO = a.p_no
-	AND p.p_no = #{p_no}
-GROUP BY
-	p.P_NO ,
-	p.MAKER_NAME ,
-	p.CATEGORY_ID ,
-	p.P_GOAL
-	)
-</select>
+	<select id="selectSalesLiset" resultType="Sales">
+		SELECT
+			P_NO
+			, MAKER_NAME
+			, CATEGORY_ID
+			, P_GOAL
+			, total_funding_money
+			, (total_funding_money * 0.9) AS sales_funding_money
+			, (total_funding_money * 0.1) AS commission
+			, (total_funding_money / P_GOAL * 100) as p_goal_percent
+		FROM (
+			SELECT
+				p.p_no,
+				p.maker_name,
+				p.category_id,
+				p.p_goal,
+				SUM(nvl(a.total_sum, 0)) AS total_funding_money
+			FROM
+				PRODUCT p,
+				PAY a
+			WHERE
+				p.P_NO = a.p_no
+			GROUP BY
+				p.P_NO ,
+				p.MAKER_NAME ,
+				p.CATEGORY_ID ,
+				p.P_GOAL
+			)
+			order by P_NO desc
+	</select>
+	<select id="selectOneSales" parameterType="String" resultType="Sales">
+		SELECT
+			P_NO
+			, MAKER_NAME
+			, CATEGORY_ID
+			, P_GOAL
+			, total_funding_money
+			, (total_funding_money * 0.9) AS sales_funding_money
+			, (total_funding_money * 0.1) AS commission
+			, (total_funding_money / P_GOAL * 100) as p_goal_percent
+		FROM (
+			SELECT
+				p.p_no,
+				p.maker_name,
+				p.category_id,
+				p.p_goal,
+				SUM(nvl(a.total_sum, 0)) AS total_funding_money
+			FROM
+				PRODUCT p,
+				PAY a
+			WHERE
+				p.P_NO = a.p_no
+			AND p.p_no = #{p_no}
+			GROUP BY
+				p.P_NO ,
+				p.MAKER_NAME ,
+				p.CATEGORY_ID ,
+				p.P_GOAL
+			)
+	</select>
 
 </mapper>
