@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.admin.domain.Sales;
 import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
-
+import kh.spring.fongdang.member.domain.Member;
 
 
 @Controller
@@ -29,11 +30,123 @@ public class AdminController {
 	@Autowired
 	private AdminServiceImpl service;
 	
-	@RequestMapping(value="/", method= RequestMethod.GET)
-	ModelAndView pageMemberManagement(ModelAndView mv) {
+	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
+	public ModelAndView pageMemberManagement(ModelAndView mv
+			, @RequestParam(value="related_search", required=false) String keyword
+			, @RequestParam(value="page", defaultValue="nothing") String currentPageStr
+			, HttpSession session) {		
+		List<Member> memberList =null; 		
+		System.out.println("keyword: " + keyword);
+		// 로그인 상태 확인 
+//		TODO: 추후에 관리자(admin) 로그인 확인 후 관리자페이지로 넘어오게 하기
+//		Member authInfo = (Member)session.getAttribute("loginInfo");
+//		if(authInfo == null) {
+//			System.out.println("\n현재 로그아웃 상태입니다.");
+//			mv.setViewName("redirect:/member/login");
+//			return mv;
+//		}		
+		int currentPage = 1;	
+		int memberLimit = 5;
+		
+		try {
+			if(currentPageStr !=null && !currentPageStr.equals("nothing"))
+				currentPage = Integer.parseInt(currentPageStr);
+		}catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		
+		final int pageSize = 6;  // 한페이지에 보여줄 행
+		final int pageBlock = 3;  // 페이징에 나타날 페이지수
+		int startPage=0;
+		int endPage=0;
+		int startNum=0;
+		int endNum=0;
+		
+		// 총 회원 수
+		int totalCnt = 0;
+		if(keyword != null) {
+			totalCnt = service.countSearchMember(keyword);
+		}
+		else {
+			totalCnt = service.countMember();
+		}
+		
+		System.out.println("\n총 회원 수 :\t" + totalCnt); 
+		
+		/* Paging 처리 */
+		int totalPageCnt = (totalCnt/pageSize) + (totalCnt%pageSize==0 ? 0 : 1);
+		if(currentPage%pageBlock == 0) {
+			startPage = ((currentPage/pageBlock)-1)*pageBlock + 1;
+		} else {
+			startPage = (currentPage/pageBlock)*pageBlock + 1;
+		}
+		endPage = startPage + pageBlock - 1;
+		if(endPage>totalPageCnt) {
+			endPage = totalPageCnt;
+		}
+		System.out.println("page:"+ startPage +"~"+endPage);
+		
+		/* rownum 처리 */
+		startNum = (currentPage-1)*pageSize + 1;
+		endNum = startNum + pageSize -1;
+		if(endNum>totalCnt) {
+			endNum = totalCnt;
+		}
+		System.out.println("rnum:"+ startNum +"~"+endNum);			
+		
+		if(keyword != null) {
+			memberList = service.relatedSearch(currentPage, memberLimit, keyword);	
+		} else {
+			memberList = service.selectMemberList(currentPage, memberLimit);			
+		}
+		
+		if(memberList == null) {
+			System.out.println("selectMemberList() 조회 실패");			
+		} else {
+			System.out.println("\n[memberList]\n\t" + memberList);
+		}
+		
+		mv.addObject("memberList", memberList);	
+		mv.addObject("totalCnt", totalCnt);
+		mv.addObject("startPage", startPage);
+		mv.addObject("endPage", endPage);
+		mv.addObject("currentPage", currentPage);
+		mv.addObject("totalPageCnt", totalPageCnt);
+		mv.addObject("related_search", keyword);
+		
 		mv.setViewName("admin/memberManagement");
 		return mv;
 	}
+	
+	@RequestMapping(value="/memberWithdraw", method=RequestMethod.POST)
+	public ModelAndView updateWithdrawMember(ModelAndView mv
+			, RedirectAttributes rttr
+			, @RequestParam(value="chk_box", required=false) String [] emails) {
+		int result = 0;
+		
+		if(emails == null) {
+			System.out.println("회원을 선택해주세요.");
+			rttr.addFlashAttribute("msg", "회원을 선택해주세요.");
+			mv.setViewName("redirect:/admin/");
+			return mv;
+		}
+		
+		for(int i=0; i<emails.length; i++) {
+			System.out.println("email:\t" + emails[i]);
+		}		
+		
+		result = service.updateWithDrawMember(emails);
+		if(result == 0) {
+			rttr.addFlashAttribute("msg", "회원탈퇴에 실패하였습니다.");
+			mv.setViewName("redirect:/admin/memberManagement");
+			return mv;
+		}
+		
+		rttr.addFlashAttribute("msg", "회원의 정보를 변경했습니다.");
+		mv.setViewName("redirect:/admin/memberManagement");
+		return mv;		
+	}
+	
 	@RequestMapping(value="ask", method= RequestMethod.GET)
 	ModelAndView pageAskManagement(ModelAndView mv) {
 		mv.setViewName("admin/askManagement");

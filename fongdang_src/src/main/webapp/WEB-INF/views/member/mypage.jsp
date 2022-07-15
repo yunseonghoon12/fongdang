@@ -32,8 +32,7 @@
     	left: 0;
     	z-index: -1;
     	width: 100%;    	
-      	height:350px;
-      	/* background-color: #9bbfd9; */      	
+      	height:350px;      		
       	background-color: #ccc; 
     }
     #myfongdang_page_main_wrap{  
@@ -44,7 +43,6 @@
       	z-index: 100;   	
     }    
     #myfongdang_member_path {
-    	/* border: 1px solid red; */      	
       	position: relative;      	
       	height: 45px;
     }
@@ -141,8 +139,9 @@
       	top: 5px;
       	right: 5px;
     }
-    #funding_record {      
-      	width: 300px;
+    #funding_record {    	
+    	box-sizing: border-box;
+    	width: 730px;
       	margin-top: 80px;
       	margin-left: 80px;
       	margin-bottom: 30px;
@@ -150,6 +149,13 @@
       	font-size: 18px;
       	font-weight: normal;      
       	color: #444c57;
+    }
+    #recent_application {    	
+    	position: relative;
+    }
+    #total{
+    	position: absolute;
+    	right: 0;
     }
     #applied_product_wrap {
       	border: 1px solid #ccc;
@@ -159,7 +165,7 @@
       	margin-left: 80px;    
       	width: 730px;
       	height: 310px;
-    }
+    }   
     .prod_flex {            
       	border-radius: 5px;
       	width: 200px;
@@ -171,7 +177,6 @@
       	height: 150px;
     }
     .prod_info_wrap {          
-      	/* border: 1px solid red; */
       	height: 110px;
       	padding: 10px;      
       	line-height: 1.2em;
@@ -190,6 +195,13 @@
       	color: #444c57;
       	font-family: SUIT-Regular;
       	font-size: 13px;
+    }
+    #empty_content {
+    	font-family: SUIT-Regular;
+    	font-size: 17px;
+    	font-weight: 300;
+    	margin: 0 auto;
+    	padding-top: 130px;
     }
     #maker_section {
       	display: none;
@@ -210,14 +222,13 @@
       	font-family: SUIT-Regular;
     }
     #title_subcation {
+    	position: relative;
+    	margin-top: 20px;
       	font-family: SUIT-Regular;
       	font-size: 15px;
-      	font-weight: bold;
-      	padding-top: 20px;
-      	padding-left: 15px;
+      	font-weight: bold; 
     }
     #enroll_product_wrap {
-      	/* border: 1px solid #ccc; */
       	border-radius: 12px;
       	display: flex;
       	flex-wrap: wrap;            
@@ -226,12 +237,13 @@
       	height: 370px;
     }
     #maker_guide {    
-      	/* border: 1px solid red; */
-      	margin: 20px auto;
+      	margin: 150px auto;
       	padding-right: 10px;
 	      
       	height: 70px;
       	font-family: SUIT-Regular;
+      	font-size: 16px;
+      	font-weight: bold;
       	line-height: 1.8em;
       	text-align: center;
     }
@@ -338,16 +350,23 @@
 	        <div id="profile_wrap">
           		<div style="border-right: 1px solid #ccc; height:100%">
 		            <div id="profile_image_wrap">
-<c:if test="${!empty member.original_profile}">
-			  			<img src="<%=request.getContextPath()%>${member.rename_profile}" id="profile_img">	
+<c:if test="${!empty member.profile}">
+			  			<img src="${member.profile}" id="profile_img">	
 </c:if>         
-<c:if test="${empty member.original_profile}">
+<c:if test="${empty member.profile}">
               			<img src="<%=request.getContextPath()%>/resources/images/user.png" id="profile_img">
 </c:if>
             		</div>
-            		<p id="member_name">${member.name}님</p>
-            		<p id="member_state">서포터·개인 회원</p>          
+            		<p id="member_name">
+            			${member.name}님            			
+            		</p>
+            		<p id="member_state">
+            			서포터·개인 회원           			
+            		</p>          
             		<div id="profile_setting">
+            		<!-- TODO : 카카오 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
+            		<!-- TODO : 네이버 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
+            		<!-- TODO : 구글 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
 	              		<button type="button" id="logout_btn" onclick="location.href='<%=request.getContextPath()%>/member/logout';">로그아웃</button>
                			<a href="<%=request.getContextPath()%>/member/myProfile">
 			              	<div id="profile_btn_wrap">
@@ -367,10 +386,31 @@
           <!-- 서포터를 눌렀을 경우 -->
           <div id="supportor_section">
             <div id="funding_record">
-              <p id="recent_application">최근 신청한 펀딩 <span style="font-weight: bold; padding-left:30px;">N</span>건</p>            
+              <div id="recent_application">나의 펀딩               	
+              	<span id="total" style="font-size: 13px; padding-left:30px;"><a href="<%=request.getContextPath()%>/member/orderlist">더 보기</a></span>
+              </div>            
             </div>
             <div id="applied_product_wrap">
-              <a href="#">
+<c:if test="${!empty orderlist }">
+	<c:forEach items="${orderlist}" var="orderlist">
+				<a href="<%=request.getContextPath()%>/funding/info/${orderlist.p_no}">
+                <div class="prod_flex">
+                  <img class="prod_img" src="${orderlist.p_thumbnail}">
+                  <div class="prod_info_wrap">
+                    <p class="prod_name">${orderlist.p_name}</p>
+                    <p class="prod_maker_wrap">
+                      <span>${orderlist.category_name}</span>｜
+                      <span>${orderlist.maker_name}</span>
+                    </p>                  
+                  </div>        
+                </div>
+              </a>		
+	</c:forEach>
+</c:if>
+<c:if test="${empty orderlist }">
+				<p id="empty_content">펀딩 내역이 없습니다.</p>
+</c:if>     
+              <!-- <a href="#">
                 <div class="prod_flex">
                   <img class="prod_img" src="">
                   <div class="prod_info_wrap">
@@ -381,44 +421,34 @@
                     </p>                  
                   </div>        
                 </div>
-              </a>
-              <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>
-                    <p class="prod_maker_wrap">
-                      <span>카테고리</span>｜
-                      <span>메이커명</span>
-                    </p>                  
-                  </div>        
-                </div>
-              </a>
-              <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>
-                    <p class="prod_maker_wrap">
-                      <span>카테고리</span>｜
-                      <span>메이커명</span>
-                    </p>                  
-                  </div>        
-                </div>
-              </a>     
+              </a> -->
+                   
             </div>
           </div>
           <!-- 메이커를 눌렀을 경우 -->
           <div id="maker_section">
             <div id="enrolled_funding">
-              <p id="enrolled_funding_title">펀딩 </p>   
+              <p id="enrolled_funding_title">펀딩</p>   
               <p id="title_subcation">
                 만든 펀딩 
-                <span style="color:#9bbfd9; padding-left:20px;">3</span>  
+                <span id="total" style="font-size: 13px; padding-left:30px;"><a href="<%= request.getContextPath()%>/member/myproject">더 보기</a></span>                  
               </p>                   
             </div>
-              
+
             <div id="enroll_product_wrap">
+<c:if test="${!empty makerFunding}">
+	<c:forEach items="${makerFunding}" var="maker">
+				<a href="<%=request.getContextPath()%>/funding/info/${maker.p_no}">
+                <div class="prod_flex">
+                  <img class="prod_img" src="${maker.p_thumbnail}">
+                  <div class="prod_info_wrap">
+                    <p class="prod_name">${maker.p_name}</p>                                     
+                  </div>        
+                </div>
+              </a>
+	</c:forEach>
+</c:if>         
+<!-- 
               <a href="#">
                 <div class="prod_flex">
                   <img class="prod_img" src="">
@@ -427,28 +457,18 @@
                   </div>        
                 </div>
               </a>
-              <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>                                    
-                  </div>        
-                </div>
-              </a>
-              <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>                                      
-                  </div>        
-                </div>
-              </a>     
+
+ -->        
+ 				<!-- 메이커가 오픈한 펀딩 상품이 없는 경우 -->
+<c:if test="${empty makerFunding}">
+            	<p id="maker_guide">
+              		펀딩한 서포터에게 제품이나<br> 
+              		서비스를 제공합니다<br> 
+              		<span style="font-size:14px; font-weight: normal; color:#ccc">퐁당 펀딩으로 처음을 만들어보세요</span> 
+	            </p>
+</c:if>                      
             </div>
-            <!-- 메이커가 오픈한 펀딩 상품이 없는 경우 -->
-            <p id="maker_guide">
-              펀딩한 서포터에게 제품이나 서비스를 제공합니다 <br>
-              퐁당 펀딩으로 처음을 만들어보세요
-            </p>
+                        
             <div id="enroll_wrap">
               <button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
             </div>
@@ -534,7 +554,7 @@
         $("#supportor_section").show();
         $("#maker_section").hide();
       });
-      $("#maker_btn").click(function() {
+      $("#maker_btn").click(function() {    	  
         $("#supporter_btn").css({
           "z-index" : "9",
           "color" : "#444c57"

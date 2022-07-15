@@ -2,6 +2,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -150,10 +151,18 @@
           다양한 혜택을 받아보세요.
         </p> 
         <div id="social_login_content">
-          <div id="icon_group">
-            <a href="#"><img src="<%=request.getContextPath()%>/resources/images/kakao_logo.png" style="width: 45px;"></a>
-            <a href="#"><img src="<%=request.getContextPath()%>/resources/images/naver_logo.png" style="width: 45px;"></a>
-            <a href="#"><img src="<%=request.getContextPath()%>/resources/images/google_logo.png" style="width: 45px;"></a>
+          <div id="icon_group">          
+          <!-- https://kauth.kakao.com/oauth/authorize?client_.id=REST_API키&redirect_uri=REDIRECT_URL&response_type=code -->            
+            <a href="https://kauth.kakao.com/oauth/authorize?client_id=<spring:eval expression="@property['kakao.api_key']"/>&redirect_uri=<spring:eval expression="@property['kakao.redirect_uri']"/>&response_type=code">
+            	<img src="<%=request.getContextPath()%>/resources/images/kakao_logo.png" style="width: 45px;">
+            </a>
+            <a href="<%=request.getContextPath()%>/member/login/oauth/naver">
+            	<img src="<%=request.getContextPath()%>/resources/images/naver_logo.png" style="width: 45px;">
+            </a>
+            <a href="#">
+            	<img src="<%=request.getContextPath()%>/resources/images/google_logo.png" style="width: 45px;">
+            </a>
+          
           </div>
         </div>
         <hr>
@@ -175,9 +184,6 @@
     </div>
   </div>
   
-	<jsp:include page="../footer.jsp" />	
-	
-	
-	
+	<jsp:include page="../footer.jsp" />		
 </body>
 </html>

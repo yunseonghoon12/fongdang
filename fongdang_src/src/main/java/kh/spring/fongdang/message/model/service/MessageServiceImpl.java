@@ -18,16 +18,24 @@ public class MessageServiceImpl implements MessageService {
 		return dao.insertMessage(message);
 	}
 	
-	public List<Message> selectMessageList(int currentPage, int messageLimit, String receiver) {
-		return dao.selectMessageList(currentPage, messageLimit, receiver);
+	public List<Message> selectSendList(int currentPage, int messageLimit, String sender) {
+		return dao.selectSendList(currentPage, messageLimit, sender);
+	}
+	
+	public List<Message> selectReceiveList(int currentPage, int messageLimit, String receiver) {
+		return dao.selectReceiveList(currentPage, messageLimit, receiver);
 	}
 
 	public Message selectMessage(String m_no) {
 		return dao.selectMessage(m_no);
 	}
 	
-	public int countMyMessage(String receiver) {
-		return dao.countMyMessage(receiver);
+	public int countMyReceiveMessage(String receiver) {
+		return dao.countMyReceiveMessage(receiver);
 	}
+	public int countMySendMessage(String sender) {
+		return dao.countMySendMessage(sender);
+	}
+
 
 }

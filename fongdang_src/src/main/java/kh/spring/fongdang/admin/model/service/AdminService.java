@@ -2,15 +2,19 @@ package kh.spring.fongdang.admin.model.service;
 
 import java.util.List;
 
+import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.admin.domain.Sales;
-
-
 public interface AdminService {
-
 	
-	/* ÆİµùÁ¤»ê List Á¶È¸  */
+	/* íšŒì› ëª©ë¡ ì¡°íšŒ */
+	public List<Member> selectMemberList(int currentPage, int memberLimit);
+	/* í‚¤ì›Œë“œë¥¼ í†µí•œ íšŒì› ì¡°íšŒ */
+	public List<Member> relatedSearch(int currentPage, int memberLimit, String keyword);
+	/* íšŒì› ìˆ˜ ì¡°íšŒ */
+	public int countMember();
+	/* íšŒì› íƒˆí‡´ ìƒíƒœ ë³€ê²½ */
+	public int updateWithDrawMember(String[] emails);
+	
 	public List<Sales> selectSalesLiset();
-	
-	/* ÆİµùÁ¤»ê »ó¼¼ N°³ Á¶È¸  */
 	public Sales selectOneSales(String pno);
 }

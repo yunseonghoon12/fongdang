@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>퐁당 - 좋아요</title>
+<title>퐁당 - 펀딩프로젝트</title>
   <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
   <style>    
   a {
@@ -33,7 +33,7 @@
     	height: 1100px;
     	background-color: #f5f7fa;
   }  
-  #favorite_product_wrap {
+  #orderlist_wrap {
     	box-sizing: border-box;
     	display: flex;
     	flex-wrap: wrap;
@@ -54,7 +54,7 @@
     	height: 240px;
   }
   .prod_info_wrap {    
-    	padding: 4px;
+    	padding: 10px;
     	background-color: white;
     	height: 130px;
   }
@@ -89,7 +89,7 @@
     	font-weight: normal;
   }
   #empty_content {   
-  		margin: 70px auto;	
+  		margin: 150px auto;	
     	height: 170px;
     	line-height: 1.5em;
     	text-align: center;
@@ -97,7 +97,22 @@
     	font-size: 17px;
     	font-weight: 300;
     	color: #444c57;	
-    }
+   }
+  #enroll_wrap {
+		border: 1px solid blue;
+		margin: 0 auto;
+		height: 60px; 
+  }
+  #fundingEnroll_btn{
+  		width: 416px;
+      	height: 48px;
+      	background-color: #9bbfd9;
+      	border: 1px solid #9bbfd9;      	
+      	border-radius: 3px;
+	  	font-family: SUIT-Regular;
+      	font-size: 16px;
+      	color: white;
+  }
   #funding_root {  		
   		color: #9bbfd9;
   		line-height: 5em;
@@ -117,67 +132,46 @@
 	<jsp:include page="../header.jsp"/>
 	
   <div id="title_wrap">
-    <p id="title">좋아요</p>        
+    <p id="title">펀딩 프로젝트</p>        
   </div>
   <div id="page_body">  
-    <div id="favorite_product_wrap">
-<c:if test="${!empty likelist}">
-	<c:forEach items="${likelist}" var="likelist">
-		<a href="<%=request.getContextPath()%>/funding/info/${likelist.p_no}">
+    <div id="orderlist_wrap">
+<c:if test="${!empty project}">
+	<c:forEach items="${project}" var="project">
+		<a href="<%=request.getContextPath()%>/funding/info/${project.p_no}">
         <div class="prod_flex">
-          <img class="prod_img" src="${likelist.p_thumbnail}">
+          <img class="prod_img" src="${project.p_thumbnail}">
           <div class="prod_info_wrap">
-            <p class="prod_name">${likelist.p_name}</p>
+            <p class="prod_name">${project.p_name}</p>
             <p class="prod_maker_wrap">
-              <span>${likelist.category_name}</span>｜
-              <span>${likelist.maker_name}</span>
-            </p>
-            <p class="number_wrap">
-              <span class="achievement_rate">${likelist.p_goal_percent}%</span>
-              <span class="limit_date">${likelist.d_day}일 남음</span>
-            </p>
+              <span>${project.category_name}</span>｜
+              <span>${project.maker_name}</span>
+            </p>           
           </div>        
         </div>
       </a>
 	</c:forEach>
 </c:if>    
-<c:if test="${empty likelist }">
-		<p id="empty_content">
-			좋아하는 펀딩 프로젝트가 없습니다.<br>
-			프로젝트를 좋아해보실래요? <br>			
-			<a href="<%=request.getContextPath()%>/funding/list" id="funding_root">펀딩 프로젝트 바로가기</a>
-		</p>
+<c:if test="${empty project }">
+		<div id="empty_content">			
+			<p style="margin-bottom: 40px;">오픈한 펀딩 프로젝트가 없습니다</p>
+			<div>
+				<button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 오픈 신청하러 가기</button>				
+			</div>		
+		</div>
 </c:if>    
-      <!-- <a href="#">
-        <div class="prod_flex">
-          <img class="prod_img" src="">
-          <div class="prod_info_wrap">
-            <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>
-            <p class="prod_maker_wrap">
-              <span>카테고리</span>｜
-              <span>메이커명</span>
-            </p>
-            <p class="number_wrap">
-              <span class="achievement_rate">달성률%</span>
-              <span class="limit_date">7일 남음</span>
-            </p>
-          </div>        
-        </div>
-      </a> -->
-      
-      
       
     </div>   
     
     <p id="prev_next">
       	<c:if test="${ startPage > 1 }">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="<%=request.getContextPath()%>/member/myproject?page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			</c:if>
 			<c:forEach begin="${startPage }" end="${endPage }" var="p">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="<%=request.getContextPath()%>/member/myproject?page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			</c:forEach>
 			<c:if test="${endPage < totalPageCnt }">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ endPage+1}">다음</a>
+				<a href="<%=request.getContextPath()%>/member/myproject?page=${ endPage+1}">다음</a>
 			</c:if>
       </p>  
   </div>

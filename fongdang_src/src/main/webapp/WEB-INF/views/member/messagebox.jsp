@@ -48,6 +48,23 @@
       color: #444c57;
       padding-top: 40px;
     }
+    #title_wrap > #btn_wrap {   
+    	height: 50px;    	
+    }    
+    .message_btn {    
+    	margin-top: 10px;
+    	width : 110px;
+    	height: 38px;
+    	
+    	background: none;
+    	border: none;
+    	border-radius: 3px;	
+    	
+    }
+    .message_btn:focus {
+    	color: #9bbfd9;
+    	border: 1px solid #9bbfd9;
+    }
     #message_content {
     	margin: 120px auto 50px auto;
     	width: 1200px;
@@ -145,6 +162,13 @@
       	<div id="title_wrap">
         	<p id="title">메시지</p>
         	<p id="caption">메시지는 실시간 채팅이 아닙니다. 주기적으로 페이지를 새로고침하세요.</p>
+        	<div id="btn_wrap"> 
+        		<form action="messagebox" id="msgFrm">
+        			<input type="hidden" name="message_type" id="message_type" value="${message_type }">
+        		</form>       		
+        		<button type="button" id="send" class="message_btn">보낸 메시지</button>
+				<button type="button" id="receive" class="message_btn">받은 메시지</button>
+        	</div> 
       	</div>
       </div>
       <div id="message_content">
@@ -162,7 +186,9 @@
       
 	<c:forEach items="${messageList}" var="message">
 			<tr>
-          		<td>${message.sender}</td>
+          		<td>    
+        			${message.sender}        	
+          		</td>
           		<td>
     	<c:if test="${message.response_chk eq 'Y'}">
     				답변 완료
@@ -183,6 +209,8 @@
 			        
       </tbody>         
       </table>
+      
+      
 </c:if>
 <c:if test="${empty messageList}">
 		<div id="empty_content_wrap">
@@ -199,21 +227,17 @@
 </c:if>
 	<p id="prev_next">
       	<c:if test="${ startPage > 1 }">
-				<a href="<%=request.getContextPath()%>/member/messagebox?page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="<%=request.getContextPath()%>/member/messagebox?message_type=${message_type}&page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			</c:if>
 			<c:forEach begin="${startPage }" end="${endPage }" var="p">
-				<a href="<%=request.getContextPath()%>/member/messagebox?page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="<%=request.getContextPath()%>/member/messagebox?message_type=${message_type}&page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			</c:forEach>
 			<c:if test="${endPage < totalPageCnt }">
-				<a href="<%=request.getContextPath()%>/member/messagebox?page=${ endPage+1}">다음</a>
+				<a href="<%=request.getContextPath()%>/member/messagebox?message_type=${message_type}&page=${ endPage+1}">다음</a>
 			</c:if>
       </p> 
       </div>
-     
-      
-    </div>
-
-     
+    </div>    
   </div>
   <jsp:include page="../footer.jsp"/>
 
@@ -234,7 +258,7 @@
         console.log("click()");
         console.log("m_no: " + $(this).children().val());
         
-       	var option= "width=440, height=550";
+       	var option= "width=440, height=550, top=150, left=700";
        	var m_no = $(this).children().val();
        	var url = "<%=request.getContextPath()%>/member/messagebox/msg?m_no=";
        	url += m_no;
@@ -244,13 +268,18 @@
         window.open(url, "popup", option);
 	});
     
-    /* $(".message_content").click(function() {
-      $("#modal_wrap").show();
+    $("#send").click(function() {   
+    	$("#message_type").val("send");
+    	console.log($("#message_type").val());
+    	msgFrm.submit()
     });
-
-    $("#model_cancel").click(function() {
-      $("#modal_wrap").hide();
-    }); */
+    $("#receive").click(function() {    	
+    	$("#message_type").val("receive");
+    	console.log($("#message_type").val());
+    	msgFrm.submit();
+    });
+    
+    
     
   </script>
 </body>

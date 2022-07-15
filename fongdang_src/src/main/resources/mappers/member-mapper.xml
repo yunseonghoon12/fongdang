@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Member">
 
-
 	<select id="selectLogin" parameterType="Member" resultType="Member">
 		select * from member where email=#{email} and password=#{password}		
 	</select>
@@ -13,6 +12,10 @@
 	
 	<select id="selectFindEmail" parameterType="string" resultType="Member">
 		select * from member where email = #{email}
+	</select>
+	
+	<select id="selectFindPassword" parameterType="string" resultType="Member">
+		select * from member where email= #{email}
 	</select>
 	
 	<insert id="insertMember" parameterType="Member">
@@ -43,4 +46,128 @@
 		 	where email= #{email}
 	</update>
 
+	<select id="selectLikelist" parameterType="string" resultType="Funding"> 
+		SELECT p_no, 
+ 			supporter,
+			p.p_thumbnail, 
+			p.p_name,
+			c.category_name, 
+			maker_name, 
+			ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, 
+			TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, 
+			p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day 
+				FROM view_funding_supporter_money JOIN product p USING(p_no)
+        		JOIN category c USING(category_id)
+        		JOIN maker m USING(maker_name)
+        		JOIN pick ck using(p_no) 				
+ 		where ck.email = #{email}    
+ 		order by d_day
+	</select>
+	
+	<select id="countLikeList" parameterType="string" resultType="int">
+		SELECT count(*)
+			FROM view_funding_supporter_money JOIN product p USING(p_no)
+        	JOIN category c USING(category_id)
+        	JOIN maker m USING(maker_name)
+        	JOIN pick ck using(p_no)
+ 			where ck.email = #{email}
+	</select>
+	
+	<select id="selectMyOrderList" parameterType="string" resultType="Funding">		
+ 		select * 
+    		from( select rownum r, t1.* 
+        		from( SELECT p_no, 
+ 					supporter,
+					p.p_thumbnail, 
+					p.p_name,
+					c.category_name, 
+					maker_name, 
+					ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, 
+					TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, 
+					p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day 
+						FROM view_funding_supporter_money JOIN product p USING(p_no)
+        				JOIN category c USING(category_id)
+        				JOIN maker m USING(maker_name)
+        				JOIN "ORDER" o USING(p_no)
+					where o.email = #{email}   
+ 					order by d_day
+        		) t1
+    		)
+    	where r between 1 and 3
+	</select>
+	
+	<select id="selectMyTotalOrderList" parameterType="string" resultType="Funding">
+		SELECT p_no, 
+ 			supporter,
+			p.p_thumbnail, 
+			p.p_name,
+			c.category_name, 
+			maker_name, 
+			ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, 
+			TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, 
+			p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day 
+				FROM view_funding_supporter_money JOIN product p USING(p_no)
+        		JOIN category c USING(category_id)
+        		JOIN maker m USING(maker_name)
+        		JOIN "ORDER" o USING(p_no)
+			where o.email = #{email}   
+ 		order by d_day
+	</select>
+	
+	<select id="countOrderList" parameterType="string" resultType="int">
+		SELECT count(*)
+			FROM view_funding_supporter_money JOIN product p USING(p_no)
+        	JOIN category c USING(category_id)
+        	JOIN maker m USING(maker_name) 
+        	JOIN "ORDER" o USING(p_no)
+			where o.email = #{email}
+	</select>
+	
+	<select id="selectMakerFunding" parameterType="string" resultType="Funding">
+		select *
+    		from(
+        		select rownum r, t1.* 
+        		from(select
+        				p.p_no,
+		                vf.supporter,
+                		p.p_thumbnail, 
+                		p.p_name,
+                		c.category_name,
+                		M.MAKER_NAME,
+		                total_funding_money,
+                		ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+                		from MAKER M join PRODUCT P on P.MAKER_NAME = M.MAKER_NAME
+                		join CATEGORY c on c.CATEGORY_ID = P.CATEGORY_ID 
+		                join view_funding_supporter_money vf on vf.p_no = p.p_no
+                		where M.email = #{email}
+                		order by start_day desc  -- 시작일          
+        		) t1    
+    		)
+    	where r between 1 and 3
+	</select>
+	
+	<select id="countMyProject" parameterType="string" resultType="int">
+		select count(*)
+    		from MAKER M join PRODUCT P on P.MAKER_NAME = M.MAKER_NAME
+    		join CATEGORY c on c.CATEGORY_ID = P.CATEGORY_ID 
+    		join view_funding_supporter_money vf on vf.p_no = p.p_no
+		    where M.email = #{email}       
+	</select>
+	
+	<select id="selectMyTotalProject" parameterType="string" resultType="Funding">
+		select
+			p.p_no,
+    		vf.supporter,
+    		p.p_thumbnail, 
+	    	p.p_name,
+    		c.category_name,
+    		M.MAKER_NAME,
+		    total_funding_money,
+    		ROUND(total_funding_money / p.p_goal * 100) p_goal_percent 
+    		from MAKER M join PRODUCT P on P.MAKER_NAME = M.MAKER_NAME
+	    	join CATEGORY c on c.CATEGORY_ID = P.CATEGORY_ID 
+	    	join view_funding_supporter_money vf on vf.p_no = p.p_no
+    	where M.email = #{email}   
+    	order by start_day desc
+	</select>
 </mapper>

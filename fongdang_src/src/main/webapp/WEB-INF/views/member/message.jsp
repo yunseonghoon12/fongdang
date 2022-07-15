@@ -41,7 +41,7 @@
       height: 300px;            
       color: #444c57;
       font-family: SUIT-Regular;
-      font-size: 13px;
+      font-size: 15px;
       line-height: 1.7em;
     }
     #modal_cancel_wrap {      

@@ -5,7 +5,15 @@
 		INSERT INTO message VALUES((SELECT NVL((SELECT MAX(m_no) FROM message), 0) + 1 FROM dual), #{m_content}, #{sender}, #{receiver}, default, default)
 	</insert>
 	
-	<select id="selectMessageList" parameterType="string" resultType="Message">
+	<select id="selectSendList" parameterType="string" resultType="Message">
+		SELECT 
+		 	TO_CHAR(M_DATE, 'yyyy-mm-dd HH24:MI') AS M_DATE,  
+			M_NO, RESPONSE_CHK, SENDER, M_CONTENT, RECEIVER
+			
+		FROM MESSAGE where sender= #{sender}
+	</select>
+	
+	<select id="selectReceiveList" parameterType="string" resultType="Message">
 		SELECT 
 		 	TO_CHAR(M_DATE, 'yyyy-mm-dd HH24:MI') AS M_DATE,  
 			M_NO, RESPONSE_CHK, SENDER, M_CONTENT, RECEIVER
@@ -13,14 +21,17 @@
 		FROM MESSAGE where receiver= #{receiver}
 	</select>
 	
+	
 	<select id="selectMessage" parameterType="string" resultType="Message">
 		select * from message where m_no = #{m_no}	
 	</select>
 	
-	<select id="countMyMessage" parameterType="string" resultType="int">
+	<select id="countMyReceiveMessage" parameterType="string" resultType="int">
 		SELECT count(*) FROM MESSAGE where receiver= #{receiver}
 	</select>
-	
-	
+		
+	<select id="countMySendMessage" parameterType="string" resultType="int">
+		SELECT count(*) FROM MESSAGE where sender= #{sender}
+	</select>
 	
 </mapper>

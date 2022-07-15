@@ -15,9 +15,14 @@ public class MessageDao {
 	@Autowired
 	private SqlSession sqlSession;	
 
-	public List<Message> selectMessageList(int currentPage, int messageLimit, String receiver) {
+	public List<Message> selectSendList(int currentPage, int messageLimit, String sender) {
 		RowBounds rowBounds = new RowBounds((currentPage -1) * messageLimit, messageLimit);
-		return sqlSession.selectList("Message.selectMessageList", receiver, rowBounds);		
+		return sqlSession.selectList("Message.selectSendList", sender, rowBounds);		
+	}
+	
+	public List<Message> selectReceiveList(int currentPage, int messageLimit, String receiver) {
+		RowBounds rowBounds = new RowBounds((currentPage -1) * messageLimit, messageLimit);
+		return sqlSession.selectList("Message.selectReceiveList", receiver, rowBounds);
 	}
 
 	public int insertMessage(Message message) {
@@ -28,7 +33,12 @@ public class MessageDao {
 		return sqlSession.selectOne("Message.selectMessage", m_no);
 	}
 	
-	public int countMyMessage(String receiver) {
-		return sqlSession.selectOne("Message.countMyMessage", receiver);
+	public int countMyReceiveMessage(String receiver) {
+		return sqlSession.selectOne("Message.countMyReceiveMessage", receiver);
 	}
+
+	public int countMySendMessage(String sender) {
+		return sqlSession.selectOne("Message.countMySendMessage", sender);
+	}
+
 }

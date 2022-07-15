@@ -213,12 +213,12 @@
       		<form action="<%=request.getContextPath()%>/member/update" method="post" enctype="multipart/form-data">
         		<div id="proflie_field">
           			<p>프로필 사진</p>
-<c:if test="${ not empty member.original_profile}">
-          			<input type="hidden" name="rename_profile" value="${member.rename_profile}">
-          			<img src="<%=request.getContextPath()%>${member.rename_profile}" class="personal_img">          
+<c:if test="${ not empty member.profile}">
+          			<input type="hidden" name="profile" value="${member.profile}">
+          			<img src="${member.profile}" class="personal_img">          
 
 </c:if>          	
-<c:if test="${ empty member.original_profile}">
+<c:if test="${ empty member.profile}">
             		<img src="<%=request.getContextPath()%>/resources/images/user.png" class="personal_img">
 </c:if>		
             		<div>
