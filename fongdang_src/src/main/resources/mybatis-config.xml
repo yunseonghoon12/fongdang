@@ -18,6 +18,7 @@
 		<typeAlias type="kh.spring.fongdang.pick.domain.Pick" alias="Pick"/>
 		<typeAlias type="kh.spring.fongdang.report.domain.Report" alias="Report"/>
 		<typeAlias type="kh.spring.fongdang.admin.domain.Sales" alias="Sales"/>
+		<typeAlias type="kh.spring.fongdang.common.Criteria" alias="Criteria"/>
 	</typeAliases>
 		
 	<mappers>

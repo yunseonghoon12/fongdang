@@ -15,16 +15,19 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductDao productDao;
 
+	/* 상품 등록 */
 	@Override
 	public int insertProduct(Product product ) {
 		return productDao.insertProduct(product);
 	}
-
+	
+	/* 상품 등록 저장된 내용 조회  */
 	@Override
 	public Product selectOneGetMakerName(String makerName) {
 		return productDao.selectOneGetMakerName(makerName);
 	}
 	
+	/* 상품 등록 수정시 업데이트  */
 	@Override
 	public int updateProduct(Product product ) {
 		return productDao.updateProduct(product);

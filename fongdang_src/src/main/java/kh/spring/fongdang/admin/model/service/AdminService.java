@@ -4,7 +4,11 @@ import java.util.List;
 
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.admin.domain.Sales;
+import kh.spring.fongdang.common.Criteria;
+
+
 public interface AdminService {
+
 	
 	/* 회원 목록 조회 */
 	public List<Member> selectMemberList(int currentPage, int memberLimit);
@@ -13,8 +17,14 @@ public interface AdminService {
 	/* 회원 수 조회 */
 	public int countMember();
 	/* 회원 탈퇴 상태 변경 */
-	public int updateWithDrawMember(String[] emails);
+	public int updateWithDrawMember(String[] emails);	
+
+
+	/* 펀딩정산 List 조회  */
+	public List<Sales> selectSalesList(Criteria criteria);
 	
-	public List<Sales> selectSalesLiset();
+	public int selectSalesListCnt();
+	
+	/* 펀딩정산 상세 N개 조회  */
 	public Sales selectOneSales(String pno);
 }

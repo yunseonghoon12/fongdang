@@ -8,6 +8,6 @@ public interface OptionService {
 	
 	/*  옵션 등록 */
 	public int insertOption(Option option) ;
-	/*   */
+	/*  옵션 등록 전 조회  */
 	public String selectOneGetPNo(String email);
 }

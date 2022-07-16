@@ -15,7 +15,6 @@ public class OptionServiceImpl implements OptionService {
 	public int insertOption(Option option) {
 		return optionDao.insertOption(option);
 	}
-
 	@Override
 	public String selectOneGetPNo(String email) {
 		return optionDao.selectOneGetPNo(email);

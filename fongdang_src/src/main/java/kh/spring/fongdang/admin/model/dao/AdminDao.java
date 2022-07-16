@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.admin.domain.Sales;
+import kh.spring.fongdang.common.Criteria;
 
 @Repository
 public class AdminDao {
@@ -38,13 +39,21 @@ public class AdminDao {
 	
 	public int updateWithDrawMember(String email) {
 		return sqlSession.update("Admin.updateWithDrawMember", email);
-	}	
+	}
+
+
+
 	/*List */
-	public List<Sales> selectSalesLiset() {
-		return sqlSession.selectList("Sales.selectSalesLiset");
+	public List<Sales> selectSalesList(Criteria criteria) {
+		return sqlSession.selectList("Sales.selectSalesList",criteria);
+	}
+
+	/* 갯수 */
+	public int selectSalesListCnt() {
+		return sqlSession.selectOne("Sales.selectSalesListCnt");
 	}
 	
-	/* salesOne*/
+	/* 펀딩정산 상세 N개 조회  */
 	public Sales selectOneSales(String p_no) {
 		
 		logger.debug("###############################################################");

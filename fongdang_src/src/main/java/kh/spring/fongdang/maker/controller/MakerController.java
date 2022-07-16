@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -23,7 +24,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import kh.spring.fongdang.common.ApiRequestUtil;
 import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.maker.domain.Maker;
-import kh.spring.fongdang.maker.model.service.MakerServiceImpl;
+import kh.spring.fongdang.maker.model.service.MakerService;
 import kh.spring.fongdang.member.domain.Member;
 
 @Controller
@@ -32,24 +33,25 @@ public class MakerController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MakerController.class);
 	
-	@Resource(name="makerServiceImpl")
-	private MakerServiceImpl makerServiceImpl;
+	@Autowired
+	private MakerService makerService;
 	
-	@Resource(name="apiRequestUtil")
+	@Autowired
 	private ApiRequestUtil apiRequestUtil;   
 
-	@Resource(name="fileUpload")
+	@Autowired
 	private FileUpload fileUpload;
 	
-//maker page 이동 
+	/* maker page 이동  */
 	@GetMapping("/view") // "maker/Register" 이렇게 이동
 	public ModelAndView insertPageMaker(ModelAndView mv, HttpSession session) {
 		
 		Maker maker = new Maker();
 		Member member = (Member) session.getAttribute("loginInfo");
 		
-		if(member != null) {
-			maker = makerServiceImpl.selectMaker(member.getEmail().toString());			
+		if(member != null) { // 회원이 null 아니면 
+			//메이커 등록시 등록된 메이커있는지 조회 
+			maker = makerService.selectMaker(member.getEmail().toString());			
 			mv.addObject("maker", maker);
 			mv.addObject("updateYn", "Y");
 		}
@@ -59,7 +61,7 @@ public class MakerController {
 		return mv;
 	}
 
-// maker insert 
+	/* maker 등록 */
 	@PostMapping("/insert")
 	public ResponseEntity<String> inserMaker(ModelAndView mv
 			, Maker mamker
@@ -88,7 +90,7 @@ public class MakerController {
 		
 		try {
 			String result = "";
-			int i = makerServiceImpl.insertMaker(mamker);
+			int i = makerService.insertMaker(mamker);
 			if (i == 1) {
 				result = "success";
 			}else {
@@ -100,7 +102,7 @@ public class MakerController {
 	    }
 	}
 
-	// 사업자등록번호 API 
+	/* 사업자등록번호 API */
 	@PostMapping("/licenseCheck")
 	public ResponseEntity<String> inserMaker(ModelAndView mv, HttpServletRequest req) {
 		
@@ -120,6 +122,7 @@ public class MakerController {
 	    }
 	}
 
+	/* maker 수정등록 */	
 	@PostMapping("/update")
 	public ResponseEntity<String> updateMaker(ModelAndView mv
 			, Maker mamker
@@ -147,7 +150,7 @@ public class MakerController {
 		}
 		try {
 			String result = "";
-			int i = makerServiceImpl.updateMaker(mamker);
+			int i = makerService.updateMaker(mamker);
 			if (i == 1) {
 				result = "success";
 			}else {

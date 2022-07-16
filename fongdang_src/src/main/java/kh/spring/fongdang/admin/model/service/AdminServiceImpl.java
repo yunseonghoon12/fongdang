@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import kh.spring.fongdang.admin.model.dao.AdminDao;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.admin.domain.Sales;
+import kh.spring.fongdang.admin.model.dao.AdminDao;
+import kh.spring.fongdang.common.Criteria;
 
 @Service
 public class AdminServiceImpl implements AdminService{
@@ -44,14 +44,20 @@ public class AdminServiceImpl implements AdminService{
 		return dao.relatedSearch(currentPage, memberLimit, keyword);
 	}
 	
-	@Override
-	public List<Sales> selectSalesLiset() {
-		return dao.selectSalesLiset();
+	@Override/* 펀딩정산 List 조회  */
+	public List<Sales> selectSalesList(Criteria criteria) {
+		return dao.selectSalesList(criteria);
+	}
+	
+	@Override/* 펀딩정산 List 조회  */
+	public int selectSalesListCnt() {
+		return dao.selectSalesListCnt();
 	}
 
 	@Override
 	public Sales selectOneSales(String pno) {
 		return dao.selectOneSales(pno);
 	}
+
 
 }

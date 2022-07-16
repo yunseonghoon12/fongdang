@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,8 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.admin.domain.Sales;
-import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
+import kh.spring.fongdang.admin.model.service.AdminService;
 import kh.spring.fongdang.member.domain.Member;
+import kh.spring.fongdang.common.Criteria;
 
 
 @Controller
@@ -28,7 +31,7 @@ public class AdminController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 	
 	@Autowired
-	private AdminServiceImpl service;
+	private AdminService service;
 	
 	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
 	public ModelAndView pageMemberManagement(ModelAndView mv
@@ -153,19 +156,12 @@ public class AdminController {
 		return mv;
 	}
 
-	@GetMapping("/sales/list")
-	public ModelAndView selectSalesLiset(ModelAndView mv) {
-		List<Sales> salesList = service.selectSalesLiset();
-		mv.addObject("salesList", salesList);
-		mv.setViewName("admin/salesList"); // 
-		return mv;
-	}
 
 	@GetMapping("/sales/read")
     public ModelAndView selectOneSales(ModelAndView mv, HttpServletRequest req
     		, @RequestParam(name = "p_no", defaultValue = "0") String pno) {
 		if (pno == "0") {
-			mv.setViewName("redirect:salesList");//
+			mv.setViewName("redirect:salesList");
 			return mv;
 		}
 		logger.debug(pno);
@@ -177,5 +173,20 @@ public class AdminController {
 		return mv;
 	}
 	
+	//@RequestMapping(value = "/sales/list", method = RequestMethod.GET)
+	@GetMapping("/sales/list")
+	public ModelAndView selectSalesList(ModelAndView mv, @ModelAttribute Criteria criteria,
+			HttpServletRequest req, Model model
+			) {
+		logger.debug("######################################");
+		logger.debug(criteria.toString());
+		List<Sales> salesList = service.selectSalesList(criteria);
+		
+		mv.addObject("salesList", salesList);
+		mv.setViewName("admin/salesList");  
+		criteria.setTotalCount(service.selectSalesListCnt());
+		model.addAttribute("pages", criteria);
+		return mv;
+	}
 	
 }

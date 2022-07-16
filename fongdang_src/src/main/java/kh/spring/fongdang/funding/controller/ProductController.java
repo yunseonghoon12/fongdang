@@ -20,7 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.funding.domain.Product;
-import kh.spring.fongdang.funding.model.service.ProductServiceImpl;
+import kh.spring.fongdang.funding.model.service.ProductService;
 import kh.spring.fongdang.member.domain.Member;
 
 
@@ -31,7 +31,7 @@ public class ProductController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 	@Autowired
-	private ProductServiceImpl productServiceImpl;
+	private ProductService productService;
 	
 	//@Resource(name="ProductServiceImpl")
 	//private ProductServiceImpl productServiceImpl1;
@@ -44,7 +44,7 @@ public class ProductController {
 	public ModelAndView insertPageProduct(ModelAndView mv,HttpSession session, HttpServletRequest req) {
 		
 		Member member = (Member) session.getAttribute("loginInfo");
-		Product product= productServiceImpl.selectOneGetMakerName(member.getEmail()); //조회 
+		Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
 		mv.addObject("product", product);
 		
 		mv.setViewName("product/product");// jsp 화면 
@@ -74,7 +74,7 @@ public class ProductController {
 		
 		try {	
 			String result = "";
-			int i = productServiceImpl.insertProduct(product);
+			int i = productService.insertProduct(product);
 			if (i == 1) {
 				result = "success";
 			}else {
@@ -109,7 +109,7 @@ public class ProductController {
 		
 		try {	
 			String result = "";
-			int i = productServiceImpl.updateProduct(product);
+			int i = productService.updateProduct(product);
 			if (i == 1) {
 				result = "success";
 			}else {

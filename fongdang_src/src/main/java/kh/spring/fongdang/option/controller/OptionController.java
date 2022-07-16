@@ -17,26 +17,27 @@ import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.option.domain.Option;
+import kh.spring.fongdang.option.model.service.OptionService;
 import kh.spring.fongdang.option.model.service.OptionServiceImpl;
 
 @Controller
 @RequestMapping("/option")
 public class OptionController {
 	@Autowired
-	private OptionServiceImpl optionServiceImpl;
+	private OptionService optionService;
 
-	// Option page 이동
+	/* Option page 이동*/
 	@GetMapping("/view")
 	public ModelAndView insertPageOption(ModelAndView mv, HttpSession session) {
 		String p_no = "";
 		Member member = (Member) session.getAttribute("loginInfo");
-		p_no = optionServiceImpl.selectOneGetPNo(member.getEmail());// 조회문 
+		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
 		mv.addObject("p_no", p_no);
 		mv.setViewName("option/option");// jsp페이지
 		return mv;
 	}
 
-	// Option insert
+	/* Option 등록 */
 	@PostMapping("/insert")
 	public ResponseEntity<String> inserOption(ModelAndView mv
 			, Option option
@@ -48,7 +49,7 @@ public class OptionController {
 	
 		try {
 			String result = "";
-			int i = optionServiceImpl.insertOption(option);
+			int i = optionService.insertOption(option);
 			if (i == 1) {
 				result = "success";
 			}else {

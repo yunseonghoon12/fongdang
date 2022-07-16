@@ -19,6 +19,9 @@ public class Sales {
 	private int p_goal_percent; //펀딩 달성률
 	private long  commission;//수수료
 	private long  sales_funding_money;// 정산금액
+	
+	
+	
 	public int getP_no() {
 		return p_no;
 	}

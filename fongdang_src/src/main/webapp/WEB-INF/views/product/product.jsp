@@ -249,8 +249,13 @@ $( document ).ready(function() {
 							<td></td>
 						</tr>
 						<tr>
-							<td id="title">정책사항</td>
-							<td>모달창</td>
+							<td id="title">스토리 광고 심의동의<sup>*</sup></td>
+							<td>
+								<a href="">공통 표시·광고 가이드라인</a>
+							    <a href="">식품 표시·광고 가이드라인</a>
+							    <a href="">화장품 표시·광고 가이드라인</a>
+							    <a href="">건강보조기구 표시·광고 가이드라인</a>
+							</td>
 							<td></td>
 						</tr>
 						<tr>

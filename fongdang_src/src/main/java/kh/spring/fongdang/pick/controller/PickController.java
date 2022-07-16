@@ -8,14 +8,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import kh.spring.fongdang.pick.domain.Pick;
-import kh.spring.fongdang.pick.model.service.PickServiceImpl;
+import kh.spring.fongdang.pick.model.service.PickService;
+
 
 @Controller
 @RequestMapping("/pick")
 public class PickController {
 	
 	@Autowired
-	private PickServiceImpl service;
+	private PickService service;
 	
 	
 	// pick insert 
