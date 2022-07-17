@@ -163,9 +163,11 @@ CREATE TABLE "REPORT" (
 );
 
 CREATE TABLE "PICK" (
+              pick_yn    CHAR(1)                 NOT NULL,
 	email	VARCHAR2(100)		NOT NULL,
 	p_no	NUMBER		NOT NULL
 );
+COMMENT ON COLUMN "PICK".pick_yn IS '좋아요여부';
 COMMENT ON COLUMN "PICK".email IS 'MEMBER(email)';
 
 COMMENT ON COLUMN "PICK".p_no IS 'PRODUCT(p_no)';
