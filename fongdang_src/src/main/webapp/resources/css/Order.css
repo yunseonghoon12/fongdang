@@ -1,0 +1,289 @@
+@charset "UTF-8";
+        
+    footer{
+        position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 100%;
+
+            padding: 0 0;
+
+            text-align: center;
+
+            color: white;
+
+            background: blue;
+
+    }
+    body{min-height: 100%}
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    a, address, article, aside, audio, 
+    b, body, button, canvas, caption, 
+    dd, div, dl, dt, em, embed, 
+    fieldset, figcaption, figure, 
+    footer, form, h1, h2, h3, h4, h5, h6, 
+    header, html, i, img, input, label,
+     legend, li, nav, ol, p, pre, 
+     section, small, span, strong, 
+     summary, table, tbody, td, th, thead,
+      time, tr, ul, video
+    {
+        vertical-align: baseline;
+        font: inherit;
+        box-sizing: border-box;
+    }
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none
+    }
+    .container{
+        text-align:center
+    }
+    .wrap{
+        width:1280px;
+        display: inline-block;
+    }
+    .wrap_container{
+        text-align: center;
+    }
+    .step_wrap{
+        margin:20px;
+        width:800px;
+        height:150px;
+        border-bottom:1px solid rgb(220, 220, 220);
+        display: inline-block;
+    }
+    .step{
+        background-color:rgb(235, 235, 235);
+        width:100px;
+        height:100px;
+        border-radius: 50px;
+        text-align: center;
+        display: inline-block;
+        margin-top:20px;
+    }
+    .step>span{
+        display: inline-block;
+        width:60px;
+        height:30px;
+        margin-top:41px;
+        font-size:16px;
+    }
+    .wrap_container2{
+        width: 100%;
+        margin-top:30px;
+       
+
+    }
+    
+    .option_wrap{
+        width:100%;
+        position:relative;
+        
+    }
+    .option_top{
+        width:800px;
+        height:50px;
+        margin:0 auto;
+        
+        
+        
+        
+        
+    }
+
+    .option_top>h2{
+        font-size:20px;
+        font-weight:500;
+        margin-top:10px;
+    }
+    #step_one{
+        background-color:#a9def5
+        
+    }
+    #step_one>span{
+        color:rgb(255, 255, 255);
+    }
+    .option{
+        width:800px;
+        margin:0 auto;
+        height:500px;
+    }
+    .option>ul{
+        width:800px;
+
+    }
+    .option>ul>li{
+        float:left;
+        border-radius: 5px;
+        width:800px;
+    }
+    .agree .all_agree input[type="checkbox"] {display: none;}
+        .agree .all_agree input[type="checkbox"] {display: none;}
+
+        .agree .all_agree input[type="checkbox"] + label {
+            display: inline-block; width:17px; height: 17px; background: #d6ecf5;
+            cursor: pointer; border-radius: 3px;float: left;             
+        }
+        .agree .all_agree:after {
+            display:block; clear:both; content:"";
+        }
+        .agree .all_agree input[type="checkbox"]:checked + label {
+            background:url(../image/check.png) #d6ecf5 no-repeat center/20px 20px; float: left;display: inline-block;
+        }
+        .agree {
+            position:relative;
+        }
+        .agree .all_agree input[type="checkbox"] + label span {
+            position: absolute; top: 0; left:0px; display: block; font-weight: bold;
+        }
+        .agree{
+            border-radius: 8px;
+            position:relative;
+            background: rgb(240, 240, 240);
+            border:1px solid #ffffff
+            
+            
+        }
+
+        .agree:hover{
+            cursor: pointer;
+            background: #d6ecf5;
+        }
+        .agree:active{
+            
+            
+            cursor: pointer;
+        }
+      
+        .somenail{
+            background-color: rgb(232, 208, 177);
+            height:70px;
+            text-align: center;
+            border: 1px solid rgb(210, 178, 136)
+        }
+        .somenail>dl{
+            width:800px;
+            height:30px;
+            text-align: center;
+            margin:0 auto;
+        }
+        .somenail>dl>dt{
+            margin-top:20px;
+            display:inline-block;
+            font-size: 23px;
+        }
+        .somenail>dl>dd{
+            display:inline-block;
+            font-size: 18px;
+        }
+        .all_agree{
+            display: inline-block;
+            position:absolute;
+            right:30px;
+            top:40px;
+        }
+        .all_agree2{
+            margin-top:20px;
+            margin-left:20px;
+            margin-right:20px;
+            position: relative;
+        }
+    .option_price{
+        
+        
+        
+        font-weight: 500;
+    }
+    .option_name{
+        text-align: left;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    
+    }
+    .option_info{
+        
+        
+    }
+    .total_wrap{
+    width:100%;
+    }
+    .price_wrap{
+    font-size: 20px;
+    margin-bottom:3px;
+    }
+    .button_wrap{
+        margin-top:20px;
+        
+    }
+    .cupang_wrap{
+        font-size: 14px;
+    }
+    #button_next{
+        width:120px;
+        height:50px;
+        border: 1px solid #d6ecf5;
+        background-color:  #e0f1f8;
+        border-radius: 4px;
+        font-size: 18px;
+    }
+    #button_next:hover{
+        background-color:#a9def5;
+        cursor: pointer;
+    }
+    .option_info{
+        width:750px;
+        text-align:left;
+        position:relative;
+        display:inline-block;
+        
+        color:gray;
+
+        
+    }
+    
+    .option_limit{
+        width:750px;
+        display:inline-block;
+        text-align:left;
+        position:relative;
+     
+        color:gray;
+    }
+    .option_price{
+        width:750px;
+        display:inline-block;
+        text-align:left;
+        position:relative;
+       
+    }
+    .option_sum{
+        width:750px;
+        display:inline-block;
+        text-align:left;
+        position:relative;
+    }
+    #un{
+        display: none;
+    }
+    .text{
+        margin-top:10px;
+        width:80px;
+        height:30px;
+        border-radius: 4px;
+        border:1px solid #a9def5;
+        
+    }
+    .color{
+        background: #a9def5;
+    }
