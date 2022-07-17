@@ -68,7 +68,7 @@
 					<li><a href="<%=request.getContextPath()%>/member/login"
 						id="login">로그인</a></li>
 					<li><a
-						href="<%=request.getContextPath()%>/member/registerForm">회원가입</a></li>
+						href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
 				</c:if>
 
 				<c:if test="${!empty loginInfo}">
