@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.order.model.service.OrderService;
 
 @Controller
@@ -19,11 +20,17 @@ public class OrderController {
 	private OrderService service;
 	
 	@PostMapping("/option")
-	public ModelAndView insertOption(ModelAndView mv,@RequestParam("option_no") int option_no, @RequestParam("p_no") int p_no, HttpSession session) {
+	public ModelAndView selectOption(ModelAndView mv,@RequestParam("option_no") int option_no, @RequestParam("p_no") int p_no, HttpSession session) {
 		mv.addObject("order",service.selectOption(p_no, option_no));
 		mv.setViewName("order/order_option");
 		
 		return mv;
 	}
-	
+	@PostMapping("/insert")
+	public ModelAndView insertOption(ModelAndView mv, HttpSession session) {
+		Member member = (Member) session.getAttribute("loginInfo");
+		mv.addObject("order",service.selectOption() );
+		mv.setViewName("order/order_option");// jsp페이지
+		return mv;
+	}
 }
