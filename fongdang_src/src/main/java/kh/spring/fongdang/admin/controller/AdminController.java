@@ -1,5 +1,7 @@
 package kh.spring.fongdang.admin.controller;
 
+import java.util.Map;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -22,7 +25,6 @@ import kh.spring.fongdang.admin.domain.Sales;
 import kh.spring.fongdang.admin.model.service.AdminService;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.common.Criteria;
-
 
 @Controller
 @RequestMapping("/admin")
@@ -40,11 +42,11 @@ public class AdminController {
 			, HttpSession session) {		
 		List<Member> memberList =null; 		
 		System.out.println("keyword: " + keyword);
-		// ·Î±×ÀÎ »óÅÂ È®ÀÎ 
-//		TODO: ÃßÈÄ¿¡ °ü¸®ÀÚ(admin) ·Î±×ÀÎ È®ÀÎ ÈÄ °ü¸®ÀÚÆäÀÌÁö·Î ³Ñ¾î¿À°Ô ÇÏ±â
+		// ë¡œê·¸ì¸ ìƒíƒœ í™•ì¸ 
+//		TODO: ì¶”í›„ì— ê´€ë¦¬ì(admin) ë¡œê·¸ì¸ í™•ì¸ í›„ ê´€ë¦¬ìí˜ì´ì§€ë¡œ ë„˜ì–´ì˜¤ê²Œ í•˜ê¸°
 //		Member authInfo = (Member)session.getAttribute("loginInfo");
 //		if(authInfo == null) {
-//			System.out.println("\nÇöÀç ·Î±×¾Æ¿ô »óÅÂÀÔ´Ï´Ù.");
+//			System.out.println("\ní˜„ì¬ ë¡œê·¸ì•„ì›ƒ ìƒíƒœì…ë‹ˆë‹¤.");
 //			mv.setViewName("redirect:/member/login");
 //			return mv;
 //		}		
@@ -58,14 +60,14 @@ public class AdminController {
 			e.printStackTrace();
 		}
 		
-		final int pageSize = 6;  // ÇÑÆäÀÌÁö¿¡ º¸¿©ÁÙ Çà
-		final int pageBlock = 3;  // ÆäÀÌÂ¡¿¡ ³ªÅ¸³¯ ÆäÀÌÁö¼ö
+		final int pageSize = 6;  // í•œí˜ì´ì§€ì— ë³´ì—¬ì¤„ í–‰
+		final int pageBlock = 3;  // í˜ì´ì§•ì— ë‚˜íƒ€ë‚  í˜ì´ì§€ìˆ˜
 		int startPage=0;
 		int endPage=0;
 		int startNum=0;
 		int endNum=0;
 		
-		// ÃÑ È¸¿ø ¼ö
+		// ì´ íšŒì› ìˆ˜
 		int totalCnt = 0;
 		if(keyword != null) {
 			totalCnt = service.countSearchMember(keyword);
@@ -74,9 +76,9 @@ public class AdminController {
 			totalCnt = service.countMember();
 		}
 		
-		System.out.println("\nÃÑ È¸¿ø ¼ö :\t" + totalCnt); 
+		System.out.println("\nì´ íšŒì› ìˆ˜ :\t" + totalCnt); 
 		
-		/* Paging Ã³¸® */
+		/* Paging ì²˜ë¦¬ */
 		int totalPageCnt = (totalCnt/pageSize) + (totalCnt%pageSize==0 ? 0 : 1);
 		if(currentPage%pageBlock == 0) {
 			startPage = ((currentPage/pageBlock)-1)*pageBlock + 1;
@@ -89,7 +91,7 @@ public class AdminController {
 		}
 		System.out.println("page:"+ startPage +"~"+endPage);
 		
-		/* rownum Ã³¸® */
+		/* rownum ì²˜ë¦¬ */
 		startNum = (currentPage-1)*pageSize + 1;
 		endNum = startNum + pageSize -1;
 		if(endNum>totalCnt) {
@@ -104,7 +106,7 @@ public class AdminController {
 		}
 		
 		if(memberList == null) {
-			System.out.println("selectMemberList() Á¶È¸ ½ÇÆĞ");			
+			System.out.println("selectMemberList() ì¡°íšŒ ì‹¤íŒ¨");			
 		} else {
 			System.out.println("\n[memberList]\n\t" + memberList);
 		}
@@ -128,9 +130,9 @@ public class AdminController {
 		int result = 0;
 		
 		if(emails == null) {
-			System.out.println("È¸¿øÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
-			rttr.addFlashAttribute("msg", "È¸¿øÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
-			mv.setViewName("redirect:/admin/");
+			System.out.println("íšŒì›ì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
+			rttr.addFlashAttribute("msg", "íšŒì›ì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
+			mv.setViewName("redirect:/admin/memberManagement");
 			return mv;
 		}
 		
@@ -140,12 +142,12 @@ public class AdminController {
 		
 		result = service.updateWithDrawMember(emails);
 		if(result == 0) {
-			rttr.addFlashAttribute("msg", "È¸¿øÅ»Åğ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+			rttr.addFlashAttribute("msg", "íšŒì›íƒˆí‡´ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			mv.setViewName("redirect:/admin/memberManagement");
 			return mv;
 		}
 		
-		rttr.addFlashAttribute("msg", "È¸¿øÀÇ Á¤º¸¸¦ º¯°æÇß½À´Ï´Ù.");
+		rttr.addFlashAttribute("msg", "íšŒì›ì˜ ì •ë³´ë¥¼ ë³€ê²½í–ˆìŠµë‹ˆë‹¤.");
 		mv.setViewName("redirect:/admin/memberManagement");
 		return mv;		
 	}

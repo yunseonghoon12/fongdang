@@ -48,12 +48,12 @@ public class AdminDao {
 		return sqlSession.selectList("Sales.selectSalesList",criteria);
 	}
 
-	/* 갯수 */
+	
 	public int selectSalesListCnt() {
 		return sqlSession.selectOne("Sales.selectSalesListCnt");
 	}
 	
-	/* 펀딩정산 상세 N개 조회  */
+	
 	public Sales selectOneSales(String p_no) {
 		
 		logger.debug("###############################################################");
