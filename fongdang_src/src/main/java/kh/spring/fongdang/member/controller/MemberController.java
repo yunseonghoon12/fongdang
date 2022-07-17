@@ -25,15 +25,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.github.scribejava.core.model.OAuth2AccessToken;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import kh.spring.fongdang.member.model.service.MemberServiceImpl;
 import kh.spring.fongdang.message.domain.Message;
 import kh.spring.fongdang.message.model.service.MessageServiceImpl;
-import kh.spring.fongdang.oauth.NaverLoginBO;
-import kh.spring.fongdang.oauth.service.KakaoService;
 import kh.spring.fongdang.common.FileUpload;
 
 import kh.spring.fongdang.common.MailSendUtil;
@@ -51,10 +45,7 @@ public class MemberController {
 	private FileUpload commonfile;	
 	@Autowired 
 	private MailSendUtil mailService;
-	@Autowired
-	private KakaoService kakao;
-	@Autowired
-	private NaverLoginBO naverLoginBO;
+
 	
 	
 //	페이지 이동 메서드
@@ -486,97 +477,8 @@ public class MemberController {
 		return mv;		
 	}
 	
-//	카카오 로그인
-	@RequestMapping(value="/login/oauth/kakao", method=RequestMethod.GET)
-	public String kakaoLogin(
-			@RequestParam(value="code", required = false) String code
-			, HttpServletRequest request
-			, HttpSession session) {
-		System.out.println("\n#############" + code);
-		String access_Token = kakao.getAccessToken(code); 	
-		
-		HashMap<String, Object> userInfo = kakao.getUserInfo(access_Token);
-		System.out.println("\n###access_Token#### : " + access_Token);
-		System.out.println("###nickname#### : " + userInfo.get("nickname"));
-		System.out.println("###email#### : " + userInfo.get("email") + "\n");
-		
-		Gson gson = new GsonBuilder()
-				.setPrettyPrinting()
-				.create();
-		
-		// TODO : 카카오 토큰 세션에 저장 이후 내 정보 구현하기 
-		session.setAttribute("kakaoToken", access_Token);
-		request.setAttribute("kakaoInfo", userInfo);
-		System.out.println(gson.toJson(userInfo));
-		return "member/testPage";
-		
-	}
-	
-	
-// 네이버 로그인	
-	@RequestMapping(value="/login/oauth/naver", method=RequestMethod.GET)
-	public ModelAndView naverLogin(HttpSession session) {
-		String naverAuthUrl = naverLoginBO.getAuthorizationUrl(session);		
-		return new ModelAndView("member/register", "url", naverAuthUrl);
-	}
-	
-	@RequestMapping(value="/login/oauth/naver/callback", method=RequestMethod.GET)
-	 public String naverCallback(Model model
-	    		,@RequestParam String code
-				, @RequestParam String state
-				, HttpSession session) throws IOException, ParseException {
-//	        String message = "Simple Callback Page";
-//	        return new ModelAndView("callback", "message", message);
-	    	/* 네아로 인증이 성공적으로 완료되면 code 파라미터가 전달되며 이를 통해 access token을 발급 */
-			OAuth2AccessToken oauthToken = naverLoginBO.getAccessToken(session, code, state);			
-			String access_token = oauthToken.getAccessToken(); // 토큰
-			
-			System.out.println("###########accessToken:\t" + access_token + "\n");		
-			
-			// 1. 로그인 사용자 정보를 읽어옴, json구조
-			String apiResult = naverLoginBO.getUserProfile(oauthToken);		
-			/** 
-			apiResult json 구조		
-			{	"resultcode":"00", 
-				"message":"success", 
-				"response":{"id":"33666449","nickname":"shinn****","age":"20-29","gender":"M","email":"sh@naver.com","name":"\uc2e0\ubc94\ud638"}}		
-			**/
-			
-			// 2. String형식인 apiResult를 json형태로 바꿈
-			JSONParser parser = new JSONParser();
-			Object obj = parser.parse(apiResult);
-			JSONObject jsonObj = (JSONObject)obj;
-			
-			
-			// 3. 데이터 파싱
-			JSONObject response_obj = (JSONObject)jsonObj.get("response");		
-			// response의 nickname 값 파싱
-			
-			String nickname = (String)response_obj.get("nickname");
-			String email = (String)response_obj.get("email");
-			String name = (String)response_obj.get("name");		
-			
-			System.out.println("###########nickname:\t" + nickname);
-			System.out.println("###########email:\t" + email);
-			System.out.println("###########name:\t" + name + "\n");
-			// 4. 파싱 닉네임 세션으로 저장
-			session.setAttribute("sessionId", nickname);
-			
-//			https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&access_token=ACCESS_TOKEN
-			session.setAttribute("access_token", access_token);
-			
-			model.addAttribute("result", apiResult);
-			model.addAttribute("nickname", nickname);
-			model.addAttribute("email", email);
-			model.addAttribute("name", name);
-			return "member/testPage";
-	    }
-// 구글 로그인
-	
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
-		String kakaoToken =  (String)session.getAttribute("kakaoToken");
-		System.out.println("\nToken :" + kakaoToken);
 		session.invalidate();
 		return "redirect:/";
 	}
