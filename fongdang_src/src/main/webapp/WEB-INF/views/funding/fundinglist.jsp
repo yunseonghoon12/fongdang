@@ -256,7 +256,8 @@ a {
 	font-size: 19px;
 }
 
-.productWrap a h3:hover, .productWrap a p:hover {
+.productWrap a .nameWrap:hover h3, .productWrap a .nameWrap:hover h4,
+	.productWrap a .nameWrap:hover h5, .productWrap a .nameWrap:hover p {
 	color: #9bbfd9;
 }
 
@@ -294,7 +295,9 @@ a#topBtn {
 	<div class="AllWarp">
 		<div class="productList">
 			<ul>
-				<li><a href="">
+
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC1"
+					id="C1">
 						<div class="screen">
 							<div class="top">테크·가전</div>
 							<div class="bottom">Appliances</div>
@@ -305,7 +308,8 @@ a#topBtn {
 							<h3>가전</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC4"
+					id="C4">
 						<div class="screen">
 							<div class="top">캠핑 용품</div>
 							<div class="bottom">Camping</div>
@@ -316,7 +320,8 @@ a#topBtn {
 							<h3>캠핑</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC2"
+					id="C2">
 						<div class="screen">
 							<div class="top">화장품</div>
 							<div class="bottom">Beauty</div>
@@ -327,7 +332,8 @@ a#topBtn {
 							<h3>뷰티</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC3"
+					id="C3">
 						<div class="screen">
 							<div class="top">식료퓸</div>
 							<div class="bottom">Groceries</div>
@@ -338,7 +344,8 @@ a#topBtn {
 							<h3>식품</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC5"
+					id="C5">
 						<div class="screen">
 							<div class="top">반려동물</div>
 							<div class="bottom">Pets</div>
@@ -349,8 +356,8 @@ a#topBtn {
 							<h3>반려동물</h3>
 						</div>
 				</a></li>
-				<li><a href="">
-						<div class="screen">
+				<li><a href="<%=request.getContextPath()%>/funding/list/cateC6">
+						<div class="screen" id="C6">
 							<div class="top">기타 등등</div>
 							<div class="bottom">Etc</div>
 							<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
@@ -374,13 +381,19 @@ a#topBtn {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${allProducts}" var="product">
-					<li class="itemsWrap"><a href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
+					<li class="itemsWrap"><a
+						href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">
 							</div>
-							<h3>${product.maker_name}</h3>
-							<p>${product.p_name}</p>
+							<div class="nameWrap" style="overflow: hidden; height: 60px;">
+								<h4 style="font-size: 16px;">${product.p_name}</h4>
+								<h5 style="font-size: 12px;color: #ccc;">${product.category_name}&nbsp;&nbsp;col
+									${product.maker_name}</h5>
+							</div>
+							<div style="width: 100%; height: 3px;background: #9bbfd9;"></div> 
+							<span>100% 100,000원</span><span>0일 남음</span>
 					</a></li>
 				</c:forEach>
 			</ul>
@@ -397,6 +410,7 @@ a#topBtn {
 
 
 	<script>
+		/* 화면 맨 위로 올라가기 버튼 */
 		$(function() {
 
 			$(window).scroll(function() {
@@ -415,6 +429,7 @@ a#topBtn {
 		});
 	</script>
 	<script>
+		/*상품 목록 더 보기 */
 		$(function() {
 			$(".itemsWrap").hide();
 			$(".itemsWrap").slice(0, 12).show();
@@ -429,7 +444,45 @@ a#topBtn {
 			});
 		});
 	</script>
+	<script>
+		/* 카테고리 */
+
+		/* 		$(function() {
+		 $(".cate_c1").on('click', function() {
+		 var kind = $(this).val();
+		 $.ajax({
+		 url : './list/cate',
+		 type : "get",
+		 },
+		 success : function(data) {
+		 console.log(data);
+
+		 $('body').html(data);
+		 })
+		 });
+		 }); */
+	</script>
 	<jsp:include page="../footer.jsp" />
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

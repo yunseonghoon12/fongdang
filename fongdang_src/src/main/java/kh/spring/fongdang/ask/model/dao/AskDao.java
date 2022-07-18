@@ -21,8 +21,21 @@ public class AskDao {
 	public List<Ask> selectAsk(String email) {
 		return sqlSession.selectList("Ask.selectAsk", email);
 	}
+	public List<Ask> selectAsk2(int ask_no) {
+		return sqlSession.selectList("Ask.selectAsk2", ask_no);
+	}
+	public List<Ask> selectAskY() {
+		return sqlSession.selectList("Ask.selectAskY");
+	}
+	public List<Ask> selectAskN() {
+		return sqlSession.selectList("Ask.selectAskN");
+	}
 
 	public int deleteAsk(int ask_no) {
 		return sqlSession.delete("Ask.deleteAsk", ask_no);
 	}
+	public int updateAsk(int ask_no) {
+		return sqlSession.update("Ask.updateAsk", ask_no);
+	}
+	
 }

@@ -40,11 +40,11 @@ body {
 
 .ask_category {
 	position: relative;
-    left: 22px;
-    height: 45px;
-    width: 95px;
-    font-size: 15px;
-    border-radius: 5px;
+	left: 22px;
+	height: 45px;
+	width: 95px;
+	font-size: 15px;
+	border-radius: 5px;
 }
 
 .ask_category:hover {
@@ -116,12 +116,11 @@ body {
 					<hr
 						style="position: relative; bottom: 35; z-index: -1; border: double;">
 				</div>
-				<input type="hidden" name="email" value="${loginInfo.email}"/>
+				<input type="hidden" name="email" value="${loginInfo.email}" />
 				<div class="titleWrap">
-					<input class="ask_boxborder" type="text" name="ask_title" id="ask_title"
-						style="width: 784px; height: 46px;"> 	
-						<select size="1"
-						class="ask_category" name="ask_category">
+					<input class="ask_boxborder" type="text" name="ask_title"
+						id="ask_title" style="width: 784px; height: 46px;"> <select
+						size="1" class="ask_category" name="ask_category">
 						<option selected>배송</option>
 						<option>결제</option>
 						<option>상품</option>
@@ -132,8 +131,8 @@ body {
 				</div>
 				<div class="contentWrap">
 					<div>
-						<textarea class="askContent ask_boxborder" name="ask_content" id="ask_content"
-							style="width: 900px; height: 352px;"></textarea>
+						<textarea class="askContent ask_boxborder" name="ask_content"
+							id="ask_content" style="width: 900px; height: 352px;"></textarea>
 						<br>
 					</div>
 				</div>
@@ -146,16 +145,16 @@ body {
 	</form>
 	<jsp:include page="../footer.jsp" />
 	<script>
-		function ask_check(){
+		function ask_check() {
 			var title = document.getElementById("ask_title");
 			var content = document.getElementById("ask_content");
-			
-			if(title.value == ""){
+
+			if (title.value == "") {
 				alert("제목을 입력하세요.");
 				title.focus();
 				return false;
 			}
-			if(content.value == ""){
+			if (content.value == "") {
 				alert("내용을 입력하세요.");
 				content.focus();
 				return false;

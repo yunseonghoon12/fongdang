@@ -1,9 +1,9 @@
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css">
-<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -71,7 +71,7 @@ a {
 
 #admin_nav ul {
 	border-right: 1px solid #ccc;
-	width: 200px;
+	width: 180px;
 	height: 600px;
 	padding-top: 50px;
 }
@@ -97,30 +97,27 @@ a {
 }
 
 #main_body {
+	/* float: right; */
 	width: 80%;
 	height: 100%;
 }
-</style>
-<style>
-.tableWrap {
+
+.customerAskWrap {
 	position: relative;
-	top: 10%;
+    left: 180px;
+	margin-top: 30px;
 }
 
-.page_title {
-	top: 5%;
-	text-align: center;
-	position: relative;
+#answer {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 }
 
-.table {
-	text-align: center;
-}
-
-.table tr th,.table tr td {
-	width: 100px;
-	max-width: 100px;
-	overflow: hidden;
+.replyTextarea {
+	width: 600px;
+	height: 380px;
+	margin-top: 30px;
 }
 </style>
 </head>
@@ -141,8 +138,10 @@ a {
 	</div>
 	<div id="container">
 		<div id="admin_nav">
+			<!-- 관리자 메뉴 -->
+			<!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
 			<ul>
-				<li><a href="#">회원 관리</a></li>
+				<li><a href="#" class="main_menu">회원 관리</a></li>
 				<li><a href="#" class="sub_menu">회원 조회</a></li>
 				<li><a href="#" class="main_menu">펀딩 관리</a></li>
 				<li><a href="#" class="sub_menu">승인 요청목록</a></li>
@@ -157,67 +156,27 @@ a {
 		</div>
 
 		<div id="main_body">
-			<h3 class="page_title" style="font-size: 22px;">1:1 문의내역 관리</h3>
-			<div class="tableWrap">
-				<p style="margin-bottom: 22px;">미응답 문의</p>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>제목</th>
-							<th>문의종류</th>
-							<th>작성자(email)</th>
-							<th>작성일</th>
-							<th>답변여부</th>
-						</tr>
-					</thead>
-					<tbody>
-						<form action="answer" method="get" id="answer">
-							<c:forEach items="${ask_N}" var="askN">
-								<tr>
-									<input type="hidden" name="ask_no" value="${askN.ask_no}">
-									<td>${askN.ask_title}</td>
-									<td>${askN.ask_category}</td>
-									<td>${askN.email}</td>
-									<td>${askN.ask_date}</td>
-									<td style="width: 110px;"><a
-										href="<%=request.getContextPath()%>/admin/answer/${askN.ask_no}">답변하러가기</a>
-									</td>
-								</tr>
-							</c:forEach>
-						</form>
-					</tbody>
-				</table>
+			<c:forEach items="${ask}" var="ask">
+				<div class="customerAskWrap">
+					<p>제목: ${ask.ask_title}</p>
+					<p>내용: ${ask.ask_content}</p>
+				</div>
+			</c:forEach>
 
-				<p style="margin-top: 75px;margin-bottom: 22px;">응답완료 문의</p>
-
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>제목</th>
-							<th>문의종류</th>
-							<th>작성자</th>
-							<th>작성일</th>
-							<th>답변</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${ask_Y}" var="askY">
-							<tr>
-								<td>${askY.ask_title}</td>
-								<td>${askY.ask_category}</td>
-								<td>${askY.email}</td>
-								<td>${askY.ask_date}</td>
-								<td style="width: 110px;">답변내용확인
-									
-								</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
+			<form action="<%=request.getContextPath()%>/admin/answer.do" id="answer" method="POST">
+				<input type="hidden" name="ask_no" value="${ask_no}">
+				<div class="replyTextareaWrap">
+					<textarea class="replyTextarea" name="ans_content" id="ans_content"></textarea>
+				</div>
+			</form>
+			<div style="display: flex; justify-content: center; margin: 0 auto;	margin-top: 30px;">
+				<button type="button" onclick="ans_check();">등록</button>
+				<a href="<%=request.getContextPath()%>/admin/ask"><button>취소</button></a>
 			</div>
 		</div>
 	</div>
 
+	<jsp:include page="../footer.jsp" />
 	<script>
 		$("#admin_nav ul li a").click(function() {
 			console.log("click()");
@@ -230,11 +189,17 @@ a {
 			$("#admin_nav > ul> li > a").not(this).css('color', before_color);
 		});
 	</script>
-<!-- 	<script>
-		$("button[id^='ans_button']").on('click', function(e) {
+	<script>
+		function ans_check() {
+			var content = document.getElementById("ans_content");
+
+			if (content.value == "") {
+				alert("내용을 입력하세요.");
+				content.focus();
+				return false;
+			}
 			answer.submit();
-			function($(this));
-		});
-	</script> -->
+		};
+	</script>
 </body>
 </html>

@@ -294,7 +294,9 @@ a#topBtn {
 	<div class="AllWarp">
 		<div class="productList">
 			<ul>
-				<li><a href="">
+			<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC1"
+					id="C1">
 						<div class="screen">
 							<div class="top">테크·가전</div>
 							<div class="bottom">Appliances</div>
@@ -305,7 +307,7 @@ a#topBtn {
 							<h3>가전</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC4" id="C4">
 						<div class="screen">
 							<div class="top">캠핑 용품</div>
 							<div class="bottom">Camping</div>
@@ -316,7 +318,7 @@ a#topBtn {
 							<h3>캠핑</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC2" id="C2">
 						<div class="screen">
 							<div class="top">화장품</div>
 							<div class="bottom">Beauty</div>
@@ -327,7 +329,7 @@ a#topBtn {
 							<h3>뷰티</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC3" id="C3">
 						<div class="screen">
 							<div class="top">식료퓸</div>
 							<div class="bottom">Groceries</div>
@@ -338,7 +340,7 @@ a#topBtn {
 							<h3>식품</h3>
 						</div>
 				</a></li>
-				<li><a href="">
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC5" id="C5">
 						<div class="screen">
 							<div class="top">반려동물</div>
 							<div class="bottom">Pets</div>
@@ -349,8 +351,8 @@ a#topBtn {
 							<h3>반려동물</h3>
 						</div>
 				</a></li>
-				<li><a href="">
-						<div class="screen">
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC6">
+						<div class="screen" id="C6">
 							<div class="top">기타 등등</div>
 							<div class="bottom">Etc</div>
 							<img src="<%=request.getContextPath()%>/resources/images/etc.jpg">
@@ -366,7 +368,7 @@ a#topBtn {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${preProducts}" var="product">
-					<li class="itemsWrap"><a href="#">
+					<li class="itemsWrap"><a href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">

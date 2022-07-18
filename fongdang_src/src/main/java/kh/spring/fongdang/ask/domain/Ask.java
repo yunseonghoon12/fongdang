@@ -13,22 +13,40 @@ public class Ask {
 	private String ask_title;
 	private String ask_category;
 	private String ask_content;
+	private String ans_content;
 	private Timestamp ask_date;
 	private String reply_yn;
+	
+	
 	
 	
 	@Override
 	public String toString() {
 		return "Ask [ask_no=" + ask_no + ", email=" + email + ", ask_title=" + ask_title + ", ask_category="
-				+ ask_category + ", ask_content=" + ask_content + ", ask_date=" + ask_date + ", reply_yn=" + reply_yn
-				+ "]";
+				+ ask_category + ", ask_content=" + ask_content + ", ans_content=" + ans_content + ", ask_date="
+				+ ask_date + ", reply_yn=" + reply_yn + "]";
 	}
-	public int getask_no() {
+
+
+	public int getAsk_no() {
 		return ask_no;
 	}
-	public void setask_no(int ask_no) {
+
+
+	public void setAsk_no(int ask_no) {
 		this.ask_no = ask_no;
 	}
+
+
+	public String getAns_content() {
+		return ans_content;
+	}
+
+
+	public void setAns_content(String ans_content) {
+		this.ans_content = ans_content;
+	}
+
 	public String getEmail() {
 		return email;
 	}

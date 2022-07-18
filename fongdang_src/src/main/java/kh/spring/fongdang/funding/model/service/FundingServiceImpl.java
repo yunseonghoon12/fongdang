@@ -37,5 +37,53 @@ public class FundingServiceImpl implements FundingService {
 	public List<Funding> selectPreProducts() {
 		return dao.selectPreProducts();
 	}
+	@Override
+	public List<Funding> selectCateProducts1(String C1) {
+		return dao.selectCateProducts1(C1);
+	}
+	@Override
+	public List<Funding> selectCateProducts2(String C2) {
+		return dao.selectCateProducts2(C2);
+	}
+	@Override
+	public List<Funding> selectCateProducts3(String C3) {
+		return dao.selectCateProducts3(C3);
+	}
+	@Override
+	public List<Funding> selectCateProducts4(String C4) {
+		return dao.selectCateProducts4(C4);
+	}
+	@Override
+	public List<Funding> selectCateProducts5(String C5) {
+		return dao.selectCateProducts5(C5);
+	}
+	@Override
+	public List<Funding> selectCateProducts6(String C6) {
+		return dao.selectCateProducts6(C6);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts1(String C1) {
+		return dao.selectCatePreProducts1(C1);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts2(String C2) {
+		return dao.selectCatePreProducts2(C2);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts3(String C3) {
+		return dao.selectCatePreProducts3(C3);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts4(String C4) {
+		return dao.selectCatePreProducts4(C4);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts5(String C5) {
+		return dao.selectCatePreProducts5(C5);
+	}
+	@Override
+	public List<Funding> selectCatePreProducts6(String C6) {
+		return dao.selectCatePreProducts6(C6);
+	}
 
 }

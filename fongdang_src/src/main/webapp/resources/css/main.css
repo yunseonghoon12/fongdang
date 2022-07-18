@@ -465,10 +465,12 @@ label.right {
 	transition: ease-in .1s;
 
 }
-
+.product_name_color{
+	color: black;
+}
 
 .product_name_color:hover {
-	color: #9bbfd9;
+	color: #EF9A9A;
 	transition: ease-in .1s;
 }
 

@@ -46,5 +46,45 @@ public class FundingDao {
 	public List<Funding> selectAllProducts() {
 		return session.selectList("Funding.selectAllProducts");
 	}
+// 상품 카테고리 불러오기
+	public List<Funding> selectCateProducts1(String C1) {
+		return session.selectList("Funding.selectCateProducts1",C1);
+	}
+	public List<Funding> selectCateProducts2(String C2) {
+		return session.selectList("Funding.selectCateProducts2",C2);
+	}
+	public List<Funding> selectCateProducts3(String C3) {
+		return session.selectList("Funding.selectCateProducts3",C3);
+	}
+	public List<Funding> selectCateProducts4(String C4) {
+		return session.selectList("Funding.selectCateProducts4",C4);
+	}
+	public List<Funding> selectCateProducts5(String C5) {
+		return session.selectList("Funding.selectCateProducts5",C5);
+	}
+	public List<Funding> selectCateProducts6(String C6) {
+		return session.selectList("Funding.selectCateProducts6",C6);
+	}
+// 예정상품 카테고리 불러오기
+	public List<Funding> selectCatePreProducts1(String C1) {
+		return session.selectList("Funding.selectCatePreProducts1",C1);
+	}
+	public List<Funding> selectCatePreProducts2(String C2) {
+		return session.selectList("Funding.selectCatePreProducts2",C2);
+	}
+	public List<Funding> selectCatePreProducts3(String C3) {
+		return session.selectList("Funding.selectCatePreProducts3",C3);
+	}
+	public List<Funding> selectCatePreProducts4(String C4) {
+		return session.selectList("Funding.selectCatePreProducts4",C4);
+	}
+	public List<Funding> selectCatePreProducts5(String C5) {
+		return session.selectList("Funding.selectCatePreProducts5",C5);
+	}
+	public List<Funding> selectCatePreProducts6(String C6) {
+		return session.selectList("Funding.selectCatePreProducts6",C6);
+	}
+
+
 	
 }

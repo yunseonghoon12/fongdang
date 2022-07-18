@@ -19,9 +19,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
+import kh.spring.fongdang.ans.domain.Ans;
+import kh.spring.fongdang.ans.model.service.AnsServiceImpl;
+import kh.spring.fongdang.ask.domain.Ask;
+import kh.spring.fongdang.ask.model.service.AskServiceImpl;
 import kh.spring.fongdang.admin.domain.Sales;
 import kh.spring.fongdang.admin.model.service.AdminService;
 import kh.spring.fongdang.member.domain.Member;
@@ -36,6 +41,10 @@ public class AdminController {
 	
 	@Autowired
 	private AdminService service;
+	@Autowired
+	private AnsServiceImpl AnsService;
+	@Autowired
+	private AskServiceImpl AskService;
 	
 	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
 	public ModelAndView pageMemberManagement(ModelAndView mv
@@ -154,11 +163,53 @@ public class AdminController {
 		return mv;		
 	}
 	
-	@RequestMapping(value="ask", method= RequestMethod.GET)
-	ModelAndView pageAskManagement(ModelAndView mv) {
+@RequestMapping(value = "/ask", method = RequestMethod.GET)
+	public ModelAndView selectAsk(ModelAndView mv, HttpSession session, RedirectAttributes rttr) {
+
+		Member member = (Member) session.getAttribute("loginInfo");
+		if (member == null) {
+			mv.setViewName("redirect:/member/login");
+			return mv;
+		}
+
+		mv.addObject("ask_Y", AskService.selectAskY());
+		mv.addObject("ask_N", AskService.selectAskN());
 		mv.setViewName("admin/askManagement");
 		return mv;
 	}
+
+	@GetMapping("/answer/{ask_no}")
+	public ModelAndView selectAsk2(ModelAndView mv, HttpSession session, RedirectAttributes rttr,
+			@PathVariable("ask_no") int ask_no) {
+
+		Member member = (Member) session.getAttribute("loginInfo");
+		if (member == null) {
+			mv.setViewName("redirect:/member/login");
+			return mv;
+		}
+		mv.addObject("ask", AskService.selectAsk2(ask_no));
+		mv.setViewName("admin/answer");
+		return mv;
+	}
+
+	@PostMapping("/answer.do")
+	public ModelAndView insertAns(ModelAndView mv, HttpSession session, HttpServletRequest req, Ans ans, 
+			@RequestParam(name ="ask_no", defaultValue = "0") int ask_no,
+			RedirectAttributes rttr) {
+
+		Member member = (Member) session.getAttribute("loginInfo");
+
+		if (member == null) {
+			mv.setViewName("redirect:/member/login");
+			return mv;
+		}
+
+		mv.addObject("insertAns", AnsService.insertAns(ans));
+		mv.addObject("updateAsk", AskService.updateAsk(ask_no));
+		mv.setViewName("redirect:/admin/ask");
+		return mv;
+	}
+
 
 
 	@GetMapping("/sales/read")

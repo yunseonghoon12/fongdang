@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import kh.spring.fongdang.ans.model.service.AnsServiceImpl;
 import kh.spring.fongdang.ask.domain.Ask;
 import kh.spring.fongdang.ask.model.service.AskServiceImpl;
 import kh.spring.fongdang.member.domain.Member;
@@ -22,6 +23,8 @@ import kh.spring.fongdang.member.domain.Member;
 public class AskController {
 	@Autowired
 	private AskServiceImpl service;
+	@Autowired
+	private AnsServiceImpl ansservice;
 
 	@RequestMapping(value = "/ask", method = RequestMethod.GET)
 	public ModelAndView selectAsk(ModelAndView mv, HttpSession session, Ask ask, RedirectAttributes rttr,
@@ -77,11 +80,17 @@ public class AskController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
-		int result = service.deleteAsk(ask_no);
 
+		mv.addObject("deleteAsk",service.deleteAsk(ask_no));
+		mv.addObject("deleteAsk",ansservice.deleteAns(ask_no));
 
-		rttr.addFlashAttribute("msg", "삭제했습니다.");
 		mv.setViewName("redirect:/customerCenter/ask");
 		return mv;
 	}
+	
+	@GetMapping("/road")
+	public String pageRoad() {
+		return "customerCenter/road";
+	}
+	
 }

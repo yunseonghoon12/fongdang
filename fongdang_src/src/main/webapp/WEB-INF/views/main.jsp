@@ -71,46 +71,54 @@ il, ul {
 		</div>
 		<div class="section">
 			<div id="beforeFunding">
-				<p style="font-family:SUIT-SemiBold;font-size:25px;">주목하세요! 오픈 예정 프로젝트</p>
-				<p style="margin-left: 150px;font-family: SUIT-Regular">-먼저 참여하는 분들께 드리는 얼리버드 혜택-</p>
+				<p style="font-family: SUIT-SemiBold; font-size: 25px;">주목하세요!
+					오픈 예정 프로젝트</p>
+				<p style="margin-left: 150px; font-family: SUIT-Regular">-먼저
+					참여하는 분들께 드리는 얼리버드 혜택-</p>
 				<div class="wrap_content">
 					<section>
 						<div class="container_content">
-<c:forEach items="${preProducts}" var="product">
+							<c:forEach items="${preProducts}" var="product">
+
 								<div style="margin-right: 35px;">
-									<div class="product_image">
-										<div class="wrap_product_thumbnail">
-											<a class="product_link" href=""> <img
-												class="product_thumbnail" src="${product.p_thumbnail}">
-											</a>
+									<a class="product_link"
+										href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
+										<div class="product_image">
+											<div class="wrap_product_thumbnail">
+												<img class="product_thumbnail" src="${product.p_thumbnail}">
+
+											</div>
 										</div>
-									</div>
-									<div class="product_name">
-										<!-- ${vo.product } -->
-										<p class="product_name_color">${product.p_name}</p>
-									</div>
-									<div class="product_name_intro">
-										<!-- ${vo.product } -->
-										<p style="color: black;">
-											<span>00일 오픈예정! </span>
-										</p>
-									</div>
+									</a> <a class="product_link"
+										href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
+										<div class="product_name">
+											<!-- ${vo.product } -->
+											<p class="product_name_color">${product.p_name}</p>
+										</div>
+										<div class="product_name_intro">
+											<!-- ${vo.product } -->
+											<p style="color: black;">
+												<span>00일 오픈예정! </span>
+											</p>
+										</div>
+									</a>
 									<div class="product_title">
 										<!-- ${vo.product } -->
-										<h4 style="color: #9bbfd9;">
+										<h4 style="color: #EF9A9A;">
 											54,000<span style="color: black;"> 원</span><span
 												style="color: black; margin-left: 3px;"> 잡화 </span>
 										</h4>
 									</div>
 								</div>
-</c:forEach>
+
+							</c:forEach>
 
 						</div>
 					</section>
 				</div>
 			</div>
 			<div id="ranking01">
-				<p style="font-family:SUIT-SemiBold;font-size:25px;">실시간 랭킹!</p>
+				<p style="font-family: SUIT-SemiBold; font-size: 25px;">실시간 랭킹!</p>
 				<div style="display: flex;">
 					<ul style="top: 20px; position: relative;">
 						<li>
@@ -204,7 +212,8 @@ il, ul {
 					응원합니다.</p>
 			</div>
 			<div class="apply02">
-				<a href="<%=request.getContextPath()%>/maker/Register"><button class="btn btn-fill-fcolor">신청하기</button></a>
+				<a href="<%=request.getContextPath()%>/maker/Register"><button
+						class="btn btn-fill-fcolor">신청하기</button></a>
 			</div>
 			<img src="<%=request.getContextPath()%>/resources/images/main03.gif"
 				class="section03_img">
