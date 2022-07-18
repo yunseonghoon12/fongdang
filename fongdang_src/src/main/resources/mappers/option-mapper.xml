@@ -24,16 +24,17 @@
 	</insert>
 
 	<update id="updateOption">
-		update option set option_name=#{option_name}
-		,option_info=#{option_info}
-		,option_price=#{option_price}
-		,option_limit=#{option_limit}
+		update option 
+		   set option_name=#{option_name}
+				,option_info=#{option_info}
+				,option_price=#{option_price}
+				,option_limit=#{option_limit}
 		where option_no=#{option_no}
 	</update>
 
 	<select id="selectOption">
 		select * from option
-		where option_no=#{option_no}
+		         where option_no=#{option_no}
 	</select>
 
 	<select id="selectOneGetPNo" parameterType="String" resultType="String">
