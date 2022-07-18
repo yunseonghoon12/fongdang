@@ -97,7 +97,7 @@
 					</div> --%></li>
 				</c:if>
 				<c:if test="${loginInfo.name eq '관리자'}">
-					<li><a href="<%=request.getContextPath()%>/admin/">관리자 페이지로 이동</a></li>
+					<li><a href="<%=request.getContextPath()%>/admin/memberManagement">관리자 페이지로 이동</a></li>
 				</c:if>
 			</ul>
 		</nav>
