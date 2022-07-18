@@ -16,6 +16,8 @@ public interface AdminService {
 	public List<Member> relatedSearch(int currentPage, int memberLimit, String keyword);
 	/* 회원 수 조회 */
 	public int countMember();
+	/* 키워드에 검색된 회원 수 조회 */
+	public int countSearchMember(String keyword);
 	/* 회원 탈퇴 상태 변경 */
 	public int updateWithDrawMember(String[] emails);	
 
