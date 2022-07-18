@@ -15,19 +15,19 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductDao productDao;
 
-	/* »óÇ° µî·Ï */
+	/* ìƒí’ˆ ë“±ë¡ */
 	@Override
 	public int insertProduct(Product product ) {
 		return productDao.insertProduct(product);
 	}
 	
-	/* »óÇ° µî·Ï ÀúÀåµÈ ³»¿ë Á¶È¸  */
+	/* ìƒí’ˆ ë“±ë¡ ì €ì¥ëœ ë‚´ìš© ì¡°íšŒ  */
 	@Override
 	public Product selectOneGetMakerName(String makerName) {
 		return productDao.selectOneGetMakerName(makerName);
 	}
 	
-	/* »óÇ° µî·Ï ¼öÁ¤½Ã ¾÷µ¥ÀÌÆ®  */
+	/* ìƒí’ˆ ë“±ë¡ ìˆ˜ì •ì‹œ ì—…ë°ì´íŠ¸  */
 	@Override
 	public int updateProduct(Product product ) {
 		return productDao.updateProduct(product);

@@ -16,9 +16,15 @@ public class PickServiceImpl implements PickService {
 	  return pickDao.insertPick(pick);
   }
   
-  public int deletePick(String p_no) {
-	  return pickDao.deletePick(p_no);
+  public int updatePick(Pick pick) {
+	  return pickDao.updatePick(pick);
   }
   
+  public int countPick(Pick pick) {
+	  return pickDao.countPick(pick);
+  }
   
+  public String selectPick(Pick pick) {
+	  return pickDao.selectPick(pick);
+  }
 }

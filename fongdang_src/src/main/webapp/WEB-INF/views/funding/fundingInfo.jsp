@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fundingInfo.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fundingInfo_modal.css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -145,7 +145,22 @@
                         </div>
                         <button id="btn_funding" type="button"><img src="<%=request.getContextPath()%>/resources/images/funding.png">펀딩하기</button>
                         <div class="like_and_share">
-                            <button id="btn_like" type="button"><img src="<%=request.getContextPath()%>/resources/images/heart.png">좋아요</button>
+                            
+                            <!-- sun start -->
+                            <c:if test="${pick_yn eq 'N'}">
+                            <button id="btn_like" type="button">
+                            <img id="pick_img" src="<%=request.getContextPath()%>/resources/images/heart.png">좋아요(<span id="pick_cnt">${pick_cnt}</span>)
+                            </button>
+                            </c:if>
+                            <c:if test="${pick_yn eq 'Y'}">
+                            <button id="btn_like" type="button">
+                            <img id="pick_img" src="<%=request.getContextPath()%>/resources/images/heart_color.png">좋아요(<span id="pick_cnt">${pick_cnt}</span>)
+                            </button>
+                            </c:if>
+                            <input type="hidden" id="pick_yn" name="pick_yn" value="${pick_yn}" />
+                            <input type="hidden" id="pick_update_yn" name="pick_update_yn" value="${pick_update_yn}" />
+                            <input id="email" type="hidden" value="${loginInfo.email}">
+                            <!-- sun end -->
                             <button id="btn_share" type="button"><img src="<%=request.getContextPath()%>/resources/images/share.png">공유하기</button>
                         </div>
                         <button id="btn_message" type="button"><img src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게 문의하기</button>
@@ -160,7 +175,10 @@
                             	<c:if test="${not empty funding.maker_email}">
 	                                <tr>
 	                                    <th>이메일</th>
-	                                    <td>${funding.maker_email}</td>
+	                                    <td>${funding.maker_email}
+	                                    <!-- sun start-->
+	                                    <!-- sun end-->
+	                                    </td>
 	                                </tr>
                             	</c:if>
                             	<c:if test="${not empty funding.maker_phone}">
@@ -593,6 +611,59 @@
 				}
 			});
         };
+        <!-- sun start-->
+        $("#btn_like").on('click', function(){
+        	
+        	if($("#email").val() == ''){
+        		alert('로그인 해주세요.');
+        		return;
+        	}
+        	
+        	var urlStr;
+        	if ($("#pick_update_yn").val() == 'Y') {
+        		urlStr = "<%=request.getContextPath()%>/pick/update";
+			}else{
+				urlStr = "<%=request.getContextPath()%>/pick/insert";
+			}
+
+        	var pickYn = $("#pick_yn").val();
+        	if (pickYn == 'N') {
+        		pickYn = 'Y';
+			}else{
+				pickYn = 'N';
+			}
+        	
+			$.ajax({
+				url: urlStr,
+				type: "post",
+				data: {
+					email: $("#email").val(),
+					p_no: $("#p_no").val(),
+					pick_yn: pickYn
+				},
+				datatype: "JSON",
+				success: function(result){
+					console.log(result);
+					var data = JSON.parse(result);
+					console.log(data);
+					if (data.pick_yn == 'Y') {
+						$("#pick_yn").val('Y');
+						var  src = "<%=request.getContextPath()%>/resources/images/heart_color.png";
+						$("#pick_img").attr('src', src);
+					} else{
+						var  src = "<%=request.getContextPath()%>/resources/images/heart.png";
+						$("#pick_yn").val('N');
+						$("#pick_img").attr('src', src);
+					}
+					$('#pick_cnt').text(data.pick_cnt);
+					$("#pick_update_yn").val(data.pick_update_yn);
+				},
+				error: function(request, status, error) {
+					console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+				}
+			});
+        });
+        <!-- sun end-->
     </script>
 </body>
 </html>
