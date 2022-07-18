@@ -100,5 +100,90 @@ public class FundingController {
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
-	 
+	@GetMapping("/list/cateC1")
+	public ModelAndView fundingCatelist1(ModelAndView mv, String C1) {
+		mv.addObject("allProducts",service.selectCateProducts1(C1));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+	@GetMapping("/list/cateC2")
+	public ModelAndView fundingCatelist2(ModelAndView mv, String C2) {
+		mv.addObject("allProducts",service.selectCateProducts2(C2));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+	@GetMapping("/list/cateC3")
+	public ModelAndView fundingCatelist3(ModelAndView mv, String C3) {
+		mv.addObject("allProducts",service.selectCateProducts3(C3));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+	@GetMapping("/list/cateC4")
+	public ModelAndView fundingCatelist4(ModelAndView mv, String C4) {
+		mv.addObject("allProducts",service.selectCateProducts4(C4));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+	@GetMapping("/list/cateC5")
+	public ModelAndView fundingCatelist5(ModelAndView mv, String C5) {
+		mv.addObject("allProducts",service.selectCateProducts5(C5));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+	@GetMapping("/list/cateC6")
+	public ModelAndView fundingCatelist6(ModelAndView mv, String C6) {
+		mv.addObject("allProducts",service.selectCateProducts6(C6));
+		
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
+
+	@GetMapping("/beforelist/cateC1")
+	public ModelAndView fundingCatePrelist1(ModelAndView mv, String C1) {
+		mv.addObject("preProducts",service.selectCatePreProducts1(C1));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	@GetMapping("/beforelist/cateC2")
+	public ModelAndView fundingCatePrelist2(ModelAndView mv, String C2) {
+		mv.addObject("preProducts",service.selectCatePreProducts2(C2));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	@GetMapping("/beforelist/cateC3")
+	public ModelAndView fundingCatePrelist3(ModelAndView mv, String C3) {
+		mv.addObject("preProducts",service.selectCatePreProducts3(C3));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	@GetMapping("/beforelist/cateC4")
+	public ModelAndView fundingCatePrelist4(ModelAndView mv, String C4) {
+		mv.addObject("preProducts",service.selectCatePreProducts4(C4));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	@GetMapping("/beforelist/cateC5")
+	public ModelAndView fundingCatePrelist5(ModelAndView mv, String C5) {
+		mv.addObject("preProducts",service.selectCatePreProducts5(C5));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	@GetMapping("/beforelist/cateC6")
+	public ModelAndView fundingCatePrelist6(ModelAndView mv, String C6) {
+		mv.addObject("preProducts",service.selectCatePreProducts6(C6));
+		
+		mv.setViewName("funding/beforeFundinglist");
+		return mv;
+	}
+	
 }
