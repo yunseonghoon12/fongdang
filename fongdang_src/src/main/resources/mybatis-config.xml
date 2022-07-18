@@ -8,6 +8,7 @@
 	<typeAliases>
 		<typeAlias type="kh.spring.fongdang.member.domain.Member" alias="Member"/>
 		<typeAlias type="kh.spring.fongdang.ask.domain.Ask" alias="Ask"/>
+		<typeAlias type="kh.spring.fongdang.ans.domain.Ans" alias="Ans"/>
 		<typeAlias type="kh.spring.fongdang.maker.domain.Maker" alias="Maker"/>
 		<typeAlias type="kh.spring.fongdang.funding.domain.Product" alias="Product"/>
 		<typeAlias type="kh.spring.fongdang.funding.domain.Funding" alias="Funding"/>
@@ -24,6 +25,7 @@
 	<mappers>
 		<mapper resource="mappers/member-mapper.xml"/>
 		<mapper resource="mappers/ask-mapper.xml"/>
+		<mapper resource="mappers/ans-mapper.xml"/>
 		<mapper resource="mappers/maker-mapper.xml"/>
 		<mapper resource="mappers/product-mapper.xml"/>
 		<mapper resource="mappers/funding-mapper.xml"/>

@@ -104,12 +104,17 @@ a {
 <style>
 .tableWrap {
 	position: relative;
-	top: 10%;
+    top: 15%;
+    margin-left: 15px;
 }
 
 .page_title {
-	top: 5%;
-	text-align: center;
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+	font-family: SUIT-SemiBold;
+	font-size: 25px;
+	top: 70px;
+	margin-left: 15px;
 	position: relative;
 }
 
@@ -117,7 +122,7 @@ a {
 	text-align: center;
 }
 
-.table tr th,.table tr td {
+.table tr th, .table tr td {
 	width: 100px;
 	max-width: 100px;
 	overflow: hidden;
@@ -142,22 +147,26 @@ a {
 	<div id="container">
 		<div id="admin_nav">
 			<ul>
-		<li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="main_menu">회원 관리</a></li>
-        <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="sub_menu">회원 조회</a></li>
-        <li><a href="#" class="main_menu">펀딩 관리</a></li>
-        <li><a href="#" class="sub_menu">승인 요청목록</a></li>
-        <li><a href="#" class="sub_menu">펀딩 일정 관리</a></li>
-        <li><a href="#" class="sub_menu">신고 상품</a></li>
-        <li><a href="#" class="sub_menu">펀딩매출관리</a></li>
-        <li><a href="#" class="main_menu">고객 센터</a></li>
-        <li><a href="#" class="sub_menu">공지사항</a></li>
-        <li><a href="<%= request.getContextPath()%>/admin/ask" class="sub_menu">1:1문의</a></li>
+				<li><a
+					href="<%=request.getContextPath()%>/admin/memberManagement"
+					class="main_menu">회원 관리</a></li>
+				<li><a
+					href="<%=request.getContextPath()%>/admin/memberManagement"
+					class="sub_menu">회원 조회</a></li>
+				<li><a href="#" class="main_menu">펀딩 관리</a></li>
+				<li><a href="#" class="sub_menu">승인 요청목록</a></li>
+				<li><a href="#" class="sub_menu">펀딩 일정 관리</a></li>
+				<li><a href="#" class="sub_menu">신고 상품</a></li>
+				<li><a href="#" class="sub_menu">펀딩매출관리</a></li>
+				<li><a href="#" class="main_menu">고객 센터</a></li>
+				<li><a href="#" class="sub_menu">공지사항</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/ask"
 					class="sub_menu">1:1문의</a></li>
 			</ul>
 		</div>
 
 		<div id="main_body">
-			<h3 class="page_title" style="font-size: 22px;">1:1 문의내역 관리</h3>
+			<h3 class="page_title">1:1 문의내역 관리</h3>
 			<div class="tableWrap">
 				<p style="margin-bottom: 22px;">미응답 문의</p>
 				<table class="table table-hover">
@@ -184,11 +193,14 @@ a {
 									</td>
 								</tr>
 							</c:forEach>
+							<c:if test="${empty ask_N}">
+								<td colspan="5" style="font-size: 18px">등록된 문의가 없습니다.</td>
+							</c:if>
 						</form>
 					</tbody>
 				</table>
 
-				<p style="margin-top: 75px;margin-bottom: 22px;">응답완료 문의</p>
+				<p style="margin-top: 75px; margin-bottom: 22px;">응답완료 문의</p>
 
 				<table class="table table-hover">
 					<thead>
@@ -207,11 +219,12 @@ a {
 								<td>${askY.ask_category}</td>
 								<td>${askY.email}</td>
 								<td>${askY.ask_date}</td>
-								<td style="width: 110px;">답변내용확인
-									
-								</td>
+								<td style="width: 110px;">답변내용확인</td>
 							</tr>
 						</c:forEach>
+						<c:if test="${empty ask_Y}">
+							<td colspan="5" style="font-size: 18px">등록된 답변이 없습니다.</td>
+						</c:if>
 					</tbody>
 				</table>
 			</div>
@@ -230,7 +243,7 @@ a {
 			$("#admin_nav > ul> li > a").not(this).css('color', before_color);
 		});
 	</script>
-<!-- 	<script>
+	<!-- 	<script>
 		$("button[id^='ans_button']").on('click', function(e) {
 			answer.submit();
 			function($(this));
