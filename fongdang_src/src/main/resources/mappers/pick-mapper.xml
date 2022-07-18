@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="Pick" >
-<insert id="insertPick" parameterType="Pick" >
-		insert into pick(eamil,p_no)values(#{eamil},#{p_no})
-</insert>
+<mapper namespace="Pick">
+	<insert id="insertPick" parameterType="Pick">
+		insert into pick(
+				email,
+				p_no, 
+				pick_yn
+				)
+		values(
+				#{email},
+				#{p_no}, 
+				'Y'
+				)
+	</insert>
 
-<delete id="deletePick" parameterType="string">
-        delete from pick where p_no=#{p_no}
-</delete>
+	<update id="updatePick" parameterType="Pick">
+		update pick set 
+				pick_yn = #{pick_yn} 
+		 where p_no=#{p_no} 
+		 and email=#{email}
+	</update>
+	
+	<select id="countPick" parameterType="Pick" resultType="int">
+		select count(*)
+		from pick
+		where p_no=#{p_no}
+		and pick_yn='Y'
+	</select>
 
+	<select id="selectPick" parameterType="Pick" resultType="String">
+		select pick_yn
+		from pick
+		where p_no=#{p_no} 
+		 and email=#{email}
+	</select>
 </mapper>
