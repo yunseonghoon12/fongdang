@@ -5,18 +5,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class Pick {
 
-	private String eamil; //이메일
-	private int p_no;     //상품번호
+	private String email; // 이메일
+	private int p_no; // 상품번호
+	private String pick_yn; // 상품번호
 	
-	@Override
-	public String toString() {
-		return "Pick [eamil=" + eamil + ", p_no=" + p_no + "]";
+	public String getEmail() {
+		return email;
 	}
-	public String getEamil() {
-		return eamil;
-	}
-	public void setEamil(String eamil) {
-		this.eamil = eamil;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public int getP_no() {
 		return p_no;
@@ -24,6 +21,16 @@ public class Pick {
 	public void setP_no(int p_no) {
 		this.p_no = p_no;
 	}
-	
+	public String getPick_yn() {
+		return pick_yn;
+	}
+	public void setPick_yn(String pick_yn) {
+		this.pick_yn = pick_yn;
+	}
+	@Override
+	public String toString() {
+		return "Pick [email=" + email + ", p_no=" + p_no + ", pick_yn=" + pick_yn + "]";
+	}
+
 
 }

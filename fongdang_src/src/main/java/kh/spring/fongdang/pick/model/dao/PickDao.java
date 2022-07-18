@@ -11,12 +11,20 @@ public class PickDao {
 
 	@Autowired
 	private SqlSession sqlSession;
-	
+
 	public int insertPick(Pick pick) {
 		return sqlSession.insert("Pick.insertPick", pick);
 	}
+
+	public int updatePick(Pick pick) {
+		return sqlSession.update("Pick.updatePick", pick);
+	}
 	
-	  public int deletePick(String p_no) {
-		  return sqlSession.delete("Pick.deletePick",p_no);
-	  }
+	public int countPick(Pick pick) {
+		return sqlSession.selectOne("Pick.countPick", pick);
+	}
+	
+	public String selectPick(Pick pick) {
+		return sqlSession.selectOne("Pick.selectPick", pick);
+	}
 }

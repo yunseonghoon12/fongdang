@@ -8,5 +8,9 @@ public interface PickService {
 	  public int insertPick(Pick pick);
 	  
 	/* 좋아요 output */
-	  public int deletePick(String p_no);
+	  public int updatePick(Pick pick);
+	  
+	  public int countPick(Pick pick);
+	  
+	  public String selectPick(Pick pick);
 }

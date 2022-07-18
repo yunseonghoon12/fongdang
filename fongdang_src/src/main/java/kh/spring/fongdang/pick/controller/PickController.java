@@ -1,6 +1,9 @@
 package kh.spring.fongdang.pick.controller;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,30 +19,42 @@ import kh.spring.fongdang.pick.model.service.PickService;
 public class PickController {
 	
 	@Autowired
-	private PickService service;
+	private PickService pickService;
 	
 	
 	// pick insert 
-	@PostMapping("/input") 
-	public ModelAndView inserPick(ModelAndView mv
-			,Pick pick
-			) {
-		int result= service.insertPick(pick);
-		mv.setViewName("redirect:/"); //jsp 페이지 펀딩상세조회페이지
-		return mv;
+	@PostMapping("/insert") 
+	public ResponseEntity<String> insertPick(Pick pick) {
+		try {	
+			pickService.insertPick(pick);	
+			JSONObject jo = new JSONObject();
+			jo.put("pick_yn", "Y");
+			jo.put("pick_cnt", pickService.countPick(pick));
+			jo.put("pick_update_yn", "Y");
+			
+			String result = jo.toString();
+            return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
 	}
 	
 	// pick delete 
-	@PostMapping("/output")
-	public ModelAndView delete(ModelAndView mv
-			,Pick pick
-			,@RequestParam(name = "p_no", required = false) String p_no){
-		
-		int result= service.deletePick(p_no);
-		
-		mv.setViewName("redirect:/"); //jsp 페이지 펀딩상세조회페이지
-		return mv;
+	@PostMapping("/update")
+	public ResponseEntity<String> updatePick(Pick pick){
+		try {	
+			pickService.updatePick(pick);
+			JSONObject jo = new JSONObject();
+			jo.put("pick_yn", pick.getPick_yn());
+			jo.put("pick_cnt", pickService.countPick(pick));
+			jo.put("pick_update_yn", "Y");
+			String result = jo.toString(); 
+            return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
 	}
 	
 
 }
+

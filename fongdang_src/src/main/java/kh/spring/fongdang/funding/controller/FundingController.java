@@ -2,6 +2,8 @@ package kh.spring.fongdang.funding.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,13 +12,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.funding.domain.Funding;
 import kh.spring.fongdang.funding.model.service.FundingService;
+import kh.spring.fongdang.member.domain.Member;
+import kh.spring.fongdang.pick.domain.Pick;
+import kh.spring.fongdang.pick.model.service.PickService;
 
 @Controller
 @RequestMapping("/funding")
 public class FundingController {
 	@Autowired
 	private FundingService service;
+	
+	@Autowired
+	private PickService pickService;
+	
+	private static final Logger logger = LoggerFactory.getLogger(FundingController.class);
 	
 	/*
 	 * @GetMapping("/info") public ModelAndView selectFunding(ModelAndView
@@ -26,10 +37,35 @@ public class FundingController {
 	 * return mv; }
 	 */
 	@GetMapping("/info/{p_no}")
-	public ModelAndView selectFunding(ModelAndView mv, @PathVariable("p_no") int p_no) {
-		mv.addObject("funding", service.selectFunding(p_no));
-		mv.setViewName("funding/fundingInfo");
+	public ModelAndView selectFunding(ModelAndView mv, @PathVariable("p_no") int p_no, HttpSession session) {
+		/*sun start*/
 		
+		Funding funding  = service.selectFunding(p_no);
+		mv.addObject("funding", funding);
+		Pick pick =new Pick();
+		pick.setP_no(p_no);
+		Member authInfo = (Member)session.getAttribute("loginInfo");
+		if (authInfo != null) {
+			pick.setEmail(authInfo.getEmail());
+			String pickYn = pickService.selectPick(pick); 
+			
+			logger.debug("pickYn = " + pickYn);
+			if ( pickYn == null) {
+				mv.addObject("pick_yn", "N");
+				mv.addObject("pick_update_yn", "N");
+			}else {
+				mv.addObject("pick_yn", pickYn);
+				mv.addObject("pick_update_yn", "Y");
+			}
+			
+		}else {
+			mv.addObject("pick_yn", "N");
+			mv.addObject("pick_update_yn", "N");
+		}
+		
+		mv.addObject("pick_cnt",pickService.countPick(pick));
+		mv.setViewName("funding/fundingInfo");
+		/*sun end*/
 		return mv;
 	}
 	
