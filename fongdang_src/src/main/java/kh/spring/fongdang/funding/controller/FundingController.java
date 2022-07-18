@@ -28,14 +28,15 @@ public class FundingController {
 	private PickService pickService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(FundingController.class);
-	
-	/*
-	 * @GetMapping("/info") public ModelAndView selectFunding(ModelAndView
-	 * mv, @RequestParam("p_no") int p_no) { mv.addObject("funding",
-	 * fundingService.selectFunding(p_no)); mv.setViewName("funding/fundingInfo");
-	 * 
-	 * return mv; }
-	 */
+
+//	@GetMapping("/info")
+//	public ModelAndView selectFunding(ModelAndView mv, @RequestParam("p_no") int p_no) {
+//		mv.addObject("funding", service.selectFunding(p_no));
+//		mv.setViewName("funding/fundingInfo");
+//
+//		return mv;
+//	}
+
 	@GetMapping("/info/{p_no}")
 	public ModelAndView selectFunding(ModelAndView mv, @PathVariable("p_no") int p_no, HttpSession session) {
 		/*sun start*/
@@ -68,32 +69,49 @@ public class FundingController {
 		/*sun end*/
 		return mv;
 	}
-	
-	@GetMapping("/info/before")
-	public ModelAndView selectBeforeFunding(ModelAndView mv,  @RequestParam("p_no") int p_no, HttpSession session) {
+
+	@GetMapping("/info/before/{p_no}")
+	public ModelAndView selectBeforeFunding(ModelAndView mv, @PathVariable("p_no") int p_no, HttpSession session) {
 		// 로그인 완성 되면 주석 풀고 기능 확인
 		// 로그인 여부 확인
-//		Member loginInfo = (Member)session.getAttribute("loginSsInfo");
-//		if(loginInfo == null) { // 로그아웃 상태일 때
-//			mv.addObject("funding", service.selectBeforeFunding(p_no, null));
-//		} else {
-//			mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
-//		}
-				
+		Member loginInfo = (Member) session.getAttribute("loginInfo");
+		if (loginInfo == null) { // 로그아웃 상태일 때
+			mv.addObject("funding", service.selectBeforeFunding(p_no, null));
+		} else {
+			mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
+		}
+
 		mv.addObject("funding", service.selectBeforeFunding(p_no, "aaa@aaa.com"));
 		mv.setViewName("funding/beforeFundingInfo");
 		
 		return mv;
 	}
-	
+
+//	@GetMapping("/info/before")
+//	public ModelAndView selectBeforeFunding(ModelAndView mv, @RequestParam("p_no") int p_no, HttpSession session) {
+//		// 로그인 완성 되면 주석 풀고 기능 확인
+//		// 로그인 여부 확인
+//		Member loginInfo = (Member) session.getAttribute("loginSsInfo");
+//		if (loginInfo == null) { // 로그아웃 상태일 때
+//			mv.addObject("funding", service.selectBeforeFunding(p_no, null));
+//		} else {
+//			mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
+//		}
+//
+//		mv.addObject("funding", service.selectBeforeFunding(p_no, "aaa@aaa.com"));
+//		mv.setViewName("funding/beforeFundingInfo");
+//
+//		return mv;
+//	}
+
 	@GetMapping("/list")
 	public ModelAndView fundinglist(ModelAndView mv) {
 		mv.addObject("allProducts", service.selectAllProducts());
 		mv.setViewName("funding/fundinglist");
 		return mv;
-	
+
 	}
-	
+
 	@GetMapping("/beforelist")
 	public ModelAndView main(ModelAndView mv) {
 		mv.addObject("preProducts", service.selectPreProducts());

@@ -176,7 +176,7 @@ a {
 							<th>문의종류</th>
 							<th>작성자(email)</th>
 							<th>작성일</th>
-							<th>답변여부</th>
+							<th>답변</th>
 						</tr>
 					</thead>
 					<tbody>
