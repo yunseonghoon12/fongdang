@@ -15,20 +15,6 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-    <div class="modal share">
-        <div class="share_content">
-            <p class="modal_title">공유하기</p>
-            <div class="share_way">
-                <button id="btn_kakao_share"><img src="<%=request.getContextPath()%>/resources/images/kakao.png"></button>
-                <button id="btn_facebook_share"><img src="<%=request.getContextPath()%>/resources/images/facebook.png"></button>
-                <button id="btn_twitter_share"><img src="<%=request.getContextPath()%>/resources/images/twitter.png"></button>
-                <button id="btn_link_share"><img src="<%=request.getContextPath()%>/resources/images/link.png"></button>
-            </div>
-            <div class="share_confirm">
-                <button id="btn_share_confirm" type="button">확인</button>
-            </div>
-        </div>
-    </div>
     <div class="modal message">
         <div class="message_content">
             <p class="modal_title">문의하기</p>
@@ -90,10 +76,6 @@
 		                        <button id="btn_funding_alarm_cancel" type="button"><img src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청완료<span style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span></button>
                     		</c:when>
                     	</c:choose>
-                        <div class="like_and_share">
-                            <button id="btn_like" type="button"><img src="<%=request.getContextPath()%>/resources/images/heart.png">좋아요</button>
-                            <button id="btn_share" type="button"><img src="<%=request.getContextPath()%>/resources/images/share.png">공유하기</button>
-                        </div>
                         <p class="funding_open_info">${funding.start_day} 오픈예정</p>
                         <button id="btn_message" type="button"><img src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게 문의하기</button>
                         <h3>메이커 정보</h3>
@@ -137,84 +119,9 @@
                 <section class="funding_story">${funding.p_story}</section>
             </div>
         </div>
-        <div class="wrap footer"></div>
     </div>
 
     <script>
-	    // 공유하기 버튼 클릭 시 모달창 띄우기
-	    $("#btn_share").on('click', function(){
-	        $(".share").show();
-	    });
-	    // 확인 버튼 클릭 시 모달창 닫기
-	    $("#btn_share_confirm").on('click', function () {
-	        $(".share").hide();
-	    });
-	    // 모달창 띄우고 내용 있는 곳 부분 제외한 곳 누르면 모달창 닫기
-	    $(".share").on('click', function () {
-	        if (event.target == $(".share").get(0)) {
-	            $(".share").hide();
-	        }
-	    });
-	    // 공유하기 -> 카카오톡 아이콘 클릭 시 처리
-	    $("#btn_kakao_share").on('click', function(){
-	        var sendUrl = document.URL;
-	        Kakao.init('a4cd1cbcb7370c8222dfd1f5d5de4ecd'); // 사용할 앱의 JavaScript 키 설정
-	
-	        Kakao.Link.createDefaultButton({
-	            container: '#btn_kakao_share', // HTML에서 작성한 ID값
-	            objectType: 'feed',
-	            content: {
-	            title: "퐁당", // 보여질 제목
-	            description: "퐁당", // 보여질 설명
-	            imageUrl: sendUrl, // 콘텐츠 URL
-	            link: {
-	                mobileWebUrl: sendUrl,
-	                webUrl: sendUrl
-	            }
-	            }
-	        });
-	    });
-	    // 공유하기 -> 페이스북 아이콘 클릭 시 처리
-	    $("#btn_facebook_share").on('click', function(){
-	        var sendUrl = document.URL;
-	        window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(sendUrl));
-	    });
-	    // 공유하기 -> 트위터 아이콘 클릭 시 처리
-	    $("#btn_twitter_share").on('click', function(){
-	        var sendUrl = document.URL;
-	        window.open("http://twitter.com/share?url=" + encodeURIComponent(sendUrl));
-	    });
-	    // 공유하기 -> 링크 아이콘 클릭 시 처리
-	    $("#btn_link_share").on('click', function(){
-	        // 1. 새로운 element 생성
-		    var tmpTextarea = document.createElement('textarea');
-	        
-	        // 2. 해당 element에 복사하고자 하는 value 저장
-	        tmpTextarea.value = document.URL;
-	        
-	        // 3. 해당 element를 화면에 안보이는 곳에 위치
-	        tmpTextarea.setAttribute('readonly', '');
-	        tmpTextarea.style.position = 'absolute';
-	        tmpTextarea.style.left = '-9999px';
-	        document.body.appendChild(tmpTextarea);
-	        
-	        // 4. 해당 element의 value를 시스템 함수를 호출하여 복사
-	        tmpTextarea.select();
-	        tmpTextarea.setSelectionRange(0, 9999);  // 셀렉트 범위 설정
-	        var successChk = document.execCommand('copy');
-	        
-	        // 5. 해당 element 삭제
-	        document.body.removeChild(tmpTextarea);
-	
-	        // 클립보드 성공여부 확인
-	        if(!successChk){
-	        	alert("URL이 복사 실패했습니다. 다시 시도해주세요.");
-	        } else {
-	            alert("URL이 복사 되었습니다.");
-	            $(".share").hide();
-	        }
-	    });
-	    
         // 문의하기 버튼 클릭 시 모달창 띄우기
         $("#btn_message").on('click', function(){
             $(".message").show();
