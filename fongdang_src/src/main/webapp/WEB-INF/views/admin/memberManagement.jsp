@@ -209,11 +209,10 @@
       <!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
       <ul>
         <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="main_menu">회원 관리</a></li>
-        <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="sub_menu">회원 조회</a></li>
+        <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="sub_menu" style="color: #9bbfd9;">회원 조회</a></li>
         <li><a href="#" class="main_menu">펀딩 관리</a></li>
-        <li><a href="#" class="sub_menu">승인 요청목록</a></li>
-        <li><a href="#" class="sub_menu">펀딩 일정 관리</a></li>
-        <li><a href="#" class="sub_menu">신고 상품</a></li>
+        <li><a href="<%=request.getContextPath() %>/admin/approval/list" class="sub_menu">승인 요청목록</a></li>
+        <li><a href="<%=request.getContextPath() %>/admin/report/list" class="sub_menu">신고 상품목록</a></li>
         <li><a href="#" class="sub_menu">펀딩매출관리</a></li>
         <li><a href="#" class="main_menu">고객 센터</a></li>
         <li><a href="#" class="sub_menu">공지사항</a></li>

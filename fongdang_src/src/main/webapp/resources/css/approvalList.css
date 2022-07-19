@@ -75,9 +75,15 @@ a {
     width: 80%;
     height: 100%;
 }
-
+#title {
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+	font-family: SUIT-SemiBold;
+	font-size: 25px;
+	margin-top: 70px;
+}
 #grid_container_wrap {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .grid_container {
     display: grid;

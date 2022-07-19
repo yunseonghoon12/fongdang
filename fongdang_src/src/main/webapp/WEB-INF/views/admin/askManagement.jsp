@@ -1,9 +1,7 @@
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -147,21 +145,15 @@ a {
 	<div id="container">
 		<div id="admin_nav">
 			<ul>
-				<li><a
-					href="<%=request.getContextPath()%>/admin/memberManagement"
-					class="main_menu">회원 관리</a></li>
-				<li><a
-					href="<%=request.getContextPath()%>/admin/memberManagement"
-					class="sub_menu">회원 조회</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/memberManagement" class="main_menu">회원 관리</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/memberManagement" class="sub_menu">회원 조회</a></li>
 				<li><a href="#" class="main_menu">펀딩 관리</a></li>
-				<li><a href="#" class="sub_menu">승인 요청목록</a></li>
-				<li><a href="#" class="sub_menu">펀딩 일정 관리</a></li>
-				<li><a href="#" class="sub_menu">신고 상품</a></li>
+				<li><a href="<%=request.getContextPath() %>/admin/approval/list" class="sub_menu">승인 요청목록</a></li>
+        		<li><a href="<%=request.getContextPath() %>/admin/report/list" class="sub_menu">신고 상품목록</a></li>
 				<li><a href="#" class="sub_menu">펀딩매출관리</a></li>
 				<li><a href="#" class="main_menu">고객 센터</a></li>
 				<li><a href="#" class="sub_menu">공지사항</a></li>
-				<li><a href="<%=request.getContextPath()%>/admin/ask"
-					class="sub_menu">1:1문의</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/ask" class="sub_menu" style="color: #9bbfd9;">1:1문의</a></li>
 			</ul>
 		</div>
 

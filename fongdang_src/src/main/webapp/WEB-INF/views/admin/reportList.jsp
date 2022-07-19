@@ -53,18 +53,19 @@
             <!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
             <ul>
                 <li><a href="#" class="main_menu">회원 관리</a></li>
-                <li><a href="#" class="sub_menu">회원 조회</a></li>
+                <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="sub_menu">회원 조회</a></li>
                 <li><a href="#" class="main_menu">펀딩 관리</a></li>
                 <li><a href="<%=request.getContextPath() %>/admin/approval/list" class="sub_menu">승인 요청목록</a></li>
                 <li><a href="<%=request.getContextPath() %>/admin/report/list" class="sub_menu" style="color: #9bbfd9;">신고 상품목록</a></li>
                 <li><a href="#" class="sub_menu">펀딩 매출관리</a></li>
                 <li><a href="#" class="main_menu">고객 센터</a></li>
                 <li><a href="#" class="sub_menu">공지사항</a></li>
-                <li><a href="#" class="sub_menu">1:1문의</a></li>
+                <li><a href="<%= request.getContextPath()%>/admin/ask" class="sub_menu">1:1문의</a></li>
             </ul>
         </div>
 
         <div id="main_body">
+        	<p id="title">신고 상품 목록 관리</p>
             <div id="grid_container_wrap">
                 <div class="grid_container">
                     <div class="col_title">상품번호</div>
