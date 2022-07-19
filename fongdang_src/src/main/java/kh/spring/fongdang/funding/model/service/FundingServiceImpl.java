@@ -86,4 +86,19 @@ public class FundingServiceImpl implements FundingService {
 		return dao.selectCatePreProducts6(C6);
 	}
 
+	@Override
+	public int updateFundingApproval(Funding funding) {
+		return dao.updateFundingApproval(funding);
+	}
+
+	@Override
+	public int countApprovalList() {
+		return dao.countApprovalList();
+	}
+
+	@Override
+	public List<Funding> selectApprovalList(int startRnum, int endRnum) {
+		return dao.selectApprovalList(startRnum, endRnum);
+	}
+
 }

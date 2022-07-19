@@ -8,4 +8,18 @@
 	<select id="checkReport" parameterType="Report" resultType="_int">
 		SELECT COUNT(*) FROM report WHERE p_no = #{p_no} AND email = #{email}
 	</select>
+	
+	<select id="countReportList" resultType="_int">
+		SELECT COUNT(*) FROM report
+	</select>
+	
+	<select id="selectReportList" parameterType="hashmap" resultType="Report">
+		SELECT report_no, p_no, p_name, report_category, email, report_date, report_content, report_file
+		FROM (SELECT ROWNUM rn, t1.*
+		      FROM (SELECT report_no, p_no, p_name, report_category, email, TO_CHAR(report_date, 'YYYY.MM.DD') report_date, report_content, report_file
+		            FROM report JOIN product USING(p_no)
+		            WHERE p_approval = 'Y'
+		            ORDER BY report_no DESC) t1) t2
+		WHERE t2.rn BETWEEN #{startRnum} AND #{endRnum}
+	</select>
 </mapper>

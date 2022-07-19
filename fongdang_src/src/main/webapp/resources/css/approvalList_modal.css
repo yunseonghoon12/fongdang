@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal > .approval_content {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal > .cancel_approval_content {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.approval_ask {
+    color: #444c57;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.approval_content .approval_send button, .cancel_approval_content .approval_send button {
+    background-color: transparent;
+    font-family: SUIT-Regular;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+#btn_approval_cancel, #btn_cancel_approval_cancel {
+    color: #b8b6b6;
+}
+#btn_approval_submit, #btn_cancel_approval_submit {
+    float: right;
+    color: #9BBFD9;
+}

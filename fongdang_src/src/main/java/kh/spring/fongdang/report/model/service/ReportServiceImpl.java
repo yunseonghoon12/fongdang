@@ -1,5 +1,7 @@
 package kh.spring.fongdang.report.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,16 @@ public class ReportServiceImpl implements ReportService{
 	@Override
 	public int checkReport(Report report) {
 		return dao.checkReport(report);
+	}
+
+	@Override
+	public int countReportList() {
+		return dao.countReportList();
+	}
+
+	@Override
+	public List<Report> selectReportList(int startRnum, int endRnum) {
+		return dao.selectReportList(startRnum, endRnum);
 	}
 
 }

@@ -30,7 +30,10 @@ import kh.spring.fongdang.ask.model.service.AskServiceImpl;
 import kh.spring.fongdang.admin.domain.Sales;
 import kh.spring.fongdang.admin.model.service.AdminService;
 import kh.spring.fongdang.member.domain.Member;
+import kh.spring.fongdang.report.model.service.ReportService;
 import kh.spring.fongdang.common.Criteria;
+import kh.spring.fongdang.common.Paging;
+import kh.spring.fongdang.funding.model.service.FundingService;
 
 
 @Controller
@@ -38,13 +41,23 @@ import kh.spring.fongdang.common.Criteria;
 public class AdminController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
+	@Autowired
+	private Paging paging;
 	
 	@Autowired
 	private AdminService service;
+	
 	@Autowired
 	private AnsServiceImpl AnsService;
+	
 	@Autowired
 	private AskServiceImpl AskService;
+	
+	@Autowired
+	private ReportService reportService;
+	
+	@Autowired
+	private FundingService fundingService;
 	
 	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
 	public ModelAndView pageMemberManagement(ModelAndView mv
@@ -244,4 +257,47 @@ public class AdminController {
 		return mv;
 	}
 	
+	@GetMapping("/report/list")
+	public ModelAndView selectAllReportProduct(ModelAndView mv, @RequestParam(value = "page", defaultValue = "1") String currentPage) {
+		final int pageSize = 15;  // 한페이지에 보여줄 행
+		final int pageBlock = 3;  // 페이징에 나타날 페이지수
+		
+		int totalCnt = reportService.countReportList(); // 총 글 수
+		int totalPageCnt = paging.calcTotalPage(totalCnt, pageSize); // 전체 페이지 수
+		int startPage = paging.calcStartPage(Integer.valueOf(currentPage), pageBlock);
+		int endPage = paging.calcEndPage(startPage, pageBlock, totalPageCnt);
+		int startRnum = paging.calcStartRnum(Integer.valueOf(currentPage), pageSize);
+		int endRnum = paging.calcEndRnum(startRnum, pageSize, totalCnt);
+		
+		mv.addObject("reportList", reportService.selectReportList(startRnum, endRnum));
+		mv.addObject("startPage", startPage);
+		mv.addObject("endPage", endPage);
+		mv.addObject("totalPageCnt", totalPageCnt);
+		mv.addObject("currentPage", currentPage);
+		mv.setViewName("admin/reportList");
+		
+		return mv;
+	}
+	
+	@GetMapping("/approval/list")
+	public ModelAndView selectAllApprovalProduct(ModelAndView mv, @RequestParam(value = "page", defaultValue = "1") String currentPage) {
+		final int pageSize = 10;  // 한페이지에 보여줄 행
+		final int pageBlock = 3;  // 페이징에 나타날 페이지수
+		
+		int totalCnt = fundingService.countApprovalList(); // 총 글 수
+		int totalPageCnt = paging.calcTotalPage(totalCnt, pageSize); // 전체 페이지 수
+		int startPage = paging.calcStartPage(Integer.valueOf(currentPage), pageBlock);
+		int endPage = paging.calcEndPage(startPage, pageBlock, totalPageCnt);
+		int startRnum = paging.calcStartRnum(Integer.valueOf(currentPage), pageSize);
+		int endRnum = paging.calcEndRnum(startRnum, pageSize, totalCnt);
+		
+		mv.addObject("approvalList", fundingService.selectApprovalList(startRnum, endRnum));
+		mv.addObject("startPage", startPage);
+		mv.addObject("endPage", endPage);
+		mv.addObject("totalPageCnt", totalPageCnt);
+		mv.addObject("currentPage", currentPage);
+		mv.setViewName("admin/approvalList");
+		
+		return mv;
+	}
 }

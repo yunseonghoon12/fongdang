@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kh.spring.fongdang.funding.domain.Funding;
@@ -104,6 +106,23 @@ public class FundingController {
 //		return mv;
 //	}
 
+	@ResponseBody
+	@PostMapping("/updateApproval")
+	public int updateFundingApproval(Funding funding, HttpSession session) {
+		// 로그인 완성 되면 주석 풀고 기능 확인
+		// 로그인 여부 확인
+		Member loginInfo = (Member)session.getAttribute("loginInfo");
+		if(loginInfo == null || !(loginInfo.getMember_type().equals("A"))) { // 로그아웃 상태일 때
+			return 0;
+		} else {
+			if(service.updateFundingApproval(funding) < 1) {
+				return -1;
+			} else {
+				return 1;
+			}
+		}
+	}
+	
 	@GetMapping("/list")
 	public ModelAndView fundinglist(ModelAndView mv) {
 		mv.addObject("allProducts", service.selectAllProducts());

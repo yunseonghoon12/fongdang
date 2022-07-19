@@ -33,4 +33,13 @@ public interface FundingService {
 	public List<Funding> selectCatePreProducts4(String c4);
 	public List<Funding> selectCatePreProducts5(String c5);
 	public List<Funding> selectCatePreProducts6(String c6);
+	
+	/* 승인 변경 */
+	public int updateFundingApproval(Funding funding);
+	
+	/* 승인 요청 목록 수 세기 */
+	public int countApprovalList();
+	
+	/* 승인 요청 목록 조회 */
+	public List<Funding> selectApprovalList(int startRnum, int endRnum);
 }

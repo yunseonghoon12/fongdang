@@ -21,6 +21,7 @@
 		<result property="p_goal_percent" column="p_goal_percent"/>
 		<result property="d_day" column="d_day"/>
 		<result property="category_name" column="category_name"/>
+		<result property="maker_category" column="maker_category"/>
 		<result property="maker_logo" column="maker_logo"/>
 		<result property="maker_name" column="maker_name"/>
 		<result property="maker_email" column="maker_email"/>
@@ -28,6 +29,12 @@
 		<result property="maker_kakao_channel" column="maker_kakao_channel"/>
 		<result property="maker_homepage" column="maker_homepage"/>
 	</resultMap>
+	
+	<update id="updateFundingApproval" parameterType="Funding">
+		UPDATE product
+		SET p_approval = #{p_approval}
+		WHERE p_no = #{p_no}
+	</update>
 	
 	<select id="selectFunding" parameterType="_int" resultMap="FundingResultMap">
 		SELECT p_no, supporter, TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str, p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day, TO_CHAR(p.end_day, 'YYYY.MM.DD') end_day, TO_CHAR(p.payment_plan, 'YYYY.MM.DD') payment_plan, TO_CHAR(p.delivery_date, 'YYYY.MM.DD') delivery_date, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
@@ -58,6 +65,21 @@
 		SELECT * FROM sms WHERE p_no = #{p_no} AND email = #{email}
 	</select>
 
+	<select id="countApprovalList" resultType="_int">
+		SELECT COUNT(*) FROM product WHERE p_approval = 'N'
+	</select>
+	
+	<select id="selectApprovalList" parameterType="hashmap" resultMap="FundingResultMap">
+		SELECT p_no, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, d_day
+		FROM (SELECT ROWNUM rn, t1.*
+		      FROM (SELECT p_no, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day
+		            FROM product JOIN category USING(category_id)
+		                         JOIN maker USING(maker_name)
+		            WHERE p_approval = 'N'
+		            ORDER BY p_no DESC) t1) t2
+		WHERE t2.rn BETWEEN #{startRnum} AND #{endRnum}
+	</select>
+	
 	<select id="selectPreProducts" parameterType="_int"
 		resultType="Funding">
 <![CDATA[

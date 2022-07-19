@@ -33,20 +33,22 @@ public class FundingDao {
 		return result;
 	}
 	
-//	오픈 전 상품 N개 불러오기
+	//	오픈 전 상품 N개 불러오기
 	public List<Funding> selectPreProducts(int n) {
 		return session.selectList("Funding.selectPreProducts",null,new RowBounds(0,n));
 	}
-//	오픈 전 상품 전부 불러오기
+	
+	//	오픈 전 상품 전부 불러오기
 	public List<Funding> selectPreProducts() {
 		return session.selectList("Funding.selectPreProducts");
 	}
 
-// 상품 리스트 전부 불러오기
+	// 상품 리스트 전부 불러오기
 	public List<Funding> selectAllProducts() {
 		return session.selectList("Funding.selectAllProducts");
 	}
-// 상품 카테고리 불러오기
+	
+	// 상품 카테고리 불러오기
 	public List<Funding> selectCateProducts1(String C1) {
 		return session.selectList("Funding.selectCateProducts1",C1);
 	}
@@ -65,7 +67,8 @@ public class FundingDao {
 	public List<Funding> selectCateProducts6(String C6) {
 		return session.selectList("Funding.selectCateProducts6",C6);
 	}
-// 예정상품 카테고리 불러오기
+	
+	// 예정상품 카테고리 불러오기
 	public List<Funding> selectCatePreProducts1(String C1) {
 		return session.selectList("Funding.selectCatePreProducts1",C1);
 	}
@@ -84,7 +87,20 @@ public class FundingDao {
 	public List<Funding> selectCatePreProducts6(String C6) {
 		return session.selectList("Funding.selectCatePreProducts6",C6);
 	}
-
-
 	
+	public int updateFundingApproval(Funding funding) {
+		return session.update("Funding.updateFundingApproval", funding);
+	}
+	
+	public int countApprovalList() {
+		return session.selectOne("Funding.countApprovalList");
+	}
+	
+	public List<Funding> selectApprovalList(int startRnum, int endRnum) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("startRnum", startRnum);
+		map.put("endRnum", endRnum);
+		
+		return session.selectList("Funding.selectApprovalList", map);
+	}
 }

@@ -11,18 +11,17 @@ import kh.spring.fongdang.sms.domain.Sms;
 @Component
 public class Funding {
 	private int p_no;            //상품번호
-//	private String  category_id; //카테고리ID
-	private String  p_name;      //상품이름
+	private String p_name;      //상품이름
 	private int p_goal;          //목표금액
-	private String  p_thumbnail; //대표이미지
-	private String  p_summary;   //상품요약
-	private String  p_story;     //상품상세정보
-	private String  p_certification;//인증증명서
+	private String p_thumbnail; //대표이미지
+	private String p_summary;   //상품요약
+	private String p_story;     //상품상세정보
+	private String p_certification;//인증증명서
 	private String start_day;   //펀딩시작일
 	private String end_day;          //펀딩종료일
 	private String payment_plan;     //펀딩예정일
 	private String delivery_date;    //발송예정일
-	private String  p_approval;    //판매승인여부
+	private String p_approval;    //판매승인여부
 	private int p_report_cnt;      //상품누적신고횟수
 	private int supporter; //서포터 수
 	private String total_funding_money; //펀딩 누적 금액
@@ -30,8 +29,9 @@ public class Funding {
 	private int p_goal_percent; //펀딩 달성률
 	private int d_day; //펀딩 남은 일 수
 	private String category_name; //카테고리 이름
+	private String maker_category; //메이커 종류
 	private String maker_logo; //메이커 로고
-	private String  maker_name;  //메이커명
+	private String maker_name;  //메이커명
 	private String maker_email; //메이커 이메일
 	private String maker_phone; //메이커 전화번호
 	private String maker_kakao_channel; //메이커 카카오채널
@@ -59,7 +59,7 @@ public class Funding {
 				+ ", payment_plan=" + payment_plan + ", delivery_date=" + delivery_date + ", p_approval=" + p_approval
 				+ ", p_report_cnt=" + p_report_cnt + ", supporter=" + supporter + ", total_funding_money="
 				+ total_funding_money + ", p_goal_str=" + p_goal_str + ", p_goal_percent=" + p_goal_percent + ", d_day="
-				+ d_day + ", category_name=" + category_name + ", maker_logo=" + maker_logo + ", maker_name="
+				+ d_day + ", category_name=" + category_name + ",maker_category=" + maker_category + ", maker_logo=" + maker_logo + ", maker_name="
 				+ maker_name + ", maker_email=" + maker_email + ", maker_phone=" + maker_phone
 				+ ", maker_kakao_channel=" + maker_kakao_channel + ", maker_homepage=" + maker_homepage
 				+ ", review_list=" + review_list + ", sms=" + sms + "]";
@@ -215,6 +215,14 @@ public class Funding {
 
 	public void setCategory_name(String category_name) {
 		this.category_name = category_name;
+	}
+
+	public String getMaker_category() {
+		return maker_category;
+	}
+
+	public void setMaker_category(String maker_category) {
+		this.maker_category = maker_category;
 	}
 
 	public String getMaker_logo() {

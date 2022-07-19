@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal > .cancel_approval_content {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 300px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal > .report_detail_content {
+    position: relative;
+    top: 150px;
+    margin: auto;
+    width: 500px;
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal_title {
+    font-family: SUIT-SemiBold;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+#btn_close {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+}
+.approval_ask {
+    color: #444c57;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.cancel_approval_content .approval_send button {
+    background-color: transparent;
+    font-family: SUIT-Regular;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+#btn_cancel_approval_cancel {
+    color: #b8b6b6;
+}
+#btn_cancel_approval_submit {
+    float: right;
+    color: #9BBFD9;
+}
+.report_detail_content #product_name {
+    margin-top: 20px;
+    text-align: center;
+}
+.report_detail_content #email_and_report_date {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+.report_detail_content #report_category {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 14px;
+}
+.report_detail_content #report_content {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    /* border: 1px dashed #444c57; */
+}
+.report_detail_content #report_file {
+    font-size: 12px;
+}

@@ -1,7 +1,5 @@
 package kh.spring.fongdang.report.domain;
 
-import java.sql.Timestamp;
-
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,16 +7,17 @@ public class Report {
 	private int report_no;
 	private String email;
 	private int p_no;
+	private String p_name;
 	private String report_category;
 	private String report_content;
 	private String report_file;
-	private Timestamp report_date;
+	private String report_date;
 	
 	@Override
 	public String toString() {
-		return "Report [report_no=" + report_no + ", email=" + email + ", p_no=" + p_no + ", report_category="
-				+ report_category + ", report_content=" + report_content + ", report_file=" + report_file
-				+ ", report_date=" + report_date + "]";
+		return "Report [report_no=" + report_no + ", email=" + email + ", p_no=" + p_no + ", p_name=" + p_name
+				+ ", report_category=" + report_category + ", report_content=" + report_content + ", report_file="
+				+ report_file + ", report_date=" + report_date + "]";
 	}
 
 	public int getReport_no() {
@@ -45,6 +44,14 @@ public class Report {
 		this.p_no = p_no;
 	}
 
+	public String getP_name() {
+		return p_name;
+	}
+
+	public void setP_name(String p_name) {
+		this.p_name = p_name;
+	}
+
 	public String getReport_category() {
 		return report_category;
 	}
@@ -69,11 +76,11 @@ public class Report {
 		this.report_file = report_file;
 	}
 
-	public Timestamp getReport_date() {
+	public String getReport_date() {
 		return report_date;
 	}
 
-	public void setReport_date(Timestamp report_date) {
+	public void setReport_date(String report_date) {
 		this.report_date = report_date;
 	}
 }
