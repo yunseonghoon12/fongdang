@@ -230,12 +230,14 @@
 			                            <div class="review_info">
 			                                <p>${review.r_writer}</p>
 			                                <p>${review.r_date}</p>
-			                                <div class="review_update_delete">
-			                                	<!-- TODO: 두 개의 버튼은 세션정보와 비교해서 보임여부 수정 -->
-			                                	<input type="hidden" value="${review.r_no}">
-			                                    <button class="btn_review_update" type="button">리뷰수정</button>
-			                                    <button class="btn_review_delete" type="button" onclick="deleteReview(${review.r_no});">리뷰삭제</button>
-			                                </div>
+			                                <c:if test="${loginInfo.nickname == review.r_writer}">
+				                                <div class="review_update_delete">
+				                                	<!-- TODO: 두 개의 버튼은 세션정보와 비교해서 보임여부 수정 -->
+				                                	<input type="hidden" value="${review.r_no}">
+				                                    <button class="btn_review_update" type="button">리뷰수정</button>
+				                                    <button class="btn_review_delete" type="button" onclick="deleteReview(${review.r_no});">리뷰삭제</button>
+				                                </div>
+			                                </c:if>
 			                            </div>
 			                            <div class="review_content">${review.r_content}</div>
 			                        </div>
