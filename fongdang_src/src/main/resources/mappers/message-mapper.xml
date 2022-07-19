@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Message">
 	<insert id="insertMessage" parameterType="Message">
-		INSERT INTO message VALUES((SELECT NVL((SELECT MAX(m_no) FROM message), 0) + 1 FROM dual), #{m_content}, #{sender}, #{receiver}, default, default)
+		INSERT INTO message VALUES((SELECT NVL((SELECT MAX(m_no) FROM message), 0) + 1 FROM dual), #{m_content}, #{sender}, (SELECT email FROM maker WHERE maker_name = #{receiver}), default, default)
 	</insert>
 	
 	<select id="selectSendList" parameterType="string" resultType="Message">

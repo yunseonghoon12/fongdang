@@ -93,8 +93,10 @@
         </div>
     </div>
     <div class="main_wrap">
-        <div class="wrap header"></div>
-        <div class="wrap content" style="width: 1200px;">
+        <div class="wrap header">
+        	<jsp:include page="../header.jsp"/>
+        </div>
+        <div class="wrap content" style="width: 1200px; margin: 0 auto;">
             <div class="funding_header">
                 <p>${funding.category_name}</p>
                 <h2>${funding.p_name}</h2>
@@ -130,7 +132,15 @@
                     </div>
                     <div class="right_funding_info">
                         <div class="d_day">
-                            <span style="font-size: 25px; font-family: SUIT-SemiBold;">${funding.d_day}일 남음</span>
+                        	<c:choose>
+                        		<c:when test="${funding.d_day < 0}">
+                        			<span style="font-size: 25px; font-family: SUIT-SemiBold;">판매 종료</span>
+                        		</c:when>
+                        		<c:otherwise>
+                        			<span style="font-size: 25px; font-family: SUIT-SemiBold;">${funding.d_day}일 남음</span>
+                        		</c:otherwise>
+                        	</c:choose>
+                            <%-- <span style="font-size: 25px; font-family: SUIT-SemiBold;">${funding.d_day}일 남음</span> --%>
                             <span style="font-size: 12px; font-family: SUIT-Light;">${funding.end_day} 종료</span>
                         </div>
                         <div class="achieve_rate">

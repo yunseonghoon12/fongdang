@@ -77,7 +77,15 @@
                 <c:forEach var="approval" items="${approvalList}">
                 	<div class="grid_container">
 	                    <div class="col_data">${approval.p_no}</div>
-	                    <div class="col_data">${approval.p_name}</div>
+	                    <c:choose>
+	                    	<c:when test="${approval.d_day <= 0 || approval.p_report_cnt > 0}">
+	                    		<div class="col_data" style="cursor: pointer;" onclick="location.href='<%=request.getContextPath()%>/funding/info/${approval.p_no}'">${approval.p_name}</div>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    		<div class="col_data" style="cursor: pointer;" onclick="location.href='<%=request.getContextPath()%>/funding/info/before/${approval.p_no}'">${approval.p_name}</div>
+	                    	</c:otherwise>
+	                    </c:choose>
+	                    <%-- <div class="col_data">${approval.p_name}</div> --%>
 	                    <div class="col_data">${approval.category_name}</div>
 	                    <div class="col_data">${approval.maker_name}</div>
 	                    <c:choose>

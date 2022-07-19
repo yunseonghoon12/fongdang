@@ -54,8 +54,10 @@
         </div>
     </div>
     <div class="main_wrap">
-        <div class="wrap header"></div>
-        <div class="wrap content" style="width: 1200px;">
+        <div class="wrap header">
+        	<jsp:include page="../header.jsp"/>
+        </div>
+        <div class="wrap content" style="width: 1200px;  margin: 0 auto;">
             <div class="funding_header">
                 <p>${funding.category_name}</p>
                 <h2>${funding.p_name}</h2>
