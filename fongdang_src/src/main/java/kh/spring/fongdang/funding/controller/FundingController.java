@@ -83,7 +83,6 @@ public class FundingController {
 			mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
 		}
 
-		mv.addObject("funding", service.selectBeforeFunding(p_no, "aaa@aaa.com"));
 		mv.setViewName("funding/beforeFundingInfo");
 		
 		return mv;
@@ -109,7 +108,6 @@ public class FundingController {
 	@ResponseBody
 	@PostMapping("/updateApproval")
 	public int updateFundingApproval(Funding funding, HttpSession session) {
-		// 로그인 완성 되면 주석 풀고 기능 확인
 		// 로그인 여부 확인
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null || !(loginInfo.getMember_type().equals("A"))) { // 로그아웃 상태일 때
