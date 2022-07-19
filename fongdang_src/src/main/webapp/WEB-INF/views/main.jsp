@@ -16,7 +16,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<title>Document</title>
+<title>메인</title>
 
 <style>
 body {
@@ -26,13 +26,102 @@ body {
 il, ul {
 	list-style: none;
 }
+
+.leftImg {
+	width: 20px;
+}
+
+.rightImg {
+	width: 20px;
+}
+
+.slidebox .slideitem label {
+	position: absolute;
+	z-index: 1;
+	top: 84%;
+	transform: translateY(-50%);
+	padding: 20px;
+	cursor: pointer;
+}
+
+label.left {
+	right: 13.5%;
+	border-radius: 100%;
+	background-color: #5f5f5f7f;
+	background-position: center center;
+	background-size: 50%;
+	background-repeat: no-repeat;
+}
+
+label.right {
+	right: 8%;
+	border-radius: 100%;
+	background-color: #5f5f5f7f;
+	background-position: center center;
+	background-size: 50%;
+	background-repeat: no-repeat;
+}
+
+.paginglist {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.paginglist>li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.paginglist>li>label {
+	display: block;
+	padding: 10px 30px;
+	border-radius: 10px;
+	background: #ccc;
+	cursor: pointer;
+}
+
+.paginglist>li:hover>label {
+	background: #333;
+}
+
+[id="slide01"]:checked ~.slidelist .slideitem {
+	transform: translateX(0);
+	animation: slide01 30s infinite;
+}
+
+[id="slide02"]:checked ~.slidelist .slideitem {
+	transform: translateX(-100%);
+	animation: slide02 30s infinite;
+}
+
+[id="slide03"]:checked ~.slidelist .slideitem {
+	transform: translateX(-200%);
+	animation: slide03 30s infinite;
+}
+
+[id="slide04"]:checked ~.slidelist .slideitem {
+	transform: translateX(-300%);
+	animation: slide04 30s infinite;
+}
+
+.top3_img {
+	overflow: hidden;
+	width: 100%;
+	height: 27%;
+	width: 100%;
+}
+
+.top_img:hover {
+	transform: scale(1.2);
+}
 </style>
 </head>
 <body>
 	<jsp:include page="./header.jsp" />
 	<div class="main_AllWrap" style="width: 1200px; margin: 0 auto;">
 		<div id="bannerWrap">
-			<div class="slidebox" style="margin-top: 15px;">
+			<div class="slidebox" style="margin-top: 30px;">
 				<input type="radio" name="slide" id="slide01" checked> <input
 					type="radio" name="slide" id="slide02"> <input type="radio"
 					name="slide" id="slide03"> <input type="radio" name="slide"
@@ -40,30 +129,42 @@ il, ul {
 				<ul class="slidelist">
 					<li class="slideitem">
 						<div>
-							<label for="slide04" class="left"></label> <label for="slide02"
-								class="right"></label> <a href="#section03" class="goBbottom"><img
-								src="<%=request.getContextPath()%>/resources/images/main01.gif" /></a>
+							<label for="slide04" class="left"><img class="leftImg"
+								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
+							<label for="slide02" class="right"><img class="rightImg"
+								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
+							<a href="<%=request.getContextPath()%>/funding/info/before/12"><img
+								src="<%=request.getContextPath()%>/resources/images/main04.jpg" /></a>
 						</div>
 					</li>
 					<li class="slideitem">
 						<div>
-							<label for="slide01" class="left"></label> <label for="slide03"
-								class="right"></label> <a><img
-								src="<%=request.getContextPath()%>/resources/images/main01.gif" /></a>
+							<label for="slide01" class="left"><img class="leftImg"
+								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
+							<label for="slide03" class="right"><img class="rightImg"
+								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
+							<a href="<%=request.getContextPath()%>/funding/info/28"><img
+								src="<%=request.getContextPath()%>/resources/images/main06.gif" /></a>
 						</div>
 					</li>
 					<li class="slideitem">
 						<div>
-							<label for="slide02" class="left"></label> <label for="slide04"
-								class="right"></label> <a><img
-								src="<%=request.getContextPath()%>/resources/images/main01.gif" /></a>
+							<label for="slide02" class="left"><img class="leftImg"
+								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
+							<label for="slide04" class="right"><img class="rightImg"
+								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
+							<a href="<%=request.getContextPath()%>/funding/info/56"><img
+								src="<%=request.getContextPath()%>/resources/images/main07.gif" /></a>
 						</div>
 					</li>
 					<li class="slideitem">
 						<div>
-							<label for="slide03" class="left"></label> <label for="slide01"
-								class="right"></label> <a><img
-								src="<%=request.getContextPath()%>/resources/images/main01.gif" /></a>
+							<label for="slide03" class="left"><img class="leftImg"
+								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
+							<label for="slide01" class="right"><img class="rightImg"
+								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
+							<a href="<%=request.getContextPath()%>/maker/view"><img
+								src="<%=request.getContextPath()%>/resources/images/main05.gif" /></a>
 						</div>
 					</li>
 				</ul>
@@ -198,9 +299,47 @@ il, ul {
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">
 		<div class="section02">
 
-			<div class="top3"></div>
-			<div class="top3 margin"></div>
-			<div class="top3 margin"></div>
+			<div class="top3">
+				<div class="top3_img">
+					<img class="top_img"
+						style="width: 100%; height: 100%; transition: transform .25s;"
+						src="<%=request.getContextPath()%>/resources/images/refunding.jpg">
+				</div>
+				<h3
+					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">오직
+					퐁당에서만! 앵콜펀딩</h3>
+				<div style="background-color: blue; width: 100%; height: 100px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+			</div>
+			<div class="top3 margin">
+				<div class="top3_img">
+					<img class="top_img"
+						style="width: 100%; height: 100%; transition: transform .25s;"
+						src="<%=request.getContextPath()%>/resources/images/goodbye.jpg">
+				</div>
+				<h3
+					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">놓치면
+					아쉬운 종료임박 펀딩</h3>
+				<div style="background-color: blue; width: 100%; height: 100px;"></div>
+				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+			</div>
+			<div class="top3 margin">
+				<div class="top3_img">
+					<img class="top_img"
+						style="width: 100%; position: relative; height: 150%; transition: transform .25s; top: -24px;"
+						src="<%=request.getContextPath()%>/resources/images/bestofbest.webp">
+				</div>
+				<h3
+					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">퐁당추천
+					BEST펀딩</h3>
+				<div style="background-color: blue; width: 100%; height: 100px;"></div>
+				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+			</div>
 		</div>
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">
 		<div class="section03" id="section03">
@@ -212,7 +351,7 @@ il, ul {
 					응원합니다.</p>
 			</div>
 			<div class="apply02">
-				<a href="<%=request.getContextPath()%>/maker/Register"><button
+				<a href="<%=request.getContextPath()%>/maker/view"><button
 						class="btn btn-fill-fcolor">신청하기</button></a>
 			</div>
 			<img src="<%=request.getContextPath()%>/resources/images/main03.gif"

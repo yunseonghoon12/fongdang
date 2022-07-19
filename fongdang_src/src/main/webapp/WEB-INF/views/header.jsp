@@ -33,14 +33,14 @@
 
 				<li>
 
-					<form action="" method="GET"
+					<form action="<%=request.getContextPath()%>/funding/list.search" method="GET"
 						style="margin-left: 344px; width: 300px;">
 
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="a" type="text" class="form-control rounded-pill"
+							<input name="categroy" type="text" class="form-control rounded-pill"
 								id="textbox" placeholder="category 검색">
 							<div class="input-group-append"></div>
-						</div>
+						</div>					
 						<label for="textbox"><img
 							src="<%=request.getContextPath()%>/resources/images/magnifying.png"
 							class="question_header"></label>
@@ -118,5 +118,6 @@
             $(".searchR").hide();
         });
     </script>
+    
 	</header>
 </div>

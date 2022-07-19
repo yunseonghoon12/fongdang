@@ -18,6 +18,8 @@
 </style>
 </head>
 <body>
+<jsp:include page="./header.jsp" />
 ${loginInfo.name}
+<jsp:include page="./footer.jsp" />
 </body>
 </html>
