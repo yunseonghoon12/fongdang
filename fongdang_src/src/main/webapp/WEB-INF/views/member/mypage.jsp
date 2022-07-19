@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -114,6 +115,19 @@
       	margin: 0 auto;
       	width: 190px;
       	height: 40px;
+    }    
+    #kakao_token, #naver_token {    	
+    	position: relative;
+    	margin: 10px auto;
+    	width: 150px;
+    	height: 23px;  
+    }
+    #state {
+    	position: absolute;
+    	top: 3px;
+    	left: 28px;
+    	font-family: SUIT-Regular;
+      	font-size: 14px;
     }
     #logout_btn {
       	width: 186px;
@@ -358,25 +372,40 @@
 </c:if>
             		</div>
             		<p id="member_name">
-            			${member.name}님            			
+            			${member.nickname}님            			
             		</p>
             		<p id="member_state">
             			서포터·개인 회원           			
             		</p>          
-            		<div id="profile_setting">
-            		<!-- TODO : 카카오 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
-            		<!-- TODO : 네이버 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
-            		<!-- TODO : 구글 토큰 세션에 저장 이후 내 정보 로그아웃버튼 구현하기 -->
-	              		<button type="button" id="logout_btn" onclick="location.href='<%=request.getContextPath()%>/member/logout';">로그아웃</button>
+            		<div id="profile_setting">         		
+<c:choose>	
+	<c:when test="${!empty kakaoToken}">						
+						<p id="kakao_token">
+							<span id="kakao_logo"><img src="<%=request.getContextPath()%>/resources/images/kakao_logo.png" style="width: 20px;"></span>
+							<span id="state">카카오로 로그인 중</span>
+						</p>								
+						<button type="button" id="logout_btn" onclick="logoutHandler()">로그아웃</button>
+	</c:when>	
+	<c:when test="${!empty naverToken}">
+						<p id="naver_token">
+							<span id="naver_logo"><img src="<%=request.getContextPath()%>/resources/images/naver_logo.png" style="width: 20px;"></span>
+							<span id="state">네이버로 로그인 중</span>
+						</p>
+						<button type="button" id="logout_btn" onclick="logoutHandler()">로그아웃</button>
+	</c:when>
+	<c:otherwise>
+		<button type="button" id="logout_btn" onclick="logoutHandler()">로그아웃</button>
+	</c:otherwise>
+</c:choose>       
                			<a href="<%=request.getContextPath()%>/member/myProfile">
-			              	<div id="profile_btn_wrap">
+			              	<p id="profile_btn_wrap">
         	          			프로필 설정
                   				<span id="chevron-right">
 				                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 13">
                       					<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     				</svg>
                   				</span>
-              				</div>
+              				</p>
                			</a>
             		</div>
           		</div>
@@ -407,22 +436,10 @@
               </a>		
 	</c:forEach>
 </c:if>
+
 <c:if test="${empty orderlist }">
 				<p id="empty_content">펀딩 내역이 없습니다.</p>
-</c:if>     
-              <!-- <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>
-                    <p class="prod_maker_wrap">
-                      <span>카테고리</span>｜
-                      <span>메이커명</span>
-                    </p>                  
-                  </div>        
-                </div>
-              </a> -->
-                   
+</c:if>            
             </div>
           </div>
           <!-- 메이커를 눌렀을 경우 -->
@@ -448,17 +465,7 @@
               </a>
 	</c:forEach>
 </c:if>         
-<!-- 
-              <a href="#">
-                <div class="prod_flex">
-                  <img class="prod_img" src="">
-                  <div class="prod_info_wrap">
-                    <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>                                     
-                  </div>        
-                </div>
-              </a>
 
- -->        
  				<!-- 메이커가 오픈한 펀딩 상품이 없는 경우 -->
 <c:if test="${empty makerFunding}">
             	<p id="maker_guide">
@@ -470,7 +477,7 @@
             </div>
                         
             <div id="enroll_wrap">
-              <button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
+              <button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/view';" id="fundingEnroll_btn">펀딩 프로젝트 오픈신청하기</button>
             </div>
           </div>
 
@@ -566,7 +573,19 @@
         $("#supportor_section").hide();
         $("#maker_section").show();
       });
+    } 
+    
+    function logoutHandler() {
+    	var kakaoToken =  '${kakaoToken}';
+    	if(kakaoToken != null) {    		
+    		var url = 'https://kauth.kakao.com/oauth/logout?client_id=' + '<spring:eval expression="@property['kakao.api_key']"/>'
+    				+ '&logout_redirect_uri=' + '<spring:eval expression="@property['kakao.logout_redirect_uri']"/>';
+    		location.href= url;
+    	} else {
+    		location.href='<%=request.getContextPath()%>/member/logout';
+    	}
     }    
+   
   </script>
 </body>
 </html>

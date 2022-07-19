@@ -238,7 +238,6 @@
         				</span>        			
         			</form>
         			<div id="withdraw_btn_wrap">
-        				<!-- 탈퇴변경 버튼 -->
        					<button id="withdraw_btn" onclick="memberWithDrawHandler()">탈퇴</button>
        				</div> 
 
@@ -287,8 +286,6 @@
          		
         	</div>
         </div>
-         
-        
     </div>           
   </div>  
    
@@ -311,84 +308,13 @@
     		$("#memberListFrm").prop("action", "memberWithdraw");
     		$("#memberListFrm").prop("method", "post");
     		memberListFrm.submit();
-    	} else {    		
-    		location.href="<%=request.getContextPath()%>/admin/";
-    	}
+    	} else { }
     }    
     function memberSearchHandler() {   
     	$("#related_search_frm").prop("action", "memberManagement");
     	related_search_frm.submit();
     }
-    <%-- function memberSearchHandler() {
-    	var html1 = "";
-    	var html2 = "";
-    	console.log("memberSearchHandler()실행");	
-    	/* $("#memberListFrm").prop("action", "memberSearch"); */
-    	console.log("keyword: " + $("#related_search").val());
-    	
-    	$.ajax({
-    		url: "<%=request.getContextPath()%>/admin/memberSearch",
-    		type: "get",
-    		data: {
-    			related_search: $("#related_search").val()
-    		},
-    		success : function(result) {
-    			console.log(result);    			
-    			if(result != null){
-    				alert("회원 조회에 성공했습니다.");
-    				console.log("[member_list 변경 전]");
-    				console.log($("#member_list tbody").html());
-    				
-    				var cnt = result.totalCnt;
-    				var sub_title = "전체 회원 &nbsp;"+ cnt + "명";
-    				
-    				$("#sub_title").html(sub_title);
-    				for(var i=0; i<result.memberList.length; i++){
-    					var member= result.memberList[i];
-    					html1 += '<tr>';
-    					html1 += '	<td><input type="checkbox" name="chk_box" value="'+member.email+'"></td>	';
-    					html1 += '	<td>' + member.enroll_date + '</td>											';
-    					html1 += '	<td>' + member.name + '</td>												';
-    					html1 += '	<td>' + member.email + '</td>												';
-    					html1 += '	<td>' +	member.nickname + '</td>											';
-    					html1 += '	<td>' +	member.withdraw + '</td>											';
-        				html1 += '</tr>																			';
-    				} 
-    				
-    				
-    				$("#member_list tbody").html(html1);
-    				console.log("[member_list 변경 후]");
-    				console.log($("#member_list tbody").html());
-    				
-    				console.log("[#prev_next 변경 전]");    				
-    	    		console.log($("#prev_next").html());   
-    				
-    				html2 += '<div id="prev_next">';
-    		        if(result.startPage > 1) {
-    		        	html2 += '<a href="'+<%=request.getContextPath()%>/ + 'admin/?related_search='+ $("#related_search").val() +'&page=' + result.startPage-1+ '">이전</a>&nbsp;&nbsp;&nbsp;&nbsp';
-    		        }
-    		        for(var j= result.startPage; j<=result.endPage; j++) {
-    		        	html2 += '<a href="'+<%=request.getContextPath()%>/ + 'admin/?related_search=' + $("#related_search").val() + '&page=' + j +'">'+ j +'</a>&nbsp;&nbsp;&nbsp;&nbsp';
-    		        }
-    		        if(result.endPage < result.totalPageCnt) {
-    		        	html2 += '<a href="'+<%=request.getContextPath()%>/ + 'admin/?related_sarch=' + $("#related_search").val() + '&page=' + result.endPage+1 + '">다음</a>&nbsp;&nbsp;&nbsp;&nbsp';
-    		        }
-    		        html2 += '</div>';
-    		        
-    		        $("#prev_next").html(html2);
-    		        
-    		        console.log("[#prev_next 변경 후]");    				
-    		        console.log($("#prev_next").html());
-    			}
-    		},
-    		error : function(request, status, error) {
-				console.log(request);
-				console.log(status);
-				console.log(error);								
-			}
-    	});
-    	
-    }  --%>
+   
     
   </script>
 </body>

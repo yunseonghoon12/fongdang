@@ -105,7 +105,7 @@
       font-weight: 700;
       line-height: 24px;
       margin-bottom: 10px;
-    }
+    }    
     #nickname_field > div > input {
       box-sizing: border-box;
       border: 1px solid #ccc;
@@ -116,7 +116,7 @@
       font-family: SUIT-Regular;
       font-size: 17px;
       font-weight: 300;     
-    }
+    }   
     #email_field {
       width: 100%;
       height: 90px;
@@ -131,16 +131,36 @@
       line-height: 24px;
       margin-bottom: 10px;
     }
+    #email_field > div {
+    	position: relative;
+    	width: 368px;
+    }
     #email_field > div > input {
       box-sizing: border-box;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 368px;
+      border-radius: 4px;     
+      width: 246px;
       height: 48px;
       padding-left: 0.65em;
       font-family: SUIT-Regular;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 300;     
+    }
+     #email_chk {
+     	background-color: #b6e0d6;
+     	border: 1px solid white;
+     	border-radius: 5px;
+     	color: white;
+     	
+     	position: absolute;
+     	right: 0;
+    	font-family: SUIT-Regular;
+      	font-size: 15px;
+      	width: 105px;
+      	height: 48px;	
+    }
+    #email_chk:focus {
+    	background-color: #9bbfd9;
     }
     #pwd_field {
       width: 100%;
@@ -254,7 +274,7 @@
         <div id="nickname_field">
           <label>닉네임</label>
           <div>
-            <input type="text" name="nickname" id="nickname" placeholder="닉네임 입력">            
+            <input type="text" name="nickname" id="nickname" placeholder="닉네임 입력">                        
           </div>
           <!-- TODO: error message -->
           <p id="nickname_error"></p>
@@ -262,8 +282,10 @@
         <div id="email_field">
           <label>이메일</label>
           <div>
-            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정">            
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 계정">
+            <button type="button" id="email_chk" onclick="emailCheck()">중복확인</button>                  
           </div>
+                
           <!-- TODO: error message -->
           <p id="email_error"></p>
         </div>
@@ -300,8 +322,9 @@
 
   <script>  
   	var cnt = 1; 
+  	flag = false;  	
+  	console.log("전역변수 flag: " + flag);
   	
-  	/* ${subcationShowHandler}; */
     $("#requirement_service").click(function() {
     	subcationShowHandler();     
     });
@@ -316,47 +339,49 @@
         	$("#sub_caption").show(); 
         	++cnt;
       	}
-    }  
+    }      
     
     function registerHandler(){
-    	var cnf= confirm("회원가입을 진행하시겠습니까?");   		   		
+    	var cnf= confirm("회원가입을 진행하시겠습니까?");
    		
     	var name = $("#name").val();
     	var nickname = $("#nickname").val();
    		var email = $("#email").val();
    		var pwd = $("#password").val();
    		var cnf_pwd = $("#confirm_password").val();
-   		var chk = $("#agree").is(":checked");
+   		var utiliy_chk = $("#agree").is(":checked");
    		
    		// 회원가입 정보 유효성 검사
    		var nameValidity = nameValidate(name);
    		var nicknameValidity = nicknameValidate(nickname);
    		var passwordValidity = passwordValidate(pwd, cnf_pwd);
-   		var emailValidity = emailValidate(email);
-	
+		var emailValidity = emailCheck();		
+		
+		console.log("이메일 검사: " + emailValidity); // 성공: true, 실패: false
    		console.log("name: " + name);
    		console.log("nickname: " + nickname);
 		console.log("email: " + email);   		    		
    		console.log("password: " + pwd);
    		console.log("confirm_password: " + cnf_pwd);
-   		console.log("약관동의: " + chk);
+   		console.log("약관동의: " + utiliy_chk);
    		console.log("name.length: " + name.length);
    		console.log("nickname.length: " + nickname.length);
    		
     	if(cnf) {
-    		if(chk == false) {
+    		if(emailValidity == false) {
+    			alert("이메일 중복확인을 클릭하세요.");
+    			return;
+    		} else if(utiliy_chk == false) {
     			alert("회원가입은 이용약관에 동의할 경우 가능합니다.");
     			return; 
     		} else if(passwordValidity == false) {
-    			return;
-    		} else if(emailValidity == false) {    			
     			return;
     		} else if(nameValidity == false) {
     			return;
     		} else if(nicknameValidity == false) {
     			return; 
     		} else {
-    			// 모든 유효성 검사를 끝낸 경우 회원가입 정보를 전달 
+    			// 모든 유효성 검사를 마친 경우 회원가입 정보를 전달 
     			console.log("회원가입을 진행합니다.");	
     			joinFrm.submit();
     		}   	    		
@@ -371,14 +396,13 @@
     	if(name == '') {
     		$("#name_error").html("이름을 입력해주세요.");
     		return false;	
-    	} else if(size < 0 || size>13) {
-    		$("#name_error").html("이름을 1~13자로 입력해주세요.");
+    	} else if(size < 1 || size > 13) {
+    		$("#name_error").html("이름을 2~13자로 입력해주세요.");
     		return false;    		
     	} else {
     		$("#name_error").html(" ");
     		return true;
-    	}
-    	
+    	}    	
     }
     
     function nicknameValidate(nickname) {
@@ -426,6 +450,53 @@
     	} 
     }
     
+    function emailCheck() {    	  	
+    	console.log("ajax전 flag: " + flag);
+    	var input_email = $("#email").val();
+    	
+    	$.ajax({
+	    	url: '<%=request.getContextPath()%>/member/duplication/check',
+    		type: 'get',
+   			data: {
+	    			email: input_email
+   			},
+   			success: function(data) {    	
+   				if(data == 'null') {
+   					console.log("중복 이메일 검사결과: " + data);
+   					var html = '이메일을 입력하세요.';
+   					$("#email_error").html(html);   
+   				}
+    			if(data == 'pass') {
+   					console.log("중복 이메일 검사결과: " + data); // 중복된 이메일 x
+   					// 이메일 유효성 체크
+   					var test = emailValidate(input_email);      					
+   					if(test == false) {
+   						flag = false;
+   						console.log("=>state of flag: " + flag);
+   						return ;
+   					} else {
+   						flag = true;	   						
+   					}   					
+   					var html = '사용 가능한 이메일입니다.';
+   					$("#email_error").html(html);    				
+   				} 
+   				if(data == 'fail') {
+   					console.log("중복 이메일 검사결과: " + data); // 중복된 이메일 존재  	
+   					var html = '이미 존재하는 이메일입니다.';
+   					$("#email_error").html(html);
+   				}
+   				console.log("ajax후 flag:" + flag);
+   			},
+   			error : function(request, status, error) {
+				console.log(request);
+				console.log(status);
+				console.log(error);				
+			}
+   		});
+    	
+	   	return flag;
+    }
+  
   </script>
 
 

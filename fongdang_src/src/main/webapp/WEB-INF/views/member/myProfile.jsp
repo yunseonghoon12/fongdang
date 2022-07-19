@@ -229,14 +229,23 @@
         	<div id="id_field">
           		<label>아이디</label>
           		<div>
-	            	<input type="text" name="email" id="email" placeholder="읽기 전용" value="${member.email}" readonly>
+	            	<input type="text" name="email" id="email" value="${member.email}" readonly>
           		</div>
         	</div>
         	<div id="pwd_field">
           		<label>새 비밀번호</label>
+<c:choose>
+	<c:when test="${!empty kakaoToken or !empty naverToken}">
+				<div>
+					<input type="text" placeholder="소셜 사이트를 통해 비밀번호를 변경해주세요." readonly="readonly">
+				</div>
+	</c:when>
+	<c:otherwise>
           		<div>
             		<input type="password" name="password" id="password" autocomplete="off" placeholder="새 비밀번호">
-          		</div>
+          		</div>	
+	</c:otherwise>
+</c:choose>	
         	</div>
         	<div id="nickname_field">
           		<label>닉네임</label>

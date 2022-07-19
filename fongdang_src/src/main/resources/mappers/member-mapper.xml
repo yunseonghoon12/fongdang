@@ -19,8 +19,29 @@
 	</select>
 	
 	<insert id="insertMember" parameterType="Member">
-		insert into member(email, name, password, nickname)
-			values(#{email}, #{name}, #{password}, #{nickname})		
+		<choose>
+			<when test="name == null and password == null">
+				insert into member(
+					email, nickname
+				) values(
+					#{email}, #{nickname}
+				)
+			</when>
+			<when test="password == null">
+				insert into member(
+					email, name, nickname
+				) values(
+					#{email}, #{name}, #{nickname}
+				)				
+			</when>			
+			<otherwise>
+				insert into member(
+					email, name, password, nickname
+				) values(
+					#{email}, #{name}, #{password}, #{nickname}
+				)
+			</otherwise>
+		</choose>		
 	</insert>
 
 	<update id="withdrawMember" parameterType="string">

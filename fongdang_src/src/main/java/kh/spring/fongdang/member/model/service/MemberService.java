@@ -3,7 +3,6 @@ package kh.spring.fongdang.member.model.service;
 import java.util.List;
 
 import kh.spring.fongdang.funding.domain.Funding;
-import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.member.domain.Member;
 
 public interface MemberService {

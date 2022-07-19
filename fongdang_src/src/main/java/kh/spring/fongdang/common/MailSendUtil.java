@@ -23,7 +23,7 @@ public class MailSendUtil {
 		int checkNum = r.nextInt(888888) + 111111;
 		System.out.println("-------------------------------");
 		System.out.println("인증번호:\t" + checkNum + "\n");
-		System.out.println("-------------------------------");
+		System.out.println("-------------------------------\n");
 		authNumber = checkNum;
 	}
 	
@@ -32,7 +32,7 @@ public class MailSendUtil {
 		makeRandomNumber();
 		String setFrom = "${email.account}";
 		String toMail = email;
-		String title= "[퐁당] 웹사이트 비밀번호 인증 안내[웹 제작 테스트용]"; // 이메일 제목
+		String title= "[퐁당] 웹사이트 비밀번호 인증 안내[웹개발테스트]"; // 이메일 제목
 		String content = "홈페이지를 방문해주셔서 감사합니다."
 				+	"<br><br>"
 				+	"인증 번호는 [" + authNumber + "]입니다."
@@ -47,7 +47,7 @@ public class MailSendUtil {
 		MimeMessage message = mailSender.createMimeMessage();
 		//true 매개값을 전달하면 multipart 형식의 메세지 전달이 가능.문자 인코딩 설정도 가능
 		try {
-			MimeMessageHelper helper = new MimeMessageHelper(message,true,"utf-8");
+			MimeMessageHelper helper = new MimeMessageHelper(message, true, "utf-8");
 			helper.setFrom(setFrom);
 			helper.setTo(toMail);
 			helper.setSubject(title);

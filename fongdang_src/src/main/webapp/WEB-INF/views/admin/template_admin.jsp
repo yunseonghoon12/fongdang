@@ -124,8 +124,7 @@
         <h2 style="text-align: center; color:blue;">담당 기능 작성하기</h2>      
     </div>           
   </div>  
-  <!-- 임시 footer -->
-  <!-- <footer style="background-color: #ccc; color: blue; font-size:28px; text-align:center; height: 200px;">푸터 영역</footer> --> 
+  
   <jsp:include page="../footer.jsp"/>
   <script>
     $("#admin_nav ul li a").click(function() {

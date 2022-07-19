@@ -61,36 +61,38 @@
       height: 800px;      
     }
     #main_content{      
-      margin: 0 auto;
-      width: 380px;
-      height: 700px;
+      	margin: 0 auto;
+      	width: 380px;
+      	height: 700px;
 
-      position: relative;
+      	position: relative;
     }
     #main {      
-      height: 600px;
-      padding-top: 45%;      
+      	height: 600px;
+      	padding-top: 45%;      
     }
     #main_title {      
-      width: 300px;
-      height: 50px;
-      font-family: SUIT-SemiBold;
-      font-size: 35px;
-      font-weight: 700;
+      	width: 300px;
+      	height: 50px;
+      	font-family: SUIT-SemiBold;
+      	font-size: 35px;
+      	font-weight: 700;
     }
     #sub_title {
-      font-family: SUIT-Regular;
+      	font-family: SUIT-Regular;
     }
     #social_login_content {      
-      margin-top: 50px;            
-      height: 70px;
+      	margin-top: 50px;            
+      	height: 70px;
     }
-    #icon_group {      
-      width: 190px;
-      margin: 10px auto;
-    }
-    #icon_group > a > img {
-      margin: 5px;
+    #icon_group {    	      
+      	width: 150px;
+      	margin: 10px auto;
+    }    
+    #kakaoLogin, #naverLogin{    
+    	margin: 5px;	   	
+    	background: none;
+    	border: none;
     }
     #separate {            
       padding-top: 10px;
@@ -118,7 +120,7 @@
     }
     #enroll_foot {            
       width: 250px;
-      margin: 50px auto;
+      margin: 30px auto;
       text-align: center;
     }
   </style>
@@ -150,31 +152,26 @@
           퐁당 신규회원 가입하고<br>
           다양한 혜택을 받아보세요.
         </p> 
-        <div id="social_login_content">
-          <div id="icon_group">          
-          <!-- https://kauth.kakao.com/oauth/authorize?client_.id=REST_API키&redirect_uri=REDIRECT_URL&response_type=code -->            
-            <a href="https://kauth.kakao.com/oauth/authorize?client_id=<spring:eval expression="@property['kakao.api_key']"/>&redirect_uri=<spring:eval expression="@property['kakao.redirect_uri']"/>&response_type=code">
-            	<img src="<%=request.getContextPath()%>/resources/images/kakao_logo.png" style="width: 45px;">
-            </a>
-            <a href="<%=request.getContextPath()%>/member/login/oauth/naver">
-            	<img src="<%=request.getContextPath()%>/resources/images/naver_logo.png" style="width: 45px;">
-            </a>
-            <a href="#">
-            	<img src="<%=request.getContextPath()%>/resources/images/google_logo.png" style="width: 45px;">
-            </a>
-          
-          </div>
+        <div id="social_login_content">          
+          	<div id="enroll_wrap">
+          		<button type="button" id="enroll_btn" onclick="location.href='<%=request.getContextPath()%>/member/registerForm';">
+            		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 17 12">
+              			<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            		</svg>
+            		이메일로 가입
+          		</button>
+        	</div>
         </div>
         <hr>
-        <p id="separate">또는</p>
-        <div id="enroll_wrap">
-          <button type="button" id="enroll_btn" onclick="location.href='<%=request.getContextPath()%>/member/registerForm';">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 17 12">
-              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-            </svg>
-            이메일로 가입
-          </button>
-        </div>
+        <p id="separate">또는</p>        
+        <div id="icon_group">          	
+            <button type="button" id="kakaoLogin" onclick="kakaoLogin()">
+            	<img src="<%=request.getContextPath()%>/resources/images/kakao_logo.png" style="width: 45px;">
+            </button>            
+            <button type="button" id="naverLogin" onclick="naverLogin()">
+            	<img src="<%=request.getContextPath()%>/resources/images/naver_logo.png" style="width: 45px;">
+            </button>
+          </div>
         <div id="enroll_foot">
           <span style="font-size: 13px; font-family: SUIT-Light;">이미 퐁당 계정이 있나요?</span>
           <a href="<%=request.getContextPath()%>/member/login" style="font-size: 13px; font-family: SUIT-Light; color: rgb(182, 224, 214);">로그인</a>
@@ -184,6 +181,25 @@
     </div>
   </div>
   
-	<jsp:include page="../footer.jsp" />		
+	<jsp:include page="../footer.jsp" />	
+	
+	<script>
+		function kakaoLogin() {			
+			var url = 'https://kauth.kakao.com/oauth/authorize?client_id=' + '<spring:eval expression="@property['kakao.api_key']"/>'
+					+ '&redirect_uri='+ '<spring:eval expression="@property['kakao.redirect_uri']"/>' + '&response_type=code';
+			location.href= url;						
+		}
+		
+		function naverLogin() {
+			// ajax를 통해 얻은 네이버 로그인 URL로 이동
+			$.ajax({
+	        	url: '<%=request.getContextPath()%>/member/login/getNaverAuthUrl',
+	        	type: 'get',
+	    	}).done(function (res) {
+		        location.href = res;
+	    	});
+		}	
+		
+	</script>	
 </body>
 </html>

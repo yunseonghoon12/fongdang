@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Oauth">
+
+	<insert id="insertSnsUser" parameterType="Oauth">		
+		<if test="sns_name != null">
+			insert into sns_info(		
+	    		sns_email, 
+	    		sns_name, 
+    			sns_nickname, 
+    			sns_type, 
+    			sns_connect_date    	
+			)   values(		
+	    		#{sns_email},
+	    		#{sns_name}, 
+    			#{sns_nickname},  
+    			#{sns_type}, 
+    			default
+			)
+		</if>				
+		<if test="sns_name == null ">
+			insert into sns_info(		
+	    		sns_email, 
+    			sns_nickname, 
+    			sns_type, 
+    			sns_connect_date    	
+			)   values(		
+	    		#{sns_email},
+    			#{sns_nickname},  
+    			#{sns_type}, 
+    			default
+			)
+		</if>
+	</insert>
+	
+	
+</mapper>

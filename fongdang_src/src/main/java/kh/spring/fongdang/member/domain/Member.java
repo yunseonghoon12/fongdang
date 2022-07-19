@@ -1,6 +1,6 @@
 package kh.spring.fongdang.member.domain;
 
-import java.sql.Timestamp;
+
 
 import org.springframework.stereotype.Component;
 

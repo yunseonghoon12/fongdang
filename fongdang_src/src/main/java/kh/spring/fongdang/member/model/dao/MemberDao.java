@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kh.spring.fongdang.funding.domain.Funding;
-import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.member.domain.Member;
 
 @Repository

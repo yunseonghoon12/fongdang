@@ -156,7 +156,7 @@
 		<div id="empty_content">			
 			<p style="margin-bottom: 40px;">오픈한 펀딩 프로젝트가 없습니다</p>
 			<div>
-				<button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/Register';" id="fundingEnroll_btn">펀딩 오픈 신청하러 가기</button>				
+				<button type="button" onclick="location.href='<%=request.getContextPath()%>/maker/view';" id="fundingEnroll_btn">펀딩 오픈 신청하러 가기</button>				
 			</div>		
 		</div>
 </c:if>    

@@ -394,7 +394,7 @@
     	console.log("email: " + email_val);
     	
     	 if(emailValidity == false) {
-    		return 0;
+    		return ;
     	} else { 
     		$.ajax({
     			url: "<%=request.getContextPath()%>/member/authentication",
@@ -404,7 +404,7 @@
         		},
         		success : function(authNumber) {
         			// * 실제 사용시에는 console.log 띄우지 말기
-					console.log("인증번호: " + authNumber);
+					/* console.log("인증번호: " + authNumber); */
 					alert("인증번호가 전송되었습니다.");	
         			var authNumber = authNumber;
         			var html = "";

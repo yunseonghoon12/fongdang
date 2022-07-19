@@ -62,7 +62,7 @@ public class AdminController {
 	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
 	public ModelAndView pageMemberManagement(ModelAndView mv
 			, @RequestParam(value="related_search", required=false) String keyword
-			, @RequestParam(value="page", defaultValue="nothing") String currentPageStr
+			, @RequestParam(value="page", defaultValue="none") String currentPageStr
 			, HttpSession session) {		
 		List<Member> memberList =null; 		
 		System.out.println("keyword: " + keyword);
@@ -78,7 +78,7 @@ public class AdminController {
 		int memberLimit = 5;
 		
 		try {
-			if(currentPageStr !=null && !currentPageStr.equals("nothing"))
+			if(currentPageStr !=null && !currentPageStr.equals("none"))
 				currentPage = Integer.parseInt(currentPageStr);
 		}catch (NumberFormatException e) {
 			e.printStackTrace();
