@@ -20,7 +20,6 @@ public class SmsController {
 	@ResponseBody
 	@PostMapping("/insert")
 	public int insertSms(Sms sms, HttpSession sessoin) {
-		// 로그인 완성 되면 주석 풀고 기능 확인
 		// 로그인 여부 확인
 //		Member loginInfo = (Member)session.getAttribute("loginInfo");
 //		if(loginInfo == null) { // 로그아웃 상태일 때
@@ -45,9 +44,8 @@ public class SmsController {
 	@ResponseBody
 	@PostMapping("/delete")
 	public int deleteSms(int s_no, HttpSession session) {
-		// 로그인 완성 되면 주석 풀고 기능 확인
 		// 로그인 여부 확인
-//		Member loginInfo = (Member)session.getAttribute("loginSsInfo");
+//		Member loginInfo = (Member)session.getAttribute("loginInfo");
 //		if(loginInfo == null) { // 로그아웃 상태일 때
 //			return 0;
 //		} else {

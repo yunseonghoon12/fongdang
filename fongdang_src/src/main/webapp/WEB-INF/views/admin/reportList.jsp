@@ -172,7 +172,7 @@
 						alert("상품 판매 비승인이 되지 않았습니다. 다시 시도해주세요.");
 					} else if (result == 0) {
 						alert("관리자 로그인을 한 후에 비승인이 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						alert("상품 판매를 비승인했습니다.");
 						location.reload();

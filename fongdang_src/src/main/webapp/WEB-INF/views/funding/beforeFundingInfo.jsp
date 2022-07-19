@@ -251,7 +251,7 @@
 						$("#m_content").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 문의가 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						alert("판매자에게 문의를 했습니다. 답장을 기다려주세요.");
 						$("#m_content").val("");
@@ -312,7 +312,7 @@
 						$("#s_receiver").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 알림신청이 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						$("#s_receiver").val("");
 						$(".phone").hide();
@@ -348,7 +348,7 @@
 						$("#s_receiver").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 알림신청 취소가 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						$(".cancel_alarm").show();
 					}

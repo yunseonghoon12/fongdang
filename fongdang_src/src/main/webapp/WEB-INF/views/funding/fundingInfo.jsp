@@ -245,20 +245,6 @@
                     		</c:forEach>
                     	</c:otherwise>
                     </c:choose>
-<!--                     <div class="review_list">
-                        <div class="review_list_left"></div>
-                        <div class="review_list_right">
-                            <div class="review_info">
-                                <p>작성자닉네임</p>
-                                <p>yyyy.mm.dd hh:mm:ss</p>
-                                <div class="review_update_delete">
-                                    <button class="btn_review_update" type="button">리뷰수정</button>
-                                    <button class="btn_review_delete" type="button" onclick="deleteReview();">리뷰삭제</button>
-                                </div>
-                            </div>
-                            <div class="review_content">리뷰 내용</div>
-                        </div>
-                    </div> -->
                 </section>
             </div>
         </div>
@@ -402,7 +388,7 @@
 						$("#m_content").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 문의가 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						alert("판매자에게 문의를 했습니다. 답장을 기다려주세요.");
 						$("#m_content").val("");
@@ -473,7 +459,7 @@
 						$("#report_content").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 신고가 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 2) {
 						alert("이미 신고한 상품입니다.");
 						$("#report_category").val("허위사실").prop("selected", true);
@@ -516,12 +502,11 @@
 						$("#r_content").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 리뷰등록이 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 2) {
 						alert("상품에 펀딩을 한 후, 리뷰를 남길 수 있습니다. 해당 상품을 펀딩해주세요!");
 					}else if (result == 1) {
 						alert("리뷰가 등록됐습니다.");
-						//$("#r_content").val("");
 						location.reload();
 					}
 				},
@@ -576,7 +561,7 @@
 						$("#review_update").focus();
 					} else if (result == 0) {
 						alert("로그인을 한 후에 리뷰수정이 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						alert("리뷰가 수정됐습니다.");
 						location.reload();
@@ -602,7 +587,7 @@
 						alert("리뷰가 삭제되지 않았습니다. 다시 시도해주세요.");
 					} else if (result == 0) {
 						alert("로그인을 한 후에 리뷰삭제가 가능합니다. 로그인 페이지로 이동합니다.");
-						/* location.href = "login"; */
+						location.href = "<%=request.getContextPath()%>/member/login";
 					} else if (result == 1) {
 						alert("리뷰가 삭제됐습니다.");
 						location.reload();
