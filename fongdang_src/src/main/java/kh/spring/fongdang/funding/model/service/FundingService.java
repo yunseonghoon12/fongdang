@@ -42,4 +42,7 @@ public interface FundingService {
 	
 	/* 승인 요청 목록 조회 */
 	public List<Funding> selectApprovalList(int startRnum, int endRnum);
+	
+	/* 카테고리 검색 */
+	public List<Funding> selectSearchList(String category);
 }

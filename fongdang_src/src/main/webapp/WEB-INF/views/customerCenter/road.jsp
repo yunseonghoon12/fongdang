@@ -22,7 +22,7 @@
 	min-width: 1200px;
 	max-width: 1200px;
 	margin: 0 auto;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .textMapWrap {

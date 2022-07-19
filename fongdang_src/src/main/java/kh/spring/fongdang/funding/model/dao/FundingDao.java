@@ -87,6 +87,14 @@ public class FundingDao {
 	public List<Funding> selectCatePreProducts6(String C6) {
 		return session.selectList("Funding.selectCatePreProducts6",C6);
 	}
+
+	/* 상품 카테고리 검색하기 */
+	public List<Funding> selectSearchList(String search_category) {
+		return session.selectList("Funding.selectSearchList",search_category);
+	}
+
+	
+	
 	
 	public int updateFundingApproval(Funding funding) {
 		return session.update("Funding.updateFundingApproval", funding);

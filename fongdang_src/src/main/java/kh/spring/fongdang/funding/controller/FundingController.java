@@ -220,5 +220,13 @@ public class FundingController {
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
-	
+
+	@GetMapping("/list.search")
+	public ModelAndView selectSearchList(ModelAndView mv,
+			@RequestParam(name = "category", defaultValue = "") String search_category) {
+		mv.addObject("allProducts", service.selectSearchList(search_category));
+
+		mv.setViewName("funding/fundinglist");
+		return mv;
+	}
 }

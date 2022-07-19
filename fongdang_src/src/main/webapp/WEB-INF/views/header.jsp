@@ -12,7 +12,7 @@
 	href="<%=request.getContextPath()%>/resources/css/button.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<div class="headerWrap">
+<div class="main_headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
 		<nav style="min-width: 1280px;">
 			<a href="<%=request.getContextPath()%>"> <img
@@ -37,11 +37,11 @@
 						style="margin-left: 344px; width: 300px;">
 
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="categroy" type="text" class="form-control rounded-pill"
-								id="textbox" placeholder="category 검색">
+							<input name="search_categroy" type="search" class="form-control rounded-pill"
+								id="header_textbox" placeholder="category 검색">
 							<div class="input-group-append"></div>
 						</div>					
-						<label for="textbox"><img
+						<label for="header_textbox"><img
 							src="<%=request.getContextPath()%>/resources/images/magnifying.png"
 							class="question_header"></label>
 					</form>

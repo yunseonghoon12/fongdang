@@ -192,5 +192,24 @@
 	order by start_day asc
 ]]>
 	</select>
+	<select id="selectSearchList" parameterType="string"
+		resultType="Funding">
+<![CDATA[
+	 select 
+		p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt, 
+ 		to_date(end_day,'YYYY-MM-DD')-to_date(sysdate,'YYYY-MM-DD') open_day,category_name
+	from product left outer join category using(category_id) 
+    where start_day < sysdate and end_day > sysdate and category_name like '%'||#{search_category}||'%'
+    order by start_day asc
+]]>
+	</select>
+	<select id="selectReFunding" parameterType="string"
+		resultType="Funding">
+<![CDATA[
+	 select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt, 
+ 	to_date(end_day,'YYYY-MM-DD')-to_date(sysdate,'YYYY-MM-DD') open_day,category_name 
+ 	from product where start_day < sysdate and end_day > sysdate and p_name like '%'||'앵콜'||'%' 
+]]>
+	</select>
 
 </mapper>

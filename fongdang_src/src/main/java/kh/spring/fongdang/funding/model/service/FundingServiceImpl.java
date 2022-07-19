@@ -101,4 +101,10 @@ public class FundingServiceImpl implements FundingService {
 		return dao.selectApprovalList(startRnum, endRnum);
 	}
 
+	@Override
+	public List<Funding> selectSearchList(String search_category) {
+		return dao.selectSearchList(search_category);
+
+	}
+
 }

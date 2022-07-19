@@ -1,6 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fundingInfo.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fundingInfo_modal.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -15,6 +14,7 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
+<jsp:include page="../header.jsp" />
     <div class="modal share">
         <div class="share_content">
             <p class="modal_title">공유하기</p>
@@ -93,11 +93,8 @@
         </div>
     </div>
     <div class="main_wrap">
-        <div class="wrap header">
-        	<jsp:include page="../header.jsp"/>
-        </div>
         <div class="wrap content" style="width: 1200px; margin: 0 auto;">
-            <div class="funding_header">
+            <div class="funding_header" style="margin-top: 32px;">
                 <p>${funding.category_name}</p>
                 <h2>${funding.p_name}</h2>
             </div>

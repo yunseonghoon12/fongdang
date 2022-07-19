@@ -1,8 +1,13 @@
-<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo_modal.css">
+<link rel="shortcut icon" type="image/x-icon"
+	href="<%=request.getContextPath()%>/resources/images/investor.ico" />
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo_modal.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/main.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -15,113 +20,128 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-    <div class="modal message">
-        <div class="message_content">
-            <p class="modal_title">문의하기</p>
-            <p class="message_notice">* 문의하기는 실시간 채팅이 아닙니다. 판매자에게 답장이 올 때까지 기다려주세요. *</p>
-            <div class="message_input">
-            	<input type="hidden" id = "receiver" value="${funding.maker_name}">
-                <textarea cols="45" rows="10" name="message" id="m_content" placeholder="문의 내용을 입력해주세요." required></textarea>
-            </div>
-            <div class="message_send">
-                <button id="btn_message_cancel" type="button">취소</button>
-                <button id="btn_message_send" type="button">보내기</button>
-            </div>
-        </div>
-    </div>
-    <div class="modal phone">
-    	<div class="phone_content">
-    		<p class="modal_title">알림신청</p>
-    		<div class="phone_input">
-    			<input type="hidden" id = "p_no" value="${funding.p_no}">
-    			<input type="text" name="s_receiver" id="s_receiver" placeholder="오픈 알림을 받을 번호를 입력해주세요." maxlength="11">
-    			<span style="font-family: SUIT-Light; font-size: 10px; color: red;">* 핸드폰 번호 입력 시 '-'를 제외한 숫자만 입력해주세요.</span>
-    		</div>
-    		<div class="phone_submit">
-    			<button id="btn_phone_cancel" type="button">취소</button>
-    			<button id="btn_phone_submit" type="button">입력</button>
-    		</div>
-    	</div>
-    </div>
-    <div class="modal alarm">
-        <div class="alarm_content">
-            <p>오픈 알림이 신청되었습니다!</p>
-        </div>
-    </div>
-    <div class="modal cancel_alarm">
-        <div class="cancel_alarm_content">
-            <p>오픈 알림 신청이 취소되었습니다.</p>
-        </div>
-    </div>
-    <div class="main_wrap">
-        <div class="wrap header">
-        	<jsp:include page="../header.jsp"/>
-        </div>
-        <div class="wrap content" style="width: 1200px;  margin: 0 auto;">
-            <div class="funding_header">
-                <p>${funding.category_name}</p>
-                <h2>${funding.p_name}</h2>
-            </div>
-            <div class="funding_content">
-                <section class="funding_info">
-                    <div class="left_funding_info">
-                        <img id = "thumbnail_img" src="${funding.p_thumbnail}">
-                        <p style="margin-top: 15px; margin-bottom: 15px;">${funding.p_summary}</p>
-                    </div>
-                    <div class="right_funding_info">
-                    	<c:choose>
-                    		<c:when test="${empty funding.sms}">
-			                    <button id="btn_funding_alarm" type="button"><img src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청<span style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span></button>
-                    		</c:when>
-                    		<c:when test="${not empty funding.sms}">
-                    			<input type="hidden" id = "s_no" value="${funding.sms.s_no}">
-		                        <button id="btn_funding_alarm_cancel" type="button"><img src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청완료<span style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span></button>
-                    		</c:when>
-                    	</c:choose>
-                        <p class="funding_open_info">${funding.start_day} 오픈예정</p>
-                        <button id="btn_message" type="button"><img src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게 문의하기</button>
-                        <h3>메이커 정보</h3>
-                        <div class="maker_info">
-                             <div class="maker_img_name">
-                                <div class="maker_logo"></div>
-                                <span class="maker_name">${funding.maker_name}</span>
-                            </div>
-                            <table>
-                               <c:if test="${not empty funding.maker_email}">
-	                                <tr>
-	                                    <th>이메일</th>
-	                                    <td>${funding.maker_email}</td>
-	                                </tr>
-                            	</c:if>
-                            	<c:if test="${not empty funding.maker_phone}">
-	                                <tr>
-	                                    <th>문의전화</th>
-	                                    <td>${funding.maker_phone}</td>
-	                                </tr>
-                            	</c:if>
-                            	<c:if test="${not empty funding.maker_kakao_channel}">
-	                                <tr>
-	                                    <th>카카오톡 채널</th>
-	                                    <td>${funding.maker_kakao_channel}</td>
-	                                </tr>
-                            	</c:if>
-                            	<c:if test="${not empty funding.maker_homepage}">
-	                                <tr>
-	                                    <th>홈페이지</th>
-	                                    <td>${funding.maker_homepage}</td>
-	                                </tr>
-                            	</c:if>
-                            </table>                        
-                         </div>
-                    </div>
-                </section>
-                <nav class="funding_menu">
-                    <input type="radio" name = "tab" id="story_tab" checked><label for="story_tab" class="tab_btn">스토리</label>
-                </nav>
-                <section class="funding_story">${funding.p_story}</section>
-            </div>
-        </div>
-    </div>
+	<jsp:include page="../header.jsp" />
+	<div class="modal message">
+		<div class="message_content">
+			<p class="modal_title">문의하기</p>
+			<p class="message_notice">* 문의하기는 실시간 채팅이 아닙니다. 판매자에게 답장이 올 때까지
+				기다려주세요. *</p>
+			<div class="message_input">
+				<input type="hidden" id="receiver" value="${funding.maker_name}">
+				<textarea cols="45" rows="10" name="message" id="m_content"
+					placeholder="문의 내용을 입력해주세요." required></textarea>
+			</div>
+			<div class="message_send">
+				<button id="btn_message_cancel" type="button">취소</button>
+				<button id="btn_message_send" type="button">보내기</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal phone">
+		<div class="phone_content">
+			<p class="modal_title">알림신청</p>
+			<div class="phone_input">
+				<input type="hidden" id="p_no" value="${funding.p_no}"> <input
+					type="text" name="s_receiver" id="s_receiver"
+					placeholder="오픈 알림을 받을 번호를 입력해주세요." maxlength="11"> <span
+					style="font-family: SUIT-Light; font-size: 10px; color: red;">*
+					핸드폰 번호 입력 시 '-'를 제외한 숫자만 입력해주세요.</span>
+			</div>
+			<div class="phone_submit">
+				<button id="btn_phone_cancel" type="button">취소</button>
+				<button id="btn_phone_submit" type="button">입력</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal alarm">
+		<div class="alarm_content">
+			<p>오픈 알림이 신청되었습니다!</p>
+		</div>
+	</div>
+	<div class="modal cancel_alarm">
+		<div class="cancel_alarm_content">
+			<p>오픈 알림 신청이 취소되었습니다.</p>
+		</div>
+	</div>
+	<div class="main_wrap">
+		<div class="wrap content" style="width: 1200px; margin: 0 auto;">
+			<div class="funding_header" style="margin-top:32px;">
+				<p>${funding.category_name}</p>
+				<h2>${funding.p_name}</h2>
+			</div>
+			<div class="funding_content">
+				<section class="funding_info">
+					<div class="left_funding_info">
+						<img id="thumbnail_img" src="${funding.p_thumbnail}">
+						<p style="margin-top: 15px; margin-bottom: 15px;">${funding.p_summary}</p>
+					</div>
+					<div class="right_funding_info">
+						<c:choose>
+							<c:when test="${empty funding.sms}">
+								<button id="btn_funding_alarm" type="button">
+									<img
+										src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청<span
+										style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span>
+								</button>
+							</c:when>
+							<c:when test="${not empty funding.sms}">
+								<input type="hidden" id="s_no" value="${funding.sms.s_no}">
+								<button id="btn_funding_alarm_cancel" type="button">
+									<img
+										src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청완료<span
+										style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span>
+								</button>
+							</c:when>
+						</c:choose>
+						<p class="funding_open_info">${funding.start_day}오픈예정</p>
+						<button id="btn_message" type="button">
+							<img
+								src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게
+							문의하기
+						</button>
+						<h3>메이커 정보</h3>
+						<div class="maker_info">
+							<div class="maker_img_name">
+								<div class="maker_logo"></div>
+								<span class="maker_name">${funding.maker_name}</span>
+							</div>
+							<table>
+								<c:if test="${not empty funding.maker_email}">
+									<tr>
+										<th>이메일</th>
+										<td>${funding.maker_email}</td>
+									</tr>
+								</c:if>
+								<c:if test="${not empty funding.maker_phone}">
+									<tr>
+										<th>문의전화</th>
+										<td>${funding.maker_phone}</td>
+									</tr>
+								</c:if>
+								<c:if test="${not empty funding.maker_kakao_channel}">
+									<tr>
+										<th>카카오톡 채널</th>
+										<td>${funding.maker_kakao_channel}</td>
+									</tr>
+								</c:if>
+								<c:if test="${not empty funding.maker_homepage}">
+									<tr>
+										<th>홈페이지</th>
+										<td>${funding.maker_homepage}</td>
+									</tr>
+								</c:if>
+							</table>
+						</div>
+					</div>
+				</section>
+				<nav class="funding_menu">
+					<input type="radio" name="tab" id="story_tab" checked><label
+						for="story_tab" class="tab_btn">스토리</label>
+				</nav>
+				<section class="funding_story">${funding.p_story}</section>
+			</div>
+		</div>
+	</div>
 
     <script>
         // 문의하기 버튼 클릭 시 모달창 띄우기

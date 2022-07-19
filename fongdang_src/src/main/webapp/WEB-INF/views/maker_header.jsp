@@ -16,8 +16,8 @@
      $.noConflict(); //이때부터 jQuery는 $ 식별자를 포기하고 jQuery() 를 사용함    
 	var _$ = jQuery 
     </script> 
-<div class="headerWrap">
-	<header class="site__header" style="margin: 0 auto;width=1280px;">
+<div class="headerWrap" style="position: relative;top: -16px;">
+	<header class="site__header" style="margin: 0 auto;width=1280px;    font-family: 'SUIT-Regular';">
 		<nav>
 			<a href="<%=request.getContextPath()%>"> <img
 				src="<%=request.getContextPath()%>/resources/images/logo.png"
@@ -38,7 +38,7 @@
 						style="margin-left: 344px; width: 300px;">
 						
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="a" type="text" class="form-control rounded-pill" id="textbox"
+							<input name="a" type="search" class="form-control rounded-pill" id="textbox"
 								placeholder="category 검색">
 							<div class="input-group-append"></div>
 						</div>
