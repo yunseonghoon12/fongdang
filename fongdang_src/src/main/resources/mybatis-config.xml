@@ -20,6 +20,7 @@
 		<typeAlias type="kh.spring.fongdang.report.domain.Report" alias="Report"/>
 		<typeAlias type="kh.spring.fongdang.admin.domain.Sales" alias="Sales"/>
 		<typeAlias type="kh.spring.fongdang.common.Criteria" alias="Criteria"/>
+		<typeAlias type="kh.spring.fongdang.oauth.model.dto.SnsInfo" alias="Oauth"/>
 	</typeAliases>
 		
 	<mappers>
@@ -37,5 +38,6 @@
 		<mapper resource="mappers/report-mapper.xml"/>
 		<mapper resource="mappers/admin-mapper.xml"/>
 		<mapper resource="mappers/sales-mapper.xml"/>
+		<mapper resource="mappers/oauth-mapper.xml"/>
 	</mappers>
 </configuration>
