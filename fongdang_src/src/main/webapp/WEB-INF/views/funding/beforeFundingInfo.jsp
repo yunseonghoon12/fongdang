@@ -23,8 +23,7 @@
 				기다려주세요. *</p>
 			<div class="message_input">
 				<input type="hidden" id="receiver" value="${funding.maker_name}">
-				<textarea cols="45" rows="10" name="message" id="m_content"
-					placeholder="문의 내용을 입력해주세요." required></textarea>
+				<textarea cols="43" rows="10" name="message" id="m_content" placeholder="문의 내용을 입력해주세요.(최대 160자)" maxlength="160"></textarea>
 			</div>
 			<div class="message_send">
 				<button id="btn_message_cancel" type="button">취소</button>

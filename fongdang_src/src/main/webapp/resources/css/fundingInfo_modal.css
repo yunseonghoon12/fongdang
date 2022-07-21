@@ -62,7 +62,7 @@ select {
 }
 .share_content .share_way {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 30px 0;
 }
 .share_content .share_way img {

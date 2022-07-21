@@ -30,16 +30,6 @@ select {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
 }
-.modal > .share_content {
-    position: relative;
-    top: 230px;
-    margin: auto;
-    width: 300px;
-    background-color: #fffaf5;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: SUIT-Regular;
-}
 .modal > .message_content {
     position: relative;
     top: 150px;
@@ -54,7 +44,7 @@ select {
     position: relative;
     top: 250px;
     margin: auto;
-    width: 220px;
+    width: 240px;
     background-color: #fffaf5;
     border-radius: 10px;
     padding: 10px;
@@ -81,25 +71,6 @@ select {
     font-family: SUIT-SemiBold;
     color: #5e5e5e;
     font-size: 20px;
-}
-.share_content button {
-    background-color: transparent;
-}
-.share_content .share_way {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-.share_content .share_way img {
-    width: 50px;
-}
-.share_content .share_confirm {
-    text-align: center;
-}
-.share_content #btn_share_confirm {
-    font-family: SUIT-Regular;
-    font-size: 15px;
-    color: #9BBFD9;
 }
 .message_content .message_notice{
     color: red;

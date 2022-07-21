@@ -35,7 +35,7 @@
             <p class="message_notice">* 문의하기는 실시간 채팅이 아닙니다. 판매자에게 답장이 올 때까지 기다려주세요. *</p>
             <div class="message_input">
             	<input type="hidden" id = "receiver" value="${funding.maker_name}">
-                <textarea cols="45" rows="10" name="m_content" id="m_content" placeholder="문의 내용을 입력해주세요." required></textarea>
+                <textarea cols="43" rows="10" name="m_content" id="m_content" placeholder="문의 내용을 입력해주세요.(최대 160자)" maxlength="160"></textarea>
             </div>
             <div class="message_send">
                 <button id="btn_message_cancel" type="button">취소</button>
@@ -59,7 +59,7 @@
 	            </div>
 	            <div class="report_input">
 	                <p>신고 내용 입력</p>
-	                <textarea cols="35" rows="10" name="report_content" id="report_content" placeholder="신고 내용을 입력해주세요." required></textarea>
+	                <textarea cols="35" rows="10" name="report_content" id="report_content" placeholder="신고 내용을 입력해주세요.(최대 160자)" maxlength="160"></textarea>
 	            </div>
 	            <div class="report_proof">
 	            	<input class="upload-name" value="증빙자료" disabled="disabled">
@@ -84,7 +84,7 @@
             <p class="modal_title">리뷰 수정</p>
             <div class="review_input">
             	<input type="hidden" id="review_r_no">
-                <textarea cols="35" rows="10" name="review_update" id="review_update"></textarea>
+                <textarea cols="35" rows="10" name="review_update" id="review_update" maxlength="1300"></textarea>
             </div>
             <div class="review_send">
                 <button id="btn_review_cancel" type="button">취소</button>
@@ -219,7 +219,7 @@
                 	<!-- TODO : 로그아웃 상태이면 안 보이게 하기? -->
                     <div class="review_input">
                     	<input type="hidden" id="p_no" value="${funding.p_no}">
-                        <textarea cols="100" rows="5" id="r_content" placeholder="리뷰 내용을 입력해주세요." required></textarea>
+                        <textarea cols="100" rows="5" id="r_content" placeholder="리뷰 내용을 입력해주세요.(최대 1300자)" maxlength="1300"></textarea>
                         <button id="btn_review" type="button">리뷰등록</button>
                     </div>
                     <c:choose>
