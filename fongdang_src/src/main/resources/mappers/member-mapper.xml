@@ -81,7 +81,8 @@
         		JOIN category c USING(category_id)
         		JOIN maker m USING(maker_name)
         		JOIN pick ck using(p_no) 				
- 		where ck.email = #{email}    
+ 		where ck.email = #{email} 
+ 		AND ck.pick_yn = 'Y'   
  		order by d_day
 	</select>
 	
@@ -92,6 +93,7 @@
         	JOIN maker m USING(maker_name)
         	JOIN pick ck using(p_no)
  			where ck.email = #{email}
+ 			AND ck.pick_yn = 'Y' 
 	</select>
 	
 	<select id="selectMyOrderList" parameterType="string" resultType="Funding">		

@@ -65,7 +65,7 @@
 	}
     #message_content_wrap {      
       	margin: 0 auto;
-      	width: 550px;
+      	width: 450px;
       	height: 400px;      
 	    background-color: white;
     }

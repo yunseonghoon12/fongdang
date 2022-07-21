@@ -281,7 +281,7 @@
         console.log("click()");
         console.log("m_no: " + $(this).children().val());
         
-       	var option= "width=600, height=550";
+       	var option= "width=500, height=550";
        	var m_no = $(this).children().val();
        	var url = "<%=request.getContextPath()%>/member/messagebox/msg?m_no=";
        	url += m_no;
