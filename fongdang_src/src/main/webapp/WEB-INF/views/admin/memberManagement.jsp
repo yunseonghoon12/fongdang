@@ -140,8 +140,11 @@
     	
     	font-size: 14px;
     	font-family: SUIT-Light;
+    	
+    	cursor: pointer;
     }
     #search_btn:hover {
+    	font-weight: bold;
     	color:white;
     }
     #withdraw_btn_wrap {
@@ -157,6 +160,8 @@
     	
     	font-size: 14px;
     	font-family: SUIT-Light;
+    	
+    	cursor: pointer;
     }
     #withdraw_btn:hover {
     	color: white;
@@ -290,16 +295,7 @@
    
   <jsp:include page="../footer.jsp"/>
   <script>
-    $("#admin_nav ul li a").click(function() {
-    	console.log("click()");
-        var before_color = '#444c57';
-        var after_color = '#9bbfd9';  
-
-        // 클릭한 이벤트 객체의 폰트색 변경
-        $(this).css('color', after_color);      
-        // 클릭하지 않은 다른 객체들의 폰트색 변경
-        $("#admin_nav > ul> li > a").not(this).css('color', before_color);
-    });
+   
     
     function memberWithDrawHandler() {
     	var cnf = confirm("해당 회원을 탈퇴상태로 변경하겠습니까?"); 

@@ -306,7 +306,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/messagebox", method= RequestMethod.GET)
 	public ModelAndView pageMyMessageBox(ModelAndView mv
-			, @RequestParam(value="message_type", defaultValue= "sender") String message_type
+			, @RequestParam(value="message_type", defaultValue= "send") String message_type
 			, @RequestParam(value="page", defaultValue="1") String currentPageStr
 			, HttpSession session) {
 		List<Message> result = null;

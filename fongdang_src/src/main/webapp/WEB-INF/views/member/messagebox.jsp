@@ -59,16 +59,20 @@
     	background: none;
     	border: none;
     	border-radius: 3px;	
+    	
     	cursor: pointer;
     }
-    .message_btn:focus {
-    	color: #9bbfd9;
-    	border: 1px solid #9bbfd9;
+    .message_btn:hover {
+    	color: #444c57;
+    	border: 1px solid #444c57;
+    	font-weight: bold;
     }
     #message_content {
     	margin: 120px auto 50px auto;
     	width: 1200px;
     	height: 300px;
+    	
+    	cursor: pointer;
     }
     #message_list {    
       margin: 30px auto;           
@@ -172,7 +176,7 @@
       	</div>
       </div>
       <div id="message_content">
-      	<c:if test="${!empty messageList }">
+<c:if test="${!empty messageList }">
       <table id="message_list">
         <thead>
         <tr>
@@ -198,7 +202,7 @@
     	</c:if>
           		</td>
           		<td>
-            		<div class="message_content" style="cursor: pointer;">
+            		<div class="message_content">
               			상품 관련 문의입니다.
               			<input type="hidden" name="m_no" value="${message.m_no}">
             		</div>
@@ -221,8 +225,7 @@
 			</div>
 			<p id="empty_content">
 				메시지가 없습니다.
-			</p>
-		
+			</p>		
 		</div>
 </c:if>
 	<p id="prev_next">
@@ -243,6 +246,26 @@
 
 
   <script>
+  	var message_type = $("#message_type").val();  	
+  	console.log("message_type:  " + message_type);
+  	
+  	if(message_type == 'send') {
+  		$("#send").css({
+  			"color" : "#9bbfd9"
+  		});
+  		$("#receive").css({
+  			"color" : "#444c57"
+  		});  		
+  	} 
+  	if(message_type == 'receive') {
+  		$("#send").css({
+  			"color" : "#444c57"
+  		});
+  		$("#receive").css({
+  			"color" : "#9bbfd9"
+  		}); 
+  	}  	
+  
     $("#prev_next a").click(function() {
     	console.log("click()");
         var before_color = '#444c57';
@@ -258,13 +281,13 @@
         console.log("click()");
         console.log("m_no: " + $(this).children().val());
         
-       	var option= "width=440, height=550, top=150, left=700";
+       	var option= "width=600, height=550";
        	var m_no = $(this).children().val();
        	var url = "<%=request.getContextPath()%>/member/messagebox/msg?m_no=";
        	url += m_no;
        	
        	console.log("url: " + url);
-        window.resizeTo(500, 550);
+        /* window.resizeTo(500, 550); */
         window.open(url, "popup", option);
 	});
     

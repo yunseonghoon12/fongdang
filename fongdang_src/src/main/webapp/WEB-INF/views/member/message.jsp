@@ -3,6 +3,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,17 +63,17 @@
 	    float: right;
 	    color: #9BBFD9;
 	}
-    #modal_wrap {      
+    #message_content_wrap {      
       	margin: 0 auto;
-      	width: 400px;
+      	width: 550px;
       	height: 400px;      
 	    background-color: white;
     }
-    #modal_title_wrap {
+    #message_title_wrap {
     	background-color: #9bbfd9;
     	height: 60px;
     }
-    #modal_title {
+    #message_title {
     	text-align: center;
     	font-family: SUIT-Regular;
       	font-size: 17px;
@@ -80,41 +81,46 @@
       	padding-top: 15px;
       	padding-bottom: 5px;
     }
-    #modal_subcation {
+    #message_subcation {
     	font-family: SUIT-Regular;
     	text-align: center;
       	font-size: 15px;
     }
-    #modal_content {
+    #message_content {
       border: 1px solid #9bbfd9;
       border-radius: 3px;
       margin: 30px 0;
-      padding: 15px;
+      padding: 20px;
       height: 300px;            
       color: #444c57;
       font-family: SUIT-Regular;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.7em;
     }
     #answer_wrap {      
-      margin: 0 auto;
-      width: 125px;
-      height: 45px;
+      	margin: 50px auto;      	
+      	height: 45px;
     }
-    #answer_btn {            
-      width: 120px;
-      height: 40px;
-      
-      font-family: SUIT-Regular;
-      font-size: 14px;
-      
-      background-color: #b6e0d6;
-      border: 1px solid #b6e0d6;
-      border-radius: 3px;
-      color: white;
-      
-      cursor: pointer;
+    #answer_btn {
+    	box-sizing: border-box;            
+      	width: 120px;
+      	height: 40px;      
+      	
+      	font-size: 14px;      
+      	background-color: #b6e0d6;      	
+      	color: white;      
+	    cursor: pointer;
     }
+    #check_btn {
+    	box-sizing: border-box;            
+      	width: 120px;
+      	height: 40px;
+            	
+      	font-size: 14px;      
+      	background-color: #444c57;
+      	color: white;      
+	    cursor: pointer;
+    } 
   </style>
 </head>
 <body>
@@ -130,27 +136,46 @@
             </div>
         </div>
     </div>
-	<div id="modal_title_wrap">
-		<p id="modal_title">메시지</p>
-		<p id="modal_subcation">퐁당</p>
+	<div id="message_title_wrap">
+		<p id="message_title">메시지</p>
+		<p id="message_subcation">퐁당</p>
 	</div>              
-  	<div id="modal_wrap">
-    	<div id="modal_content">
-    		${message.m_content }
+  	<div id="message_content_wrap">
+    	<div id="message_content">
+    		${message.m_content}
     	</div>
-    	<div id="answer_wrap">
+<c:if test="${message.sender == loginInfo.email}">
+    	<div id="answer_wrap" style="width:128px;">
+    		<button type="button" id="check_btn">확인</button>    	
+    	</div>
+</c:if>    	
+<c:if test="${message.sender != loginInfo.email}">
+		<!-- 사용자가 메이커로부터 수신받은 메시지에 답장 -->
+		<div id="answer_wrap" style="width: 250px;">
       		<button type="button" id="answer_btn">답장하기</button>
-    	</div>  
+      		<button type="button" id="check_btn">확인</button>
+    	</div>
+</c:if> 
+    	  
   	</div> 
 
   <script>
-    console.log("메시지번호: " + ${message.m_no});
-    
+  	var sender = '${message.sender}';
+  	var receiver = '${message.receiver}'
+  	var email = '${loginInfo.email}';
+  	
+    console.log("메시지번호: " + ${message.m_no} );
+    console.log("발신자:  " + sender );
+    console.log("수신자:  " + receiver );
+    console.log("현재 로그인한 사람:  " + email );
     $("#answer_btn").click(function() {
     	console.log("답장하기 click()");
     	$(".message").show();
     });
- 	// 취소 버튼 클릭 시 모달창 닫기
+    $("#check_btn").click(function() {
+    	window.close();
+    });
+    // 취소 버튼 클릭 시 모달창 닫기
     $("#btn_message_cancel").on('click', function () {
         $(".message").hide();
     });
@@ -196,6 +221,6 @@
 	});
   </script>
 
-
+	
 </body>
 </html>
