@@ -13,8 +13,8 @@ DROP TABLE "OPTION" CASCADE CONSTRAINTS;
 DROP TABLE "PRODUCT" CASCADE CONSTRAINTS;
 DROP TABLE "CATEGORY" CASCADE CONSTRAINTS;
 DROP TABLE "MAKER" CASCADE CONSTRAINTS;
-DROP TABLE "MEMBER" CASCADE CONSTRAINTS;
 DROP TABLE "SNS_INFO" CASCADE CONSTRAINTS;
+DROP TABLE "MEMBER" CASCADE CONSTRAINTS;
 
 CREATE TABLE "MEMBER" (
 	email	VARCHAR2(100)		NOT NULL,
@@ -88,7 +88,8 @@ CREATE TABLE "PRODUCT" (
 	payment_plan	DATE		NOT NULL,
 	delivery_date	DATE		NOT NULL,
 	p_approval	CHAR(1)	DEFAULT 'N'	NOT NULL,
-	p_report_cnt	NUMBER	DEFAULT 0	NOT NULL
+	p_report_cnt	NUMBER	DEFAULT 0	NOT NULL,
+    p_sms_cnt NUMBER DEFAULT 0 NOT NULL
 );
 COMMENT ON COLUMN "PRODUCT".category_id IS 'C1, C2, ...';
 
@@ -101,6 +102,8 @@ COMMENT ON COLUMN "PRODUCT".p_certification IS '파일 저장되는 주소';
 COMMENT ON COLUMN "PRODUCT".delivery_date IS '발송 예정일';
 
 COMMENT ON COLUMN "PRODUCT".p_approval IS '승인: Y, 비승인: N';
+
+COMMENT ON COLUMN "PRODUCT".p_sms_cnt IS '알림 신청한 사람 수';
 
 CREATE TABLE "OPTION" (
 	option_no	NUMBER		NOT NULL,
@@ -443,3 +446,35 @@ AS
         LEFT OUTER JOIN member USING(email)
     GROUP BY p_no;
 
+-- 상품 신고횟수 증가시키는 트리거 생성
+CREATE OR REPLACE TRIGGER trg_update_report_cnt
+    AFTER INSERT
+    ON report
+FOR EACH ROW
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('상품의 신고횟수가 1 증가합니다.');
+    UPDATE product SET p_report_cnt = p_report_cnt + 1
+    WHERE p_no = :NEW.p_no;
+END;
+
+-- 상품 알람신청한 사람 수 증가 시키는 트리거
+CREATE OR REPLACE TRIGGER trg_increment_sms_cnt
+    AFTER INSERT
+    ON sms
+FOR EACH ROW
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('상품의 알람신청자가 1 증가합니다.');
+    UPDATE product SET p_sms_cnt = p_sms_cnt + 1
+    WHERE p_no = :NEW.p_no;
+END;
+
+-- 상품 알람신청한 사람 수 감소 시키는 트리거
+CREATE OR REPLACE TRIGGER trg_decrement_sms_cnt
+    AFTER DELETE
+    ON sms
+FOR EACH ROW
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('상품의 알람신청자가 1 감소합니다.');
+    UPDATE product SET p_sms_cnt = p_sms_cnt - 1
+    WHERE p_no = :OLD.p_no;
+END;
