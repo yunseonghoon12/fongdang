@@ -11,7 +11,7 @@ public class Ans {
 	private int ans_no;
 	private int ask_no;
 	private String ans_content;
-	private Timestamp ans_date;
+	private String ans_date;
 	
 	
 	@Override
@@ -37,10 +37,10 @@ public class Ans {
 	public void setAns_content(String ans_content) {
 		this.ans_content = ans_content;
 	}
-	public Timestamp getAns_date() {
+	public String getAns_date() {
 		return ans_date;
 	}
-	public void setAns_date(Timestamp ans_date) {
+	public void setAns_date(String ans_date) {
 		this.ans_date = ans_date;
 	}
 

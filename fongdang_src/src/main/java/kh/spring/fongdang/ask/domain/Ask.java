@@ -14,7 +14,7 @@ public class Ask {
 	private String ask_category;
 	private String ask_content;
 	private String ans_content;
-	private Timestamp ask_date;
+	private String ask_date;
 	private String reply_yn;
 	
 	
@@ -71,10 +71,10 @@ public class Ask {
 	public void setAsk_content(String ask_content) {
 		this.ask_content = ask_content;
 	}
-	public Timestamp getAsk_date() {
+	public String getAsk_date() {
 		return ask_date;
 	}
-	public void setAsk_date(Timestamp ask_date) {
+	public void setAsk_date(String ask_date) {
 		this.ask_date = ask_date;
 	}
 	public String getReply_yn() {

@@ -118,7 +118,7 @@ body {
 				</div>
 				<input type="hidden" name="email" value="${loginInfo.email}" />
 				<div class="titleWrap">
-					<input class="ask_boxborder" type="text" name="ask_title"
+					<input class="ask_boxborder" type="text" name="ask_title" placeholder="제목을 입력해주세요."
 						id="ask_title" style="width: 784px; height: 46px;"> <select
 						size="1" class="ask_category" name="ask_category">
 						<option selected>배송</option>
@@ -131,8 +131,8 @@ body {
 				</div>
 				<div class="contentWrap">
 					<div>
-						<textarea class="askContent ask_boxborder" name="ask_content"
-							id="ask_content" style="width: 900px; height: 352px;"></textarea>
+						<textarea class="askContent ask_boxborder" name="ask_content" placeholder="내용을 입력해주세요."
+							id="ask_content" style="width: 900px; height: 352px; resize: none;"></textarea>
 						<br>
 					</div>
 				</div>

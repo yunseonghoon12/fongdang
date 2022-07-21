@@ -177,6 +177,7 @@ label.right {
 				<p style="margin-left: 150px; font-family: SUIT-Regular">-먼저
 					참여하는 분들께 드리는 얼리버드 혜택-</p>
 				<div class="wrap_content">
+
 					<section>
 						<div class="container_content">
 							<c:forEach items="${preProducts}" var="product">
@@ -192,28 +193,25 @@ label.right {
 										</div>
 									</a> <a class="product_link"
 										href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
-										<div class="product_name">
+										<div class="product_name"
+											style="height: 55px; overflow: hidden;">
 											<!-- ${vo.product } -->
 											<p class="product_name_color">${product.p_name}</p>
 										</div>
-										<div class="product_name_intro">
-											<!-- ${vo.product } -->
-											<p style="color: black;">
-												<span>00일 오픈예정! </span>
-											</p>
-										</div>
 									</a>
-									<div class="product_title">
+									<p style="font-size: 15px;color: #ccc;">${product.maker_name} | ${product.category_name}</p>
+									<div style="background-color: #EF9A9A;width: 100%;height: 3px;"></div>
+									<div class="product_name_intro">
 										<!-- ${vo.product } -->
-										<h4 style="color: #EF9A9A;">
-											54,000<span style="color: black;"> 원</span><span
-												style="color: black; margin-left: 3px;"> 잡화 </span>
-										</h4>
+										<p style="color: black; font-size: 15px;">
+											<span style="font-weight: 600;">${product.start_day}
+												오픈예정! </span>
+										</p>
 									</div>
+										
+
 								</div>
-
 							</c:forEach>
-
 						</div>
 					</section>
 				</div>
@@ -296,7 +294,8 @@ label.right {
 				</div>
 			</div>
 		</div>
-		<hr style="border-color: rgba(135, 132, 132, 0.253)">
+		<hr
+			style="border-color: rgba(135, 132, 132, 0.253); position: relative; top: 39px;">
 		<div class="section02">
 
 			<div class="top3">
@@ -324,8 +323,10 @@ label.right {
 					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">놓치면
 					아쉬운 종료임박 펀딩</h3>
 				<div style="background-color: blue; width: 100%; height: 100px;"></div>
-				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
-				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
 			</div>
 			<div class="top3 margin">
 				<div class="top3_img">
@@ -337,8 +338,10 @@ label.right {
 					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">퐁당추천
 					BEST펀딩</h3>
 				<div style="background-color: blue; width: 100%; height: 100px;"></div>
-				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
-				<div style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<div
+					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
 			</div>
 		</div>
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">

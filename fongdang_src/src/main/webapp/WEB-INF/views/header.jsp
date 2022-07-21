@@ -14,7 +14,7 @@
 
 <div class="main_headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
-		<nav style="min-width: 1280px;">
+		<nav style="min-width: 1281px;">
 			<a href="<%=request.getContextPath()%>"> <img
 				src="<%=request.getContextPath()%>/resources/images/logo.png"
 				id="logo"></a>

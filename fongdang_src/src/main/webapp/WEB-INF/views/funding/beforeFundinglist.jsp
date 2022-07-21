@@ -286,6 +286,11 @@ a#topBtn {
 	text-align: center;
 	height: 50px;
 }
+
+.productWrap a .nameWrap:hover h3, .productWrap a .nameWrap:hover h4,
+	.productWrap a .nameWrap:hover h5, .productWrap a .nameWrap:hover p {
+	color: #EF9A9A;
+}
 </style>
 </head>
 
@@ -294,7 +299,7 @@ a#topBtn {
 	<div class="AllWarp">
 		<div class="productList">
 			<ul>
-			<li><a
+				<li><a
 					href="<%=request.getContextPath()%>/funding/beforelist/cateC1"
 					id="C1">
 						<div class="screen">
@@ -307,7 +312,9 @@ a#topBtn {
 							<h3>가전</h3>
 						</div>
 				</a></li>
-				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC4" id="C4">
+				<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC4"
+					id="C4">
 						<div class="screen">
 							<div class="top">캠핑 용품</div>
 							<div class="bottom">Camping</div>
@@ -318,7 +325,9 @@ a#topBtn {
 							<h3>캠핑</h3>
 						</div>
 				</a></li>
-				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC2" id="C2">
+				<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC2"
+					id="C2">
 						<div class="screen">
 							<div class="top">화장품</div>
 							<div class="bottom">Beauty</div>
@@ -329,7 +338,9 @@ a#topBtn {
 							<h3>뷰티</h3>
 						</div>
 				</a></li>
-				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC3" id="C3">
+				<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC3"
+					id="C3">
 						<div class="screen">
 							<div class="top">식료퓸</div>
 							<div class="bottom">Groceries</div>
@@ -340,7 +351,9 @@ a#topBtn {
 							<h3>식품</h3>
 						</div>
 				</a></li>
-				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC5" id="C5">
+				<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC5"
+					id="C5">
 						<div class="screen">
 							<div class="top">반려동물</div>
 							<div class="bottom">Pets</div>
@@ -351,7 +364,8 @@ a#topBtn {
 							<h3>반려동물</h3>
 						</div>
 				</a></li>
-				<li><a href="<%=request.getContextPath()%>/funding/beforelist/cateC6">
+				<li><a
+					href="<%=request.getContextPath()%>/funding/beforelist/cateC6">
 						<div class="screen" id="C6">
 							<div class="top">기타 등등</div>
 							<div class="bottom">Etc</div>
@@ -368,13 +382,22 @@ a#topBtn {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${preProducts}" var="product">
-					<li class="itemsWrap"><a href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
+					<li class="itemsWrap"><a
+						href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">
 							</div>
-							<h3>${product.maker_name}</h3>
-							<p>${product.p_name}</p>
+							<div class="nameWrap" style="overflow: hidden; height: 60px;">
+								<h4 style="font-size: 16px;">${product.p_name}</h4>
+								<h5 style="font-size: 15px; color: #ccc;">${product.category_name}&nbsp;&nbsp;| 
+									${product.maker_name}</h5>
+							</div>
+							<div style="width: 100%; height: 3px; background-color: EF9A9A;"></div>
+							<p style="color: black; font-size: 15px;">
+								<span style="font-weight: 600;left: -10px;position: relative;">${product.start_day}
+									오픈예정! </span>
+							</p>
 					</a></li>
 				</c:forEach>
 			</ul>
@@ -385,12 +408,13 @@ a#topBtn {
 			class="topImg">
 		</a>
 	</div>
-	<button class="moreView btn btn-fill-fcolor"
+	<button class="moreView btn btn-fill-fcolor" id="moreView"
 		style="display: flex; font-size: 20px;">상품 더보기</button>
 
 
 
 	<script>
+		/* 	맨 위로 올라가기 버튼 */
 		$(function() {
 
 			$(window).scroll(function() {
@@ -409,6 +433,7 @@ a#topBtn {
 		});
 	</script>
 	<script>
+		/* 상품 더 불러오기 버튼 */
 		$(function() {
 			$(".itemsWrap").hide();
 			$(".itemsWrap").slice(0, 12).show();
@@ -416,8 +441,8 @@ a#topBtn {
 			$(".moreView").click(function() {
 				$(".itemsWrap:hidden").slice(0, 12).show();
 				if ($(".itemsWrap:hidden").length == 0) {
-					alert("더 이상 항목이 없습니다");
-
+					alert("더 이상 조회할 상품이 없습니다.");
+					$("#moreView").hide();
 				}
 				;
 			});
