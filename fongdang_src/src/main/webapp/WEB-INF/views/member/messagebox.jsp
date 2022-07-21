@@ -198,7 +198,7 @@
     	</c:if>
           		</td>
           		<td>
-            		<div class="message_content">
+            		<div class="message_content" style="cursor: pointer;">
               			상품 관련 문의입니다.
               			<input type="hidden" name="m_no" value="${message.m_no}">
             		</div>

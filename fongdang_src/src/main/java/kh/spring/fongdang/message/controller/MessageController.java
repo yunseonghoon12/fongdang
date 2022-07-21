@@ -42,4 +42,29 @@ public class MessageController {
 //			return 1;
 //		}
 	}
+	
+	@ResponseBody
+	@PostMapping(value = "/insert/reply")
+	public int insertReplyMessage(Message message, HttpSession session) {
+		// 로그인 여부 확인
+		Member loginInfo = (Member)session.getAttribute("loginInfo");
+		if(loginInfo == null) { // 로그아웃 상태일 때
+			return 0;
+		} else {
+			message.setSender(loginInfo.getEmail());
+			
+			if(service.insertReplyMessage(message) < 1) {
+				return -1;
+			} else {
+				return 1;
+			}
+		}
+		
+//		message.setSender("홍길동");
+//		if(service.insertMessage(message) < 1) {
+//			return -1;
+//		} else {
+//			return 1;
+//		}
+	}
 }

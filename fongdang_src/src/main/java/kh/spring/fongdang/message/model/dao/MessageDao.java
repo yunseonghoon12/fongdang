@@ -29,6 +29,14 @@ public class MessageDao {
 		return sqlSession.insert("Message.insertMessage", message);
 	}
 	
+	public int insertReplyMessage(Message message) {
+		return sqlSession.insert("Message.insertReplyMessage", message);
+	}
+	
+	public int updateMessage(Message message) {
+		return sqlSession.update("Message.updateMessage", message);
+	}
+	
 	public Message selectMessage(String m_no) {		
 		return sqlSession.selectOne("Message.selectMessage", m_no);
 	}

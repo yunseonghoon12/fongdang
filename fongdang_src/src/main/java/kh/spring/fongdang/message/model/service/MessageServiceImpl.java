@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kh.spring.fongdang.message.domain.Message;
 import kh.spring.fongdang.message.model.dao.MessageDao;
@@ -16,6 +17,13 @@ public class MessageServiceImpl implements MessageService {
 	@Override
 	public int insertMessage(Message message) {
 		return dao.insertMessage(message);
+	}
+	
+	@Override
+	@Transactional
+	public int insertReplyMessage(Message message) {
+		dao.insertReplyMessage(message);
+		return dao.updateMessage(message);
 	}
 	
 	public List<Message> selectSendList(int currentPage, int messageLimit, String sender) {
@@ -33,9 +41,8 @@ public class MessageServiceImpl implements MessageService {
 	public int countMyReceiveMessage(String receiver) {
 		return dao.countMyReceiveMessage(receiver);
 	}
+	
 	public int countMySendMessage(String sender) {
 		return dao.countMySendMessage(sender);
 	}
-
-
 }
