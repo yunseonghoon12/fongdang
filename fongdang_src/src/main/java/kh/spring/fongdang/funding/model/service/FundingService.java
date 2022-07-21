@@ -13,6 +13,8 @@ public interface FundingService {
 	
 	/* 펀딩 예정 상품 N개 불러오기*/
 	public List<Funding> selectPreProducts(int n);
+	/* 목표 % 상위 N개 불러오기*/
+	public List<Funding> selectRankProducts(int n);
 	
 	/* 펀딩 예정 상품 불러오기*/
 	public List<Funding> selectPreProducts();

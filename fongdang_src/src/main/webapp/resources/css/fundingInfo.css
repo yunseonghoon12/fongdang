@@ -13,15 +13,6 @@ textarea::placeholder {
     color: #cccccc;
 }
 
-.funding_stroy {
-	position: relative;
-	right: 120px;
-}
-
-.funding_stroy img {
-	width: 1200px;
-}
-
 .funding_header {
 	background-color: #9bbfd9;
     padding: 60px 0;

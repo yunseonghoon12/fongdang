@@ -390,8 +390,8 @@ a#topBtn {
 							<div class="nameWrap" style="overflow: hidden; height: 44px;">
 								<h4 style="font-size: 16px;">${product.p_name}</h4>
 							</div>
-							<h5 style="font-size: 12px; color: #ccc;">${product.category_name}&nbsp;&nbsp;col
-								${product.maker_name}</h5>
+							<h5 style="font-size: 15px; color: #ccc;">${product.category_name}&nbsp;&nbsp;| 
+									${product.maker_name}</h5>
 							<div style="width: 100%; height: 3px;background: #9bbfd9;"></div> 
 							<span style="font-size: 15px;font-weight: 600;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
 							<span style="font-size: 15px;font-weight: 600;position: relative;left: 77px;">${product.d_day}일 남음</span>
@@ -438,7 +438,7 @@ a#topBtn {
 			$(".moreView").click(function() {
 				$(".itemsWrap:hidden").slice(0, 12).show();
 				if ($(".itemsWrap:hidden").length == 0) {
-					alert("더 이상 조회할 상품이 없습니다.");
+					alert("마지막 상품 조회입니다.");
 					$("#moreView").hide();
 				}
 				;

@@ -383,7 +383,7 @@ a#topBtn {
 			<ul class="imglist_ul">
 				<c:forEach items="${preProducts}" var="product">
 					<li class="itemsWrap"><a
-						href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
+						href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
 									src="${product.p_thumbnail}">
@@ -441,7 +441,7 @@ a#topBtn {
 			$(".moreView").click(function() {
 				$(".itemsWrap:hidden").slice(0, 12).show();
 				if ($(".itemsWrap:hidden").length == 0) {
-					alert("더 이상 조회할 상품이 없습니다.");
+					alert("마지막 상품 조회입니다.");
 					$("#moreView").hide();
 				}
 				;

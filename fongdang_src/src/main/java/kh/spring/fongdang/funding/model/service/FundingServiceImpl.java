@@ -29,6 +29,11 @@ public class FundingServiceImpl implements FundingService {
 	}
 
 	@Override
+	public List<Funding> selectRankProducts(int n) {
+		return dao.selectRankProducts(n);
+	}
+
+	@Override
 	public List<Funding> selectAllProducts() {
 		return dao.selectAllProducts();
 	}

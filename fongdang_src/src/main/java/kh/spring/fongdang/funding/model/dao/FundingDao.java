@@ -37,6 +37,10 @@ public class FundingDao {
 	public List<Funding> selectPreProducts(int n) {
 		return session.selectList("Funding.selectPreProducts",null,new RowBounds(0,n));
 	}
+	//	목표 % 상위 N개 불러오기
+	public List<Funding> selectRankProducts(int n) {
+		return session.selectList("Funding.selectRankProducts",null,new RowBounds(0,n));
+	}
 	
 	//	오픈 전 상품 전부 불러오기
 	public List<Funding> selectPreProducts() {

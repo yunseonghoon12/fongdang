@@ -266,7 +266,7 @@ a {
 	transition: transform .25s;
 }
 
-.rankgImg:hover {
+.ranking02:hover img {
 	transform: scale(1.2);
 }
 
@@ -383,11 +383,11 @@ a {
 	transition: transform .5s;
 }
 
-.wrap_product_thumbnail:hover img {
+.product_hover:hover img {
 	transform: scale(1.2);
 }
 
-.rankingWrap h5:hover {
+.rankingWrap .ranking02:hover {
 	color: #9bbfd9;
 	transition: ease-in .1s;
 

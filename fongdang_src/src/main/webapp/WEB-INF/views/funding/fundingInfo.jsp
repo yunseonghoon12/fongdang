@@ -1,3 +1,4 @@
+<link href="<%=request.getContextPath()%>/resources/css/reset.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fundingInfo.css">
@@ -12,6 +13,13 @@
 <title>펀딩 상세조회</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<style>
+.funding_stroy img {
+	width: 1200px;
+	position: relative;
+	right: 120px;
+}
+</style>
 </head>
 <body>
 <jsp:include page="../header.jsp" />

@@ -181,35 +181,37 @@ label.right {
 					<section>
 						<div class="container_content">
 							<c:forEach items="${preProducts}" var="product">
+								<div class="product_hover">
+									<div style="margin-right: 35px;">
+										<a class="product_link"
+											href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
+											<div class="product_image">
+												<div class="wrap_product_thumbnail">
+													<img class="product_thumbnail" src="${product.p_thumbnail}">
 
-								<div style="margin-right: 35px;">
-									<a class="product_link"
-										href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
-										<div class="product_image">
-											<div class="wrap_product_thumbnail">
-												<img class="product_thumbnail" src="${product.p_thumbnail}">
-
+												</div>
 											</div>
-										</div>
-									</a> <a class="product_link"
-										href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
-										<div class="product_name"
-											style="height: 55px; overflow: hidden;">
+										</a> <a class="product_link"
+											href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
+											<div class="product_name"
+												style="height: 55px; overflow: hidden;">
+												<!-- ${vo.product } -->
+												<p class="product_name_color">${product.p_name}</p>
+											</div>
+										</a>
+										<h5 style="font-size: 15px; color: #ccc;">${product.category_name}
+											| ${product.maker_name}</h5>
+										<div
+											style="background-color: #EF9A9A; width: 100%; height: 3px;"></div>
+										<div class="product_name_intro">
 											<!-- ${vo.product } -->
-											<p class="product_name_color">${product.p_name}</p>
+											<p style="color: black; font-size: 15px;">
+												<span style="font-weight: 600;">${product.start_day}
+													오픈예정! </span>
+											</p>
 										</div>
-									</a>
-									<p style="font-size: 15px;color: #ccc;">${product.maker_name} | ${product.category_name}</p>
-									<div style="background-color: #EF9A9A;width: 100%;height: 3px;"></div>
-									<div class="product_name_intro">
-										<!-- ${vo.product } -->
-										<p style="color: black; font-size: 15px;">
-											<span style="font-weight: 600;">${product.start_day}
-												오픈예정! </span>
-										</p>
-									</div>
-										
 
+									</div>
 								</div>
 							</c:forEach>
 						</div>
@@ -240,55 +242,17 @@ label.right {
 					</ul>
 					<div id="rankingWrap">
 						<ul class="rankingWrap">
-							<li class="ranking02"><a href="#"><h5
-										class=" productName" style="width: 180px;">
-										[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-											class="productPer">102%<span class="productCate">화장품</span></span>
-									</h5></a> <a href="#"><div class="rankgImgWrap">
-										<img
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-											class="rankgImg">
-									</div> </a></li>
-							<li class="ranking02">
-								<h5 class=" productName" style="width: 180px;">
-									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><div class="rankgImgWrap">
-										<img
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-											class="rankgImg">
-									</div> </a>
-							</li>
-							<li class="ranking02">
-								<h5 class=" productName" style="width: 180px;">
-									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><div class="rankgImgWrap">
-										<img
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-											class="rankgImg">
-									</div> </a>
-							</li>
-							<li class="ranking02">
-								<h5 class=" productName" style="width: 180px;">
-									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><div class="rankgImgWrap">
-										<img
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-											class="rankgImg">
-									</div> </a>
-							</li>
-							<li class="ranking02">
-								<h5 class=" productName" style="width: 180px;">
-									[롯데월드] 로티로리슬라임 l 슬라임으로 갓벽한 하루 마무리 #퇴근힐링템<br> <span
-										class="productPer">102%<span class="productCate">화장품</span></span>
-								</h5> <a href="#"><div class="rankgImgWrap">
-										<img
-											src="<%=request.getContextPath()%>/resources/images/pets.jpg"
-											class="rankgImg">
-									</div> </a>
-							</li>
+							<c:forEach items="${rankProducts}" var="rank">
+								<li class="ranking02"><a href="<%=request.getContextPath()%>/funding/info/${rank.p_no}"><h5
+											class=" productName" style="width: 180px;">
+											${rank.p_name}<br> <span
+												class="productPer">${rank.p_goal_percent}%<span class="productCate">${rank.category_name}</span></span>
+										</h5></a> <a href="#"><div class="rankgImgWrap">
+											<img
+												src="${rank.p_thumbnail}"
+												class="rankgImg">
+										</div> </a></li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
