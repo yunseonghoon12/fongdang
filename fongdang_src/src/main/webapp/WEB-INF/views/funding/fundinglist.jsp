@@ -393,7 +393,8 @@ a#topBtn {
 									${product.maker_name}</h5>
 							</div>
 							<div style="width: 100%; height: 3px;background: #9bbfd9;"></div> 
-							<span>100% 100,000원</span><span>0일 남음</span>
+							<span style="font-size: 15px;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
+							<span style="font-size: 15px;position: relative;left: 77px;">${product.d_day}일 남음</span>
 					</a></li>
 				</c:forEach>
 			</ul>

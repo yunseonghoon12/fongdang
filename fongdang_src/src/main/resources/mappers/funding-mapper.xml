@@ -37,7 +37,12 @@
 	</update>
 	
 	<select id="selectFunding" parameterType="_int" resultMap="FundingResultMap">
-		SELECT p_no, supporter, TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str, p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day, TO_CHAR(p.end_day, 'YYYY.MM.DD') end_day, TO_CHAR(p.payment_plan, 'YYYY.MM.DD') payment_plan, TO_CHAR(p.delivery_date, 'YYYY.MM.DD') delivery_date, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
+		SELECT p_no, supporter, TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money, 
+		ROUND(total_funding_money / p.p_goal * 100) p_goal_percent, TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+		 p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day, TO_CHAR(p.end_day, 'YYYY.MM.DD') end_day,
+		  TO_CHAR(p.payment_plan, 'YYYY.MM.DD') payment_plan, TO_CHAR(p.delivery_date, 'YYYY.MM.DD') delivery_date, 
+		  p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, 
+		  m.maker_phone, m.maker_kakao_channel, m.maker_homepage
 		FROM view_funding_supporter_money JOIN product p USING(p_no)
         		                          JOIN category c USING(category_id)
                 		                  JOIN maker m USING(maker_name)
@@ -54,7 +59,9 @@
 	
 	<select id="selectBeforeFunding" parameterType="_int" resultMap="FundingResultMap">
 		<![CDATA[
-			SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day, p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
+			SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day,
+			 p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, 
+			 maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
 			FROM product p JOIN category c USING(category_id)
 		    	           JOIN maker m USING(maker_name)
 			WHERE p_no = #{p_no}
@@ -80,8 +87,10 @@
 		WHERE t2.rn BETWEEN #{startRnum} AND #{endRnum}
 	</select>
 	
-	<select id="selectPreProducts" parameterType="_int"
-		resultType="Funding">
+	
+	
+	
+	<select id="selectPreProducts" parameterType="_int" resultType="Funding">
 <![CDATA[
 	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
 	where start_day > sysdate
@@ -91,8 +100,12 @@
 
 	<select id="selectAllProducts" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name
-	from product left outer join category using (category_id)
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate
 	order by start_day asc
 ]]>
@@ -102,42 +115,72 @@
 <!--펀딩상품 카테고리 c1~c6 -->
 	<select id="selectCateProducts1" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C1'
 	order by start_day asc
 ]]>
 	</select>
 	<select id="selectCateProducts2" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C2'
 	order by start_day asc
 ]]>
 	</select>
 	<select id="selectCateProducts3" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C3'
 	order by start_day asc
 ]]>
 	</select>
 	<select id="selectCateProducts4" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C4'
 	order by start_day asc
 ]]>
 	</select>
 	<select id="selectCateProducts5" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C5'
 	order by start_day asc
 ]]>
 	</select>
 	<select id="selectCateProducts6" parameterType="string" resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt from product
+select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C6'
 	order by start_day asc
 ]]>
@@ -195,10 +238,12 @@
 	<select id="selectSearchList" parameterType="string"
 		resultType="Funding">
 <![CDATA[
-	 select 
-		p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day,p_report_cnt, 
- 		to_date(end_day,'YYYY-MM-DD')-to_date(sysdate,'YYYY-MM-DD') open_day,category_name
-	from product left outer join category using(category_id) 
+	select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, category_name,
+	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money,
+	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
+	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
+	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
+	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
     where start_day < sysdate and end_day > sysdate and category_name like '%'||#{search_category}||'%'
     order by start_day asc
 ]]>

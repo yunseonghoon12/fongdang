@@ -223,7 +223,7 @@ public class FundingController {
 
 	@GetMapping("/list.search")
 	public ModelAndView selectSearchList(ModelAndView mv,
-			@RequestParam(name = "category", defaultValue = "") String search_category) {
+			@RequestParam(name = "search_categroy", defaultValue = "") String search_category) {
 		mv.addObject("allProducts", service.selectSearchList(search_category));
 
 		mv.setViewName("funding/fundinglist");

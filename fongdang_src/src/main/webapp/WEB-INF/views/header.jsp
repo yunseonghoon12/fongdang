@@ -33,6 +33,7 @@
 
 				<li>
 
+<!-- 카테고리 검색 -->
 					<form action="<%=request.getContextPath()%>/funding/list.search" method="GET"
 						style="margin-left: 344px; width: 300px;">
 
@@ -45,6 +46,7 @@
 							src="<%=request.getContextPath()%>/resources/images/magnifying.png"
 							class="question_header"></label>
 					</form>
+
 					<div class="searchR" style="right: 63px;">
 						<p style="text-align: center;">카테고리</p>
 						<hr style="margin-top: 10px;">
