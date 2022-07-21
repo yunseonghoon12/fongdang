@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import kh.spring.fongdang.review.domain.Review;
 import kh.spring.fongdang.sms.domain.Sms;
 
-
 @Component
 public class Funding {
 	private int p_no;            //상품번호
@@ -23,6 +22,7 @@ public class Funding {
 	private String delivery_date;    //발송예정일
 	private String p_approval;    //판매승인여부
 	private int p_report_cnt;      //상품누적신고횟수
+	private int p_sms_cnt;      //상품알림신청자수
 	private int supporter; //서포터 수
 	private String total_funding_money; //펀딩 누적 금액
 	private String p_goal_str; //목표금액 문자열로 나타내기
@@ -57,7 +57,7 @@ public class Funding {
 		return "Funding [p_no=" + p_no + ", p_name=" + p_name + ", p_goal=" + p_goal + ", p_summary=" + p_summary
 				+ ", p_certification=" + p_certification + ", start_day=" + start_day + ", end_day=" + end_day
 				+ ", payment_plan=" + payment_plan + ", delivery_date=" + delivery_date + ", p_approval=" + p_approval
-				+ ", p_report_cnt=" + p_report_cnt + ", supporter=" + supporter + ", total_funding_money="
+				+ ", p_report_cnt=" + p_report_cnt + ", p_sms_cnt=" + p_sms_cnt + ", supporter=" + supporter + ", total_funding_money="
 				+ total_funding_money + ", p_goal_str=" + p_goal_str + ", p_goal_percent=" + p_goal_percent + ", d_day="
 				+ d_day + ", category_name=" + category_name + ",maker_category=" + maker_category + ", maker_logo=" + maker_logo + ", maker_name="
 				+ maker_name + ", maker_email=" + maker_email + ", maker_phone=" + maker_phone
@@ -167,6 +167,14 @@ public class Funding {
 
 	public void setP_report_cnt(int p_report_cnt) {
 		this.p_report_cnt = p_report_cnt;
+	}
+
+	public int getP_sms_cnt() {
+		return p_sms_cnt;
+	}
+
+	public void setP_sms_cnt(int p_sms_cnt) {
+		this.p_sms_cnt = p_sms_cnt;
 	}
 
 	public int getSupporter() {

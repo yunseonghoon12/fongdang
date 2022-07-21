@@ -1,13 +1,8 @@
-<link rel="shortcut icon" type="image/x-icon"
-	href="<%=request.getContextPath()%>/resources/images/investor.ico" />
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo_modal.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/main.css">
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/beforeFundingInfo_modal.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -79,26 +74,18 @@
 						<c:choose>
 							<c:when test="${empty funding.sms}">
 								<button id="btn_funding_alarm" type="button">
-									<img
-										src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청<span
-										style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span>
+									<img src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청<span style="margin-left: 10px; font-size: 12px;">${funding.p_sms_cnt}명이 신청 중</span>
 								</button>
 							</c:when>
 							<c:when test="${not empty funding.sms}">
 								<input type="hidden" id="s_no" value="${funding.sms.s_no}">
 								<button id="btn_funding_alarm_cancel" type="button">
-									<img
-										src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청완료<span
-										style="margin-left: 10px; font-size: 12px;">123명이 신청 중</span>
+									<img src="<%=request.getContextPath()%>/resources/images/funding_alarm.png">알림신청완료<span style="margin-left: 10px; font-size: 12px;">${funding.p_sms_cnt}명이 신청 중</span>
 								</button>
 							</c:when>
 						</c:choose>
 						<p class="funding_open_info">${funding.start_day}오픈예정</p>
-						<button id="btn_message" type="button">
-							<img
-								src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게
-							문의하기
-						</button>
+						<button id="btn_message" type="button"><img src="<%=request.getContextPath()%>/resources/images/message.png">판매자에게 문의하기</button>
 						<h3>메이커 정보</h3>
 						<div class="maker_info">
 							<div class="maker_img_name">

@@ -15,6 +15,7 @@
 		<result property="delivery_date" column="delivery_date"/>
 		<result property="p_approval" column="p_approval"/>
 		<result property="p_report_cnt" column="p_report_cnt"/>
+		<result property="p_sms_cnt" column="p_sms_cnt"/>
 		<result property="supporter" column="supporter"/>
 		<result property="total_funding_money" column="total_funding_money"/>
 		<result property="p_goal_str" column="p_goal_str"/>
@@ -59,7 +60,7 @@
 	
 	<select id="selectBeforeFunding" parameterType="_int" resultMap="FundingResultMap">
 		<![CDATA[
-			SELECT p.p_no, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day,
+			SELECT p.p_no, p.p_sms_cnt, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day,
 			 p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, 
 			 maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
 			FROM product p JOIN category c USING(category_id)
