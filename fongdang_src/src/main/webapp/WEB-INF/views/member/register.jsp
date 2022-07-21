@@ -90,6 +90,7 @@
       	margin: 10px auto;
     }    
     #kakaoLogin, #naverLogin{    
+    	cursor: pointer;
     	margin: 5px;	   	
     	background: none;
     	border: none;
@@ -113,8 +114,10 @@
       background-color: white;
       color: #444c57;
       border: 1px solid #444c57;
-      border-radius: 3px;            
-    }
+      border-radius: 3px;           
+      
+      cursor: pointer;
+    }   
     #enroll_wrap {
       margin: 15px 0;      
     }

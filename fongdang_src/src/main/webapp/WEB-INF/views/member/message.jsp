@@ -36,7 +36,7 @@
     #modal_content {
       border: 1px solid #9bbfd9;
       border-radius: 3px;
-      margin: 50px 0;
+      margin: 30px 0;
       padding: 15px;
       height: 300px;            
       color: #444c57;
@@ -44,19 +44,24 @@
       font-size: 15px;
       line-height: 1.7em;
     }
-    #modal_cancel_wrap {      
+    #answer_wrap {      
       margin: 0 auto;
       width: 125px;
       height: 45px;
     }
-    #modal_cancel {            
+    #answer_btn {            
       width: 120px;
       height: 40px;
+      
+      font-family: SUIT-Regular;
       font-size: 14px;
+      
       background-color: #b6e0d6;
-      border: 1px solid #9bbfd9;
+      border: 1px solid #b6e0d6;
       border-radius: 3px;
       color: white;
+      
+      cursor: pointer;
     }
   </style>
 </head>
@@ -69,21 +74,17 @@
     	<div id="modal_content">
     		${message.m_content }
     	</div>
-    	<!-- 
-    	<div id="modal_cancel_wrap">
-      		<button type="button" id="modal_cancel">닫기</button>
-    	</div>    	
-    	 -->
+    	<div id="answer_wrap">
+      		<button type="button" id="answer_btn">답장하기</button>
+    	</div>  
   	</div> 
 
   <script>
-    /* 
-    $("#modal_cancel").click(function() {
-      window.close();
-    }); 
-    */
+    console.log("메시지번호: " + ${message.m_no});
     
-    console.log("m_no: " + $("m_no").val());
+    $("#answer_btn").click(function() {
+    	console.log("답장하기 click()");
+    });
   </script>
 
 

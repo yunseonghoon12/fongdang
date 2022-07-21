@@ -116,7 +116,7 @@
   #nickname_field {
     width: 100%;
     height: 90px;
-    margin-top: 5px;
+    margin-top: 18px;
   }
   #nickname_field > label {          
     display: block;
@@ -138,10 +138,11 @@
     font-size: 13px;
     font-weight: 300;     
   }
-  #intro_field {
+  #intro_field {  	
       width: 100%;
       height: 90px;
       margin-top: 5px;
+      resize : none;
     }
   #intro_field > label {          
     display: block;
@@ -157,11 +158,12 @@
     border-radius: 4px;
     width: 368px;
     height: 80px;
-    margin-bottom: 7px;
-    /* padding-left: 0.65em; */
+    margin-bottom: 7px;    
     padding: 10px;
     font-family: SUIT-Light;
-    font-size: 13px;  
+    font-size: 13px;
+    
+    resize: none;  
   }   
   #btn_wrap {
     position: relative;
@@ -183,6 +185,8 @@
     color: white;
     font-family: SUIT-Regular;
     font-size: 15px;
+    
+    cursor: pointer;
   }
   #submit_btn {
     box-sizing: border-box;    
@@ -198,7 +202,16 @@
     color: white;  
     font-family: SUIT-Regular;
     font-size: 17px;
+    
+    cursor: pointer;
   }
+  
+  #pwd_error {
+	padding-top: 5px;
+	color: red; 
+	font-family: SUIT-Light;
+	font-size: 13px;
+   }
 </style>
 </head>
 <body>
@@ -210,7 +223,7 @@
         		<p id="main_title">프로필 설정</p>  
         		<a href="<%=request.getContextPath()%>/member/withdraw" id="withdraw">회원탈퇴</a>
       		</div>
-      		<form action="<%=request.getContextPath()%>/member/update" method="post" enctype="multipart/form-data">
+      		<form action="<%=request.getContextPath()%>/member/update" method="post" id="profileFrm" enctype="multipart/form-data">
         		<div id="proflie_field">
           			<p>프로필 사진</p>
 <c:if test="${ not empty member.profile}">
@@ -242,8 +255,9 @@
 	</c:when>
 	<c:otherwise>
           		<div>
-            		<input type="password" name="password" id="password" autocomplete="off" placeholder="새 비밀번호">
-          		</div>	
+            		<input type="password" name="password" id="password" min="3" autocomplete="off" placeholder="새 비밀번호">
+          		</div>
+          		<p id="pwd_error"></p>
 	</c:otherwise>
 </c:choose>	
         	</div>
@@ -261,7 +275,7 @@
         	</div>
         	<div id="btn_wrap">
           		<button type="reset" id="revoke_btn">취소</button>
-          		<button type="submit" id="submit_btn">확인</button>          		
+          		<button type="button" id="submit_btn" onclick="submitHandler()">확인</button>          		
         	</div>
       	</form>
     </div>
@@ -277,6 +291,33 @@
   		console.log("nickname: " + $("#nickname").val());
   		console.log("intro: " + $("#intro").val());
   	});
+  	
+  	
+  	function submitHandler() {
+  		var cnf = confirm("회원의 프로필을 수정하시겠습니까?");
+  		var pwd = $("#password").val();
+  		
+  		var passwordValidity = passwordValidate(pwd);  		
+  		
+  		if(cnf) {  			
+  			profileFrm.submit();  			
+  		} else {}
+  	}
+  	
+  	function passwordValidate(pwd) {
+    	var pwd_size = pwd.length;
+    	
+    	if(pwd == '') {
+    		$("#pwd_error").html("비밀번호를 입력해주세요.");
+    		return false;
+    	} else if(pwd_size < 3 || pwd_size > 6) {
+    		$("#pwd_error").html("비밀번호를 3~6자 내로 입력해주세요.");
+    		return false;
+    	} else {
+    		$("#pwd_error").html(" ");
+    		return true;
+    	}    	
+    }
   	
   </script>
 </body>

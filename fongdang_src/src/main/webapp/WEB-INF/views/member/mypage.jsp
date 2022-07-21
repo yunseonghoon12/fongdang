@@ -138,6 +138,8 @@
       	font-size: 14px;
       	font-weight: bold;
       	background-color: white;
+      	
+      	cursor: pointer;
     }
     #profile_btn_wrap {
       	position: relative;      
@@ -273,6 +275,8 @@
 	  	font-family: SUIT-Regular;
       	font-size: 16px;
       	color: white;
+      	
+      	cursor: pointer;
     }
     #fundingEnroll_btn:hover {
     	font-weight: bold;

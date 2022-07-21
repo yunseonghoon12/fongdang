@@ -112,6 +112,8 @@
 	  	font-family: SUIT-Regular;
       	font-size: 16px;
       	color: white;
+      	
+      	cursor: pointer;
   }
   #funding_root {  		
   		color: #9bbfd9;

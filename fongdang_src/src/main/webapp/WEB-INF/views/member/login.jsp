@@ -131,6 +131,7 @@
       	background-color: rgb(182, 224, 214);
       	border-color: rgb(182, 224, 214);
       	color: white;      
+      	cursor: pointer;
     }
     #kakao_btn_content, #naver_btn_content {
     	position: relative;
@@ -139,11 +140,15 @@
 		border-color: #fee500;
     	background-color: #fee500;
       	color: #444c57;
+      	
+      	cursor: pointer;
     }
     #naver_btn {
 		border-color: #00d337;
     	background-color: #00d337;
       	color: white;
+      	
+      	cursor: pointer;
     }    
     #kakao_logo {
     	position: absolute;

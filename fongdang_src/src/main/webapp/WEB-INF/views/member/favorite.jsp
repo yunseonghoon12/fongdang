@@ -98,10 +98,23 @@
     	font-weight: 300;
     	color: #444c57;	
     }
-  #funding_root {  		
-  		color: #9bbfd9;
-  		line-height: 5em;
-  }    
+  #funding_root {  	
+  		margin: 20px 0;
+  		width: 230px;	
+  		height: 48px;
+  
+  		background-color: #9bbfd9;
+      	border: 1px solid #9bbfd9;      	
+      	border-radius: 3px;
+	  	font-family: SUIT-Regular;
+      	font-size: 16px;
+      	color: white;
+      	
+      	cursor: pointer;
+  }   
+  #funding_root:hover {
+  		color: #444c57;	
+  } 
   #prev_next {
       	text-align: center;      	
       	margin: 20px auto 0 auto;
@@ -145,7 +158,9 @@
 		<p id="empty_content">
 			좋아하는 펀딩 프로젝트가 없습니다.<br>
 			프로젝트를 좋아해보실래요? <br>			
-			<a href="<%=request.getContextPath()%>/funding/list" id="funding_root">펀딩 프로젝트 바로가기</a>
+			<button type="button" onclick="location.href='<%=request.getContextPath()%>/funding/list';" id="funding_root">
+				펀딩 프로젝트 바로가기
+			</button>
 		</p>
 </c:if>    
       <!-- <a href="#">
@@ -183,5 +198,7 @@
   </div>
 	
   <jsp:include page="../footer.jsp"/>
+  
+  
 </body>
 </html>

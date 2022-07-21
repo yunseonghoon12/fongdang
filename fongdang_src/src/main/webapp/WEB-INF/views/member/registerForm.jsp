@@ -421,16 +421,21 @@
     }
     
     function passwordValidate(pwd, cnf_pwd) {
-    	if(pwd != cnf_pwd) {    
-    		$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
-    		return false;
-    	} else if(pwd == '' || cnf_pwd =='') {
+    	var pwd_size = pwd.length;
+    	
+    	if(pwd == '' || cnf_pwd =='') {
     		$("#pwd_error").html("비밀번호를 입력해주세요.");
     		return false;
-    	}else {
+    	} else if(pwd_size < 3 || pwd_size > 6) {
+    		$("#pwd_error").html("비밀번호를 3~6자 내로 입력해주세요.");
+    		return false;
+    	} else if(pwd != cnf_pwd) {    
+    		$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
+    		return false;
+    	}  else {
     		$("#pwd_error").html(" ");
     		return true;
-    	}
+    	}    	
     }
     
     function emailValidate(email) {
@@ -464,6 +469,10 @@
    				if(data == 'null') {
    					console.log("중복 이메일 검사결과: " + data);
    					var html = '이메일을 입력하세요.';
+   					$("#email_error").css({
+   						"color" : "red"
+   					});
+   					
    					$("#email_error").html(html);   
    				}
     			if(data == 'pass') {
@@ -478,11 +487,19 @@
    						flag = true;	   						
    					}   					
    					var html = '사용 가능한 이메일입니다.';
+   					$("#email_error").css({
+   						"color" : "green"
+   					});
+   					
    					$("#email_error").html(html);    				
    				} 
    				if(data == 'fail') {
    					console.log("중복 이메일 검사결과: " + data); // 중복된 이메일 존재  	
    					var html = '이미 존재하는 이메일입니다.';
+   					$("#email_error").css({
+   						"color" : "red"
+   					});
+   					
    					$("#email_error").html(html);
    				}
    				console.log("ajax후 flag:" + flag);
