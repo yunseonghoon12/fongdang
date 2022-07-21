@@ -160,11 +160,11 @@
             $(".message").hide();
         }
     });
- 	// 문의하기 버튼 클릭 시 처리 내용
+ 	// 보내기 버튼 클릭 시 처리 내용
 	$("#btn_message_send").on('click', function(){
 		console.log("보내기 클릭");
 		if ($("#m_content").val() == "") {
-			alert("문의 내용을 입력해주세요. 내용을 입력해야 문의가 가능합니다.");
+			alert("답장 내용을 입력해주세요. 내용을 입력해야 답장이 가능합니다.");
 			$("#m_content").focus();
 			return;
 		}

@@ -59,7 +59,7 @@
     	background: none;
     	border: none;
     	border-radius: 3px;	
-    	
+    	cursor: pointer;
     }
     .message_btn:focus {
     	color: #9bbfd9;
