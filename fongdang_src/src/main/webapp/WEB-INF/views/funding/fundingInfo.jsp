@@ -582,28 +582,32 @@
         // 리뷰 삭제 클릭
         function deleteReview(r_no){
             console.log(r_no + "리뷰 삭제 클릭");
-            $.ajax({
-				url: "<%=request.getContextPath()%>/review/delete",
-				type: "post",
-				data: {
-					r_no: r_no
-				},
-				success: function(result){
-					console.log(result);
-					if (result == -1) {
-						alert("리뷰가 삭제되지 않았습니다. 다시 시도해주세요.");
-					} else if (result == 0) {
-						alert("로그인을 한 후에 리뷰삭제가 가능합니다. 로그인 페이지로 이동합니다.");
-						location.href = "<%=request.getContextPath()%>/member/login";
-					} else if (result == 1) {
-						alert("리뷰가 삭제됐습니다.");
-						location.reload();
+            if (confirm("정말 삭제하시겠습니까? 삭제된 리뷰는 복구 불가능합니다.") == false) {
+				$(this).parents("form").submit();
+			} else {
+	            $.ajax({
+					url: "<%=request.getContextPath()%>/review/delete",
+					type: "post",
+					data: {
+						r_no: r_no
+					},
+					success: function(result){
+						console.log(result);
+						if (result == -1) {
+							alert("리뷰가 삭제되지 않았습니다. 다시 시도해주세요.");
+						} else if (result == 0) {
+							alert("로그인을 한 후에 리뷰삭제가 가능합니다. 로그인 페이지로 이동합니다.");
+							location.href = "<%=request.getContextPath()%>/member/login";
+						} else if (result == 1) {
+							alert("리뷰가 삭제됐습니다.");
+							location.reload();
+						}
+					},
+					error: function(request, status, error) {
+						console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
 					}
-				},
-				error: function(request, status, error) {
-					console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-				}
-			});
+				});
+			}
         };
         <!-- sun start-->
         $("#btn_like").on('click', function(){
