@@ -255,10 +255,22 @@
 	
 	<script>
 		$(document).ready(function() {
+			var tDegree = 0;
 			$(".content").hide();
+			
+	/* 토글 */	/* 화살표 회전 */
 			$(".toggle").click(function() {
 				$(this).parent().next().toggle("fast", "swing");
+				
+				tDegree += 60;
+				if(tDegree > 120) tDegree = 60;
+				
+				var toggle = document.getElementsByClassName("toggle");
+				toggle.removeClass('toggle60');
+				toggle.removeClass('toggle120');
 
+				 if( tDegree == 60 ) {toggle.addClass('toggle60');}
+				 if( tDegree == 120 ) {toggle.addClass('toggle120');}
 			});
 
 			$("[id^='ask_delete']").click(function() {

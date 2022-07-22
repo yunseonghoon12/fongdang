@@ -114,7 +114,7 @@ body {
 	opacity: 1;
 }
 
-.productList>ul>li>a h3:hover {
+.itemsWrap:hover h3, .itemsWrap:hover p,.itemsWrap:hover h4 {
 	color: #9bbfd9;
 }
 
@@ -192,7 +192,7 @@ a {
 	transition: all 1s;
 }
 
-.productWrap a .screen img:hover {
+.itemsWrap:hover .screen img  {
 	transform: scale(1.1) translate(-45%, -45%);
 }
 
@@ -390,8 +390,8 @@ a#topBtn {
 							<div class="nameWrap" style="overflow: hidden; height: 44px;">
 								<h4 style="font-size: 16px;">${product.p_name}</h4>
 							</div>
-							<h5 style="font-size: 15px; color: #ccc;">${product.category_name}&nbsp;&nbsp;| 
-									${product.maker_name}</h5>
+							<h5 style="font-size: 15px; color: #ccc;overflow: hidden; height: 19px;">
+							${product.category_name}&nbsp;&nbsp;| ${product.maker_name}</h5>
 							<div style="width: 100%; height: 3px;background: #9bbfd9;"></div> 
 							<span style="font-size: 15px;font-weight: 600;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
 							<span style="font-size: 15px;font-weight: 600;position: relative;left: 77px;">${product.d_day}일 남음</span>

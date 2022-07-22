@@ -14,9 +14,8 @@
 		select
 		TO_CHAR(ask_date,
 		'YYYY-MM-DD HH24:MI:SS')
-		ask_date,email,ask_title,ask_content,reply_yn,ask_category,ask_no
-		from
-		ask where reply_yn = 'Y'
+		ask_date,email,ask_title,ask_content,reply_yn,ask_category,ask_no,ans_content
+		from ask left outer join answer using(ask_no) where reply_yn = 'Y'
 		order by ask_no desc
 	</select>
 	<select id="selectAskN" resultType="Ask">

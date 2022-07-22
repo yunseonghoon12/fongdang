@@ -192,7 +192,7 @@ a {
 	transition: all 1s;
 }
 
-.productWrap a .screen img:hover {
+.itemsWrap:hover .screen img {
 	transform: scale(1.1) translate(-45%, -45%);
 }
 
@@ -256,7 +256,7 @@ a {
 	font-size: 19px;
 }
 
-.productWrap a h3:hover, .productWrap a p:hover {
+.itemsWrap:hover h3, .itemsWrap:hover p,.itemsWrap:hover h4 {
 	color: #EF9A9A;
 }
 

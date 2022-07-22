@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/header.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/main.css">
@@ -21,10 +23,6 @@
 <style>
 body {
 	font-family: SUIT-Regular;
-}
-
-il, ul {
-	list-style: none;
 }
 
 .leftImg {
@@ -114,6 +112,51 @@ label.right {
 
 .top_img:hover {
 	transform: scale(1.2);
+}
+
+.section {
+	border-radius: 10px;
+	transition: all .35s;
+}
+
+.section:hover {
+	background-color: #e0f1f83f;
+}
+
+.top3_first:not(first-child) {
+	margin-top: 14px;
+}
+
+.section02 {
+	position: relative;
+}
+
+.section02:hover .section02_img {
+	opacity: 0.5;
+}
+
+.section02_img {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+	height: 577px;
+	top: -59px;
+	width: 1200px;
+	left: -182px;
+	transition: all .2s;
+}
+
+.section02 h5 {
+	color: black;
+}
+
+.top3_first {
+	border: solid 3px #9bbfd9;
+	cursor: pointer;
+}
+
+.top3_first:hover {
+	border: solid 3px #F4D284;
 }
 </style>
 </head>
@@ -219,7 +262,7 @@ label.right {
 				</div>
 			</div>
 			<div id="ranking01">
-				<p style="font-family: SUIT-SemiBold; font-size: 25px;">실시간 랭킹!</p>
+				<p style="font-family: SUIT-SemiBold; font-size: 25px;">퐁당 펀딩 달성률 TOP5!</p>
 				<div style="display: flex;">
 					<ul style="top: 20px; position: relative;">
 						<li>
@@ -243,14 +286,17 @@ label.right {
 					<div id="rankingWrap">
 						<ul class="rankingWrap">
 							<c:forEach items="${rankProducts}" var="rank">
-								<li class="ranking02"><a href="<%=request.getContextPath()%>/funding/info/${rank.p_no}"><h5
-											class=" productName" style="width: 180px;">
-											${rank.p_name}<br> <span
-												class="productPer">${rank.p_goal_percent}%<span class="productCate">${rank.category_name}</span></span>
-										</h5></a> <a href="#"><div class="rankgImgWrap">
-											<img
-												src="${rank.p_thumbnail}"
-												class="rankgImg">
+								<li class="ranking02"><a
+									href="<%=request.getContextPath()%>/funding/info/${rank.p_no}">
+										<h5 class=" productName" style="width: 180px;">
+											${rank.p_name}<br> <span class="productPer">${rank.p_goal_percent}%
+												<span class="productCate">${rank.category_name}</span>
+											</span>
+										</h5>
+								</a> <a
+									href="<%=request.getContextPath()%>/funding/info/${rank.p_no}"><div
+											class="rankgImgWrap">
+											<img src="${rank.p_thumbnail}" class="rankgImg">
 										</div> </a></li>
 							</c:forEach>
 						</ul>
@@ -258,9 +304,12 @@ label.right {
 				</div>
 			</div>
 		</div>
+
 		<hr
 			style="border-color: rgba(135, 132, 132, 0.253); position: relative; top: 39px;">
 		<div class="section02">
+			<img class="section02_img"
+				src="<%=request.getContextPath()%>/resources/images/main08.png">
 
 			<div class="top3">
 				<div class="top3_img">
@@ -271,12 +320,18 @@ label.right {
 				<h3
 					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">오직
 					퐁당에서만! 앵콜펀딩</h3>
-				<div style="background-color: blue; width: 100%; height: 100px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<c:forEach items="${reFundingProducts}" var="refund">
+					<a href="<%=request.getContextPath() %>/funding/info/${refund.p_no}"><div
+							class="top3_first"
+							style="height: 100px; display: flex; overflow: hidden; align-items: center; justify-content: center;">
+							<h5 style="width: 70%;">${refund.p_name }</h5>
+							<div style="width: 56%;">
+								<img style="width: 160%;" src="${refund.p_thumbnail}">
+							</div>
+						</div></a>
+				</c:forEach>
 			</div>
+
 			<div class="top3 margin">
 				<div class="top3_img">
 					<img class="top_img"
@@ -286,11 +341,16 @@ label.right {
 				<h3
 					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">놓치면
 					아쉬운 종료임박 펀딩</h3>
-				<div style="background-color: blue; width: 100%; height: 100px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<c:forEach items="${endProducts}" var="end">
+					<a href="<%=request.getContextPath() %>/funding/info/${end.p_no}"><div
+							class="top3_first"
+							style="height: 100px; display: flex; overflow: hidden; align-items: center; justify-content: center;">
+							<h5 style="width: 70%;">${end.p_name }</h5>
+							<div style="width: 56%;">
+								<img style="width: 160%;" src="${end.p_thumbnail}">
+							</div>
+						</div></a>
+				</c:forEach>
 			</div>
 			<div class="top3 margin">
 				<div class="top3_img">
@@ -301,11 +361,16 @@ label.right {
 				<h3
 					style="text-align: center; margin-bottom: 11px; position: relative; top: 7px;">퐁당추천
 					BEST펀딩</h3>
-				<div style="background-color: blue; width: 100%; height: 100px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
-				<div
-					style="background-color: blue; width: 100%; height: 100px; margin-top: 15px;"></div>
+				<c:forEach items="${bestProducts}" var="best">
+					<a href="<%=request.getContextPath() %>/funding/info/${best.p_no}"><div
+							class="top3_first"
+							style="height: 100px; display: flex; overflow: hidden; align-items: center; justify-content: center;">
+							<h5 style="width: 70%;">${best.p_name }</h5>
+							<div style="width: 56%;">
+								<img style="width: 160%;" src="${best.p_thumbnail}">
+							</div>
+						</div></a>
+				</c:forEach>
 			</div>
 		</div>
 		<hr style="border-color: rgba(135, 132, 132, 0.253)">

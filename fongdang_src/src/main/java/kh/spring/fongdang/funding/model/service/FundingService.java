@@ -15,6 +15,12 @@ public interface FundingService {
 	public List<Funding> selectPreProducts(int n);
 	/* 목표 % 상위 N개 불러오기*/
 	public List<Funding> selectRankProducts(int n);
+	/* 리펀딩상품 N개 불러오기*/
+	public List<Funding> reFundingProducts(int n);
+	/* 만료 상품 N개 불러오기*/
+	public List<Funding> endProducts(int n);
+	/* BEST 상품 N개 불러오기*/
+	public List<Funding> bestProducts(int n);
 	
 	/* 펀딩 예정 상품 불러오기*/
 	public List<Funding> selectPreProducts();

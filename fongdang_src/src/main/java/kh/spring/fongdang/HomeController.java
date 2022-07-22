@@ -20,7 +20,11 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView main(ModelAndView mv) {
 		mv.addObject("preProducts",service.selectPreProducts(6));
-		//mv.addObject("todo", "실시간");
+		mv.addObject("rankProducts",service.selectRankProducts(5));
+		mv.addObject("reFundingProducts",service.reFundingProducts(3));
+		mv.addObject("endProducts",service.endProducts(3));
+		mv.addObject("bestProducts",service.bestProducts(3));
+
 		//mv.addObject("todo", "다른 목록들");
 		mv.setViewName("main");
 		return mv;

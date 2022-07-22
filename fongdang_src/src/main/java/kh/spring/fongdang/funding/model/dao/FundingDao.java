@@ -41,6 +41,18 @@ public class FundingDao {
 	public List<Funding> selectRankProducts(int n) {
 		return session.selectList("Funding.selectRankProducts",null,new RowBounds(0,n));
 	}
+	//	리펀딩상품 N개 불러오기
+	public List<Funding> reFundingProducts(int n) {
+		return session.selectList("Funding.reFundingProducts",null,new RowBounds(0,n));
+	}
+	//	기간 만료상품 N개 불러오기
+	public List<Funding> endProducts(int n) {
+		return session.selectList("Funding.endProducts",null,new RowBounds(0,n));
+	}
+	//	BEST상품 N개 불러오기
+	public List<Funding> bestProducts(int n) {
+		return session.selectList("Funding.bestProducts",null,new RowBounds(0,n));
+	}
 	
 	//	오픈 전 상품 전부 불러오기
 	public List<Funding> selectPreProducts() {
