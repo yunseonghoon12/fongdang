@@ -11,7 +11,8 @@
 				,maker_logo
 				,maker_kakao_channel
 				,maker_homepage
-				,maker_address
+				,maker_address1
+				,maker_address2
 				,maker_register_num
 				,maker_license_copy
 				,maker_report_cnt)
@@ -24,7 +25,8 @@
 				,#{maker_logo}
 				,#{maker_kakao_channel}
 				,#{maker_homepage}
-				,#{maker_address}
+				,#{maker_address1}
+				,#{maker_address2}
 				,#{maker_register_num}
 				,#{maker_license_copy}
 				,default

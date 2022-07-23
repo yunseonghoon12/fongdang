@@ -145,7 +145,7 @@ $(document).ready(function() {
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
                     <td > <input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
-                    <input type="hidden" name="updateYn" id="updateYn" value="${updateYn}"/>
+                    <input type="text" name="updateYn" id="updateYn" value="${updateYn}"/>
                     </td>
                     <td></td>
                 </tr>
@@ -240,6 +240,7 @@ $(document).ready(function() {
 	}
 	
     $("#save_maker").click(function () {
+    	
     	
     	if($("#email").val() == ''){
     		alert('로그인 해주세요.');
