@@ -110,17 +110,8 @@ label.right {
 	width: 100%;
 }
 
-.top_img:hover {
+.top3:hover .top_img {
 	transform: scale(1.2);
-}
-
-.section {
-	border-radius: 10px;
-	transition: all .35s;
-}
-
-.section:hover {
-	background-color: #e0f1f83f;
 }
 
 .top3_first:not(first-child) {
@@ -133,6 +124,22 @@ label.right {
 
 .section02:hover .section02_img {
 	opacity: 0.5;
+}
+
+#beforeFunding {
+	position: relative;
+}
+.sectionImg{
+	position: absolute;
+    z-index: -1;
+    width: 800;
+    height: 558px;
+    top: 41px;
+    transition: all .35s;
+   	opacity: 0;
+}
+#beforeFunding:hover .sectionImg {
+		opacity: 0.5;
 }
 
 .section02_img {
@@ -215,6 +222,7 @@ label.right {
 		</div>
 		<div class="section">
 			<div id="beforeFunding">
+		<img class="sectionImg" src="<%=request.getContextPath()%>/resources/images/main09.png" />
 				<p style="font-family: SUIT-SemiBold; font-size: 25px;">주목하세요!
 					오픈 예정 프로젝트</p>
 				<p style="margin-left: 150px; font-family: SUIT-Regular">-먼저
@@ -225,7 +233,7 @@ label.right {
 						<div class="container_content">
 							<c:forEach items="${preProducts}" var="product">
 								<div class="product_hover">
-									<div style="margin-right: 35px;">
+									<div style="margin-right: 35px;background: white;">
 										<a class="product_link"
 											href="<%=request.getContextPath()%>/funding/info/before/${product.p_no}">
 											<div class="product_image">

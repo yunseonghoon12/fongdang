@@ -60,7 +60,7 @@
 	
 	<select id="selectBeforeFunding" parameterType="_int" resultMap="FundingResultMap">
 		<![CDATA[
-			SELECT p.p_no, p.p_sms_cnt, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day,
+			SELECT p.p_no, p.p_sms_cnt, TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day,
 			 p.p_story, p.p_thumbnail, p.p_summary, c.category_name, p.p_name, m.maker_logo, 
 			 maker_name, m.maker_email, m.maker_phone, m.maker_kakao_channel, m.maker_homepage
 			FROM product p JOIN category c USING(category_id)
@@ -94,7 +94,7 @@
 	<select id="selectPreProducts" parameterType="_int" resultType="Funding">
 <![CDATA[
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24')|| '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate
 	order by start_day asc
@@ -207,7 +207,7 @@ select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, categor
 	<select id="selectCatePreProducts1" parameterType="string" resultType="Funding">
 <![CDATA[
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분'start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C1'
 	order by start_day asc
@@ -216,7 +216,7 @@ select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, categor
 	<select id="selectCatePreProducts2" parameterType="string" resultType="Funding">
 <![CDATA[
 select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C2'
 	order by start_day asc
@@ -225,7 +225,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	<select id="selectCatePreProducts3" parameterType="string" resultType="Funding">
 <![CDATA[
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C3'
 	order by start_day asc
@@ -234,7 +234,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	<select id="selectCatePreProducts4" parameterType="string" resultType="Funding">
 <![CDATA[
 select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C4'
 	order by start_day asc
@@ -243,7 +243,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	<select id="selectCatePreProducts5" parameterType="string" resultType="Funding">
 <![CDATA[
 select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C5'
 	order by start_day asc
@@ -252,7 +252,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	<select id="selectCatePreProducts6" parameterType="string" resultType="Funding">
 <![CDATA[
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
-	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시 00분' start_day
+	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
 	where start_day > sysdate and category_id = 'C6'
 	order by start_day asc
@@ -300,10 +300,8 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 <select id="bestProducts" parameterType="string"
 		resultType="Funding">
 <![CDATA[
-	select p_no,maker_name,p_name,p_thumbnail,category_name,
-	TO_CHAR(total_funding_money, 'FM999,999,999,999') total_funding_money
+	select p_no,maker_name,p_name,p_thumbnail,category_name, total_funding_money
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-    where start_day < sysdate and end_day > sysdate
     order by total_funding_money desc
 ]]>
 	</select>

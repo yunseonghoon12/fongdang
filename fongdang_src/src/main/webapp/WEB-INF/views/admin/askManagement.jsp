@@ -120,11 +120,30 @@ a {
 	text-align: center;
 }
 
-.table tr th, .table tr td {
+.table tr th, .table tr td:not(:last-child) {
 	width: 100px;
 	max-width: 100px;
 	overflow: hidden;
 }
+.contentModal {
+	position: absolute;
+    width: 319px;
+    height: 247px;
+    background: #c1c1c1e4;
+    bottom: -2px;
+    right: 159px;
+    padding: 16px;
+    text-align: left;
+    border: solid 1.7px;
+    border-radius: 18px;
+    overflow: auto;
+    display: none;
+}
+.ansView{
+cursor: pointer;
+}
+.ansView:hover .contentModal{
+display: block;}
 </style>
 </head>
 <body>
@@ -211,7 +230,10 @@ a {
 								<td>${askY.ask_category}</td>
 								<td>${askY.email}</td>
 								<td>${askY.ask_date}</td>
-								<td style="width: 110px;">답변내용확인</td>
+								<td class="ansView" style="width: 110px;position: relative;">답변내용확인
+								<div class="contentModal">
+								<p>제목:${askY.ask_title}</p><p>내용:${askY.ask_content}</p><br><br><p>답변내용:${askY.ans_content}</p></div></td>
+								
 							</tr>
 						</c:forEach>
 						<c:if test="${empty ask_Y}">
@@ -234,6 +256,17 @@ a {
 			// 클릭하지 않은 다른 객체들의 폰트색 변경
 			$("#admin_nav > ul> li > a").not(this).css('color', before_color);
 		});
+		
+		  $(".ansView").click(function() {
+		        
+		       	var option= "width=500, height=550";
+		       	var m_no = $(this).children().val();
+		       	var url = "<%=request.getContextPath()%>/admin/ask/ask_no=";
+		       	url += ask_no;
+		       	
+		       	console.log("url: " + url);
+		        window.open(url, "popup", option);
+			});
 	</script>
 	<!-- 	<script>
 		$("button[id^='ans_button']").on('click', function(e) {

@@ -51,12 +51,12 @@
 						<p style="text-align: center;">카테고리</p>
 						<hr style="margin-top: 10px;">
 						<ul>
-							<li>반려동물</li>
-							<li>캠핑</li>
-							<li>식품</li>
-							<li>테크·가전</li>
-							<li>뷰티</li>
-							<li>기타</li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC5"><p>반려동물</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC4"><p>캠핑</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC3"><p>식품</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC1"><p>테크·가전</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC2"><p>뷰티</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC6"><p>기타</p></a></li>
 						</ul>
 						<hr style="margin-top: 10px;">
 						<p class="header_x"

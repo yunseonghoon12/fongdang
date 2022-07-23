@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,7 +85,9 @@ body {
 	top: 5px;
 	position: relative;
 }
-
+.productList>ul>li>a:hover h3 {
+	color: #EF9A9A;
+}
 .productList>ul>li>a .screen::after {
 	content: '';
 	display: block;
@@ -113,11 +113,6 @@ body {
 .productList>ul>li>a:hover .screen::after {
 	opacity: 1;
 }
-
-.productList>ul>li>a h3:hover {
-	color: #EF9A9A;
-}
-
 /* 드랍다운 카테고리 */
 .category02 {
 	margin: 15px 15%;
@@ -155,12 +150,12 @@ a {
 	margin: 95px auto 0;
 	padding: 10px;
 	position: relative;
-	left: 70px;
+	left: 54px;
 }
 
 .imglist_ul>li {
 	display: inline-block;
-	width: 22%;
+	width: 30%;
 	vertical-align: top;
 	font-size: 12px;
 }
@@ -256,7 +251,7 @@ a {
 	font-size: 19px;
 }
 
-.itemsWrap:hover h3, .itemsWrap:hover p,.itemsWrap:hover h4 {
+.itemsWrap:hover h3, .itemsWrap:hover p, .itemsWrap:hover h4 {
 	color: #EF9A9A;
 }
 
@@ -390,12 +385,12 @@ a#topBtn {
 							</div>
 							<div class="nameWrap" style="overflow: hidden; height: 60px;">
 								<h4 style="font-size: 16px;">${product.p_name}</h4>
-								<h5 style="font-size: 15px; color: #ccc;">${product.category_name}&nbsp;&nbsp;| 
+								<h5 style="font-size: 15px; color: #ccc;">${product.category_name}&nbsp;&nbsp;|
 									${product.maker_name}</h5>
 							</div>
 							<div style="width: 100%; height: 3px; background-color: EF9A9A;"></div>
 							<p style="color: black; font-size: 15px;">
-								<span style="font-weight: 600;left: -10px;position: relative;">${product.start_day}
+								<span style="font-weight: 600; left: -10px; position: relative;">${product.start_day}
 									오픈예정! </span>
 							</p>
 					</a></li>

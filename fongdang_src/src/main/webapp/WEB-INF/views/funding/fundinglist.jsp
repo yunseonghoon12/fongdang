@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,6 +85,9 @@ body {
 	top: 5px;
 	position: relative;
 }
+.productList>ul>li>a:hover h3 {
+	color:#9bbfd9;
+}
 
 .productList>ul>li>a .screen::after {
 	content: '';
@@ -114,7 +115,7 @@ body {
 	opacity: 1;
 }
 
-.itemsWrap:hover h3, .itemsWrap:hover p,.itemsWrap:hover h4 {
+.itemsWrap:hover h3, .itemsWrap:hover p, .itemsWrap:hover h4 {
 	color: #9bbfd9;
 }
 
@@ -155,12 +156,12 @@ a {
 	margin: 0 auto;
 	padding: 10px;
 	position: relative;
-	left: 70px;
+	left: 54px;
 }
 
 .imglist_ul>li {
 	display: inline-block;
-	width: 22%;
+	width: 30%;
 	vertical-align: top;
 	font-size: 12px;
 }
@@ -192,7 +193,7 @@ a {
 	transition: all 1s;
 }
 
-.itemsWrap:hover .screen img  {
+.itemsWrap:hover .screen img {
 	transform: scale(1.1) translate(-45%, -45%);
 }
 
@@ -381,7 +382,7 @@ a#topBtn {
 		<div class="productWrap">
 			<ul class="imglist_ul">
 				<c:forEach items="${allProducts}" var="product">
-					<li class="itemsWrap"><a
+					<li class="itemsWrap" style="position: relative;"><a
 						href="<%=request.getContextPath()%>/funding/info/${product.p_no}">
 							<div class="screen">
 								<span></span><span></span><span></span><span></span> <img
@@ -390,11 +391,14 @@ a#topBtn {
 							<div class="nameWrap" style="overflow: hidden; height: 44px;">
 								<h4 style="font-size: 16px;">${product.p_name}</h4>
 							</div>
-							<h5 style="font-size: 15px; color: #ccc;overflow: hidden; height: 19px;">
-							${product.category_name}&nbsp;&nbsp;| ${product.maker_name}</h5>
-							<div style="width: 100%; height: 3px;background: #9bbfd9;"></div> 
-							<span style="font-size: 15px;font-weight: 600;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
-							<span style="font-size: 15px;font-weight: 600;position: relative;left: 77px;">${product.d_day}일 남음</span>
+							<h5
+								style="font-size: 15px; color: #ccc; overflow: hidden; height: 19px;">
+								${product.category_name}&nbsp;&nbsp;| ${product.maker_name}</h5>
+							<div style="width: 100%; height: 3px; background: #9bbfd9;"></div>
+							<span style="font-size: 15px; font-weight: 600;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
+							<span
+							style="font-size: 15px; font-weight: 600; position: relative; right: 10px;position: absolute;">${product.d_day}일
+								남음</span>
 					</a></li>
 				</c:forEach>
 			</ul>
