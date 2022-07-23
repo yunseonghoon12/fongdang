@@ -49,6 +49,14 @@ public class OptionController {
 	
 		try {
 			String result = "";
+			
+			int option_no = optionService.selectOptionNo(option.getP_no());
+			
+			if (option_no > 5) {
+				return new ResponseEntity<>("over", HttpStatus.OK);
+			}
+			
+			option.setOption_no(option_no);
 			int i = optionService.insertOption(option);
 			if (i == 1) {
 				result = "success";
@@ -59,6 +67,18 @@ public class OptionController {
 	    } catch (Exception e) {
 	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
 	    }
+	}
+	
+	@GetMapping("/viewList")
+	public ModelAndView selectOptionList(ModelAndView mv, HttpSession session) {
+		
+		String p_no = "";
+		Member member = (Member) session.getAttribute("loginInfo");
+		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
+		
+		mv.addObject("optionList", optionService.selectOptionList(Integer.parseInt(p_no)));
+		mv.setViewName("option/optionList");// jsp페이지
+		return mv;
 	}
 
 }

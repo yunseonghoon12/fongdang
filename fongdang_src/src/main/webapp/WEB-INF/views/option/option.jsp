@@ -97,8 +97,10 @@ $(document).ready(function() {
                 if(result == "success"){
                 	alert("저장 성공");
                 	//TODO 이동하는 페이지 쓰기 
-                }else{
+                }else if (result == "fail"){
                 	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	
+                }else if (result == "over"){
+                	alert("옵션은 5개 까지 등록할 수 있습니다.");
                 }
             },
    			error : function (result) {

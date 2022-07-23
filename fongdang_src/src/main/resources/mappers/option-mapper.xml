@@ -23,7 +23,7 @@
 		)
 	</insert>
 
-	<update id="updateOption">
+	<update id="updateOption" parameterType="Option">
 		update option 
 		   set option_name=#{option_name}
 				,option_info=#{option_info}
@@ -32,9 +32,10 @@
 		where option_no=#{option_no}
 	</update>
 
-	<select id="selectOption">
-		select * from option
-		         where option_no=#{option_no}
+	<select id="selectOption" resultType="Option" parameterType="int">
+		select * 
+		from "OPTION"
+		where option_no=#{option_no}
 	</select>
 
 	<select id="selectOneGetPNo" parameterType="String" resultType="String">
@@ -44,4 +45,15 @@
 		AND m.EMAIL = #{email}
 	</select>
 
+	<select id="selectOptionNo" resultType="int" parameterType="int">
+		select nvl(max(option_no),0)+1 as option_no 
+		  from "OPTION"
+		 where P_NO=#{p_no}
+	</select>
+	
+	<select id="selectOptionList" resultType="Option" parameterType="int">
+		select * 
+		from "OPTION"
+		 where P_NO=#{p_no}
+	</select>
 </mapper>

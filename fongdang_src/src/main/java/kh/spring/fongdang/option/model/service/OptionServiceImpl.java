@@ -1,5 +1,7 @@
 package kh.spring.fongdang.option.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +22,11 @@ public class OptionServiceImpl implements OptionService {
 		return optionDao.selectOneGetPNo(email);
 	}
 	
+	public int selectOptionNo(int no) {
+		return optionDao.selectOptionNo(no);
+	}
 
+	public List<Option> selectOptionList(int p_no){
+		return optionDao.selectOptionList(p_no);
+	}
 }
