@@ -445,7 +445,17 @@ AS
         LEFT OUTER JOIN "ORDER" USING(p_no)
         LEFT OUTER JOIN member USING(email)
     GROUP BY p_no;
-
+    
+-- 좋아요수, 리뷰수,누적펀딩액 view
+CREATE OR REPLACE VIEW view_total_like_review_money
+AS
+    SELECT p_no,NVL(SUM(total_price), 0) total_funding_money,NVL(COUNT(pick_yn), 0) total_like,NVL(COUNT(r_no), 0) total_review
+    FROM product
+        LEFT OUTER JOIN pick USING(p_no)
+        LEFT OUTER JOIN review USING(p_no)
+        LEFT OUTER JOIN "ORDER" USING(p_no)
+       
+    GROUP BY p_no;
 -- 상품 신고횟수 증가시키는 트리거 생성
 CREATE OR REPLACE TRIGGER trg_update_report_cnt
     AFTER INSERT

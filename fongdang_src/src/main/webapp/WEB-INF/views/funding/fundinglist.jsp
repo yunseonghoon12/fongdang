@@ -1,8 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,8 +89,9 @@ body {
 	top: 5px;
 	position: relative;
 }
+
 .productList>ul>li>a:hover h3 {
-	color:#9bbfd9;
+	color: #9bbfd9;
 }
 
 .productList>ul>li>a .screen::after {
@@ -371,12 +376,15 @@ a#topBtn {
 		</div>
 		<hr style="border-style: outset; margin-top: 10px;">
 		<div class="category02">
-			<select id="cateSelect">
-				<option value="v1" selected>전체</option>
-				<option value="v2">좋아요순</option>
-				<option value="v3">조회수순</option>
-				<option value="v4">리뷰순</option>
-			</select>
+<form action="<%=request.getContextPath()%>/funding/list" method="get" id="cateSelect2">
+				<select name="cateSelect" id="cateSelect">
+					<option selected>선택</option>
+					<option value="v2">좋아요순</option>
+					<option value="v3">리뷰순</option>
+					<option value="v4">모금액순</option>
+				</select>
+					<input type="hidden" name="category_id" value="${category_id}"/>
+</form>
 		</div>
 
 		<div class="productWrap">
@@ -397,7 +405,7 @@ a#topBtn {
 							<div style="width: 100%; height: 3px; background: #9bbfd9;"></div>
 							<span style="font-size: 15px; font-weight: 600;">${product.p_goal_percent}%&nbsp;&nbsp;${product.p_goal_str}원</span>
 							<span
-							style="font-size: 15px; font-weight: 600; position: relative; right: 10px;position: absolute;">${product.d_day}일
+							style="font-size: 15px; font-weight: 600; position: relative; right: 10px; position: absolute;">${product.d_day}일
 								남음</span>
 					</a></li>
 				</c:forEach>
@@ -447,6 +455,10 @@ a#topBtn {
 				}
 				;
 			});
+		});
+		
+		$(document).on("change", "select#cateSelect", function() { 
+			cateSelect2.submit();
 		});
 	</script>
 	<script>

@@ -42,7 +42,7 @@ footer {
 			</h5>
 			</p>
 			<p>
-			02-1234-5678&nbsp;&emsp;&emsp;&emsp;<span>02-5678-1234</span>
+			02-1234-5678&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>02-5678-1234</span>
 			</p>
 			<br>
 

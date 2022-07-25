@@ -1,5 +1,8 @@
 package kh.spring.fongdang.funding.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -122,8 +125,16 @@ public class FundingController {
 	}
 	
 	@GetMapping("/list")
-	public ModelAndView fundinglist(ModelAndView mv) {
-		mv.addObject("allProducts", service.selectAllProducts());
+	public ModelAndView fundinglist(ModelAndView mv, @RequestParam(value = "category_id", defaultValue = "" ) String category_id,
+			 @RequestParam(value = "cateSelect", defaultValue = "" ) String cateSelect	) {
+		
+	
+		Map<String, String> map = new HashMap<String,String>();
+		map.put("category_id", category_id);
+		map.put("cateSelect", cateSelect);
+		
+		mv.addObject("category_id",category_id);
+		mv.addObject("allProducts", service.selectAllProducts(map));
 		mv.setViewName("funding/fundinglist");
 		return mv;
 
@@ -138,6 +149,7 @@ public class FundingController {
 	@GetMapping("/list/cateC1")
 	public ModelAndView fundingCatelist1(ModelAndView mv, String C1) {
 		mv.addObject("allProducts",service.selectCateProducts1(C1));
+		mv.addObject("category_id","C1");
 		
 		mv.setViewName("funding/fundinglist");
 		return mv;
@@ -145,35 +157,35 @@ public class FundingController {
 	@GetMapping("/list/cateC2")
 	public ModelAndView fundingCatelist2(ModelAndView mv, String C2) {
 		mv.addObject("allProducts",service.selectCateProducts2(C2));
-		
+		mv.addObject("category_id","C2");
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC3")
 	public ModelAndView fundingCatelist3(ModelAndView mv, String C3) {
 		mv.addObject("allProducts",service.selectCateProducts3(C3));
-		
+		mv.addObject("category_id","C3");
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC4")
 	public ModelAndView fundingCatelist4(ModelAndView mv, String C4) {
 		mv.addObject("allProducts",service.selectCateProducts4(C4));
-		
+		mv.addObject("category_id","C4");
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC5")
 	public ModelAndView fundingCatelist5(ModelAndView mv, String C5) {
 		mv.addObject("allProducts",service.selectCateProducts5(C5));
-		
+		mv.addObject("category_id","C5");
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC6")
 	public ModelAndView fundingCatelist6(ModelAndView mv, String C6) {
 		mv.addObject("allProducts",service.selectCateProducts6(C6));
-		
+		mv.addObject("category_id","C6");
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}

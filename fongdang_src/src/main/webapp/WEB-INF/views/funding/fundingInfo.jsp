@@ -14,7 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <style>
-.funding_stroy img {
+.funding_story img {
 	width: 1200px;
 	position: relative;
 	right: 120px;

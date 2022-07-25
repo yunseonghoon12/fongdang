@@ -25,7 +25,6 @@ public class HomeController {
 		mv.addObject("endProducts",service.endProducts(3));
 		mv.addObject("bestProducts",service.bestProducts(3));
 
-		//mv.addObject("todo", "다른 목록들");
 		mv.setViewName("main");
 		return mv;
 	}

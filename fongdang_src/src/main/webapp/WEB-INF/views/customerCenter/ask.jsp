@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="kh.spring.fongdang.ask.domain.Ask"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/button.css">
 <link rel="stylesheet"
@@ -80,12 +81,12 @@
 }
 
 .allWrap .toggle {
-	display: flex;
-	align-items: center;
-	font-size: 30px;
-	margin: 0 50px 0 auto;
-	transition: all .4s;
-	cursor: pointer;
+    font-size: 30px;
+    transition: all .4s;
+    cursor: pointer;
+    position: absolute;
+    right: 51px;
+    cursor: pointer;
 }
 
 .allWrap .content {
@@ -144,6 +145,7 @@
 .ask01 {
 	width: 275px;
 	text-align: left;
+	font-size:18px;
 }
 
 .ask_date {
@@ -171,6 +173,11 @@
 	padding: 1px 1px 1px 5px;
 	border-radius: 10px;
 }
+
+.tg2 {
+display: none;
+}
+
 </style>
 </head>
 
@@ -198,14 +205,14 @@
 
 					<c:forEach items="${ask}" var="ask">
 					<form action="deleteAsk.do" method="post" id="deleteAsk">
-						<div class="ask_box">
-							<li style="display: flex; margin-top: 30px;">
+						<div class="ask_box" style="position: relative;">
+							<li style="display: flex; margin-top: 30px;margin-bottom: 10px;">
 								<h2 class="ask01">${ask.ask_title}</h2> <span class="ask_sort">${ask.ask_category}문의</span>
 								<c:if test="${ask.reply_yn eq 'N'}">
 									<span class="reply_end">답변대기</span>
 								</c:if> <c:if test="${ask.reply_yn eq 'Y'}">
 									<span class="reply_end2">답변완료</span>
-								</c:if> <span class="toggle">&#9660</span>
+								</c:if> <span class="toggle tg1">&#9660</span> <span class="toggle tg2">&#9650</span>
 							</li>
 							<li class="content">
 								<div style="display: flex;">
@@ -258,20 +265,19 @@
 			var tDegree = 0;
 			$(".content").hide();
 			
-	/* 토글 */	/* 화살표 회전 */
+	/* 토글 */
 			$(".toggle").click(function() {
-				$(this).parent().next().toggle("fast", "swing");
-				
-				tDegree += 60;
-				if(tDegree > 120) tDegree = 60;
-				
-				var toggle = document.getElementsByClassName("toggle");
-				toggle.removeClass('toggle60');
-				toggle.removeClass('toggle120');
-
-				 if( tDegree == 60 ) {toggle.addClass('toggle60');}
-				 if( tDegree == 120 ) {toggle.addClass('toggle120');}
+				$(this).parent().next().toggle("fast", "swing");	
 			});
+			$(".tg1").click(function() {
+				$(this).next().show();
+				$(this).hide();
+			});
+			$(".tg2").click(function() {
+				$(this).prev().show();
+				$(this).hide();
+			});
+			
 
 			$("[id^='ask_delete']").click(function() {
 				console.log($(this));

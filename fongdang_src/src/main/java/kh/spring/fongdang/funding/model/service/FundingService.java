@@ -1,6 +1,7 @@
 package kh.spring.fongdang.funding.model.service;
 
 import java.util.List;
+import java.util.Map;
 
 import kh.spring.fongdang.funding.domain.Funding;
 
@@ -26,7 +27,7 @@ public interface FundingService {
 	public List<Funding> selectPreProducts();
 	
 	/* 펀딩 상품 불러오기*/
-	public List<Funding> selectAllProducts();
+	public List<Funding> selectAllProducts(Map<String, String> map);
 	/*카테고리 상품 불러오기*/
 	public List<Funding> selectCateProducts1(String c1);
 	public List<Funding> selectCateProducts2(String c2);

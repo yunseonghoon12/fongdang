@@ -2,6 +2,7 @@ package kh.spring.fongdang.funding.model.dao;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -60,8 +61,8 @@ public class FundingDao {
 	}
 
 	// 상품 리스트 전부 불러오기
-	public List<Funding> selectAllProducts() {
-		return session.selectList("Funding.selectAllProducts");
+	public List<Funding> selectAllProducts(Map<String, String> map) {
+		return session.selectList("Funding.selectAllProducts", map);
 	}
 	
 	// 상품 카테고리 불러오기

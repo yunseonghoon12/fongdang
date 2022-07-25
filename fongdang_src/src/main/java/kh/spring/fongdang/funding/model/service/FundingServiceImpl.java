@@ -1,6 +1,7 @@
 package kh.spring.fongdang.funding.model.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,11 +48,9 @@ public class FundingServiceImpl implements FundingService {
 		return dao.bestProducts(n);
 	}
 
-	@Override
-	public List<Funding> selectAllProducts() {
-		return dao.selectAllProducts();
+	public List<Funding> selectAllProducts(Map<String, String> map) {
+		return dao.selectAllProducts(map);
 	}
-
 	@Override
 	public List<Funding> selectPreProducts() {
 		return dao.selectPreProducts();
