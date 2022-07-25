@@ -10,6 +10,72 @@
 	text-decoration: none;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal > .alarm_content {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 430px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal_title {
+    font-family: SUIT-SemiBold;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+#btn_close {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+}
+.alarm_content .alarm_list:first-of-type {
+        display: flex;
+        margin-top: 30px;
+}
+.alarm_content .alarm_list:not(:first-of-type) {
+    display: flex;
+    margin-top: 10px;
+}
+.alarm_content .alarm_list_left.read {
+    color: #dadce0;
+    cursor: default;
+}
+.alarm_content .alarm_list_left {
+    color: #444C57;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+.alarm_content .a_content {
+    font-family: 'SUIT-Regular';
+    font-size: 15px;
+}
+.alarm_content .a_date {
+    font-family: 'SUIT-Regular';
+    font-size: 13px;
+    margin: 5px 0;
+}
+.alarm_content .btn_delete {
+    background-color: transparent;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 15px;
+}
 .main_headerWrap {
 	vertical-align: top;
 	height: 80px;

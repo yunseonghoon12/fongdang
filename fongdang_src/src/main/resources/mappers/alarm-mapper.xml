@@ -14,6 +14,6 @@
 	</delete>
 	
 	<select id="selectAlarmList" parameterType="string" resultType="Alarm">
-		SELECT a_no, email, a_content, TO_CHAR(a_date, 'YYYY.MM.DD') a_date FROM alarm ORDER BY a_no DESC
+		SELECT a_no, email, a_content, TO_CHAR(a_date, 'YYYY.MM.DD') a_date, read_yn FROM alarm WHERE email = #{email} ORDER BY a_no DESC
 	</select>
 </mapper>

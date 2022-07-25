@@ -10,8 +10,82 @@
 	href="<%=request.getContextPath()%>/resources/css/header.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/button.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<style>
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal > .alarm_content {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 430px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: SUIT-Regular;
+}
+.modal_title {
+    font-family: SUIT-SemiBold;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+#btn_close {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+}
+.alarm_content .alarm_list:first-of-type {
+    display: flex;
+    margin-top: 30px;
+}
+.alarm_content .alarm_list:not(:first-of-type) {
+    display: flex;
+    margin-top: 10px;
+}
+.alarm_content .alarm_list_left.read {
+    color: #dadce0;
+    cursor: default;
+}
+.alarm_content .alarm_list_left {
+    color: #444C57;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+.alarm_content .a_content {
+    font-family: 'SUIT-Regular';
+    font-size: 15px;
+}
+.alarm_content .a_date {
+    font-family: 'SUIT-Regular';
+    font-size: 13px;
+    margin: 5px 0;
+}
+.alarm_content .btn_delete {
+    background-color: transparent;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 15px;
+}
+</style>
+<div class="modal alarm">
+    <div class="alarm_content">
+        <span class="modal_title">알림조회</span><button id="btn_close" type="button"><i class="fa fa-close"></i></button>
+    </div>
+</div>
 <div class="main_headerWrap">
 	<header class="site__header" style="margin: 0 auto;width=1280px;">
 		<nav style="min-width: 1281px;">
@@ -75,9 +149,7 @@
 				</c:if>
 
 				<c:if test="${!empty loginInfo}">
-					<li style="top: 10px;"><a href="#" id="">알림<%-- <img
-						src="<%=request.getContextPath()%>/resources/images/bell.png"
-						class="header_loginImg"> --%></a></li>
+					<li id="btn_alarm" style="top: 10px;"><a>알림</a></li>
 					<c:if test="${!empty loginInfo}">
 						<c:if test="${loginInfo.name ne '관리자'}">
 							<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보<%-- <img
@@ -119,6 +191,109 @@
         $(".header_x").on("click", function () {
             $(".searchR").hide();
         });
+        $("#btn_alarm").on('click', function(){
+    		console.log("알림 클릭");
+    		$.ajax({
+    			url: "<%=request.getContextPath()%>/alarm/list",
+    			type: "post",
+    			datatype: "json",
+    			success: function(result){
+    				console.log(result);
+    				if (result == -1) {
+    					alert("로그인을 한 후에 알림 조회가 가능합니다. 로그인 페이지로 이동합니다.");
+    				} else if (result == 0) {
+    					alert("알림이 없습니다.");
+    				} else {
+    					$(".alarm").show();
+    					$("#btn_close").nextAll().remove();
+    					for(var i = 0; i < result.length; i++) {
+    						var alarm = result[i];
+    						var html = '';
+    						console.log(alarm.a_content);
+    						html += '<div class="alarm_list">';
+    						if(alarm.read_yn == 'Y') {
+    							html += '<div class="alarm_list_left read">';
+    						} else {
+    							html += '<div class="alarm_list_left" onclick="updateAlarm(this, '+alarm.a_no+');">';
+    						}
+    						html += '<div class="a_content">' + alarm.a_content + '</div>';
+    						html += '<div class="a_date">' + alarm.a_date + '</div>';
+    						html += '</div>';
+    						html += '<div class="alarm_list_right"><button class="btn_delete" type="button" onclick="deleteAlarm(this, '+alarm.a_no+');"><i class="fa fa-trash"></i></button></div>';
+    						html += '</div>';
+    						
+    						$(".alarm_content").append(html);
+    					}
+    				}
+    			},
+    			error: function(request, status, error) {
+    				console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+    			}
+    		});
+    	});
+    	// 제목 옆에 X 버튼 클릭 시 모달창 닫기
+        $("#btn_close").on('click', function () {
+            $(".alarm").hide();
+        });
+     	// 모달창 띄우고 내용 있는 곳 부분 제외한 곳 누르면 모달창 닫기
+        $(".alarm").on('click', function () {
+            if (event.target == $(".alarm").get(0)) {
+                $(".alarm").hide();
+            }
+        });
+     	
+     	// 알림 삭제
+     	function deleteAlarm(alarm, a_no) {
+     		console.log("알림 삭제");
+     		$.ajax({
+    			url: "<%=request.getContextPath()%>/alarm/delete",
+    			type: "post",
+    			data: {
+    				a_no: a_no
+    			},
+    			success: function(result){
+    				console.log(result);
+    				if (result == -1) {
+    					alert("알림이 삭제 되지 않았습니다. 다시 시도해주세요.");
+    				} else if (result == 0) {
+    					alert("로그인을 한 후에 알림 삭제가 가능합니다. 로그인 페이지로 이동합니다.");
+    					/* location.href = "login"; */
+    				} else if (result == 1){
+    					$(alarm).parents().get(1).remove();
+    				}
+    			},
+    			error: function(request, status, error) {
+    				console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+    			}
+    		});
+     	};
+     	
+     	// 알림 읽음 여부 변경
+     	function updateAlarm(alarm, a_no) {
+     		console.log("읽음 여부 변경");
+     		$.ajax({
+    			url: "<%=request.getContextPath()%>/alarm/update",
+    			type: "post",
+    			data: {
+    				a_no: a_no
+    			},
+    			success: function(result){
+    				console.log(result);
+    				if (result == -1) {
+    					alert("읽음 처리가 되지 않았습니다. 다시 시도해주세요.");
+    				} else if (result == 0) {
+    					alert("로그인을 한 후에 알림 조회가 가능합니다. 로그인 페이지로 이동합니다.");
+    					/* location.href = "login"; */
+    				} else if (result == 1){
+    					$(alarm).addClass("read");
+    					$(alarm).removeAttr("onclick");
+    				}
+    			},
+    			error: function(request, status, error) {
+    				console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+    			}
+    		});
+     	};
     </script>
     
 	</header>
