@@ -69,7 +69,7 @@
 
 		<div class="introWrap">
 			<div
-				style="width: 50%; height: 344px; overflow: hidden; border-radius: 23px; position: relative; top: 75px;">
+				style="width: 50%; height: 344px; overflow: hidden; border-radius: 23px; position: relative; top: 0px;">
 				<img
 					src="<%=request.getContextPath()%>/resources/images/fongdang.jpg">
 			</div>
@@ -98,8 +98,9 @@
 		</div>
 	</div>
 
-
+<div style="margin-top: 65px;">
 	<jsp:include page="../footer.jsp" />
+</div>
 
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c2c1f7266c7882e29f054c8c9c9fa5fc"></script>

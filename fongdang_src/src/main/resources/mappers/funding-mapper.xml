@@ -130,6 +130,9 @@
 <if test="category_id == 'C1' || category_id == 'C2' || category_id == 'C3' || category_id == 'C4' || category_id == 'C5' || category_id == 'C6'">
     AND category_id = #{category_id}
 </if>	 
+	 <if test="cateSelect == 'v1'">
+         order by end_day asc
+    </if>
 	 <if test="cateSelect == 'v2'">
          order by total_like desc
     </if>
@@ -152,7 +155,6 @@
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C1'
-	order by end_day asc
 ]]>
  	<if test="cateSelect == 'v2'">
          order by total_like desc
@@ -173,7 +175,6 @@
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
 	where start_day < sysdate and end_day > sysdate and category_id = 'C2'
-	order by end_day asc
 ]]>
  	<if test="cateSelect == 'v2'">
          order by total_like desc

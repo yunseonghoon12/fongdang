@@ -165,6 +165,18 @@ label.right {
 .top3_first:hover {
 	border: solid 3px #F4D284;
 }
+.ranking_paint {
+position: absolute;
+    right: -137px;
+    top: -52px;
+    z-index: -1;
+    width: 162%;
+    opacity: 0.3;
+    transition: all .4s;
+}
+#ranking01:hover .ranking_paint{
+    opacity: 0.7;
+}
 </style>
 </head>
 <body>
@@ -269,7 +281,8 @@ label.right {
 					</section>
 				</div>
 			</div>
-			<div id="ranking01">
+			<div id="ranking01" style="position: relative;">
+			<img class="ranking_paint" src="<%=request.getContextPath()%>/resources/images/main11.gif">
 				<p style="font-family: SUIT-SemiBold; font-size: 25px;">퐁당 펀딩 달성률 TOP5!</p>
 				<div style="display: flex;">
 					<ul style="top: 20px; position: relative;">

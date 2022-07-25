@@ -379,6 +379,7 @@ a#topBtn {
 <form action="<%=request.getContextPath()%>/funding/list" method="get" id="cateSelect2">
 				<select name="cateSelect" id="cateSelect">
 					<option selected>선택</option>
+					<option value="v1">펀딩마감순</option>
 					<option value="v2">좋아요순</option>
 					<option value="v3">리뷰순</option>
 					<option value="v4">모금액순</option>
