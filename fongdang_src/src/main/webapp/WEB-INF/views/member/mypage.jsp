@@ -56,19 +56,21 @@
       	background-color: white;
       	border: 1px solid white;
 	      
-      	border-radius: 22px;
-      	color: #444c57;      
+      	border-radius: 22px;    
+      	cursor: pointer;  	     
     }
     #supporter_btn {
       	position: absolute;
       	font-family: SUIT-Regular;
       	z-index: 10;      	
       	right: 60px;
+      	color: #9bbfd9;
     }
     #maker_btn {
       	position: absolute;
       	z-index: 10;       	    
       	right: 0;
+      	color: #444c57; 
     }
     #support_content_wrap {      
       	width: 100%;    
@@ -280,6 +282,7 @@
     }
     #fundingEnroll_btn:hover {
     	font-weight: bold;
+    	font-size: 19px;
     	color: black;
     }
     #my_activity_wrap {            

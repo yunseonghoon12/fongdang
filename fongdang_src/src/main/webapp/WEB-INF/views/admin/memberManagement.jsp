@@ -172,19 +172,32 @@
     }
     #member_list {    	
     	width: 800px;
+    	margin: 30px 0;
 	    font-size: 13px;
       	line-height: 40px;
       	text-align: center;	
     }
     #prev_next {
-      	text-align: center;      	
-      	margin: 90px auto 0 auto;
+      	text-align: center;      
+      	width: 800px;
+      	height: 40px;
+  	}
+    #prev_next button {
+    	background-color: white;
+  	border: 2px solid #444c57;    	
+   	color: #444c57;
+   	font-size: 17px;
+   	font-weight: bold;
+   		
+   	margin: 5px;     	
+   	width: 25px;
+   	height: 25px;
+   	cursor: pointer;
     }
-    #prev_next a {
-    	text-decoration: none;
-   		color: #444c57;
-   		font-size: 17px;
-   	}    
+    #prev_next button:hover {
+    	background-color: #444c57;
+    	color: white;
+    }   
     
   </style>
 </head>
@@ -274,20 +287,19 @@
 </c:forEach>        					
         				</tbody>
         			</table> 
-        		</form>
-
-        		<div id=prev_next>
-        <c:if test="${ startPage > 1 }">
-					<a href="<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
-		</c:if>
-		<c:forEach begin="${startPage }" end="${endPage }" var="p">
-					<a href="<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
-		</c:forEach>
-		<c:if test="${endPage < totalPageCnt }">
-					<a href="<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ endPage+1}">다음</a>
-		</c:if>
-        		</div>
-         		
+        		</form>       		
+        		
+       			<p id="prev_next">    	
+<c:if test="${ startPage > 1 }">
+					<button onclick="location.href='<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ startPage-1}';" style="width:50px; height: 30px;">이전</button>
+</c:if>
+<c:forEach begin="${startPage }" end="${endPage }" var="p">
+					<button id="page_btn${p}" value="${p}" onclick="location.href='<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ p}';">${ p }</button>				
+</c:forEach>
+<c:if test="${endPage < totalPageCnt }">
+					<button onclick="location.href='<%=request.getContextPath()%>/admin/memberManagement?related_search=${related_search}&page=${ endPage+1}';" style="width:50px; height: 30px;">다음</button>				
+</c:if>
+     			</p>
         	</div>
         </div>
     </div>           
@@ -295,7 +307,22 @@
    
   <jsp:include page="../footer.jsp"/>
   <script>
-   
+	//페이징 처리시 css 설정
+	var page = '${currentPage}';
+	var startPage =  '${startPage}';
+	var endPage =  '${endPage}';
+	console.log("현재페이지: " + page);
+	console.log("[페이지에 나와있는 정수형 페이지 숫자]");
+	for(var i=startPage; i<= endPage;  i++) {  		
+		var page_btn_n = $("#page_btn"+i);
+		console.log("페이지=> " + page_btn_n.val());
+		if(page_btn_n.val() == page) {
+			page_btn_n.css({
+				"background-color": "#444c57",
+				"color" : "white"
+			});
+		}
+	}  
     
     function memberWithDrawHandler() {
     	var cnf = confirm("해당 회원을 탈퇴상태로 변경하겠습니까?"); 

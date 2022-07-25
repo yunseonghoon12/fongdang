@@ -116,13 +116,25 @@
   		color: #444c57;	
   } 
   #prev_next {
-      	text-align: center;      	
-      	margin: 20px auto 0 auto;
-    }
-  #prev_next a {
-    	text-decoration: none;
+      	text-align: center;      
+      	width: 1280px;
+      	margin: 0 auto;    
+  }
+  #prev_next button {
+  		background-color: white;
+  		border: 2px solid #444c57;    	
    		color: #444c57;
    		font-size: 17px;
+   		font-weight: bold;
+   		
+   		margin: 5px;     	
+   		width: 25px;
+   		height: 25px;
+   		cursor: pointer;
+  }
+  #prev_next button:hover {
+		background-color: #444c57;
+		color: white;
   }
 </style>
 </head>
@@ -162,43 +174,41 @@
 				펀딩 프로젝트 바로가기
 			</button>
 		</p>
-</c:if>    
-      <!-- <a href="#">
-        <div class="prod_flex">
-          <img class="prod_img" src="">
-          <div class="prod_info_wrap">
-            <p class="prod_name">[5점앵콜]속각질 뽑아내고, 속보습 채우는 참마 비건클렌저</p>
-            <p class="prod_maker_wrap">
-              <span>카테고리</span>｜
-              <span>메이커명</span>
-            </p>
-            <p class="number_wrap">
-              <span class="achievement_rate">달성률%</span>
-              <span class="limit_date">7일 남음</span>
-            </p>
-          </div>        
-        </div>
-      </a> -->
-      
-      
-      
+</c:if>
     </div>   
     
-    <p id="prev_next">
-      	<c:if test="${ startPage > 1 }">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ startPage-1}">이전</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			</c:if>
-			<c:forEach begin="${startPage }" end="${endPage }" var="p">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ p}">${ p }</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			</c:forEach>
-			<c:if test="${endPage < totalPageCnt }">
-				<a href="<%=request.getContextPath()%>/member/likelist?page=${ endPage+1}">다음</a>
-			</c:if>
-      </p>  
+     <p id="prev_next">    	
+<c:if test="${ startPage > 1 }">
+		<button onclick="location.href='<%=request.getContextPath()%>/member/likelist?page=${ startPage-1}';" style="width:50px; height:30px;">이전</button>
+</c:if>
+<c:forEach begin="${startPage }" end="${endPage }" var="p">
+		<button id="page_btn${p}" value="${p}" onclick="location.href='<%=request.getContextPath()%>/member/likelist?page=${ p}';">${ p }</button>				
+</c:forEach>
+<c:if test="${endPage < totalPageCnt }">
+		<button onclick="location.href='<%=request.getContextPath()%>/member/likelist?page=${ endPage+1}';" style="width:50px; height:30px;">다음</button>				
+</c:if>
+     </p>   
   </div>
 	
   <jsp:include page="../footer.jsp"/>
   
-  
+  <script>
+	//페이징 처리시 css 설정
+	var page = '${currentPage}';
+	var startPage =  '${startPage}';
+	var endPage =  '${endPage}';
+	console.log("현재페이지: " + page);
+	console.log("[페이지에 나와있는 정수형 페이지 숫자]");
+	for(var i=startPage; i<= endPage;  i++) {  		
+		var page_btn_n = $("#page_btn"+i);
+		console.log("페이지=> " + page_btn_n.val());
+		if(page_btn_n.val() == page) {
+			page_btn_n.css({
+				"background-color": "#444c57",
+				"color" : "white"
+			});
+		}
+	}
+  </script>
 </body>
 </html>
