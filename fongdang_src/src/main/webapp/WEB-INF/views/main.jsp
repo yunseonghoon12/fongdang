@@ -175,7 +175,7 @@ position: absolute;
     transition: all .4s;
 }
 #ranking01:hover .ranking_paint{
-    opacity: 0.7;
+    opacity: 0.6;
 }
 </style>
 </head>
