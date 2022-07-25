@@ -14,10 +14,11 @@
 	</select>
 	
 	<select id="selectReportList" parameterType="hashmap" resultType="Report">
-		SELECT report_no, p_no, p_name, report_category, email, report_date, report_content, report_file
+		SELECT report_no, reported_email, p_no, p_name, report_category, email, report_date, report_content, report_file
 		FROM (SELECT ROWNUM rn, t1.*
-		      FROM (SELECT report_no, p_no, p_name, report_category, email, TO_CHAR(report_date, 'YYYY.MM.DD') report_date, report_content, report_file
+		      FROM (SELECT report_no, maker.email reported_email, p_no, p_name, report_category, report.email email, TO_CHAR(report_date, 'YYYY.MM.DD') report_date, report_content, report_file
 		            FROM report JOIN product USING(p_no)
+		            			JOIN maker USING(maker_name)
 		            WHERE p_approval = 'Y'
 		            ORDER BY report_no DESC) t1) t2
 		WHERE t2.rn BETWEEN #{startRnum} AND #{endRnum}

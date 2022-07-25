@@ -106,7 +106,7 @@
 	                    	</c:when>
 	                    </c:choose>
 	                    <div class="col_data">${approval.p_report_cnt}</div>
-	                    <div class="col_data"><button type="button" class="btn_approval_y" onclick="changeApproval(${approval.p_no}, 'Y');">승인</button> / <button type="button" class="btn_approval_n" onclick="changeApproval(${approval.p_no}, 'N');">비승인</button></div>
+	                    <div class="col_data"><button type="button" class="btn_approval_y" onclick="changeApproval(${approval.p_no}, 'Y', '${approval.email}');">승인</button> / <button type="button" class="btn_approval_n" onclick="changeApproval(${approval.p_no}, 'N', '${approval.email}');">비승인</button></div>
 	                </div>
                 </c:forEach>
             </div>
@@ -136,10 +136,12 @@
     <script>
     	var p_no = null;
     	var p_approval = null;
+    	var email = null;
     	
-	    function changeApproval(approval_no, approval_yn) {
+	    function changeApproval(approval_no, approval_yn, approval_email) {
 	    	p_no = approval_no;
 	    	p_approval = approval_yn;
+	    	email = approval_email;
 	    	
 	        if(p_approval == 'Y') {
 	            console.log("승인 클릭");
@@ -173,14 +175,16 @@
 	    // 승인 -> 확인 버튼 클릭 시 처리
 	    $("#btn_approval_submit").on('click', function(){
 	        console.log("승인 : 확인 클릭");
-	        console.log(p_no + ", " + p_approval);
+	        console.log(p_no + ", " + p_approval + ", " + email);
 	        
 	        $.ajax({
 				url: "<%=request.getContextPath()%>/funding/updateApproval",
 				type: "post",
 				data: {
 					p_no: p_no,
-					p_approval: p_approval
+					p_approval: p_approval,
+					email: email,
+					a_content: "펀딩 신청하신 상품이 판매 승인되었습니다."
 				},
 				success: function(result){
 					console.log(result);
@@ -202,14 +206,16 @@
 	    // 비승인 -> 확인 버튼 클릭 시 처리
 	    $("#btn_cancel_approval_submit").on('click', function(){
 	    	console.log("비승인 : 확인 클릭");
-	    	console.log(p_no + ", " + p_approval);
+	    	console.log(p_no + ", " + p_approval + ", " + email);
 	    	
 	        $.ajax({
 				url: "<%=request.getContextPath()%>/funding/updateApproval",
 				type: "post",
 				data: {
 					p_no: p_no,
-					p_approval: p_approval
+					p_approval: p_approval,
+					email: email,
+					a_content: "펀딩 신청하신 상품이 판매 비승인되었습니다."
 				},
 				success: function(result){
 					console.log(result);

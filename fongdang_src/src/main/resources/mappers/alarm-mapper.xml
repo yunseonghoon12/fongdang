@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Alarm">
+	<insert id="insertAlarm" parameterType="Alarm">
+		INSERT INTO alarm VALUES((SELECT NVL((SELECT MAX(a_no) FROM alarm), 0) + 1 FROM dual), #{email}, #{a_content}, default, default)
+	</insert>
+	
+	<update id="updateReadAlarm" parameterType="Alarm">
+		UPDATE alarm SET read_yn = 'Y' WHERE a_no = #{a_no}
+	</update>
+	
+	<delete id="deleteAlarm" parameterType="Alarm">
+		DELETE FROM alarm WHERE a_no = #{a_no}
+	</delete>
+	
+	<select id="selectAlarmList" parameterType="string" resultType="Alarm">
+		SELECT a_no, email, a_content, TO_CHAR(a_date, 'YYYY.MM.DD') a_date FROM alarm ORDER BY a_no DESC
+	</select>
+</mapper>

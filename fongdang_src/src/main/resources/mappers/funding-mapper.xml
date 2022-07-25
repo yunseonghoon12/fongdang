@@ -21,6 +21,7 @@
 		<result property="p_goal_str" column="p_goal_str"/>
 		<result property="p_goal_percent" column="p_goal_percent"/>
 		<result property="d_day" column="d_day"/>
+		<result property="email" column="email"/>
 		<result property="category_name" column="category_name"/>
 		<result property="maker_category" column="maker_category"/>
 		<result property="maker_logo" column="maker_logo"/>
@@ -78,11 +79,12 @@
 	</select>
 	
 	<select id="selectApprovalList" parameterType="hashmap" resultMap="FundingResultMap">
-		SELECT p_no, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, d_day
+		SELECT p_no, email, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, d_day
 		FROM (SELECT ROWNUM rn, t1.*
-		      FROM (SELECT p_no, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day
+		      FROM (SELECT p_no, email, p_name, category_name, maker_name, maker_category, maker_license_copy, p_report_cnt, start_day, end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day
 		            FROM product JOIN category USING(category_id)
 		                         JOIN maker USING(maker_name)
+		                         JOIN member USING(email)
 		            WHERE p_approval = 'N'
 		            ORDER BY p_no DESC) t1) t2
 		WHERE t2.rn BETWEEN #{startRnum} AND #{endRnum}

@@ -82,7 +82,7 @@
 	                    <div class="col_data">${report.report_category}</div>
 	                    <div class="col_data">${report.email}</div>
 	                    <div class="col_data">${report.report_date}</div>
-	                    <div class="col_data"><button type="button" class="btn_approval_n" onclick="openApprovalWindow(${report.p_no});">비승인</button></div>
+	                    <div class="col_data"><button type="button" class="btn_approval_n" onclick="openApprovalWindow(${report.p_no}, '${report.reported_email}');">비승인</button></div>
                 	</div>
                 </c:forEach>
             </div>
@@ -111,6 +111,7 @@
     <%-- <jsp:include page="../footer.jsp" /> --%>
     <script>
     	var p_no = null;
+    	var reported_email = null;
     	
     	// 상품명 클릭 시, 신고 정보 상세보여주는 모달창 띄우기
     	function openReportDetail(p_name, email, report_date, report_category, report_content, report_file) {
@@ -141,9 +142,10 @@
         });
         
     	// 비승인 클릭 시, 상품 판매 비승인 여부 물어보는 모달창 띄우기
-	    function openApprovalWindow(approval_no) {
+	    function openApprovalWindow(approval_no, approval_email) {
 	        console.log("비승인 클릭");
 	        p_no = approval_no;
+	        reported_email = approval_email;
 	        $(".cancel_approval").show();
 	    };
 	    // 취소 버튼 클릭 시 모달창 닫기
@@ -159,13 +161,15 @@
 	    // 확인 버튼 클릭 시 처리
 	    $("#btn_cancel_approval_submit").on('click', function(){
 	    	console.log("확인 클릭");
-	    	console.log(p_no);
+	    	console.log(p_no + ", " + reported_email);
             $.ajax({
 				url: "<%=request.getContextPath()%>/funding/updateApproval",
 				type: "post",
 				data: {
 					p_no: p_no,
-					p_approval: 'N'
+					email: reported_email,
+					p_approval: 'N',
+					a_content: "펀딩 신청하신 상품의 누적 신고 횟수로 인해 판매가 중지되었습니다."
 				},
 				success: function(result){
 					console.log(result);

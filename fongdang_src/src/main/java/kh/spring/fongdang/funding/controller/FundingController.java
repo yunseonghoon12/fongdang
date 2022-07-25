@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.alarm.domain.Alarm;
 import kh.spring.fongdang.funding.domain.Funding;
 import kh.spring.fongdang.funding.model.service.FundingService;
 import kh.spring.fongdang.member.domain.Member;
@@ -110,13 +111,13 @@ public class FundingController {
 
 	@ResponseBody
 	@PostMapping("/updateApproval")
-	public int updateFundingApproval(Funding funding, HttpSession session) {
+	public int updateFundingApproval(Funding funding, Alarm alarm, HttpSession session) {
 		// 로그인 여부 확인
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null || !(loginInfo.getMember_type().equals("A"))) { // 로그아웃 상태일 때
 			return 0;
 		} else {
-			if(service.updateFundingApproval(funding) < 1) {
+			if(service.updateFundingApproval(funding, alarm) < 1) {
 				return -1;
 			} else {
 				return 1;

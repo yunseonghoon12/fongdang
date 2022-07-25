@@ -28,6 +28,7 @@ public class Funding {
 	private String p_goal_str; //목표금액 문자열로 나타내기
 	private int p_goal_percent; //펀딩 달성률
 	private int d_day; //펀딩 남은 일 수
+	private String email;
 	private String category_name; //카테고리 이름
 	private String maker_category; //메이커 종류
 	private String maker_logo; //메이커 로고
@@ -59,7 +60,7 @@ public class Funding {
 				+ ", payment_plan=" + payment_plan + ", delivery_date=" + delivery_date + ", p_approval=" + p_approval
 				+ ", p_report_cnt=" + p_report_cnt + ", p_sms_cnt=" + p_sms_cnt + ", supporter=" + supporter + ", total_funding_money="
 				+ total_funding_money + ", p_goal_str=" + p_goal_str + ", p_goal_percent=" + p_goal_percent + ", d_day="
-				+ d_day + ", category_name=" + category_name + ",maker_category=" + maker_category + ", maker_logo=" + maker_logo + ", maker_name="
+				+ d_day + ", email=" + email + ", category_name=" + category_name + ",maker_category=" + maker_category + ", maker_logo=" + maker_logo + ", maker_name="
 				+ maker_name + ", maker_email=" + maker_email + ", maker_phone=" + maker_phone
 				+ ", maker_kakao_channel=" + maker_kakao_channel + ", maker_homepage=" + maker_homepage
 				+ ", review_list=" + review_list + ", sms=" + sms + "]";
@@ -215,6 +216,14 @@ public class Funding {
 
 	public void setD_day(int d_day) {
 		this.d_day = d_day;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getCategory_name() {

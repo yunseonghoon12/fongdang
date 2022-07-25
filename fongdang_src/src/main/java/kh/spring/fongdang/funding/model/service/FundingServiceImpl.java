@@ -5,7 +5,10 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import kh.spring.fongdang.alarm.domain.Alarm;
+import kh.spring.fongdang.alarm.model.dao.AlarmDao;
 import kh.spring.fongdang.funding.domain.Funding;
 import kh.spring.fongdang.funding.model.dao.FundingDao;
 
@@ -13,6 +16,9 @@ import kh.spring.fongdang.funding.model.dao.FundingDao;
 public class FundingServiceImpl implements FundingService {
 	@Autowired
 	private FundingDao dao;
+	
+	@Autowired
+	private AlarmDao alarmDao;
 
 	@Override
 	public Funding selectFunding(int p_no) {
@@ -105,8 +111,10 @@ public class FundingServiceImpl implements FundingService {
 	}
 
 	@Override
-	public int updateFundingApproval(Funding funding) {
-		return dao.updateFundingApproval(funding);
+	@Transactional
+	public int updateFundingApproval(Funding funding, Alarm alarm) {
+		dao.updateFundingApproval(funding);
+		return alarmDao.insertAlarm(alarm);
 	}
 
 	@Override

@@ -3,6 +3,7 @@ package kh.spring.fongdang.funding.model.service;
 import java.util.List;
 import java.util.Map;
 
+import kh.spring.fongdang.alarm.domain.Alarm;
 import kh.spring.fongdang.funding.domain.Funding;
 
 public interface FundingService {
@@ -44,7 +45,7 @@ public interface FundingService {
 	public List<Funding> selectCatePreProducts6(String c6);
 	
 	/* 승인 변경 */
-	public int updateFundingApproval(Funding funding);
+	public int updateFundingApproval(Funding funding, Alarm alarm);
 	
 	/* 승인 요청 목록 수 세기 */
 	public int countApprovalList();

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Report {
 	private int report_no;
+	private String reported_email; //신고당한 메이커
 	private String email;
 	private int p_no;
 	private String p_name;
@@ -15,7 +16,7 @@ public class Report {
 	
 	@Override
 	public String toString() {
-		return "Report [report_no=" + report_no + ", email=" + email + ", p_no=" + p_no + ", p_name=" + p_name
+		return "Report [report_no=" + report_no + ",reported_email=" + reported_email + ", email=" + email + ", p_no=" + p_no + ", p_name=" + p_name
 				+ ", report_category=" + report_category + ", report_content=" + report_content + ", report_file="
 				+ report_file + ", report_date=" + report_date + "]";
 	}
@@ -26,6 +27,14 @@ public class Report {
 
 	public void setReport_no(int report_no) {
 		this.report_no = report_no;
+	}
+
+	public String getReported_email() {
+		return reported_email;
+	}
+
+	public void setReported_email(String reported_email) {
+		this.reported_email = reported_email;
 	}
 
 	public String getEmail() {
