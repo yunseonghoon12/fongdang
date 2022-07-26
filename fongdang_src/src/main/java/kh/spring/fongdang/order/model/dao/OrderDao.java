@@ -14,16 +14,11 @@ public class OrderDao {
 	@Autowired
 	private SqlSession session;
 	
-	public Order selectOption(int p_no, int option_no) {
+	public List<Order> selectOrder(int p_no) {
 		HashMap<String,Object> map = new HashMap<>();
 		map.put("p_no", p_no);
-		map.put("option_no", option_no);
-		Order result = session.selectOne("Order.selectOption", map);
+		List<Order> result = session.selectList("Order.selectOrderOption", map);
 		
 		return result;
-	}
-	
-	public List<Order> selectOption() {
-		return session.selectList("Funding.selectOption");
 	}
 }
