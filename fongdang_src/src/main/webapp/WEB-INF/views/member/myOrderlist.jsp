@@ -66,13 +66,14 @@
     	font-weight: bold;
     	color: black;
   }
-  .prod_maker_wrap {    
-    	height: 50px;
+  .prod_maker_wrap {   
+    	height: 30px;    	
     	font-family: SUIT-Light;
     	font-size: 13px;
-    	color: #444c57;
+    	color: #444c57;    	
   }
   .number_wrap {
+  		margin-top: 5px;
     	position: relative;
   }
   .achievement_rate {
@@ -80,8 +81,14 @@
 	    font-size: 15px;
 	    color: #9bbfd9;
   }
-  .limit_date {
+  .total_money {
+  		font-family: SUIT-Regular;
+	    font-size: 14px;
+	    color: #444c57;
+  }
+  .limit_date {  		
     	position: absolute;
+    	top: 3px;
     	right: 0;
     	color: #444c57;
     	font-family: SUIT-Light;
@@ -144,8 +151,10 @@
               <span>${orderlist.category_name}</span>｜
               <span>${orderlist.maker_name}</span>
             </p>
+            <hr style="border: 1px solid #9bbfd9;">
             <p class="number_wrap">
               <span class="achievement_rate">${orderlist.p_goal_percent}%</span>
+              <span class="total_money">${orderlist.total_funding_money}원</span>
               <span class="limit_date">${orderlist.d_day}일 남음</span>
             </p>
           </div>        

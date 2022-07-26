@@ -175,6 +175,7 @@
     $("#check_btn").click(function() {
     	window.close();
     });
+    
     // 취소 버튼 클릭 시 모달창 닫기
     $("#btn_message_cancel").on('click', function () {
         $(".message").hide();

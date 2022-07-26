@@ -46,7 +46,7 @@
     	border: 1px solid #ccc;
     	border-radius: 5px;
     	width: 300px;
-    	height: 380px;   
+    	height: 340px;   
     	margin: 50px;
   }
   .prod_img {        
@@ -56,7 +56,7 @@
   .prod_info_wrap {    
     	padding: 10px;
     	background-color: white;
-    	height: 130px;
+    	height: 95px;
   }
   .prod_name {        
     	width: 100%;

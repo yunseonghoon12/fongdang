@@ -227,7 +227,7 @@
         		<div id="proflie_field">
           			<p>프로필 사진</p>
 <c:if test="${ not empty member.profile}">
-          			<input type="hidden" name="profile" value="${member.profile}">
+          			<input type="hidden" name="profile" value="${member.profile}" style="cursor: pointer;">
           			<img src="${member.profile}" class="personal_img">          
 
 </c:if>          	
@@ -280,8 +280,7 @@
       	</form>
     </div>
   </div>
-
-  <!-- <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer> -->
+  
   <jsp:include page="../footer.jsp"/>
   <script>
   	$("#submit_btn").click(function () {
@@ -297,16 +296,17 @@
   		var cnf = confirm("회원의 프로필을 수정하시겠습니까?");
   		var pwd = $("#password").val();
   		
-  		var passwordValidity = passwordValidate(pwd);  		
+  		/* var passwordValidity = passwordValidate(pwd); */  		
   		
   		if(cnf) {  			
   			profileFrm.submit();  			
   		} else {}
   	}
   	
+  	/* 
   	function passwordValidate(pwd) {
     	var pwd_size = pwd.length;
-    	
+    	var html= '';
     	if(pwd == '') {
     		$("#pwd_error").html("비밀번호를 입력해주세요.");
     		return false;
@@ -317,7 +317,8 @@
     		$("#pwd_error").html(" ");
     		return true;
     	}    	
-    }
+    } 
+  	*/
   	
   </script>
 </body>

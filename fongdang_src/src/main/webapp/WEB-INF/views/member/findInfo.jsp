@@ -83,6 +83,8 @@
    		border: none;
    		font-family: SUIT-Regular;
    		font-size: 15px;
+   		
+   		cursor: pointer;
    	}
    	#find_id {
    		border-bottom: 2px solid #b6e0d6;   		 
@@ -152,6 +154,8 @@
       	border-radius: 5px;
       	background-color: #b6e0d6;      
       	color: white;
+      	
+      	cursor: pointer;
     }
     
     #pwd_vision {
@@ -262,6 +266,7 @@
         		</div>        
       		</form>   
     	</div>        
+    	<!-- 비밀번호 찾기 -->
     	<div id="pwd_vision">
       		<p id="guide">
 		        가입하셨던 이메일 계정을 입력하시면, <br>
@@ -388,14 +393,21 @@
     	}
     });
     $("#send_link").click(function() {
-		console.log("#send_link_click()");
+		console.log("#send_link click()");
 		var email_val = $("#pwd_email").val();
     	var emailValidity = emailValidate(email_val);
-    	console.log("email: " + email_val);
+    	social_chk = socialCheck(email_val);
     	
-    	 if(emailValidity == false) {
+    	console.log("email: " + email_val);    	
+    	console.log("social_chk: " + social_chk);
+    	    	
+    	if(emailValidity == false) { // 이메일 유효성 확인
     		return ;
-    	} else { 
+    	} else if(social_chk == false) { // 소셜 계정의 유저인지 확인 
+    		alert("입력하신 이메일은 소셜로 가입한 계정입니다. 가입때 사용한 소셜계정으로 로그인해주세요.");
+   		 	return;
+   	 	} else { 
+    		alert("인증번호가 전송되었습니다.");
     		$.ajax({
     			url: "<%=request.getContextPath()%>/member/authentication",
         		type: "post",
@@ -404,8 +416,7 @@
         		},
         		success : function(authNumber) {
         			// * 실제 사용시에는 console.log 띄우지 말기
-					/* console.log("인증번호: " + authNumber); */
-					alert("인증번호가 전송되었습니다.");	
+					/* console.log("인증번호: " + authNumber); */						
         			var authNumber = authNumber;
         			var html = "";
 					$("#pwd_vision").hide();
@@ -470,7 +481,7 @@
 										
 										$("#login_btn").removeAttr("onclick");
 				        				$("#login_btn").attr("onclick", onclick_val);
-										console.log($("#result_content").html());	
+										/* console.log($("#result_content").html()); */	
 									}
 									
 								}, 
@@ -497,8 +508,6 @@
     	 }  
 	});
     
-    
-    
     function emailValidate(email) {
     	// 이메일 유효성 정규식검사 
     	var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -514,7 +523,42 @@
     		$(".error_comment").html(" ");
     		return true;
     	} 
-    } 
+    }
+    
+    function socialCheck(email_val) {    	
+    	var flag;    	
+    	console.log("ajax전 flag=> " + flag);
+    	
+    	$.ajax({
+    		url: '<%=request.getContextPath()%>/member/find/password',
+    		type: 'get',
+    		data: {
+    			email : email_val
+    		},
+    		async: false, // 동기 방식으로 설정    		
+    		success : function (data) {
+    			console.log(data.email + "의 소셜 회원 이메일 비밀번호 체크: " + data.password);
+    			if(data.password == null) {
+    				flag = false;
+    				console.log("ajax후 flag=> " + flag);
+    				console.log("password=> null!");    	    				
+    			} else {
+    				console.log("ajax후 flag=> " + flag);
+    				console.log("password=> is not null!");    				
+    			}
+    			
+    		},
+    		error : function(request, status, error) {
+				console.log(request);
+				console.log(status);
+				console.log(error);								
+			}
+    	});
+    	console.log("socialCheck()의 return값=> " + flag);
+    	return flag;
+    }
+    
+    
   </script>	
 
 
