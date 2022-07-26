@@ -15,13 +15,8 @@ public class OrderServiceImpl implements OrderService{
 		private OrderDao dao;
 		
 		@Override
-		public Order selectOption(int p_no, int option_no) {
-			return dao.selectOption(p_no, option_no);
-		}
-		
-		@Override
-		public List<Order> selectOption() {
-			return dao.selectOption();
+		public List<Order> selectOrder(int p_no) {
+			return dao.selectOrder(p_no);
 		}
 
 }
