@@ -20,17 +20,23 @@ public class OrderController {
 	private OrderService service;
 	
 	@PostMapping("/option")
-	public ModelAndView selectOption(ModelAndView mv,@RequestParam("option_no") int option_no, @RequestParam("p_no") int p_no, HttpSession session) {
-		mv.addObject("order",service.selectOption(p_no, option_no));
-		mv.setViewName("order/order_option");
-		
+	public ModelAndView selectOrder(ModelAndView mv, @RequestParam("p_no") int p_no, HttpSession session) {
+		Member loginInfo = (Member)session.getAttribute("loginInfo");
+		if(loginInfo == null) { // 로그아웃 상태일 때
+			
+		} else {
+			mv.addObject("order",service.selectOrder(p_no));
+			mv.setViewName("order/order_option");
+		}
 		return mv;
+		
 	}
-	@PostMapping("/insert")
+}	
+	/*@PostMapping("/insert")
 	public ModelAndView insertOption(ModelAndView mv, HttpSession session) {
 		Member member = (Member) session.getAttribute("loginInfo");
-		mv.addObject("order",service.selectOption() );
+		mv.addObject("order",service.insertOrder() );
 		mv.setViewName("order/order_option");// jsp페이지
 		return mv;
-	}
-}
+	}*/
+
