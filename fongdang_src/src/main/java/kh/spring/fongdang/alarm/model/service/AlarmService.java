@@ -13,4 +13,6 @@ public interface AlarmService {
 	public int deleteAlarm(Alarm alarm);
 	/* 알람 리스트 조회 */
 	public List<Alarm> selectAlarmList(String email);
+	/* 알람 갯수 조회 */
+	public List<Alarm> countAlarm(String email);
 }

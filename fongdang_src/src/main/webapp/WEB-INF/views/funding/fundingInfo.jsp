@@ -263,7 +263,7 @@
                 </section>
             </div>
         </div>
-        <div class="wrap footer"></div>
+        <jsp:include page="../footer.jsp" />
     </div>
 
     <script>
@@ -670,6 +670,15 @@
 			});
         });
         <!-- sun end-->
+        /* 상세페이지 사진 전부 출력 */
+            $("img[data-src]").each(function(){
+                console.log($(this).data("src"));
+                var datasrc = $(this).data("src");
+                if(!$(this).attr("src")){
+                    $(this).attr("src",datasrc);
+                    $(this).removeAttr("style");
+                }
+            });
     </script>
 </body>
 </html>

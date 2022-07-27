@@ -9,11 +9,20 @@ public class Alarm {
 	private String a_content;
 	private String a_date;
 	private String read_yn;
+	private int count_readn;
 	
 	@Override
 	public String toString() {
 		return "Alarm [a_no=" + a_no + ", email=" + email + ", a_content=" + a_content + ", a_date=" + a_date
-				+ ", read_yn=" + read_yn + "]";
+				+ ", read_yn=" + read_yn + ", count_readn=" + count_readn + "]";
+	}
+
+	public int getCount_readn() {
+		return count_readn;
+	}
+
+	public void setCount_readn(int count_readn) {
+		this.count_readn = count_readn;
 	}
 
 	public int getA_no() {

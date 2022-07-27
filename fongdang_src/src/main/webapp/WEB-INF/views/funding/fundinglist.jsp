@@ -411,6 +411,11 @@ a#topBtn {
 					</a></li>
 				</c:forEach>
 			</ul>
+			
+			<c:if test="${empty allProducts}">
+								<div style="height: 300px;display: flex;justify-content: center;
+   								 align-items: center; margin-bottom: 89px;"><h4>검색 결과가 없습니다.</h4></div>
+			</c:if>
 			<hr style="border-style: outset; margin-bottom: 10px;">
 		</div>
 		<a id="topBtn" href="#"> <img

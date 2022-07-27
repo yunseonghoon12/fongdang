@@ -32,5 +32,9 @@ public class AlarmServiceImpl implements AlarmService{
 	public List<Alarm> selectAlarmList(String email) {
 		return dao.selectAlarmList(email);
 	}
+	@Override
+	public List<Alarm> countAlarm(String email) {
+		return dao.countAlarm(email);
+	}
 
 }

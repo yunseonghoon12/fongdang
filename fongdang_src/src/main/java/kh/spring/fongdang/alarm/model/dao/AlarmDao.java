@@ -27,4 +27,7 @@ public class AlarmDao {
 	public List<Alarm> selectAlarmList(String email) {
 		return session.selectList("Alarm.selectAlarmList", email);
 	}
+	public List<Alarm> countAlarm(String email) {
+		return session.selectList("Alarm.countAlarm", email);
+	}
 }

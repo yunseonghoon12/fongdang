@@ -58,6 +58,8 @@ public class AdminServiceImpl implements AdminService{
 	public Sales selectOneSales(String pno) {
 		return dao.selectOneSales(pno);
 	}
-
+	public int countAsk() {
+		return dao.countAsk();
+	}
 
 }

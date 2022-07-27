@@ -80,6 +80,15 @@
     cursor: pointer;
     font-size: 15px;
 }
+.read_N{
+ animation: color 2s infinite;
+}
+@keyframes color{
+ 0% {color: black;}
+ 50% {color: #EF9A9A;}
+ 100% {color: black;}
+}
+
 </style>
 <div class="modal alarm">
     <div class="alarm_content">
@@ -148,13 +157,18 @@
 						href="<%=request.getContextPath()%>/member/register">회원가입</a></li>
 				</c:if>
 
-				<c:if test="${!empty loginInfo}">
-					<li id="btn_alarm" style="top: 10px;"><a>알림</a></li>
+			<c:if test="${!empty loginInfo}">
+			<c:forEach items="${alarm}" var="alarm" >
+				<c:if test="${alarm.count_readn >= 1}">
+					<li id="btn_alarm"style="top: 10px;"><a><p class="read_N" >알림</p></a></li>
+				</c:if>
+				<c:if test="${alarm.count_readn < 1}">
+					<li id="btn_alarm"style="top: 10px;"><a><p>알림</p></a></li>
+				</c:if>
+			</c:forEach>	
 					<c:if test="${!empty loginInfo}">
 						<c:if test="${loginInfo.name ne '관리자'}">
-							<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보<%-- <img
-							src="<%=request.getContextPath()%>/resources/images/mypage.png"
-							class="header_loginImg"> --%></a></li>
+							<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보</a></li>
 						</c:if>
 						<c:if test="${loginInfo.name eq '관리자'}">
 							<li style="top: 10px;"><a
@@ -164,11 +178,7 @@
 				</c:if>
 				<c:if test="${loginInfo.name ne '관리자'}">
 					<li><a href="<%=request.getContextPath()%>/maker/view"
-						id="fdapply">펀딩 프로젝트 신청</a> <%-- <div class="dep3">
-						<ul>
-							<li><a href="<%=request.getContextPath()%>/maker/Register">펀딩 오픈프로젝트 신청하기</a></li>
-						</ul>
-					</div> --%></li>
+						id="fdapply">펀딩 프로젝트 신청</a></li>
 				</c:if>
 				<c:if test="${loginInfo.name eq '관리자'}">
 					<li><a href="<%=request.getContextPath()%>/admin/memberManagement">관리자 페이지로 이동</a></li>
@@ -294,6 +304,35 @@
     			}
     		});
      	};
+     	
+     	function countAlarm(alarm, a_no) {
+     		console.log("읽음 여부 변경");
+     		$.ajax({
+    			url: "<%=request.getContextPath()%>/alarm/count",
+    			type: "post",
+    			data: {
+    				a_no: a_no
+    			},
+    			success: function(result){
+    				console.log(result);
+    				if (result == -1) {
+    					alert("다시 시도해주세요.");
+    				} else if (result == 0) {
+    					alert("로그인 페이지로 이동합니다.");
+    					/* location.href = "login"; */
+    				} else if (result == 1){
+    					$(".read_N").removeClass("read_N");
+    				}
+    			},
+    			error: function(request, status, error) {
+    				console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+    			}
+    		});
+     	};
+     	
+     	$(".read_N").click(function(){
+     		$(".read_N").removeClass("read_N");
+     	});
     </script>
     
 	</header>

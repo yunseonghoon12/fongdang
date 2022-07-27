@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kh.spring.fongdang.alarm.domain.Alarm;
+import kh.spring.fongdang.alarm.model.service.AlarmService;
 import kh.spring.fongdang.funding.domain.Funding;
 import kh.spring.fongdang.funding.model.service.FundingService;
 import kh.spring.fongdang.member.domain.Member;
@@ -32,6 +33,8 @@ public class FundingController {
 	
 	@Autowired
 	private PickService pickService;
+	@Autowired
+	private AlarmService alarmservice;
 	
 	private static final Logger logger = LoggerFactory.getLogger(FundingController.class);
 
@@ -55,6 +58,8 @@ public class FundingController {
 		if (authInfo != null) {
 			pick.setEmail(authInfo.getEmail());
 			String pickYn = pickService.selectPick(pick); 
+			String email = authInfo.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
 			
 			logger.debug("pickYn = " + pickYn);
 			if ( pickYn == null) {
@@ -83,8 +88,10 @@ public class FundingController {
 		Member loginInfo = (Member) session.getAttribute("loginInfo");
 		if (loginInfo == null) { // 로그아웃 상태일 때
 			mv.addObject("funding", service.selectBeforeFunding(p_no, null));
-		} else {
-			mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
+		} else {		
+		String email = loginInfo.getEmail();
+		mv.addObject("alarm",alarmservice.countAlarm(email));
+		mv.addObject("funding", service.selectBeforeFunding(p_no, loginInfo.getEmail()));
 		}
 
 		mv.setViewName("funding/beforeFundingInfo");
@@ -127,8 +134,13 @@ public class FundingController {
 	
 	@GetMapping("/list")
 	public ModelAndView fundinglist(ModelAndView mv, @RequestParam(value = "category_id", defaultValue = "" ) String category_id,
-			 @RequestParam(value = "cateSelect", defaultValue = "" ) String cateSelect	) {
+			 @RequestParam(value = "cateSelect", defaultValue = "" ) String cateSelect, HttpSession session	) {
 		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 	
 		Map<String, String> map = new HashMap<String,String>();
 		map.put("category_id", category_id);
@@ -142,103 +154,166 @@ public class FundingController {
 	}
 
 	@GetMapping("/beforelist")
-	public ModelAndView main(ModelAndView mv) {
+	public ModelAndView main(ModelAndView mv, HttpSession session) {
 		mv.addObject("preProducts", service.selectPreProducts());
 		mv.setViewName("funding/beforeFundinglist");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		return mv;
 	}
 	@GetMapping("/list/cateC1")
-	public ModelAndView fundingCatelist1(ModelAndView mv, String C1) {
+	public ModelAndView fundingCatelist1(ModelAndView mv, String C1, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts1(C1));
 		mv.addObject("category_id","C1");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC2")
-	public ModelAndView fundingCatelist2(ModelAndView mv, String C2) {
+	public ModelAndView fundingCatelist2(ModelAndView mv, String C2, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts2(C2));
 		mv.addObject("category_id","C2");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC3")
-	public ModelAndView fundingCatelist3(ModelAndView mv, String C3) {
+	public ModelAndView fundingCatelist3(ModelAndView mv, String C3, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts3(C3));
 		mv.addObject("category_id","C3");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC4")
-	public ModelAndView fundingCatelist4(ModelAndView mv, String C4) {
+	public ModelAndView fundingCatelist4(ModelAndView mv, String C4, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts4(C4));
 		mv.addObject("category_id","C4");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC5")
-	public ModelAndView fundingCatelist5(ModelAndView mv, String C5) {
+	public ModelAndView fundingCatelist5(ModelAndView mv, String C5, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts5(C5));
 		mv.addObject("category_id","C5");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 	@GetMapping("/list/cateC6")
-	public ModelAndView fundingCatelist6(ModelAndView mv, String C6) {
+	public ModelAndView fundingCatelist6(ModelAndView mv, String C6, HttpSession session) {
 		mv.addObject("allProducts",service.selectCateProducts6(C6));
 		mv.addObject("category_id","C6");
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}
 
 	@GetMapping("/beforelist/cateC1")
-	public ModelAndView fundingCatePrelist1(ModelAndView mv, String C1) {
+	public ModelAndView fundingCatePrelist1(ModelAndView mv, String C1, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts1(C1));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 	@GetMapping("/beforelist/cateC2")
-	public ModelAndView fundingCatePrelist2(ModelAndView mv, String C2) {
+	public ModelAndView fundingCatePrelist2(ModelAndView mv, String C2, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts2(C2));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 	@GetMapping("/beforelist/cateC3")
-	public ModelAndView fundingCatePrelist3(ModelAndView mv, String C3) {
+	public ModelAndView fundingCatePrelist3(ModelAndView mv, String C3, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts3(C3));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 	@GetMapping("/beforelist/cateC4")
-	public ModelAndView fundingCatePrelist4(ModelAndView mv, String C4) {
+	public ModelAndView fundingCatePrelist4(ModelAndView mv, String C4, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts4(C4));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 	@GetMapping("/beforelist/cateC5")
-	public ModelAndView fundingCatePrelist5(ModelAndView mv, String C5) {
+	public ModelAndView fundingCatePrelist5(ModelAndView mv, String C5, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts5(C5));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 	@GetMapping("/beforelist/cateC6")
-	public ModelAndView fundingCatePrelist6(ModelAndView mv, String C6) {
+	public ModelAndView fundingCatePrelist6(ModelAndView mv, String C6, HttpSession session) {
 		mv.addObject("preProducts",service.selectCatePreProducts6(C6));
-		
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/beforeFundinglist");
 		return mv;
 	}
 
 	@GetMapping("/list.search")
 	public ModelAndView selectSearchList(ModelAndView mv,
-			@RequestParam(name = "search_categroy", defaultValue = "") String search_category) {
+			@RequestParam(name = "search_categroy", defaultValue = "") String search_category, HttpSession session) {
 		mv.addObject("allProducts", service.selectSearchList(search_category));
-
+		Member member = (Member)session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		mv.setViewName("funding/fundinglist");
 		return mv;
 	}

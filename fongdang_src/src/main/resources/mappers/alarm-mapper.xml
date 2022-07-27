@@ -16,4 +16,8 @@
 	<select id="selectAlarmList" parameterType="string" resultType="Alarm">
 		SELECT a_no, email, a_content, TO_CHAR(a_date, 'YYYY.MM.DD') a_date, read_yn FROM alarm WHERE email = #{email} ORDER BY a_no DESC
 	</select>
+	<select id="countAlarm" parameterType="string" resultType="Alarm">
+		SELECT count(read_yn) count_readn
+		FROM alarm WHERE email = #{email} and read_yn = 'N'
+	</select>
 </mapper>

@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import kh.spring.fongdang.admin.model.service.AdminServiceImpl;
+import kh.spring.fongdang.alarm.domain.Alarm;
+import kh.spring.fongdang.alarm.model.service.AlarmService;
 import kh.spring.fongdang.ans.domain.Ans;
 import kh.spring.fongdang.ans.model.service.AnsServiceImpl;
 import kh.spring.fongdang.ask.domain.Ask;
@@ -48,16 +50,19 @@ public class AdminController {
 	private AdminService service;
 	
 	@Autowired
-	private AnsServiceImpl AnsService;
+	private AnsServiceImpl ansService;
 	
 	@Autowired
-	private AskServiceImpl AskService;
+	private AskServiceImpl askService;
 	
 	@Autowired
 	private ReportService reportService;
 	
 	@Autowired
 	private FundingService fundingService;
+	
+	@Autowired
+	private AlarmService alarmService;
 	
 	@RequestMapping(value="/memberManagement", method= RequestMethod.GET)
 	public ModelAndView pageMemberManagement(ModelAndView mv
@@ -178,8 +183,8 @@ public class AdminController {
 			return mv;
 		}
 
-		mv.addObject("ask_Y", AskService.selectAskY());
-		mv.addObject("ask_N", AskService.selectAskN());
+		mv.addObject("ask_Y", askService.selectAskY());
+		mv.addObject("ask_N", askService.selectAskN());
 		mv.setViewName("admin/askManagement");
 		return mv;
 	}
@@ -193,14 +198,14 @@ public class AdminController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
-		mv.addObject("ask", AskService.selectAsk2(ask_no));
+		mv.addObject("ask", askService.selectAsk2(ask_no));
 		mv.setViewName("admin/answer");
 		return mv;
 	}
 
 	@PostMapping("/answer.do")
 	public ModelAndView insertAns(ModelAndView mv, HttpSession session, HttpServletRequest req, Ans ans, 
-			@RequestParam(name ="ask_no", defaultValue = "0") int ask_no,
+			@RequestParam(name ="ask_no", defaultValue = "0") int ask_no, Alarm alarm,
 			RedirectAttributes rttr) {
 
 		Member member = (Member) session.getAttribute("loginInfo");
@@ -210,8 +215,9 @@ public class AdminController {
 			return mv;
 		}
 
-		mv.addObject("insertAns", AnsService.insertAns(ans));
-		mv.addObject("updateAsk", AskService.updateAsk(ask_no));
+		mv.addObject("insertAns", ansService.insertAns(ans));
+		mv.addObject("updateAsk", askService.updateAsk(ask_no));
+		mv.addObject("insertAlarm", alarmService.insertAlarm(alarm));
 		mv.setViewName("redirect:/admin/ask");
 		return mv;
 	}

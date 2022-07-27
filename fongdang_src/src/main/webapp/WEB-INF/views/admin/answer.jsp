@@ -104,8 +104,8 @@ a {
 
 .customerAskWrap {
 	position: relative;
-    left: 180px;
-	margin-top: 30px;
+    left: 46px;
+    margin-top: 45px;
 }
 
 #answer {
@@ -115,9 +115,12 @@ a {
 }
 
 .replyTextarea {
-	width: 600px;
-	height: 380px;
-	margin-top: 30px;
+	width: 760px;
+    height: 330px;
+    position: relative;
+    top: 127px;
+    left: -40px;
+    resize: none;
 }
 </style>
 </head>
@@ -156,20 +159,21 @@ a {
 		</div>
 
 		<div id="main_body">
+			<form action="<%=request.getContextPath()%>/admin/answer.do" id="answer" method="POST" style="height: 458px;">
 			<c:forEach items="${ask}" var="ask">
 				<div class="customerAskWrap">
 					<p>제목: ${ask.ask_title}</p>
 					<p>내용: ${ask.ask_content}</p>
+					<input type="hidden" name="email" value="${ask.email}">
+					<input type="hidden" name="a_content" value="관리자로부터 문의하신 답변이 도착했습니다.">
 				</div>
 			</c:forEach>
-
-			<form action="<%=request.getContextPath()%>/admin/answer.do" id="answer" method="POST">
 				<input type="hidden" name="ask_no" value="${ask_no}">
 				<div class="replyTextareaWrap">
 					<textarea class="replyTextarea" name="ans_content" id="ans_content"></textarea>
 				</div>
 			</form>
-			<div style="display: flex; justify-content: center; margin: 0 auto;	margin-top: 30px;">
+			<div style="display: flex;justify-content: center;margin: 0 auto;margin-top: 40px;}">
 				<button type="button" onclick="ans_check();">등록</button>
 				<a href="<%=request.getContextPath()%>/admin/ask"><button>취소</button></a>
 			</div>

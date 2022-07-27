@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>제목</title>
+<title>오시는길</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 * {
@@ -50,9 +50,10 @@
 	<jsp:include page="../header.jsp" />
 	<div class="allWrap">
 		<div class="textMapWrap">
-			<div style="width: 43%">
-				<hr
-					style="position: relative; border-style: groove; right: 375px; top: 18px; width: 540px;">
+			<div style="width: 43%;position: relative;">
+			<img style="position: absolute;right: -611px;top: -40px;height: 40px; width: 585px;" 
+			src="<%=request.getContextPath()%>/resources/images/road02.gif">
+				<hr style="position: relative; border-style: groove; right: 375px; top: 18px; width: 540px;">
 				<h2 style="text-align: center;">오시는길</h2>
 				<br> <br> <br>
 				<h3>주소</h3>
@@ -67,11 +68,10 @@
 			<div id="map"></div>
 		</div>
 
-		<div class="introWrap">
-			<div
-				style="width: 50%; height: 344px; overflow: hidden; border-radius: 23px; position: relative; top: 0px;">
-				<img
-					src="<%=request.getContextPath()%>/resources/images/fongdang.jpg">
+		<div class="introWrap" style="position: relative;">
+		<img style="position: absolute;right: 539px;top: -40px; width: 520px;" src="<%=request.getContextPath()%>/resources/images/road03.gif">
+			<div style="width: 50%; height: 344px; overflow: hidden; border-radius: 23px; position: relative; top: 0px;">
+				<img src="<%=request.getContextPath()%>/resources/images/fongdang.jpg">
 			</div>
 			<div style="width: 50%;">
 				<hr

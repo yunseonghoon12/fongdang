@@ -171,11 +171,11 @@ position: absolute;
     top: -52px;
     z-index: -1;
     width: 162%;
-    opacity: 0.3;
+    opacity: 0.2;
     transition: all .4s;
 }
 #ranking01:hover .ranking_paint{
-    opacity: 0.6;
+    opacity: 0.4;
 }
 </style>
 </head>
