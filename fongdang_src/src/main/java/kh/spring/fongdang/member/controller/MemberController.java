@@ -35,6 +35,7 @@ import kh.spring.fongdang.oauth.model.bo.KakaoLoginBO;
 import kh.spring.fongdang.oauth.model.bo.NaverLoginBO;
 import kh.spring.fongdang.oauth.model.dto.SnsInfo;
 import kh.spring.fongdang.oauth.model.service.SnsInfoService;
+import kh.spring.fongdang.alarm.model.service.AlarmService;
 import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.common.MailSendUtil;
 import kh.spring.fongdang.funding.domain.Funding;
@@ -50,6 +51,8 @@ public class MemberController {
 	private MessageService msgService;
 	@Autowired
 	private SnsInfoService sns_Service;
+	@Autowired
+	private AlarmService alarmservice;
 	@Autowired 
 	private FileUpload commonfile;	
 	@Autowired 
@@ -125,6 +128,7 @@ public class MemberController {
 		String access_token1 = (String)session.getAttribute("kakaoToken");
 		String access_token2 = (String)session.getAttribute("naverToken");		
 		
+		mv.addObject("alarm",alarmservice.countAlarm(email));
 		mv.addObject("kakaoToken", access_token1);
 		mv.addObject("naverToken", access_token2);		
 		mv.addObject("member", member);
@@ -191,6 +195,7 @@ public class MemberController {
 		
 		List<Funding> result= member_service.selectMyTotalOrderList(currentPage, orderLimit, email);
 
+		mv.addObject("alarm",alarmservice.countAlarm(email));
 		mv.addObject("orderlist", result);
 		mv.addObject("startPage", startPage);
 		mv.addObject("endPage", endPage);
@@ -260,6 +265,7 @@ public class MemberController {
 		
 		List<Funding> result= member_service.selectMyTotalProject(currentPage, projectLimit, email);		
 		
+		mv.addObject("alarm",alarmservice.countAlarm(email));
 		mv.addObject("project", result);
 		mv.addObject("startPage", startPage);
 		mv.addObject("endPage", endPage);
@@ -283,7 +289,7 @@ public class MemberController {
 		
 		String email = authInfo.getEmail();		
 		Member member = member_service.selectMember(email);		
-		
+		mv.addObject("alarm",alarmservice.countAlarm(email));
 		mv.addObject("member", member);
 		mv.setViewName("member/myProfile");
 		return mv;
@@ -299,7 +305,8 @@ public class MemberController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
-				
+		String email = authInfo.getEmail();		
+		mv.addObject("alarm",alarmservice.countAlarm(email));		
 		mv.setViewName("member/withdraw");
 		return mv;
 	}
@@ -318,7 +325,7 @@ public class MemberController {
 			mv.setViewName("redirect:/member/login");
 			return mv;
 		}
-
+		String email = authInfo.getEmail();		
 		String receiver = authInfo.getEmail();
 		String sender = authInfo.getEmail();
 		
@@ -373,7 +380,7 @@ public class MemberController {
 		} else {
 			result = msgService.selectSendList(currentPage, messageLimit, sender);
 		}	
-		
+		mv.addObject("alarm",alarmservice.countAlarm(email));		
 		mv.addObject("messageList", result);
 		mv.addObject("message_type", message_type);
 		mv.addObject("startPage", startPage);
@@ -398,7 +405,9 @@ public class MemberController {
 		}
 		System.out.println("\t\t=>메세지 번호:\t" + m_no + "\n");
 		message = msgService.selectMessage(m_no);
+		String email = authInfo.getEmail();		
 		
+		mv.addObject("alarm",alarmservice.countAlarm(email));		
 		mv.addObject("message", message);
 		mv.setViewName("member/message");
 		return mv;
@@ -462,7 +471,8 @@ public class MemberController {
 		
 		List<Funding> likelist = null;
 		likelist = member_service.selectLikelist(currentPage, fundingLimit, email);
-		
+	
+		mv.addObject("alarm",alarmservice.countAlarm(email));		
 		mv.addObject("likelist", likelist);
 		mv.addObject("startPage", startPage);
 		mv.addObject("endPage", endPage);

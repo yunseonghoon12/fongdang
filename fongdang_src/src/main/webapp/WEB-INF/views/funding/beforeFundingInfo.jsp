@@ -135,7 +135,7 @@
 			</div>
 		</div>
 	</div>
-
+	<jsp:include page="../footer.jsp" />
     <script>
         // 문의하기 버튼 클릭 시 모달창 띄우기
         $("#btn_message").on('click', function(){
@@ -287,6 +287,17 @@
             	location.reload();
             }
         });
+        
+ /* 상세페이지 사진 전부 출력 */
+            $("img[data-src]").each(function(){
+                console.log($(this).data("src"));
+                var datasrc = $(this).data("src");
+                if(!$(this).attr("src")){
+                    $(this).attr("src",datasrc);
+                    $(this).removeAttr("style");
+                }
+            });
+
     </script>
 </body>
 </html>

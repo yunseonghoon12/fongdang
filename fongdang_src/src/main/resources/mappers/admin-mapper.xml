@@ -12,7 +12,9 @@
 	<select id="countMember" resultType="int">
 		select count(*) from member where email != 'admin'
 	</select>
-
+	<select id="countAsk" resultType="int">
+		select count(*) from Ask
+	</select>
 	<select id="relatedSearch" parameterType="string" resultType="Member">
 		select 
 			TO_CHAR(ENROLL_DATE, 'yyyy-mm-dd HH24:MI') AS ENROLL_DATE

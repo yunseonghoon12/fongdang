@@ -32,7 +32,9 @@ public class AdminDao {
 	public int countMember() {
 		return sqlSession.selectOne("Admin.countMember");
 	}
-
+	public int countAsk() {
+		return sqlSession.selectOne("Admin.countAsk");
+	}
 	public int countSearchMember(String keyword) {
 		return sqlSession.selectOne("Admin.countSearchMember", keyword);
 	}

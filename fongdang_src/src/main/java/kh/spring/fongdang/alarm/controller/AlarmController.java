@@ -82,4 +82,19 @@ public class AlarmController {
 //			return 1;
 //		}
 	}
+	
+//	@ResponseBody
+//	@PostMapping("/count")
+//	public int countAlarm(HttpSession session) {
+//		// 로그인 여부 확인
+//		Member loginInfo = (Member)session.getAttribute("loginInfo");
+//		if(loginInfo == null) { // 로그아웃 상태일 때
+//			return 0;
+//		} else {
+//			Member member = (Member) session.getAttribute("loginInfo");
+//			String email = member.getEmail();
+//			service.countAlarm(email);
+//
+//		}	
+//	}
 }

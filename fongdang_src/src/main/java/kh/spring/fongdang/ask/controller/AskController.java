@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import kh.spring.fongdang.alarm.model.service.AlarmServiceImpl;
 import kh.spring.fongdang.ans.model.service.AnsServiceImpl;
 import kh.spring.fongdang.ask.domain.Ask;
 import kh.spring.fongdang.ask.model.service.AskServiceImpl;
@@ -25,6 +26,8 @@ public class AskController {
 	private AskServiceImpl service;
 	@Autowired
 	private AnsServiceImpl ansservice;
+	@Autowired
+	private AlarmServiceImpl alarmservice;
 
 	@RequestMapping(value = "/ask", method = RequestMethod.GET)
 	public ModelAndView selectAsk(ModelAndView mv, HttpSession session, Ask ask, RedirectAttributes rttr,
@@ -38,14 +41,21 @@ public class AskController {
 		ask.setEmail(member.getEmail());
 		email = ask.getEmail();
 		
+		mv.addObject("alarm",alarmservice.countAlarm(email));
 		mv.addObject("ask", service.selectAsk(email));
 		mv.setViewName("customerCenter/ask");
 		return mv;
 	}
 
-	@GetMapping("/doAsk")
-	public String pageDoAsk() {
-		return "customerCenter/doAsk";
+	@RequestMapping(value = "/doAsk", method = RequestMethod.GET)
+	public ModelAndView pageDoAsk(ModelAndView mv,HttpSession session) {
+		Member member = (Member) session.getAttribute("loginInfo");
+		if (member != null) {
+			String email = member.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
+		mv.setViewName("customerCenter/doAsk");
+		return mv;
 	}
 
 	@PostMapping("/doAsk")
@@ -88,9 +98,15 @@ public class AskController {
 		return mv;
 	}
 	
-	@GetMapping("/road")
-	public String pageRoad() {
-		return "customerCenter/road";
+	@RequestMapping(value = "/road", method = RequestMethod.GET)
+	public ModelAndView pageRoad(ModelAndView mv, HttpSession session) {
+		Member member = (Member) session.getAttribute("loginInfo");
+		if (member != null) {
+		String email = member.getEmail();
+		mv.addObject("alarm",alarmservice.countAlarm(email));
+		}
+		mv.setViewName("customerCenter/road");
+		return mv;		
 	}
 	
 }

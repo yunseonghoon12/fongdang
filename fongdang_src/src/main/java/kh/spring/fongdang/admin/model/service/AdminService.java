@@ -23,5 +23,7 @@ public interface AdminService {
 	public int selectSalesListCnt();
 	/* 펀딩정산 상세 N개 조회  */
 	public Sales selectOneSales(String pno);
+	/* 문의 갯수 조회 */
+	public int countAsk();
 	
 }
