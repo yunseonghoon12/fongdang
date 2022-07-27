@@ -28,11 +28,11 @@ public class OrderController {
 	
 	@GetMapping("/option/{p_no}")
 	public ModelAndView selectOrder(ModelAndView mv, @PathVariable("p_no") int p_no, HttpSession session) {
-		/*sun start*/
+		
 		
 		
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
-		if(loginInfo == null) { // 로그아웃 상태일 때
+		if(loginInfo == null) { 
 			 System.out.println("비로그인");
 		        
 		}
