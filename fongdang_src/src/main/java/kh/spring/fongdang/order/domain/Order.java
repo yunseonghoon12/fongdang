@@ -11,13 +11,8 @@ public class Order {
 	private int option_no;
 	private int amount;
 	private String payment_plan;
-	private int option_price;
+	private int total_price;
 	private String email;
-	
-	@Override
-	public String toString() {
-		return "Order [order_no=" + order_no + ", p_no=" + p_no + ", option_no=" + option_no + ", amount=" + amount + ", payment_plan" + payment_plan + ", option_price=" + option_price + ", email=" + email + "]";
-	}
 	public int getOrder_no() {
 		return order_no;
 	}
@@ -36,7 +31,6 @@ public class Order {
 	public void setOption_no(int option_no) {
 		this.option_no = option_no;
 	}
-	
 	public int getAmount() {
 		return amount;
 	}
@@ -49,11 +43,11 @@ public class Order {
 	public void setPayment_plan(String payment_plan) {
 		this.payment_plan = payment_plan;
 	}
-	public int getOption_price() {
-		return option_price;
+	public int getTotal_price() {
+		return total_price;
 	}
-	public void setOption_price(int option_price) {
-		this.option_price = option_price;
+	public void setTotal_price(int total_price) {
+		this.total_price = total_price;
 	}
 	public String getEmail() {
 		return email;
@@ -61,6 +55,15 @@ public class Order {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	@Override
+	public String toString() {
+		return "Order [order_no=" + order_no + ", p_no=" + p_no + ", option_no=" + option_no + ", amount=" + amount
+				+ ", payment_plan=" + payment_plan + ", total_price=" + total_price + ", email=" + email + "]";
+	}
+
+	
+	
+	
 	
 	
 }

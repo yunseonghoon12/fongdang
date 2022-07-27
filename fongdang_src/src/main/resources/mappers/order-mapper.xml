@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="Order">
-
+	
 <insert id="insertOrder" parameterType="Order">
-	insert into order(order_no
+	INSERT INTO "ORDER"(order_no
 	,p_no
 	,option_no
 	,email
 	,total_price
+	,amount
 	,payment_plan
-	)values(select nvl(max(order_no),0)+1 from "ORDER"))
+	)VALUES(select nvl(max(order_no),0)+1 from "ORDER"))
 	,#{p_no}
 	,#{option_no}
 	,#{email}
 	,#{total_price}
+	,#{amount}
 	,#{payment_plan}
 	)	
 </insert>
 	
-	<select id="selectOrderProduct" parameterType="string" resultType="Order">
-		SELECT maker_name, p_name, payment_plan, delivery_date FROM product where p_no=#{p_no}
+	<select id="selectOrderProduct" parameterType="int" resultType="Product">
+		SELECT maker_name, p_name, payment_plan, delivery_date FROM "PRODUCT" where p_no=#{p_no}
 	</select>
-	<select id="selectOrderOption" parameterType="string" resultType="Order">
-		SELECT * FROM option where p_no=#{p_no}
+	<select id="selectOrderOption" parameterType="int" resultType="Option">
+		select *
+		from "OPTION" 
+		where P_NO=#{p_no}
 	</select>
 	
 </mapper>
