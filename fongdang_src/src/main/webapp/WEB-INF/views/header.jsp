@@ -21,10 +21,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 200;
     background-color: rgba(0, 0, 0, 0.7);
 }
-.modal > .alarm_content {
+.modal > .header_alarm_content {
     position: relative;
     top: 200px;
     margin: auto;
@@ -47,33 +47,33 @@
     cursor: pointer;
     float: right;
 }
-.alarm_content .alarm_list:first-of-type {
+.header_alarm_content .alarm_list:first-of-type {
     display: flex;
     margin-top: 30px;
 }
-.alarm_content .alarm_list:not(:first-of-type) {
+.header_alarm_content .alarm_list:not(:first-of-type) {
     display: flex;
     margin-top: 10px;
 }
-.alarm_content .alarm_list_left.read {
+.header_alarm_content .alarm_list_left.read {
     color: #dadce0;
     cursor: default;
 }
-.alarm_content .alarm_list_left {
+.header_alarm_content .alarm_list_left {
     color: #444C57;
     flex: 1 1 auto;
     cursor: pointer;
 }
-.alarm_content .a_content {
+.header_alarm_content .a_content {
     font-family: 'SUIT-Regular';
     font-size: 15px;
 }
-.alarm_content .a_date {
+.header_alarm_content .a_date {
     font-family: 'SUIT-Regular';
     font-size: 13px;
     margin: 5px 0;
 }
-.alarm_content .btn_delete {
+.header_alarm_content .btn_delete {
     background-color: transparent;
     border: none;
     color: #e0e0e0;
@@ -90,8 +90,8 @@
 }
 
 </style>
-<div class="modal alarm">
-    <div class="alarm_content">
+<div class="modal header_alarm">
+    <div class="header_alarm_content">
         <span class="modal_title">알림조회</span><button id="btn_close" type="button"><i class="fa fa-close"></i></button>
     </div>
 </div>
@@ -214,7 +214,7 @@
     				} else if (result == 0) {
     					alert("알림이 없습니다.");
     				} else {
-    					$(".alarm").show();
+    					$(".header_alarm").show();
     					$("#btn_close").nextAll().remove();
     					for(var i = 0; i < result.length; i++) {
     						var alarm = result[i];
@@ -232,7 +232,7 @@
     						html += '<div class="alarm_list_right"><button class="btn_delete" type="button" onclick="deleteAlarm(this, '+alarm.a_no+');"><i class="fa fa-trash"></i></button></div>';
     						html += '</div>';
     						
-    						$(".alarm_content").append(html);
+    						$(".header_alarm_content").append(html);
     					}
     				}
     			},
@@ -243,12 +243,12 @@
     	});
     	// 제목 옆에 X 버튼 클릭 시 모달창 닫기
         $("#btn_close").on('click', function () {
-            $(".alarm").hide();
+            $(".header_alarm").hide();
         });
      	// 모달창 띄우고 내용 있는 곳 부분 제외한 곳 누르면 모달창 닫기
         $(".alarm").on('click', function () {
             if (event.target == $(".alarm").get(0)) {
-                $(".alarm").hide();
+                $(".header_alarm").hide();
             }
         });
      	
