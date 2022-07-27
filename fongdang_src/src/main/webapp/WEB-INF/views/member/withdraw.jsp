@@ -87,8 +87,7 @@
     }
    </style>
 </head>
-<body>
-	<!-- <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header> -->
+<body>	
 	<jsp:include page="../header.jsp"/>
 	
   	<div id="container">
@@ -131,7 +130,7 @@
         		</ul>
         		<form action="<%=request.getContextPath()%>/member/withdraw" method="POST" id="withdrawFrm">
 	          		<div style="margin-top: 20px;">
-            			<input type="checkbox" name="agree" id="agree" value="true"><span id="chk_agree">상기 퐁당 탈퇴 시 유의 사항을 확인하였습니다.</span>                  
+            			<input type="checkbox" name="agree" id="agree" value="true"><span id="chk_agree"> 상기 퐁당 탈퇴 시 유의 사항을 확인하였습니다.</span>                  
           			</div>    
           			<input type="hidden" name="email" value="${loginInfo.email}">      
           			<hr style="margin: 30px 0;">          
@@ -140,10 +139,8 @@
       		</div>
     	</div>
   	</div>
-  	<!-- <footer style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">푸터 영역</footer> -->
-  	<jsp:include page="../footer.jsp"/>
-
-	
+  	
+  	<jsp:include page="../footer.jsp"/>	
 	<script>
 		function withdrawHandler() {
 			var cnf= confirm("회원탈퇴를 요청하시겠습니까?");

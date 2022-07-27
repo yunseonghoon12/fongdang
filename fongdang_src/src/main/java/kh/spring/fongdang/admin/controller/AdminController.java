@@ -66,14 +66,7 @@ public class AdminController {
 			, HttpSession session) {		
 		List<Member> memberList =null; 		
 		System.out.println("keyword: " + keyword);
-		// 로그인 상태 확인 
-//		TODO: 추후에 관리자(admin) 로그인 확인 후 관리자페이지로 넘어오게 하기
-//		Member authInfo = (Member)session.getAttribute("loginInfo");
-//		if(authInfo == null) {
-//			System.out.println("\n현재 로그아웃 상태입니다.");
-//			mv.setViewName("redirect:/member/login");
-//			return mv;
-//		}		
+		
 		int currentPage = 1;	
 		int memberLimit = 5;
 		

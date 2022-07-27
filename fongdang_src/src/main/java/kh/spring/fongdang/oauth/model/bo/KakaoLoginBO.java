@@ -125,8 +125,9 @@ public class KakaoLoginBO {
 			userInfo.put("nickname", nickname);
 			userInfo.put("email", email);
 
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			return null;		
+			/* e.printStackTrace(); */
 		}
 		return userInfo;
 	}

@@ -538,6 +538,10 @@ public class MemberController {
 		String access_token = kakaoLoginBO.getAccessToken(code); 	
 		
 		HashMap<String, Object> userInfo = kakaoLoginBO.getUserInfo(access_token);
+		if(userInfo == null) {
+			model.addAttribute("msg", "동의항목에 모두 동의해야 소셜 계정을 이용할 수 있습니다. 계속해서 오류 발생시 관리자에게 문의해주세요");
+			return "redirect:/member/login";	
+		}
 		System.out.println("##################[KAKAO LOGIN]##################");
 		System.out.println("\t\t=>[KAKAO]access_Token:\t" + access_token);
 		System.out.println("\t\t=>nickname:\t" + userInfo.get("nickname"));
@@ -704,7 +708,7 @@ public class MemberController {
 			
 			session.setAttribute("loginInfo", member);			// 페이지에 보낼 회원 정보가 담긴 세션
 			session.setAttribute("naverToken", access_token);	// 페이지에 보낼 소셜 정보가 담긴 세션
-			session.setAttribute("oauthToken", oauthToken);
+			session.setAttribute("oauthToken", oauthToken);	 	// 소셜 계정의 정보가 담긴 세션
 			return "redirect:/";
 			
 //	 		로그인을 통한 값 확인용 			

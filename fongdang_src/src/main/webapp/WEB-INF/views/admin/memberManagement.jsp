@@ -206,6 +206,18 @@
 	if(msg !='') {
 		alert(msg);
 	}
+	
+	var member=  '${loginInfo.email}';
+	console.log("접근한회원정보: " + member);	
+	
+	// 관리자 권한을 가진 계정인지 확인
+	<%-- if(member == 'admin') {
+		console.log("안녕하세요 관리자님!");
+	} else {
+		alert("관리자 권한이 필요한 페이지입니다.");
+		location.href='<%=request.getContextPath()%>/';
+	} --%>	
+	
 </script>
 <body>
 	<div id="admin_navigator">    

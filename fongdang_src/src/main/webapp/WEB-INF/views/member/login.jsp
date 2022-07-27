@@ -211,14 +211,7 @@
     		</div>
     	</div>
  	</header>
-  
-	<%-- 
-	<form action="<%= request.getContextPath()%>/member/login" method="post">
-		<div><input type="text" name="email" placeholder="이메일" required></div>
-		<div><input type="password" name="password" placeholder="비밀번호" required></div>		
-		<div><button type="submit">로그인</button></div>	
-	</form> 
-	--%>
+ 	
 	<div id="container">
     	<div id="main_content">
       		<div id="main">      
@@ -262,12 +255,7 @@
             		</div>
           		</form>
           		<hr>          
-          		<%-- <p id="separate">또는</p>
-          		<div id="social_login_content">
-            		<div id="icon_group">              			
-              			<a href="#"><img src="<%= request.getContextPath()%>/resources/images/google_logo.png" style="width: 45px;"></a>
-            		</div>
-          		</div> --%>
+          		
           		<div id="login_foot">
             		<span style="font-size: 13px; font-family: SUIT-Light;">아직 퐁당 계정이 없나요?</span>
             		<a href="<%= request.getContextPath()%>/member/register" style="font-family:SUIT-Light; font-size:13px; color: rgb(182, 224, 214);">회원가입</a>
