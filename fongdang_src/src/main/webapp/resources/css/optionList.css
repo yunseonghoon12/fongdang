@@ -1,0 +1,78 @@
+@charset "UTF-8";
+#section_page {
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	margin:0 auto;
+}
+#section_page {
+	z-index: 1;
+}
+
+#nav_funding {
+	width: 20%;
+}
+/* body  본문 */
+#main_body {
+	width: 80%;
+}
+/* 테이블  감싸는 div */
+section #optionList_all {
+	margin: 20px 0px 50px 0px;
+}
+
+/* 메인  */
+
+.optionList-tableAll{
+	border-spacing: 20px 20px;
+	border-collapse: separate;
+	padding: 30px;
+}
+.optionList-tableAll{
+	
+}
+#optionList-title{
+	height: 30px;
+	font-family: SUIT-SemiBold;
+	font-size: 20px;
+	margin-top: 30px;
+	padding: 0 0 50 0;
+}
+
+
+.optionList-tableAll .optionList-tableAll {
+	border-collapse: collapse;
+	text-align: center;
+	font-family: SUIT-Regular;
+}
+
+.optionList-tableAll tr{
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+
+}
+
+.optionList-tableAll td{
+	padding: 10px;
+}
+
+#col_title {
+	 margin-top: 50px;
+    background: #9bbfd9;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    font-family: SUIT-SemiBold;
+    text-align: center;
+    font-size: 18px;
+}
+.optionList-tableAll td {
+    font-family: SUIT-Regular;
+   
+    font-size: 15px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    margin: 3px 0px;
+    height: 25px;
+    line-height: 25px;
+}

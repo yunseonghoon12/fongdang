@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/maker_header.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/optionList.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -28,26 +29,30 @@
 		        <li><a href="<%=request.getContextPath()%>/maker/view"> 메이커 정보 </a></li>
 		        <li><a href="<%= request.getContextPath()%>/product/view"> 펀딩 상품</a></li>
 		        <li><a href="<%= request.getContextPath()%>/option/viewList"> 펀딩 옵션</a></li>
-		        <li><a href="#"> 오픈예정 현황</a></li>
-		        <li><a href="#"> 펀딩 현황</a></li>
-		        <!-- <li><a href="#"> 결제 현황</a></li> -->
-		        <li><a href="#"> 정산관리</a></li>
+		       <!-- <li><a href="#"> 오픈예정 현황</a></li>
+			        <li><a href="#"> 펀딩 현황</a></li>
+			        <li><a href="#"> 결제 현황</a></li> 
+			        <li><a href="#"> 정산관리</a></li>-->
 		      </ul>
 	      </div>
 	  </nav>
-
-			<div id="main_body">
-				<section>
+		<section id="makmain_bodyer">
+			<div id="optionList_all">
+		
 					<div id="optionList">
-						<p class="optionList-title">옵션리스트</p>
+						  <!--<p class="optionList-title">옵션리스트</p>-->
 						<div class="optionList-tableAll">
 
 							<table class="optionList-tableAll" id="optionTable">
-								<tr id="title">
+							    
+							    <tr>
+							    <th><p id="optionList-title">옵션 리스트</p></th>
+							    </tr>
+								<tr id="col_title">
 									<td>옵션번호</td>
 									<td>옵션명</td>
 									<td>옵션가격</td>
-									<td>옵션정보</td>
+									 <!--<td>옵션정보</td>-->
 									<td>제한수량</td>
 								</tr>
 								<c:forEach items="${optionList}" var="options">
@@ -55,7 +60,7 @@
 										<td><a href="<%=request.getContextPath() %>/option/view?option_no=${options.option_no }&p_no=${options.p_no }">${options.option_no }</a></td>
 										<td>${options.option_name}</td>
 										<td>${options.option_price}</td>
-										<td>${options.option_info}</td>
+										 <!--<td>${options.option_info}</td>-->
 										<td>${options.option_limit}</td>
 									</tr>
 								</c:forEach>
@@ -63,8 +68,9 @@
 							
 						</div>
 					</div>
-				</section>
+				
 			</div>
+	</section>
 </div>
 
 </body>

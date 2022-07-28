@@ -81,14 +81,12 @@ a {
 
 #title {
 	border-bottom: 1px solid #ccc;
-	height: 40px;
+	height: 30px;
 	font-family: SUIT-SemiBold;
 	font-size: 25px;
 	margin-top: 70px;
 }
-.salesList-tableAll {
-	margin-top: 50px;
-}
+
 
 #salesList table.salesList-tableAll {
 	width: 100%;

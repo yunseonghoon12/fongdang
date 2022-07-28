@@ -33,11 +33,7 @@ section #maker_title {
 	padding: 20px;
 	color: #444c57;
 }
-/* 표 제목 */
-section #title {
-	width: 200px;
-	font-family: SUIT-Regular;
-}
+
 /* 표 input 박스 */
 section .in_box {
 	width: 300px;
