@@ -118,7 +118,7 @@ $( document ).ready(function() {
 					<li><a
 						href="<%=request.getContextPath()%>/product/view"> 펀딩
 							상품</a></li>
-					<li><a href="<%=request.getContextPath()%>/option/view">
+					<li><a href="<%=request.getContextPath()%>/option/viewList">
 							펀딩 옵션</a></li>
 					<li><a href="#"> 오픈예정 현황</a></li>
 					<li><a href="#"> 펀딩 현황</a></li>
@@ -289,13 +289,14 @@ $(function(){
 </script>
 
 	
-<script>
-    CKEDITOR.replace( 'editor1' );
- </script>
+
 
 <script>
 $(document).ready(function() {  
-	
+	var responseMessage = "${message}";        
+	if(responseMessage != ""){
+		alert(responseMessage);     
+	}
 	if($("#email").val() == ''){
 		alert('로그인 해주세요.');
 		location.href="<%=request.getContextPath()%>/member/login";

@@ -46,7 +46,10 @@ public class ProductController {
 		Member member = (Member) session.getAttribute("loginInfo");
 		Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
 		mv.addObject("product", product);
-		
+		logger.debug("##########################################");
+		logger.debug(req.getParameter("message"));
+		logger.debug("##########################################");
+		mv.addObject("message", req.getParameter("message"));
 		mv.setViewName("product/product");// jsp 화면 
 		return mv;
 	}

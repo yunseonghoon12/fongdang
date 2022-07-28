@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kh.spring.fongdang.funding.domain.Product;
+import kh.spring.fongdang.funding.model.service.ProductService;
 import kh.spring.fongdang.maker.domain.Maker;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.option.domain.Option;
@@ -25,14 +26,20 @@ import kh.spring.fongdang.option.model.service.OptionServiceImpl;
 public class OptionController {
 	@Autowired
 	private OptionService optionService;
-
+	@Autowired
+	private ProductService productService;
 	/* Option page 이동*/
 	@GetMapping("/view")
-	public ModelAndView insertPageOption(ModelAndView mv, HttpSession session) {
-		String p_no = "";
+	public ModelAndView insertPageOption(ModelAndView mv, HttpSession session, HttpServletRequest req) {
+		int p_no = 0;
 		Member member = (Member) session.getAttribute("loginInfo");
 		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
+		Option option = new Option();
+		option.setOption_no(Integer.parseInt(req.getParameter("option_no")));
+		option.setP_no(Integer.parseInt(req.getParameter("p_no")));
+		Option optionResult = optionService.selectOption(option);
 		mv.addObject("p_no", p_no);
+		mv.addObject("option", optionResult);
 		mv.setViewName("option/option");// jsp페이지
 		return mv;
 	}
@@ -70,13 +77,20 @@ public class OptionController {
 	}
 	
 	@GetMapping("/viewList")
-	public ModelAndView selectOptionList(ModelAndView mv, HttpSession session) {
+	public ModelAndView selectOptionList(ModelAndView mv, HttpSession session, HttpServletRequest req) {
 		
-		String p_no = "";
+		int p_no = 0;
 		Member member = (Member) session.getAttribute("loginInfo");
 		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
-		
-		mv.addObject("optionList", optionService.selectOptionList(Integer.parseInt(p_no)));
+		if (p_no == 0) {
+			Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
+			mv.addObject("product", product);
+			mv.setViewName("redirect:../product/view");// jsp 화면
+			mv.addObject("message", "상품을 등록해주세요.");
+			
+			return mv;
+		}
+		mv.addObject("optionList", optionService.selectOptionList(p_no));
 		mv.setViewName("option/optionList");// jsp페이지
 		return mv;
 	}
