@@ -89,7 +89,7 @@
       height: 48px;
       padding-left: 0.65em;
       font-family: SUIT-Regular;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 300;     
     }
     #nickname_field {      
@@ -114,7 +114,7 @@
       height: 48px;
       padding-left: 0.65em;
       font-family: SUIT-Regular;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 300;     
     }   
     #email_field {
@@ -158,6 +158,7 @@
       	font-size: 15px;
       	width: 105px;
       	height: 48px;	
+      	cursor: pointer;
     }
     #email_chk:focus {
     	background-color: #9bbfd9;
@@ -186,7 +187,7 @@
       margin-bottom: 7px;
       padding-left: 0.65em;
       font-family: SUIT-Regular;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 300;     
     }    
     #chk_agree {
@@ -198,7 +199,7 @@
     #requirement_service {      
       font-family: SUIT-Regular;
       font-size: 14px;
-      padding-left: 110px;
+      padding-left: 120px;
     }
     #sub_caption {
       display: none;      
@@ -224,6 +225,7 @@
       color: white;
       border: 1px solid #b6e0d6;
       border-radius: 5px;
+      cursor: pointer;
     }
     #name_error, #nickname_error, #email_error, #pwd_error {
     	padding-top: 5px;

@@ -289,7 +289,7 @@ public class MemberController {
 		
 		String email = authInfo.getEmail();		
 		Member member = member_service.selectMember(email);		
-		mv.addObject("alarm",alarmservice.countAlarm(email));
+		mv.addObject("alarm", alarmservice.countAlarm(email));
 		mv.addObject("member", member);
 		mv.setViewName("member/myProfile");
 		return mv;
@@ -543,14 +543,16 @@ public class MemberController {
 			, Member new_snsUser
 			, @RequestParam(value="code", required = false) String code
 			, HttpSession session) {
-			
+		String msg = "";		
+		
 		System.out.println("\n[code]\n\t=>" + code);
 		String access_token = kakaoLoginBO.getAccessToken(code); 	
 		
 		HashMap<String, Object> userInfo = kakaoLoginBO.getUserInfo(access_token);
-		if(userInfo == null) {
-			model.addAttribute("msg", "동의항목에 모두 동의해야 소셜 계정을 이용할 수 있습니다. 계속해서 오류 발생시 관리자에게 문의해주세요");
-			return "redirect:/member/login";	
+		if(userInfo == null) {			
+			msg = "동의항목에 모두 동의해야 소셜 계정을 이용할 수 있습니다. 계속해서 오류 발생시 관리자에게 문의해주세요";
+			model.addAttribute("msg", msg);
+			return "member/errorPage";		
 		}
 		System.out.println("##################[KAKAO LOGIN]##################");
 		System.out.println("\t\t=>[KAKAO]access_Token:\t" + access_token);
@@ -610,8 +612,8 @@ public class MemberController {
 		
 		session.setAttribute("kakaoToken", access_token);	// 페이지에 보낼 소셜 정보가 담긴 세션		
 		session.setAttribute("loginInfo", member);			// 페이지에 보낼 회원 정보가 담긴 세션	
-
-		return "redirect:/";	
+				
+		return "redirect:/" ;	
 // 		요청한 로그인 정보 조회 테스트용 
 //		int result = sns_Service.insertSnsUser(sns_info);		
 //		System.out.println("\nresult =>\t" + result);
@@ -648,9 +650,15 @@ public class MemberController {
 	    	/* 네아로 인증이 성공적으로 완료되면 code 파라미터가 전달되며 이를 통해 access token을 발급 */
 			OAuth2AccessToken oauthToken = naverLoginBO.getAccessToken(session, code, state);			
 			String access_token = oauthToken.getAccessToken(); // 토큰
+			String msg = "";
 			
 			// 1. 로그인 사용자 정보를 읽어옴, json구조
 			String apiResult = naverLoginBO.getUserProfile(oauthToken);		
+			if(apiResult == null) {
+				msg = "동의항목에 모두 동의해야 소셜 계정을 이용할 수 있습니다. 계속해서 오류 발생시 관리자에게 문의해주세요";
+				model.addAttribute("msg", msg);
+				return "member/errorPage";
+			}
 			/** 
 			apiResult json 구조		
 			{	"resultcode":"00", 

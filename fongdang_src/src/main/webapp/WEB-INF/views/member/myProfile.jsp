@@ -15,7 +15,7 @@
   /* profile */
   #container {      
     width: 100%;
-    height: 1000px;      
+    height: 1050px;      
   }
   #main_content{     
     width: 370px;
@@ -90,9 +90,9 @@
   }    
   #pwd_field {
     width: 100%;
-    height: 90px;
-    margin-top: 5px;
-    }
+    height: 140px;
+    margin-top: 15px;
+  }
   #pwd_field > label {          
     display: block;
     color: #444c57;
@@ -116,7 +116,7 @@
   #nickname_field {
     width: 100%;
     height: 90px;
-    margin-top: 18px;
+    margin-top: 30px;
   }
   #nickname_field > label {          
     display: block;
@@ -141,7 +141,7 @@
   #intro_field {  	
       width: 100%;
       height: 90px;
-      margin-top: 5px;
+      margin-top: 15px;
       resize : none;
     }
   #intro_field > label {          
@@ -167,7 +167,7 @@
   }   
   #btn_wrap {
     position: relative;
-    margin-top: 90px;
+    margin-top: 60px;
     width: 100%;
     height: 60px;    
   }
@@ -255,7 +255,8 @@
 	</c:when>
 	<c:otherwise>
           		<div>
-            		<input type="password" name="password" id="password" min="3" autocomplete="off" placeholder="새 비밀번호">
+            		<input type="password" name="password" id="new_password" autocomplete="off" placeholder="비밀번호">
+            		<input type="password" name="cnf_password" id="cnf_new_password" autocomplete="off" placeholder="비밀번호 확인">
           		</div>
           		<p id="pwd_error"></p>
 	</c:otherwise>
@@ -264,7 +265,7 @@
         	<div id="nickname_field">
           		<label>닉네임</label>
           		<div>
-            		<input type="text" name="nickname" id="nickname" placeholder="닉네임">
+            		<input type="text" name="nickname" id="nickname" placeholder="닉네임" maxlength="10" >
           		</div>
         	</div>
         	<div id="intro_field">
@@ -274,7 +275,7 @@
           		</div>
         	</div>
         	<div id="btn_wrap">
-          		<button type="reset" id="revoke_btn">취소</button>
+          		<button type="button" id="revoke_btn" onclick="revokeHandler()">취소</button>
           		<button type="button" id="submit_btn" onclick="submitHandler()">확인</button>          		
         	</div>
       	</form>
@@ -282,43 +283,69 @@
   </div>
   
   <jsp:include page="../footer.jsp"/>
-  <script>
-  	$("#submit_btn").click(function () {
-  		console.log("email: " + $("#email").val());
-  		console.log("password: " + $("#password").val());
-  		console.log("passwordTypeof: " + typeof($("#password").val()));
-  		console.log("nickname: " + $("#nickname").val());
-  		console.log("intro: " + $("#intro").val());
-  	});
+  <script>  	
   	
-  	
-  	function submitHandler() {
-  		var cnf = confirm("회원의 프로필을 수정하시겠습니까?");
-  		var pwd = $("#password").val();
+  	function revokeHandler() {
+  		var cnf= confirm("취소 시, 설정하신 프로필 정보가 적용되지 않습니다. 취소하시겠습니까?");
   		
-  		/* var passwordValidity = passwordValidate(pwd); */  		
-  		
-  		if(cnf) {  			
-  			profileFrm.submit();  			
-  		} else {}
+  		if(cnf) {
+  			location.href='<%=request.getContextPath()%>/member/myfongdang';
+  		} else {} 
   	}
   	
-  	/* 
-  	function passwordValidate(pwd) {
+  	function submitHandler() {
+  		console.log("email: " + $("#email").val());
+  		console.log("new_password: " + $("#new_password").val());  		
+  		console.log("nickname: " + $("#nickname").val());
+  		console.log("intro: " + $("#intro").val());
+  		
+  		var cnf = confirm("회원의 프로필을 수정하시겠습니까?");
+  		var new_password = $("#new_password").val();
+  		var cnf_pwd = $("#cnf_new_password").val();
+  		var nickname = $("#nickname").val();  		
+  		var flag = true;
+  		
+  		if(cnf) {  			
+  			if(new_password == "") { // 비밀번호 또는 닉네임 값을 입력하지 않은 경우
+  				console.log('new_password is null');
+  				profileFrm.submit();
+  			} else { 
+  				console.log('new_password is not null');  
+  				var passwordValidity = passwordValidate(new_password, cnf_pwd); // 비밀번호 유효성 확인  				
+  				if(passwordValidity == false) {  	
+  					flag = false;
+  				}  				
+  			} 
+  				
+  			if(flag == true) {
+  				profileFrm.submit();	
+  			}
+  		} else {}
+  	}  	  	
+  	
+  	function passwordValidate(pwd, cnf_pwd) {
     	var pwd_size = pwd.length;
-    	var html= '';
-    	if(pwd == '') {
-    		$("#pwd_error").html("비밀번호를 입력해주세요.");
+    	
+    	if(cnf_pwd =='') {
+    		$("#pwd_error").html("변경할 비밀번호을 다시 입력해주세요.");
+    		$("#cnf_new_password").css( {"border" : "1px solid red"} );
     		return false;
     	} else if(pwd_size < 3 || pwd_size > 6) {
+    		$("#cnf_new_password").css( {"border" : "1px solid red"} );
+    		$("#new_password").css( {"border" : "1px solid red"} );
     		$("#pwd_error").html("비밀번호를 3~6자 내로 입력해주세요.");
     		return false;
+    	} else if(pwd != cnf_pwd) {
+    		$("#cnf_new_password").css( {"border" : "1px solid red"} );
+    		$("#pwd_error").html("비밀번호가 일치하지 않습니다.");
+    		return false;
     	} else {
+    		$("#new_password").css( {"border" : "1px solid black"} );    		
+    		$("#cnf_new_password").css( {"border" : "1px solid black"} );
     		$("#pwd_error").html(" ");
     		return true;
     	}    	
-    } 
-  	*/
+    }  	
   	
   </script>
 </body>
