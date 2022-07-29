@@ -11,9 +11,11 @@ public interface OptionService {
 	/*  옵션 등록 */
 	public int insertOption(Option option) ;
 	/*  옵션 등록 전 조회  */
-	public String selectOneGetPNo(String email);
+	public int selectOneGetPNo(String email);
 	/*  옵션 번호 조회 */
 	public int selectOptionNo(int no);
 	/*  옵션 리스트 조회 */
 	public List<Option> selectOptionList(int p_no);
+	
+	public Option selectOption(Option option);
 }

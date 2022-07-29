@@ -129,11 +129,11 @@ $(document).ready(function() {
 	     <ul> 
 	        <li><a href="<%=request.getContextPath()%>/maker/view"> 메이커 정보 </a></li>
 	        <li><a href="<%= request.getContextPath()%>/product/view"> 펀딩 상품</a></li>
-	        <li><a href="<%= request.getContextPath()%>/option/view"> 펀딩 옵션</a></li>
-	        <li><a href="#"> 오픈예정 현황</a></li>
-	        <li><a href="#"> 펀딩 현황</a></li>
-	        <!-- <li><a href="#"> 결제 현황</a></li> -->
-	        <li><a href="#"> 정산관리</a></li>
+	        <li><a href="<%= request.getContextPath()%>/option/viewList"> 펀딩 옵션</a></li>
+	        <!-- <li><a href="#"> 오픈예정 현황</a></li>
+		        <li><a href="#"> 펀딩 현황</a></li>
+		        <li><a href="#"> 결제 현황</a></li> 
+		        <li><a href="#"> 정산관리</a></li>-->
 	      </ul>
 	      
       </div>
@@ -145,7 +145,7 @@ $(document).ready(function() {
                 <tr>
                     <td id="title"><b>메이커 정보</b></td>
                     <td > <input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
-                    <input type="text" name="updateYn" id="updateYn" value="${updateYn}"/>
+                    <input type="hidden" name="updateYn" id="updateYn" value="${updateYn}"/>
                     </td>
                     <td></td>
                 </tr>

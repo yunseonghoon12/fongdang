@@ -130,10 +130,6 @@ public class KakaoLoginBO {
 			/* e.printStackTrace(); */
 		}
 		return userInfo;
-	}
-	
-	public void deleteInfo() {
-		
-	}
+	}	
 
 }

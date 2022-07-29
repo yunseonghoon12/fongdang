@@ -1,6 +1,7 @@
-<link href="<%=request.getContextPath()%>/resources/css/reset.css" rel="stylesheet">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/message.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
@@ -10,118 +11,6 @@
 <meta charset="UTF-8">
 <title>메시지</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<style>
-	button {
-	    border: none;
-	    border-radius: 3px;
-	    cursor: pointer;
-	    font-family: SUIT-Regular;
-	}
-	textarea {
-	    resize: none;
-	    font-family: SUIT-Regular;
-	}
-	textarea::placeholder {
-	    font-family: SUIT-Regular;
-	    color: #cccccc;
-	}
-	.modal {
-	    display: none;
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	    z-index: 1;
-	    background-color: rgba(0, 0, 0, 0.7);
-	}
-	.modal > .message_content {
-	    position: relative;
-	    top: 150px;
-	    margin: auto;
-	    width: 350px;
-	    background-color: #fffaf5;
-	    border-radius: 10px;
-	    padding: 10px;
-	    font-family: SUIT-Regular;
-	}
-	.message_content .message_input {
-	    margin-top: 20px;
-	}
-	.message_content .message_send {
-	    margin-top: 10px;
-	}
-	.message_content .message_send button {
-	    background-color: transparent;
-	    font-family: SUIT-Regular;
-	    font-size: 15px;
-	}
-	.message_content #btn_message_cancel {
-	    color: #b8b6b6;
-	}
-	.message_content #btn_message_send {
-	    float: right;
-	    color: #9BBFD9;
-	}
-    #message_content_wrap {      
-      	margin: 0 auto;
-      	width: 450px;
-      	height: 400px;      
-	    background-color: white;
-    }
-    #message_title_wrap {
-    	background-color: #9bbfd9;
-    	height: 60px;
-    }
-    #message_title {
-    	text-align: center;
-    	font-family: SUIT-Regular;
-      	font-size: 17px;
-      	color: white;      
-      	padding-top: 15px;
-      	padding-bottom: 5px;
-    }
-    #message_subcation {
-    	font-family: SUIT-Regular;
-    	text-align: center;
-      	font-size: 15px;
-    }
-    #message_content {
-      border: 1px solid #9bbfd9;
-      border-radius: 3px;
-      margin: 30px 0;
-      padding: 20px;
-      height: 300px;            
-      color: #444c57;
-      font-family: SUIT-Regular;
-      font-size: 14px;
-      line-height: 1.7em;
-    }
-    #answer_wrap {      
-      	margin: 50px auto;      	
-      	height: 45px;
-    }
-    #answer_btn {
-    	box-sizing: border-box;            
-      	width: 120px;
-      	height: 40px;      
-      	
-      	font-size: 14px;      
-      	background-color: #b6e0d6;      	
-      	color: white;      
-	    cursor: pointer;
-    }
-    #check_btn {
-    	box-sizing: border-box;            
-      	width: 120px;
-      	height: 40px;
-            	
-      	font-size: 14px;      
-      	background-color: #444c57;
-      	color: white;      
-	    cursor: pointer;
-    } 
-  </style>
 </head>
 <body>
 	<div class="modal message">
@@ -164,12 +53,7 @@
   	var receiver = '${message.receiver}'
   	var email = '${loginInfo.email}';
   	
-    console.log("메시지번호: " + ${message.m_no} );
-    console.log("발신자:  " + sender );
-    console.log("수신자:  " + receiver );
-    console.log("현재 로그인한 사람:  " + email );
-    $("#answer_btn").click(function() {
-    	console.log("답장하기 click()");
+    $("#answer_btn").click(function() {    	
     	$(".message").show();
     });
     $("#check_btn").click(function() {

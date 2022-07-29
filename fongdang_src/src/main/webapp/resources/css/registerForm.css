@@ -1,0 +1,250 @@
+/* header */
+a {
+	text-decoration: none;
+	color: #444c57;
+}
+
+#header_container {
+	border-bottom: 1px solid #ccc;
+	height: 80px;
+	position: relative;
+}
+
+#logo_inclusion {
+	position: absolute;
+	width: 100px;
+	left: 13%;
+}
+
+#logo {
+	width: 85px;
+	height: 60px;
+}
+
+#right_content {
+	position: absolute;
+	left: 80%;
+	font-family: SUIT-Regular;
+}
+
+#right_bar {
+	width: 200px;
+}
+
+#right_bar li {
+	display: inline-block;
+	margin: 10px;
+}
+
+#right_bar li a {
+	font-size: 15px;
+	line-height: 55px;
+}
+/* joinForm */
+#container {
+	width: 100%;
+	height: 850px;
+}
+
+#main_content {
+	width: 370px;
+	height: 780px;
+	margin: 0 auto;
+	padding-top: 2%;
+}
+
+#main_title {
+	font-family: SUIT-SemiBold;
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+#joinFrm {
+	margin: 25px 0;
+}
+
+#name_field {
+	width: 100%;
+	height: 90px;
+	margin: 25px 0;
+}
+
+#name_field>label {
+	display: block;
+	color: #444c57;
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+#name_field>div>input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 368px;
+	height: 48px;
+	padding-left: 0.65em;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#nickname_field {
+	width: 100%;
+	height: 90px;
+	margin: 25px 0;
+}
+
+#nickname_field>label {
+	display: block;
+	color: #444c57;
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+#nickname_field>div>input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 368px;
+	height: 48px;
+	padding-left: 0.65em;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#email_field {
+	width: 100%;
+	height: 90px;
+	margin: 25px 0;
+}
+
+#email_field>label {
+	display: block;
+	color: #444c57;
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+#email_field>div {
+	position: relative;
+	width: 368px;
+}
+
+#email_field>div>input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 246px;
+	height: 48px;
+	padding-left: 0.65em;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#email_chk {
+	background-color: #b6e0d6;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: white;
+	position: absolute;
+	right: 0;
+	font-family: SUIT-Regular;
+	font-size: 15px;
+	width: 105px;
+	height: 48px;
+	cursor: pointer;
+}
+
+#email_chk:focus {
+	background-color: #9bbfd9;
+}
+
+#pwd_field {
+	width: 100%;
+	height: 150px;
+	margin: 25px 0;
+}
+
+#pwd_field>label {
+	display: block;
+	color: #444c57;
+	font-family: SUIT-Regular;
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+#pwd_field>div>input {
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 368px;
+	height: 48px;
+	margin-bottom: 7px;
+	padding-left: 0.65em;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#chk_agree {
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 700;
+	padding-left: 5px;
+}
+
+#requirement_service {
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	padding-left: 120px;
+}
+
+#sub_caption {
+	display: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 350px;
+	height: 70px;
+	margin: 10px auto;
+	padding: 10px;
+	font-family: SUIT-Light;
+	font-size: 13px;
+	line-height: 1rem;
+}
+
+#enroll_btn {
+	box-sizing: border-box;
+	width: 368px;
+	height: 48px;
+	margin-top: 15px;
+	font-family: SUIT-Regular;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #b6e0d6;
+	color: white;
+	border: 1px solid #b6e0d6;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#name_error, #nickname_error, #email_error, #pwd_error {
+	padding-top: 5px;
+	color: red;
+	font-family: SUIT-Light;
+	font-size: 13px;
+}

@@ -18,7 +18,7 @@ public class OptionServiceImpl implements OptionService {
 		return optionDao.insertOption(option);
 	}
 	@Override
-	public String selectOneGetPNo(String email) {
+	public int selectOneGetPNo(String email) {
 		return optionDao.selectOneGetPNo(email);
 	}
 	
@@ -28,5 +28,8 @@ public class OptionServiceImpl implements OptionService {
 
 	public List<Option> selectOptionList(int p_no){
 		return optionDao.selectOptionList(p_no);
+	}
+	public Option selectOption(Option option) {
+		return optionDao.selectOption(option);
 	}
 }

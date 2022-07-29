@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/memberFindInfo.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,216 +10,6 @@
 <meta charset="UTF-8">
   <title>아이디·비밀번호 찾기</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<style>  
-    /* header */
-    a {
-      	text-decoration: none;
-      	color: #444c57;
-    }
-    #header_container {
-      	position: relative;      
-      	border-bottom: 1px solid #ccc;
-    }
-    #header_content {    
-    	position: relative;
-    	margin: 0 auto;
-    	width: 1280px;
-    	height: 80px;    	
-    }    
-    #logo_inclusion {
-      	position: absolute;
-      	width: 100px;      
-      	left: 0; 
-    }     
-    #logo {      
-      	width: 90px; 
-      	height: 65px;            
-    }
-    #right_content {
-      	position: absolute;
-      	width: 140px;
-      	right: 0;      
-    }
-    #right_bar {            
-      	width: 200px;      
-    }
-    #right_bar li {            
-      	display: inline-block;
-      	margin: 10px;
-    }
-    #right_bar li a {
-      	font-family:  SUIT-Regular;
-      	font-size: 15px;
-      	line-height: 55px;
-    }      
-  </style>  
-  <style>
- 	#find_wrap {
- 	 	border-bottom: 1px solid #ccc; 	 	
- 		height: 140px; 		
- 	}
-    #find_title_wrap {
-      	width: 1200px;     
-      	height: 100%;  
-      	margin: 0 auto;    
-    }
-    #find_title {     
-      	box-sizing: border-box;
-      	width: 350px;      
-      	margin-top: 3%;
-      	font-family: SUIT-SemiBold;
-      	font-size: 32px;
-    }    
-    #find_info_wrap {  
-      	font-size: 32px;
-      	position: relative;
-      	height: 108px;
-    }
-    #find_info {      
-      	position: absolute;
-      	bottom: 0;
-    }
-   	#find_id, #find_pwd {
-   		background: none;
-   		border: none;
-   		font-family: SUIT-Regular;
-   		font-size: 15px;
-   		
-   		cursor: pointer;
-   	}
-   	#find_id {
-   		border-bottom: 2px solid #b6e0d6;   		 
-   	}
-    #guide {      
-      	font-family: SUIT-Regular;
-      	font-size: 14px;
-      	font-weight: 400;
-      	line-height: 20px;
-	
-      	width: 380px;
-      	height: 60px;
-      	margin: 0 auto; 
-      	padding-top: 50px;      
-    }        
-    #page_body {            
-      	height: 500px;
-      	background-color: #f5f7fa;
-    }
-    #member_info_cotent{
-    	margin: 0 auto;
-    	width: 1200px;
-    	height: 100%;
-    }
-    #id_vision {
-      	height: 100%;
-      	margin: 0 auto;
-      	padding: 30px 0;
-    }
-    #pwd_vision {
-      	height: 100%;
-      	margin: 0 auto;
-      	padding: 30px 0;
-    }
-    #memberInfo_form {          
-      	width: 370px;
-      	height: 200px;
-      	margin: 30px auto;
-    }    
-    .input_email {
-      	box-sizing: border-box;
-      	width: 365px;
-      	height: 48px;
-      	line-height: 48px;
-      	font-family: SUIT-Regular;
-      	font-size: 15px;
-      	font-weight: 300;
-	    padding-left: 0.95em;
-    }
-	.error_comment {
-		color: red;
-		font-size: 13px;
-		font-family: SUIT-Light;
-		padding-top: 7px;		
-	}
-    #submit_btn, #send_link, #auth_chk {      
-      	box-sizing: border-box;
-      	width: 365px;
-      	height: 48px;
-	      
-      	font-family: SUIT-Regular;
-      	font-size: 17px;
-      	font-weight: 400;
-      	margin-top: 20px;      
-	    
-      	border: 1px solid #b6e0d6;     
-      	border-radius: 5px;
-      	background-color: #b6e0d6;      
-      	color: white;
-      	
-      	cursor: pointer;
-    }
-    
-    #pwd_vision {
-      	display: none;
-    }
-    #auth_vision {
-    	display: none;
-    }
-    #result_content {
-    	display: none;
-    	padding-top: 80px;    	
-    	margin: 0 auto;
-    	width: 400px;
-    	height: 350px;
-    }       
-    #result_email{    	    
-    	color: #444c57;
-    	font-weight: bold;
-    	font-size: 25px;
-    	font-family: SUIT-Regular;
-    }
-    #result_password {
-    	padding-top: 20px;
-    
-    	color: #444c57;
-    	font-family: SUIT-Regular;
-    	font-size: 18px;
-    	font-weight: bold;    	
-    }
-    #comment {
-    	margin-top: 20px;
-    	width: 368px;    	
-    	
-    	color: rgba(0,0,0,.54);
-    	font-family: SUIT-Regular;
-    	font-size: 15px;
-    	line-height: 20px;
-    }
-    #btn_wrap {
-    	margin-top: 40px;
-    	width: 380px;
-    	height: 110px;
-    }        
-    .result_btn {
-    	margin-bottom: 10px;
-    	width: 368px;
-    	height: 48px;
-    	border: 1px solid #ccc;
-		border-radius: 3px;    	
-    	
-    	font-size: 17px;
-    	font-family: SUIT-Regular;
-    	
-    }
-    #login_btn {
-    	background-color: #b6e0d6;
-    	color: white;
-    }
-    #confirm_btn {    	
-    	background-color: white;
-    	color: #444c57;    		
-    }
-  </style>
 </head>
 <body>
 	<header>
@@ -339,8 +130,7 @@
     
     $("#submit_btn").click(function() {
     	var val = $("#email").val();
-    	var emailValidity = emailValidate(val);
-    	console.log(val);
+    	var emailValidity = emailValidate(val);    	
     	
     	if(emailValidity == false) {
     		return 0; 
@@ -398,8 +188,8 @@
     	var emailValidity = emailValidate(email_val);
     	social_chk = socialCheck(email_val);
     	
-    	console.log("email: " + email_val);    	
-    	console.log("social_chk: " + social_chk);
+    	/* console.log("email: " + email_val);    	
+    	console.log("social_chk: " + social_chk); */
     	    	
     	if(emailValidity == false) { // 이메일 유효성 확인
     		return ;
@@ -436,16 +226,13 @@
 					
 					$("#auth_vision").html(html);
 					$("#auth_chk").click(function() {
-						console.log("입력한 인증번호: " + $("#auth_number").val());
+						/* console.log("입력한 인증번호: " + $("#auth_number").val()); */
 						/* console.log("인증번호:  " + authNumber); */
 						console.log("email_val: " + email_val);
 						var emailValue = email_val;
 						var input_num = $("#auth_number").val();
 						
 						if(input_num == authNumber) {
-							console.log("값 일치");
-							console.log(emailValue);
-							
 							$.ajax({
 								url: "<%=request.getContextPath()%>/member/find/password",
 								type: "get",
@@ -526,8 +313,7 @@
     }
     
     function socialCheck(email_val) {    	
-    	var flag;    	
-    	console.log("ajax전 flag=> " + flag);
+    	var flag;
     	
     	$.ajax({
     		url: '<%=request.getContextPath()%>/member/find/password',
@@ -536,14 +322,11 @@
     			email : email_val
     		},
     		async: false, // 동기 방식으로 설정    		
-    		success : function (data) {
-    			console.log(data.email + "의 소셜 회원 이메일 비밀번호 체크: " + data.password);
+    		success : function (data) {    			
     			if(data.password == null) {
-    				flag = false;
-    				console.log("ajax후 flag=> " + flag);
+    				flag = false;    				
     				console.log("password=> null!");    	    				
-    			} else {
-    				console.log("ajax후 flag=> " + flag);
+    			} else {    				
     				console.log("password=> is not null!");    				
     			}
     			
@@ -553,11 +336,9 @@
 				console.log(status);
 				console.log(error);								
 			}
-    	});
-    	console.log("socialCheck()의 return값=> " + flag);
+    	});    	
     	return flag;
-    }
-    
+    }    
     
   </script>	
 

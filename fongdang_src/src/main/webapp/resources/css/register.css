@@ -1,0 +1,128 @@
+/* header */
+a {
+	text-decoration: none;
+	color: #444c57;
+}
+
+#header_container {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+
+#header_content {
+	position: relative;
+	margin: 0 auto;
+	width: 1280px;
+	height: 80px;
+}
+
+#logo_inclusion {
+	position: absolute;
+	width: 100px;
+	left: 0;
+}
+
+#logo {
+	width: 90px;
+	height: 65px;
+}
+
+#right_content {
+	position: absolute;
+	width: 140px;
+	right: 0;
+}
+
+#right_bar {
+	width: 200px;
+}
+
+#right_bar li {
+	display: inline-block;
+	margin: 10px;
+}
+
+#right_bar li a {
+	font-family: SUIT-Regular;
+	font-size: 15px;
+	line-height: 55px;
+}
+/* register */
+#container {
+	width: 100%;
+	height: 800px;
+}
+
+#main_content {
+	margin: 0 auto;
+	width: 380px;
+	height: 700px;
+	position: relative;
+}
+
+#main {
+	height: 600px;
+	padding-top: 45%;
+}
+
+#main_title {
+	width: 300px;
+	height: 50px;
+	font-family: SUIT-SemiBold;
+	font-size: 35px;
+	font-weight: 700;
+}
+
+#sub_title {
+	font-family: SUIT-Regular;
+}
+
+#social_login_content {
+	margin-top: 50px;
+	height: 70px;
+}
+
+#icon_group {
+	width: 150px;
+	margin: 10px auto;
+}
+
+#kakaoLogin, #naverLogin {
+	cursor: pointer;
+	margin: 5px;
+	background: none;
+	border: none;
+}
+
+#separate {
+	padding-top: 10px;
+	text-align: center;
+	font-family: SUIT-Light;
+	font-size: 12px;
+	color: #444c57;
+	width: 368px;
+}
+
+#enroll_btn {
+	box-sizing: border-box;
+	width: 380px;
+	height: 48px;
+	font-family: SUIT-Regular;
+	font-size: 15px;
+	line-height: normal;
+	background-color: white;
+	color: #444c57;
+	border: 1px solid #444c57;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#enroll_wrap {
+	margin: 15px 0;
+}
+
+#enroll_foot {
+	width: 250px;
+	margin: 30px auto;
+	text-align: center;
+}
