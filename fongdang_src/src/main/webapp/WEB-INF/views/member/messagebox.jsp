@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/messagebox.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -10,165 +11,6 @@
 <meta charset="UTF-8">
 <title>퐁당- 메시지</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<style>
-    /* header */
-  </style>
-  <style>    
-    /* messageBox */
-    table,  td, th{
-	  border-top: 1px solid black;            
-      font-family: SUIT-Regular;
-	}
-    #container {
-      position: relative;           
-      height: 800px;      
-    }
-    #main_content {
-      height: 800px;
-      margin: 0 auto;
-    }
-    #title_content{
-      border-bottom: 1px solid #ccc;      
-      height: 140px; 
-    }
-    #title_wrap {
-      width: 1200px;
-      height: 100px;      
-      margin: 50px auto 0 auto;
-    }
-    #title_wrap > #title {
-      font-family: SUIT-SemiBold;
-      font-size: 36px;
-      font-weight: bold;      
-      color: #444c57;
-    }
-    #title_wrap > #caption { 
-      font-family: SUIT-Regular;     
-      font-size: 15px;  
-      color: #444c57;
-      padding-top: 40px;
-    }
-    #title_wrap > #btn_wrap {   
-    	height: 50px;    	
-    }    
-    .message_btn {    
-    	margin-top: 10px;
-    	width : 110px;
-    	height: 38px;
-    	
-    	background: none;
-    	border: none;
-    	border-radius: 3px;	
-    	
-    	cursor: pointer;
-    }
-    .message_btn:hover {
-    	color: #444c57;
-    	border: 1px solid #444c57;
-    	font-weight: bold;
-    }
-    #message_content {
-    	margin: 120px auto 50px auto;
-    	width: 1200px;
-    	height: 300px;
-    	
-    	cursor: pointer;
-    }
-    #message_list {    
-      margin: 30px auto;           
-      width: 980px;      
-      /* height: 300px; */
-      font-size: 13px;
-      line-height: 40px;
-      text-align: center;
-    }   
-    #message_list tr th {      
-      font-size: 15px;            
-    }   
-    #message_list td:not(:first-of-type) {
-      text-align: center;    
-      line-height: 1rem;      
-    }    
-    #modal_wrap {
-      display: none;
-      border: 1px solid #ccc;
-      position: absolute;
-      top: 0;
-      left: 40%;
-
-      width: 450px;
-      height: 550px;
-      
-      background-color: white;
-    }
-    #modal_title {      
-      font-size: 25px;
-      color: #444c57;
-      padding-top: 50px;
-      padding-left: 25px;
-    }
-    #modal_content {
-      border: 1px solid #9bbfd9;
-      border-radius: 5px;
-      width: 370px;
-      height: 300px;
-      margin: 30px auto;
-      padding: 20px;
-            
-      color: #444c57;
-      font-size: 13px;
-      line-height: 1.7em;
-    }
-    #model_cancel {
-      position: absolute;
-      left: 170px;
-      width: 110px;
-      height: 40px;
-      font-size: 14px;
-      background-color: #b6e0d6;
-      border: 1px solid #9bbfd9;
-      border-radius: 5px;
-      color: white;
-    }
-    #empty_content_wrap {   	
-    	width: 1200px;
-    	height: 200px;
-    	margin: 180px auto 0 auto;
-    }
-    #chat-left {
-    	width: 100%;		
-    }
-    #empty_content {    	
-    	height: 50px;
-    	line-height: 50px;
-    	text-align: center;
-    	font-family: SUIT-Regular;
-    	font-size: 17px;
-    	font-weight: 300;
-    	color: #444c57;	
-    }
-    #prev_next {
-      	text-align: center;      
-      	width: 1280px;
-      	margin: 0 auto;    
-  	}
-  	#prev_next button {
-  		background-color: white;
-  		border: 2px solid #444c57;    	
-   		color: #444c57;
-   		font-size: 17px;
-   		font-weight: bold;
-   		
-   		margin: 5px;     	
-   		width: 25px;
-   		height: 25px;
-   		cursor: pointer;
-  	}
-  	#prev_next button:hover {
-		background-color: #444c57;
-		color: white;
-  	}  
-  </style>
 </head>
 <body>
   <jsp:include page="../header.jsp"/>
@@ -259,7 +101,7 @@
   
   <script>
   	var message_type = $("#message_type").val();  	
-  	console.log("message_type:  " + message_type);
+  	/* console.log("message_type:  " + message_type); */
   	
   	if(message_type == 'send') {
   		$("#send").css({
@@ -282,11 +124,10 @@
   	var page = '${currentPage}';
   	var startPage =  '${startPage}';
   	var endPage =  '${endPage}';
-  	console.log("현재페이지: " + page);
-  	console.log("[페이지에 나와있는 정수형 페이지 숫자]");
+  	
   	for(var i=startPage; i<= endPage;  i++) {  		
   		var page_btn_n = $("#page_btn"+i);
-  		console.log("페이지=> " + page_btn_n.val());
+  		
   		if(page_btn_n.val() == page) {
   			page_btn_n.css({
   				"background-color": "#444c57",
@@ -296,16 +137,11 @@
   	}  	
     
     $(".message_content").click(function() {
-        console.log("click()");
-        console.log("m_no: " + $(this).children().val());
-        
        	var option= "width=500, height=550";
        	var m_no = $(this).children().val();
        	var url = "<%=request.getContextPath()%>/member/messagebox/msg?m_no=";
        	url += m_no;
-       	
-       	console.log("url: " + url);
-        /* window.resizeTo(500, 550); */
+      	
         window.open(url, "popup", option);
 	});
     
@@ -319,9 +155,6 @@
     	console.log($("#message_type").val());
     	msgFrm.submit();
     });
-    
-    
-    
   </script>
 </body>
 </html>

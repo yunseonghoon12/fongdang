@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/adminMemberManagement.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -9,199 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <title>퐁당 - 관리자페이지</title>
-<script src="https://code.jquery.com/jquery-3.6.0.js" ></script> 
-	<style>
-    /* header */
-    #admin_navigator {
-      	border-bottom: 1px solid #ccc;      
-      	box-sizing: border-box;      
-      	height: 130px;
-      	color: #444c57;           
-      	padding-top: 20px;      
-    }
-    #admin_navigationbar {      
-      	position: relative;
-      	width: 1280px;      
-      	height: 100px;
-      	margin: 0 auto;
-    }	
-    #logo_wrap {
-      	position: absolute;
-      	top: 0;      
-      	width: 100px;      
-    }
-    #logo {   
-      	width: 95px;
-      	height: 65px;
-    }
-    #admin_header_title {
-      	position: absolute;
-      	top: 30%;
-      	left: 150px;
-      	font-family: SUIT-SemiBold;
-      	font-size: 28px;
-    }
-  </style>  
-  <style>
-    /* main section */
-    a {
-      	text-decoration: none;
-    }
-    table,  td, th{
-	  border-top: 1px solid black;            
-      font-family: SUIT-Regular;
-	}	
-    #container {
-      	display: flex;
-      	flex-flow: row wrap;
-      	margin: 0 auto;
-      	width: 1200px;
-      	height: 800px;
-    }    
-    #admin_nav {
-      	/* float: left; */
-      	width: 20%;
-      	height: 100%;
-    }
-    #admin_nav ul { 
-      	border-right: 1px solid #ccc;
-      	width: 180px;     
-      	height: 600px; 
-      	padding-top: 50px;          
-    }
-    #admin_nav li { 	
-    	margin: 25px;
-    }
-    #admin_nav li a {
-      	color: #444c57;
-    }   
-    .main_menu {      
-      	font-family: SUIT-SemiBold;
-      	font-size: 20px;
-      	font-weight: bold;      
-    }
-    .sub_menu {
-      	padding-left: 30px;
-      	font-family: SUIT-Regular;
-      	font-size: 14px;
-    }
-    #main_body {
-      	/* float: right; */      
-      	width: 80%;
-      	height: 100%;
-    }
-    #main_content {
-    	width: 900px;
-    	height: 650px;
-    	margin-top: 70px;
-    }     
-    #title_wrap {
-    	margin: 20px; 
-    	height: 120px;
-    }
-    #title{
-    	border-bottom: 1px solid #ccc;
-    	width: 800px;
-    	height: 40px;
-    	font-family: SUIT-SemiBold;
-    	font-size: 25px;
-    }
-    #title_content {   
-    	margin-top: 20px;
-    	position: relative;
-    	width: 800px;
-    	height: 50px;
-    }
-    #sub_title{  	    	
-    	position: absolute;
-    	top: 6px;
-    	font-family: SUIT-Regular;
-    	font-size: 15px;
-    }
-    #related_search_frm {    	
-    	position: absolute;
-    	right: 70px;    	
-    }
-    #related_search {
-    	box-sizing: border-box;
-    	width: 277px;
-    	height: 35px;
-    	padding-left: 15px;
-    	
-    	font-family: SUIT-Regular;
-    	font-size: 14px;
-    }
-    #search_btn {    	
-    	border-radius: 3px;
-    	border: 1px solid #b6e0d6;
-    	background-color: #b6e0d6;    	
-    	width: 65px;
-    	height: 35px;
-    	
-    	font-size: 14px;
-    	font-family: SUIT-Light;
-    	
-    	cursor: pointer;
-    }
-    #search_btn:hover {
-    	font-weight: bold;
-    	color:white;
-    }
-    #withdraw_btn_wrap {
-    	position: absolute;    	
-    	right: 0;
-    }
-    #withdraw_btn {
-    	background-color: #9bbfd9;
-    	border-radius: 3px;
-    	border: 1px solid #b6e0d6;
-    	width: 65px;
-    	height: 35px;
-    	
-    	font-size: 14px;
-    	font-family: SUIT-Light;
-    	
-    	cursor: pointer;
-    }
-    #withdraw_btn:hover {
-    	color: white;
-    }
-    #member_content {
-    	height: 500px;
-    	margin: 50px 20px 50px 20px;
-    }
-    #member_list {    	
-    	width: 800px;
-    	margin: 30px 0;
-	    font-size: 13px;
-      	line-height: 40px;
-      	text-align: center;	
-    }
-    #prev_next {
-      	text-align: center;      
-      	width: 800px;
-      	height: 40px;
-  	}
-    #prev_next button {
-    	background-color: white;
-  	border: 2px solid #444c57;    	
-   	color: #444c57;
-   	font-size: 17px;
-   	font-weight: bold;
-   		
-   	margin: 5px;     	
-   	width: 25px;
-   	height: 25px;
-   	cursor: pointer;
-    }
-    #prev_next button:hover {
-    	background-color: #444c57;
-    	color: white;
-    }   
-    
-  </style>
+<script src="https://code.jquery.com/jquery-3.6.0.js" ></script> 	 
 </head>
-<script>
+
+<body>
+	<script>
 	var msg = "${msg}";
 	if(msg !='') {
 		alert(msg);
@@ -218,8 +31,8 @@
 		location.href='<%=request.getContextPath()%>/';
 	}
 	
-</script>
-<body>
+	</script>
+
 	<div id="admin_navigator">    
     <div id="admin_navigationbar">
       <div id="logo_wrap">
@@ -236,7 +49,6 @@
   <div id="container">
     <div id="admin_nav">
       <!-- 관리자 메뉴 -->
-      <!-- <a>태그 href에 각 기능별로 이동할 url 작성 -->
       <ul>
         <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="main_menu">회원 관리</a></li>
         <li><a href="<%= request.getContextPath()%>/admin/memberManagement" class="sub_menu" style="color: #9bbfd9;">회원 조회</a></li>
@@ -250,8 +62,7 @@
       </ul>
     </div>   
     
-    <div id="main_body">
-      <!-- 관리자 담당 메인 기능 작성 -->        
+    <div id="main_body">     
         <div id="main_content">
         	<div id="title_wrap">
         		<p id="title">회원 관리</p>
@@ -323,11 +134,10 @@
 	var page = '${currentPage}';
 	var startPage =  '${startPage}';
 	var endPage =  '${endPage}';
-	console.log("현재페이지: " + page);
-	console.log("[페이지에 나와있는 정수형 페이지 숫자]");
+	
 	for(var i=startPage; i<= endPage;  i++) {  		
 		var page_btn_n = $("#page_btn"+i);
-		console.log("페이지=> " + page_btn_n.val());
+		
 		if(page_btn_n.val() == page) {
 			page_btn_n.css({
 				"background-color": "#444c57",
@@ -347,8 +157,7 @@
     function memberSearchHandler() {   
     	$("#related_search_frm").prop("action", "memberManagement");
     	related_search_frm.submit();
-    }
-   
+    } 
     
   </script>
 </body>

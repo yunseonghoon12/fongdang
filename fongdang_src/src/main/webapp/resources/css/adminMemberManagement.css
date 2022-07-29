@@ -1,0 +1,208 @@
+/* header */
+#admin_navigator {
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 130px;
+	color: #444c57;
+	padding-top: 20px;
+}
+
+#admin_navigationbar {
+	position: relative;
+	width: 1280px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#logo_wrap {
+	position: absolute;
+	top: 0;
+	width: 100px;
+}
+
+#logo {
+	width: 95px;
+	height: 65px;
+}
+
+#admin_header_title {
+	position: absolute;
+	top: 30%;
+	left: 150px;
+	font-family: SUIT-SemiBold;
+	font-size: 28px;
+}
+/* main section */
+a {
+	text-decoration: none;
+}
+
+table, td, th {
+	border-top: 1px solid black;
+	font-family: SUIT-Regular;
+}
+
+#container {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	width: 1200px;
+	height: 800px;
+}
+
+#admin_nav {
+	width: 20%;
+	height: 100%;
+}
+
+#admin_nav ul {
+	border-right: 1px solid #ccc;
+	width: 180px;
+	height: 600px;
+	padding-top: 50px;
+}
+
+#admin_nav li {
+	margin: 25px;
+}
+
+#admin_nav li a {
+	color: #444c57;
+}
+
+.main_menu {
+	font-family: SUIT-SemiBold;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.sub_menu {
+	padding-left: 30px;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+}
+
+#main_body {
+	/* float: right; */
+	width: 80%;
+	height: 100%;
+}
+
+#main_content {
+	width: 900px;
+	height: 650px;
+	margin-top: 70px;
+}
+
+#title_wrap {
+	margin: 20px;
+	height: 120px;
+}
+
+#title {
+	border-bottom: 1px solid #ccc;
+	width: 800px;
+	height: 40px;
+	font-family: SUIT-SemiBold;
+	font-size: 25px;
+}
+
+#title_content {
+	margin-top: 20px;
+	position: relative;
+	width: 800px;
+	height: 50px;
+}
+
+#sub_title {
+	position: absolute;
+	top: 6px;
+	font-family: SUIT-Regular;
+	font-size: 15px;
+}
+
+#related_search_frm {
+	position: absolute;
+	right: 70px;
+}
+
+#related_search {
+	box-sizing: border-box;
+	width: 277px;
+	height: 35px;
+	padding-left: 15px;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+}
+
+#search_btn {
+	border-radius: 3px;
+	border: 1px solid #b6e0d6;
+	background-color: #b6e0d6;
+	width: 65px;
+	height: 35px;
+	font-size: 14px;
+	font-family: SUIT-Light;
+	cursor: pointer;
+}
+
+#search_btn:hover {
+	font-weight: bold;
+	color: white;
+}
+
+#withdraw_btn_wrap {
+	position: absolute;
+	right: 0;
+}
+
+#withdraw_btn {
+	background-color: #9bbfd9;
+	border-radius: 3px;
+	border: 1px solid #b6e0d6;
+	width: 65px;
+	height: 35px;
+	font-size: 14px;
+	font-family: SUIT-Light;
+	cursor: pointer;
+}
+
+#withdraw_btn:hover {
+	color: white;
+}
+
+#member_content {
+	height: 500px;
+	margin: 50px 20px 50px 20px;
+}
+
+#member_list {
+	width: 800px;
+	margin: 30px 0;
+	font-size: 13px;
+	line-height: 40px;
+	text-align: center;
+}
+
+#prev_next {
+	text-align: center;
+	width: 800px;
+	height: 40px;
+}
+
+#prev_next button {
+	background-color: white;
+	border: 2px solid #444c57;
+	color: #444c57;
+	font-size: 17px;
+	font-weight: bold;
+	margin: 5px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+#prev_next button:hover {
+	background-color: #444c57;
+	color: white;
+}

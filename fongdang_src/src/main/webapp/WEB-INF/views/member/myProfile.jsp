@@ -2,6 +2,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/profileSettup.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -11,211 +12,8 @@
 <meta charset="UTF-8">
 <title>프로필 설정</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
-<style>
-  /* profile */
-  #container {      
-    width: 100%;
-    height: 1050px;      
-  }
-  #main_content{     
-    width: 370px;
-    height: 850px;
-    margin: 80px auto;
-    /* padding: 8% 0; */
-   }
-   #main_wrap{
-    position: relative;
-    height: 50px;
-   }
-   #main_title{      
-    position: absolute;
-    font-family: SUIT-Regular;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 15px;
-    color: #444c57;    
-  }
-  #withdraw {
-    position: absolute;
-    text-decoration:none;
-    font-family: SUIT-Light;
-    font-size: 13px;
-    top: 15px;
-    right: 0;
-  }
-  #proflie_field {  
-    margin: 10px 0;
-    font-family: SUIT-Regular;
-    padding-top: 10px;
-    font-size: 15px;
-    line-height: 20px;
-    height: 350px;
-  }
-  .personal_img {
-    display: block;
-    border-radius: 210px;
-    width: 210px;
-    height: 200px;
-    margin: 30px auto;
-  }
-  #profile{    
-    width: 80px;
-    margin: 0 auto;
-    padding-top: 25px;
-  }
-  #id_field {    
-    width: 100%;
-    height: 90px;
-    margin-top: 5px;
-    }
-  #id_field > label {          
-    display: block;
-    color: #444c57;
-    font-family: SUIT-Regular;
-    font-size: 15px;      
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-  #id_field > div > input {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 368px;
-    height: 46px;
-    margin-bottom: 7px;
-    padding-left: 0.65em;
-    font-family: SUIT-Light;
-    font-size: 13px;
-    font-weight: 300;     
-  }    
-  #pwd_field {
-    width: 100%;
-    height: 140px;
-    margin-top: 15px;
-  }
-  #pwd_field > label {          
-    display: block;
-    color: #444c57;
-    font-family: SUIT-Regular;
-    font-size: 15px;      
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-  #pwd_field > div > input {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 368px;
-    height: 46px;
-    margin-bottom: 7px;
-    padding-left: 0.65em;
-    font-family: SUIT-Light;
-    font-size: 13px;
-    font-weight: 300;     
-  }
-  #nickname_field {
-    width: 100%;
-    height: 90px;
-    margin-top: 30px;
-  }
-  #nickname_field > label {          
-    display: block;
-    color: #444c57;
-    font-family: SUIT-Regular;
-    font-size: 15px;      
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-  #nickname_field > div > input {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 368px;
-    height: 46px;
-    margin-bottom: 7px;
-    padding-left: 0.65em;
-    font-family: SUIT-Light;
-    font-size: 13px;
-    font-weight: 300;     
-  }
-  #intro_field {  	
-      width: 100%;
-      height: 90px;
-      margin-top: 15px;
-      resize : none;
-    }
-  #intro_field > label {          
-    display: block;
-    color: #444c57;
-    font-family: SUIT-Regular;
-    font-size: 15px;      
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-  #intro_field > div > textarea {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 368px;
-    height: 80px;
-    margin-bottom: 7px;    
-    padding: 10px;
-    font-family: SUIT-Light;
-    font-size: 13px;
-    
-    resize: none;  
-  }   
-  #btn_wrap {
-    position: relative;
-    margin-top: 60px;
-    width: 100%;
-    height: 60px;    
-  }
-  #revoke_btn {    
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-
-    width: 180px;
-    height: 48px;    
-    
-    background-color: #444c57;
-    border: 1px solid #444c57;
-    border-radius: 3px;
-    color: white;
-    font-family: SUIT-Regular;
-    font-size: 15px;
-    
-    cursor: pointer;
-  }
-  #submit_btn {
-    box-sizing: border-box;    
-    position: absolute;
-    right: 0;
-
-    width: 180px;
-    height: 48px;
-
-    background-color: #b6e0d6;
-    border: 1px solid #b6e0d6;
-    border-radius: 5px;
-    color: white;  
-    font-family: SUIT-Regular;
-    font-size: 17px;
-    
-    cursor: pointer;
-  }
-  
-  #pwd_error {
-	padding-top: 5px;
-	color: red; 
-	font-family: SUIT-Light;
-	font-size: 13px;
-   }
-</style>
 </head>
-<body>
-	<!-- <header style="height:200px; color: blue; font-size:32px; text-align:center; background-color:#ccc">헤더 영역</header> -->
+<body>	
 	<jsp:include page="../header.jsp"/>
   	<div id="container">
     	<div id="main_content">
@@ -250,7 +48,7 @@
 <c:choose>
 	<c:when test="${!empty kakaoToken or !empty naverToken}">
 				<div>
-					<input type="text" placeholder="소셜 사이트를 통해 비밀번호를 변경해주세요." readonly="readonly">
+					<input type="text" name="password" id="new_password" placeholder="소셜 사이트를 통해 비밀번호를 변경해주세요." readonly="readonly">
 				</div>
 	</c:when>
 	<c:otherwise>
@@ -283,8 +81,8 @@
   </div>
   
   <jsp:include page="../footer.jsp"/>
-  <script>  	
-  	
+  
+  <script>  	  	
   	function revokeHandler() {
   		var cnf= confirm("취소 시, 설정하신 프로필 정보가 적용되지 않습니다. 취소하시겠습니까?");
   		
@@ -294,10 +92,10 @@
   	}
   	
   	function submitHandler() {
-  		console.log("email: " + $("#email").val());
+  		/* console.log("email: " + $("#email").val());
   		console.log("new_password: " + $("#new_password").val());  		
   		console.log("nickname: " + $("#nickname").val());
-  		console.log("intro: " + $("#intro").val());
+  		console.log("intro: " + $("#intro").val()); */
   		
   		var cnf = confirm("회원의 프로필을 수정하시겠습니까?");
   		var new_password = $("#new_password").val();
@@ -306,11 +104,11 @@
   		var flag = true;
   		
   		if(cnf) {  			
-  			if(new_password == "") { // 비밀번호 또는 닉네임 값을 입력하지 않은 경우
+  			if(new_password == "") { // 비밀번호 값을 입력하지 않은 경우
   				console.log('new_password is null');
   				profileFrm.submit();
   			} else { 
-  				console.log('new_password is not null');  
+  				console.log('new_password is not null');
   				var passwordValidity = passwordValidate(new_password, cnf_pwd); // 비밀번호 유효성 확인  				
   				if(passwordValidity == false) {  	
   					flag = false;

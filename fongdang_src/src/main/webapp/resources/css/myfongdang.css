@@ -1,0 +1,376 @@
+#container {
+	width: 100%;
+	height: 1400px;
+}
+
+#myfongdang_page {
+	position: relative;
+}
+
+#myfongdang_page_background {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 350px;
+	background-color: #ccc;
+}
+
+#myfongdang_page_main_wrap {
+	width: 1200px;
+	height: 1100px;
+	margin: 0 auto;
+	padding-top: 40px;
+	z-index: 100;
+}
+
+#myfongdang_member_path {
+	position: relative;
+	height: 45px;
+}
+
+#myfongdang_member_path>button {
+	width: 80px;
+	height: 60px;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 22px;
+	cursor: pointer;
+}
+
+#supporter_btn {
+	position: absolute;
+	font-family: SUIT-Regular;
+	z-index: 10;
+	right: 60px;
+	color: #9bbfd9;
+}
+
+#maker_btn {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	color: #444c57;
+}
+
+#support_content_wrap {
+	width: 100%;
+	height: 1100px;
+}
+
+#profile_wrap {
+	background-color: white;
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+
+#section_content {
+	background-color: white;
+	float: right;
+	width: 75%;
+	height: 100%;
+}
+
+#profile_image_wrap {
+	width: 120px;
+	margin: 0 auto;
+	padding-top: 80px;
+	padding-bottom: 15px;
+}
+
+#profile_img {
+	border-radius: 120px;
+	width: 120px;
+	height: 120px;
+}
+
+#member_name {
+	margin: 10px 0;
+	text-align: center;
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+#member_state {
+	text-align: center;
+	font-family: SUIT-Light;
+	font-size: 13px;
+	margin-bottom: 70px;
+	color: #ccc;
+}
+
+#profile_setting {
+	margin: 0 auto;
+	width: 190px;
+	height: 40px;
+}
+
+#kakao_token, #naver_token {
+	position: relative;
+	margin: 10px auto;
+	width: 150px;
+	height: 23px;
+}
+
+#state {
+	position: absolute;
+	top: 3px;
+	left: 28px;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+}
+
+#logout_btn {
+	width: 186px;
+	height: 100%;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-family: SUIT-Regular;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: white;
+	cursor: pointer;
+}
+
+#profile_btn_wrap {
+	position: relative;
+	margin-top: 30px;
+	font-family: SUIT-Regular;
+	font-size: 16px;
+	font-weight: bold;
+	height: 35px;
+	line-height: 35px;
+}
+
+#chevron-right {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#funding_record {
+	box-sizing: border-box;
+	width: 730px;
+	margin-top: 80px;
+	margin-left: 80px;
+	margin-bottom: 30px;
+	font-family: SUIT-Regular;
+	font-size: 18px;
+	font-weight: normal;
+	color: #444c57;
+}
+
+#recent_application {
+	position: relative;
+}
+
+#total {
+	position: absolute;
+	right: 0;
+}
+
+#applied_product_wrap {
+	border: 1px solid #ccc;
+	border-radius: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 80px;
+	width: 730px;
+	height: 310px;
+}
+
+.prod_flex {
+	border-radius: 5px;
+	width: 200px;
+	height: 150px;
+	margin: 20px;
+}
+
+.prod_img {
+	width: 100%;
+	height: 150px;
+}
+
+.prod_info_wrap {
+	height: 110px;
+	padding: 10px;
+	line-height: 1.2em;
+}
+
+.prod_name {
+	width: 100%;
+	height: 60px;
+	font-family: SUIT-Regular;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.prod_maker_wrap {
+	padding-top: 10px;
+	height: 50px;
+	color: #444c57;
+	font-family: SUIT-Regular;
+	font-size: 13px;
+}
+
+#empty_content {
+	font-family: SUIT-Regular;
+	font-size: 17px;
+	font-weight: 300;
+	margin: 0 auto;
+	padding-top: 130px;
+}
+
+#maker_section {
+	display: none;
+}
+
+#enrolled_funding {
+	width: 730px;
+	height: 30px;
+	margin-top: 80px;
+	margin-left: 80px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #444c57;
+}
+
+#enrolled_funding_title {
+	border-bottom: 1px solid #ccc;
+	height: 30px;
+	font-family: SUIT-Regular;
+}
+
+#title_subcation {
+	position: relative;
+	margin-top: 20px;
+	font-family: SUIT-Regular;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#enroll_product_wrap {
+	border-radius: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 80px;
+	width: 730px;
+	height: 370px;
+}
+
+#maker_guide {
+	margin: 150px auto;
+	padding-right: 10px;
+	height: 70px;
+	font-family: SUIT-Regular;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.8em;
+	text-align: center;
+}
+
+#enroll_wrap {
+	padding-left: 80px;
+}
+
+#fundingEnroll_btn {
+	width: 730px;
+	height: 48px;
+	background-color: #9bbfd9;
+	border: 1px solid #9bbfd9;
+	border-radius: 3px;
+	font-family: SUIT-Regular;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+
+#fundingEnroll_btn:hover {
+	font-weight: bold;
+	font-size: 19px;
+	color: black;
+}
+
+#my_activity_wrap {
+	margin: 80px;
+	padding-top: 50px;
+	height: 150px;
+}
+
+#my_activity_title {
+	font-family: SUIT-Regular;
+	font-size: 20px;
+	font-weight: bold;
+	color: #444c57;
+}
+
+#my_activity_content {
+	border-bottom: 1px solid #ccc;
+	margin-top: 30px;
+	width: 750px;
+	height: 40px;
+}
+
+#my_activity_content>li {
+	display: inline-block;
+	position: relative;
+}
+
+#my_activity_content>li>a {
+	display: inline-block;
+	font-family: SUIT-Regular;
+	font-size: 18px;
+	font-weight: 400;
+	color: #444c57;
+	width: 370px;
+	height: 30px;
+}
+
+.chevron {
+	position: absolute;
+	right: 0;
+}
+
+#support_tip_wrap {
+	margin: 80px;
+	height: 80px;
+}
+
+#support_tip_title {
+	font-family: SUIT-Regular;
+	font-size: 20px;
+	font-weight: bold;
+	color: #444c57;
+}
+
+#support_tip_content {
+	border-bottom: 1px solid #ccc;
+	margin-top: 30px;
+	width: 750px;
+	height: 40px;
+}
+
+#support_tip_content>li {
+	display: inline-block;
+	position: relative;
+}
+
+#support_tip_content>li>a {
+	display: inline-block;
+	font-family: SUIT-Regular;
+	font-size: 18px;
+	font-weight: 400;
+	color: #444c57;
+	width: 370px;
+	height: 30px;
+	line-height: 30px;
+}

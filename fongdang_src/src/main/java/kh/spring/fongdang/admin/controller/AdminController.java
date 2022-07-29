@@ -159,7 +159,7 @@ public class AdminController {
 		}
 		
 		for(int i=0; i<emails.length; i++) {
-			System.out.println("email:\t" + emails[i]);
+			System.out.println("jsp에서 선택한 email:\t" + emails[i]);
 		}		
 		
 		result = service.updateWithDrawMember(emails);
