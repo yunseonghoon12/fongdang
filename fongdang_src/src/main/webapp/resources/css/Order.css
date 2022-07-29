@@ -120,7 +120,7 @@
             display:block; clear:both; content:"";
         }
         .agree .all_agree input[type="checkbox"]:checked + label {
-            background:url(../image/check.png) #d6ecf5 no-repeat center/20px 20px; float: left;display: inline-block;
+            background:url(../images/check.png) #d6ecf5 no-repeat center/20px 20px; float: left;display: inline-block;
         }
         .agree {
             position:relative;

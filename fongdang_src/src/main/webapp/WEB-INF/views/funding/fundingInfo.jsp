@@ -158,7 +158,7 @@
                         <div class="support">
                             <span style="font-size: 16px; font-family: SUIT-Regular;">서포터 ${funding.supporter}명</span>
                         </div>
-                        <button id="btn_funding" type="button"><img src="<%=request.getContextPath()%>/resources/images/funding.png">펀딩하기</button>
+                        <button id="btn_funding" type="button" onclick="location.href='<%=request.getContextPath()%>/order/option/${p_no}'"><img src="<%=request.getContextPath()%>/resources/images/funding.png">펀딩하기</button>
                         <div class="like_and_share">
                             
                             <!-- sun start -->

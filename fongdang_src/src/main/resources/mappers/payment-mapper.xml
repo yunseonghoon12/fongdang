@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="Payment">
+	<insert id="insertPayment" parameterType="Payment">
+		INSERT
+			INTO
+			"PAYMENT"
+				(pay_method,
+				merchant_uid,
+				amount,
+				buyer_tel,
+				buyer_addr
+				)
+		values(
+				 #{pay_method}
+				 ,#{merchant_uid}
+				 ,#{amount}
+				,#{EMAIL}
+				,#{buyer_tel}
+				,#{buyer_addr}
+				)
+	</insert>
+	</mapper>

@@ -2,12 +2,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
   <script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -366,14 +367,10 @@
 </head>
 <body>
     <div class="container">
-        <header style="width:100%;height:100px;background:aqua;">
-            <div style="width:100%;height:100px;text-align: center;">
-                <h1 style="padding:30px 0 ;margin:auto;font-size:25px;width:150px;">header입니다</h1>
-            </div>
-        </header>
+        <jsp:include page="../header.jsp"/>
         <div class="somenail">
             <dl>
-                <dt>${p_name}</dt>
+                <dt><%--${p_name} --%></dt>
             </dl>
         </div>
         <div class="wrap">
@@ -399,11 +396,11 @@
                         </div>
                         <div class="option">
                            <div class="options">
-                            <p class="p_name">${p_name}</p>
-                            <p class="option_name">${option name}</p>
+                            <p class="p_name"></p>
+                            <p class="option_name"></p>
                             <p class="option_s">수량:</p>
-                            <p class="option_sum">${amount}</p>
-                            <p class="option_sum">${total_price}</p>
+                            <p class="option_sum"></p>
+                            <p class="option_sum"></p>
                             </div>
                           
                            <div style="padding-right:20px;border-bottom:1px solid rgb(212, 212, 212);height:60px;margin-top:40px;">
@@ -448,10 +445,10 @@
                                     <div class="address_input_1_box" style="float:left;">
                                         <input class="support_input" name="supporter1"style="width:300px;">
                                     </div>
-                                    <input type="hidden" name="amount" value="${amount}">
-                                    <input type="hidden" name="order_no" value="${order_no}">
-                                    <input type="hidden" name="p_no" value="${p_no}">
-                                    <input type="hidden" name="total_price" value="${total_price}">
+                                    <input type="hidden" name="amount" value="">
+                                    <input type="hidden" name="order_no" value="">
+                                    <input type="hidden" name="p_no" value="">
+                                    <input type="hidden" name="total_price" value="">
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">휴대폰 번호</p></div>
@@ -463,7 +460,7 @@
                                 <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">이메일</p></div>
                                 <div class="address_input_3_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;margin-bottom:10px;">
                                     <div class="address_input_3_box">
-                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:300px;" value="${email}">
+                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:300px;" value="}">
                                     </div>
                                 </div>
                             </div>
@@ -471,12 +468,12 @@
                     </div>
                     <div class="total_wrap">
                         <div class="price_wrap">
-                            <p>${p_name}에 ${total price} 원을 펀딩합니다.</p>
+                            <p>에 원을 펀딩합니다.</p>
                         </div>
                         <div class="button_wrap">
                             <button type="submit" id="button_next" data-toggle="modal" data-target="#exampleModalCenter">
-                                next step
-                            </button>
+                                결제하기                            
+</button>
                         </div>
                         <div style="width:100%;height:10px;margin-bottom:200px;display:block;">
                             <div>
@@ -490,52 +487,7 @@
     
       
       <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <form action="" method="POST">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">주문 정보 확인</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <p>
-                            상품명: ${p_name}
-                        </p>
-                        <p>
-                            옵션명: ${option_name}
-                        </p>
-                        <p>
-                            수량: ${amount}
-                        </p>
-                        <p class="p_no" style="display:none">
-                            ${p_no}
-                        </p>
-                        <p class="p_no" style="display:none">
-                            ${option_no}
-                        </p>
-                        <p style="display:none">
-                            ${email}
-                        </p>
-                    </div>
-                    <div style="border-top:1px solid rgb(221, 221, 221);border-bottom:1px solid rgb(221, 221, 221)">
-                        <p style="margin-top:15px;">
-                            총 결제금액: <input type="text" name="total_sum" readonly="readonly" value="">
-                        </p>
-                    </div>
-                    
-                </div>
-                <div class="modalFooter">
-                    <button type="submit" class="btn5">결제 페이지로</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 <footer style="height:100px;">
     
 </footer>
@@ -589,30 +541,87 @@
     }).open();
 }
 </script>
+ <script>
+    function pay() {
+        var IMP = window.IMP; // 생략가능
+        IMP.init('imp04215728'); 
+        // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
+        // i'mport 관리자 페이지 -> 내정보 -> 가맹점식별코드
+        IMP.request_pay({
+            pg: 'html5_inicis', // version 1.1.0부터 지원.
+            /* 
+                'kakao':카카오페이, 
+                html5_inicis':이니시스(웹표준결제)
+                    'nice':나이스페이
+                    'jtnet':제이티넷
+                    'uplus':LG유플러스
+                    'danal':다날
+                    'payco':페이코
+                    'syrup':시럽페이
+                    'paypal':페이팔
+                */
+            pay_method: 'card',
+            /* 
+                'samsung':삼성페이, 
+                'card':신용카드, 
+                'trans':실시간계좌이체,
+                'vbank':가상계좌,
+                'phone':휴대폰소액결제 
+            */
+            merchant_uid: 'merchant_' + new Date().getTime(),
+            /* 
+                merchant_uid에 경우 
+                https://docs.iamport.kr/implementation/payment
+                위에 url에 따라가시면 넣을 수 있는 방법이 있습니다.
+                참고하세요. 
+                나중에 포스팅 해볼게요.
+             */
+            name: '주문명:결제테스트',
+            //결제창에서 보여질 이름
+            amount: 1000, 
+            //가격 
+            buyer_tel: '010-1234-5678',
+            buyer_addr: '서울특별시 강남구 삼성동',
+      
+            /*  
+                모바일 결제시,
+                결제가 끝나고 랜딩되는 URL을 지정 
+                (카카오페이, 페이코, 다날의 경우는 필요없음. PC와 마찬가지로 callback함수로 결과가 떨어짐) 
+                */
+        }, function (rsp) {
+            console.log(rsp);
+            if (rsp.success) {
+                var msg = '결제가 완료되었습니다.';
+                msg += '고유ID : ' + rsp.imp_uid;
+                msg += '상점 거래ID : ' + rsp.merchant_uid;
+                msg += '결제 금액 : ' + rsp.paid_amount;
+                msg += '카드 승인번호 : ' + rsp.apply_num;
+                
+            } else {
+                var msg = '결제에 실패하였습니다.';
+                msg += '에러내용 : ' + rsp.error_msg;
+            }
+            alert(msg);
+        });
+    };
+ 
+    
+    
+</script>
 <script>
-	function priceAmount(){
-		var price = $("input[name='total_price']").val(),
-		var amount = $("input[name='amount']").val(),
-		var total_sum = price * amount +3000;
-		return total_sum;
-	}
-	$(function(){
-		$("input[name='total_sum']".val() = priceAmount());
-	})
     function payment(){
         const data={
-        	pay_no : createPayNo(),
-            order_no : $("input[name='order_no']").val(),
-            p_no : $("input[name='p_no']").val(),
-            amount : $("input[name='total_sum']").val(),
-            email : $("input[name='supporter3']").val(),
-            order_name : $("input[name='supporter1']").val(),
-            order_phone : $("supporter2").val(),
-            order_address1 : $("input[name='memberaddr1']").val(),
-            order_address2 : $("input[name='memberaddr2']").val(),
-            order_address3 : $("input[name='memberaddr3']").val(),
-            totalSum :  $("input[name='total_sum']").val(),
-            payment_method : 'card'
+            payMethod : 'card',
+            orderNum : createOrderNum(),
+            name : $("").eq(0).find("").text(),
+            amount : Number($("").val()) - Number($("").val()),
+            phone : $("").val(),
+            request : $("").val(),
+            deleveryAddress1 : $(""),
+            deleveryAddress2 : $(""),
+            deleveryAddress3 : $(""),
+            deleveryAddress : $("").val(),
+            totalPrice : $("").val()
         }
         if(!data.deleeveryAddress){
             swal("배송지를 입력해주세요");
@@ -625,17 +634,17 @@
         paymentCard(data)
     }
     // 주문번호 만들기
-    function createPayNo(){
+    function createOrderNum(){
         const date = new Date();
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, "0");
         const day = String(date.getDate()).padStart(2, "0");
         
-        let pay_no = year + month + day;
+        let orderNum = year + month + day;
         for(let i=0;i<10;i++) {
-            pay_no += Math.floor(Math.random() * 8);	
+            orderNum += Math.floor(Math.random() * 8);	
         }
-        return pay_no;
+        return orderNum;
     }
 
         
@@ -644,37 +653,35 @@
             
             IMP.init('imp04215728');
             IMP.request_pay({
-                pg : 'html5_inicis,
+                pg : 'kcp',
                 pay_method : 'card',
-                merchant_uid : data.pay_no,
-                name : data.order_name , //결제창에서 보여질 이름
+                merchant_uid : data.orderNum,
+                name : data.name , //결제창에서 보여질 이름
                 amount : data.amount, //실제 결제되는 가격
-                buyer_email : data.email,
-                buyer_name : data.order_name,
-                buyer_tel : data.order_phone,
-                buyer_addr : data.order_address1 + " " + data.order_address2 + " " + data.order_addrress3, 
-                buyer_postcode : data.order_address1,
+                buyer_email : $("."),
+                buyer_name : $("."),
+                buyer_tel : data.phone,
+                buyer_addr : data.deleeveryAddress1 + data.deleeveryAddress2 + data.deleeveryAddress3,
+                buyer_postcode : data.deleeveryAddress1,
             }, function(rsp) {
                 console.log(rsp);
                 if ( rsp.success ) {
                     var msg = '결제가 완료되었습니다.';
-                    msg += '고유ID : ' + rsp.imp_uid;
-                    msg += '상점 거래ID : ' + rsp.merchant_uid;
-                    msg += '결제 금액 : ' + rsp.paid_amount;
-                    msg += '카드 승인번호 : ' + rsp.apply_num;
+                    data.impUid = rsp.imp_uid;
+                    data.merchant_uid = rsp.merchant_uid;
                     paymentComplete(data);
                 } else {
                     var msg = '결제에 실패하였습니다.';
                     msg += '에러내용 : ' + rsp.error_msg;
                 }
-                alert(msg);
+                
             });
 	}
 
     function paymentComplete(data){
 
         $.ajax({
-            url: "<%=request.getContextPath()%>/pay/insert",
+            url: "/order/option",
             method: "POST",
             data: data,
         })
@@ -685,16 +692,14 @@
                 closeOnClickOutside :false
             })
             .then(function(){
-                location.replace("/pay");
+                location.replace("/orderList");
             })
         })
         .fail(function(){
             alert("에러");
             location.replace("/")
         })
-    }
-    $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+    };
+  
 </script>
 </html>
