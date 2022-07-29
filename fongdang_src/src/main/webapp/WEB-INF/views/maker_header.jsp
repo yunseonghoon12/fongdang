@@ -23,37 +23,40 @@
 				src="<%=request.getContextPath()%>/resources/images/logo.png"
 				id="logo"></a>
 			<ul class="menu" style="position: relative;">
-				<li><a href="#">펀딩예정</a></li>
+				<li><a href="<%=request.getContextPath()%>/funding/beforelist">펀딩예정</a></li>
 				<li><a href="<%=request.getContextPath()%>/funding/list">펀딩상품</a></li>
 				<li><a href="#">고객센터</a>
 					<ul class="dep2">
 						<li><a href="#">공지사항</a></li>
 						<li><a href="<%=request.getContextPath()%>/customerCenter/ask">1:1 문의</a></li>
 						<li><a href="#">이용가이드</a></li>
+						<li><a href="<%=request.getContextPath()%>/customerCenter/road">오시는길</a></li>
 					</ul></li>
 				
 				<li>
 				
-					<form action="" method="GET"
+					<form action="<%=request.getContextPath()%>/funding/list.search" method="GET"
 						style="margin-left: 344px; width: 300px;">
 						
 						<div class="mx-auto mt-5 search-bar input-group mb-3">
-							<input name="a" type="search" class="form-control rounded-pill" id="textbox"
-								placeholder="category 검색">
+							<input name="search_categroy" type="search" class="form-control rounded-pill"
+								id="header_textbox" placeholder="category 검색">
 							<div class="input-group-append"></div>
-						</div>
-							<label for="textbox"><img src="<%=request.getContextPath()%>/resources/images/magnifying.png" class="question_header"></label>
+						</div>					
+						<label for="header_textbox"><img
+							src="<%=request.getContextPath()%>/resources/images/magnifying.png"
+							class="question_header"></label>
 					</form>
 					<div class="searchR" style="right: 63px;">
 						<p style="text-align: center;">카테고리</p>
 						<hr style="margin-top: 10px;">
 						<ul>
-							<li>반려동물</li>
-							<li>캠핑</li>
-							<li>식품</li>
-							<li>테크·가전</li>
-							<li>뷰티</li>
-							<li>기타</li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC5"><p>반려동물</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC4"><p>캠핑</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC3"><p>식품</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC1"><p>테크·가전</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC2"><p>뷰티</p></a></li>
+							<li><a href="<%=request.getContextPath()%>/funding/list/cateC6"><p>기타</p></a></li>
 						</ul>
 						<hr style="margin-top: 10px;">
 						<p class="header_x"

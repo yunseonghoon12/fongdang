@@ -22,7 +22,7 @@
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
 <!--ck 5  <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> -->
-<script src="//cdn.ckeditor.com/4.19.0/full/ckeditor.js"></script>
+
 
 <script  type="text/javasctipt" src="${pageContext.request.contextPath}/ckeditor/ckeditor.js"></script>
 <script>
@@ -234,10 +234,10 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">스토리 광고 심의동의<sup>*</sup></td>
 							<td>
-								<a class="agree_a" href="">공통 표시·광고 가이드라인</a><br>
-							    <a class="agree_a" href="">식품 표시·광고 가이드라인</a><br>
-							    <a class="agree_a" href="">화장품 표시·광고 가이드라인</a><br>
-							    <a class="agree_a" href="">건강보조기구 표시·광고 가이드라인</a><br>
+								<a class="agree_a" href="https://www.notion.so/27fa609c0082479381c46154e0c8474d">공통 표시·광고 가이드라인</a><br>
+							    <a class="agree_a" href="https://www.notion.so/d53769b3bae34d3fa1e4fef4bc3a73c1">식품 표시·광고 가이드라인</a><br>
+							    <a class="agree_a" href="https://www.notion.so/c872056d693640ca9fa869c96413837d">화장품 표시·광고 가이드라인</a><br>
+							    <a class="agree_a" href="https://www.notion.so/7157dab6bcb1489aadcc12ce91370120">건강보조기구 표시·광고 가이드라인</a><br>
 							</td>
 							<td></td>
 						</tr>
@@ -279,19 +279,6 @@ $( document ).ready(function() {
 		</section>
 	</div>
 	
-
-<script>
-$(function(){
-	CKEDITOR.replace('bo_content',{
-		filebrowserUploadUrl: '${pageContext.request.contextPath}/adm/fileupload.do'
-	});
-});
-
-</script>
-
-	
-
-
 <script>
 $(document).ready(function() {  
 	var responseMessage = "${message}";        
