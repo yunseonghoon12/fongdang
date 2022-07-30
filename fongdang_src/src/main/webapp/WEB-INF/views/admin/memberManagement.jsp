@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>퐁당 - 관리자페이지</title>
+<title>관리자 - 회원 관리</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script> 	 
 </head>
 

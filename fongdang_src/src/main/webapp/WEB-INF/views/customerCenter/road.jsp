@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/font.css">
@@ -9,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>오시는길</title>
+<title>퐁당</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 * {

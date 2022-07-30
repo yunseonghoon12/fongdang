@@ -78,9 +78,8 @@
 <title>Insert title here</title>
 </head>
 <body>
- <p>아임 서포트 결제 모듈 테스트 해보기</p>
+ 	<p>아임 서포트 결제 모듈 테스트 해보기</p>
     <button id="check_module" type="button" onclick='pay()'>아임 서포트 결제 모듈 테스트 해보기</button>
-</p>
-  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
 </body>
 </html>

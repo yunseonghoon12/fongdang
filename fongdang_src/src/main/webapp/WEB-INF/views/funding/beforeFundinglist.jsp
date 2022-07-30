@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/header.css">
 <!DOCTYPE html>
 <html>
 <head>
-<title>펀딩 리스트</title>
+<title>펀딩 예정리스트</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-latest.js"></script>
