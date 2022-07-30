@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>PRODCUT</title>
+<title>상품 등록</title>
 <!-- 제이쿼리 js -->
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -20,6 +20,7 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <!--ck 5  <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> -->
 
@@ -29,7 +30,7 @@
 
 $( document ).ready(function() {
 	
-	$("#start_day").datepicker({
+	$("#start_day").datetimepicker({
 		dateFormat:'yy-mm-dd',
 		monthNamesShort:[ '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월' ],
 		dayNamesMin:[ '일', '월', '화', '수', '목', '금', '토' ],
@@ -39,7 +40,7 @@ $( document ).ready(function() {
 		showOn:"button",
 	    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
 		// timepicker 설정
-		timeFormat:'HH',
+		timeFormat:'HH:mm',
 		controlType:'select',
 		oneLine:true,
 	});
@@ -134,15 +135,16 @@ $( document ).ready(function() {
 					<table id="maker_Table">
 						<tr>
 							<td id="title"><b>펀딩상품등록</b></td>
-							<td></td>
+							<td><input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
+							    <input type="hidden" name="updateYn" id="updateYn" value="${updateYn}"/>
+							    <input type="hidden" name="p_no" id="p_no" value="${product.p_no}"/>
+							</td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">프로젝트 제목<sup>*</sup></td>
 							<td><input type="text" name="p_name" class="in_box"
-								placeholder="프로젝트 제목입력" value="${product.p_name}">
-								<input type="hidden" name="email" id="email" value="${loginInfo.email}"/>
-							</td>
+								placeholder="프로젝트 제목입력" value="${product.p_name}"></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -171,7 +173,7 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">펀딩시작일<sup>*</sup></td>
 							<td><input type="text" name="start_day" id="start_day"
-								class="in_box"  value="${product.start_day}"></td>
+								class="in_box"  value="<fmt:formatDate pattern="yyyy-MM-dd hh:mm" value="${product.start_day}"/>"></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -221,8 +223,8 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">상품 상세정보<sup>*</sup></td>
 							<td>
-								<input type="hidden" name="p_story" class="editor" value=""/>
-							 	<textarea  name="editor1"id="editor"></textarea>  
+								<input type="hidden" name="p_story" class="editor" value="${product.p_story}"/>
+							 	<textarea  name="editor1"id="editor" style="width: 100px;"></textarea>  
 								<br> <small id="small_txt">스토리 작성방법 가이드</small></td>
 							<td></td>
 						</tr>
@@ -267,7 +269,8 @@ $( document ).ready(function() {
 						<tr>
 							<td></td>
 							<td>
-							<input type="hidden" name="maker_name"  value="${maker_name}"/>
+							<input type="hidden" name="maker_name"  value="${product.maker_name}"/>
+							
 							<input type="hidden" name="update" id="update" value=""/>
 							<input type="button" class="btn2" value="저장하기" id="saveProduct" /></td>
 						
@@ -289,21 +292,37 @@ $(document).ready(function() {
 		alert('로그인 해주세요.');
 		location.href="<%=request.getContextPath()%>/member/login";
 	}
-	
+
     $("#saveProduct").click(function () {
+    	if($("#email").val() == ''){
+    		alert('로그인 해주세요.');
+    		location.href="<%=request.getContextPath()%>/member/login";
+    	}
     	
+    	var urlStr;
+    	
+    	if ($("#updateYn").val() == 'Y') {
+			urlStr ="<%=request.getContextPath()%>/product/update"; 
+		}else{
+			urlStr ="<%=request.getContextPath()%>/product/insert";
+		}
+    	// 오류 수정 밑에 줄 //Failed to convert from type [java.lang.String] to type [java.sql.Timestamp] for value '2022-08-03 14:00'; nested exception is java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]]]
+    	$("#start_day").val($("#start_day").val()+":00");
     	var form = $('#productForm')[0];
     	var formData = new FormData(form);
     	
     	$.ajax({
-            type: "post",
-            url: "<%=request.getContextPath()%>/productForm/insert",
+            type: 'POST',
+            enctype: 'multipart/form-data',
+    		processData: false,
+    		contentType: false,
+            url: urlStr,
             dataType: "text",
             data: formData,
             success: function (result) {
                 console.log("result : ", result);
                 if(result == "success"){
-                	alert("저장 성공");
+                	alert("Product저장 성공");
                 	//TODO 이동하는 페이지 쓰기 
                 }else{
                 	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	

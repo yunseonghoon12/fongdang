@@ -52,7 +52,7 @@ public class MakerController {
 		if(member != null) { // 회원이 null 아니면 
 			//메이커 등록시 등록된 메이커있는지 조회 
 			maker = makerService.selectMaker(member.getEmail().toString());			
-			mv.addObject("maker", maker);
+			
 			if (maker != null) {
 				mv.addObject("updateYn", "Y");
 				

@@ -79,18 +79,18 @@ a {
 }
 /* 메인  */
 
-section#title {
+#title{
 	border-bottom: 1px solid #ccc;
 	height: 40px;
 	font-family: SUIT-SemiBold;
 	font-size: 25px;
 	margin-top: 70px;
 }
-section.salesList-tableAll{
+.salesList-tableAll{
 	margin-top: 50px;
 }
 
-.salesList table.salesList-tableAll {
+.salesList .salesList-tableAll {
 	width: 100%;
 	width: 1000px;
 	border-top: 1px solid #444444;

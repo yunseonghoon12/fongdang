@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>maker</title>
+<title>메이커 정보 등록</title>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
@@ -241,12 +242,10 @@ $(document).ready(function() {
 	
     $("#save_maker").click(function () {
     	
-    	
     	if($("#email").val() == ''){
     		alert('로그인 해주세요.');
     		location.href="<%=request.getContextPath()%>/member/login";
     	}
-    	
     	
     	var urlStr;
     	
@@ -270,7 +269,7 @@ $(document).ready(function() {
             success: function (result) {
                 console.log("result : ", result);
                 if(result == "success"){
-                	alert("저장 성공");
+                	alert("maker저장 성공");
                 	//TODO 이동하는 페이지 쓰기 
                 }else{
                 	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	

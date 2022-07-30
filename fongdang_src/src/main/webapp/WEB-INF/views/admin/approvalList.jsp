@@ -36,7 +36,7 @@
         <div id="admin_navigationbar">
             <div id="logo_wrap">
                 <!-- TODO: 퐁당 메인 페이지 URL 작성하기 -->
-                <a href="#">
+                <a href="<%=request.getContextPath()%>/">
                     <img src="<%=request.getContextPath() %>/resources/images/logo.png" id="logo">
                 </a>
             </div>

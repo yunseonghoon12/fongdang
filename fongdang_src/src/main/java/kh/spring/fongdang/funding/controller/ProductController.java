@@ -43,12 +43,18 @@ public class ProductController {
 	@GetMapping("/view")
 	public ModelAndView insertPageProduct(ModelAndView mv,HttpSession session, HttpServletRequest req) {
 		
+		
 		Member member = (Member) session.getAttribute("loginInfo");
+	
 		Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
+		if (product != null) {
+			mv.addObject("updateYn", "Y");
+			
+		}else {
+			mv.addObject("updateYn", "N");
+		}
+		
 		mv.addObject("product", product);
-		logger.debug("##########################################");
-		logger.debug(req.getParameter("message"));
-		logger.debug("##########################################");
 		mv.addObject("message", req.getParameter("message"));
 		mv.setViewName("product/product");// jsp 화면 
 		return mv;
@@ -88,7 +94,7 @@ public class ProductController {
 	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
 	    }
 	}
-	
+	/* product 수정등록 */	
 	@PostMapping("/update")
 	public ResponseEntity<String> updateProduct(ModelAndView mv
 			, Product product			
@@ -125,3 +131,6 @@ public class ProductController {
 	}
 	
 }
+
+
+

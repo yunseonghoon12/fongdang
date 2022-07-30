@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>퐁당 - 관리자페이지</title>
+<title>관리자 - 1대1 문의 관리</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <style>
 /* header */
@@ -169,7 +169,7 @@ display: block;}
 				<li><a href="#" class="main_menu">펀딩 관리</a></li>
 				<li><a href="<%=request.getContextPath() %>/admin/approval/list" class="sub_menu">승인 요청목록</a></li>
         		<li><a href="<%=request.getContextPath() %>/admin/report/list" class="sub_menu">신고 상품목록</a></li>
-				<li><a href="#" class="sub_menu">펀딩매출관리</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/sales/list" class="sub_menu">펀딩매출관리</a></li>
 				<li><a href="#" class="main_menu">고객 센터</a></li>
 				<li><a href="#" class="sub_menu">공지사항</a></li>
 				<li><a href="<%=request.getContextPath()%>/admin/ask" class="sub_menu" style="color: #9bbfd9;">1:1문의</a></li>
