@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>salesList</title>
+<title>관리자 - 매출 관리</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script
 	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

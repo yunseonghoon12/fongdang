@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="kh.spring.fongdang.ask.domain.Ask"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/button.css">
@@ -13,7 +14,7 @@
 <head>
 
 
-<title>나의 문의내역</title>
+<title>퐁당</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 * {

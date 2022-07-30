@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>sales</title>
+<title>관리자 - 매출 상세조회</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script> 
 	
 </head>

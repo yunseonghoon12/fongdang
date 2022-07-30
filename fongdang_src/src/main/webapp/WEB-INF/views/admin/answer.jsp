@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>퐁당 - 관리자페이지</title>
+<title>관리자 - 1대1 문의 답변</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <style>
 /* header */

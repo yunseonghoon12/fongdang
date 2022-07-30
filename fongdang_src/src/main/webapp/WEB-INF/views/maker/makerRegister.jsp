@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/resources/images/investor.ico"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>maker</title>
+<title>메이커 정보 등록</title>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>

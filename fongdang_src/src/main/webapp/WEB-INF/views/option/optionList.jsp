@@ -14,7 +14,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>option</title>
+<title>옵션 등록</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <style type="text/css">
 
