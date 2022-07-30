@@ -20,6 +20,7 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <!--ck 5  <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> -->
 
@@ -29,7 +30,7 @@
 
 $( document ).ready(function() {
 	
-	$("#start_day").datepicker({
+	$("#start_day").datetimepicker({
 		dateFormat:'yy-mm-dd',
 		monthNamesShort:[ '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월' ],
 		dayNamesMin:[ '일', '월', '화', '수', '목', '금', '토' ],
@@ -39,7 +40,7 @@ $( document ).ready(function() {
 		showOn:"button",
 	    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
 		// timepicker 설정
-		timeFormat:'HH',
+		timeFormat:'HH:mm',
 		controlType:'select',
 		oneLine:true,
 	});
@@ -171,7 +172,7 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">펀딩시작일<sup>*</sup></td>
 							<td><input type="text" name="start_day" id="start_day"
-								class="in_box"  value="${product.start_day}"></td>
+								class="in_box"  value="<fmt:formatDate pattern="yyyy-MM-dd hh:mm" value="${product.start_day}"/>"></td>
 							<td></td>
 						</tr>
 						<tr>

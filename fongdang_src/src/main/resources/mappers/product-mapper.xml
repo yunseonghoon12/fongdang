@@ -25,9 +25,25 @@
 	</insert>
 	<select id="selectOneGetMakerName" parameterType="String"
 		resultType="Product">
-		SELECT p.* FROM MAKER m , PRODUCT p
-					WHERE m.MAKER_NAME = p.MAKER_NAME
-					AND m.EMAIL = #{email}
+		SELECT 
+			p.P_NO,
+			p.MAKER_NAME,
+			p.CATEGORY_ID,
+			p.P_NAME,
+			p.P_GOAL,
+			p.P_THUMBNAIL,
+			p.P_SUMMARY,
+			p.P_STORY,
+			p.P_CERTIFICATION,
+			p.START_DAY,
+			p.END_DAY,
+			p.PAYMENT_PLAN,
+			p.DELIVERY_DATE,
+			p.P_APPROVAL,
+			p.P_REPORT_CNT
+		FROM MAKER m , PRODUCT p
+		WHERE m.MAKER_NAME = p.MAKER_NAME
+		AND m.EMAIL = #{email}
 	</select>
 	<update id="updateProduct" parameterType="Product">
 		UPDATE PRODUCT SET
