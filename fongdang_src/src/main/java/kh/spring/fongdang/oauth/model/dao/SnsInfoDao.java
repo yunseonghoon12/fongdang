@@ -15,4 +15,8 @@ public class SnsInfoDao {
 		return sqlSession.insert("Oauth.insertSnsUser", userInfo);
 	}
 
+	public SnsInfo selectSnsUser(String sns_email) {
+		return sqlSession.selectOne("Oauth.selectSnsUser", sns_email);
+	}
+
 }

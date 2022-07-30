@@ -14,4 +14,8 @@ public class SnsInfoServiceImpl implements SnsInfoService{
 	public int insertSnsUser(SnsInfo userInfo) {
 		return dao.insertSnsUser(userInfo);
 	};
+	
+	public SnsInfo selectSnsUser(String sns_email) {
+		return dao.selectSnsUser(sns_email);
+	}
 }

@@ -33,5 +33,7 @@
 		</if>
 	</insert>
 	
-	
+	<select id="selectSnsUser" parameterType="string" resultType="Oauth">
+		select * from sns_info where sns_email = #{sns_email}
+	</select>
 </mapper>

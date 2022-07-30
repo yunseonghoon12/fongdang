@@ -130,6 +130,7 @@
     
     $("#submit_btn").click(function() {
     	var val = $("#email").val();
+    	// 이메일 유효성 체크
     	var emailValidity = emailValidate(val);    	
     	
     	if(emailValidity == false) {
@@ -141,8 +142,7 @@
         		data: {
     	    		email: $("#email").val()
         		},
-        		success: function(result) {
-        			console.log(result);    			    			
+        		success: function(result) {		    			
         			var email = result.email;
         			
         			if(email == null) {
@@ -150,7 +150,6 @@
         				var email = $("#email").val();
         				var html = '는 퐁당에 등록되지 않은 이메일입니다.';
         				var onclick_val = "location.href='"+ "<%=request.getContextPath()%>/member/register'";
-        				console.log(onclick_val);
 
         				$("#result_email").html(email);
         				$("#comment").html(html);
@@ -182,19 +181,24 @@
         	});	
     	}
     });
+    
     $("#send_link").click(function() {
 		console.log("#send_link click()");
 		var email_val = $("#pwd_email").val();
     	var emailValidity = emailValidate(email_val);
-    	social_chk = socialCheck(email_val);
-    	
-    	/* console.log("email: " + email_val);    	
-    	console.log("social_chk: " + social_chk); */
+    	member_chk = memberCheckHandler(email_val);
     	    	
     	if(emailValidity == false) { // 이메일 유효성 확인
     		return ;
-    	} else if(social_chk == false) { // 소셜 계정의 유저인지 확인 
-    		alert("입력하신 이메일은 소셜로 가입한 계정입니다. 가입때 사용한 소셜계정으로 로그인해주세요.");
+    	} else if(member_chk != 0) { // 기존 회원 유저인지 확인 
+    		switch(member_chk) {
+    			case 1:
+    				alert("입력하신 이메일은 소셜로 가입한 계정입니다. 가입때 사용한 소셜계정으로 로그인해주세요.");
+    				break;
+    			case -1:
+    				alert("입력하신 이메일이 존재하지 않습니다. 회원가입을 진행해주세요.");
+    				break;
+    		}    		
    		 	return;
    	 	} else { 
     		alert("인증번호가 전송되었습니다.");
@@ -204,10 +208,8 @@
         		data : {        			
         			email: $("#pwd_email").val()
         		},
-        		success : function(authNumber) {
-        			// * 실제 사용시에는 console.log 띄우지 말기
-					/* console.log("인증번호: " + authNumber); */						
-        			var authNumber = authNumber;
+        		success : function(authNumber) {        			
+        			var authNumber = authNumber; // 난수로 생성한 인증번호
         			var html = "";
 					$("#pwd_vision").hide();
 					$("#auth_vision").show();
@@ -226,9 +228,6 @@
 					
 					$("#auth_vision").html(html);
 					$("#auth_chk").click(function() {
-						/* console.log("입력한 인증번호: " + $("#auth_number").val()); */
-						/* console.log("인증번호:  " + authNumber); */
-						console.log("email_val: " + email_val);
 						var emailValue = email_val;
 						var input_num = $("#auth_number").val();
 						
@@ -240,9 +239,6 @@
 									email : email_val
 								},
 								success: function(result) {
-									console.log("[컨트롤러에서 가져온값]");
-									/* console.log(result);
-									console.log("비밀번호: " + result.password); */
 									
 									if(result.email == null) {
 										alert("회원이 존재하지 않습니다.");
@@ -268,7 +264,6 @@
 										
 										$("#login_btn").removeAttr("onclick");
 				        				$("#login_btn").attr("onclick", onclick_val);
-										/* console.log($("#result_content").html()); */	
 									}
 									
 								}, 
@@ -312,32 +307,37 @@
     	} 
     }
     
-    function socialCheck(email_val) {    	
-    	var flag;
+    function memberCheckHandler(email_val) { 
+    	var chk_result;
     	
     	$.ajax({
-    		url: '<%=request.getContextPath()%>/member/find/password',
-    		type: 'get',
+    		url: '<%=request.getContextPath()%>/member/find/email/confirm',
+    		type: 'post',
     		data: {
     			email : email_val
     		},
     		async: false, // 동기 방식으로 설정    		
-    		success : function (data) {    			
-    			if(data.password == null) {
-    				flag = false;    				
-    				console.log("password=> null!");    	    				
-    			} else {    				
-    				console.log("password=> is not null!");    				
+    		success : function (result) {  
+    			chk_result = result;
+    		  			
+    			if(result == 1) { 
+    				// 1. 소셜회원인경우 return 1
+    				console.log("check social_member");
+    			} else if(result == 0) { 
+    				// 2. 기존회원인경우 return 0
+    				console.log("exsisting member");
+    			} else { 
+    				// 3. 가입하지 않은 회원인 경우 return -1
+    				console.log("member is not exist");
     			}
-    			
     		},
     		error : function(request, status, error) {
 				console.log(request);
 				console.log(status);
 				console.log(error);								
 			}
-    	});    	
-    	return flag;
+    	});
+    	return chk_result;
     }    
     
   </script>	

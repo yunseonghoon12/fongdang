@@ -614,20 +614,6 @@ public class MemberController {
 		session.setAttribute("loginInfo", member);			// 페이지에 보낼 회원 정보가 담긴 세션	
 				
 		return "redirect:/" ;	
-// 		요청한 로그인 정보 조회 테스트용 
-//		int result = sns_Service.insertSnsUser(sns_info);		
-//		System.out.println("\nresult =>\t" + result);
-//		
-		
-		
-//		session.setAttribute("kakaoToken", access_Token);
-//		model.addAttribute("kakaoInfo", userInfo);
-//		model.addAttribute("kakao_email", email);
-//		model.addAttribute("kakao_nickname", nickname);		
-//		 
-//		return "member/testPage";
-//		메인페이지로 이동
-//		return "redirect:/";
 	}
 	
 	@RequestMapping("/login/getNaverAuthUrl")
@@ -659,12 +645,7 @@ public class MemberController {
 				model.addAttribute("msg", msg);
 				return "member/errorPage";
 			}
-			/** 
-			apiResult json 구조		
-			{	"resultcode":"00", 
-				"message":"success", 
-				"response":{"id":"33666449","nickname":"shinn****","age":"20-29","gender":"M","email":"sh@naver.com","name":"\uc2e0\ubc94\ud638"}}		
-			**/			
+			
 			// 2. String형식인 apiResult를 json형태로 바꿈
 			JSONParser parser = new JSONParser();
 			Object obj = parser.parse(apiResult);
@@ -728,13 +709,6 @@ public class MemberController {
 			session.setAttribute("naverToken", access_token);	// 페이지에 보낼 소셜 정보가 담긴 세션
 			session.setAttribute("oauthToken", oauthToken);	 	// 소셜 계정의 정보가 담긴 세션
 			return "redirect:/";
-			
-//	 		로그인을 통한 값 확인용 			
-//			model.addAttribute("naverInfo", apiResult);
-//			model.addAttribute("naver_nickname", nickname);
-//			model.addAttribute("naver_email", email);
-//			model.addAttribute("naver_name", name);
-//			return "member/testPage";
 	    }
 
 	
@@ -796,6 +770,36 @@ public class MemberController {
 		
 		System.out.println("\n[member]\n" + member + "\n");
 		return member;
+	}
+	
+	@RequestMapping(value="/find/email/confirm", method=RequestMethod.POST)
+	@ResponseBody
+	public int isExistMember(
+			@RequestParam(value="email", required = false) String email) {
+		System.out.println("인증요청 이메일:\t" + email);		
+		Member member = null;
+		SnsInfo social_member = null;
+
+		
+		social_member = sns_Service.selectSnsUser(email);	
+		System.out.println("\n[social_member]\n" + social_member + "\n");		
+		if(social_member != null) { 
+			// 1. 소셜 회원인 경우
+			System.out.println("checked as a social member");
+			return 1;
+		}
+		
+		member = member_service.selectFindPassword(email);
+		System.out.println("\n[member]\n" + member + "\n");		
+		if(member != null) { 
+			// 2. 기존 회원 경우
+			System.out.println("checked as a existing member"); 
+			return 0;
+		} else { 
+			// 3. 가입하지 않은 회원인 경우
+			System.out.println("member is not exist");
+			return -1;
+		} 
 	}
 	
 	@RequestMapping(value="/register.do", method= RequestMethod.POST)
