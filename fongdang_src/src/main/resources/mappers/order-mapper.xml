@@ -3,14 +3,9 @@
 <mapper namespace="Order">
 	
 <insert id="insertOrder" parameterType="Order">
-	INSERT INTO "ORDER"(order_no
-	,p_no
-	,option_no
-	,email
-	,total_price
-	,amount
-	,payment_plan
-	)VALUES(select nvl(max(order_no),0)+1 from "ORDER"))
+	INSERT INTO "ORDER"
+	VALUES(
+	#{order_no}
 	,#{p_no}
 	,#{option_no}
 	,#{email}

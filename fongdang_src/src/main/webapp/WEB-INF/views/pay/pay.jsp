@@ -9,9 +9,7 @@
 <head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
   <script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
     <title>Document</title>
     <style>
         
@@ -47,36 +45,35 @@
         text-align:center
     }
     .wrap{
-        
+        width:700px;
         display: inline-block;
     }
     .wrap_container{
         text-align: center;
     }
-    .step_wrap{
+   .step_wrap{
         margin-top:20px;
-        margin-right:20px;
-        margin-left:20px;
-        width:800px;
+        margin-bottom:20px;
+        width:700px;
         height:150px;
         border-bottom:1px solid rgb(220, 220, 220);
         display: inline-block;
     }
     .step{
         background-color:rgb(235, 235, 235);
-        width:100px;
-        height:100px;
+        width:90px;
+        height:90px;
         border-radius: 50px;
         text-align: center;
         display: inline-block;
         margin-top:20px;
     }
-    .step>span{
+       .step>span{
         display: inline-block;
         width:60px;
         height:30px;
-        margin-top:41px;
-        font-size:16px;
+        margin-top:38px;
+        font-size:14px;
     }
     .wrap_container2{
         width: 100%;
@@ -87,12 +84,13 @@
     
     .option_wrap{
         width:100%;
+        padding-bottom:50px;
         position:relative;
         border-bottom: 1px solid rgb(217, 217, 217);
         
     }
     .option_top{
-        width:800px;
+        width:700px;
         height:50px;
         margin:0 auto;
         
@@ -115,26 +113,26 @@
         color:rgb(255, 255, 255);
     }
     .option{
-        width:800px;
+        width:700px;
         margin:0 auto;
         height:200px;
         margin-bottom:50px;
         
     }
     .option_map{
-        width:400px;
+        width:320px;
         margin:0 auto;
-        height:330px;
+        height:300px;
         
     }
     .option>ul{
-        width:800px;
+        width:700px;
 
     }
     .option>ul>li{
         float:left;
         border-radius: 5px;
-        width:800px;
+        width:700px;
     }
     .agree .all_agree input[type="checkbox"] {display: none;}
         .agree .all_agree input[type="checkbox"] {display: none;}
@@ -174,20 +172,20 @@
             cursor: pointer;
         }
       
-        .somenail{
+          .somenail{
             background-color: rgb(232, 208, 177);
-            height:70px;
+            height:50px;
             text-align: center;
             border: 1px solid rgb(210, 178, 136)
         }
         .somenail>dl{
-            width:800px;
+            width:700px;
             height:30px;
             text-align: center;
             margin:0 auto;
         }
         .somenail>dl>dt{
-            margin-top:20px;
+            margin-top:5px;
             display:inline-block;
             font-size: 23px;
         }
@@ -211,6 +209,11 @@
         
         
     }
+   
+    input{
+    font-size:15px;
+    padding-left:10px;
+    }
     .p_name{
         text-align: left;
         font-size: 20px;
@@ -222,7 +225,7 @@
     .option_name{
         float:left;
         margin-left:20px;
-        width:780px;
+        width:680px;
         text-align: left;
     }
 
@@ -231,7 +234,7 @@
         
     }
     .total_wrap{
-    width:800px;
+    width:700px;
     margin:0 auto;
     margin-bottom:100px;
     margin-top: 50px;
@@ -261,7 +264,7 @@
         transition: all 0.2s;
     }
     .option_info{
-        width:750px;
+        width:680px;
         text-align:left;
         position:relative;
         display:inline-block;
@@ -272,7 +275,7 @@
     }
     
     .option_limit{
-        width:750px;
+        width:650px;
         display:inline-block;
         text-align:left;
         position:relative;
@@ -366,29 +369,30 @@
 </style>
 </head>
 <body>
-    <div class="container">
-        <jsp:include page="../header.jsp"/>
+<jsp:include page="../header.jsp"/>
+   <div style="margin-top:10px;"class="container">
         <div class="somenail">
-            <dl>
-                <dt><%--${p_name} --%></dt>
+            <dl style="margin-top:15px;">
+                ${product.p_name}
+                <input type="hidden" id="ppp" value="${product.p_no }">
             </dl>
         </div>
         <div class="wrap">
-            <div class="wrap_container">
+<div class="wrap_container">
                 <div class="step_wrap">
                     <div class="step" id="step_one">
                         <span>옵션 선택</span>
                     </div>
                     <li style="width:40px;display:inline-block;border:1px dashed rgb(217, 217, 217);"></li>
                     <div class="step" id="step_two">
-                        <span>정보 확인</span>
+                        <span>결제 정보</span>
                     </div>
                     <li style="width:40px;display:inline-block;border:1px dashed rgb(217, 217, 217);"></li>
                     <div class="step" id="step_three">
                         <span>펀딩 완료</span>
                     </div>
                 </div>
-            </div>
+            </div>            
             <div class="wrap_container2">
                 
                     <div class="option_wrap">
@@ -396,54 +400,60 @@
                         </div>
                         <div class="option">
                            <div class="options">
-                            <p class="p_name"></p>
-                            <p class="option_name"></p>
+                            <p class="p_name">${product.p_name}</p>
+                            <input type="hidden" value="${product.p_name}" name="p_name">
+                            <input type="hidden" value="${product.p_no}" name="p_no">
+                            <p class="option_name">${product.option_name}</p>
+                            <input type="hidden" value="${product.option_name}" name="option_name">
                             <p class="option_s">수량:</p>
-                            <p class="option_sum"></p>
+                            <p class="option_sum">${product.amount}</p>
+                            <input type="hidden" value="${product.amount}" name="amount">
                             <p class="option_sum"></p>
                             </div>
                           
                            <div style="padding-right:20px;border-bottom:1px solid rgb(212, 212, 212);height:60px;margin-top:40px;">
-                                    <p class="option_s" style="font-weight:600;font-size:18px">리워드 합계 금액:</p>
-                                    <p class="option_sum" style="font-weight:600;font-size:20px">option_price_sum</p>
+                                    <p class="option_s" style="font-weight:600;font-size:16px">리워드 합계 금액:</p>
+                                    <p class="option_sum" style="font-weight:600;font-size:16px">${product.total_price}</p>
+                                    <input type="hidden" value="${product.total_price}" name="total_price">
                             </div>
                         </div>
-                        <div class="option_map" style="display:inline-block;">
+                        <div class="option_map" style="display:inline-block;float:left">
                             <div style="height:30px;margin:20px;">
-                                <h2 style="float:left;font-weight:600;font-size:20px;">배송 정보 입력</h2>
+                                <h2 style="float:left;font-weight:600;font-size:18px;">배송 정보 입력</h2>
                             </div>
                             <div class="address_wrap" style="">
-                                <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">주소</p></div>
-                                <div class="address_input_1_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;">
+                                <div class="address_name" style="float:left;height:20px;width:300px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;font-size:14px">주소</p></div>
+                                <div class="address_input_1_wrap" style="float:left;height:30px;width:300px;text-align: left;margin-left:20px;margin-bottom:10px;">
                                     <div class="address_input_1_box" style="float:left;">
-                                        <input class="address_input_1" name="memberaddr1" readonly="readonly" style="width:250px;">
+                                        <input class="address_input_1" name="memberaddr1" readonly="readonly" style="width:300px;height:33px;"placeholder="우편번호 검색">
                                     </div>
-                                    <div class="address_button" onclick="execution_daum_address()" style="border:1px solid rgb(224, 224, 224);height:35px;border-radius: 5px;background-color: rgb(236, 236, 236);margin-left:10px;text-align: center;padding-top:6px;">
-                                        <span style="margin: 0 auto;">주소 찾기</span>
+                                   
+                                </div>
+                                <div class="address_input_2_wrap" style="float:left;height:30px;width:300px;text-align: left;margin-left:20px;margin-bottom:10px;">
+                                    <div class="address_input_2_box">
+                                        <input class="address_input_2" name="memberaddr2" readonly="readonly" style="width:300px;height:33px;"placeholder="주소">
+                                    </div>
+                                </div>
+                                <div class="address_input_3_wrap" style="float:left;height:30px;width:300px;text-align: left;margin-left:20px;">
+                                    <div class="address_input_3_box" style="float:left;">
+                                        <input class="address_input_3" name="memberaddr3" readonly="readonly" style="width:200px;height:33px;"placeholder="상세 주소 입력( 동, 호수)">
+                                    </div>
+                                     <div class="address_button" onclick="execution_daum_address()" style=" float:right;border:1px solid rgb(224, 224, 224);height:30px;border-radius: 5px;background-color: rgb(236, 236, 236);margin-left:10px;text-align: center;padding-top:6px;display:inline-block;float:left;">
+                                        <span style="margin: 0 auto;font-size:14px	">주소 찾기</span>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="address_input_2_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;">
-                                    <div class="address_input_2_box">
-                                        <input class="address_input_2" name="memberaddr2" readonly="readonly" style="width:350px;">
-                                    </div>
-                                </div>
-                                <div class="address_input_3_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;">
-                                    <div class="address_input_3_box">
-                                        <input class="address_input_3" name="memberaddr3" readonly="readonly" style="width:350px;">
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="option_map" style="display:inline-block;padding-left:50px;">
+                        <div class="option_map" style="display:inline-block;padding-left:30px;">
                             <div style="height:30px;margin:20px;">
-                                <h2 style="float:left;font-weight:600;font-size:20px;">서포터 정보 입력</h2>
+                                <h2 style="float:left;font-weight:600;font-size:18px;">서포터 정보 입력</h2>
                             </div>
                             <div class="address_wrap" style="">
-                                <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">이름</p></div>
-                                <div class="address_input_1_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;">
+                                <div class="address_name" style="float:left;height:20px;width:280px;text-align: left;margin-left:20px;margin-bottom:10px;"><p style="display:inline-block;font-size:14px">이름</p></div>
+                                <div class="address_input_1_wrap" style="float:left;height:40px;width:280px;text-align: left;margin-right:20px;margin-left:20px; margin-bottom:10px;">
                                     <div class="address_input_1_box" style="float:left;">
-                                        <input class="support_input" name="supporter1"style="width:300px;">
+                                        <input class="support_input" name="supporter1"style="width:280px;" placeholder="이름" value="">
                                     </div>
                                     <input type="hidden" name="amount" value="">
                                     <input type="hidden" name="order_no" value="">
@@ -451,16 +461,16 @@
                                     <input type="hidden" name="total_price" value="">
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">휴대폰 번호</p></div>
-                                <div class="address_input_2_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;margin-bottom:10px;">
+                                <div class="address_name" style="float:left;height:20px;width:280px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;font-size:14px">휴대폰 번호</p></div>
+                                <div class="address_input_2_wrap" style="float:left;height:40px;width:280px;text-align: left;margin-left:20px;margin-bottom:10px;">
                                     <div class="address_input_2_box">
-                                        <input class="support_input" name="supporter2" style="width:300px;">
+                                        <input class="support_input" name="supporter2" style="width:280px;"name="cellPhone" id="cellPhone" placeholder="핸드폰번호 입력" maxlength="13">
                                     </div>
                                 </div>
-                                <div class="address_name" style="float:left;height:20px;width:400px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;">이메일</p></div>
-                                <div class="address_input_3_wrap" style="float:left;height:40px;width:400px;text-align: left;margin-left:20px;margin-bottom:10px;">
+                                <div class="address_name" style="float:left;height:20px;width:280px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;font-size:14px">이메일</p></div>
+                                <div class="address_input_3_wrap" style="float:left;height:40px;width:280px;text-align: left;margin-left:20px;margin-bottom:10px;">
                                     <div class="address_input_3_box">
-                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:300px;" value="}">
+                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:280px;" value="" placeholder="email">
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +481,7 @@
                             <p>에 원을 펀딩합니다.</p>
                         </div>
                         <div class="button_wrap">
-                            <button type="submit" id="button_next" data-toggle="modal" data-target="#exampleModalCenter">
+                            <button type="button" id="button_next" onclick="pay()">
                                 결제하기                            
 </button>
                         </div>
@@ -611,17 +621,14 @@
 <script>
     function payment(){
         const data={
-            payMethod : 'card',
-            orderNum : createOrderNum(),
-            name : $("").eq(0).find("").text(),
-            amount : Number($("").val()) - Number($("").val()),
-            phone : $("").val(),
-            request : $("").val(),
-            deleveryAddress1 : $(""),
-            deleveryAddress2 : $(""),
-            deleveryAddress3 : $(""),
-            deleveryAddress : $("").val(),
-            totalPrice : $("").val()
+            pay_no : $("input[name='order_no']").val(),
+            order_no: $("input[name='order_no']").val(),
+            p_no : $("input[name='p_no']").val(),
+            email : $("input[name='supporter3']").val(),
+            order_phone : $("input[name='supporter2']").val(),
+            order_address : $("input[name='memberaddr2']").val() + $("input[name='memberaddr3']").val(),
+            total_sum : ${product.total_price},
+            pay_method : 'card',
         }
         if(!data.deleeveryAddress){
             swal("배송지를 입력해주세요");
@@ -633,19 +640,6 @@
         }
         paymentCard(data)
     }
-    // 주문번호 만들기
-    function createOrderNum(){
-        const date = new Date();
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const day = String(date.getDate()).padStart(2, "0");
-        
-        let orderNum = year + month + day;
-        for(let i=0;i<10;i++) {
-            orderNum += Math.floor(Math.random() * 8);	
-        }
-        return orderNum;
-    }
 
         
 		//가맹점 식별코드
@@ -653,16 +647,16 @@
             
             IMP.init('imp04215728');
             IMP.request_pay({
-                pg : 'kcp',
+                pg : 'html5_inicis',
                 pay_method : 'card',
-                merchant_uid : data.orderNum,
-                name : data.name , //결제창에서 보여질 이름
-                amount : data.amount, //실제 결제되는 가격
-                buyer_email : $("."),
-                buyer_name : $("."),
+                merchant_uid : data.pay_no,
+                name : $("input[name='p_name']").val(), //결제창에서 보여질 이름
+                amount : data.total_sum, //실제 결제되는 가격
+                buyer_email : data.email,
+                buyer_name : $("input[name='supporter1']").val(),
                 buyer_tel : data.phone,
-                buyer_addr : data.deleeveryAddress1 + data.deleeveryAddress2 + data.deleeveryAddress3,
-                buyer_postcode : data.deleeveryAddress1,
+                buyer_addr : data.order_address,
+                buyer_postcode : $("input[name='memberaddr1']").val(),
             }, function(rsp) {
                 console.log(rsp);
                 if ( rsp.success ) {
@@ -681,7 +675,7 @@
     function paymentComplete(data){
 
         $.ajax({
-            url: "/order/option",
+            url: "<%=request.getContextPath()%>/pay/insert",
             method: "POST",
             data: data,
         })
@@ -692,7 +686,7 @@
                 closeOnClickOutside :false
             })
             .then(function(){
-                location.replace("/orderList");
+                location.replace("/");
             })
         })
         .fail(function(){
@@ -700,6 +694,39 @@
             location.replace("/")
         })
     };
-  
+    function autoHypenPhone(str){
+        str = str.replace(/[^0-9]/g, '');
+        var tmp = '';
+        if( str.length < 4){
+            return str;
+        }else if(str.length < 7){
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3);
+            return tmp;
+        }else if(str.length < 11){
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3, 3);
+            tmp += '-';
+            tmp += str.substr(6);
+            return tmp;
+        }else{              
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3, 4);
+            tmp += '-';
+            tmp += str.substr(7);
+            return tmp;
+        }
+        return str;
+    }
+
+var cellPhone = document.getElementById('cellPhone');
+cellPhone.onkeyup = function(event){
+    event = event || window.event;
+    var _val = this.value.trim();
+    this.value = autoHypenPhone(_val) ;
+}
 </script>
 </html>

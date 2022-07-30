@@ -329,7 +329,7 @@ margin-left:8px;
         <div class="somenail">
             <dl style="margin-top:15px;">
                 ${product.p_name}
-                <input type="hidden" id="ppp" value="${product.p_no }">
+                <input type="hidden" id="ppp" value="${product.p_no}">
             </dl>
         </div>
         <div class="wrap">
@@ -375,7 +375,9 @@ margin-left:8px;
                                                 <p class="option_info">${order.option_info}</p>
                                                 <p class="option_limit">${order.option_limit}개 남음 <input type="hidden" id="limit" name="limit" value="${order.option_limit}"></p>
                                                 <p class="option_price">${order.option_price} 원 펀딩</p>
+                                                <input type="hidden" value="${order.option_price}" name="option_price">
                                                 <input type="hidden" value="${order.option_no}" name="optionNo">
+                                                <input type="hidden" value="${order.p_no}" name="p_no">
                                             </dd>
                                         </dl>   
                                         <p class="option_sum" id="amount_wrap"><button type="button" style=" margin-left:20px;width:30px;height:20px;"onclick="fnCalCount('m',${order.option_no});">-</button><input type="text" name="pop_out" id="amount" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"class="text"value="0" readonly="readonly"style="margin-left:10px;"><button type ="button" style=" margin-left:10px;width:30px;height:20px;"onclick="fnCalCount('p',${order.option_no});">+</button></p>
@@ -470,12 +472,26 @@ $('#myModal').on('shown.bs.modal', function () {
 	})
 </script>
 <script>
+function createOrderNo(){
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    
+    let orderNum = year + month + day;
+    for(let i=0;i<5;i++) {
+        orderNum += Math.floor(Math.random() * 8);	
+    }
+    return orderNum;
+}
+
 function order(){
     const data={
-       p_no : $("#ppp").val(),
+    	order_no :createOrderNo(),
+       p_no : $("input[name='p_no']").val(),
        option_no : '3',//$("").val(),
-       total_price : '100000',//$("").val(),
-       amount : $("#amount").val(),
+       total_price : $("input[name='option_price']").val() *5,//$("#amount").val(),//$("").val(),
+       amount : '5',//$("#amount").val(),
        payment_plan :$("#plan").val()
     }
     if(!data.option_no){
@@ -499,9 +515,11 @@ function orderNext(data) {
                 if(result == 0){
                 	alert("로그인을 한 후에 주문이 가능합니다. 로그인 페이지로 이동합니다.");
 					location.href = "<%=request.getContextPath()%>/member/login";
-                }else{
+                }else if(result == -1){
+                alert("주문실패")
+                }else if(result == 1){
                 	alert("결제 페이지로 이동합니다.");
-                	
+                	pay(data.order_no);
                 }
             },
    			error : function (result) {
@@ -510,6 +528,32 @@ function orderNext(data) {
     		}
     	});
     
+};
+function pay(data){
+	$.ajax({
+		type : "post",
+		url :"<%=request.getContextPath()%>/pay/pay",
+		data : data,
+		success: function (result){
+			console.log(result);
+            if(result == 0){
+            	alert("로그인을 한 후에 주문이 가능합니다. 로그인 페이지로 이동합니다.");
+				location.href = "<%=request.getContextPath()%>/member/login";
+            }else if(result == -1){
+            	alert("에러!!!")
+        		console.log(result);
+            }else if(result == 1){
+            	alert("결제 페이지");
+        		console.log(result);
+            	
+            }
+        },
+			error : function (result) {
+				alert("에러 발생.");
+				console.log(result);
+		}
+		
+	});
 };
 </script>
 </html>

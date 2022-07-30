@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kh.spring.fongdang.funding.domain.Product;
@@ -43,7 +44,8 @@ public class OrderController {
 		mv.setViewName("order/order_option");
 		return mv;
 	}
-	@PostMapping("/insert")
+	@ResponseBody
+	@PostMapping(value = "/insert")
 	public int insertOrder(Order order,HttpServletRequest req, HttpSession session) {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null) { 
@@ -54,7 +56,7 @@ public class OrderController {
 			if(result < 1) {
 				return -1;
 			}else {
-			return order.getOrder_no();
+			return 1;
 		}
 		}
 	}	
