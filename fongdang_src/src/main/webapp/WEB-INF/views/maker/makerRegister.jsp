@@ -241,12 +241,10 @@ $(document).ready(function() {
 	
     $("#save_maker").click(function () {
     	
-    	
     	if($("#email").val() == ''){
     		alert('로그인 해주세요.');
     		location.href="<%=request.getContextPath()%>/member/login";
     	}
-    	
     	
     	var urlStr;
     	
@@ -270,7 +268,7 @@ $(document).ready(function() {
             success: function (result) {
                 console.log("result : ", result);
                 if(result == "success"){
-                	alert("저장 성공");
+                	alert("maker저장 성공");
                 	//TODO 이동하는 페이지 쓰기 
                 }else{
                 	alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");	

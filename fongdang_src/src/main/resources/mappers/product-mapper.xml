@@ -62,8 +62,8 @@
 						START_DAY = #{start_day},
 						END_DAY = #{end_day},
 						PAYMENT_PLAN = #{payment_plan},
-						DELIVERY_DATE = #{delivery_date},
+						DELIVERY_DATE = #{delivery_date}
 		           WHERE
-		                P_NO = #{p_no};
+		                P_NO = #{p_no}
 	</update>
 </mapper>
