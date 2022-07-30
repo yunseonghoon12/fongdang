@@ -438,7 +438,7 @@ ALTER TABLE "SNS_INFO" ADD CONSTRAINT FK_MEMBER_TO_SNS_INFO_1 FOREIGN KEY (
 )
 REFERENCES "MEMBER" (
 	email
-)ON DELETE CASCADE;
+) ON DELETE CASCADE;
 
 -- 서포터 수와, 누적 펀딩액을 알기 위한 view 생성
 CREATE OR REPLACE VIEW view_funding_supporter_money 
