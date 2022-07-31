@@ -486,7 +486,7 @@ function createOrderNo(){
     return orderNum;
 }
 const data={
-    	order_no :'125423322',//createOrderNo(),
+    	order_no :createOrderNo(),
        p_no : $("input[name='p_no']").val(),
        option_no : '3',//$("").val(),
        total_price : $("input[name='option_price']").val() *5,//$("#amount").val(),//$("").val(),

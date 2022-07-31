@@ -6,17 +6,17 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Order {
-	private int order_no;
+	private long order_no;
 	private int p_no;
 	private int option_no;
 	private int amount;
 	private String payment_plan;
 	private int total_price;
 	private String email;
-	public int getOrder_no() {
+	public long getOrder_no() {
 		return order_no;
 	}
-	public void setOrder_no(int order_no) {
+	public void setOrder_no(long order_no) {
 		this.order_no = order_no;
 	}
 	public int getP_no() {

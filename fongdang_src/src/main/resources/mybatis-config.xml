@@ -14,6 +14,7 @@
 		<typeAlias type="kh.spring.fongdang.funding.domain.Funding" alias="Funding"/>
 		<typeAlias type="kh.spring.fongdang.review.domain.Review" alias="Review"/>
 		<typeAlias type="kh.spring.fongdang.option.domain.Option" alias="Option"/>
+		<typeAlias type="kh.spring.fongdang.notice.domain.Notice" alias="Notice"/>
 		<typeAlias type="kh.spring.fongdang.order.domain.Order" alias="Order"/>
 		<typeAlias type="kh.spring.fongdang.pay.domain.Pay" alias="Pay"/>
 		<typeAlias type="kh.spring.fongdang.pay.domain.Payment" alias="Payment"/>
@@ -36,6 +37,7 @@
 		<mapper resource="mappers/funding-mapper.xml"/>
 		<mapper resource="mappers/review-mapper.xml"/>
 		<mapper resource="mappers/option-mapper.xml"/>
+		<mapper resource="mappers/notice-mapper.xml"/>
 		<mapper resource="mappers/order-mapper.xml"/>
 		<mapper resource="mappers/pay-mapper.xml"/>
 		<mapper resource="mappers/payment-mapper.xml"/>

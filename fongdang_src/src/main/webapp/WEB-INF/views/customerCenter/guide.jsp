@@ -17,7 +17,7 @@
 }
 h1{
 	font-size:40px;
-	margin-top:50px;
+	margin-top:80px;
 
 }
 h3{
