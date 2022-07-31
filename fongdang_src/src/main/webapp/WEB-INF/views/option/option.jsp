@@ -10,6 +10,7 @@
 	href="<%=request.getContextPath()%>/resources/css/makerRegister.css">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
 				class="ulWrap">
 				<div id="nav_fundingmeber">
 
-					<p id="member_name">${loginInfo.name}님</p>
+					<b id="member_name">${loginInfo.name}님</b>
 				</div>
 				<ul>
 					<li><a href="<%=request.getContextPath()%>/maker/view">
@@ -49,15 +50,19 @@
 
 					<table id="maker_Table">
 						<tr>
-							<td id="title"><b>옵션등록</b> <br>
-							<small id="small_txt">최대 5개까지 설정가능합니다.</small></td>
-							<td></td>
+							<td id="title"><b>옵션등록</b><br>
+							<input type="hidden" name="p_no" id="p_no" value="${p_no}" /> 
+							<input type="hidden" name="option_no" id="option_no" value="${option.option_no}"/>
+							<input type="hidden" name="updateYn" id="updateYn" value="${updateYn}"/>
+							</td>
+							<td><small id="small_txt">최대 5개까지 설정가능합니다.</small></td>
 							<td></td>
 						</tr>
 						<tr>
 							<td id="title">옵션명<sup>*</sup></td>
 							<td><input type="text" name="option_name" class="in_box"
-								placeholder="" value="${option.option_name}"></td>
+								placeholder="" value="${option.option_name}">
+							</td>
 							<td></td>
 						</tr>
 						<tr>
@@ -81,11 +86,15 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="hidden" name="p_no" id="p_no"
-								value="${p_no}" /> <input type="hidden" name="update"
-								id="update" value="" /> <input type="button" class="btn2"
-								value="저장하기" id="save" /></td>
-							<td></td>
+							<td>
+								<input type="button" class="btn5" value="저장하기" id="save" />
+								<c:if test="${updateYn eq 'Y'}">
+								<input type="button" class="btn5" value="삭제하기" id="delete" />
+							    </c:if>
+							</td>
+							<td>
+							
+							</td>
 						</tr>
 					</table>
 				</form>
@@ -102,19 +111,23 @@ $(document).ready(function() {
 		location.href="<%=request.getContextPath()%>/product/view";
 	}
 	
+	
+	
     $("#save").click(function () {
+    	if($("#option_no").val() == ''){
+    		$("#option_no").val(0);
+    	}
     	const formData = $("form[name=optionForm]").serialize();
     	$.ajax({
             type: "post",
-            url: "<%=request.getContextPath()%>
-	/option/insert",
+            url: "<%=request.getContextPath()%>/option/insert",
 				dataType : "text",
 				data : formData,
 				success : function(result) {
 					console.log("result : ", result);
 					if (result == "success") {
-						alert("저장 성공");
-						//TODO 이동하는 페이지 쓰기 
+						alert("옵션이 저장되었습니다.");
+						location.href="<%=request.getContextPath()%>/option/viewList";
 					} else if (result == "fail") {
 						alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");
 					} else if (result == "over") {
@@ -125,8 +138,32 @@ $(document).ready(function() {
 					alert("저장에 실패했습니다 \n 관리자에게 문의해주세요.");
 					console.log("result : ", result);
 				}
-			});
 		});
 	});
+	
+	
+	$("#delete").click(function () {
+		const formData = $("form[name=optionForm]").serialize();
+		$.ajax({
+	        type: "post",
+	        url: "<%=request.getContextPath()%>/option/delete",
+				dataType : "text",
+				data : formData,
+				success : function(result) {
+					console.log("result : ", result);
+					if (result == "success") {
+						alert("옵션이 삭제되었습니다. ");
+						location.href="<%=request.getContextPath()%>/option/viewList";
+					} else if (result == "fail") {
+						alert("삭제에 실패했습니다 \n 관리자에게 문의해주세요.");
+					} 
+				},
+				error : function(result) {
+					alert("삭제에 실패했습니다 \n 관리자에게 문의해주세요.");
+					console.log("result : ", result);
+				}
+			});
+	});
+});
 </script>
 </html>

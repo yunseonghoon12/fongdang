@@ -1,5 +1,7 @@
 package kh.spring.fongdang.funding.controller;
 
+import java.util.Objects;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -21,6 +23,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import kh.spring.fongdang.common.FileUpload;
 import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.funding.model.service.ProductService;
+import kh.spring.fongdang.maker.domain.Maker;
+import kh.spring.fongdang.maker.model.service.MakerService;
 import kh.spring.fongdang.member.domain.Member;
 
 
@@ -39,13 +43,24 @@ public class ProductController {
 	@Resource(name="fileUpload")
 	private FileUpload fileUpload;
 	
+	@Autowired
+	private MakerService makerService;
+	
 	//펀딩상품 page 이동 	
 	@GetMapping("/view")
 	public ModelAndView insertPageProduct(ModelAndView mv,HttpSession session, HttpServletRequest req) {
 		
-		
+		Maker maker = new Maker();
 		Member member = (Member) session.getAttribute("loginInfo");
-	
+		maker = makerService.selectMaker(member.getEmail().toString());	
+
+		if (Objects.isNull(maker)) {
+			mv.addObject("message", "메이커를 등록해주세요.");
+			mv.setViewName("redirect:../maker/view");// jsp 화면
+			return mv;
+		}
+		
+		
 		Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
 		if (product != null) {
 			mv.addObject("updateYn", "Y");

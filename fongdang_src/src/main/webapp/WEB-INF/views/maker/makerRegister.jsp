@@ -18,6 +18,7 @@
     
     //다음 카카오 주소찾기 (src="http://dmaps.daum.net/map_js_init/postcode.v2.js) 같이 추가
 $(document).ready(function() {    
+	
     $("#postcode_button").click(function () {
         new daum.Postcode({
             oncomplete : function(data) {
@@ -112,20 +113,18 @@ $(document).ready(function() {
 	    if($(this).val()=="${maker.maker_category}"){
 	    	$(this).attr("selected","selected"); // attr적용안될경우 prop으로 
 	    }
-	});
-	
-
+	});	
 	
 });  
 </script> 
 </head>
 <body>
-<jsp:include page="../maker_header.jsp"/>
+   <jsp:include page="../maker_header.jsp"/>
 <div id="section_page"> 
-  <nav id="nav_funding"  >
+  <nav id="nav_funding">
     <div style="border-right: 1px solid #ccc; height:100%" class="ulWrap">
 	    <div id="nav_fundingmeber">
-	         <p id="member_name">${loginInfo.name} 님</p> 
+	         <b id="member_name">${loginInfo.name}님</b> 
 	     </div>
 	     <ul> 
 	        <li><a href="<%=request.getContextPath()%>/maker/view"> 메이커 정보 </a></li>
@@ -136,7 +135,6 @@ $(document).ready(function() {
 		        <li><a href="#"> 결제 현황</a></li> 
 		        <li><a href="#"> 정산관리</a></li>-->
 	      </ul>
-	      
       </div>
    </nav>
 <section id="maker">    
@@ -228,25 +226,29 @@ $(document).ready(function() {
                     <td></td>
                 </tr>
             </table>
-         
         </form>
     </div>  
 </section>  
 </div> 
 <script>
 $(document).ready(function() {    
+	console.log('dddd');
+	console.log("${message}");
+	var responseMessage = "${message}";        
+	console.log(responseMessage);
+	if(responseMessage != ""){
+		alert(responseMessage);     
+	}
 	if($("#email").val() == ''){
 		alert('로그인 해주세요.');
 		location.href="<%=request.getContextPath()%>/member/login";
 	}
-	
     $("#save_maker").click(function () {
     	
     	if($("#email").val() == ''){
     		alert('로그인 해주세요.');
     		location.href="<%=request.getContextPath()%>/member/login";
     	}
-    	
     	var urlStr;
     	
     	if ($("#updateYn").val() == 'Y') {
@@ -254,7 +256,6 @@ $(document).ready(function() {
 		}else{
 			urlStr ="<%=request.getContextPath()%>/maker/insert";
 		}
-    	
     	var form = $('#makerForm')[0];
     	var formData = new FormData(form);
 

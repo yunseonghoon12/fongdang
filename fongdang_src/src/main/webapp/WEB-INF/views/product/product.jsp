@@ -111,7 +111,7 @@ $( document ).ready(function() {
 			<div style="border-right: 1px solid #ccc; height: 100%" class="ulWrap">
 				<div id="nav_fundingmeber">
 
-					<p id="member_name">${loginInfo.name}님</p>
+					<b id="member_name">${loginInfo.name}님</b>
 				</div>
 				<ul>
 					<li><a href="<%=request.getContextPath()%>/maker/view">

@@ -32,4 +32,11 @@ public class OptionServiceImpl implements OptionService {
 	public Option selectOption(Option option) {
 		return optionDao.selectOption(option);
 	}
+	@Override
+	public int deleteOption(Option option) {
+		return optionDao.deleteOption(option);
+	}
+	
+	
+
 }

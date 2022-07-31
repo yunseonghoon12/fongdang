@@ -44,7 +44,7 @@ public class MakerController {
 	
 	/* maker page 이동  */
 	@GetMapping("/view") // "maker/Register" 이렇게 이동
-	public ModelAndView insertPageMaker(ModelAndView mv, HttpSession session) {
+	public ModelAndView insertPageMaker(ModelAndView mv, HttpSession session, HttpServletRequest req) {
 		
 		Maker maker = new Maker();
 		Member member = (Member) session.getAttribute("loginInfo");
@@ -62,6 +62,7 @@ public class MakerController {
 		}
 		
 		mv.addObject("maker", maker);
+		mv.addObject("message", req.getParameter("message"));
 		mv.setViewName("maker/makerRegister"); // jsp페이지
 		return mv;
 	}

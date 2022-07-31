@@ -35,4 +35,8 @@ public class OptionDao {
 	public Option selectOption(Option option ) {
 		return sqlSession.selectOne("Option.selectOption", option);
 	}
+	
+	public int deleteOption(Option option) {
+		return sqlSession.delete("Option.deleteOption", option);
+	}
 }

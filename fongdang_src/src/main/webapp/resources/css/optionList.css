@@ -1,6 +1,170 @@
 @charset "UTF-8";
+/* body 부분  */
+#section_page{
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	font-family: SUIT-Regular;
+}
 
+#section_page {
+	z-index: 1;
+}
+/* body  목록리스트  */
+#nav_funding {
+	width: 20%;
+}
+/* body  본문 */
+#title{
+	height: 40px;
+	font-family: SUIT-SemiBold;
+	font-size: 17px;
+    
+}
 
+#optionList{
+	width: 80%;
+}
+/* 테이블  감싸는 div */
+section #optionList_all{
+	margin: 20px 0px 50px 0px;
+}
+
+/* 테이블 전체 */
+table.optionList_table{
+	
+	border-collapse: separate;
+	padding: 30px;
+	width: 100%;
+	
+	/*table-layout: fixed;*/
+}
+
+.optionList_table th,td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  } 
+
+#nav_funding li {
+	text-align: center;
+	margin: 20px 0 0;
+}
+/*  윗첨자* css */
+sup {
+color: red;
+}
+/* nav 목록글자 호버 */
+#nav_funding a:hover {
+	opacity: 0.5;
+}
+
+/* nav 목록글자 css */
+#nav_funding a{
+	text-align: center;
+	font-size: 16px;
+	line-height: 1em;
+	color: #444c57;
+	display: inline-block;
+	padding: 10px 10px;
+	margin: 0px 0 0;
+	border-radius: 3px;
+	width: 130px;
+	font-family: SUIT-Regular;
+	border-radius: 50px; 
+	border: 1px solid #ced4da;
+}
+
+/* nav 글자 설정 */
+#nav_fundingmeber {
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+/* 첨부설명 */
+#small_txt {
+	color: #495057;
+	font-size: 10px;
+	font-family: SUIT-Light;
+}
+
+/* 로그인 회원 글자 */
+#member_name {
+	text-align: center;
+	font-size: 16px;
+	color: #444c57;
+}
+
+.agree_a {
+	font-family: SUIT-Light;
+	color: #5e5e5e;
+	font-size: 12px;
+}
+#nav_funding li {
+	text-align: center;
+	margin: 20px 0 0;
+}
+/*   */
+.ulWrap {
+	position: relative;
+	top: 71px;
+}
+/* 옵션 표*/
+
+.optionList_table{
+	border-collapse: collapse;
+	text-align: center;
+	font-family: SUIT-Regular;
+	
+}
+
+.optionList-table td{
+	padding: 10px;
+}
+
+section#col_title{
+	margin-top: 50px;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    font-family: SUIT-SemiBold;
+    text-align: center;
+    font-size: 18px;
+}
+.optionList_table td {
+    font-family: SUIT-Regular;
+    font-size: 15px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    margin: 3px 0px;
+    height: 25px;
+    line-height: 25px;
+}
+/* 버튼 효과 */
+button:hover {
+	opacity: 0.5;
+}
+/* 버튼 4 css */
+.btn4 {
+	text-align: center;
+	border: none;
+	border-radius: 3px;
+	background: #9bbfd9;
+	color: white;
+	font-weight: 500;
+	font-size: 13px;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+	font-family: SUIT-Regular;
+	
+}
+
+/*  등록_ 버튼 div 위치설정*/
+section #regbtn {
+	text-align: center;
+}
+ 
 
 
 

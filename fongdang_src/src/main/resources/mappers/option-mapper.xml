@@ -57,4 +57,10 @@
 		from "OPTION"
 		 where P_NO=#{p_no}
 	</select>
+	
+	<delete id="deleteOption" parameterType="_int">
+		delete from "OPTION" 
+		where option_no=#{option_no} and P_NO=#{p_no}
+	
+	</delete>
 </mapper>

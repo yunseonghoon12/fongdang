@@ -18,4 +18,6 @@ public interface OptionService {
 	public List<Option> selectOptionList(int p_no);
 	
 	public Option selectOption(Option option);
+	/*  옵션 삭제 */
+	public int deleteOption(Option option);
 }

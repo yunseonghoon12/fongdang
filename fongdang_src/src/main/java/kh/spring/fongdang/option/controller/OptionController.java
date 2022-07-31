@@ -1,5 +1,7 @@
 package kh.spring.fongdang.option.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -28,18 +30,26 @@ public class OptionController {
 	private OptionService optionService;
 	@Autowired
 	private ProductService productService;
+	
 	/* Option page 이동*/
 	@GetMapping("/view")
 	public ModelAndView insertPageOption(ModelAndView mv, HttpSession session, HttpServletRequest req) {
 		int p_no = 0;
 		Member member = (Member) session.getAttribute("loginInfo");
 		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
+		
 		Option option = new Option();
-		option.setOption_no(Integer.parseInt(req.getParameter("option_no")));
-		option.setP_no(Integer.parseInt(req.getParameter("p_no")));
-		Option optionResult = optionService.selectOption(option);
+		if (req.getParameter("option_no") != null) {
+			option.setOption_no(Integer.parseInt(req.getParameter("option_no")));			
+			option.setP_no(Integer.parseInt(req.getParameter("p_no")));
+			Option optionResult = optionService.selectOption(option);
+			mv.addObject("option", optionResult);
+			mv.addObject("updateYn", "Y");
+		}else {
+			mv.addObject("updateYn", "N");
+		}
+		
 		mv.addObject("p_no", p_no);
-		mv.addObject("option", optionResult);
 		mv.setViewName("option/option");// jsp페이지
 		return mv;
 	}
@@ -83,16 +93,46 @@ public class OptionController {
 		Member member = (Member) session.getAttribute("loginInfo");
 		p_no = optionService.selectOneGetPNo(member.getEmail());// 조회문 
 		if (p_no == 0) {
-			Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
-			mv.addObject("product", product);
 			mv.setViewName("redirect:../product/view");// jsp 화면
 			mv.addObject("message", "상품을 등록해주세요.");
 			
 			return mv;
 		}
-		mv.addObject("optionList", optionService.selectOptionList(p_no));
-		mv.setViewName("option/optionList");// jsp페이지
+		List<Option> optionList = optionService.selectOptionList(p_no);
+		
+		if (optionList.size() > 0) {
+			mv.addObject("optionList", optionList);
+			mv.setViewName("option/optionList");// jsp페이지	
+		}else {
+			mv.setViewName("redirect:../option/view");// jsp 화면
+		}
+		
 		return mv;
+	}
+	
+	/* Option 삭제 */
+	@PostMapping("/delete")
+	public ResponseEntity<String> deleteOption(ModelAndView mv
+			, Option option
+			, HttpSession session
+			, RedirectAttributes rttr
+			, HttpServletRequest req
+			) {
+
+	
+		try {
+			String result = "";
+			//삭제구현
+			int i = optionService.deleteOption(option);
+			if (i == 1) {
+				result = "success";
+			}else {
+				result = "fail";
+			}
+	        return new ResponseEntity<>(result, HttpStatus.OK);
+	    } catch (Exception e) {
+	        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	    }
 	}
 
 }

@@ -1,6 +1,4 @@
 @charset "UTF-8";
-
-
 /* body 부분  */
 #section_page {
 	width: 1200px;
@@ -56,7 +54,6 @@ section table#maker_Table {
 	margin: 20px 0 0;
 
 }
-/*  펀딩상품 글자 */
 
 /*  윗첨자* css */
 sup {
@@ -66,7 +63,6 @@ sup {
 #nav_funding a:hover {
 	opacity: 0.5;
 }
-
 /* nav 목록글자 css */
 #nav_funding a{
 	text-align: center;
@@ -134,13 +130,7 @@ sup {
 	position: relative;
 	top: 71px;
 }
-/* 로그인 회원 글자 */
-#member_name {
-	text-align: center;
-	font-size: 16px;
-	color: #444c57;
-	
-}
+
 
 .modal {
     display: none;
@@ -227,6 +217,19 @@ section #maker_in_bnt {
 	font-size: 13px;
 	width: 100px;
 	height: 35px;
+	cursor: pointer;
+	font-family: SUIT-Regular;
+}
+/* 버튼 2 css */
+.btn5 {
+	border: none;
+	border-radius: 3px;
+	background: #9bbfd9;
+	color: white;
+	font-weight: 500;
+	font-size: 17px;
+	width: 150px;
+	height: 30px;
 	cursor: pointer;
 	font-family: SUIT-Regular;
 }
