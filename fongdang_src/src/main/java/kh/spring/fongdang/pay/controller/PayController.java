@@ -7,14 +7,17 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.funding.domain.Product;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.option.domain.Option;
+import kh.spring.fongdang.order.domain.Order;
 import kh.spring.fongdang.pay.domain.Pay;
 import kh.spring.fongdang.pay.model.service.PayService;
 
@@ -26,17 +29,36 @@ public class PayController {
 	private PayService service;
 	
 	@ResponseBody
-	@PostMapping(value ="/pay")
-	public ModelAndView selectPay(ModelAndView mv, @PathVariable("order_no") int order_no, HttpSession session) {
+	@GetMapping(value ="/payment")
+	public ModelAndView selectPay(ModelAndView mv,@RequestParam(required = false, value = "order") Order order, HttpSession session) {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null) {
 			System.out.println("비로그인");
+			
 		}
-		List<Option> option = service.selectPay(order_no);
-		mv.addObject("option",option);
+		
+		List<Option> option = service.selectPay(order);
+		List<Product> pay = service.selectProduct(order);
+		//List<Order> order = service.selectOrder(order);
+		mv.addObject("order",order);
+		mv.addObject("lol",option);
+		mv.addObject("please", pay);
 		mv.setViewName("pay/pay");
 		return mv;
 	}
+	@ResponseBody
+	@PostMapping(value = "/pay")
+	public int insertOrder(Order order,HttpServletRequest req, HttpSession session) {
+		Member loginInfo = (Member)session.getAttribute("loginInfo");
+		if(loginInfo == null) { 
+			return 0;
+		}else {
+			
+			return 1;
+			
+		}
+		
+	}	
 	@ResponseBody
 	@PostMapping(value = "/insert")
 	public int insertOrder(Pay pay,HttpServletRequest req, HttpSession session) {

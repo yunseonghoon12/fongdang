@@ -27,7 +27,10 @@
 				,#{PAYMENT_METHOD}
 		)
 	</insert>
-	<select id="selectPay" parameterType="int" resultType="Option">
-		SELECT * FROM "OPTION" A JOIN "ORDER" B on A.option_no = B.option_no WHERE order_no=${order_no}  
+	<select id="selectPay" parameterType="Order" resultType="Option">
+		SELECT * FROM "OPTION" A JOIN "ORDER" B on A.option_no = B.option_no WHERE order_no=#{order_no}  
+	</select>
+	<select id="selectProduct" parameterType="Order" resultType="Product">
+		SELECT * FROM "PRODUCT" A JOIN "ORDER" B on A.p_no = B.p_no WHERE order_no=#{order_no}
 	</select>
 </mapper>

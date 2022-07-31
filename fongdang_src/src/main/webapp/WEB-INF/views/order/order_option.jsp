@@ -485,16 +485,16 @@ function createOrderNo(){
     }
     return orderNum;
 }
-
-function order(){
-    const data={
-    	order_no :createOrderNo(),
+const data={
+    	order_no :'125423322',//createOrderNo(),
        p_no : $("input[name='p_no']").val(),
        option_no : '3',//$("").val(),
        total_price : $("input[name='option_price']").val() *5,//$("#amount").val(),//$("").val(),
        amount : '5',//$("#amount").val(),
        payment_plan :$("#plan").val()
     }
+function order(){
+    
     if(!data.option_no){
         swal("옵션을 선택해주세요.");
         return;
@@ -520,7 +520,7 @@ function orderNext(data) {
                 alert("주문실패")
                 }else if(result == 1){
                 	alert("결제 페이지로 이동합니다.");
-                	pay(data.order_no);
+                	pay(data);
                 }
             },
    			error : function (result) {
@@ -532,7 +532,7 @@ function orderNext(data) {
 };
 function pay(data){
 	$.ajax({
-		type : "post",
+		type : "POST",
 		url :"<%=request.getContextPath()%>/pay/pay",
 		data : data,
 		success: function (result){
@@ -540,13 +540,10 @@ function pay(data){
             if(result == 0){
             	alert("로그인을 한 후에 주문이 가능합니다. 로그인 페이지로 이동합니다.");
 				location.href = "<%=request.getContextPath()%>/member/login";
-            }else if(result == -1){
-            	alert("에러!!!")
-        		console.log(result);
-            }else if(result == 1){
+            }else {
             	alert("결제 페이지");
         		console.log(result);
-            	
+            	location.replace("<%=request.getContextPath()%>/pay/payment");
             }
         },
 			error : function (result) {

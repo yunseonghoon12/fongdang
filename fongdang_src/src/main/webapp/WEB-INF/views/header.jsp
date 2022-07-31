@@ -110,7 +110,7 @@
 						<li><a
 							href="<%=request.getContextPath()%>/customerCenter/ask">1:1
 								문의</a></li>
-						<li><a href="#">이용가이드</a></li>
+						<li><a href="<%=request.getContextPath()%>/guide/book">이용가이드</a></li>
 						<li><a href="<%=request.getContextPath()%>/customerCenter/road">오시는길</a></li>
 					</ul></li>
 

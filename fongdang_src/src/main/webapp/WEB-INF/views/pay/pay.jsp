@@ -378,8 +378,8 @@
    <div style="margin-top:10px;"class="container">
         <div class="somenail">
             <dl style="margin-top:15px;">
-                ${product.p_name}
-                <input type="hidden" id="ppp" value="${product.p_no }">
+                ${please.p_name}
+                <input type="hidden" id="ppp" value="${please.p_no }">
             </dl>
         </div>
         <div class="wrap">
@@ -405,21 +405,21 @@
                         </div>
                         <div class="option">
                            <div class="options">
-                            <p class="p_name">${product.p_name}</p>
-                            <input type="hidden" value="${product.p_name}" name="p_name">
-                            <input type="hidden" value="${product.p_no}" name="p_no">
-                            <p class="option_name">${product.option_name}</p>
-                            <input type="hidden" value="${product.option_name}" name="option_name">
+                            <p class="p_name">${please.p_name}</p>
+                            <input type="hidden" value="${please.p_name}" name="p_name">
+                            <input type="hidden" value="${please.p_no}" name="p_no">
+                            <p class="option_name">${lol.option_name}</p>
+                            <input type="hidden" value="${lol.option_name}" name="option_name">
                             <p class="option_s">수량:</p>
-                            <p class="option_sum">${product.amount}</p>
-                            <input type="hidden" value="${product.amount}" name="amount">
+                            <p class="option_sum">${order.amount}</p>
+                            <input type="hidden" value="${order.amount}" name="amount">
                             <p class="option_sum"></p>
                             </div>
                           
                            <div style="padding-right:20px;border-bottom:1px solid rgb(212, 212, 212);height:60px;margin-top:40px;">
                                     <p class="option_s" style="font-weight:600;font-size:16px">리워드 합계 금액:</p>
-                                    <p class="option_sum" style="font-weight:600;font-size:16px">${product.total_price}</p>
-                                    <input type="hidden" value="${product.total_price}" name="total_price">
+                                    <p class="option_sum" style="font-weight:600;font-size:16px">${order.total_price}</p>
+                                    <input type="hidden" value="${order.total_price}" name="total_price">
                             </div>
                         </div>
                         <div class="option_map" style="display:inline-block;float:left">
