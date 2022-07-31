@@ -30,7 +30,7 @@ public class NoticeController {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null) { 
 			 System.out.println("비로그인");
-			 mv.setViewName("/login");
+			 mv.setViewName("member/login");
 			 return mv;
 		}
 		int currentPage = 1;
@@ -39,7 +39,7 @@ public class NoticeController {
 		System.out.println(currentPage);
 		
 		
-		final int pageSize = 5;  		
+		final int pageSize = 3;  		
 		final int pageBlock = 3;  		
 		int startPage=0;
 		int endPage=0;
@@ -72,7 +72,7 @@ public class NoticeController {
 		System.out.println("rnum:"+ startRnum +"~"+entRnum);
 		
 		List<Notice> noticeList = service.noticeList(startRnum, entRnum);
-		mv.addObject("boardList",noticeList);
+		mv.addObject("noticeList",noticeList);
 		mv.addObject("startPage",startPage);
 		mv.addObject("endPage",endPage);
 		mv.addObject("currentPage",currentPage);

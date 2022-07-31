@@ -106,7 +106,7 @@
 				<li><a href="<%=request.getContextPath()%>/funding/list">펀딩상품</a></li>
 				<li><a href="#">고객센터</a>
 					<ul class="dep2">
-						<li><a href="<%=request.getContextPath()%>/notice/insertList">공지사항</a></li>
+						<li><a href="<%=request.getContextPath()%>/notice/insertList/1">공지사항</a></li>
 						<li><a
 							href="<%=request.getContextPath()%>/customerCenter/ask">1:1
 								문의</a></li>
