@@ -60,16 +60,18 @@ public class ProductController {
 			return mv;
 		}
 		
-		
-		Product product= productService.selectOneGetMakerName(member.getEmail()); //조회 
-		if (product != null) {
-			mv.addObject("updateYn", "Y");
-			
-		}else {
+		Product product = new Product();
+		product = productService.selectOneGetMakerName(member.getEmail()); //조회 
+		if (Objects.isNull(product)) {
 			mv.addObject("updateYn", "N");
+			product = new Product();
+			product.setP_no(0);
+			mv.addObject("product", product);
+		}else {
+			mv.addObject("updateYn", "Y");
+			mv.addObject("product", product);
 		}
-		
-		mv.addObject("product", product);
+		mv.addObject("maker_name", maker.getMaker_name());
 		mv.addObject("message", req.getParameter("message"));
 		mv.setViewName("product/product");// jsp 화면 
 		return mv;

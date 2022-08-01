@@ -246,6 +246,15 @@ display: block;}
 	</div>
 
 	<script>
+	var member=  '${loginInfo.email}';
+	console.log("접근한회원정보: " + member);	
+	
+	if(member == 'admin') {
+		console.log("안녕하세요 관리자님!");
+	} else {
+		alert("관리자 권한이 필요한 페이지입니다.");
+		location.href='<%=request.getContextPath()%>/';
+	}
 		$("#admin_nav ul li a").click(function() {
 			console.log("click()");
 			var before_color = '#444c57';

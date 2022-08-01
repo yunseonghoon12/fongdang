@@ -21,8 +21,8 @@
 	href="<%=request.getContextPath()%>/resources/css/timepicker.css" />
 <script src="<%=request.getContextPath()%>/resources/js/timepicker.js"></script>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
-<!--ck 5  <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> -->
+<!--<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script> --> 
 
 
 <script  type="text/javasctipt" src="${pageContext.request.contextPath}/ckeditor/ckeditor.js"></script>
@@ -223,8 +223,9 @@ $( document ).ready(function() {
 						<tr>
 							<td id="title">상품 상세정보<sup>*</sup></td>
 							<td>
-								<input type="hidden" name="p_story" class="editor" value="${product.p_story}"/>
-							 	<textarea  name="editor1"id="editor" style="width: 100px;"></textarea>  
+							<input type="text" name="p_story" id= "p_story"  class="editor"  value="${product.p_story}"/> 
+								<!--<input type="hidden" name="p_story" id= "p_story"  class="editor"  value="${product.p_story}"/> -->
+							    <!--<textarea   name="p_story"  name="editor1" id="editor"  value="${product.p_story}"></textarea> --> 
 								<br> <small id="small_txt">스토리 작성방법 가이드</small></td>
 							<td></td>
 						</tr>
@@ -269,7 +270,7 @@ $( document ).ready(function() {
 						<tr>
 							<td></td>
 							<td>
-							<input type="hidden" name="maker_name"  value="${product.maker_name}"/>
+							<input type="hidden" name="maker_name"  value="${maker_name}"/>
 							
 							<input type="hidden" name="update" id="update" value=""/>
 							<input type="button" class="btn2" value="저장하기" id="saveProduct" /></td>
@@ -281,6 +282,14 @@ $( document ).ready(function() {
 			</div>
 		</section>
 	</div>
+	
+<!--<script>
+  ClassicEditor
+    .create( document.querySelector( '#editor' ) )
+    .catch( error => {
+      console.error( error );
+    } );
+</script>	 --> 
 	
 <script>
 $(document).ready(function() {  

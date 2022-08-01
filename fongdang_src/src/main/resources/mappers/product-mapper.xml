@@ -13,7 +13,7 @@
 							,start_day,end_day,payment_plan,delivery_date
 							,p_approval,p_report_cnt)
 					values(
-							#{p_no}
+							(select nvl(max(p_no),0)+1 from PRODUCT)  
 							,#{maker_name},#{category_id},#{p_name},#{p_goal}
 							,#{p_thumbnail}
 							,#{p_summary}

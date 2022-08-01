@@ -106,6 +106,15 @@
   <!-- <footer style="background-color: #ccc; color: blue; font-size:28px; text-align:center; height: 200px;">푸터 영역</footer> --> 
   <jsp:include page="../footer.jsp"/>
   <script>
+  var member=  '${loginInfo.email}';
+	console.log("접근한회원정보: " + member);	
+	
+	if(member == 'admin') {
+		console.log("안녕하세요 관리자님!");
+	} else {
+		alert("관리자 권한이 필요한 페이지입니다.");
+		location.href='<%=request.getContextPath()%>/';
+	}
   $( document ).ready(function() {
 	  $("#admin_nav ul li a").click(function() {
 	    	console.log("click()");
