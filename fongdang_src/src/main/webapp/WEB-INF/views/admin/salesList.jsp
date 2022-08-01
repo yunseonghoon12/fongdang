@@ -62,7 +62,7 @@
 
 							<table class="salesList-tableAll" id="salesTable">
 								<tr class="col_title">
-									<td>No</td>
+									<!-- <td>No</td> -->
 									<td>상품번호</td>
 									<td>메이커명</td>
 									<td>카테고리</td>
@@ -73,9 +73,9 @@
 									<td>수수료</td>
 								</tr>
 								<c:forEach items="${salesList}" var="sales">
-									<tr id="salesTr">
+									<!-- <tr id="salesTr">
 										<td scope="row"><c:out
-												value="${criteria.totalCount - (status.index + (pages.page -1) * pages.pageSize)}" /></td>
+												value="${criteria.totalCount - (status.index + (pages.page -1) * pages.pageSize)}" /></td>-->
 										<td><a
 											href="<%=request.getContextPath() %>/admin/sales/read?p_no=${sales.p_no }">${sales.p_no }</a></td>
 										<td>${sales.maker_name}</td>

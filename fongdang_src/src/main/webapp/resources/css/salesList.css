@@ -88,6 +88,7 @@ a {
 }
 .salesList-tableAll{
 	margin-top: 50px;
+	width: 100%;
 }
 
 .salesList .salesList-tableAll {
@@ -115,6 +116,10 @@ a {
     font-family: SUIT-SemiBold;
     text-align: center;
     font-size: 18px;
+}
+.col_title td{
+	    font-family: SUIT-SemiBold;
+	     font-size: 18px;
 }
 .salesList-tableAll td {
     font-family: SUIT-Regular;
