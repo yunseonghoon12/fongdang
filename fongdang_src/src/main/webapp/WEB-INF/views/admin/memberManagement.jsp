@@ -57,7 +57,7 @@
         <li><a href="<%=request.getContextPath() %>/admin/report/list" class="sub_menu">신고 상품목록</a></li>
         <li><a href="<%=request.getContextPath()%>/admin/sales/list" class="sub_menu">펀딩매출관리</a></li>
         <li><a href="#" class="main_menu">고객 센터</a></li>
-        <li><a href="#" class="sub_menu">공지사항</a></li>
+        <li><a href="<%=request.getContextPath()%>/notice/admin" class="sub_menu">공지사항</a></li>
         <li><a href="<%= request.getContextPath()%>/admin/ask" class="sub_menu">1:1문의</a></li>
       </ul>
     </div>   

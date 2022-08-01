@@ -12,9 +12,7 @@
   <script src ="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js" type="text/javascript"></script>
     <title>Document</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
     <title>결제</title>
     <style>
         
@@ -296,11 +294,23 @@
     }
     .option_s{
         float:left;
-    
+    margin-top:20px;
     margin-left:20px;
     }
     .option_sum{
+    margin-top:20px;    
         
+    margin-left:20px;
+        float:right;
+        
+    }
+     .option_ss{
+        float:left;
+    
+    margin-left:20px;
+    }
+    .option_sums{
+    
         
     margin-left:20px;
         float:right;
@@ -378,8 +388,8 @@
    <div style="margin-top:10px;"class="container">
         <div class="somenail">
             <dl style="margin-top:15px;">
-                ${please.p_name}
-                <input type="hidden" id="ppp" value="${please.p_no }">
+                ${pay.p_name}
+                <input type="hidden" id="ppp" value="${pay.p_no}">
             </dl>
         </div>
         <div class="wrap">
@@ -405,20 +415,22 @@
                         </div>
                         <div class="option">
                            <div class="options">
-                            <p class="p_name">${please.p_name}</p>
-                            <input type="hidden" value="${please.p_name}" name="p_name">
-                            <input type="hidden" value="${please.p_no}" name="p_no">
+                            <p class="p_name">${pay.p_name}</p>
+                            <input type="hidden" value="${pay.p_name}" name="p_name">
+                            <input type="hidden" value="${pay.p_no}" name="p_no">
                             <p class="option_name">${lol.option_name}</p>
                             <input type="hidden" value="${lol.option_name}" name="option_name">
-                            <p class="option_s">수량:</p>
-                            <p class="option_sum">${order.amount}</p>
-                            <input type="hidden" value="${order.amount}" name="amount">
+                              <input type="hidden" value="${order.amount}" name="amount">
+                            <input type="hidden" value="${order.order_no}" name="order_no">
                             <p class="option_sum"></p>
+                            <p class="option_s">수량:</p>
+                            <p class="option_sum">${order.amount} 개</p>
+                          
                             </div>
                           
                            <div style="padding-right:20px;border-bottom:1px solid rgb(212, 212, 212);height:60px;margin-top:40px;">
-                                    <p class="option_s" style="font-weight:600;font-size:16px">리워드 합계 금액:</p>
-                                    <p class="option_sum" style="font-weight:600;font-size:16px">${order.total_price}</p>
+                                    <p class="option_ss" style="font-weight:600;font-size:16px">리워드 합계 금액:</p>
+                                    <p class="option_sums" style="font-weight:600;font-size:16px">${order.total_price} </p>
                                     <input type="hidden" value="${order.total_price}" name="total_price">
                             </div>
                         </div>
@@ -475,7 +487,7 @@
                                 <div class="address_name" style="float:left;height:20px;width:280px;text-align: left;margin-left:20px; margin-bottom:10px;"><p style="display:inline-block;font-size:14px">이메일</p></div>
                                 <div class="address_input_3_wrap" style="float:left;height:40px;width:280px;text-align: left;margin-left:20px;margin-bottom:10px;">
                                     <div class="address_input_3_box">
-                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:280px;" value="" placeholder="email">
+                                        <input class="support_input" name="supporter3" readonly="readonly" style="width:280px;" value="${order.email}" placeholder="${order.email}">
                                     </div>
                                 </div>
                             </div>
@@ -483,14 +495,14 @@
                     </div>
                     <div class="total_wrap">
                         <div class="price_wrap">
-                            <p>에 원을 펀딩합니다.</p>
+                            <p style="color:#9bbfd9;display:inline-block">${pay.p_name}</p><br><br><p>총 결제금액 : "${order.total_price}"원 </p>
                         </div>
                         <div class="button_wrap">
-                            <button type="button" id="button_next" onclick="pay()">
+                            <button type="button" id="button_next" onclick="payment()">
                                 결제하기                            
 </button>
                         </div>
-                        <div style="width:100%;height:10px;margin-bottom:200px;display:block;">
+                        <div style="width:100%;height:10px;margin-bottom:100px;display:block;">
                             <div>
                                 
                             </div>
@@ -501,7 +513,7 @@
     </div>
     
       
-      <!-- Modal -->
+      <jsp:include page="../footer.jsp"/>
     </body>
 <footer style="height:100px;">
     
@@ -632,14 +644,14 @@
             email : $("input[name='supporter3']").val(),
             order_phone : $("input[name='supporter2']").val(),
             order_address : $("input[name='memberaddr2']").val() + $("input[name='memberaddr3']").val(),
-            total_sum : ${product.total_price},
+            total_sum : $("input[name='total_price']").val(),
             pay_method : 'card',
         }
-        if(!data.deleeveryAddress){
+        if(!data.order_address){
             swal("배송지를 입력해주세요");
             return;
         }
-        if(!data.phone){
+        if(!data.order_phone){
             swal("전화번호를 입력해주세요");
             return;
         }
@@ -699,6 +711,8 @@
             location.replace("/")
         })
     };
+    </script>
+    <script>
     function autoHypenPhone(str){
         str = str.replace(/[^0-9]/g, '');
         var tmp = '';

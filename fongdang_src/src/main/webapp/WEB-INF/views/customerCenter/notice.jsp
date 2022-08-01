@@ -6,8 +6,7 @@
 	href="<%=request.getContextPath()%>/resources/css/font.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/resources/css/header.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,13 +50,14 @@ border-radius: 5px;
 #writed{
 width:100%;
 height:270px;
-border:1px solid rgb(212,212,212);
+border:1px solid #accde4;
 border-radius: 5px;
 margin-bottom:30px;
 position:relative;
 display:block;
 }
 #title{
+background-color:#accde4;
 	width:100%;
 	height:50px;
 	text-align:left;
@@ -67,7 +67,7 @@ display:block;
 	font-weight:800;
 	
 	font-size:18px;
-	border-bottom: 1px solid rgb(200,200,200);
+	border-bottom: 1px solid #accde4;
 }
 #content{
 text-align:left;
@@ -83,7 +83,7 @@ width:700px;
 text-align:right;
 padding-right:20px;
 padding-top:13px;
-border-top:1px solid rgb(212,212,212);
+border-top:1px solid #accde4;
 color:rgb(110,110,110);
 height:50px;
 right:20px;
@@ -111,9 +111,10 @@ display: inline-blick;
 			<c:forEach items="${noticeList}" var="noticeList">
 			
 				<dl id="writed">
-					<dt id="title">${noticeList.n_title}<button type="submit" style="float:right;margin-right:20px;border:1px solid rgb(212,212,212);width:50px;height:25px;"onclick="location.href='<%=request.getContextPath()%>/notice/delete/n_no=${noticeList.n_no}'">글 삭제</button></dt>
+					<dt id="title">${noticeList.n_title}</dt>
 					<dd id="content">${noticeList.n_content}</dd>
 					<dd id="writer">${noticeList.n_writer}</dd>
+					<input type="hidden" value="${noticeList.n_no}" name="n_no">
 				</dl>
 		
 		
@@ -139,6 +140,33 @@ display: inline-blick;
 </div>
 </body>
 <script>
-
+function deleteNotice(){
+	const data={
+			n_no : $("input[name='n_no']").val()
+			
+	}
+	$.ajax({
+        type: "GET",
+        url: "<%=request.getContextPath()%>/notice/delete",
+        data: data,
+        success: function (result) {
+            console.log(result);
+            if(result == 0){
+            	alert("로그인을 한 후 이용이 가능합니다. 로그인 페이지로 이동합니다.");
+				location.href = "<%=request.getContextPath()%>/member/login";
+            }else if(result == -1){
+            alert("연결 실패")
+            }else if(result == 1){
+            	alert("공지사항을 삭제합니다.");
+            	location.href("<%=request.getContextPath()%>/notice/insertList/1");
+            }
+        },
+			error : function (result) {
+				alert("에러 발생.");
+				console.log(result);
+		}
+	});
+	
+};
 </script>
 </html>

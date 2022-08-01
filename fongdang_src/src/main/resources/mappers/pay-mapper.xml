@@ -28,7 +28,7 @@
 		)
 	</insert>
 	<select id="selectPay" parameterType="Order" resultType="Option">
-		SELECT * FROM "OPTION" A JOIN "ORDER" B on A.option_no = B.option_no WHERE order_no=#{order_no}  
+		SELECT * FROM "OPTION" A JOIN "ORDER" B on A.option_no = B.option_no WHERE order_no=#{order_no}  and A.p_no=#{p_no}
 	</select>
 	<select id="selectProduct" parameterType="Order" resultType="Product">
 		SELECT * FROM "PRODUCT" A JOIN "ORDER" B on A.p_no = B.p_no WHERE order_no=#{order_no}

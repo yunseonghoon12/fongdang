@@ -12,4 +12,15 @@
 <delete id="deleteNotice" parameterType="int">
 	DELETE FROM "NOTICE" WHERE n_no = #{n_no}
 </delete>
+<insert id="insertNotice" parameterType="String">
+	INSERT INTO "NOTICE" VALUES (
+	(select nvl(max(n_no),0)+1 from "NOTICE"),
+	#{n_title},
+	#{n_content},
+	default,
+	default,
+	'관리자'
+	)
+	
+</insert>
 </mapper>

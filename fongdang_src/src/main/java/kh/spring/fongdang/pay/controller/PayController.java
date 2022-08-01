@@ -28,27 +28,26 @@ public class PayController {
 	@Autowired
 	private PayService service;
 	
-	@ResponseBody
-	@GetMapping(value ="/payment")
-	public ModelAndView selectPay(ModelAndView mv,@RequestParam(required = false, value = "order") Order order, HttpSession session) {
+	@PostMapping(value ="/payment")
+	public ModelAndView selectPay(ModelAndView mv, Order order, HttpSession session) {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null) {
 			System.out.println("비로그인");
 			
 		}
-		
-		List<Option> option = service.selectPay(order);
-		List<Product> pay = service.selectProduct(order);
+		order.setEmail(loginInfo.getEmail());
+		Option option = service.selectPay(order);
+		Product pay = service.selectProduct(order);
 		//List<Order> order = service.selectOrder(order);
 		mv.addObject("order",order);
 		mv.addObject("lol",option);
-		mv.addObject("please", pay);
+		mv.addObject("pay", pay);
 		mv.setViewName("pay/pay");
 		return mv;
 	}
 	@ResponseBody
 	@PostMapping(value = "/pay")
-	public int insertOrder(Order order,HttpServletRequest req, HttpSession session) {
+	public int pay(Order order,HttpServletRequest req, HttpSession session) {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
 		if(loginInfo == null) { 
 			return 0;

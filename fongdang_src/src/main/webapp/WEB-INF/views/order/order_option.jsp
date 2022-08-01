@@ -78,7 +78,7 @@
         width:60px;
         height:30px;
         margin-top:38px;
-        font-size:14px;
+        font-size:12px;
     }
     .wrap_container2{
         width: 100%;
@@ -415,6 +415,14 @@ margin-left:8px;
             </div>
         </div>
     </div>
+    <form id="frm1">
+    	<input type="hidden" name="order_no" id="hidden_order_no">
+    	<input type="hidden" name="p_no" id="hidden_p_no">
+    	<input type="hidden" name="option_no" id="hidden_option_no">
+    	<input type="hidden" name="total_price" id="hidden_total_price">
+    	<input type="hidden" name="amount" id="hidden_amount">
+    	<input type="hidden" name="payment_plan" id="hidden_payment_plan">
+    </form>
        <!-- Modal -->
    
                 <jsp:include page="../footer.jsp"/>
@@ -425,7 +433,7 @@ function fnCalCount(type, no){
 
     var $input = $("input[name='pop_out']");
     var tCount = Number($input.val());
-    var tEqCount = $("input[name='limit']").val();
+    var tEqCount = $("input[name='chb11']").val();
     var ss = $("input[name='optionNo']").val();
     if(ss == no){
     if(type=='p'){
@@ -488,8 +496,8 @@ function createOrderNo(){
 const data={
     	order_no :createOrderNo(),
        p_no : $("input[name='p_no']").val(),
-       option_no : '3',//$("").val(),
-       total_price : $("input[name='option_price']").val() *5,//$("#amount").val(),//$("").val(),
+       option_no : $("input[name='optionNo']").val(),
+       total_price : $("input[name='option_price']").val()*5,//$("#amount").val(),//$("").val(),
        amount : '5',//$("#amount").val(),
        payment_plan :$("#plan").val()
     }
@@ -543,7 +551,16 @@ function pay(data){
             }else {
             	alert("결제 페이지");
         		console.log(result);
-            	location.replace("<%=request.getContextPath()%>/pay/payment");
+            	//location.replace("<%=request.getContextPath()%>/pay/payment?price="+data.order_no);
+            	$("#frm1 #hidden_order_no").val(data.order_no);
+            	$("#frm1 #hidden_p_no").val(data.p_no);
+            	$("#frm1 #hidden_option_no").val(data.option_no);
+            	$("#frm1 #hidden_total_price").val(data.total_price);
+            	$("#frm1 #hidden_amount").val(data.amount);
+            	$("#frm1 #hidden_payment_plan").val(data.payment_plan);
+            	frm1.action = "<%=request.getContextPath()%>/pay/payment";
+            	frm1.method="post";
+            	frm1.submit();
             }
         },
 			error : function (result) {

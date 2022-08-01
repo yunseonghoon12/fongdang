@@ -16,11 +16,11 @@ public class PayDao {
 	@Autowired
 	private SqlSession session;
 	
-	public List<Option> selectPay(Order order) {
-		return session.selectList("Pay.selectPay",order);
+	public Option selectPay(Order order) {
+		return session.selectOne("Pay.selectPay",order);
 	}
-	public List<Product> selectProduct(Order order){
-		return session.selectList("Pay.selectProduct",order);
+	public Product selectProduct(Order order){
+		return session.selectOne("Pay.selectProduct",order);
 	}
 	/*public List<Order> selectOrder(Order order){
 		return session.selectList("Pay.selectOrder",order);

@@ -28,6 +28,13 @@ public class NoticeDao {
 		
 		
 	};
+	public int insertNotice(String title, String content) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("n_content", content);
+		map.put("n_title", title);
+		int result = session.insert("Notice.insertNotice",map);
+		return result;
+	}
 	
 	public int deleteNotice(int n_no) {
 		int result = session.delete("Notice.deleteNotice",n_no);

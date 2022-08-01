@@ -1,7 +1,5 @@
 package kh.spring.fongdang.pay.model.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +16,7 @@ public class PayServiceImpl implements PayService{
 	private PayDao dao;
 	
 	@Override
-	public List<Option> selectPay(Order order) {
+	public Option selectPay(Order order) {
 		return dao.selectPay(order);
 	};
 /*	@Override
@@ -26,7 +24,7 @@ public class PayServiceImpl implements PayService{
 		return dao.selectOrder(order);
 	};*/
 	@Override
-	public List<Product> selectProduct(Order order){
+	public Product selectProduct(Order order){
 		return dao.selectProduct(order);
 	}
 	@Override

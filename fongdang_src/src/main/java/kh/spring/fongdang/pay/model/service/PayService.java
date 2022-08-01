@@ -9,8 +9,8 @@ import kh.spring.fongdang.pay.domain.Pay;
 
 
 public interface PayService {
-	public List<Option> selectPay(Order order);
-	public List<Product> selectProduct(Order order);
+	public Option selectPay(Order order);
+	public Product selectProduct(Order order);
 	//public List<Order> selectOrder(int order_no);
 	public int insertPay(Pay pay);
 }

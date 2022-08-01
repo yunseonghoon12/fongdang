@@ -12,9 +12,16 @@ import kh.spring.fongdang.notice.model.dao.NoticeDao;
 public class NoticeServicelmpl implements NoticeService {
 	@Autowired
 	private NoticeDao dao;
-	
+	@Override
+	public int insertNotice(String title,String content) {
+		return dao.insertNotice(title,content);
+	}
 	@Override
 	public List<Notice> noticeList(int startRnum, int entRnum){
+		return dao.noticeList(startRnum, entRnum);
+	}
+	@Override
+	public List<Notice> noticeAdmin(int startRnum, int entRnum){
 		return dao.noticeList(startRnum, entRnum);
 	}
 	public int deleteNotice(int n_no) {
