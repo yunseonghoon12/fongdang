@@ -196,7 +196,7 @@ position: absolute;
 								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
 							<label for="slide02" class="right"><img class="rightImg"
 								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
-							<a href="<%=request.getContextPath()%>/funding/info/before/12"><img
+							<a href="<%=request.getContextPath()%>/funding/info/12"><img
 								src="<%=request.getContextPath()%>/resources/images/main04.jpg" /></a>
 						</div>
 					</li>
@@ -216,7 +216,7 @@ position: absolute;
 								src="<%=request.getContextPath()%>/resources/images/left-arrow.png" /></label>
 							<label for="slide04" class="right"><img class="rightImg"
 								src="<%=request.getContextPath()%>/resources/images/right-arrow.png" /></label>
-							<a href="<%=request.getContextPath()%>/funding/info/56"><img
+							<a href="<%=request.getContextPath()%>/funding/info/57"><img
 								src="<%=request.getContextPath()%>/resources/images/main07.gif" /></a>
 						</div>
 					</li>
