@@ -48,7 +48,10 @@
 }
 </style>
 <style>
-/* main section */
+* {
+	font-family: SUIT-Regular;
+}
+
 a {
 	text-decoration: none;
 }

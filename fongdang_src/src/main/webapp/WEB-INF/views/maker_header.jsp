@@ -80,7 +80,7 @@
 						class="header_loginImg"> --%></a></li>
 					<c:if test="${!empty loginInfo}">
 						<c:if test="${loginInfo.name ne '관리자'}">
-							<li style="top: 10px;"><a href="#" id="">내정보<%-- <img
+							<li style="top: 10px;"><a href="<%=request.getContextPath()%>/member/myfongdang" id="">내정보<%-- <img
 							src="<%=request.getContextPath()%>/resources/images/mypage.png"
 							class="header_loginImg"> --%></a></li>
 						</c:if>

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import kh.spring.fongdang.alarm.model.service.AlarmService;
 import kh.spring.fongdang.member.domain.Member;
 import kh.spring.fongdang.notice.domain.Notice;
 import kh.spring.fongdang.notice.model.service.NoticeService;
@@ -24,6 +25,8 @@ public class NoticeController {
 	
 	@Autowired
 	private NoticeService service;
+	@Autowired
+	private AlarmService alarmservice;
 	
 	@GetMapping("/insertList/{page_no}")
 	public ModelAndView NoticeList(ModelAndView mv,@PathVariable("page_no") int page_no, HttpSession session) {
@@ -32,7 +35,11 @@ public class NoticeController {
 			 System.out.println("비로그인");
 			 mv.setViewName("member/login");
 			 return mv;
-		}
+		}	
+		if (loginInfo != null) {
+			String email = loginInfo.getEmail();
+			mv.addObject("alarm",alarmservice.countAlarm(email));
+			}
 		int currentPage = 1;
 		
 		currentPage = page_no;
