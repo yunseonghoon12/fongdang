@@ -194,7 +194,7 @@
             <p id="support_tip_title">서포터 팁</p>
               <ul id="support_tip_content">
                 <li>                  
-                    <a href="#">                     
+                    <a href="<%=request.getContextPath()%>/notice/insertList/1">                     
                         공지사항
                         <span class="chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 17 12">
@@ -204,7 +204,7 @@
                     </a>                 
                 </li>
                 <li>
-                  <a href="#">                    
+                  <a href="<%=request.getContextPath()%>/guide/book">                    
                     이용 가이드
                     <span class="chevron">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 17 12">
