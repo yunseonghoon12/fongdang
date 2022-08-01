@@ -98,7 +98,7 @@
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24')|| '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate
+	where start_day > sysdate and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -111,7 +111,7 @@
 	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate
+	where start_day < sysdate and end_day > sysdate and p_approval = 'Y'
 	order by p_goal_percent desc
 ]]>
 	</select>
@@ -125,23 +125,17 @@
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id)
 	left outer join view_total_like_review_money using(p_no)
-	where start_day < sysdate and end_day > sysdate
+	where start_day < sysdate and end_day > sysdate and p_approval = 'Y'
 ]]>
-<if test="category_id == 'C1' || category_id == 'C2' || category_id == 'C3' || category_id == 'C4' || category_id == 'C5' || category_id == 'C6'">
+
+<if test="category_id == 'C1' || category_id == 'C2' || category_id == 'C3' || category_id == 'C4' || 
+			category_id == 'C5' || category_id == 'C6'">
     AND category_id = #{category_id}
 </if>	 
-	 <if test="cateSelect == 'v1'">
-         order by end_day asc
-    </if>
-	 <if test="cateSelect == 'v2'">
-         order by total_like desc
-    </if>
-	 <if test="cateSelect == 'v3'">
-         order by total_review desc
-    </if>
-	 <if test="cateSelect == 'v4'">
-         order by total_funding_money desc
-    </if>
+	 <if test="cateSelect == 'v1'"> order by end_day asc</if>
+	 <if test="cateSelect == 'v2'"> order by total_like desc </if>
+	 <if test="cateSelect == 'v3'"> order by total_review desc </if>
+	 <if test="cateSelect == 'v4'"> order by total_funding_money desc </if>
 </select>
 	
 	
@@ -154,7 +148,7 @@
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C1'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C1' and p_approval = 'Y'
 ]]>
  	<if test="cateSelect == 'v2'">
          order by total_like desc
@@ -174,7 +168,7 @@
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C2'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C2' and p_approval = 'Y'
 ]]>
  	<if test="cateSelect == 'v2'">
          order by total_like desc
@@ -194,7 +188,7 @@
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C3'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C3' and p_approval = 'Y'
 ]]>
 	 <if test="cateSelect == 'v2'">
          order by total_like desc
@@ -214,7 +208,7 @@
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C4'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C4' and p_approval = 'Y'
 ]]>
 	 <if test="cateSelect == 'v2'">
          order by total_like desc
@@ -234,7 +228,7 @@
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C5'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C5' and p_approval = 'Y'
 ]]>
 	 <if test="cateSelect == 'v2'">
          order by total_like desc
@@ -254,7 +248,7 @@ select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, categor
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-	where start_day < sysdate and end_day > sysdate and category_id = 'C6'
+	where start_day < sysdate and end_day > sysdate and category_id = 'C6' and p_approval = 'Y'
 ]]>
 	 <if test="cateSelect == 'v2'">
          order by total_like desc
@@ -273,7 +267,7 @@ select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, categor
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분'start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C1'
+	where start_day > sysdate and category_id = 'C1' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -282,7 +276,7 @@ select p_no,maker_name,category_id,p_name,p_thumbnail,start_day,end_day, categor
 select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C2'
+	where start_day > sysdate and category_id = 'C2' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -291,7 +285,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C3'
+	where start_day > sysdate and category_id = 'C3' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -300,7 +294,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C4'
+	where start_day > sysdate and category_id = 'C4' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -309,7 +303,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C5'
+	where start_day > sysdate and category_id = 'C5' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -318,7 +312,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.start_day, 'mm/dd') || '(' || TO_CHAR(p.start_day, 'dy', 'nls_date_language=korean') || ') ' || TO_CHAR(p.start_day, 'HH24') || '시'|| TO_CHAR(p.start_day, 'MI')||'분' start_day
 	from product p left outer join category using (category_id)
-	where start_day > sysdate and category_id = 'C6'
+	where start_day > sysdate and category_id = 'C6' and p_approval = 'Y'
 	order by start_day asc
 ]]>
 	</select>
@@ -332,7 +326,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day,
 	ROUND(total_funding_money / p.p_goal * 100) p_goal_percent
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-    where start_day < sysdate and end_day > sysdate and category_name like '%'||#{search_category}||'%'
+    where start_day < sysdate and end_day > sysdate and category_name like '%'||#{search_category}||'%' and p_approval = 'Y'
     order by end_day asc
 ]]>
 	</select>
@@ -343,7 +337,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 <![CDATA[
 	select p_no,maker_name,p_name,p_thumbnail,category_name
 	from product p left outer join category using (category_id)
-	where start_day < sysdate and end_day > sysdate and p_name like '%'||'앵콜'||'%' 
+	where start_day < sysdate and end_day > sysdate and p_name like '%'||'앵콜'||'%'  and p_approval = 'Y'
 ]]>
 	</select>
 <!-- 메인 기간 만료 상품 Top3 -->
@@ -355,7 +349,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 	TO_CHAR(p.p_goal, 'FM999,999,999,999') p_goal_str,
 	p.end_day - TO_DATE(TO_CHAR(sysdate, 'yyyy/mm/dd')) d_day
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
-    where start_day < sysdate and end_day > sysdate
+    where start_day < sysdate and end_day > sysdate and p_approval = 'Y'
     order by end_day asc
 ]]>
 	</select>
@@ -366,6 +360,7 @@ select p_no,maker_name,category_name,p_name,p_thumbnail,
 <![CDATA[
 	select p_no,maker_name,p_name,p_thumbnail,category_name, total_funding_money
 	from product p left outer join category using (category_id) left outer join view_funding_supporter_money using(p_no)
+	where p_approval = 'Y'
     order by total_funding_money desc
 ]]>
 	</select>

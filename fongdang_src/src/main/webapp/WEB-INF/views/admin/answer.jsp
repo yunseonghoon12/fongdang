@@ -11,10 +11,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 - 1대1 문의 답변</title>
+<title>퐁당 - 관리자페이지</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <style>
 /* header */
+* {
+    font-family: SUIT-Regular;
+}
+
 #admin_navigator {
 	border-bottom: 1px solid #ccc;
 	box-sizing: border-box;
@@ -102,25 +106,30 @@ a {
 	height: 100%;
 }
 
+.replyTextareaWrap {
+	position: relative;
+	top: -75px;
+	height: 330px;
+	width: 760px;
+}
+
 .customerAskWrap {
 	position: relative;
-    left: 46px;
-    margin-top: 45px;
+	margin-top: 45px;
+	width: 1000px;
+	height: 200px;
 }
 
 #answer {
 	margin: 0 auto;
-	display: flex;
 	justify-content: center;
 }
 
 .replyTextarea {
 	width: 760px;
-    height: 330px;
-    position: relative;
-    top: 127px;
-    left: -40px;
-    resize: none;
+	height: 330px;
+	position: relative;
+	resize: none;
 }
 </style>
 </head>
@@ -159,22 +168,26 @@ a {
 		</div>
 
 		<div id="main_body">
-			<form action="<%=request.getContextPath()%>/admin/answer.do" id="answer" method="POST" style="height: 458px;">
-			<c:forEach items="${ask}" var="ask">
-				<div class="customerAskWrap">
-					<p>제목: ${ask.ask_title}</p>
-					<p>내용: ${ask.ask_content}</p>
-					<input type="hidden" name="email" value="${ask.email}">
-					<input type="hidden" name="a_content" value="관리자로부터 문의하신 답변이 도착했습니다.">
-				</div>
-			</c:forEach>
+			<form action="<%=request.getContextPath()%>/admin/answer.do"
+				id="answer" method="POST" style="height: 458px;">
+				<c:forEach items="${ask}" var="ask">
+					<div class="customerAskWrap">
+						<p>제목: ${ask.ask_title}</p>
+						<br>
+						<p>내용: ${ask.ask_content}</p>
+						<input type="hidden" name="email" value="${ask.email}"> <input
+							type="hidden" name="a_content" value="관리자로부터 문의하신 답변이 도착했습니다.">
+					</div>
+				</c:forEach>
 				<input type="hidden" name="ask_no" value="${ask_no}">
 				<div class="replyTextareaWrap">
 					<textarea class="replyTextarea" name="ans_content" id="ans_content"></textarea>
 				</div>
 			</form>
-			<div style="display: flex;justify-content: center;margin: 0 auto;margin-top: 40px;}">
-				<button type="button" onclick="ans_check();">등록</button>
+			<div
+				style="display: flex; justify-content: center; margin: 0 auto; margin-top: 40px; position: relative; right: 110px;">
+				<button type="button" onclick="ans_check();"
+					style="margin-right: 10px;">등록</button>
 				<a href="<%=request.getContextPath()%>/admin/ask"><button>취소</button></a>
 			</div>
 		</div>
