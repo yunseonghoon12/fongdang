@@ -32,11 +32,13 @@ public class NoticeController {
 	@GetMapping("/insertList/{page_no}")
 	public ModelAndView NoticeList(ModelAndView mv,@PathVariable("page_no") int page_no, HttpSession session) {
 		Member loginInfo = (Member)session.getAttribute("loginInfo");
-		if(loginInfo == null) { 
-			 System.out.println("비로그인");
-			 mv.setViewName("member/login");
-			 return mv;
-		}	
+		
+		/* 
+		 비회원도 공지사항을 볼 수 있게 주석처리함 8.02
+		 if(loginInfo == null) { System.out.println("비로그인");
+		 * mv.setViewName("member/login"); return mv; }
+		 */
+		
 		if (loginInfo != null) {
 			String email = loginInfo.getEmail();
 			mv.addObject("alarm",alarmservice.countAlarm(email));
