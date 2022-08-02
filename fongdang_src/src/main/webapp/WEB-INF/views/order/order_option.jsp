@@ -148,7 +148,7 @@
         .agree {
             position:relative;
         }
-        .agree .all_agree input[type="checkbox"] + label span {
+        .agree .all_agree input[type="radio"] + label span {
             position: absolute; top: 0; left:0px; display: block; font-weight: bold;
         }
         .agree{
@@ -362,7 +362,7 @@ margin-left:8px;
                                     <div class="agree">
                                         <dl class="agree2">
                                             <dt class="all_agree">
-                                                    <input type="radio" id="chb" name="chb11" value="${order.option_no}">
+                                                    <input type="radio" id="${order.option_no}" name="chb" value="${order.option_no}">
                                                     <label for="chb">
                                                         <span>
                                                         
@@ -428,14 +428,20 @@ margin-left:8px;
                 <jsp:include page="../footer.jsp"/>
 </body>
 <script>
-
+ $('input:checkbox[name="checkbox_name"]').each(function() {     
+	this.checked = true;
+	   if(this.checked){
+		return this.value;
+		     }
+}
+출처: https://openlife.tistory.com/381 [물고기 많은 바다:티스토리]
 function fnCalCount(type, no){
 
     var $input = $("input[name='pop_out']");
     var tCount = Number($input.val());
-    var tEqCount = $("input[name='chb11']").val();
+    var tEqCount = $("input[name='limit']").val();
     var ss = $("input[name='optionNo']").val();
-    if(ss == no){
+    
     if(type=='p'){
         if(tCount < tEqCount){
         	$input.val(Number(tCount)+1);
@@ -493,10 +499,11 @@ function createOrderNo(){
     }
     return orderNum;
 }
+const genreArray = new Array();
 const data={
     	order_no :createOrderNo(),
        p_no : $("input[name='p_no']").val(),
-       option_no : $("input[name='optionNo']").val(),
+       option_no : '3',//$('input:radio[id="chb"]').val(),
        total_price : $("input[name='option_price']").val()*5,//$("#amount").val(),//$("").val(),
        amount : '5',//$("#amount").val(),
        payment_plan :$("#plan").val()
@@ -570,5 +577,6 @@ function pay(data){
 		
 	});
 };
+
 </script>
 </html>
