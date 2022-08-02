@@ -1,5 +1,6 @@
 package kh.spring.fongdang.pay.model.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -26,6 +27,8 @@ public class PayDao {
 		return session.selectList("Pay.selectOrder",order);
 	}*/
 	public int insertPay(Pay pay) {
+		
+		
 		return session.insert("Pay.insertPay",pay);
 	}
 }

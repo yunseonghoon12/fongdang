@@ -6,25 +6,16 @@
 		INSERT
 			INTO
 			"PAY"
-				(PAY_NO,
-				ORDER_NO,
-				P_NO,
-				EMAIL,
-				ORDER_NAME,
-				ORDER_PHONE,
-				ORDER_ADDRESS,
-				TOTAL_SUM,
-				PAYMENT_METHOD)
 		values(
-				 #{PAY_NO}
-				 ,#{ORDER_NO}
-				 ,#{P_NO}
-				,#{EMAIL}
-				,#{ORDER_NAME}
-				,#{ORDER_PHONE}
-				,#{ORDER_ADDRESS}
-				,#{TOTAL_SUM}
-				,#{PAYMENT_METHOD}
+				 #{pay_no}
+				 ,#{order_no}
+				 ,#{p_no}
+				,#{email}
+				,#{order_name}
+				,#{order_phone}
+				,#{order_address}
+				,#{total_sum}
+				,#{payment_method}
 		)
 	</insert>
 	<select id="selectPay" parameterType="Order" resultType="Option">

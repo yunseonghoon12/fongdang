@@ -133,16 +133,16 @@
         width:700px;
     }
     
-        .agree .all_agree input[type="checkbox"] {display: none;}
+        .agree .all_agree input[type="radio"] {display: none;}
 
-        .agree .all_agree input[type="checkbox"] + label {
+        .agree .all_agree input[type="radio"] + label {
             display: inline-block; width:17px; height: 17px; background: #d6ecf5;
             cursor: pointer; border-radius: 3px;float: left;             
         }
         .agree .all_agree:after {
             display:block; clear:both; content:"";
         }
-        .agree .all_agree input[type="checkbox"]:checked + label {
+        .agree .all_agree input[type="radio"]:checked + label {
             background:url(<%=request.getContextPath()%>/resources/images/check.png) #d6ecf5 no-repeat center/20px 20px; float: left;display: inline-block;
         }
         .agree {
@@ -362,7 +362,7 @@ margin-left:8px;
                                     <div class="agree">
                                         <dl class="agree2">
                                             <dt class="all_agree">
-                                                    <input type="checkbox" id="chb" name="chb11" value="${order.option_no}">
+                                                    <input type="radio" id="chb" name="chb11" value="${order.option_no}">
                                                     <label for="chb">
                                                         <span>
                                                         
@@ -457,7 +457,7 @@ function fnCalCount(type, no){
 <script>
         
     $(".agree2").click(function(){
-        var $thisCheckbox = $(this).find("[type=checkbox]");
+        var $thisCheckbox = $(this).find("[type=radio]");
         $thisCheckbox.prop("checked", function(){
            return !$(this).prop("checked");
         });  

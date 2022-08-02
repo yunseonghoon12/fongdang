@@ -430,7 +430,7 @@
                           
                            <div style="padding-right:20px;border-bottom:1px solid rgb(212, 212, 212);height:60px;margin-top:40px;">
                                     <p class="option_ss" style="font-weight:600;font-size:16px">리워드 합계 금액:</p>
-                                    <p class="option_sums" style="font-weight:600;font-size:16px">${order.total_price} </p>
+                                    <p class="option_sums" id="comma" style="font-weight:600;font-size:16px">${order.total_price} </p>
                                     <input type="hidden" value="${order.total_price}" name="total_price">
                             </div>
                         </div>
@@ -470,7 +470,7 @@
                                 <div class="address_name" style="float:left;height:20px;width:280px;text-align: left;margin-left:20px;margin-bottom:10px;"><p style="display:inline-block;font-size:14px">이름</p></div>
                                 <div class="address_input_1_wrap" style="float:left;height:40px;width:280px;text-align: left;margin-right:20px;margin-left:20px; margin-bottom:10px;">
                                     <div class="address_input_1_box" style="float:left;">
-                                        <input class="support_input" name="supporter1"style="width:280px;" placeholder="이름" value="">
+                                        <input class="support_input" name="supporter1"style="width:280px;" placeholder="이름" >
                                     </div>
                                     <input type="hidden" name="amount" value="">
                                     <input type="hidden" name="order_no" value="">
@@ -569,6 +569,11 @@
 }
 </script>
  <script>
+ $(function(){
+const element = document.getElementById("comma");
+	const n1 = element.innerText;
+	n1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+ });
     function pay() {
         var IMP = window.IMP; // 생략가능
         IMP.init('imp04215728'); 
@@ -642,10 +647,11 @@
             order_no: $("input[name='order_no']").val(),
             p_no : $("input[name='p_no']").val(),
             email : $("input[name='supporter3']").val(),
+            order_name: $("input[name='supporter1']").val(),
             order_phone : $("input[name='supporter2']").val(),
             order_address : $("input[name='memberaddr2']").val() + $("input[name='memberaddr3']").val(),
             total_sum : $("input[name='total_price']").val(),
-            pay_method : 'card',
+            payment_method : 'card',
         }
         if(!data.order_address){
             swal("배송지를 입력해주세요");
@@ -703,12 +709,13 @@
                 closeOnClickOutside :false
             })
             .then(function(){
-                location.replace("/");
+            	alert("결제완료!");
+                location.replace("<%=request.getContextPath()%>/");
             })
         })
         .fail(function(){
             alert("에러");
-            location.replace("/")
+            location.replace("<%=request.getContextPath()%>/");
         })
     };
     </script>

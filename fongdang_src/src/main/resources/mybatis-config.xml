@@ -17,7 +17,6 @@
 		<typeAlias type="kh.spring.fongdang.notice.domain.Notice" alias="Notice"/>
 		<typeAlias type="kh.spring.fongdang.order.domain.Order" alias="Order"/>
 		<typeAlias type="kh.spring.fongdang.pay.domain.Pay" alias="Pay"/>
-		<typeAlias type="kh.spring.fongdang.pay.domain.Payment" alias="Payment"/>
 		<typeAlias type="kh.spring.fongdang.message.domain.Message" alias="Message"/>
 		<typeAlias type="kh.spring.fongdang.sms.domain.Sms" alias="Sms"/>
 		<typeAlias type="kh.spring.fongdang.pick.domain.Pick" alias="Pick"/>
@@ -40,7 +39,6 @@
 		<mapper resource="mappers/notice-mapper.xml"/>
 		<mapper resource="mappers/order-mapper.xml"/>
 		<mapper resource="mappers/pay-mapper.xml"/>
-		<mapper resource="mappers/payment-mapper.xml"/>
 		<mapper resource="mappers/message-mapper.xml"/>
 		<mapper resource="mappers/sms-mapper.xml"/>
 		<mapper resource="mappers/pick-mapper.xml"/>
